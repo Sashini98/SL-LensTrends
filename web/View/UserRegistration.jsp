@@ -11,49 +11,86 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Registration</title>
         <link rel="stylesheet" href="../CSS/UserRegistration.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
     </head>
     <body class="body">
         <div class="outterdiv">
-           
+
             <div class="d1">
                 <img src="../Resources/Img/Logo/Picture1.png"/>
             </div>
             <div class="form">
+
                 <div class="topic">
-                    <h2>Welcome to SL-Lens Trends</h2>
+                    <span style="font-size: 24px; font-weight: bold">Welcome to SL-Lens Trends</span>
+                    <br />
+                    <span class="logintxt">If you already have an account. <a href="">Sign In</a></span>
                 </div>
-                    <p class="logintxt">If you already have an account. <a href="">Sign In</a></p>
+
                 <div class="content">
-                    <p> Email Address </p>
-           
-                    <input type="text" />
-                   
-                    <p> First name </p>
-               
-                    <input type="text" />
-               
-                    <p> Last Name</p>
-       
-                    <input type="text" />
-              
-                    <p> Password </p>
-            
-                    <input type="password" />
-                  
-                    <p> Date of Birth </p>
-                
-                    <input type="date" />
-           
-                    <p> Country </p>
-                 
-                    <input type="text" />
-                    
-                    <p>
-                        The Adobe family of companies may keep me informed with personalized emails
-                        about products and services. See our Privacy Policy for more details or to opt-out 
-                        at any time.
-                    </p>
-                 
+
+                    <div class="formContent">
+                        <input type="text" name="email" required/>
+                        <label for="email" class="label_name">
+                            <span class="content_name"> Email Address </span>
+                        </label>
+                    </div>
+
+                    <div class="formContent">
+                        <input type="text" name="fname" required/>
+                        <label for="fname" class="label_name">
+                            <span class="content_name"> First name </span>
+                        </label>
+                    </div>
+
+
+                    <div class="formContent">
+                        <input type="text" name="lname" required/>
+                        <label for="lname" class="label_name">
+                            <span class="content_name"> Last Name</span>
+                        </label>
+                    </div>
+
+
+                    <div class="formContent">
+                        <input type="password" name="pwd" required/>
+                        <label for="pwd" class="label_name">
+                            <span class="content_name"> Password </span>
+                        </label>
+                    </div>
+
+
+                    <div class="formContent">
+                        <input type="date" name="dob" required class="dob"/>
+                        <label for="dob" class="label_name">
+                            <span class="content_name"> Date of Birth </span>
+                        </label>
+                    </div>
+
+
+                    <div class="formContent">
+                        <input type="text" name="country" required/>
+                        <label for="country" class="label_name">
+                            <span class="content_name"> Country </span>
+                        </label>
+                    </div>
+
+
+                    <div class="para">
+                        <hr style="width: 100%;">
+                        The SL-Lens Trends may keep me informed with personalized email<br />
+                        about products and services.  <br />
+                        <br />
+                        See our Privacy Policy for more details or to opt-out at any time. <br />
+                        
+                    </div>
+                    <hr style="width: 100%;">
+
+                    <button class="submit">
+                        Submit
+                    </button>
+
                 </div>
             </div>
         </div>
