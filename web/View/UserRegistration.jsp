@@ -16,8 +16,7 @@
         <div class="outterdiv">
            
             <div class="d1">
-                <h1>Hello</h1>
-
+                <img src="../Resources/Img/Logo/Picture1.png"/>
             </div>
             <div class="form">
                 <div class="topic">
@@ -48,6 +47,12 @@
                     <p> Country </p>
                  
                     <input type="text" />
+                    
+                    <p>
+                        The Adobe family of companies may keep me informed with personalized emails
+                        about products and services. See our Privacy Policy for more details or to opt-out 
+                        at any time.
+                    </p>
                  
                 </div>
             </div>
