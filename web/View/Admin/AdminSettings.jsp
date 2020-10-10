@@ -10,9 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Settings</title>
-        <link href ="../CSS/Admin.css" type="text/css" rel="stylesheet">
+        <link href ="../../CSS/Admin.css" type="text/css" rel="stylesheet">
     </head>
-    <body style="background-image: url(../Resources/Img/settings.jpg); background-size: 100% ; ">
+    <body style="background-image: url(../../Resources/Img/settings.jpg); background-size: 100% ; ">
         
         <div class="row">
             <div class="column">

@@ -10,9 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Users</title>
-        <link href ="../CSS/Admin.css" type="text/css" rel="stylesheet">
+        <link href ="../../CSS/Admin.css" type="text/css" rel="stylesheet">
     </head>
-    <body style="background-image: url(../Resources/Img/useback.jpg);">
+    <body style="background-image: url(../../Resources/Img/useback.jpg);">
        
     <div class="row">
       <div class="column2">
