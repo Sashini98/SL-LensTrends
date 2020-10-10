@@ -37,20 +37,24 @@
                         </label>
                     </div>
 
-                    <div class="formContent">
-                        <input type="text" name="fname" required/>
-                        <label for="fname" class="label_name">
-                            <span class="content_name"> First name </span>
+                    <div class="formContent" style="align-items: space-between;">
+                        <input type="text" name="fname" required style="width: 49%; align-items: space-between;"/>
+                        <label for="fname" class="label_name" style="width: 45%; align-items: space-between; ">
+                            <span class="content_name" style="width: 45%; align-items: space-between;"> First name </span>
+                        </label>
+                        <input type="text" name="lname" required style="width: 50%; align-items: space-between;"/>
+                        <label for="lname" class="label_name" style="width: 50%; left: 50%;">
+                            <span class="content_name" style="width: 45%; align-items: space-between; "> Last Name</span>
                         </label>
                     </div>
 
-
+<!--
                     <div class="formContent">
                         <input type="text" name="lname" required/>
                         <label for="lname" class="label_name">
                             <span class="content_name"> Last Name</span>
                         </label>
-                    </div>
+                    </div>-->
 
 
                     <div class="formContent">
@@ -81,9 +85,9 @@
                         <hr style="width: 100%;">
                         The SL-Lens Trends may keep me informed with personalized email<br />
                         about products and services.  <br />
-                        <br />
+
                         See our Privacy Policy for more details or to opt-out at any time. <br />
-                        
+
                     </div>
                     <hr style="width: 100%;">
 
