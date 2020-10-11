@@ -50,7 +50,7 @@
             </table>
                 </div>
                     <div class='card'>
-                        <img class='cardimg' src= "../Resources/Img/tick.png"><br>
+                        <img class='cardimg' src= "../../Resources/Img/tick.png"><br>
                         
                     </div>
                     <div class='card'>
@@ -166,15 +166,15 @@
     <div class="row">
                 <div class='column'>
                     <div class='card'>
-                        <img class='cardimg' src= "../Resources/Img/online.png"><br>
+                        <img class='cardimg' src= "../../Resources/Img/online.png"><br>
                         <font>Online Users</font>
                     </div>
                     <div class='card'>
-                        <img class='cardimg' src= "../Resources/Img/inactive.png"><br>
+                        <img class='cardimg' src= "../../Resources/Img/inactive.png"><br>
                         <font>Inactive Users</font>
                     </div>
                     <div class='card'>
-                        <img class='cardimg' src= "../Resources/Img/reported.png"><br>
+                        <img class='cardimg' src= "../../Resources/Img/reported.png"><br>
                         <font>Reported Users</font>
                     </div>
                 </div>
