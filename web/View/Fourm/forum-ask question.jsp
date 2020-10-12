@@ -32,8 +32,7 @@
 
                     <h3><label for="Body"><b>Body</b></label><br></h3>
                     <div class="btn-group">
-                        <button type="button" style="margin-left:1.8em"id="bold" onclick="myFunction1();
-                                    > <b>B</b> < /button>
+                        <button type="button" style="margin-left:1.8em"id="bold" onclick="myFunction1();> <b>B</b> </button>
         <button type="button" id="italic"><i>I</i></button>              
                         <button type="button" id="image"><img src="../Resources/Img/gallery.png" style="width:20px;height:14px;"  span="Image"></button>
                         <button type="button" id="link"><img src="../Resources/Img/link.png" style="width:20px;height:14px;"></button>

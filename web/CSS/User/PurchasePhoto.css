@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.content{
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+}
+
+
+.photodetails{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.PhotoOuter{
+    flex-basis: 65%;
+    padding-top: 5%;
+    padding-bottom:  5%;
+    border: 1px solid #cccccc;
+}
+
+
+.Photo{
+
+    width: 100%;
+    height: 400px; /*0 */
+    /*padding-top: 124.95%;  (img-height / img-width )* 100 
+    /* (853 / 1280) * 100 */
+    /*display: block;*/
+    background :  url("../../Resources/Img/A Mighty sunrise with a flight of birds..jpg") no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+
+.Details{
+    flex-basis: 35%;
+
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    /*flex-wrap: wrap;*/
+
+    margin-left: 1%;
+    border: 1px solid #cccccc;
+
+}
+
+.NameDetails , .ImageActions, .ImageDetails{
+    padding: 5%;
+    margin: 0;
+}
+
+.PhotoName{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ImageDetails{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top:  1px solid #cccccc;
+
+}
+
+.ImageDetails div{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.detail{
+    font-size: 13px;
+}
+
+.ImageActions{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #cccccc;
+}
+
+.ImageActions button{
+    margin-bottom: 3%;
+    width: 80%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.BuyBtn{
+    background-color:  RGB(70,160,73);
+
+}
+
+.FavouriteBtn{
+    background-color:  RGB(222,58, 42);
+}
+
+.CartBtn{
+    background-color:  RGB(13,102,208);
+}
+
+.RelaetedKeywordDiv{
+    margin: 5% 0;
+}
+
+.RelaetedKeywordDiv > span:first-child, .SimilarImagesDiv > span:first-child, .ArtisiDiv > span:first-child {
+    font-size: 20px;
+}
+
+.KeywordsDiv{
+    margin-top: 3%;
+    display: flex;
+}
+
+.Keyword{
+
+    border: 1px solid #cccccc;
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 4px 4px;
+    border: 1px solid #cccccc;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.SimilarShowDiv, .ArtistPhotoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:  40px;
+}
+
+.SimilarShowBtn, .ArtistPhotoBtn{
+    margin-bottom: 3%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: 1px solid;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    background-color: white;
+    color: black;
+}
