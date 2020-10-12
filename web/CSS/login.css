@@ -1,0 +1,67 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 8, 2020, 9:09:35 PM
+    Author     : Sashini Shihara
+*/
+
+body 
+{
+    background-image: url("../Resources/Img/loginbg.jpg");
+    height: 100%;
+    width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.form{
+
+    position: relative;
+    margin-left: 58%;
+    width: 25%;
+    height: 70%;
+    background-color: rgba(0,0,0,0.4);;
+    border-radius: 10px;
+
+}
+
+input[type=text],input[type=password]
+{
+ 
+   text-align: lrft;
+   margin-left:10%;
+   margin-right: 10%;
+   width:80%;
+   height:25%
+}
+
+input[type=submit]
+{
+  display: inline-block;
+  padding: 5% 8%;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #349e38;
+  border: none;
+  border-radius: 15px;
+   margin-left:37%;
+   margin-top: 0.8%;
+}
+
+
+a
+{
+    margin-left: 10%;
+    color: darkred;
+    font-size: 14px;
+    text-decoration: none;
+    
+}
