@@ -1,0 +1,139 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 12, 2020, 10:22:31 AM
+    Author     : Sashini Shihara
+*/
+
+
+label
+{
+    color: black;
+    margin-left:2%;
+
+}
+
+fieldset
+{
+    width: 140%;
+    background-color: whitesmoke;
+    margin-left: 6%;
+    margin-top: 4%;
+    margin-bottom: 3%;
+    padding: 12px;
+    box-shadow: 4px 4px 5px #3268a8;
+}
+btn-group , button 
+{     
+  background-color: transparent;
+  border: 0.1px solid transparent; 
+  color: black;
+  float: left;
+  padding: 2% 4%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
+  
+}
+
+/*btn-group
+{
+    width: 2%;
+}*/
+
+
+button:hover 
+{
+    background-color: #e7e7e7;
+}
+
+
+input[type=submit]
+{
+  display: inline-block;
+  padding: 4.5% 7%;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #349e38;
+  border: none;
+  border-radius: 15px;
+   margin-left:6%;
+}
+
+input[type=submit]:hover 
+{
+    background-color: #3e8e41
+}
+
+input[type=submit]:active 
+{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input[type=text]
+{
+   margin-left:2%;
+   width : 95%;
+   height: 11%;
+}
+
+textarea
+{
+   margin-left:2%;
+   width : 95%;
+   margin-top: 0;
+}
+
+dropdown-container {
+      width: 25%;
+    }
+
+    select {
+     
+      font-size: 100%;
+      border-radius: 0;
+      background-color: whitesmoke;
+      border: none;
+      border-bottom: 2px solid #0d3194;
+      color: black;
+      appearance: none;
+      padding: 10px;
+      transition: color 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+      margin-left: 2%;
+    }
+
+    select:hover,
+    select:focus {
+      color: black;
+      background-color: whitesmoke;
+      border-bottom-color: #0d3194;
+    }
+
+
+arrow down {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+}
+
+p 
+{
+    margin-top:0%;
+    margin-bottom: 0.3%;
+    
+}
+
