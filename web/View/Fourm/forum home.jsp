@@ -31,7 +31,7 @@
                 <input type="button" value="View"><br>
            
         </div>
-            <br>  
+             
         <div class="rightp">
             <p style="font-size: 15px;">Person A</p> <p style="font-size: 15px; float: right;">Date</h2><br><br>
             <label>I just found 3 lenses in the attic. I attached a picture of them. For 1 and 2 I have some ideas, but I have no idea what 3 could be.</label><br><br>
@@ -39,7 +39,7 @@
                 <input type="button" value="View"><br>
            
         </div>
-            <br>
+            
             <div class="rightp">
             <p style="font-size: 15px;">Person A</p> <p style="font-size: 15px; float: right;">Date</h2><br><br>
             <label>I just found 3 lenses in the attic. I attached a picture of them. For 1 and 2 I have some ideas, but I have no idea what 3 could be.</label><br><br>
