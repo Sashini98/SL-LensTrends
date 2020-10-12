@@ -32,10 +32,11 @@
 
                     <h3><label for="Body"><b>Body</b></label><br></h3>
                     <div class="btn-group">
-                        <button type="button" style="margin-left:1.8em"id="bold" onclick="myFunction1();> <b>B</b> </button>
-        <button type="button" id="italic"><i>I</i></button>              
-                        <button type="button" id="image"><img src="../Resources/Img/gallery.png" style="width:20px;height:14px;"  span="Image"></button>
-                        <button type="button" id="link"><img src="../Resources/Img/link.png" style="width:20px;height:14px;"></button>
+                        <button type="button" style="margin-left:1.8em" id="bold" onclick="myFunction1();" > <b>B</b> 
+                        </button>
+                        <button type="button" id="italic"><i>I</i></button>              
+                        <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:20px;height:14px;"  span="Image"></button>
+                        <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:20px;height:14px;"></button>
                     </div><br><br><br>
 
 
@@ -62,15 +63,16 @@
 
             </form>
         </div>    
-        <div style="float: right; "> <img src="../Resources/Img/ques2.png" style="width:450px;height:450px;margin-top: 10em;"></div>
+        <div style="float: right; "> <img src="../../Resources/Img/ques2.png" style="width:450px;height:450px;margin-top: 10em;"></div>
     </body>
 
-    <div id="img1" style="position: absolute;left: 10px;top: 1020px;z-index: 2; box-shadow: 4px 4px 5px #9c9898;"> <img src="../Resources/Img/camfoot1.jpg" style="width:380px;height:500px;"></div>
+    <div id="img1" style="position: absolute;left: 10px;top: 1020px;z-index: 2; box-shadow: 4px 4px 5px #9c9898;"> <img src="../../Resources/Img/camfoot1.jpg" style="width:380px;height:500px;"></div>
     <div>
         <footer class="footer-distributed">
 
             <div class="footer-left">
-                <h3><span><img src="../Resources/Img/logo.png" style="width:200px;height:190px;margin-left: 300px;margin-right: -85px;margin-top: -45px;"></span>Sl LensTrends</h3><br><br><br><br><br><br>
+                <h3><span><img src="../../Resources/Img/logo.png" style="width:200px;height:190px;margin-left: 300px;margin-right: -85px;margin-top: -45px;"></span>Sl LensTrends</h3>
+                <br><br><br><br><br><br>
 
                 <p class="footer-links">
                     <a href="#">Home</a>
@@ -85,10 +87,10 @@
 
                 <div class="footer-icons">
 
-                    <a href="#"><i class="fa fa-facebook"><img src="../Resources/Img/fb.png" style="width:30px;height:30px;"></i></a>
-                    <a href="#"><i class="fa fa-twitter"><img src="../Resources/Img/insta.png" style="width:30px;height:30px;"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"><img src="../Resources/Img/download.png" style="width:30px;height:30px;"></i></a>
-                    <a href="#"><i class="fa fa-github"><img src="../Resources/Img/wtsap.png" style="width:30px;height:30px;"></i></a>
+                    <a href="#"><i class="fa fa-facebook"><img src="../../Resources/Img/fb.png" style="width:30px;height:30px;"></i></a>
+                    <a href="#"><i class="fa fa-twitter"><img src="../../Resources/Img/insta.png" style="width:30px;height:30px;"></i></a>
+                    <a href="#"><i class="fa fa-linkedin"><img src="../../Resources/Img/download.png" style="width:30px;height:30px;"></i></a>
+                    <a href="#"><i class="fa fa-github"><img src="../../Resources/Img/wtsap.png" style="width:30px;height:30px;"></i></a>
                     <br><br><br><br>
                     <hr style="width:1000px;">
                     <h6>@2020 All Rights Reserved</h6>
