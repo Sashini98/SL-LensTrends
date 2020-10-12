@@ -126,12 +126,13 @@ button:hover{
     background-color:  RGB(13,102,208);
 }
 
-.RelaetedKeywordDiv{
+.RelaetedKeywordDiv, .SimilarImagesDiv, .ArtisiDiv{
     margin: 5% 0;
 }
 
 .RelaetedKeywordDiv > span:first-child, .SimilarImagesDiv > span:first-child, .ArtisiDiv > span:first-child {
-    font-size: 20px;
+    font-size: 24px;
+
 }
 
 .KeywordsDiv{
@@ -155,6 +156,7 @@ button:hover{
     flex-wrap: wrap;
     padding: 4px 4px;
     border: 1px solid #cccccc;
+    margin-top: 3%;
 }
 
 /* Create four equal columns that sits next to each other */

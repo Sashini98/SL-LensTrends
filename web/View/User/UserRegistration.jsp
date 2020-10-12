@@ -17,7 +17,7 @@
         <div class="outterdiv">
 
             <div class="d1">
-                <img src="../Resources/Img/Logo/Picture1.png"/>
+                <img src="../../Resources/Img/Logo/Picture1.png"/>
             </div>
             <div class="form">
 
