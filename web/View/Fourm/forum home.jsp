@@ -16,14 +16,14 @@
         <header>
                     <div class="hd">
                     <a class="logo" href="/"><img src="../../Resources/Img/logo.png" alt="logo"></a>
-                    <label>SL LensTrends</label>
+                    <lab>SL LensTrends</lab>
                         
                 <nav class="nv">
                         <ul class="nav__links">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Gallery</a></li>
                             <li><a href="#">Profiles</a></li>
-                            <li class="active"><a href="#">Forum</a></li>
+                            <li><a class="active" href="#">Forum</a></li>
                             <li><a href="#">About Us</a></li>
                         </ul>
                     </nav>
@@ -41,36 +41,50 @@
         
         <div class="contain">
         <div class="leftp">
-            <input type="button" value="Forum"><br><br><br>
+            <input type="button" class="active" value="Forum"><br><br><br>
             <input type="button" value="Techniques"><br>
             <input type="button" value="Equipments"><br>
             <input type="button" value="Editing"><br>
             <input type="button" value="Industry"><br>
-            <input type="button" value="Other"><br>
+            <input type="button" value="Other"><br><br><br>
+            <div class="dropdown-container">
+                        <select>
+                            <option value="sort">Sort By<p><i class="arrow down"></i></p></option>
+                            <option value="date">Sort By : Date</option>
+                            <option value="answ">Sort By : Answer Count</option>
+                            <option value="likes">Sort By : Likes</option>
+                        </select>
+                    </div><br><br>
+                    <input type="button" value="Ask a Question" onclick="location.href = 'forum-ask question.jsp'"><br><br><br>
         </div>
         
         <div class="rightp">
-            <div class="sec">
-            <p style="font-size: 15px;">Person A</p> <p style="font-size: 15px; float: right;">Date</h2><br><br>
-            <label>I just found 3 lenses in the attic. I attached a picture of them. For 1 and 2 I have some ideas, but I have no idea what 3 could be.</label><br><br>
-             <a href="">Equipments</a><br><br>
-                <input type="button" value="View"><br>
+            <div class="sec" style=" border-top: 10px solid cyan; ">
+            <p style="font-size: 15px; color: darkblue">Person A</p><p style="font-size: 15px; color: darkgreen;">25/04/2020</p><br>
+            <h8>Types of Lenses</h8><br><br><br>
+            
+            <label>I just found 3 lenses in the attic. I attached a picture of them. For 1 and 2 I have some ideas, but I have no idea what 3 could be...</label><br><br>
+             <a href="">#Equipments</a><br><br>
+                <p2 style="font-size: 13px; color: darkgrey;">0 Answers</p2><input type="button" value="View"><br>
            
         </div>
              
-        <div class="sec">
-            <p style="font-size: 15px;">Person A</p> <p style="font-size: 15px; float: right;">Date</h2><br><br>
-            <label>I just found 3 lenses in the attic. I attached a picture of them. For 1 and 2 I have some ideas, but I have no idea what 3 could be.</label><br><br>
-             <a href="">Equipments</a><br><br>
-                <input type="button" value="View"><br>
+        <div class="sec"style=" border-top: 10px solid greenyellow; ">
+            <p style="font-size: 15px; color: darkblue">Person B</p> <p style="font-size: 15px; color: darkgreen;">14/09/2019</p><br>
+            <h8>Selling the photos</h8><br><br><br>
+                <label>Took this using my EM1Mk2 in July this year.I attached it to my telescope so it's...</label><br><br><br>
+             <a href="">#Industry</a><br><br>
+                <p2 style="font-size: 13px; color: darkgrey;">3 Answers</p2><input type="button" value="View"><br>
            
         </div>
             
-            <div class="sec">
-            <p style="font-size: 15px;">Person A</p> <p style="font-size: 15px; float: right;">Date</h2><br><br>
-            <label>I just found 3 lenses in the attic. I attached a picture of them. For 1 and 2 I have some ideas, but I have no idea what 3 could be.</label><br><br>
-             <a href="">Equipments</a><br><br>
-                <input type="button" value="View"><br>
+            <div class="sec" style=" border-top: 10px solid darkviolet; ">
+              
+            <p style="font-size: 15px; color: darkblue">Person C</p> <p style="font-size: 15px; color: darkgreen;">08/08/2020</p><br>
+            <h8>Using Adobe</h8><br><br><br>
+            <label>Using Adobe LR CC and PS 2020 having downloaded from Adobe.Have imported some Free Presets but wish to reduce the opacity simply. From the 'web' the download...</label><br><br>
+             <a href="">#Techniques #Editing</a><br><br>
+                <p2 style="font-size: 13px; color: darkgrey;">2 Answers</p2><input type="button" value="View"><br>
            
         </div>
            

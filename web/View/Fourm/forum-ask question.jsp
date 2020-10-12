@@ -21,7 +21,7 @@
                             <li><a href="#">Home</a></li>
                             <li><a href="#">Gallery</a></li>
                             <li><a href="#">Profiles</a></li>
-                            <li class="active"><a href="#">Forum</a></li>
+                            <li><a class="active" href="#">Forum</a></li>
                             <li><a href="#">About Us</a></li>
                         </ul>
                     </nav>
@@ -33,7 +33,7 @@
         <div style="float: left; "> 
             <form>
                 <fieldset>
-                    <legend style="color: gainsboro;text-shadow: 0 0 5px black;"><h1>Ask question</h1></legend><br><br>
+                    <legend style="color: gainsboro;text-shadow: 0 0 5px black;font-size: 20px;"><h1>Ask question</h1></legend><br><br>
                     <h3><label for="Title"><b>Title</b></label><br></h3>
                     <input type="text" id="title" name="title"><br><br><br>
 
