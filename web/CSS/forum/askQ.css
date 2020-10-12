@@ -8,10 +8,6 @@ and open the template in the editor.
     Author     : Sashini Shihara
 */
 
-body 
-{
-  background-color: white;
-}
 
 label
 {
@@ -22,8 +18,8 @@ label
 
 fieldset
 {
-    width: 100%;
-    background-color: transparent;
+    width: 140%;
+    background-color: whitesmoke;
     margin-left: 6%;
     margin-top: 4%;
     margin-bottom: 3%;
@@ -32,7 +28,7 @@ fieldset
 }
 btn-group , button 
 {     
-  background-color: white;
+  background-color: transparent;
   border: 0.1px solid transparent; 
   color: black;
   float: left;

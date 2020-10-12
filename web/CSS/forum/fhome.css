@@ -7,12 +7,15 @@ and open the template in the editor.
     Created on : Oct 11, 2020, 8:33:41 AM
     Author     : Sashini Shihara
 */
+
 body
 {
    background-image: url("../../Resources/Img/fhome.jpg");
 }
 .leftp
 {
+    
+    background-size: 100% 100%;
     float: left;
     background-color: white;
     font-family: sans-serif;
@@ -23,8 +26,13 @@ body
 }
 
 .rightp
-{
+{    
+    margin-bottom: 0.8%;
+    margin-left: 12%;
+}
 
+.sec
+{
     background-color: white;
     font-family: sans-serif;
     border-radius: 5px;
@@ -35,7 +43,6 @@ body
     margin-bottom: 0.8%;
     margin-left: 0.5%;
 }
-
 input[type=button]
 {     
   background-color: white;
