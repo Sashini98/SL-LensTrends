@@ -1,0 +1,122 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 13, 2020, 10:20:29 AM
+    Author     : Sashini Shihara
+*/
+body
+{
+    background-image: url("../../Resources/Img/ques.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+fieldset
+{
+    background-color: gainsboro;
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 10px;
+    flex-basis: 45%;
+    background-size: 100% 100%;
+}
+.contain
+{
+    opacity: 0.9;
+    
+    float: left;
+    background-color: transparent;    
+    width: 80%;
+    margin-left: 5%;
+}
+.ques
+{
+    opacity: 0.9;
+    background-size: 100% 100%;
+    float: left;
+    background-color: gainsboro;
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 10px;
+    flex-basis: 45%;
+    width: 80%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+h8
+{
+    
+    font-size: 20px;
+    color: maroon;
+    font-weight: bold;
+}
+
+input[type=button]
+{     
+  float: right;
+  background-color: lightskyblue;
+  border: 0.1px solid transparent; 
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;  
+  margin-left: 2%;
+}
+
+input[type=button]:active 
+{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.tup
+{
+    width: 0.5%;
+    height: 0.5%;
+}
+
+label3
+{
+    font-size: 40px;
+    color: green;
+    font-weight: bold;
+}
+
+label4
+{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+}
+
+.ico
+{
+    float: left;    
+    width: 14%;
+}
+.answ
+{
+    float:left;
+    width: 86%;
+}
+.comm
+{
+    margin-left: 14%;
+}
+
+label5
+{
+    font-size: 20px;
+    color: brown;
+    font-weight: bold;
+}
+label6
+{
+    font-size: 15px;
+    color: olive;
+    font-weight: bold;
+}
