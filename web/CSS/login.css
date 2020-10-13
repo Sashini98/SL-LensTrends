@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 8, 2020, 9:09:35 PM
+    Author     : Sashini Shihara
+*/
+
+.img {
+  position: absolute;
+
+}
+.form {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 45%;
+  width: 100%;
+  text-align: center;
+  margin-left: 58%;
+  width: 25%;
+  height: 30%;
+  background-color: rgba(0,0,0,0.4);;
+  border-radius: 10px;
+}
+
+body 
+{
+    height: 100%;
+    width:100%;
+    background-size: cover;
+    
+}
+
+.slideshow-container {
+    height: 100%;
+    width:100%;
+    background-size: cover;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+input[type=text],input[type=password]
+{
+ 
+   text-align: lrft;
+   margin-left:10%;
+   margin-right: 10%;
+   width:80%;
+   height:25%
+}
+
+input[type=submit]
+{
+  display: inline-block;
+  padding: 5% 8%;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #349e38;
+  border: none;
+  border-radius: 15px;
+   margin-left:37%;
+   margin-top: 0.8%;
+}
+
+
+a
+{
+    margin-left: 10%;
+    color: darkred;
+    font-size: 14px;
+    text-decoration: none;
+    
+}
+
