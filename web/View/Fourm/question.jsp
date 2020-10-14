@@ -36,9 +36,9 @@
             <label1>Q2346546</label1>
             <p style="font-size: 15px; color: darkblue">Person B</p> <p style="font-size: 15px; color: darkgreen;">14/09/2019</p><br>
             <h8>Selling the photos</h8><br><br><br>
-            <label2>Took this using my EM1Mk2 in July this year.I attached it to my telescope so it's...</label2><br><br><br>
+            <label2>Took this using my EM1Mk2 in July this year.I attached it to my telescope so it's </label2><br><br><br>
             
-            <input type="button" value="Answer"><input type="button" value="Report"><br><br><br>
+            <input type="button" id="answerr" value="Answer"><input type="button" value="Report"><br><br><br>
             <p2 style="font-size: 13px; color: gray;">3 Answers</p2><br><br>           
          </div>
         
@@ -54,8 +54,8 @@
                 </div>
              
                  <div class=" answ">
-                     <label2>jmagfdkjagfckyfdcyufCJhcfHYFCJHGHFYCFYFfggcfjhFDCMjfuyFuyFj</label2><br><br><br><br>
-                     <input type="button" value="Comment"><br><br>
+                     <label2>jmagfdkjagfckyfdcyufCJhcfHYFCJHGHFYCFYFfggcfjhfgfnhgfnhgdghdgdnhdnhhjfuyFuyFj</label2><br><br><br><br>
+                     <input type="button" id="comme" value="Comment"><br><br>
                                               
                  </div><br><br><br><br>
                  
@@ -63,7 +63,7 @@
                  <div class="comm">
                      <label5>Comments</label5><br><br>
                      <label6>Person D</label6><br>
-                     <label2>jhruihkjhgjkrkgwjkhwjghkrwuhgkrghwkghgkhkghjhgkjhgkwhwkghwkjghwjkghkjhw</label2>  
+                     <label2>jhruihkjhgjkrkgwjkhwjghkrwuhgkrghwkghgkhkghjhgkjkwhwkghwkjghwjkgvguyuytuythkjh</label2>  
                  </div>
             </div>
              <br><br><br><br><hr>
@@ -77,8 +77,8 @@
                  
              
                  <div class=" answ">
-                     <label2>jmagfdkjagfckyfdcyufCJhcfHYFCJHGHFYCFYFfggcfjhFDCMjfuyFuyFj</label2><br><br><br><br>
-                     <input type="button" value="Comment"><br><br>                                              
+                     <label2>jmagfdkjagfckyfdcyufCJhcfghghghghhghhhhggfggcfjhFMjfuyFuyFjvkyyuvtututkutdyyubiu</label2><br><br><br><br>
+                     <input type="button" id="comme" value="Comment"><br><br>                                              
                  </div>
                  
                  
@@ -95,8 +95,8 @@
                 </div>
              
                  <div class=" answ">
-                     <label2>jmagfdkjagfckyfdcyufCJhcfHYFCJHGHFYCFYFfggcfjhFDCMjfuyFuyFj</label2><br><br><br><br>
-                     <input type="button" value="Comment"><br><br>
+                     <label2>jmagfdkjagfckyfdcyufvuytytutiiuvovvkfggcfjhFDCMjfuyFuyktytkytuyttvytuytytkvtkuy</label2><br><br><br><br>
+                     <input type="button" id="comme" value="Comment"><br><br>
                                               
                  </div>
             </div>
@@ -107,6 +107,29 @@
         </div>
         
         
+        <div id="answ" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <label5>Answer</label5><br><br>
+                    <textarea id="body" name="body" rows="20" cols="50"></textarea><br><br>
+                    <input type="submit" value="post">
+                </form>
+            </div>
+
+        </div>
+        
+        <div id="comment" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form>
+                    <label5>Comment</label5><br><br>
+                    <textarea id="body" name="body" rows="20" cols="50"></textarea><br><br>
+                    <input type="submit" value="post">
+                </form>
+            </div>
+
+        </div>
         
         
         <footer>    
@@ -149,6 +172,60 @@
     </div>
         </div>          
         </footer>
+        
+        
+        <script>
+
+var modal = document.getElementById("answ");
+
+
+var btn = document.getElementById("answerr");
+
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+
+
+var modal1 = document.getElementById("comment");
+
+
+var btn1 = document.getElementById("comme");
+
+
+var span1 = document.getElementsByClassName("close")[0];
+
+
+btn1.onclick = function() {
+  modal1.style.display = "block";
+}
+
+
+span1.onclick = function() {
+  modal1.style.display = "none";
+}
+
+window1.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+}
+</script>
         
     </body>
 </html>
