@@ -23,7 +23,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -37,7 +37,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -51,7 +51,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -65,7 +65,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -79,7 +79,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -93,7 +93,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -107,7 +107,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
@@ -122,7 +122,7 @@
       <form>
              <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
              <input type="password" id="pw" name="pw" placeholder="Password"><br>
-             <a href="">Forgot Password?</a><br><br>
+             <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
               <input type="submit" id="login" value="Login"><br><br>
              
       </form>
