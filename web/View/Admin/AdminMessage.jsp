@@ -94,10 +94,10 @@
                     <form>
                     <fieldset>
                         <legend><font color="blue">Message</font></legend>
-                        
+                        <textarea name="message" rows="5" cols="48"></textarea>
                    </fieldset>
                    </form>
-                    <textarea name="message" rows="7" cols="52"></textarea>
+                    <textarea name="message" rows="5" cols="52"></textarea>
                     <button class="btn2">Send</button>
                 </div>
                 </div>
