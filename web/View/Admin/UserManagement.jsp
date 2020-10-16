@@ -32,7 +32,7 @@
                     </div>
     </header>
     </head>
-    <body style="background-image: url(../../Resources/Img/useback.jpg)">
+    <body style="background-image: url(../../Resources/Img/userback.jpg)">
        
     <div class="row">
       <div class="column2">

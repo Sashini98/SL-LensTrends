@@ -66,11 +66,7 @@
                     <font color="red">Category</font>
                     <hr>
                     <table border="0" width="100%" height="40px" >
-                        <tr>
-                            <th align="left">Search Category</th>
-                            <th><input type=text name=name size="20" maxlength="25"></th>
-                            <th><button>Search</button></th>
-                        </tr>
+                        
                         <tr>
                             <th align="left">Add Category</th>
                             <th><input type=text name=name size="20" maxlength="25"></th>
@@ -79,9 +75,8 @@
                         <tr><th></th></tr>
                         <tr><th></th></tr>
                         <tr>
-                            <th><input class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                            <th><input class="confirmBTN" type='submit' value="Update" name='update' style="background-color:#FF7F50"></th>
-                            <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
+                            <th></th>
+                            <td><center><input class="confirmBTN" type='submit' value="Options" name='view' style="background-color:red"></center></td>
                         </tr>
                     </table>
                     </div>
