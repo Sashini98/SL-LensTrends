@@ -49,8 +49,8 @@
                     <hr />
                     <div class="ImageActions">
                         <button class="BuyBtn">Buy Photo</button>
-                        <button class="FavouriteBtn">Add to Favourite</button>
-                        <button class="CartBtn">Add to Cart</button>
+                        <button class="CartBtn">Add to Favourite</button>
+                        <button class="FavouriteBtn">Report Photo</button>
                     </div>
                 </div>
             </div>
