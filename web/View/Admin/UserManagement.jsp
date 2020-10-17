@@ -48,23 +48,23 @@
             <table align="left" border="0" width="40%" height="40px" >
                         
                         <tr>
-                            <th><input type="text" size="40"></th>
+                            <th><input type="text" size="39"></th>
                             <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
 			</tr>
                         <tr>
-                            <th><input type="text" size="40"></th>
+                            <th><input type="text" size="39"></th>
                             <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
 			</tr>
                         <tr>
-                            <th><input type="text" size="40"></th>
+                            <th><input type="text" size="39"></th>
                             <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
 			</tr>
                         <tr>
-                            <th><input type="text" size="40"></th>
+                            <th><input type="text" size="39"></th>
                             <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
 			</tr>
                         <tr>
-                            <th><input type="text" size="40"></th>
+                            <th><input type="text" size="39"></th>
                             <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
                         </tr>
             </table>
@@ -143,35 +143,35 @@
                 <div class='card'>
                     <table border="0" width="100%" height="40px" >
                         <tr>
-				<td align="left">User ID:</td>
+				<td align="left">User ID</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-				<td align="left">First Name:</td>
+				<td align="left">First Name</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Last Name:</td>
+				<td align="left">Last Name</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Date of Birth:</td>
+				<td align="left">Date of Birth</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Gender:</td>
+				<td align="left">Gender</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Email:</td>
+				<td align="left">Email</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Registered Date:</td>
+				<td align="left">Registered Date</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Country:</td>
+				<td align="left">Country</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>

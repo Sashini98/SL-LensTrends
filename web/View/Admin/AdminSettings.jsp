@@ -64,39 +64,39 @@
             <legend><font color="red">Profile</font></legend>
         <table border="0" width="100%" height="40px" >
                         <tr>
-				<td align="left">First Name:</td>
+				<td align="left">First Name</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Last Name:</td>
+				<td align="left">Last Name</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Date of Birth:</td>
+				<td align="left">Date of Birth</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Gender:</td>
+				<td align="left">Gender</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Email:</td>
+				<td align="left">Email</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Address:</td>
+				<td align="left">Address</td>
                                 <td><textarea name="address" rows="2" cols="32"></textarea></td>
 			</tr>
                         <tr>
-				<td align="left">Country:</td>
+				<td align="left">Country</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">City:</td>
+				<td align="left">City</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Password:</td>
+				<td align="left">Password</td>
 				<td><input type=password name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>

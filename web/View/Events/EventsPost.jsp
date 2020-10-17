@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../../CSS/Events/EventsPost.css">
         <title>Post an event</title>
     </head>
-    <body><div style="float: left; "> 
+    <body><div style="float: left; width: 50%; "> 
             <form>
                 <fieldset>
                     
@@ -53,17 +53,21 @@
                         </label>
                     </div>
                     
-                     <div class="formContent">
-                        <div class="dropdown-container" name="type" required>
-                        <select>
-                            <option value="beginers">Event Category<p><i class="arrow down"></i></p></option>
-                            <option value="beginers">Wedding</option>
-                            <option value="equipments">Wedding</option>
-                            <option value="techniques">Wedding</option>
-                            <option value="mobile">Wedding</option>
-                        </select>
+                    <div class="formContent">
+                        <input type="textarea" name="pname" required/>
+                        <label for="pname" class="label_name">
+                            <span class="content_name"> Photographer Name </span>
+                        </label>
                     </div>
+                    
+                    <div class="formContent">
+                        <input type="textarea" name="estimate" required/>
+                        <label for="estimate" class="label_name">
+                            <span class="content_name"> Estimated Budget Range</span>
+                        </label>
                     </div>
+                    
+                     
                     
                     <button class="submit">Post</button>
                     
