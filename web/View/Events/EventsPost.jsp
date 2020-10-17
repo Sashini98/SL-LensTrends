@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../../CSS/Events/EventsPost.css">
         <title>Post an event</title>
     </head>
-    <body><div style="float: left; "> 
+    <body><div style="float: left; width: 50%; "> 
             <form>
                 <fieldset>
                     
