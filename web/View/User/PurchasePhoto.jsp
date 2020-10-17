@@ -11,10 +11,37 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="../../CSS/User/PurchasePhoto.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/9dd75719fe.js" crossorigin="anonymous"></script>
         <title>Purchase Photo</title>
     </head>
     <body>
-        <div class="content">
+        <div style="display: flex; justify-content: center;">
+            <div class="ReportPhoto" id="ReportPhoto">
+                <div class="ReportHeader">
+                    <h3>Report</h3>
+                    <i class="fas fa-times close" style="color: black; margin: auto; cursor: pointer;"></i>
+                </div>
+
+                <div>
+                    <h4>Please select a problem to continue</h4>
+
+                    <div style="display: flex; flex-wrap: wrap; " class="ReportsItems">
+                        <button onclick="reportItemClicked('Inappropriate')" id="Inappropriate">Posting Inappropriate Things</button>
+                        <button onclick="reportItemClicked('quality')" id="quality">Low Quality Photograph</button>
+                        <button onclick="reportItemClicked('details')" id="details">Inappropriate Details</button>
+                        <button onclick="reportItemClicked('fake')" id="fake">Fake Photograph</button>
+                        <button onclick="reportItemClicked('somethingElse')" id="somethingElse">Something Else</button>
+                    </div>
+                    <div style="width: 100%; padding: 10px 10px; border-bottom: 1px solid black;">
+                        <textarea class="reportReason" id="reason" type="text" placeholder="Enter Your Reasons"></textarea>
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <button class="Report" id="Report">Report</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content" id="content">
             <div class="photodetails">
                 <div class="PhotoOuter">
                     <div class="Photo">
@@ -50,7 +77,7 @@
                     <div class="ImageActions">
                         <button class="BuyBtn">Buy Photo</button>
                         <button class="CartBtn">Add to Favourite</button>
-                        <button class="FavouriteBtn">Report Photo</button>
+                        <button class="ReportBtn" id="ReportBtn">Report Photo</button>
                     </div>
                 </div>
             </div>
@@ -128,6 +155,6 @@
                 </div>
             </div>
         </div>
-        
+        <script type="text/javascript" src="../../JS/User/PurchasePhoto.js"></script>
     </body>
 </html>

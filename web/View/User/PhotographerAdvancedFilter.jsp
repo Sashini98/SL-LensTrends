@@ -1,12 +1,19 @@
+<%-- 
+    Document   : PhotographerAdvancedFilter
+    Created on : Oct 17, 2020, 8:12:32 AM
+    Author     : kesh
+--%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/User/AdvancedSearch.css"/>
+    <link rel="stylesheet" href="../../CSS/User/PhotographerSearch.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../../JS/User/AdvancedSearch.js" type="text/javascript"></script>
 </head>
+
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;display: flex;align-items: center">
     <span style="font-size: 1.2em"><i class="material-icons">filter_alt</i><b>Filter</b></span>
     <span style="margin-left: auto;margin-right: 0;font-size: 0.8em;margin-top: 4%"><b>Clear</b></span>
@@ -25,6 +32,19 @@
         <input type="radio" name="SortBy" id="fresh">
         &nbsp;&nbsp;
         <label for="fresh">Fresh content</label><br/>
+    </div>
+</div>
+<div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
+    <div style="display: flex;align-items: center">
+        <i class="material-icons">search</i>
+        <span>Image type</span>
+        <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
+    </div>
+    <div style="margin: 4% 10% 0">
+        <input type="radio" name="images" id="images" checked="" onclick="checkSubCategory('1', 'images')">&nbsp;&nbsp;<label for="images">All images</label><br/>
+        <input type="checkbox"  id="Photos" onclick="checkSubCategory('1', 'Photos')">&nbsp;&nbsp;<label for="Photos">Photos</label><br/>
+        <input type="checkbox"  id="Vectors" onclick="checkSubCategory('1', 'Vectors')">&nbsp;&nbsp;<label for="Vectors">Vectors</label><br/>
+        <input type="checkbox" id="Illustrations" onclick="checkSubCategory('1', 'Illustrations')">&nbsp;&nbsp;<label for="Illustrations">Illustrations</label><br/>
     </div>
 </div>
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
@@ -82,8 +102,8 @@
         <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
     </div>
     <div style="margin: 4% 10% 0">
-        <input type="radio" name="People" id="WithPeople" onclick="checkSubCategory('3', 'WithPeople')">&nbsp;&nbsp;<label for="WithPeople">With people</label><br/>
-        <input type="radio" name="People"  id="WithoutPeople" onclick="checkSubCategory('3', 'WithoutPeople')">&nbsp;&nbsp;<label for="WithoutPeople">Without people</label><br/>
+        <input type="radio" name="People" id="WithPeople">&nbsp;&nbsp;<label for="WithPeople">With people</label><br/>
+        <input type="radio" name="People"  id="WithoutPeople" onclick="checkSubCategory()">&nbsp;&nbsp;<label for="WithoutPeople">Without people</label><br/>
     </div>
 </div>
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
@@ -93,9 +113,9 @@
         <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
     </div>
     <div style="margin: 4% 10% 0">
-        <input type="checkbox" name="Both" id="Both" onclick="checkSubCategory('1', 'Both')">&nbsp;&nbsp;<label for="Both">Both</label><br/>
-        <input type="checkbox" id="Male" onclick="checkSubCategory('1', 'Male')">&nbsp;&nbsp;<label for="Male">Male</label><br/>
-        <input type="checkbox" id="Female" onclick="checkSubCategory('1', 'Female')">&nbsp;&nbsp;<label for="Female">Female</label><br/>
+        <input type="radio" name="Both" id="Both" >&nbsp;&nbsp;<label for="Both">Both</label><br/>
+        <input type="checkbox" id="Male" onclick="checkSubCategory()">&nbsp;&nbsp;<label for="Male">Male</label><br/>
+        <input type="checkbox" id="Female" onclick="checkSubCategory()">&nbsp;&nbsp;<label for="Female">Female</label><br/>
     </div>
 </div>
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
@@ -108,3 +128,4 @@
         <input type="checkbox" name="Undiscovered" id="Undiscovered">&nbsp;&nbsp;<label for="Undiscovered">Undiscovered content</label><br/>
     </div>
 </div>
+
