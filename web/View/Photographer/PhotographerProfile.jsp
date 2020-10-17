@@ -99,6 +99,16 @@
                                                         
                                                     </form>
 						</div>
+					</div> 
+                                    
+                                       <div class="tax-info">
+						<div class="heading">
+							<p>Tax Information</p>
+                                                </div> 
+						<div class="edit">
+                                                    <p> Fill up your tax form! You could avoid up to 30% withholding's on your revenue </p>
+                                                    <a href="#" type="button">Add Tax Information</a>
+						</div>
 					</div>
                                     
                                         

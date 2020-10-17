@@ -34,16 +34,6 @@ body{
   height: 100%;
 }
 
-.user-detail a{
-  top: 35px;
-  background: #fff;
-  padding: 5px 11px;
-  color: black;
-  text-decoration: none;
-  font-size: 13px;
-  
-  
-}
 .user-image{
   float: left;
   position: relative;
@@ -107,7 +97,10 @@ body{
   cursor: pointer;
   border-radius: 5px;
   color: black;
-  background-color: #ffff;  
+  background-color: #ffff; 
+  top: 35px;
+  text-decoration: none;
+  font-size: 15px;
 }
 
 .user-detail a:hover{
@@ -274,6 +267,61 @@ body{
   color: #838383;
   font-size: 13px;
 }
+
+.tax-info {
+  float: right;
+  width: 70%;
+  margin-top: 30px;
+  border:1px solid #ededed;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 10%;
+  border-radius: 10px;
+  margin-bottom: 13px;
+}
+
+.tax-info .heading{
+  padding: 10px 0px 10px 10px;
+}
+
+.tax-info .heading p{
+  margin: 0px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+
+.tax-info .edit{
+  padding: 10px 10px 10px 10px;
+  text-align: justify;
+  color: #838383;
+  font-size: 13px;
+}
+
+.tax-info .edit p{
+  padding: 10px 10px 10px 10px;
+  text-align: justify;
+  color: #838383;
+  font-size: 18px;
+}
+.tax-info .edit a{
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  background-color: #008CBA;
+  text-decoration: none;  
+  font-size: 15px;
+  margin-left: 20px;
+}
+
+.tax-info .edit a:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+  background-color: #006CBE;
+  color: white;  
+}
+
 #Portfolio{
   height: 210px;
   float: left;
