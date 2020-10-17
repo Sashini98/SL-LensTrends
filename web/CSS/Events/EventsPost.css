@@ -7,13 +7,21 @@ and open the template in the editor.
     Created on : Oct 15, 2020, 10:51:47 AM
     Author     : Sashini Shihara
 */
+
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
 body
 {
-    background-image: url("../../Resources/Img/event1.jpeg");
+    background: url("../../Resources/Img/event1.jpeg")no-repeat center fixed;
+    background-size: cover;
 }
 fieldset
 {
-    width: 140%;
+    margin-top: 2%;
+    width: 100%;
     background-color: whitesmoke;
     margin-left: 6%;
     margin-top: 4%;
@@ -24,11 +32,12 @@ fieldset
 }
 
 .formContent{
-    width: 100%;
+    width: 80%;
     position: relative;
     height: 50px;
     margin-bottom: 15px;
     overflow: hidden;
+    margin-left: 6%;
 }
 
 
@@ -91,7 +100,7 @@ fieldset
 .submit
 {
   display: inline-block;
-  padding: 4.5% 7%;
+  padding: 2.5% 7%;
   font-size: 15px;
   cursor: pointer;
   text-align: center;
@@ -102,6 +111,7 @@ fieldset
   border: none;
   border-radius: 15px;
    margin-left:6%;
+   margin-top: 3%;
 }
 
 .submit:hover 

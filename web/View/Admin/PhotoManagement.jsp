@@ -94,23 +94,23 @@
                     <table border="0" width="100%" height="40px" >
                         <tr>
 			<div class='card'>
-                 	<td align="left">Product ID:</td>
+                 	<td align="left">Product ID</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-				<td align="left">Title:</td>
+				<td align="left">Title</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Category:</td>
+				<td align="left">Category</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Selling Price:</td>
+				<td align="left">Selling Price</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
 			</tr>
                         <tr>
-				<td align="left">Photographer:</td>
+				<td align="left">Photographer</td>
 				<td><input type=text name=name size="30" maxlength="25"></td>
                         </tr>
                         <tr>
