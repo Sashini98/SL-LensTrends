@@ -7,7 +7,10 @@ and open the template in the editor.
     Created on : Oct 15, 2020, 10:51:47 AM
     Author     : Sashini Shihara
 */
-
+body
+{
+    background-image: url("../../Resources/Img.event1.jpeg");
+}
 fieldset
 {
     width: 140%;
