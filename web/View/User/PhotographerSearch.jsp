@@ -23,7 +23,7 @@
                     <br><br>
                     <!--<i class="material-icons sidemenu-icons">camera_alt</i>-->
                 </div>
-                <iframe style="width: 25%;margin-left: 3.8%;border: none" src="PhotographerAdvancedFilter.jsp">
+                <iframe style="width: 23%;margin-left: 3.8%;border: none" src="PhotographerAdvancedFilter.jsp">
 
                 </iframe>
                 <div style="background-color: bisque;width: 100%;">
