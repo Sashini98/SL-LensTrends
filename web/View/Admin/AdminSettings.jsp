@@ -114,6 +114,7 @@
             </div>
         </div>
         
+        
         <div class="row">
             <div class="column">
                 <div class="card">
@@ -125,6 +126,16 @@
                 </div>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="column">
+                <div class="card">
+                    <button class="btn2">Subscription Plan Settings </button>
+                </div>
+            </div>
+        </div>
+        
+        
         
         <footer>    
     <div class="container">      

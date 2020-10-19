@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     <link rel="stylesheet" href ="../../CSS/Admin/Admin.css">
+    <link rel="stylesheet" href ="../../CSS/Admin/intermediate.css">
     <link rel="stylesheet" href="../../CSS/footer.css">
     <link rel="stylesheet" href="../../CSS/header.css">
     
@@ -76,7 +77,7 @@
                         <tr><th></th></tr>
                         <tr>
                             <th></th>
-                            <td><center><input class="confirmBTN" type='submit' value="Options" name='view' style="background-color:red"></center></td>
+                            <td><center><input id="option" class="confirmBTN" type='submit' value="Options" name='view' style="background-color:red"></center></td>
                         </tr>
                     </table>
                     </div>
@@ -166,6 +167,57 @@
                 </div> 
             </div>
         </div>
+            <div id="myModal" class="modal">
+
+ 
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <form>
+	<fieldset>
+            <legend><font color="black"><h1>Category</h1></font></legend>
+        <table border="0" width="30%" height="40px" >
+                        <tr>
+				<td align="left">Search</td>
+                                <td><input class="textbox" type=text name=name size="30" maxlength="25" placeholder="Type here..."></td>
+                                <td><right><img src= "../../Resources/Img/search.png"></right></td>
+			</tr>
+                        <tr>
+				<td align="left">Category Name:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Category Type:</td>
+				<td><input class= "textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+                            <td><center><input class="submit" type="submit" value="Update" ></center></td>
+                            <td><center><input class="reset" type="reset" value="Remove" ></center>
+                        </tr>
+                        
+                         
+                    </table>
+            
+	</fieldset>
+	</form>
+  </div>
+            </div>
+            
+            <script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("option");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
     
     <footer>    
     <div class="container">      

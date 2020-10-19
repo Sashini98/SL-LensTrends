@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Users</title>
         <link rel="stylesheet" href ="../../CSS/Admin/Admin.css">
+        <link rel="stylesheet" href ="../../CSS/Admin/intermediate.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/header.css">
         
@@ -89,7 +90,7 @@
                             <th></th>
                             <th></th>
                             <th></th>
-                            <th><input class="confirmBTN" type='submit' value="View" name='view' style="background-color:#FF7F50"></th>
+                            <th><input id="vie" class="confirmBTN" type='submit' value="View" name='view' style="background-color:#FF7F50"></th>
                         </tr>
                     </table>
                     <button class='btn2'>Add User</button>
@@ -199,6 +200,87 @@
                     </div>
                 </div>
     </div>
+    
+        <div id="myModal" class="modal">
+
+ 
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    
+    <form>
+	<fieldset>
+            <legend><font color="black"><h1>Profile</h1></font></legend>
+        <table border="0" width="100%" height="40px" >
+                        <tr>
+				<td align="left">First Name:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Last Name:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Date of Birth:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Gender:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Email:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Address:</td>
+                                <td><input class="textbox" type=text name=name size="30" maxlength="25"></textarea></td>
+			</tr>
+                        <tr>
+				<td align="left">Country:</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td align="left">Password:</td>
+				<td><input class="textbox" type=password name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td>Registered Date</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td>Deactivated Date</td>
+				<td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+				<td>Reason</td>
+                                <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+			</tr>
+                        <tr>
+                            <td></td>
+				<td><input class="reset" type="reset" value="Close" ></td>
+			</tr>
+                        
+                    </table>
+	</fieldset>
+	</form>
+  </div>
+        </div>
+    <script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("vie");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
     
         <footer>    
     <div class="container">      
