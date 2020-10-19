@@ -173,7 +173,7 @@
         </div>          
         </footer>
         
-        
+        <script type="text/javascript" src="../../JS/Forum/question.js" />
         <script>
 
 var modal = document.getElementById("answ");
