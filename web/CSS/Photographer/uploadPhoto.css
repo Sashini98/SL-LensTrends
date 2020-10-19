@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 18, 2020, 7:08:36 PM
+    Author     : Sashini Shihara
+*/
+
+body
+{
+    
+}
+
+.container
+{
+    margin-top: 5%;
+    border: 2px solid;
+    background-color: transparent;    
+    width: 80%;
+    height: 40em;
+    margin-left: 8%;
+}
+
+.photo
+{
+    margin-top: 5%;
+    border: 2px solid;
+    background-color: transparent;    
+    width: 80%;
+    height:70%;
+    margin-left: 8%;
+}
+
+input[type=button]
+{
+    margin-left: 2%;
+    float:right;
+    background-color: lightskyblue;
+    border: 0.1px solid transparent; 
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+input[type=file]
+{
+    margin-left: 2%;
+    float:right;
+    background-color: lightskyblue;
+    border: 0.1px solid transparent; 
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+p
+{
+    margin-left: 45%;
+}
