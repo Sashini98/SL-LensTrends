@@ -21,9 +21,9 @@
                         
                 <nav class="nv">
                         <ul class="nav__links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="UserManagement.jsp">users</a></li>
+                            <li><a href="UserManagement.jsp">Users</a></li>
                             <li><a href="PhotoManagement.jsp">Photographs</a></li>
+                            <li><a href="SubPlan.jsp">Subscription Plans</a></li>
                             <li><a href="Reports.jsp">Reports</a></li>
                             <li><a class="active" href="AdminMessage.jsp">Messages</a></li>
                             <li><a href="AdminSettings.jsp">Settings</a></li>
