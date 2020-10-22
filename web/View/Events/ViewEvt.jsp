@@ -14,38 +14,38 @@
     </head>
     <body  style="background-image: url(../../Resources/Img/ViewEv.jpg);background-size: 100% ; " >
         <form>
-  <div class="container">
-    <h1>New Event</h1>
-    <hr>
+            <div class="container">
+                <h1>New Event</h1>
+                <hr>
 
-    <label for="name"><b>Event Name</b></label><br>
-    <input type="text" name="name"><br>
+                <label for="name"><b>Event Name</b></label><br>
+                <input type="text" name="name"><br>
 
-    <label for="date"><b>Date Of Event</b></label><br>
-    <input type="text" name="date"><br>
+                <label for="date"><b>Date Of Event</b></label><br>
+                <input type="text" name="date"><br>
 
-    <label for="Event Venue"><b>Event Venue</b></label><br>
-    <input type="text" name="Event Venue"><br>
-    
-    <label for="Event Starting Time"><b>Event Starting Time</b></label><br>
-    <input type="text" name="Event Starting Time"><br>
-    
-    <label for="Event Description"><b>Event Description</b></label><br>
-    <input type="text" name="Event Description"><br>
-    
-    <label for="Estimated Budget Range"><b>Estimated Budget Range</b></label><br>
-    <input type="text" name="Estimated Budget Range"><br>
-    
-    
+                <label for="Event Venue"><b>Event Venue</b></label><br>
+                <input type="text" name="Event Venue"><br>
 
-    
-    <div class="clearfix">
-      <button type="submit" class="acceptbtn">Accept</button>
-      <button type="button" class="cancelbtn">Reject</button>
-      
-    </div>
-  </div>
-</form>
+                <label for="Event Starting Time"><b>Event Starting Time</b></label><br>
+                <input type="text" name="Event Starting Time"><br>
+
+                <label for="Event Description"><b>Event Description</b></label><br>
+                <input type="text" name="Event Description"><br>
+
+                <label for="Estimated Budget Range"><b>Estimated Budget Range</b></label><br>
+                <input type="text" name="Estimated Budget Range"><br>
+
+
+
+
+                <div class="clearfix">
+                    <button type="submit" class="acceptbtn">Accept</button>
+                    <button type="button" class="cancelbtn">Reject</button>
+
+                </div>
+            </div>
+        </form>
 
     </body>
 </html>
