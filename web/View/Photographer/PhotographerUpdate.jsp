@@ -12,11 +12,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Photographer</title>
         <link rel="stylesheet" href="../../CSS/Photographer/PhotographerUpdate.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         
     </head>
     
     <body>
-
+   
 		<div class="profile-header">
 			<div class="user-detail">
 				<div class="user-image">
@@ -52,20 +53,20 @@
                                          
 				</div>
 				
-                       
+                       </div>
 					<div class="skill-box">
                                             
                                             <ul>
-                                                <li><a href="#section1">Account</a></li> <br> <br>
-                                                <li>Address</li> <br> <br>
-                                                <li>Tax Information</li> <br> <br>
+                                                <li><a href="#accsec">Account</a></li> <br> <br>
+                                                <li><a href="#addsec">Address</a></li> <br> <br>
+                                                <li><a href="#taxsec">Tax Information</a></li> <br> <br>
                                                 <li><a href="#section2">Password</a></li> <br> <br>
-                                                <li>Delete Account</li> <br> <br>
+                                                <li><a href="#delsec">Delete Account</a></li> <br> <br>
 					    </ul>	
                                             
 					</div>
-					<div class="account" id="section1">
-						<div class="heading">
+					<div class="account" id="accsec">
+						<div class="heading" >
 							<p>Account                                                            
                                                             <label> <a href="#" type="button">Client View </a></label>
                                                         </p>
@@ -87,7 +88,7 @@
 						</div>
 					</div>
                                   
-                                        <div class="address">
+                                        <div class="address" id="addsec">
 						<div class="heading">
 							<p>Address</p>
                                                 </div> <br>
@@ -108,7 +109,7 @@
 						</div>
 					</div> 
                                     
-                                       <div class="tax-info">
+                                       <div class="tax-info" id="taxsec">
 						<div class="heading">
 							<p>Tax Information</p>
                                                 </div> 
@@ -128,7 +129,7 @@
 						</div>
                                             
 					</div>
-	</div>
+	
 
     </body>
     

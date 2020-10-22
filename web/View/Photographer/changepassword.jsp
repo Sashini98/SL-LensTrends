@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Change Password</title>
         <link rel="stylesheet" href="../../CSS/Photographer/changepassword.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
     </head>
     <body>
         <div class="container"> 
