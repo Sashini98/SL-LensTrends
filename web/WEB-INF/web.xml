@@ -4,9 +4,25 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>Controller.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AskQues</servlet-name>
+        <servlet-class>Controller.Forum.AskQues</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Ques</servlet-name>
+        <servlet-class>Controller.Ques</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AskQues</servlet-name>
+        <url-pattern>/AskQues</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Ques</servlet-name>
+        <url-pattern>/Ques</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

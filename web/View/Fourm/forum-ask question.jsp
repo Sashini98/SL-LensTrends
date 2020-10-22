@@ -31,7 +31,7 @@
     <body style="background-image: url(../../Resources/Img/askq.jpg);background-repeat: no-repeat; background-size: cover">
 
         <div style="float: left; "> 
-            <form>
+            <form  action="../../AskQues" method="POST">
                 <fieldset>
                     <legend style="color: gainsboro;text-shadow: 0 0 5px black;font-size: 20px;"><h1>Ask question</h1></legend><br><br>
                     <h3><label for="Title"><b>Title</b></label><br></h3>
@@ -40,7 +40,7 @@
                     <h3><label for="Body"><b>Body</b></label><br></h3>
                     <div class="btn-group">
 
-                        <button type="button" style="margin-left:4%"id="bold"> <b>B</b> </button>
+                        <button type="button" style="margin-left:4%"id="bold" name="bold"> <b>B</b> </button>
                         <button type="button" id="italic"><i>I</i></button>      
                         <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:7%;height:6%;"></button>
                         <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:7%;height:6%;left: 0%"></button>
@@ -53,7 +53,7 @@
 
                     <h3><label for="Category"><b>Category</b></label><br></h3>
                     <div class="dropdown-container">
-                        <select>
+                        <select name="Category">
                             <option value="beginers">-------------<p><i class="arrow down"></i></p></option>
                             <option value="beginers">Beginners questions</option>
                             <option value="equipments">Photo Equipments</option>
@@ -75,8 +75,6 @@
         <!--<div style="float: right; "> <img src="../../Resources/Img/ques2.png" style="width:85%;height:85%;margin-top: 30%; margin-left: 30%"></div>-->
 
     <br>
-
-    
 
     <footer>    
         <br><div class="container">      
@@ -118,6 +116,8 @@
     </div>
         </div>          
         </footer>
+    
+    <script src="../../JS/Forum/AskQues.js" type="text/javascript"></script>
     </body>
 </html>
 
