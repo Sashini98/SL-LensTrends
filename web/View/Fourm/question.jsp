@@ -32,13 +32,13 @@
         <title>Question</title>
     </head>
     <body><br><br><br>
-        <div class="ques">
+        <div class="ques" id="ques">
             <label1>Q2346546</label1>
             <p style="font-size: 15px; color: darkblue">Person B</p> <p style="font-size: 15px; color: darkgreen;">14/09/2019</p><br>
             <h8>Selling the photos</h8><br><br><br>
             <label2>Took this using my EM1Mk2 in July this year.I attached it to my telescope so it's </label2><br><br><br>
             
-            <input type="button" id="answerr" value="Answer"><input type="button" id="rep" value="Report"><br><br><br>
+            <input type="button" id="answerr" value="Answer"><input type="button" id="repo" value="Report"><br><br><br>
             <p2 style="font-size: 13px; color: gray;">3 Answers</p2><br><br>           
          </div>
         
@@ -136,12 +136,12 @@
                 <span class="close">&times;</span>
               <h4>Please select a problem to continue</h4>
               <form>
-                        <button onclick="reportItemClicked('Inappropriate')" id="Inappropriate">Posting Inappropriate Things</button>
-                        <button onclick="reportItemClicked('quality')" id="quality">Low Quality Photograph</button>
-                        <button onclick="reportItemClicked('details')" id="details">Inappropriate Details</button>
-                        <button onclick="reportItemClicked('fake')" id="fake">Fake Photograph</button>
-                        <button onclick="reportItemClicked('somethingElse')" id="somethingElse">Something Else</button>
-                        <textarea id="body" name="body" rows="20" cols="50"></textarea><br><br>
+                        <input type="checkbox" id="Inappropriate" name="Inappropriate" value="Inappropriate">Posting Inappropriate Things
+                        <input type="checkbox" id="quality" name="Qality" value="quality">Low Quality Photograph
+                        <input type="checkbox" id="details" name="details" value="details">Inappropriate Details
+                        <input type="checkbox" id="fake" name="fake" value="fake">Fake Photograph
+                        
+                        <textarea id="body" name="body" rows="10" cols="30" placeholder="Something Else"></textarea><br><br>
                     <input type="submit" value="post">
               </form>     
                     </div>
@@ -187,11 +187,10 @@
     </div>
         </div>          
         </footer>
+             
         
       
-        <script>
-
-</script>
+        <script src="../../JS/Forum/Question.js" type="text/javascript"></script>
         
     </body>
 </html>

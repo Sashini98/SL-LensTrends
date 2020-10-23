@@ -192,3 +192,59 @@ textarea
    width : 95%;
    margin-top: 0;
 }
+
+
+
+.ReportPhoto{
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 2px 2px 4px #000000;
+    border-radius: 15px;
+    background-color: white;
+    display: none;
+    z-index: 1; 
+    position: fixed;
+    margin-top: 150px;
+}
+
+.ReportHeader{
+    display: grid; 
+    grid-template-columns: 90% 10%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    /*align-items:*/ 
+}
+
+.ReportsItems > button{
+    margin-bottom: 3%;
+    background-color: rgb(216, 218, 223);
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    outline: none;
+}
+
+.reportReason{
+
+    width: 100%;
+    height: 60px;
+}
+
+.Report{
+    margin-bottom: 3%;
+    background-color: rgb(222, 58, 42);
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    float: right;
+}
