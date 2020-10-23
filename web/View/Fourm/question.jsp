@@ -38,7 +38,7 @@
             <h8>Selling the photos</h8><br><br><br>
             <label2>Took this using my EM1Mk2 in July this year.I attached it to my telescope so it's </label2><br><br><br>
             
-            <input type="button" id="answerr" value="Answer"><input type="button" value="Report"><br><br><br>
+            <input type="button" id="answerr" value="Answer"><input type="button" id="rep" value="Report"><br><br><br>
             <p2 style="font-size: 13px; color: gray;">3 Answers</p2><br><br>           
          </div>
         
@@ -131,6 +131,21 @@
 
         </div>
         
+         <div id="report" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+              <h4>Please select a problem to continue</h4>
+              <form>
+                        <button onclick="reportItemClicked('Inappropriate')" id="Inappropriate">Posting Inappropriate Things</button>
+                        <button onclick="reportItemClicked('quality')" id="quality">Low Quality Photograph</button>
+                        <button onclick="reportItemClicked('details')" id="details">Inappropriate Details</button>
+                        <button onclick="reportItemClicked('fake')" id="fake">Fake Photograph</button>
+                        <button onclick="reportItemClicked('somethingElse')" id="somethingElse">Something Else</button>
+                        <textarea id="body" name="body" rows="20" cols="50"></textarea><br><br>
+                    <input type="submit" value="post">
+              </form>     
+                    </div>
+        
         
         <footer>    
     <div class="container">      
@@ -173,58 +188,9 @@
         </div>          
         </footer>
         
-        <script type="text/javascript" src="../../JS/Forum/question.js" />
+      
         <script>
 
-var modal = document.getElementById("answ");
-
-
-var btn = document.getElementById("answerr");
-
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
-
-
-var modal1 = document.getElementById("comment");
-
-
-var btn1 = document.getElementById("comme");
-
-
-var span1 = document.getElementsByClassName("close")[0];
-
-
-btn1.onclick = function() {
-  modal1.style.display = "block";
-}
-
-
-span1.onclick = function() {
-  modal1.style.display = "none";
-}
-
-window1.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
 </script>
         
     </body>
