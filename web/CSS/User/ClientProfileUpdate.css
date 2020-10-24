@@ -1,0 +1,262 @@
+
+.skill-box{
+
+    border-radius: 3px;
+    margin-bottom: 20px;
+    margin-left: 4%;
+    float: left;
+    padding: 10px;
+    height: 1000px;
+    width: 14%;
+    margin-top: 10%;
+    position: fixed;
+}    
+
+.containul {
+    width: 9%;
+}
+
+.skill-box ul li{
+    display: inline-block;
+    font-size: 17px;
+    margin-right: 4px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-size: 17px;
+    box-sizing: border-box;
+    font-family: 'Questrial', sans-serif;
+}
+
+.skill-box ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.skill-box ul li:hover{
+    background-color: #FF6E00;
+    color: #fff !important;
+    border-radius: 8px;
+}
+
+
+.account{
+    float: right;
+    width: 50%;
+    padding: 0 0 0 2%;
+    border-radius: 4px;
+    background-color: #fbfbfb;  
+    border-radius: 10px;
+    margin: 10% 25% 0 0;
+
+}
+
+.account .heading{
+    padding: 10px 0px 10px 10px;
+}
+.account .heading p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+
+
+
+.heading p::after{
+    display: block;
+    height: .15rem;
+    content: "";
+    background-color: #323232;
+    border-radius: .125rem;
+    width: 45%;
+    margin-top: 0.75rem;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.account .edit{
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    color: #838383;
+    font-size: 13px;
+    margin-top: -2%;
+}
+
+.edit input[type=text] {
+    width: 60%;
+    padding: 11px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 18px;
+    background-color: #fbfbfb;
+    font-family: Helvetica;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.edit input:hover{
+    background: url("../../Resources/Img/edit.png") no-repeat;
+    background-position-x: 100%;
+    cursor: pointer;
+}
+
+.edit label{
+    font-size: 18px;
+    color: #323232;
+    font-weight: bold;
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.edit textarea{
+    font-family: 'Didact Gothic', sans-serif;
+    outline: none;
+}
+
+.address{
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: #fbfbfb; 
+    margin-right: 10%;
+    border-radius: 10px;
+    margin: 3% 25% 0 0;
+    padding:0 0 0 2%;
+}
+
+.address .heading{
+    padding: 10px 0px 10px 10px;
+}
+
+.address .heading p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.address .edit{
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    color: #838383;
+    font-size: 13px;
+
+}
+
+.password {
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: #fbfbfb; 
+    margin-right: 10%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin: 3% 25% 0 0;
+    padding: 0 0 1% 2%;
+}
+
+.password .heading{
+    padding: 10px 0px 10px 10px;
+}
+
+.password .heading p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.password .edit{
+    padding: 0px 10px 0px 10px;
+    text-align: justify;
+    color: #838383;
+    font-size: 13px;
+
+}
+
+.password .edit p{
+    text-align: justify;
+    color: #838383;
+    font-size: 16px;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: -0.1%;
+}
+.password .edit a{
+    display: inline-block;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #008CBA;
+    text-decoration: none;  
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.password .edit a:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+    background-color: #006CBE;
+    color: white;  
+}
+
+
+.deleteacc {
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: #fbfbfb; 
+    margin-right: 10%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin: 3% 25% 0 0;
+    padding: 0 0 2% 2%;
+}
+
+.deleteacc .heading{
+    padding: 10px 0px 10px 10px;
+}
+
+.deleteacc .heading p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.deleteacc .edit{
+    padding: 0px 10px 0px 10px;
+    text-align: justify;
+    color: #838383;
+    font-size: 13px;
+
+}
+
+.deleteacc .edit p{
+    text-align: justify;
+    color: #838383;
+    font-size: 16px;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: -0.1%;
+}
+.deleteacc .edit a{
+    display: inline-block;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #008CBA;
+    text-decoration: none;  
+    font-size: 15px;
+    margin-left: 20px;
+    margin-top: -0.2%;
+}
+
+.deleteacc .edit a:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+    background-color: #006CBE;
+    color: white;  
+}
