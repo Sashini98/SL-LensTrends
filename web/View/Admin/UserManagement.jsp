@@ -23,8 +23,8 @@
             <nav class="nv">
                 <ul class="nav__links">
                     <li><a class="active" href="UserManagement.jsp">Users</a></li>
-                    <li><a href="PhotoManagement.jsp">Photographs</a></li>
-                    <li><a href="SubPlan.jsp">Subscription Plans</a></li>
+                    <li><a href="PhotoManagement.jsp">Photographs & Forum</a></li>
+                    <li><a href="SubPlan.jsp">Plans</a></li>
                     <li><a href="Reports.jsp">Reports</a></li>
                     <li><a href="AdminMessage.jsp">Messages</a></li>
                     <li><a href="AdminSettings.jsp">Settings</a></li>
@@ -36,100 +36,12 @@
 <body style="background-image: url(../../Resources/Img/userback.jpg)">
 
     <div class="row">
-        <div class="column2">
+        <div class='column'>
             <div class='card'>
-                <select name ="pages">                  
-                    <option> Settings</option>                  
-                    <option> Reports</option>                  
-                    <option> Message</option> 
-                    <option> Products</option>   
-                </select> 
-                <button>Add</button>
-                <hr>
-                <table align="left" border="0" width="40%" height="40px" >
-
-                    <tr>
-                        <th><input type="text" size="39"></th>
-                        <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
-                    </tr>
-                    <tr>
-                        <th><input type="text" size="39"></th>
-                        <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
-                    </tr>
-                    <tr>
-                        <th><input type="text" size="39"></th>
-                        <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
-                    </tr>
-                    <tr>
-                        <th><input type="text" size="39"></th>
-                        <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
-                    </tr>
-                    <tr>
-                        <th><input type="text" size="39"></th>
-                        <th><input class="confirmBTN" type='submit' value="Remove" name='delete' style="background-color:#B22222"></th>
-                    </tr>
-                </table>
-            </div>
-            <div class='card'>
-                <img class='cardimg' src= "../../Resources/Img/tick.png"><br>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="row">
-        <div class="column">
-            <div class='card'>
-                <label>Search user</label>
+                <font color="red">Activate Users</font><hr><br>
                 <input type="text" placeholder="Type here">
                 <button>Search</button>
-                <hr>
-
-            </div>
-            <div class='card'>
-                <table border="0" width="100%" height="40px" >
-                    <tr>
-                        <td align="left">User ID</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <td align="left">First Name</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <td align="left">Last Name</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <td align="left">Date of Birth</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <td align="left">Gender</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <td align="left">Registered Date</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <td align="left">Country</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                    </tr>
-                    <tr>
-                        <th colspan =2><button class='btn2'>Deactivate</button></th>
-                    </tr>
-
-                </table>
-            </div>
-
-            <div class='card'>
-                <label>Deactivated users</label>
-                <input type="text" placeholder="Type here">
-                <button>Search</button>
-                <hr>
+                <br><br>
                 <table border="1" width="100%" height="40px" >
                     <tr>
                         <th>ID</th>
@@ -139,10 +51,84 @@
                     <tr>
                         <th></th>
                         <th></th>
-                        <th><input id="vie" class="confirmBTN" type='submit' value="View" name='view' style="background-color:#FF7F50"></th>
+                        <th><input id="vie" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
                     </tr>
-                </table>
+                </table><br>
                 <button class='btn2'>Add User</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="column">
+            <div class='card'>
+                <font color="red">Reported Users</font>
+                <hr><br>
+                <table border="1" width="100%" height="40px" >
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Option</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
+                    </tr>
+                </table><br>
+                <form>
+                    <table border="0" width="100%" height="40px" >
+                        <tr>
+                            <td align="left">Email</td>
+                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Reason</td>
+                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                        </tr>
+                    </table><br>
+                </form>
+            </div>
+            
+            <div class='card'>
+                <label>Search user</label>
+                <input type="text" placeholder="Type here">
+                <button>Search</button>
+                <hr>
+
+                <table border="0" width="100%" height="40px" >
+                  
+                    <tr>
+                        <td align="left">First Name</td>
+                        <td><input type=text name=fname size="30" maxlength="25"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Last Name</td>
+                        <td><input type=text name=lname size="30" maxlength="25"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Date of Birth</td>
+                        <td><input type=text name=dob size="30" maxlength="25"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Gender</td>
+                        <td><input type=text name=gender size="30" maxlength="25"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Registered Date</td>
+                        <td><input type=text name=rdate size="30" maxlength="25"></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Address</td>
+                        <td><input type=text name=address size="30" maxlength="25"></td>
+                    </tr>
+                    <tr>
+                        <th colspan =2><button class='btn2'>Deactivate</button></th>
+                    </tr>
+
+                </table>
             </div>
 
         </div>
@@ -165,6 +151,8 @@
         </div>
     </div>
 
+
+
     <div id="myModal" class="modal">
 
 
@@ -176,48 +164,48 @@
                     <legend><font color="black"><h1>Profile</h1></font></legend>
                     <table border="0" width="100%" height="40px" >
                         <tr>
-                            <td align="left">First Name:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td align="left">First Name</td>
+                            <td><input class="textbox" type=text name=fname size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Last Name:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td align="left">Last Name</td>
+                            <td><input class="textbox" type=text name=lname size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Date of Birth:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td align="left">Date of Birth</td>
+                            <td><input class="textbox" type=text name=dob size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Gender:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td align="left">Gender</td>
+                            <td><input class="textbox" type=text name=gender size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Email:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td align="left">Email</td>
+                            <td><input class="textbox" type=text name=email size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Address:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></textarea></td>
+                            <td align="left">Address</td>
+                            <td><input class="textbox" type=text name=address size="30" maxlength="25"></textarea></td>
                         </tr>
                         <tr>
-                            <td align="left">Country:</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td align="left">Country</td>
+                            <td><input class="textbox" type=text name=country size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Password:</td>
-                            <td><input class="textbox" type=password name=name size="30" maxlength="25"></td>
+                            <td align="left">Password</td>
+                            <td><input class="textbox" type=password name=pw size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td>Registered Date</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td><input class="textbox" type=text name=rdate size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td>Deactivated Date</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td><input class="textbox" type=text name=ddate size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td>Reason</td>
-                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            <td><input class="textbox" type=text name=reason size="30" maxlength="25"></td>
                         </tr>
 
                     </table>
@@ -225,22 +213,7 @@
             </form>
         </div>
     </div>
-    <script>
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("vie");
-        var span = document.getElementsByClassName("close")[0];
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
 
     <footer>    
         <div class="container">      

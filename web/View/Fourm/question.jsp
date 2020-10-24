@@ -32,13 +32,13 @@
         <title>Question</title>
     </head>
     <body><br><br><br>
-        <div class="ques">
+        <div class="ques" id="ques">
             <label1>Q2346546</label1>
             <p style="font-size: 15px; color: darkblue">Person B</p> <p style="font-size: 15px; color: darkgreen;">14/09/2019</p><br>
             <h8>Selling the photos</h8><br><br><br>
             <label2>Took this using my EM1Mk2 in July this year.I attached it to my telescope so it's </label2><br><br><br>
             
-            <input type="button" id="answerr" value="Answer"><input type="button" value="Report"><br><br><br>
+            <input type="button" id="answerr" value="Answer"><input type="button" id="repo" value="Report"><br><br><br>
             <p2 style="font-size: 13px; color: gray;">3 Answers</p2><br><br>           
          </div>
         
@@ -131,6 +131,21 @@
 
         </div>
         
+         <div id="report" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+              <h4>Please select a problem to continue</h4>
+              <form>
+                        <input type="checkbox" id="Inappropriate" name="Inappropriate" value="Inappropriate">Posting Inappropriate Things
+                        <input type="checkbox" id="quality" name="Qality" value="quality">Low Quality Photograph
+                        <input type="checkbox" id="details" name="details" value="details">Inappropriate Details
+                        <input type="checkbox" id="fake" name="fake" value="fake">Fake Photograph
+                        
+                        <textarea id="body" name="body" rows="10" cols="30" placeholder="Something Else"></textarea><br><br>
+                    <input type="submit" value="post">
+              </form>     
+                    </div>
+        
         
         <footer>    
     <div class="container">      
@@ -172,60 +187,10 @@
     </div>
         </div>          
         </footer>
+             
         
-        <script type="text/javascript" src="../../JS/Forum/question.js" />
-        <script>
-
-var modal = document.getElementById("answ");
-
-
-var btn = document.getElementById("answerr");
-
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-
-
-
-
-var modal1 = document.getElementById("comment");
-
-
-var btn1 = document.getElementById("comme");
-
-
-var span1 = document.getElementsByClassName("close")[0];
-
-
-btn1.onclick = function() {
-  modal1.style.display = "block";
-}
-
-
-span1.onclick = function() {
-  modal1.style.display = "none";
-}
-
-window1.onclick = function(event) {
-  if (event.target == modal1) {
-    modal1.style.display = "none";
-  }
-}
-</script>
+      
+        <script src="../../JS/Forum/Question.js" type="text/javascript"></script>
         
     </body>
 </html>

@@ -41,7 +41,7 @@ body{
   width: 100%;
   height: 100%;
   border-radius: 60%;
-  margin-top: 7%;
+  margin-top: 18%;
 }
 .prof-label{
   position: absolute;
@@ -122,9 +122,9 @@ body{
   display: inline-block;
   font-size: 17px;
   margin-right: 4px;
-  padding: 4px 4px;
+  padding: 2px 4px;
   border-radius: 2px;
-  font-size: 18px;
+  font-size: 17px;
   box-sizing: border-box;
   font-family: 'Questrial', sans-serif;
 }
@@ -225,6 +225,11 @@ body{
     color: #323232;
     font-weight: bold;
     font-family: 'Didact Gothic', sans-serif;
+}
+
+.edit textarea{
+     font-family: 'Didact Gothic', sans-serif;
+     outline: none;
 }
 
 .address{
@@ -546,7 +551,7 @@ body{
   border-radius: 10px;
   margin-bottom: 25px;
   margin: 3% 25% 0 0;
-  padding: 0 0 7% 2%;
+  padding: 0 0 2% 2%;
 }
 
 .deleteacc .heading{
@@ -597,4 +602,62 @@ body{
 .fixedheader{
     margin-bottom: 10%;
     position: fixed;
+}
+
+.connaccount {
+  float: right;
+  width: 50%;
+  margin-top: 30px;
+  border-radius: 4px;
+  background-color: #fbfbfb; 
+  margin-right: 10%;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  margin: 3% 25% 0 0;
+  padding: 0 0 7% 2%;
+}
+
+.connaccount .heading{
+  padding: 10px 0px 10px 10px;
+}
+
+.connaccount .heading p{
+  margin: 0px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+
+.connaccount .edit{
+  padding: 0px 10px 0px 10px;
+  text-align: justify;
+  color: #838383;
+  font-size: 13px;
+  
+}
+
+.connaccount .edit p{
+  text-align: justify;
+  color: #838383;
+  font-size: 16px;
+  font-family: 'Be Vietnam', sans-serif;
+   margin-top: -0.1%;
+}
+.connaccount .edit a{
+  display: inline-block;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+  background-color: #008CBA;
+  text-decoration: none;  
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: -0.2%;
+}
+
+.connaccount .edit a:hover{
+  box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+  background-color: #006CBE;
+  color: white;  
 }

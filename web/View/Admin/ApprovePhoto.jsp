@@ -10,9 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="../../CSS/Admin/ApprovePhotos.css">
-        <title>JSP Page</title>
+        <title>Approve Photographs</title>
     </head>
-    <body>
+    <body style="background-image: url(../../Resources/Img/approve.jpg); background-size: 100% ; ">
         <div class="container1"></div>
 
         <form>
@@ -31,9 +31,6 @@
                 <label for="keywords"><b>Keywords</b></label><br>
                 <input type="text" name="keywords"><br>
 
-                <label for="file type"><b>File Type</b></label><br>
-                <input type="text" name="file type"><br>
-
                 <hr>
             </div>
         </form>
@@ -46,20 +43,15 @@
 
                 <label for="size"><b>Size</b></label><br>
                 <input type="text" name="size"><br>
-
-                <label for="category"><b>Category</b></label><br>
-                <input type="text" name="category"><br>
-
-                <label for="keywords"><b>Keywords</b></label><br>
-                <input type="text" name="keywords"><br>
+                
+                <label for="file type"><b>File Type</b></label><br>
+                <input type="text" name="file type"><br>
 
                 <div class="clearfix">
                     <button type="submit" class="Approvebtn">Accept</button>
                     <button type="button" class="Closebtn">Reject</button>
 
                 </div>
-
-                <hr>
             </div>
         </form>
 
