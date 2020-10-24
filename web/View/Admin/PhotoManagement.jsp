@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Photo Management</title>
         <link rel="stylesheet" href ="../../CSS/Admin/Admin.css">
         <link rel="stylesheet" href ="../../CSS/Admin/intermediate.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
@@ -23,8 +23,8 @@
             <nav class="nv">
                 <ul class="nav__links">
                     <li><a href="UserManagement.jsp">Users</a></li>
-                    <li><a class="active" href="PhotoManagement.jsp">Photographs</a></li>
-                    <li><a href="SubPlan.jsp">Subscription Plans</a></li>
+                    <li><a class="active" href="PhotoManagement.jsp">Photographs & Forum</a></li>
+                    <li><a href="SubPlan.jsp">Plans</a></li>
                     <li><a href="Reports.jsp">Reports</a></li>
                     <li><a href="AdminMessage.jsp">Messages</a></li>
                     <li><a href="AdminSettings.jsp">Settings</a></li>
@@ -42,27 +42,6 @@
                 <img class='cardimg' src= "../../Resources/Img/category.jpg"><br>
                 <font>Top Category</font>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class='column'>
-            <div class='card'>
-                <img class='cardimg' src= "../../Resources/Img/photograp.jpg"><br>
-                <font>Top Photographer</font>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class='column'>
-            <div class='card'>
-                <img class='cardimg' src= "../../Resources/Img/profit.png"><br>
-                <font>Daily Profit</font>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column">
             <div class='card'>
                 <font color="red">Category</font>
                 <hr>
@@ -77,19 +56,39 @@
                     <tr><th></th></tr>
                     <tr>
                         <th></th>
-                        <td><center><input id="option" class="confirmBTN" type='submit' value="Options" name='view' style="background-color:red"></center></td>
+                        <td><center><input id="option" class="submit" type='submit' value="Options"></center></td>
                     </tr>
                 </table>
             </div>
-
-
-
+            <div class='card'>
+                <font color="red">In-review Photographs </font><br>
+                <hr><br>
+                <button class='btn2'>VIew</button>
+            </div>
         </div>
-
     </div>
-
     <div class="row">
-        <div class="column">
+        <div class='column'>
+            <div class='card'>
+                <img class='cardimg' src= "../../Resources/Img/photograp.jpg"><br>
+                <font>Top Photographer</font>
+            </div>
+            <div class='card'>
+                <font color="red">Reported Photographs</font>
+                <hr><br>
+                <table border="1" width="100%" height="40px" >
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Option</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th><input id="viewPhoto" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
+                    </tr>
+                </table><br>
+            </div>
             <div class='card'>
                 <label>Search Photograph</label>
                 <input type="text" placeholder="Type here">
@@ -98,24 +97,21 @@
                 <table border="0" width="100%" height="40px" >
                     <tr>
                     <div class='card'>
-                        <td align="left">Product ID</td>
-                        <td><input type=text name=name size="30" maxlength="25"></td>
-                        </tr>
-                        <tr>
-                            <td align="left">Title</td>
-                            <td><input type=text name=name size="30" maxlength="25"></td>
-                        </tr>
                         <tr>
                             <td align="left">Category</td>
-                            <td><input type=text name=name size="30" maxlength="25"></td>
+                            <td><input type=text name=category size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td align="left">Selling Price</td>
-                            <td><input type=text name=name size="30" maxlength="25"></td>
+                            <td><input type=text name=price size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td align="left">Photographer</td>
-                            <td><input type=text name=name size="30" maxlength="25"></td>
+                            <td><input type=text name=pname size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Reason</td>
+                            <td><input type=text name=reason size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <th colspan =2><button class='btn2'>Remove</button></th>
@@ -123,21 +119,59 @@
 
                 </table>
             </div>
-
-
         </div>
     </div>
+
     <div class="row">
         <div class="column">
             <div class='card'>
-
-
-            </div> 
+                <font color="red">Reported Forum Questions</font>
+                <hr><br>
+                <table border="1" width="100%" height="40px" >
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Option</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
+                    </tr>
+                </table><br>
+                <form>
+                    <table border="0" width="100%" height="40px" >
+                        <tr>
+                            <td align="left">Category</td>
+                            <td><input class="textbox" type=text name=category size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Attachment</td>
+                            <td><input class="textbox" type=text name=attach size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Tags</td>
+                            <td><input class="textbox" type=text name=tags size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Reason</td>
+                            <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input class="reset" type="reset" value="Remove" ></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input class="submit" type="submit" value="Cancel" ></td>
+                        </tr>
+                    </table><br>
+                </form>
+            </div>
         </div>
     </div>
+
     <div id="myModal" class="modal">
-
-
         <div class="modal-content">
             <span class="close">&times;</span>
             <form>
@@ -170,22 +204,8 @@
         </div>
     </div>
 
-    <script>
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("option");
-        var span = document.getElementsByClassName("close")[0];
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+    
+    <script src="../../JS/Admin/PhotoManagement.js" type="text/javascript"></script>
 
     <footer>    
         <div class="container">      
