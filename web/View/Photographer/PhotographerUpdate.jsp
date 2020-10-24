@@ -54,6 +54,7 @@
 			<div class="user-detail">
 				<div class="user-image">
 					<img src="../../Resources/Img/athavan.jpg">
+                                        <p class="label">Change</p>
 				</div>
 				<div class="user-data">
 					<h2>Theivendram Athavan</h2>
@@ -104,7 +105,8 @@
                                                         <br> <input type="text" id="web" name="web" placeholder="www.ikongraphy.lk"> 
                                                         <br> <label for="Bio">Bio</label>
                                                         <br> <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="Provide some intersting details about you to impress the viewers"></textarea>
-                                                        <br> <label for="profilpic"></label>
+                                                        <br> <label for="profilpic">Field of Interest</label>
+                                                        <br> <textarea id="interest" name="interest" cols="57" rows="3" placeholder="Give your field of interest, separate with comos"></textarea>
                                                     </form>
 						</div>
 					</div>
