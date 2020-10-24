@@ -56,7 +56,7 @@
                     <tr><th></th></tr>
                     <tr>
                         <th></th>
-                        <td><center><input id="option" class="submit" type='submit' value="Options"></center></td>
+                        <td><center><input id="option" class="btn2" type='submit' value="Options"></center></td>
                     </tr>
                 </table>
             </div>
