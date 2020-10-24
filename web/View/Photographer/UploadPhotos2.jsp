@@ -12,6 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
-        
+        <div class="contain">
+            <div class="photo">
+                
+            </div>
+            
+           
+        </div>
     </body>
 </html>
