@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../../CSS/Admin/ApprovePhotos.css">
         <title>Approve Photographs</title>
     </head>
-    <body>
+    <body style="background-image: url(../../Resources/Img/approve.jpg); background-size: 100% ; ">
         <div class="container1"></div>
 
         <form>
@@ -52,8 +52,6 @@
                     <button type="button" class="Closebtn">Reject</button>
 
                 </div>
-
-                <hr>
             </div>
         </form>
 

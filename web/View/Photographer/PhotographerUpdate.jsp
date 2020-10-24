@@ -19,7 +19,7 @@
     
     <body>
         
-       <div class="fixedheader">
+      
             
         <div class="pageheader">
             <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
@@ -61,21 +61,14 @@
 					<span class="post-label">Portraits</span>
 					<span class="post-label">Fashion</span>
                                         <span class="post-label">Landscape</span>
-					<p>Founder <strong>IkonGraphy</strong><br>
-					<i>Jaffna, Srilanka</i> 
-					</p>
+                                        <p>www.ikongraphy.lk <br>
+					   Founder <strong>IkonGraphy</strong><br>                                        
+                                            <i>Jaffna, Srilanka</i> </p>
+					
 				</div>
-				<div class="social-icons">
-                                    <img src="../../Resources/Img/facebook.png">
-			            <img src="../../Resources/Img/instagram.png">
-				    <img src="../../Resources/Img/twitter.png">
-                                    <img src="../../Resources/Img/google.png">                       
-                                    <br> <br>
-                                </div>                                
+				                               
 			</div>				
                 </div>
-            
-        </div>
 					<div class="skill-box">
                                             
                                             <ul>
@@ -84,6 +77,7 @@
                                                 <li><a href="#taxsec">Tax Information</a></li> <br> <br>
                                                 <li><a href="#passsec">Password</a></li> <br> <br>
                                                 <li><a href="#delsec">Delete Account</a></li> <br> <br>
+                                                <li><a href="#connsec">Connected Account</a></li> <br> <br>
 					    </ul>	
                                             
 					</div>
@@ -106,6 +100,11 @@
                                                         <br> <input type="text" id="email" name="email" placeholder="thavanthya@gmail.com"> 
                                                         <br> <label for="email">Mobile Number </label>  
                                                         <br> <input type="text" id="mnum" name="mnum" placeholder="+94 77 946 2554"> 
+                                                        <br> <label for="website">Website </label>  
+                                                        <br> <input type="text" id="web" name="web" placeholder="www.ikongraphy.lk"> 
+                                                        <br> <label for="Bio">Bio</label>
+                                                        <br> <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="Provide some intersting details about you to impress the viewers"></textarea>
+                                                        <br> <label for="profilpic"></label>
                                                     </form>
 						</div>
 					</div>
@@ -157,12 +156,29 @@
 							<p>Delete Account</p>
                                                 </div> 
 						<div class="edit">
-                                                    <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions or organizations.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
-                                                    <a href="changepassword.jsp" type="button">Delete Account</a>
+                                                    <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
+                                                    <a href="#" type="button">Delete Account</a>
 						</div>
                                             
                                         </div> 
+        
+                                        <div class="connaccount" id="connsec">
+						<div class="heading">
+							<p>Connected Accounts</p>
+                                                </div> 
+						<div class="edit">
+                                                    <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
+                                                                                                     
+						</div>  
+                                            
+                                                 <div class="icons">
+                                                     <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
+                                                     <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connected</a>
+                                                </div>
+                                            
+                                        </div> 
                                                 
+                                        
        
                                        
                                             <div class="pagefooter">
