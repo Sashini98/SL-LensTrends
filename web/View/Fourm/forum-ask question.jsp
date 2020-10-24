@@ -41,7 +41,7 @@
                     <div class="btn-group">
 
                         <button type="button" style="margin-left:4%"id="bold" name="bold"> <b>B</b> </button>
-                        <button type="button" id="italic"><i>I</i></button>      
+                        <button type="button" id="italic"><i>I</i></button><br><br><br>      
                         <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:7%;height:6%;"></button>
                         <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:7%;height:6%;left: 0%"></button>
 
