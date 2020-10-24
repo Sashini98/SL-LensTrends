@@ -4,15 +4,31 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Oct 17, 2020, 11:01:20 AM
+    Created on : Oct 24, 2020, 11:42:28 PM
     Author     : Madusha
 */
 
-* {box-sizing: border-box}
-
-
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    margin: 20px;
+    text-align: center;
+    color: #ddd;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    max-height: 1000px;
+    background-color:rgba(0,0,0,0.6);
+  }
+  
+   .column {
+    float: right;   
+    width: 48%;
+    padding: 0 7px;
+  }
+  
+  .row {margin: 0 -1px;}
+  
   input[type=text], input[type=password] {
-  width: 50%;
+  width: 80%;
   padding: 15px;
   margin: 5px 0 22px 0;
   display: inline-block;
@@ -49,19 +65,18 @@ button:hover {
 
 .cancelbtn, .acceptbtn {
   float: left;
-  width: 25%;
+  width: 50%;
 }
-
-
-.container {
-  padding: 16px;
-}
-
 
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
 }
 
 
@@ -70,8 +85,3 @@ button:hover {
     width: 100%;
   }
 }
-
-  
-  
- 
-  
