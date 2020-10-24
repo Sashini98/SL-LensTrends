@@ -118,7 +118,7 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <font color="red">Send Notifications</font>
+                <font color="red">Send System Notifications</font>
                 <hr>
                 <textarea name="message" rows="8" cols="42"></textarea>
 

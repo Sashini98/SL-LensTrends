@@ -56,7 +56,6 @@
                 </table><br>
                 <button class='btn2'>Add User</button>
             </div>
-
         </div>
     </div>
 
@@ -93,10 +92,10 @@
             </div>
             
             <div class='card'>
-                <label>Search user</label>
+                <font color="red">Deactivate Users</font><hr><br>
                 <input type="text" placeholder="Type here">
                 <button>Search</button>
-                <hr>
+                <br><br>
 
                 <table border="0" width="100%" height="40px" >
                   
@@ -147,6 +146,10 @@
             <div class='card'>
                 <img class='cardimg' src= "../../Resources/Img/reported.png"><br>
                 <font>Reported Users</font>
+            </div>
+            <div class='card'>
+                <img class='cardimg' src= "../../Resources/Img/photograp.jpg"><br>
+                <font>Top Photographer</font>
             </div>
         </div>
     </div>

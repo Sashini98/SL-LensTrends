@@ -13,10 +13,8 @@
         <link rel="stylesheet" href ="../../CSS/Events/ViewEvt.css">
     </head>
     <body  style="background-image: url(../../Resources/Img/ViewEv.jpg);background-size: 100% ; " >
-        <form>
-            <div class="container">
+        <div class="container">
                 <h1>New Event</h1>
-                <hr>
 
                 <label for="name"><b>Event Name</b></label><br>
                 <input type="text" name="name"><br>
@@ -36,16 +34,13 @@
                 <label for="Estimated Budget Range"><b>Estimated Budget Range</b></label><br>
                 <input type="text" name="Estimated Budget Range"><br>
 
-
-
-
                 <div class="clearfix">
                     <button type="submit" class="acceptbtn">Accept</button>
                     <button type="button" class="cancelbtn">Reject</button>
-
                 </div>
+                
             </div>
-        </form>
-
+               
+       
     </body>
 </html>
