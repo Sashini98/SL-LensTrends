@@ -173,11 +173,17 @@
                                                 </div> 
 						<div class="edit">
                                                     <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
-                                                    <a href="#" type="button">Connect</a>
-						</div>
+                                                                                                     
+						</div>  
+                                            
+                                                 <div class="icons">
+                                                     <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
+                                                     <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connect</a>
+                                                </div>
                                             
                                         </div> 
                                                 
+                                        
        
                                        
                                             <div class="pagefooter">
