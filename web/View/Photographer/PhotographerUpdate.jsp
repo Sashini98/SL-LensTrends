@@ -104,6 +104,7 @@
                                                         <br> <input type="text" id="web" name="web" placeholder="www.ikongraphy.lk"> 
                                                         <br> <label for="Bio">Bio</label>
                                                         <br> <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="Provide some intersting details about you to impress the viewers"></textarea>
+                                                        <br> <label for="profilpic"></label>
                                                     </form>
 						</div>
 					</div>
@@ -172,7 +173,7 @@
                                             
                                                  <div class="icons">
                                                      <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
-                                                     <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connect</a>
+                                                     <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connected</a>
                                                 </div>
                                             
                                         </div> 
