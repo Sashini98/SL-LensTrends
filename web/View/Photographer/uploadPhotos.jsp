@@ -22,8 +22,7 @@
             </div>
             
             <br><br><br>
-            <div style="height:0px;overflow:hidden">
-                                                               
+            <div style="height:0px;overflow:hidden">                                                               
                 <input type="file" id="fileInput" name="fileInput"  onchange="loadFile(event)" />
                 </div>
             <input type="button" value="Select Photo" onclick="chooseFile();">

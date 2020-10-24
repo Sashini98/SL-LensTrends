@@ -17,7 +17,7 @@
          <div class="slide show" style="background-image: url('../Resources/Img/loginbg.jpg');"></div>
          <div class="slide" style="background-image: url('../Resources/Img/loginbg2.jpg');"></div>
          <div class="slide" style="background-image: url('../Resources/Img/loginbg3.jpg');"></div>
-      </div>
+     
         <div id="curtain">
         <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;"></div>
         <div class="form"> 
