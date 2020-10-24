@@ -66,13 +66,7 @@
                                             <i>Jaffna, Srilanka</i> </p>
 					
 				</div>
-				<div class="social-icons">
-                                    <img src="../../Resources/Img/facebook.png">
-			            <img src="../../Resources/Img/instagram.png">
-				    <img src="../../Resources/Img/twitter.png">
-                                    <img src="../../Resources/Img/google.png">                       
-                                    <br> <br>
-                                </div>                                
+				                               
 			</div>				
                 </div>
 					<div class="skill-box">
@@ -173,11 +167,17 @@
                                                 </div> 
 						<div class="edit">
                                                     <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
-                                                    <a href="#" type="button">Connect</a>
-						</div>
+                                                                                                     
+						</div>  
+                                            
+                                                 <div class="icons">
+                                                     <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
+                                                     <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connect</a>
+                                                </div>
                                             
                                         </div> 
                                                 
+                                        
        
                                        
                                             <div class="pagefooter">
