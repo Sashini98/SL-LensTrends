@@ -66,13 +66,7 @@
                                             <i>Jaffna, Srilanka</i> </p>
 					
 				</div>
-				<div class="social-icons">
-                                    <img src="../../Resources/Img/facebook.png">
-			            <img src="../../Resources/Img/instagram.png">
-				    <img src="../../Resources/Img/twitter.png">
-                                    <img src="../../Resources/Img/google.png">                       
-                                    <br> <br>
-                                </div>                                
+				                               
 			</div>				
                 </div>
 					<div class="skill-box">

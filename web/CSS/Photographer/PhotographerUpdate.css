@@ -81,25 +81,12 @@ body{
   font-size: 12px;
   color: #404040;
 }
-.social-icons{
-  float: right;
-  text-align: right;
-  margin-top:5%;
-  margin-right:5.5%;
-  width: 20%;
-}
-
-
 
 .user-detail a:hover{
     box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
   background-color: #008CBA;
   color: white;  
 }
-.social-icons img{
-    padding-right: 7%;
-}
-
 
 .skill-box{
   
