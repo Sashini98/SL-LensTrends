@@ -11,24 +11,32 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="../../CSS/forum/fhome.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
-        <link rel="stylesheet" href="../../CSS/header.css">
+        <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         
-        <header>
-                    <div class="hd">
-                    <a class="logo" href="/"><img src="../../Resources/Img/logo.png" alt="logo"></a>
-                    <lab>SL LensTrends</lab>
-                        
-                <nav class="nv">
-                        <ul class="nav__links">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Profiles</a></li>
-                            <li><a class="active" href="#">Forum</a></li>
-                            <li><a href="#">About Us</a></li>
+        <div class="pageheader">
+                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <h1>Sl Lens Trends </h1>
+
+                    <div class="headerul">
+                        <ul>
+
+                            <li><a href="#" type="button"> Events </a></li>
+                            <li><a href="#" type="button"> Album </a></li>
+                            <li><a href="#" type="button"> Profile </a></li>
+                            <li><a href="#" type="button"> Settings </a></li>
+
                         </ul>
-                    </nav>
                     </div>
-                </header>
+
+                    <div class="notifyicn">
+                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                    </div>
+
+                    <div class="logout">
+                        <a href="#" type="button"> Logout </a>
+                    </div>
+                </div>
     
         <title>Forum</title>
         
