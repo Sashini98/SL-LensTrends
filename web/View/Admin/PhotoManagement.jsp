@@ -70,10 +70,6 @@
     <div class="row">
         <div class='column'>
             <div class='card'>
-                <img class='cardimg' src= "../../Resources/Img/photograp.jpg"><br>
-                <font>Top Photographer</font>
-            </div>
-            <div class='card'>
                 <font color="red">Reported Photographs</font>
                 <hr><br>
                 <table border="1" width="100%" height="40px" >
@@ -90,7 +86,6 @@
                 </table><br>
             </div>
             <div class='card'>
-                <label>Search Photograph</label>
                 <input type="text" placeholder="Type here">
                 <button>Search</button>
                 <hr>

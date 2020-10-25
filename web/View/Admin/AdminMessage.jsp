@@ -39,19 +39,19 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <font color="red">Client's Notifications</font><hr>
+                <font color="red">Client Notifications</font><hr>
                 <textarea name="message" rows="4" cols="52"></textarea>
                 <table border="0" width="100%" height="40px" >
-                    <td><input class="confirmBTN" type='submit' value="Select User" name='user' style="background-color:#FF7F50"></td>
+                    <td><font>Email</font></td>
                     <td><input type="text" name=user size="37" maxlength="25"></td>
                 </table>
                 <button class="btn2">Send</button>
             </div>
             <div class="card">
-                <font color="red">Photographer's Notifications</font><hr>
+                <font color="red">Photographer Notifications</font><hr>
                 <textarea name="message" rows="4" cols="52"></textarea>
                 <table border="0" width="100%" height="40px" >
-                    <td><input class="confirmBTN" type='submit' value="Select User" name='user' style="background-color:#FF7F50"></td>
+                    <td><font>Email</font></td>
                     <td><input type="text" name=user size="37" maxlength="25"></td>
                 </table>
                 <button class="btn2">Send</button>
@@ -61,7 +61,7 @@
     <div class="row">
         <div class="column">
             <div class='card'>
-                <font color="blue">Messages</font>
+                <font color="red">Messages</font>
                 <hr>
                 <table border="1" width="100%" height="40px" >
                     <tr>
@@ -93,7 +93,7 @@
             <div class="card">
                 <form>
                     <fieldset>
-                        <legend><font color="blue">Message</font></legend>
+                        <legend><font color="red">Message</font></legend>
                         <textarea name="message" rows="5" cols="48"></textarea>
                     </fieldset>
                 </form>
