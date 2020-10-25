@@ -13,30 +13,39 @@
         <link rel="stylesheet" href ="../../CSS/Admin/Admin.css">
         <link rel="stylesheet" href ="../../CSS/Admin/SubPlan.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
-        <link rel="stylesheet" href="../../CSS/header.css">
-
-    <header>
-        <div class="hd">
-            <a class="logo" href="/"><img src="../../Resources/Img/logo.png" alt="logo"></a>
-            <lab>SL LensTrends</lab>
-
-            <nav class="nv">
-                <ul class="nav__links">
-                    <li><a href="UserManagement.jsp">Users</a></li>
-                    <li><a href="PhotoManagement.jsp">Photographs & Forum</a></li>
-                    <li><a class="active" href="SubPlan.jsp">Plans</a></li>
-                    <li><a href="Reports.jsp">Reports</a></li>
-                    <li><a href="AdminMessage.jsp">Messages</a></li>
-                    <li><a href="AdminSettings.jsp">Settings</a></li>
-
-
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <link rel="stylesheet" href="../../CSS/Admin/AdminHeader.css">
 </head>
 <body style="background-image: url(../../Resources/Img/pregister.jpg); background-size: 100% ; ">
 
+    <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="UserManagement.jsp" type="button"> Users </a></li>
+                        <li><a href="PhotoManagement.jsp" type="button"> Photographs & Forum </a></li>
+                        <li><a href="SubPlan.jsp" type="button"> Plans </a></li>
+                        <li><a href="#" type="button"> Reports </a></li>
+                        <li><a href="AdminMessage.jsp" type="button"> Messages </a></li>
+                        <li><a href="AdminSettings.jsp" type="button"> Settings </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="login.jsp" type="button"> Log Out </a>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br><br>
 
     <div class="row">
         <div class="column">
