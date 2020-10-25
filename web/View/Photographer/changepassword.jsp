@@ -14,32 +14,38 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         
-        <div class="pageheader">
-                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                    <h1>Sl Lens Trends </h1>
-
-                    <div class="headerul">
-                        <ul>
-
-                            <li><a href="#" type="button"> Events </a></li>
-                            <li><a href="#" type="button"> Album </a></li>
-                            <li><a href="#" type="button"> Profile </a></li>
-                            <li><a href="#" type="button"> Settings </a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="notifyicn">
-                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-
-                    </div>
-
-                    <div class="logout">
-                        <a href="#" type="button"> Logout </a>
-                    </div>
-                </div>
-    </head>
+           </head>
     <body>
+        
+          <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="../login.jsp" type="button"> Login </a>
+                </div>
+            </div>
+        </div>
+        <br><br><br><br>
+        
         <div class="container"> 
             
             <div class="logo">
