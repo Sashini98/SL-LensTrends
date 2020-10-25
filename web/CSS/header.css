@@ -14,6 +14,7 @@ and open the template in the editor.
     position: fixed;
     display: flex;
     flex-direction: column;
+    z-index: 15;
 }
 
 .pageheader{
