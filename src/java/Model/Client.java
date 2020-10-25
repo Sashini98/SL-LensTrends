@@ -11,7 +11,7 @@ import DbClasses.*;
  *
  * @author Madusha
  */
-public class Client extends Users {
+public class Client {
     
     int clientId;
     String email;

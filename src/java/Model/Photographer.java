@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Madusha
  */
-public class Photographer extends Users {
+public class Photographer{
     
     int photographerId;
     String email;
