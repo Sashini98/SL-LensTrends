@@ -176,7 +176,7 @@
                     <img class="teamImg" src="../Resources/Img/IMG_2019.jpg"/>
                     <br />
                     <br />
-                    <h4 style="font-size: 22px;">Keshara Balasuriya</h4>
+                    <h4 style="font-size: 22px;">B.R.H.K. Balasuriya</h4>
                     <br />
                     <div style="display: flex; flex-direction: column; align-items: center; font-size: 14px; color: RGB(134,142,150)">
                         <span >Undergraduate</span>
