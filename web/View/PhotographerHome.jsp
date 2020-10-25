@@ -87,7 +87,7 @@
                 <span style="font-size: 20px;">Event Photography</span>
                 <br />
                 <span>
-                      
+                    Get opportunities to work in new events.  
                 </span>
             </div>
             <div>
