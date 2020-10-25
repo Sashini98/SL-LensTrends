@@ -12,35 +12,43 @@
         <link rel="stylesheet" href="../../CSS/forum/question.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
-        
-        <div class="pageheader">
-                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                    <h1>Sl Lens Trends </h1>
-
-                    <div class="headerul">
-                        <ul>
-
-                            <li><a href="#" type="button"> Events </a></li>
-                            <li><a href="#" type="button"> Album </a></li>
-                            <li><a href="#" type="button"> Profile </a></li>
-                            <li><a href="#" type="button"> Settings </a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="notifyicn">
-                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-
-                    </div>
-
-                    <div class="logout">
-                        <a href="#" type="button"> Logout </a>
-                    </div>
-                </div>
+       
         <title>Question</title>
     </head>
-    <body><br><br><br>
-        <div class="ques" id="ques">
+    <body>
+        
+        
+        
+        <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="../login.jsp" type="button"> Login </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="ques" id="ques" style="margin-top: 10%;">
             <label1>Q2346546</label1>
             <p style="font-size: 15px; color: darkblue">Person B</p> <p style="font-size: 15px; color: darkgreen;">14/09/2019</p><br>
             <h8>Selling the photos</h8><br><br><br>

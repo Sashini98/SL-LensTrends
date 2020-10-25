@@ -39,17 +39,6 @@ function viewResults() {
 
 }
 
-function getResults() {
 
-    var searchText = document.getElementById("search").value;
-
-    var request = new XMLHttpRequest();
-
-
-    request.open("POST", "../../DeactivatedUser", false);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("searchText=" + searchText);
-
-}
 
 

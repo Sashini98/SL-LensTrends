@@ -10,34 +10,40 @@
 
         <title>Ask a Question</title>
 
-
-        <div class="pageheader">
-                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                    <h1>Sl Lens Trends </h1>
-
-                    <div class="headerul">
-                        <ul>
-
-                            <li><a href="#" type="button"> Events </a></li>
-                            <li><a href="#" type="button"> Album </a></li>
-                            <li><a href="#" type="button"> Profile </a></li>
-                            <li><a href="#" type="button"> Settings </a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="notifyicn">
-                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-
-                    </div>
-
-                    <div class="logout">
-                        <a href="#" type="button"> Logout </a>
-                    </div>
-                </div>    </head>
+ </head>
     <body style="background-image: url(../../Resources/Img/askq.jpg);background-repeat: no-repeat; background-size: cover">
+        
+        <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
 
-        <div style="float: left; "> 
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="../login.jsp" type="button"> Log Out </a>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div style="float: left; margin-top: 10%;"> 
             <form  action="../../AskQues" method="POST">
                 <fieldset>
                     <legend style="color: gainsboro;text-shadow: 0 0 5px black;font-size: 20px;"><h1>Ask question</h1></legend><br><br>

@@ -17,7 +17,7 @@
     
     <body style="background-image: url(../Resources/Img/reset.jpg); background-size: 100%;">
         
-             <div class="fixedheader">  
+           <div class="fixedheader">  
             <div class="pageheader">
                 <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
@@ -26,9 +26,10 @@
                     <ul>
 
                         <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
 
                     </ul>
                 </div>
@@ -39,11 +40,10 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Login </a>
+                    <a href="login.jsp" type="button"> Login </a>
                 </div>
             </div>
-        </div>
-        
+        </div>        
         
         <div class="box">
              <form>

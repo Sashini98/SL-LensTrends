@@ -7,11 +7,7 @@ and open the template in the editor.
     Created on : Oct 24, 2020, 1:29:42 PM
     Author     : Sashini Shihara
 */
-*{
-    margin : 0;
-    padding : 0;
-    box-sizing : border-box;
-}
+
 body
 {
     background: url("../../Resources/Img/upload2.png") no-repeat center fixed;
@@ -24,7 +20,7 @@ body
     border: 2px solid;
     background-color: white;    
     width: 30%;
-    height: 35em;
+    height: 40em;
     margin-left: 5%;
 }
 
