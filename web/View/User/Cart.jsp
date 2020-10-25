@@ -10,10 +10,41 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="../../CSS/User/Cart.css" type="text/css" rel="stylesheet"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400&display=swap" rel="stylesheet">
         <title>My Favourites</title>
     </head>
     <body>
+        
+        <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="../login.jsp" type="button"> Login </a>
+                </div>
+            </div>
+        </div>
+        
+        
         <div class="content">
 
             <div class="ArtisiDiv">

@@ -13,11 +13,41 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../CSS/User/AdvancedSearch.css"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <div>
-            <header style="height: 90px;background-color: black;color: white">this place for navigation bar and all</header>
+            <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="../login.jsp" type="button"> Login </a>
+                </div>
+            </div>
+        </div>
+            
+            <br><br><br><br><br>
+        
             <div style="display: flex;min-height: 88vh">
                 <div style="position: fixed;width: 2%;height: 88vh;background-color: #FAFAFA;padding-top: 1.8%;padding-left: .5%;padding-right: 1.2%;border-right:solid 2px #EAEAEA">
                     <i class="material-icons sidemenu-icons">filter_alt</i>

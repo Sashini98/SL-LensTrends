@@ -18,33 +18,33 @@
     <body>
         <div class="content">
 
-            <div class="fixedheader">
+ <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
 
-                <div class="pageheader">
-                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                    <h1>Sl Lens Trends </h1>
+                <div class="headerul">
+                    <ul>
 
-                    <div class="headerul">
-                        <ul>
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
 
-                            <li><a href="#" type="button"> Events </a></li>
-                            <li><a href="#" type="button"> Album </a></li>
-                            <li><a href="#" type="button"> Profile </a></li>
-                            <li><a href="#" type="button"> Settings </a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="notifyicn">
-                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-
-                    </div>
-
-                    <div class="logout">
-                        <a href="#" type="button"> Logout </a>
-                    </div>
+                    </ul>
                 </div>
-                <div class="profile-header">
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <a href="../login.jsp" type="button"> LogOut </a>
+                </div>
+            </div>
+                      <div class="profile-header">
                     <div class="user-detail">
                         <div class="user-image">
                             <img src="../../Resources/Img/athavan.jpg">

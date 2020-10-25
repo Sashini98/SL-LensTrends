@@ -43,7 +43,8 @@
                     <a href="../login.jsp" type="button"> Logout </a>
                 </div>
             </div>
-        </div>        
+        </div>    
+        
         
         <div style="float: left; width: 50%; margin-top: 8%;"> 
             

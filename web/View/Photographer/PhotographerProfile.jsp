@@ -26,10 +26,11 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                       <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="../Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
+                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
 
                     </ul>
                 </div>
@@ -43,7 +44,7 @@
                     <a href="../login.jsp" type="button"> Login </a>
                 </div>
         
-        
+        </div>
         <div class="profile-main">
 		<div class="profile-header">
 			<div class="user-detail">
@@ -67,6 +68,7 @@
                                     <img src="../../Resources/Img/google.png">                       
                                     <br> <br>
                                 </div>
+                        
                                 
                             <br> <br>
                                 <a href="#" type="button">Send Message</a>
