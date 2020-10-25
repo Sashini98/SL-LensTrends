@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <a href="login.jsp" type="button"> Login </a>
                 </div>
             </div>
         </div>

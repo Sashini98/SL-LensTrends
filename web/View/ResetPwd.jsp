@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <a href="#" type="button"> Login </a>
                 </div>
             </div>
         </div>

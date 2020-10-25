@@ -13,32 +13,36 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <title>Post an event</title>
         
-        <div class="pageheader">
-                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                    <h1>Sl Lens Trends </h1>
-
-                    <div class="headerul">
-                        <ul>
-
-                            <li><a href="#" type="button"> Events </a></li>
-                            <li><a href="#" type="button"> Album </a></li>
-                            <li><a href="#" type="button"> Profile </a></li>
-                            <li><a href="#" type="button"> Settings </a></li>
-
-                        </ul>
-                    </div>
-
-                    <div class="notifyicn">
-                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-
-                    </div>
-
-                    <div class="logout">
-                        <a href="#" type="button"> Logout </a>
-                    </div>
-                </div>
+        
     </head>
-    <body><div style="float: left; width: 50%; "> 
+    <body>
+        
+        <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="#" type="button"> Album </a></li>
+                        <li><a href="#" type="button"> Profile </a></li>
+                        <li><a href="#" type="button"> Settings </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../Resources/Img/notification.png"> </a>
+
+                </div>
+        
+        
+        <div style="float: left; width: 50%; "> 
+            
+            
+            
             <form>
                 <fieldset>
                     
