@@ -12,9 +12,35 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Photographer</title>
         <link rel="stylesheet" href="../../CSS/Photographer/PhotographerUpdate.css">
+        <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet">  
         
+        
+        <div class="pageheader">
+                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <h1>Sl Lens Trends </h1>
+
+                    <div class="headerul">
+                        <ul>
+
+                            <li><a href="#" type="button"> Events </a></li>
+                            <li><a href="#" type="button"> Album </a></li>
+                            <li><a href="#" type="button"> Profile </a></li>
+                            <li><a href="#" type="button"> Settings </a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="notifyicn">
+                        <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+
+                    </div>
+
+                    <div class="logout">
+                        <a href="#" type="button"> Logout </a>
+                    </div>
+                </div>
     </head>
     
     <body>
