@@ -20,6 +20,10 @@
         <servlet-name>forum</servlet-name>
         <servlet-class>Model.Question</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>forumH</servlet-name>
+        <servlet-class>Controller.Forum.forumH</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>forum</servlet-name>
         <url-pattern>/forum</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>forumH</servlet-name>
+        <url-pattern>/forumH</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,7 +16,7 @@ public class Question{
     
     int questionId;
     String question;
-    int categoryId;
+    String category;
     Date question_date;
     int clientId;
     int photographerId;
@@ -24,11 +24,12 @@ public class Question{
     public Question() {
     }
     
-     public Question(int questionId, String question, int categoryId,Date question_date, int clientId,int photographerId)
+    
+    public Question(int questionId, String question,String category,Date question_date, int clientId,int photographerId)
      {
     this.questionId=questionId;
     this.question=question;
-    this.categoryId=categoryId;
+    this.category=category;
     this.question_date=question_date;
     this.clientId=clientId;
     this.photographerId=photographerId;
@@ -52,12 +53,12 @@ public class Question{
     }
 
     
-    public int getcategoryId() {
-        return categoryId;
+    public String getcategory() {
+        return category;
     }
 
-    public void setcategoryId(int categoryId) {
-        this.categoryId = categoryId;
+    public void setcategory(String category) {
+        this.category = category;
  }
 
     
