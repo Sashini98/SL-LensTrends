@@ -174,7 +174,7 @@
                     </div>
                     <div class="about-body" class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
                         <p class="text-muted">
-                            Our mission is 
+                            To create a vibrant community of successful professional SriLankan photographers and make it easy for worldwide clients to access their work.
                         </p>
                     </div>
 
