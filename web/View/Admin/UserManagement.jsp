@@ -112,6 +112,25 @@
                     <input type="text" placeholder="Type here">
                     <button onclick="viewResults()">Search</button>
                     <br><br>
+                    
+                    <table id="reportedUserTable" border="1" width="100%" height="40px">
+                        <tr>
+                            
+                            <th>ID</th>
+                            <th>Name</th>
+                           
+                            <th>Option</th>
+
+                        </tr
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            
+                            <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
+                       
+                        </tr>
+                        
+                    </table>
 
                     <table border="0" width="100%" height="40px" >
 

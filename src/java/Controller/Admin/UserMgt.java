@@ -8,6 +8,7 @@ package Controller.Admin;
 import DB.DB;
 import Model.Client;
 import Model.Photographer;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,6 +39,7 @@ public class UserMgt extends HttpServlet {
             boolean photographerAcc = photographer.next();
             Client c = new Client();
             Photographer p = new Photographer();
+            ArrayList a = new ArrayList();
 
             if (clientAcc && photographerAcc) {
 
@@ -63,9 +65,8 @@ public class UserMgt extends HttpServlet {
                 p.setGenderId(photographer.getInt("Gender_Id"));
                 p.setPlanId(photographer.getInt("Plan_Id"));
 
-                
             } else if (clientAcc) {
-                
+
                 c.setClientId(client.getInt("Client_Id"));
                 c.setEmail(client.getString("Email"));
                 c.setPassword(client.getString("Password"));
@@ -76,9 +77,8 @@ public class UserMgt extends HttpServlet {
                 c.setCity(client.getString("City"));
                 c.setGenderId(client.getInt("Gender_Id"));
 
-                
             } else if (photographerAcc) {
-                
+
                 p.setPhotographerId(photographer.getInt("Photographer_Id"));
                 p.setEmail(photographer.getString("Email"));
                 p.setPassword(photographer.getString("Password"));
@@ -91,8 +91,14 @@ public class UserMgt extends HttpServlet {
                 p.setGenderId(photographer.getInt("Gender_Id"));
                 p.setPlanId(photographer.getInt("Plan_Id"));
 
-                
             }
+
+            a.add(c);
+            a.add(p);
+
+            Gson g = new Gson();
+            String toJson = g.toJson(a);
+            response.getWriter().write(toJson);
 
         } catch (SQLException ex) {
             ex.printStackTrace();

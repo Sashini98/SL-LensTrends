@@ -22,13 +22,36 @@ window.onclick = function(event) {
   }
 }
 
+var user =[];
+var client;
+var photographer;
+
+
 function viewResults() {
 
     var search = document.getElementById("searchBar").value;
 
     var request = new XMLHttpRequest();
 
-   
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+               
+                
+                var responce = request.responseText;
+                user = JSON.parse(responce);
+                
+                client = user[0];
+                photographer = user[1];
+                
+                
+                
+
+            }
+        }
+
+    };
     
 
 
