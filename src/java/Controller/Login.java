@@ -33,13 +33,92 @@ public class Login extends HttpServlet {
 
             ResultSet clientEmail = DB.search("SELECT * FROM Client Where Email = '" + email + "' ");
             ResultSet photographerEmail = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' ");
+            ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' ");
 
+            boolean adminAcc = AdminEmail.next();
             boolean clientAcc = clientEmail.next();
             boolean photographerAcc = photographerEmail.next();
 
-            if (clientAcc && photographerAcc) {
+            if (adminAcc) {
+                try {
+                    ResultSet admin = DB.search("SELECT * FROM Admin Where Email = '" + email + "' AND Password = '" + pw + "' ");
+                    if (admin.next()) {
+                        
+//                        Client c = new Client();
+//                        c.setClientId(client.getInt("Client_Id"));
+//                        c.setEmail(client.getString("Email"));
+//                        c.setPassword(client.getString("Password"));
+//                        c.setFname(client.getString("Fname"));
+//                        c.setLname(client.getString("Lname"));
+//                        c.setAddress_no(client.getString("Address_No"));
+//                        c.setStreet(client.getString("Street"));
+//                        c.setCity(client.getString("City"));
+//                        c.setGenderId(client.getInt("Gender_Id"));
+
+//                        request.getSession().setAttribute("loggedClient", c);
+//                        response.sendRedirect("/View/Home.jsp");
+
+                    }
+
+                } catch (Exception e) {
+                    // inavalid password
+                }
+            } else if (clientAcc && photographerAcc) {
 
                 //logged palace
+                String user = (String) request.getSession().getAttribute("User");
+
+                if (user.equals("Client")) {
+                    try {
+                        ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
+                        if (client.next()) {
+                            Client c = new Client();
+                            c.setClientId(client.getInt("Client_Id"));
+                            c.setEmail(client.getString("Email"));
+                            c.setPassword(client.getString("Password"));
+                            c.setFname(client.getString("Fname"));
+                            c.setLname(client.getString("Lname"));
+                            c.setAddress_no(client.getString("Address_No"));
+                            c.setStreet(client.getString("Street"));
+                            c.setCity(client.getString("City"));
+                            c.setGenderId(client.getInt("Gender_Id"));
+
+                            request.getSession().setAttribute("loggedClient", c);
+                            response.sendRedirect("/View/Home.jsp");
+
+                        }
+
+                    } catch (Exception e) {
+                        // inavalid password
+                    }
+
+                } else {
+
+                    try {
+                        ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
+                        if (client.next()) {
+                            Client c = new Client();
+                            c.setClientId(client.getInt("Client_Id"));
+                            c.setEmail(client.getString("Email"));
+                            c.setPassword(client.getString("Password"));
+                            c.setFname(client.getString("Fname"));
+                            c.setLname(client.getString("Lname"));
+                            c.setAddress_no(client.getString("Address_No"));
+                            c.setStreet(client.getString("Street"));
+                            c.setCity(client.getString("City"));
+                            c.setGenderId(client.getInt("Gender_Id"));
+
+                            request.getSession().setAttribute("loggedClient", c);
+                            response.sendRedirect("/View/Home.jsp");
+
+                        }
+
+                    } catch (Exception e) {
+                        // inavalid password
+                    }
+
+                }
+
             } else if (clientAcc) {
 
                 try {
@@ -106,7 +185,6 @@ public class Login extends HttpServlet {
 //        System.out.println(getServletContext().getRealPath(""));
 //        request.getRequestDispatcher("/View/Photographer/PhotographerProfile.jsp").forward(request, response);
 //        response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
-
     }
 
 }
