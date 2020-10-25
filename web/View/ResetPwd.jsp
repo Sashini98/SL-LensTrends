@@ -26,9 +26,10 @@
                     <ul>
 
                         <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="#" type="button"> Notifications </a></li>
 
                     </ul>
                 </div>
@@ -39,7 +40,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Login </a>
+                    <a href="login.jsp" type="button"> Login </a>
                 </div>
             </div>
         </div>

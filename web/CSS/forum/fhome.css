@@ -12,8 +12,13 @@ body
 {
    background-image: url("../../Resources/Img/fhome.png");
 }
+.contain
+{
+    margin-top: 10%;
+}
 .leftp
 {
+    margin-top: 10%;
     opacity: 0.7;
     background-size: 100% 100%;
     float: left;
@@ -26,7 +31,7 @@ body
 }
 
 .rightp
-{    
+{    margin-top: 10%;
     margin-bottom: 0.8%;
     margin-left: 14%;
     width: 70%;
