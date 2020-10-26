@@ -54,21 +54,25 @@ function viewResults() {
                     td12.innerHTML = user[i + 1];
                     td13.innerHTML = user[i + 2];
 
+                    
                     td14.appendChild(button);
-
+                   
                     tr.appendChild(td11);
                     tr.appendChild(td12);
                     tr.appendChild(td13);
                     tr.appendChild(td14);
-
+                   
                     document.getElementById("reportedUserTableBody").appendChild(tr);
+                    
                     i = i + 2;
 
                 }
+                
             }
         }
 
     };
+    
     request.open("POST", "../../UserMgt", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("search=" + search);
