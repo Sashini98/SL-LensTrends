@@ -79,13 +79,13 @@ body{
     background-color:rgba(0,0,0,0.6);
   }
   
-   .columns {
+   .column {
     float: right;   
     width: 32%;
     padding: 0 7px;
   }
   
-  .rows {margin: 0 -1px;}
+  .row {margin: 0 -1px;}
   
   .btn2{
     background-color: rgb(46, 43, 43);

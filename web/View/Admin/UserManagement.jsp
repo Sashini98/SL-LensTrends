@@ -109,7 +109,7 @@
 
                 <div class='card'>
                     <font color="red">Deactivate Users</font><hr><br>
-                    <input type="text" placeholder="Type here">
+                    <input id="deactivateUser" type="text" placeholder="Type here">
                     <button onclick="viewResults()">Search</button>
                     <br><br>
                     
@@ -118,14 +118,14 @@
                             
                             <th>ID</th>
                             <th>Name</th>
-                           
+                            <th>Type</th>
                             <th>Option</th>
 
                         </tr
                         <tr>
                             <th></th>
                             <th></th>
-                            
+                            <th></th>
                             <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
                        
                         </tr>

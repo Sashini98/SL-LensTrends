@@ -10,26 +10,22 @@ var btn = document.getElementById("vie");
 
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
+btn.onclick = function () {
+    modal.style.display = "block";
 }
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
+span.onclick = function () {
     modal.style.display = "none";
-  }
 }
-
-var user =[];
-var client;
-var photographer;
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 
 function viewResults() {
 
-    var search = document.getElementById("searchBar").value;
+    var search = document.getElementById("deactivateUser").value;
 
     var request = new XMLHttpRequest();
 
@@ -37,22 +33,38 @@ function viewResults() {
 
         if (request.status === 200) {
             if (request.readyState === 4) {
-               
-                
+
+
                 var responce = request.responseText;
-                user = JSON.parse(responce);
+                var user = JSON.parse(responce);
+
+                for(var i=0; i< user.length/3; i++){
+                    var tr = document.createElement("tr");
+                    var td11 = document.createElement("td");
+                    var td12 = document.createElement("td");
+                    var td13 = document.createElement("td");
+                    
+                    td11.innerHTML = user[i].id;
+                    td12.innerHTML = user[i].name;
+                    td13.innerHTML = user[i].type;
+                    
+                    tr.appendChild(td11);
+                    tr.appendChild(td12);
+                    tr.appendChild(td13);
+                    
+                    t.appendChild(tr);
+                    
+                    
+                }
+
                 
-                client = user[0];
-                photographer = user[1];
-                
-                
-                
+
 
             }
         }
 
     };
-    
+
 
 
 
