@@ -1,12 +1,52 @@
 
 function pencileditenable(edit) {
-    document.getElementById(edit).disabled=false;
-  
-    
+    document.getElementById(edit).disabled = false;
+
+
     if (edit == "fname") {
-            document.getElementById("pencil").style.visibility ="hidden";
-            document.getElementById("ic1").style.visibility ="visible";
-            document.getElementById("ic2").style.visibility ="visible";
+        document.getElementById("pencil").style.visibility = "hidden";
+        document.getElementById("ic1").style.visibility = "visible";
+        document.getElementById("ic2").style.visibility = "visible";
     }
 }
 
+function updatedata(field) {
+
+    if (field == "ic1") {
+        var fname = document.getElementById("fname").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    var user = JSON.parse(responce);
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userfname=" + fname);
+    }
+    
+    else if (field == "ic3") {
+        var lname = document.getElementById("lname").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userlname=" + lname);
+    }
+}

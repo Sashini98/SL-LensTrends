@@ -32,6 +32,10 @@
         <servlet-name>ViewDeactivateUser</servlet-name>
         <servlet-class>Controller.Admin.ViewDeactivateUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PhotographerUpdate</servlet-name>
+        <servlet-class>Controller.Photographer.PhotographerUpdate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ViewDeactivateUser</servlet-name>
         <url-pattern>/ViewDeactivateUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographerUpdate</servlet-name>
+        <url-pattern>/PhotographerUpdate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

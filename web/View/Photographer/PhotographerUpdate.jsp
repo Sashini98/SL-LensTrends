@@ -99,8 +99,8 @@
                     <div class="icon">
                         <input type="text" id="fname" name="fname" placeholder="Theivendram" disabled> 
                         <img id ="pencil" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="changeImage('ic1')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="changeImage('ic2')" style="visibility:hidden;">
+                        <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic1')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic2')" style="visibility:hidden;">
                     </div>
                     <br> 
                     <label for="lname">Last Name </label>  
