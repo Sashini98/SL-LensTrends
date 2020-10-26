@@ -39,9 +39,6 @@ public class UserMgt extends HttpServlet {
             boolean clientAcc = client.next();
             boolean photographerAcc = photographer.next();
 
-            System.out.println(clientAcc);
-            System.out.println(photographerAcc);
-            
             ArrayList<String> a = new ArrayList();
             
             if (clientAcc && photographerAcc) {
