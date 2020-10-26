@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="../../CSS/User/PhotographerSearch.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="../../JS/User/AdvancedSearch.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
 </head>
 
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;display: flex;align-items: center">
