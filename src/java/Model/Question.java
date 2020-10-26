@@ -14,17 +14,18 @@ import java.util.Date;
 public class Question{
     
     int questionId;
+    String title;
     String question;
     String category;
     Date question_date;
-    int clientId;
-    int photographerId;
+    String clientId;
+    String photographerId;
 
     public Question() {
     }
     
     
-    public Question(int questionId, String question,String category,Date question_date, int clientId,int photographerId)
+    public Question(int questionId, String title, String question,String category,Date question_date, String clientId,String photographerId)
      {
     this.questionId=questionId;
     this.question=question;
@@ -41,6 +42,14 @@ public class Question{
 
     public void setquestionId(int questionId) {
         this.questionId = questionId;
+    }
+    
+    public String gettitle() {
+        return title;
+    }
+
+    public void settitle(String title) {
+        this.title = title;
     }
     
     public String getquestion() {
@@ -70,20 +79,20 @@ public class Question{
     }
 
     
-    public int getclientId() {
-        return questionId;
+    public String getclientId() {
+        return clientId;
     }
 
-    public void setclientId(int clientId) {
+    public void setclientId(String clientId) {
         this.clientId = clientId;
     }
 
     
-     public int getPhotographerId() {
+     public String getPhotographerId() {
         return photographerId;
     }
 
-    public void setPhotographerId(int photographerId) {
+    public void setPhotographerId(String photographerId) {
         this.photographerId = photographerId;
     }
 }    
