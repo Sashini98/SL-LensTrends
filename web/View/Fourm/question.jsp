@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="../../CSS/forum/question.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
-       
+       <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
         <title>Question</title>
     </head>
     <body>
