@@ -5,7 +5,6 @@
  */
 package Model;
 
-import DbClasses.*;
 import java.util.Date;
 
 /**
