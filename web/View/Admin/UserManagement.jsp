@@ -123,37 +123,44 @@
 
                         </tr>
                         <tbody id="reportedUserTableBody">
-                            
+
                         </tbody>
 
 
                     </table>
 
                     <table border="0" width="100%" height="40px" >
-
+                        <tr>
+                            <td align="left">User Id</td>
+                            <td><input type="text" name="uid" id="userid" size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Email</td>
+                            <td><input type="text" name="mail" id="email" size="30" maxlength="25"></td>
+                        </tr>
                         <tr>
                             <td align="left">First Name</td>
-                            <td><input type=text name=fname size="30" maxlength="25"></td>
+                            <td><input type="text" name="finame" id="fname" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td align="left">Last Name</td>
-                            <td><input type=text name=lname size="30" maxlength="25"></td>
+                            <td><input type="text" name="laname" id="lname" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Date of Birth</td>
-                            <td><input type=text name=dob size="30" maxlength="25"></td>
+                            <td align="left">Address No</td>
+                            <td><input type="text" name="address" id="addno" size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Street</td>
+                            <td><input type="text" name="strt" id="street" size="30" maxlength="25"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">City</td>
+                            <td><input type="text" name="cit" id="city" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td align="left">Gender</td>
-                            <td><input type=text name=gender size="30" maxlength="25"></td>
-                        </tr>
-                        <tr>
-                            <td align="left">Registered Date</td>
-                            <td><input type=text name=rdate size="30" maxlength="25"></td>
-                        </tr>
-                        <tr>
-                            <td align="left">Address</td>
-                            <td><input type=text name=address size="30" maxlength="25"></td>
+                            <td><input type="text" name="gen" id="gender" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <th colspan =2><button class='btn2'>Deactivate</button></th>

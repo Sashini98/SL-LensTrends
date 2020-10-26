@@ -48,8 +48,8 @@ function viewResults() {
                     button.style.backgroundColor = "blueviolet";
                     button.className = "confirmBTN";
                     button.id = user[i];
+                    button.onclick = viewDeactivateUser(user[i]);
 
-                   
                     td11.innerHTML = user[i];
                     td12.innerHTML = user[i + 1];
                     td13.innerHTML = user[i + 2];
@@ -75,6 +75,35 @@ function viewResults() {
 
 }
 
+function viewDeactivateUser(user_id) {
 
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+                
+                var responce = request.responseText;
+                var user = JSON.parse(responce);
+                if(user.clientId!=null){
+                    document.getElementById("userid").value = user.clientId;
+                }else{
+                    document.getElementById("userid").value = user.photographerId;
+                }
+                document.getElementById("email").value = user.email;
+                document.getElementById("fname").value = user.fname;
+                document.getElementById("lname").value = user.lname;
+                document.getElementById("addno").value = user.address_no;
+                document.getElementById("street").value = user.street;
+                document.getElementById("city").value = user.city;
+                document.getElementById("gender").value = user.genderId;
+
+            }
+        }
+    }
+    request.open("POST", "../../ViewDeactivateUser", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("userid=" + user_id);
+}
 
 
