@@ -6,6 +6,7 @@
 package Controller;
 
 import DB.DB;
+import Model.Admin;
 import Model.Client;
 import Model.Photographer;
 import java.io.IOException;
@@ -43,25 +44,22 @@ public class Login extends HttpServlet {
                 try {
                     ResultSet admin = DB.search("SELECT * FROM Admin Where Email = '" + email + "' AND Password = '" + pw + "' ");
                     if (admin.next()) {
-                        
-//                        Client c = new Client();
-//                        c.setClientId(client.getInt("Client_Id"));
-//                        c.setEmail(client.getString("Email"));
-//                        c.setPassword(client.getString("Password"));
-//                        c.setFname(client.getString("Fname"));
-//                        c.setLname(client.getString("Lname"));
-//                        c.setAddress_no(client.getString("Address_No"));
-//                        c.setStreet(client.getString("Street"));
-//                        c.setCity(client.getString("City"));
-//                        c.setGenderId(client.getInt("Gender_Id"));
 
-//                        request.getSession().setAttribute("loggedClient", c);
-//                        response.sendRedirect("/View/Home.jsp");
+                        Admin a = new Admin();
+                        a.setEmail(admin.getString("Email"));
+                        a.setPassword(admin.getString("Password"));
+                        a.setType(admin.getString("Type"));
+                        a.setAdminId(admin.getInt("Admin_id"));
+
+                        request.getSession().setAttribute("loggedAdmin", a);
+                        response.sendRedirect("View/Admin/UserManagement.jsp");
 
                     }
 
                 } catch (Exception e) {
                     // inavalid password
+                    request.setAttribute("msgp", "Invalid Password");
+                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
                 }
             } else if (clientAcc && photographerAcc) {
 
@@ -84,37 +82,43 @@ public class Login extends HttpServlet {
                             c.setGenderId(client.getInt("Gender_Id"));
 
                             request.getSession().setAttribute("loggedClient", c);
-                            response.sendRedirect("/View/Home.jsp");
+                            response.sendRedirect("View/Home.jsp");
 
                         }
 
                     } catch (Exception e) {
                         // inavalid password
+                        request.setAttribute("msgp", "Invalid Password");
+                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
                     }
 
                 } else {
 
                     try {
-                        ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
-                        if (client.next()) {
-                            Client c = new Client();
-                            c.setClientId(client.getInt("Client_Id"));
-                            c.setEmail(client.getString("Email"));
-                            c.setPassword(client.getString("Password"));
-                            c.setFname(client.getString("Fname"));
-                            c.setLname(client.getString("Lname"));
-                            c.setAddress_no(client.getString("Address_No"));
-                            c.setStreet(client.getString("Street"));
-                            c.setCity(client.getString("City"));
-                            c.setGenderId(client.getInt("Gender_Id"));
 
-                            request.getSession().setAttribute("loggedClient", c);
-                            response.sendRedirect("/View/Home.jsp");
+                        ResultSet photographer = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' AND Password = '" + pw + "' ");
 
+                        if (photographer.next()) {
+                            Photographer p = new Photographer();
+                            p.setPhotographerId(photographer.getInt("Photographer_Id"));
+                            p.setEmail(photographer.getString("Email"));
+                            p.setPassword(photographer.getString("Password"));
+                            p.setFname(photographer.getString("Fname"));
+                            p.setLname(photographer.getString("Lname"));
+                            p.setAddress_no(photographer.getString("Address_No"));
+                            p.setStreet(photographer.getString("Street"));
+                            p.setCity(photographer.getString("City"));
+                            p.setJoined_date(photographer.getDate("Joined_Date"));
+                            p.setGenderId(photographer.getInt("Gender_Id"));
+                            p.setPlanId(photographer.getInt("Plan_Id"));
+
+                            request.getSession().setAttribute("loggedPhotographer", p);
+                            response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
                         }
 
                     } catch (Exception e) {
-                        // inavalid password
+                        request.setAttribute("msgp", "Invalid Password");
+                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
                     }
 
                 }
@@ -136,12 +140,14 @@ public class Login extends HttpServlet {
                         c.setGenderId(client.getInt("Gender_Id"));
 
                         request.getSession().setAttribute("loggedClient", c);
-                        response.sendRedirect("/View/Home.jsp");
+                        response.sendRedirect("View/Home.jsp");
 
                     }
 
                 } catch (Exception e) {
                     // inavalid password
+                    request.setAttribute("msgp", "Invalid Password");
+                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
                 }
 
             } else if (photographerAcc) {
@@ -165,10 +171,12 @@ public class Login extends HttpServlet {
                         p.setPlanId(photographer.getInt("Plan_Id"));
 
                         request.getSession().setAttribute("loggedPhotographer", p);
-                        response.sendRedirect("/View/Photographer/PhotographerProfile.jsp");
+                        response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
                     }
 
                 } catch (Exception e) {
+                    request.setAttribute("msgp", "Invalid Password");
+                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
                 }
 
             } else {
@@ -179,7 +187,10 @@ public class Login extends HttpServlet {
             ex.printStackTrace();
         } catch (NullPointerException e) {
 
+            e.printStackTrace();
             //invalid username 
+            request.setAttribute("msge", "Invalid Email");
+            request.getRequestDispatcher("View/login.jsp").forward(request, response);
         }
 
 //        System.out.println(getServletContext().getRealPath(""));
