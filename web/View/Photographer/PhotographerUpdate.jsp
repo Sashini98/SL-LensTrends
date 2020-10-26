@@ -94,44 +94,64 @@
                 </div> <br>
                 <div class="edit">
                     <form>                                                        
-                        <label for="fname">First Name </label> 
-                        <br> <input type="text" id="fname" name="fname" placeholder="Theivendram"> 
-                        <br> <label for="lname">Last Name </label>  
-                        <br> <input type="text" id="lname" name="lname" placeholder="Athavan"> 
-                        <br> <label for="uname">User Name </label>  
-                        <br> <input type="text" id="uname" name="uname" placeholder="Aaketk17"> 
-                        <br> <label for="email">Email </label>  
-                        <br> <input type="text" id="email" name="email" placeholder="thavanthya@gmail.com"> 
-                        <br> <label for="email">Mobile Number </label>  
-                        <br> <input type="text" id="mnum" name="mnum" placeholder="+94 77 946 2554"> 
-                        <br> <label for="website">Website </label>  
-                        <br> <input type="text" id="web" name="web" placeholder="www.ikongraphy.lk"> 
-                        <br> <label for="Bio">Bio</label>
-                        <br> <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="Provide some intersting details about you to impress the viewers"></textarea>
-                        <br> <label for="profilpic">Field of Interest</label>
-                        <br> <textarea id="interest" name="interest" cols="57" rows="3" placeholder="Give your field of interest, separate with comos"></textarea>
-                    </form>
-                </div>
-            </div>
-
-            <div class="address" id="addsec">
-                <div class="heading">
-                    <p>Address</p>
-                </div> <br>
-                <div class="edit">
-                    <form>
-                        <label for="fname" >Address </label> 
-                        <br><input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil."> 
-                        <br><label for="fname">City </label> 
-                        <br><input type="text" id="city" name="city" placeholder="Jaffna"> 
-                        <br><label for="fname">Province </label>  
-                        <br><input type="text" id="province" name="province" placeholder="North"> 
-                        <br><label for="fname">Country  </label>  
-                        <br><input type="text" id="conutry" name="country" placeholder="Srilanka"> 
-                        <br><label for="fname">Zip/Postal </label>  
-                        <br><input type="text" id="zip" name="zip" placeholder="40000">
-
-                    </form>
+                    <label for="fname">First Name </label> 
+                    <br> 
+                    <div class="icon">
+                        <input type="text" id="fname" name="fname" placeholder="Theivendram" disabled> 
+                        <img id ="pencil" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="changeImage('ic1')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="changeImage('ic2')" style="visibility:hidden;">
+                    </div>
+                    <br> 
+                    <label for="lname">Last Name </label>  
+                    <br> 
+                    <div>
+                         <input type="text" id="lname" name="lname" placeholder="Athavan" disabled> 
+                         <img onclick="pencileditenable('lname')" src="../../Resources/Img/edit.png">
+                    </div>
+                    <br> 
+                    <label for="uname">User Name </label>  
+                    <br>
+                    <div>
+                        <input type="text" id="uname" name="uname" placeholder="Aaketk17" disabled> 
+                        <img onclick="pencileditenable('uname')" src="../../Resources/Img/edit.png">
+                    </div>
+                    <br> 
+                    <label for="email">Email </label>  
+                    <br> 
+                    <div> 
+                         <input type="text" id="email" name="email" placeholder="thavanthya@gmail.com" disabled> 
+                         <img onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
+                    </div>
+                    <br> 
+                    <label for="email">Mobile Number </label>  
+                    <br> 
+                    <div> 
+                         <input type="text" id="mnum" name="mnum" placeholder="+94 77 946 2554" disabled> 
+                         <img onclick="pencileditenable('mnum')" src="../../Resources/Img/edit.png">
+                    </div>
+                    <br> 
+                    <label for="website">Website </label>  
+                    <br> 
+                    <div> 
+                         <input type="text" id="web" name="web" placeholder="www.ikongraphy.lk" disabled> 
+                         <img onclick="pencileditenable('web')" src="../../Resources/Img/edit.png">
+                    </div>
+                    <br> 
+                    <label for="Bio">Bio</label>
+                    <br> 
+                    <div> 
+                        <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="Provide some intersting details about you to impress the viewers" disabled></textarea>
+                        <img onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
+                    </div>
+                    <br> 
+                    <label for="profilpic">Field of Interest</label>
+                    <br> 
+                    <div>
+                    <textarea id="interest" name="interest" cols="57" rows="3" placeholder="Give your field of interest, separate with comos" disabled></textarea>
+                    <img onclick="pencileditenable('interest')" src="../../Resources/Img/edit.png">
+                    </div>
+                </form>
                 </div>
             </div> 
 
@@ -199,7 +219,7 @@
                 </div>        
             </div>                                            
 
-
+            <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUpdate.js"></script>
 
     </body>
 

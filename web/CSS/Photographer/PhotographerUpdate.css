@@ -227,11 +227,11 @@ body{
   font-family: 'Didact Gothic', sans-serif;
 }
 
-.edit input:hover{
+/*.edit input:hover{
     background: url("../../Resources/Img/edit.png") no-repeat;
     background-position-x: 100%;
     cursor: pointer;
-}
+}*/
 
 .edit label{
     font-size: 18px;
@@ -688,4 +688,12 @@ body{
   box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
   background-color: #006CBE;
   color: white;  
+}
+
+.icon .icon1{
+    margin-left: 4%;
+}
+
+.icon .icon2{
+    margin-left: 1%;
 }
