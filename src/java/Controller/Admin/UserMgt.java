@@ -28,7 +28,8 @@ public class UserMgt extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String email = request.getParameter("deactivateUser");
+        String email = request.getParameter("search");
+        System.out.println(email);
 
         try {
 
@@ -38,8 +39,11 @@ public class UserMgt extends HttpServlet {
             boolean clientAcc = client.next();
             boolean photographerAcc = photographer.next();
 
+            System.out.println(clientAcc);
+            System.out.println(photographerAcc);
+            
             ArrayList<String> a = new ArrayList();
-
+            
             if (clientAcc && photographerAcc) {
 
                 a.add(client.getString("Client_Id"));
@@ -63,6 +67,11 @@ public class UserMgt extends HttpServlet {
                 a.add("Photographer");
                 
 
+            }
+            
+            
+            for (String string : a) {
+                System.out.println(string);
             }
 
          

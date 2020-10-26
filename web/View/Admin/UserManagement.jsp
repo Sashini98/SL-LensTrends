@@ -112,24 +112,21 @@
                     <input id="deactivateUser" type="text" placeholder="Type here">
                     <button onclick="viewResults()">Search</button>
                     <br><br>
-                    
+
                     <table id="reportedUserTable" border="1" width="100%" height="40px">
                         <tr>
-                            
+
                             <th>ID</th>
                             <th>Name</th>
                             <th>Type</th>
                             <th>Option</th>
 
-                        </tr
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                       
                         </tr>
-                        
+                        <tbody id="reportedUserTableBody">
+                            
+                        </tbody>
+
+
                     </table>
 
                     <table border="0" width="100%" height="40px" >
@@ -251,7 +248,7 @@
                 </form>
             </div>
         </div>
-        <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
+
 
         <footer>    
             <div class="container">      
@@ -294,5 +291,6 @@
             </div>          
         </footer>
 
+        <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
     </body>
 </html>
