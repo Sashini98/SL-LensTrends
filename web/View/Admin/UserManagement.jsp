@@ -118,7 +118,6 @@
                             
                             <th>ID</th>
                             <th>Name</th>
-                           
                             <th>Option</th>
 
                         </tr
