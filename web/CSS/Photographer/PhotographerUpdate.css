@@ -613,11 +613,6 @@ body{
   color: white;  
 }
 
-.fixedheader{
-    margin-bottom: 10%;
-    position: fixed;
-}
-
 .connaccount {
   float: right;
   width: 50%;
@@ -697,3 +692,4 @@ body{
 .icon .icon2{
     margin-left: 1%;
 }
+
