@@ -156,7 +156,7 @@
             <span class="dot"></span>
         </div>
 
-        <script>
+<!--        <script>
             var slideIndex = 0;
             showSlides();
 
@@ -179,7 +179,7 @@
                 dots[slideIndex - 1].className += " active";
                 setTimeout(showSlides, 5000);
             }
-        </script>
+        </script>-->
 
     </body>
 </html> 
