@@ -66,9 +66,9 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 int photographerId = p.getPhotographerId();
-                ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='"+photographerId+"'");
+                ResultSet searchresult = DB.search("select Mobile from Photographer where Photographer_Id ='"+photographerId+"'");
                 searchresult.next();
-                String usermnum = searchresult.getString("Email");
+                String usermnum = searchresult.getString("Mobile");
                 response.getWriter().write(usermnum);
             } catch (SQLException ex) {
                 ex.printStackTrace();
