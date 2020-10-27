@@ -79,8 +79,8 @@ function cancelupdate(cancel) {
         document.getElementById("lname").disabled = true;
         document.getElementById("pencil2").style.visibility = "visible";
         document.getElementById("ic3").style.visibility = "hidden";
-        document.getElementById("ic4").style.visibility = "hidden";        
-        
+        document.getElementById("ic4").style.visibility = "hidden";
+
     } else if (cancel == "ic6") {
         var request = new XMLHttpRequest();
 
@@ -101,7 +101,7 @@ function cancelupdate(cancel) {
         document.getElementById("pencil3").style.visibility = "visible";
         document.getElementById("ic5").style.visibility = "hidden";
         document.getElementById("ic6").style.visibility = "hidden";
-        
+
     } else if (cancel == "ic8") {
         var request = new XMLHttpRequest();
 
@@ -137,13 +137,19 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    var user = JSON.parse(responce);
+                    alert(response);
+                    document.getElementById("fname").disabled = true;
+                    document.getElementById("pencil1").style.visibility = "visible";
+                    document.getElementById("ic1").style.visibility = "hidden";
+                    document.getElementById("ic2").style.visibility = "hidden";
                 }
             }
         }
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userfname=" + fname);
+
+
     } else if (field == "ic3") {
         var lname = document.getElementById("lname").value;
 
