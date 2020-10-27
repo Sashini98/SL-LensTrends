@@ -116,60 +116,51 @@ Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotogra
                         <img id="pencil2" onclick="pencileditenable('lname')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic3" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic3')" style="visibility:hidden;" >
                         <img class="icon2" id="ic4" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic4')" style="visibility:hidden;">
-                    </div>
-                    <br> 
-                    <label for="uname">User Name </label>  
-                    <br>
-                    <div class="icon">
-                        <input type="text" id="uname" name="uname" placeholder="Aaketk17" disabled> 
-                        <img id="pencil3"onclick="pencileditenable('uname')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic5" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic5')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic6" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic6')" style="visibility:hidden;">
-                    </div>
+                    </div>                   
                     <br> 
                     <label for="email">Email </label>  
                     <br> 
                     <div class="icon"> 
                         <input type="text" id="email" name="email" placeholder="thavanthya@gmail.com" disabled> 
-                        <img id="pencil4" onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic7" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic7')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic8" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic8')" style="visibility:hidden;">
+                        <img id="pencil3" onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic5" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic5')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic6" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic6')" style="visibility:hidden;">
                     </div>
                     <br> 
                     <label for="email">Mobile Number </label>  
                     <br> 
                     <div class="icon"> 
                         <input type="text" id="mnum" name="mnum" placeholder="+94 77 946 2554" disabled> 
-                        <img id="pencil5" onclick="pencileditenable('mnum')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic9" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic9')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic10" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic10')" style="visibility:hidden;">
+                        <img id="pencil4" onclick="pencileditenable('mnum')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic7" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic7')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic8" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic8')" style="visibility:hidden;">
                     </div>
                     <br> 
                     <label for="website">Website </label>  
                     <br> 
                     <div class="icon"> 
                         <input type="text" id="web" name="web" placeholder="www.ikongraphy.lk" disabled> 
-                        <img id="pencil6" onclick="pencileditenable('web')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic11" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic11')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic12" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic12')" style="visibility:hidden;">
+                        <img id="pencil5" onclick="pencileditenable('web')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic9" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic9')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic10" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic10')" style="visibility:hidden;">
                     </div>
                     <br> 
                     <label for="Bio">Bio</label>
                     <br> 
                     <div class="icon"> 
                         <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="Provide some intersting details about you to impress the viewers" disabled></textarea>
-                        <img id="pencil7" onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic13" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic13')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic14" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic14')" style="visibility:hidden;">
+                        <img id="pencil6" onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic11" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic11')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic12" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic12')" style="visibility:hidden;">
                     </div>
                     <br> 
                     <label for="profilpic">Field of Interest</label>
                     <br> 
                     <div class="icon">
                         <textarea id="interest" name="interest" cols="57" rows="3" placeholder="Give your field of interest, separate with comos" disabled></textarea>
-                        <img id="pencil8" onclick="pencileditenable('interest')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic15" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic15')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic16" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic16')" style="visibility:hidden;">
+                        <img id="pencil7" onclick="pencileditenable('interest')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic13" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic13')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic14" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic14')" style="visibility:hidden;">
                     </div>
                 </form>
             </div>

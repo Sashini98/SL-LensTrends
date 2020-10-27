@@ -51,7 +51,29 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
+        } else if(canceloption == "uname"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String useremail = searchresult.getString("Email");
+                response.getWriter().write(useremail);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if(canceloption == "mnum"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String usermnum = searchresult.getString("Email");
+                response.getWriter().write(usermnum);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
-    }
 
+   } 
 }
