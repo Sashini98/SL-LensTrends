@@ -40,6 +40,17 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
+        } else if(canceloption == "lname"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String userlname = searchresult.getString("Lname");
+                response.getWriter().write(userlname);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
