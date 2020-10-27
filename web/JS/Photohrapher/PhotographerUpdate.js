@@ -3,10 +3,14 @@ function pencileditenable(edit) {
     document.getElementById(edit).disabled = false;
 
 
-    if (edit == "fname") {
-        document.getElementById("pencil").style.visibility = "hidden";
+    if (edit == "fname" ) {
+        document.getElementById("pencil1").style.visibility = "hidden";
         document.getElementById("ic1").style.visibility = "visible";
         document.getElementById("ic2").style.visibility = "visible";
+    } else if (edit == "lname"){
+        document.getElementById("pencil2").style.visibility = "hidden";
+        document.getElementById("ic3").style.visibility = "visible";
+        document.getElementById("ic4").style.visibility = "visible";
     }
 }
 
