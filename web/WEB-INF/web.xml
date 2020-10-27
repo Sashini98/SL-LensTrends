@@ -36,6 +36,10 @@
         <servlet-name>PhotographerUpdate</servlet-name>
         <servlet-class>Controller.Photographer.PhotographerUpdate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CancellingPhotographerUpdate</servlet-name>
+        <servlet-class>Controller.Photographer.CancellingPhotographerUpdate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>PhotographerUpdate</servlet-name>
         <url-pattern>/PhotographerUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancellingPhotographerUpdate</servlet-name>
+        <url-pattern>/CancellingPhotographerUpdate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

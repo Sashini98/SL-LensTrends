@@ -51,7 +51,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    var user = JSON.parse(responce);
+                    document.getElementById("fname").placeholder = responce;
                 }
             }
         }
