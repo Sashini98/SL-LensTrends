@@ -4,8 +4,14 @@
     Author     : ASUS
 --%>
 
+<%@page import="Model.Photographer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+
+Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotographer");
+
+%>
 <html>
 
     <head>
@@ -97,7 +103,7 @@
                     <label for="fname">First Name </label> 
                     <br> 
                     <div class="icon">
-                        <input type="text" id="fname" name="fname" placeholder="Theivendram" disabled> 
+                        <input type="text" id="fname" name="fname" placeholder="<%= p.getFname() %>" disabled> 
                         <img id ="pencil1" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic1')" style="visibility:hidden;" >
                         <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic2')" style="visibility:hidden;">
