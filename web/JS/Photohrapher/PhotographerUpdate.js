@@ -7,10 +7,7 @@ function pencileditenable(edit) {
         document.getElementById("pencil1").style.visibility = "hidden";
         document.getElementById("ic1").style.visibility = "visible";
         document.getElementById("ic2").style.visibility = "visible";
-        if (document.getElementById("ic1").src == "../../Resources/Img/checkmark.png") {
-            alert("athavan");
-            document.getElementById("fname").disabled = true;
-        }
+
     } else if (edit == "lname") {
         document.getElementById("pencil2").style.visibility = "hidden";
         document.getElementById("ic3").style.visibility = "visible";
@@ -42,6 +39,31 @@ function pencileditenable(edit) {
     }
 
 
+}
+
+function cancelupdate(cancel) {
+    if (cancel == "ic2") {
+        
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    var user = JSON.parse(responce);
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='fname'");
+        
+        document.getElementById("fname").disabled = true;
+        document.getElementById("pencil1").style.visibility = "visible";
+        document.getElementById("ic1").style.visibility = "hidden";
+        document.getElementById("ic2").style.visibility = "hidden";
+    }
 }
 
 function updatedata(field) {
