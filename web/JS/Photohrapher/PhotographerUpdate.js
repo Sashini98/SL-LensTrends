@@ -7,6 +7,10 @@ function pencileditenable(edit) {
         document.getElementById("pencil1").style.visibility = "hidden";
         document.getElementById("ic1").style.visibility = "visible";
         document.getElementById("ic2").style.visibility = "visible";
+        if (document.getElementById("ic1").src == "../../Resources/Img/checkmark.png") {
+            alert("athavan");
+            document.getElementById("fname").disabled = true;
+        }
     } else if (edit == "lname") {
         document.getElementById("pencil2").style.visibility = "hidden";
         document.getElementById("ic3").style.visibility = "visible";
@@ -36,6 +40,8 @@ function pencileditenable(edit) {
         document.getElementById("ic15").style.visibility = "visible";
         document.getElementById("ic16").style.visibility = "visible";
     }
+
+
 }
 
 function updatedata(field) {

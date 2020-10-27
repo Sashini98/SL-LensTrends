@@ -176,7 +176,13 @@
             <div class="edit">
                 <form>
                     <label for="fname" >Address </label> 
-                    <br><input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil."> 
+                    <br>
+                    <div> 
+                        <input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil."> 
+                        <img id="pencil9" onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
+                    </div>
                     <br><label for="fname">City </label> 
                     <br><input type="text" id="city" name="city" placeholder="Jaffna"> 
                     <br><label for="fname">Province </label>  
