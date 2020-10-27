@@ -106,11 +106,16 @@ public class Login extends HttpServlet {
                             p.setFname(photographer.getString("Fname"));
                             p.setLname(photographer.getString("Lname"));
                             p.setAddress_no(photographer.getString("Address_No"));
-                            p.setStreet(photographer.getString("Street"));
                             p.setCity(photographer.getString("City"));
+                            p.setProvince(photographer.getString("Province"));
                             p.setJoined_date(photographer.getDate("Joined_Date"));
                             p.setGenderId(photographer.getInt("Gender_Id"));
                             p.setPlanId(photographer.getInt("Plan_Id"));
+                            p.setMobile(photographer.getString("Mobile"));
+                            p.setWebsite(photographer.getString("Website"));
+                            p.setBio(photographer.getString("bio"));
+                            p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
+                            p.setPostalCode(photographer.getInt("PostalCode"));
 
                             request.getSession().setAttribute("loggedPhotographer", p);
                             response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
@@ -164,11 +169,16 @@ public class Login extends HttpServlet {
                         p.setFname(photographer.getString("Fname"));
                         p.setLname(photographer.getString("Lname"));
                         p.setAddress_no(photographer.getString("Address_No"));
-                        p.setStreet(photographer.getString("Street"));
                         p.setCity(photographer.getString("City"));
+                        p.setProvince(photographer.getString("Province"));
                         p.setJoined_date(photographer.getDate("Joined_Date"));
                         p.setGenderId(photographer.getInt("Gender_Id"));
                         p.setPlanId(photographer.getInt("Plan_Id"));
+                        p.setMobile(photographer.getString("Mobile"));
+                        p.setWebsite(photographer.getString("Website"));
+                        p.setBio(photographer.getString("bio"));
+                        p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
+                        p.setPostalCode(photographer.getInt("PostalCode"));
 
                         request.getSession().setAttribute("loggedPhotographer", p);
                         response.sendRedirect("View/Photographer/PhotographerProfile.jsp");

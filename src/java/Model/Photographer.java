@@ -20,28 +20,38 @@ public class Photographer{
     String fname;
     String lname;
     String address_no;
-    String street;
     String city;
+    String province;
     Date joined_date;
     int genderId;
     int planId;
+    String mobile;
+    String website;
+    String bio;
+    String fielsOfdInterest;
+    int postalCode;
+    
 
     public Photographer() {
     }
-    
 
-    public Photographer(int photographerId, String email, String password, String fname, String lname, String address_no, String street, String city, Date joined_date, int genderId, int planId) {
+    public Photographer(int photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, String mobile, String website, String bio, String fielsOfdInterest, int postalCode) {
         this.photographerId = photographerId;
         this.email = email;
         this.password = password;
         this.fname = fname;
         this.lname = lname;
         this.address_no = address_no;
-        this.street = street;
         this.city = city;
+        this.province = province;
         this.joined_date = joined_date;
         this.genderId = genderId;
         this.planId = planId;
+        this.mobile = mobile;
+        this.website = website;
+        this.bio = bio;
+        this.fielsOfdInterest = fielsOfdInterest;
+        this.postalCode = postalCode;
     }
 
     public int getPhotographerId() {
@@ -92,20 +102,20 @@ public class Photographer{
         this.address_no = address_no;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     public Date getJoined_date() {
@@ -131,8 +141,48 @@ public class Photographer{
     public void setPlanId(int planId) {
         this.planId = planId;
     }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getWebsite() {
+        return website;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getFielsOfdInterest() {
+        return fielsOfdInterest;
+    }
+
+    public void setFielsOfdInterest(String fielsOfdInterest) {
+        this.fielsOfdInterest = fielsOfdInterest;
+    }
+
+    public int getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(int postalCode) {
+        this.postalCode = postalCode;
+    }
     
-    
+
     
     
 }

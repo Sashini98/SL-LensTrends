@@ -1,0 +1,79 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Controller.Photographer;
+
+import DB.DB;
+import Model.Photographer;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ *
+ * @author ASUS
+ */
+public class CancellingPhotographerUpdate extends HttpServlet {
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String canceloption = request.getParameter("canceledit");
+
+        if (canceloption == "fname") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Fname from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String userfname = searchresult.getString("Fname");
+                response.getWriter().write(userfname);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if(canceloption == "lname"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String userlname = searchresult.getString("Lname");
+                response.getWriter().write(userlname);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if(canceloption == "uname"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String useremail = searchresult.getString("Email");
+                response.getWriter().write(useremail);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if(canceloption == "mnum"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Mobile from Photographer where Photographer_Id ='"+photographerId+"'");
+                searchresult.next();
+                String usermnum = searchresult.getString("Mobile");
+                response.getWriter().write(usermnum);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
+
+   } 
+}

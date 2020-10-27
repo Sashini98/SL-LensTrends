@@ -48,31 +48,32 @@ function viewResults() {
                     button.style.backgroundColor = "blueviolet";
                     button.className = "confirmBTN";
                     button.id = user[i];
-                    button.onclick = viewDeactivateUser(user[i]);
+                    button.addEventListener("click", viewDeactivateUser(user[i]));
+                    
 
                     td11.innerHTML = user[i];
                     td12.innerHTML = user[i + 1];
                     td13.innerHTML = user[i + 2];
 
-                    
+
                     td14.appendChild(button);
-                   
+
                     tr.appendChild(td11);
                     tr.appendChild(td12);
                     tr.appendChild(td13);
                     tr.appendChild(td14);
-                   
+
                     document.getElementById("reportedUserTableBody").appendChild(tr);
-                    
+
                     i = i + 2;
 
                 }
-                
+
             }
         }
 
     };
-    
+
     request.open("POST", "../../UserMgt", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("search=" + search);
@@ -86,12 +87,12 @@ function viewDeactivateUser(user_id) {
     request.onreadystatechange = function () {
         if (request.status === 200) {
             if (request.readyState === 4) {
-                
+
                 var responce = request.responseText;
                 var user = JSON.parse(responce);
-                if(user.clientId!=null){
+                if (user.clientId != null) {
                     document.getElementById("userid").value = user.clientId;
-                }else{
+                } else {
                     document.getElementById("userid").value = user.photographerId;
                 }
                 document.getElementById("email").value = user.email;
