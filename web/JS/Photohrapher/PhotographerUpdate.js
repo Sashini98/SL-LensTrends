@@ -207,7 +207,7 @@ function updatedata(field) {
 
     if (field == "ic1") {
         var fname = document.getElementById("fname").value;
-
+        alert(fname);
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -427,7 +427,7 @@ function updatedata(field) {
         
     } else if (field == "ic21"){
         var zip = document.getElementById("zip").value;
-
+        alert(zip);
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {

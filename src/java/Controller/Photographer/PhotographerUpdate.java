@@ -37,9 +37,13 @@ public class PhotographerUpdate extends HttpServlet {
         String city = request.getParameter("usercity");
         String province = request.getParameter("userprovince");
         String zip = request.getParameter("userzip");
-        int postal = Integer.parseInt(zip);
+        int postal = 0;
+        if (zip != null) {
+            postal = Integer.parseInt(zip);
 
-        if (!fname.equals(null)) {
+        }
+
+        if (fname != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -50,7 +54,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!lname.equals(null)) {
+        } else if (lname != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -61,18 +65,18 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!email.equals(null)) {
+        } else if (email != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
-                DB.iud("update Photographer set Ename='" + email + "' where Photographer_Id = '" + photographerId + "'");
+                DB.iud("update Photographer set Email='" + email + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Email Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Email");
                 ex.printStackTrace();
             }
 
-        } else if (!mnum.equals(null)) {
+        } else if (mnum != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -83,7 +87,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!web.equals(null)) {
+        } else if (web != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -94,7 +98,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!bio.equals(null)) {
+        } else if (bio != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -105,7 +109,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!interest.equals(null)) {
+        } else if (interest != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -116,7 +120,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!address.equals(null)) {
+        } else if (address != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -127,7 +131,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!city.equals(null)) {
+        } else if (city != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -138,7 +142,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!province.equals(null)) {
+        } else if (province != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -149,7 +153,7 @@ public class PhotographerUpdate extends HttpServlet {
                 ex.printStackTrace();
             }
 
-        } else if (!zip.equals(null)) {
+        } else if (zip != null) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();

@@ -175,7 +175,7 @@
                     <label for="address" >Address </label> 
                     <br>
                     <div class="icon"> 
-                        <input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil."> 
+                        <input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil." disabled> 
                         <img id="pencil8" onclick="pencileditenable('address')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic15" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic15')" style="visibility:hidden;" >
                         <img class="icon2" id="ic16" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic16')" style="visibility:hidden;">
@@ -184,7 +184,7 @@
                     <label for="city">City </label>                     
                     <br>
                     <div>
-                        <input type="text" id="city" name="city" placeholder="Jaffna">
+                        <input type="text" id="city" name="city" placeholder="Jaffna" disabled>
                         <img id="pencil9" onclick="pencileditenable('City')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
                         <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
@@ -193,7 +193,7 @@
                     <label for="province">Province </label>  
                     <br>
                     <div>
-                        <input type="text" id="province" name="province" placeholder="North"> 
+                        <input type="text" id="province" name="province" placeholder="North" disabled> 
                         <img id="pencil10" onclick="pencileditenable('province')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic19" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic19')" style="visibility:hidden;" >
                         <img class="icon2" id="ic20" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic20')" style="visibility:hidden;">
@@ -202,7 +202,7 @@
                     <label for="zip">Zip/Postal </label>  
                     <br>
                     <div>
-                        <input type="text" id="zip" name="zip" placeholder="40000">
+                        <input type="text" id="zip" name="zip" placeholder="40000" disabled>
                         <img id="pencil11" onclick="pencileditenable('zip')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic21" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic21')" style="visibility:hidden;" >
                         <img class="icon2" id="ic22" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic122')" style="visibility:hidden;">
