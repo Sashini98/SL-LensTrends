@@ -380,5 +380,71 @@ function updatedata(field) {
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("useraddress=" + address);
+
+    } else if (field == "ic17") {
+        var city = document.getElementById("city").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("city").disabled = true;
+                    document.getElementById("pencil9").style.visibility = "visible";
+                    document.getElementById("ic17").style.visibility = "hidden";
+                    document.getElementById("ic18").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("usercity=" + city);
+        
+    } else if (field =="ic19") {
+        var province = document.getElementById("city").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("province").disabled = true;
+                    document.getElementById("pencil10").style.visibility = "visible";
+                    document.getElementById("ic19").style.visibility = "hidden";
+                    document.getElementById("ic20").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userprovince=" + province);
+        
+    } else if (field == "ic21"){
+        var zip = document.getElementById("zip").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("zip").disabled = true;
+                    document.getElementById("pencil11").style.visibility = "visible";
+                    document.getElementById("ic21").style.visibility = "hidden";
+                    document.getElementById("ic22").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userzip=" + zip);
     }
 }

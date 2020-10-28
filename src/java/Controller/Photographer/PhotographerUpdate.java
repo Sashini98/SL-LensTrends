@@ -38,7 +38,6 @@ public class PhotographerUpdate extends HttpServlet {
         String province = request.getParameter("userprovince");
         String zip = request.getParameter("userzip");
         int postal = Integer.parseInt(zip);
-        
 
         if (!fname.equals(null)) {
             try {
@@ -114,6 +113,50 @@ public class PhotographerUpdate extends HttpServlet {
                 response.getWriter().write("Your Field of interest Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Field of interest");
+                ex.printStackTrace();
+            }
+
+        } else if (!address.equals(null)) {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                DB.iud("update Photographer set Address_No='" + address + "' where Photographer_Id = '" + photographerId + "'");
+                response.getWriter().write("Address Updated Successfully");
+            } catch (SQLException ex) {
+                response.getWriter().write("Error Updating Address");
+                ex.printStackTrace();
+            }
+
+        } else if (!city.equals(null)) {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                DB.iud("update Photographer set City'" + city + "' where Photographer_Id = '" + photographerId + "'");
+                response.getWriter().write("City Updated Successfully");
+            } catch (SQLException ex) {
+                response.getWriter().write("Error Updating City");
+                ex.printStackTrace();
+            }
+
+        } else if (!province.equals(null)) {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                DB.iud("update Photographer set Province'" + province + "' where Photographer_Id = '" + photographerId + "'");
+                response.getWriter().write("Province Updated Successfully");
+            } catch (SQLException ex) {
+                response.getWriter().write("Error Updating Province");
+                ex.printStackTrace();
+            }
+
+        } else if (!zip.equals(null)) {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                DB.iud("update Photographer set PostalCode'" + postal + "' where Photographer_Id = '" + photographerId + "'");
+                response.getWriter().write("Postal code Updated Successfully");
+            } catch (SQLException ex) {
+                response.getWriter().write("Error Updating Postal code");
                 ex.printStackTrace();
             }
         }
