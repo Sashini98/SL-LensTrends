@@ -405,7 +405,7 @@ function updatedata(field) {
         request.send("userweb=" + web);
 
     } else if (field == "ic11") {
-        var bio = document.getElementById("bio").value;
+        var bio = document.getElementById("biotext").value;
 
         var request = new XMLHttpRequest();
 
