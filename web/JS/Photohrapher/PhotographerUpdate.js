@@ -122,7 +122,28 @@ function cancelupdate(cancel) {
         document.getElementById("pencil4").style.visibility = "visible";
         document.getElementById("ic7").style.visibility = "hidden";
         document.getElementById("ic8").style.visibility = "hidden";
-    }
+        
+    } else if (cancel == "ic10") {
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("web").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='web'");
+
+        document.getElementById("web").disabled = true;
+        document.getElementById("pencil5").style.visibility = "visible";
+        document.getElementById("ic9").style.visibility = "hidden";
+        document.getElementById("ic10").style.visibility = "hidden";
+    } 
 }
 
 function updatedata(field) {
