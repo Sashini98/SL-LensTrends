@@ -180,7 +180,7 @@ function cancelupdate(cancel) {
         document.getElementById("ic11").style.visibility = "hidden";
         document.getElementById("ic12").style.visibility = "hidden";
 
-    } else if (canel == "ic14") {
+    } else if (cancel == "ic14") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -200,8 +200,97 @@ function cancelupdate(cancel) {
         document.getElementById("pencil7").style.visibility = "visible";
         document.getElementById("ic13").style.visibility = "hidden";
         document.getElementById("ic14").style.visibility = "hidden";
+
+    } else if (cancel == "ic16") {
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("address").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='address'");
+
+        document.getElementById("address").disabled = true;
+        document.getElementById("pencil8").style.visibility = "visible";
+        document.getElementById("ic15").style.visibility = "hidden";
+        document.getElementById("ic16").style.visibility = "hidden";
+
+    } else if (edit == "ic18") {
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("address").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='city'");
+
+        document.getElementById("city").disabled = true;
+        document.getElementById("pencil9").style.visibility = "visible";
+        document.getElementById("ic17").style.visibility = "hidden";
+        document.getElementById("ic18").style.visibility = "hidden";
+
+    } else if (edit == "ic20") {
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("province").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='province'");
+
+        document.getElementById("province").disabled = true;
+        document.getElementById("pencil10").style.visibility = "visible";
+        document.getElementById("ic19").style.visibility = "hidden";
+        document.getElementById("ic20").style.visibility = "hidden";
+
+    } else if (edit == "ic22") {
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("zip").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='postal'");
+
+        document.getElementById("zip").disabled = true;
+        document.getElementById("pencil11").style.visibility = "visible";
+        document.getElementById("ic21").style.visibility = "hidden";
+        document.getElementById("ic22").style.visibility = "hidden";
     }
 }
+
+
+
+
+
 
 function updatedata(field) {
 
@@ -402,8 +491,8 @@ function updatedata(field) {
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("usercity=" + city);
-        
-    } else if (field =="ic19") {
+
+    } else if (field == "ic19") {
         var province = document.getElementById("city").value;
 
         var request = new XMLHttpRequest();
@@ -424,8 +513,8 @@ function updatedata(field) {
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userprovince=" + province);
-        
-    } else if (field == "ic21"){
+
+    } else if (field == "ic21") {
         var zip = document.getElementById("zip").value;
         alert(zip);
         var request = new XMLHttpRequest();
