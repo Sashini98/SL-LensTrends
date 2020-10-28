@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 27, 2020, 7:28:51 PM
+    Author     : Sashini Shihara
+*/
+html,
+body {
+	height: 100%;
+}
+
+body {
+	background :  url("../../Resources/Img/history.jpg") no-repeat center fixed;
+         background-size: cover;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+    margin-left: 20%;
+    margin-top: 10%;
+}
+
+table {
+	width: 80%;
+	border-collapse: collapse;
+	overflow: hidden;
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.5);
+	color: #fff;
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #a8a291;
+                border: 2px white; 
+	}
+}
+

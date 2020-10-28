@@ -77,10 +77,7 @@
                         </select>
                     </div>
 
-                    <h3><label for="Tags"><b>Tags</b></label></h3>
-                    <p><label>&nbsp&nbsp Add up to 5 tags to describe what your question is about</label><br></p>
-                    <input type="text" id="tags" name="tags"><br><br><br>
-
+                    
                 </fieldset>
 
                 <input type="submit" id="submit" value="Ask my question"><br><br><br>
