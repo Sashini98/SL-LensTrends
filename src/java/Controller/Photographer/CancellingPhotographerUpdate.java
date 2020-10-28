@@ -95,7 +95,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if ( canceloption == "interest"){
+        } else if (canceloption == "interest") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -103,6 +103,50 @@ public class CancellingPhotographerUpdate extends HttpServlet {
                 searchresult.next();
                 String userinterest = searchresult.getString("FieldofInterest");
                 response.getWriter().write(userinterest);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if (canceloption == "address") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                String photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Address_No from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String useraddress = searchresult.getString("Address_No");
+                response.getWriter().write(useraddress);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if (canceloption == "city") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                String photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select City from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String usercity = searchresult.getString("City");
+                response.getWriter().write(usercity);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if (canceloption == "province") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                String photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Province from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userprovince = searchresult.getString("Province");
+                response.getWriter().write(userprovince);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if (canceloption == "postal") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                String photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select PostalCode from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userpostal = searchresult.getString("PostalCode");
+                response.getWriter().write(userpostal);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
