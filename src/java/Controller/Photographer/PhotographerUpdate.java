@@ -119,7 +119,7 @@ public class PhotographerUpdate extends HttpServlet {
         } else if (!address.equals(null)) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Address_No='" + address + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Address Updated Successfully");
             } catch (SQLException ex) {
@@ -130,7 +130,7 @@ public class PhotographerUpdate extends HttpServlet {
         } else if (!city.equals(null)) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set City'" + city + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("City Updated Successfully");
             } catch (SQLException ex) {
@@ -141,7 +141,7 @@ public class PhotographerUpdate extends HttpServlet {
         } else if (!province.equals(null)) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Province'" + province + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Province Updated Successfully");
             } catch (SQLException ex) {
@@ -152,7 +152,7 @@ public class PhotographerUpdate extends HttpServlet {
         } else if (!zip.equals(null)) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set PostalCode'" + postal + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Postal code Updated Successfully");
             } catch (SQLException ex) {
