@@ -6,6 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+
+
+%>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -22,12 +28,12 @@
     </head>
     <body>
 
-        <div class="fixedheader">  
+        <div class="fixedheader" style="z-index: 20;">  
             <div class="pageheader">
                 <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
-                <div class="headerul">
+                <div class="headerul" style="margin-left: 30px;">
                     <ul>
 
                         <li><a href="#" type="button"> Events </a></li>
@@ -40,11 +46,13 @@
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../Resources/Img/notification.png"> </a>
+                    <a href="#" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
 
                 </div>
 
                 <div class="logout">
+                    <% 
+                    %>
                     <a href="../CheckLoginAccount?action=User" type="button"> Login </a>
                 </div>
             </div>
@@ -160,11 +168,11 @@
 
                 </div>
                 <div>
-                    <div class="about-heading">
+                    <div>
                         <h4>Our Vision</h4>
 
                     </div>
-                    <div class="about-body">
+                    <div >
                         <p class="text-muted">
                             Our vision is to
                         </p>
@@ -172,12 +180,21 @@
 
                 </div>
                 <div>
-                    <div class="about-heading" class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
+                    <div style="display: flex; flex-direction: column; align-items: flex-end;">
                         <h4>Our Mission</h4>
                     </div>
-                    <div class="about-body" class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
-                        <p class="text-muted">
-                            To create a vibrant community of successful professional SriLankan photographers and make it easy for worldwide clients to access their work.
+                    <div  style="display: flex; flex-direction: column; align-items: flex-end; font-size: 14px;">
+                        <p>
+                            To create a vibrant community of successful 
+                        </p>
+                        <p>
+                            professional SriLankan photographers and make 
+                        </p>
+                        <p>
+                            it easy for worldwide clients to access their 
+                        </p>
+                        <p>
+                            work.
                         </p>
                     </div>
 
