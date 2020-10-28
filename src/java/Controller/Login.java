@@ -77,8 +77,8 @@ public class Login extends HttpServlet {
                             c.setFname(client.getString("Fname"));
                             c.setLname(client.getString("Lname"));
                             c.setAddress_no(client.getString("Address_No"));
-                            c.setStreet(client.getString("Street"));
                             c.setCity(client.getString("City"));
+                            c.setProvince(client.getString("Province"));
                             c.setGenderId(client.getInt("Gender_Id"));
 
                             request.getSession().setAttribute("loggedClient", c);
@@ -140,7 +140,7 @@ public class Login extends HttpServlet {
                         c.setFname(client.getString("Fname"));
                         c.setLname(client.getString("Lname"));
                         c.setAddress_no(client.getString("Address_No"));
-                        c.setStreet(client.getString("Street"));
+                        c.setProvince(client.getString("Province"));
                         c.setCity(client.getString("City"));
                         c.setGenderId(client.getInt("Gender_Id"));
 
