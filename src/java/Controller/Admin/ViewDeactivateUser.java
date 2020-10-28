@@ -41,8 +41,8 @@ public class ViewDeactivateUser extends HttpServlet {
                 c.setFname(client.getString("Fname"));
                 c.setLname(client.getString("Lname"));
                 c.setAddress_no(client.getString("Address_No"));
-                c.setStreet(client.getString("Street"));
                 c.setCity(client.getString("City"));
+                c.setStreet(client.getString("Province"));
                 c.setGenderId(client.getInt("Gender_Id"));
                 
                 Gson g = new Gson();
@@ -58,7 +58,6 @@ public class ViewDeactivateUser extends HttpServlet {
                 p.setAddress_no(photographer.getString("Address_No"));
                 p.setCity(photographer.getString("City"));
                 p.setProvince(photographer.getString("Province"));
-                p.setJoined_date(photographer.getDate("Joined_Date"));
                 p.setGenderId(photographer.getInt("Gender_Id"));
                 
                 Gson g = new Gson();

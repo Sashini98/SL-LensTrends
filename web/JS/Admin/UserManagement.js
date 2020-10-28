@@ -99,8 +99,8 @@ function viewDeactivateUser(user_id) {
                 document.getElementById("fname").value = user.fname;
                 document.getElementById("lname").value = user.lname;
                 document.getElementById("addno").value = user.address_no;
-                document.getElementById("street").value = user.street;
                 document.getElementById("city").value = user.city;
+                document.getElementById("province").value = user.street;
                 document.getElementById("gender").value = user.genderId;
 
             }
