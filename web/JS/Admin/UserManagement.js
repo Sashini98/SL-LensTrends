@@ -124,6 +124,17 @@ function viewDeactivate() {
                 var responce = request.responseText;
                 alert(responce);
                 
+                document.getElementById("deactivateUser").value = " ";
+                document.getElementById("reportedUserTableBody").innerHTML = " ";
+                document.getElementById("userid").value = " ";
+                document.getElementById("email").value = " ";
+                document.getElementById("fname").value = " ";
+                document.getElementById("lname").value = " ";
+                document.getElementById("addno").value = " ";
+                document.getElementById("city").value = " ";
+                document.getElementById("province").value = " ";
+                document.getElementById("gender").value = " ";
+                
  
             }
         }

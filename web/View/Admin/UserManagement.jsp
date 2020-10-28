@@ -163,7 +163,7 @@
                             <td><input type="text" name="gen" id="gender" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <th colspan =2><button onclick="viewDeactive()" class='btn2' id="deactivate">Deactivate</button></th>
+                            <th colspan =2><button onclick="viewDeactivate()" class='btn2' id="deactivate">Deactivate</button></th>
                         </tr>
 
                     </table>
