@@ -33,47 +33,80 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 int photographerId = p.getPhotographerId();
-                ResultSet searchresult = DB.search("select Fname from Photographer where Photographer_Id ='"+photographerId+"'");
+                ResultSet searchresult = DB.search("select Fname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userfname = searchresult.getString("Fname");
                 response.getWriter().write(userfname);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if(canceloption == "lname"){
+        } else if (canceloption == "lname") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 int photographerId = p.getPhotographerId();
-                ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='"+photographerId+"'");
+                ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userlname = searchresult.getString("Lname");
                 response.getWriter().write(userlname);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if(canceloption == "uname"){
+        } else if (canceloption == "uname") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 int photographerId = p.getPhotographerId();
-                ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='"+photographerId+"'");
+                ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String useremail = searchresult.getString("Email");
                 response.getWriter().write(useremail);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if(canceloption == "mnum"){
+        } else if (canceloption == "mnum") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 int photographerId = p.getPhotographerId();
-                ResultSet searchresult = DB.search("select Mobile from Photographer where Photographer_Id ='"+photographerId+"'");
+                ResultSet searchresult = DB.search("select Mobile from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String usermnum = searchresult.getString("Mobile");
                 response.getWriter().write(usermnum);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
+        } else if (canceloption == "web") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select Website from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userweb = searchresult.getString("Website");
+                response.getWriter().write(userweb);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if (canceloption == "biotext") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select bio from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userbio = searchresult.getString("bio");
+                response.getWriter().write(userbio);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if ( canceloption == "interest"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select FieldofInterest from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userinterest = searchresult.getString("FieldofInterest");
+                response.getWriter().write(userinterest);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
         }
 
-   } 
+    }
 }
