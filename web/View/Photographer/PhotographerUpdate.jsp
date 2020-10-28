@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <%
 
-Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotographer");
+    Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
 
 %>
 <html>
@@ -103,7 +103,7 @@ Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotogra
                     <label for="fname">First Name </label> 
                     <br> 
                     <div class="icon">
-                        <input type="text" id="fname" name="fname" placeholder="<%= p.getFname() %>" disabled> 
+                        <input type="text" id="fname" name="fname" placeholder="<%= p.getFname()%>" disabled> 
                         <img id ="pencil1" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic1')" style="visibility:hidden;" >
                         <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic2')" style="visibility:hidden;">
@@ -112,7 +112,7 @@ Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotogra
                     <label for="lname">Last Name </label>  
                     <br> 
                     <div class="icon">
-                        <input type="text" id="lname" name="lname" placeholder="<%= p.getLname() %>" disabled> 
+                        <input type="text" id="lname" name="lname" placeholder="<%= p.getLname()%>" disabled> 
                         <img id="pencil2" onclick="pencileditenable('lname')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic3" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic3')" style="visibility:hidden;" >
                         <img class="icon2" id="ic4" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic4')" style="visibility:hidden;">
@@ -121,16 +121,16 @@ Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotogra
                     <label for="email">Email </label>  
                     <br> 
                     <div class="icon"> 
-                        <input type="text" id="email" name="email" placeholder="<%= p.getEmail() %>" disabled> 
+                        <input type="text" id="email" name="email" placeholder="<%= p.getEmail()%>" disabled> 
                         <img id="pencil3" onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic5" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic5')" style="visibility:hidden;" >
                         <img class="icon2" id="ic6" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic6')" style="visibility:hidden;">
                     </div>
                     <br> 
-                    <label for="email">Mobile Number </label>  
+                    <label for="mnum">Mobile Number </label>  
                     <br> 
                     <div class="icon"> 
-                        <input type="text" id="mnum" name="mnum" placeholder="<%= p.getMobile() %>" disabled> 
+                        <input type="text" id="mnum" name="mnum" placeholder="<%= p.getMobile()%>" disabled> 
                         <img id="pencil4" onclick="pencileditenable('mnum')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic7" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic7')" style="visibility:hidden;" >
                         <img class="icon2" id="ic8" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic8')" style="visibility:hidden;">
@@ -154,7 +154,7 @@ Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotogra
                         <img class="icon2" id="ic12" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic12')" style="visibility:hidden;">
                     </div>
                     <br> 
-                    <label for="profilpic">Field of Interest</label>
+                    <label for="interest">Field of Interest</label>
                     <br> 
                     <div class="icon">
                         <textarea id="interest" name="interest" cols="57" rows="3" placeholder="<%= p.getFielsOfdInterest()%>" disabled></textarea>
@@ -172,22 +172,41 @@ Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotogra
             </div> <br>
             <div class="edit">
                 <form>
-                    <label for="fname" >Address </label> 
+                    <label for="address" >Address </label> 
                     <br>
-                    <div> 
+                    <div class="icon"> 
                         <input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil."> 
-                        <img id="pencil9" onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
+                        <img id="pencil8" onclick="pencileditenable('address')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic15" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic15')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic16" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic16')" style="visibility:hidden;">
+                    </div>
+                    <br>
+                    <label for="city">City </label>                     
+                    <br>
+                    <div>
+                        <input type="text" id="city" name="city" placeholder="Jaffna">
+                        <img id="pencil9" onclick="pencileditenable('City')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
                         <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
                     </div>
-                    <br><label for="fname">City </label> 
-                    <br><input type="text" id="city" name="city" placeholder="Jaffna"> 
-                    <br><label for="fname">Province </label>  
-                    <br><input type="text" id="province" name="province" placeholder="North"> 
-                    <br><label for="fname">Country  </label>  
-                    <br><input type="text" id="conutry" name="country" placeholder="Srilanka"> 
-                    <br><label for="fname">Zip/Postal </label>  
-                    <br><input type="text" id="zip" name="zip" placeholder="40000">
+                    <br>
+                    <label for="province">Province </label>  
+                    <br>
+                    <div>
+                        <input type="text" id="province" name="province" placeholder="North"> 
+                        <img id="pencil10" onclick="pencileditenable('province')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic19" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic19')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic20" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic20')" style="visibility:hidden;">
+                    </div>                   
+                    <br>
+                    <label for="zip">Zip/Postal </label>  
+                    <br>
+                    <div>
+                        <input type="text" id="zip" name="zip" placeholder="40000">
+                        <img id="pencil11" onclick="pencileditenable('zip')" src="../../Resources/Img/edit.png">
+                        <img class="icon1" id="ic21" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic21')" style="visibility:hidden;" >
+                        <img class="icon2" id="ic22" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic122')" style="visibility:hidden;">
+                    </div>
 
                 </form>
             </div>

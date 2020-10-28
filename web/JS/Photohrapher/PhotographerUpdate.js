@@ -7,7 +7,6 @@ function pencileditenable(edit) {
         document.getElementById("pencil1").style.visibility = "hidden";
         document.getElementById("ic1").style.visibility = "visible";
         document.getElementById("ic2").style.visibility = "visible";
-
     } else if (edit == "lname") {
         document.getElementById("pencil2").style.visibility = "hidden";
         document.getElementById("ic3").style.visibility = "visible";
@@ -32,6 +31,22 @@ function pencileditenable(edit) {
         document.getElementById("pencil7").style.visibility = "hidden";
         document.getElementById("ic13").style.visibility = "visible";
         document.getElementById("ic14").style.visibility = "visible";
+    } else if (edit == "address") {
+        document.getElementById("pencil8").style.visibility = "hidden";
+        document.getElementById("ic15").style.visibility = "visible";
+        document.getElementById("ic16").style.visibility = "visible";
+    } else if (edit == "city") {
+        document.getElementById("pencil9").style.visibility = "hidden";
+        document.getElementById("ic17").style.visibility = "visible";
+        document.getElementById("ic18").style.visibility = "visible";
+    } else if (edit == "province") {
+        document.getElementById("pencil10").style.visibility = "hidden";
+        document.getElementById("ic19").style.visibility = "visible";
+        document.getElementById("ic20").style.visibility = "visible";
+    } else if (edit == "zip") {
+        document.getElementById("pencil11").style.visibility = "hidden";
+        document.getElementById("ic21").style.visibility = "visible";
+        document.getElementById("ic22").style.visibility = "visible";
     }
 
 
@@ -122,7 +137,7 @@ function cancelupdate(cancel) {
         document.getElementById("pencil4").style.visibility = "visible";
         document.getElementById("ic7").style.visibility = "hidden";
         document.getElementById("ic8").style.visibility = "hidden";
-        
+
     } else if (cancel == "ic10") {
         var request = new XMLHttpRequest();
 
@@ -143,8 +158,8 @@ function cancelupdate(cancel) {
         document.getElementById("pencil5").style.visibility = "visible";
         document.getElementById("ic9").style.visibility = "hidden";
         document.getElementById("ic10").style.visibility = "hidden";
-        
-    } else if (cancel == "ic12"){
+
+    } else if (cancel == "ic12") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -164,8 +179,8 @@ function cancelupdate(cancel) {
         document.getElementById("pencil6").style.visibility = "visible";
         document.getElementById("ic11").style.visibility = "hidden";
         document.getElementById("ic12").style.visibility = "hidden";
-        
-    } else if (canel == "ic14"){
+
+    } else if (canel == "ic14") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -212,7 +227,6 @@ function updatedata(field) {
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userfname=" + fname);
 
-
     } else if (field == "ic3") {
         var lname = document.getElementById("lname").value;
 
@@ -224,11 +238,147 @@ function updatedata(field) {
 
                     var responce = request.responseText;
                     alert(response);
+                    document.getElementById("lname").disabled = true;
+                    document.getElementById("pencil2").style.visibility = "visible";
+                    document.getElementById("ic3").style.visibility = "hidden";
+                    document.getElementById("ic4").style.visibility = "hidden";
                 }
             }
         }
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userlname=" + lname);
+
+    } else if (field == "ic5") {
+        var email = document.getElementById("email").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("email").disabled = true;
+                    document.getElementById("pencil3").style.visibility = "visible";
+                    document.getElementById("ic5").style.visibility = "hidden";
+                    document.getElementById("ic6").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("useremail=" + email);
+
+    } else if (field == "ic7") {
+        var mnum = document.getElementById("mnum").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("mnum").disabled = true;
+                    document.getElementById("pencil4").style.visibility = "visible";
+                    document.getElementById("ic7").style.visibility = "hidden";
+                    document.getElementById("ic8").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("usermnum=" + mnum);
+
+    } else if (field == "ic9") {
+        var web = document.getElementById("web").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("web").disabled = true;
+                    document.getElementById("pencil5").style.visibility = "visible";
+                    document.getElementById("ic9").style.visibility = "hidden";
+                    document.getElementById("ic10").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userweb=" + web);
+
+    } else if (field == "ic11") {
+        var bio = document.getElementById("bio").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("bio").disabled = true;
+                    document.getElementById("pencil6").style.visibility = "visible";
+                    document.getElementById("ic11").style.visibility = "hidden";
+                    document.getElementById("ic12").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userbio=" + bio);
+
+    } else if (field == "ic13") {
+        var interest = document.getElementById("interest").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("interest").disabled = true;
+                    document.getElementById("pencil7").style.visibility = "visible";
+                    document.getElementById("ic13").style.visibility = "hidden";
+                    document.getElementById("ic14").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("userinterest=" + interest);
+
+    } else if (field == "ic15") {
+        var address = document.getElementById("address").value;
+
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    alert(response);
+                    document.getElementById("address").disabled = true;
+                    document.getElementById("pencil8").style.visibility = "visible";
+                    document.getElementById("ic15").style.visibility = "hidden";
+                    document.getElementById("ic16").style.visibility = "hidden";
+                }
+            }
+        }
+        request.open("POST", "../../PhotographerUpdate", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("useraddress=" + address);
     }
 }
