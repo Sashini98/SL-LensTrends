@@ -151,12 +151,12 @@
                             <td><input type="text" name="address" id="addno" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
-                            <td align="left">Street</td>
-                            <td><input type="text" name="strt" id="street" size="30" maxlength="25"></td>
-                        </tr>
                         <tr>
                             <td align="left">City</td>
                             <td><input type="text" name="cit" id="city" size="30" maxlength="25"></td>
+                        </tr>
+                            <td align="left">Province</td>
+                            <td><input type="text" name="pro" id="province" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td align="left">Gender</td>
