@@ -32,7 +32,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         if (canceloption == "fname") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Fname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userfname = searchresult.getString("Fname");
@@ -43,7 +43,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if (canceloption == "lname") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userlname = searchresult.getString("Lname");
@@ -54,7 +54,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if (canceloption == "uname") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String useremail = searchresult.getString("Email");
@@ -65,7 +65,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if (canceloption == "mnum") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Mobile from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String usermnum = searchresult.getString("Mobile");
@@ -76,7 +76,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if (canceloption == "web") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Website from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userweb = searchresult.getString("Website");
@@ -87,7 +87,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if (canceloption == "biotext") {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select bio from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userbio = searchresult.getString("bio");
@@ -98,7 +98,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if ( canceloption == "interest"){
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                int photographerId = p.getPhotographerId();
+                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select FieldofInterest from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userinterest = searchresult.getString("FieldofInterest");

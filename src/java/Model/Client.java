@@ -13,7 +13,7 @@ package Model;
  */
 public class Client {
     
-    int clientId;
+    String clientId;
     String email;
     String password;
     String fname;
@@ -26,7 +26,7 @@ public class Client {
     public Client() {
     }
 
-    public Client(int clientId, String email, String password, String fname, String lname, String address_no, String city, String province, int genderId) {
+    public Client(String clientId, String email, String password, String fname, String lname, String address_no, String city, String province, int genderId) {
         this.clientId = clientId;
         this.email = email;
         this.password = password;
@@ -38,11 +38,11 @@ public class Client {
         this.genderId = genderId;
     }
 
-    public int getClientId() {
+    public String getClientId() {
         return clientId;
     }
 
-    public void setClientId(int clientId) {
+    public void setClientId(String clientId) {
         this.clientId = clientId;
     }
 
