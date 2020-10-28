@@ -24,7 +24,7 @@ public class DB {
         
             try {
                 Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/sl_lens_trends", "root", "");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sl_lens_trends", "root", "");
             } catch (ClassNotFoundException ex) {
                 ex.printStackTrace();
             } catch (SQLException ex) {
