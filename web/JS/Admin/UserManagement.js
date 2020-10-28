@@ -49,7 +49,7 @@ function viewResults() {
                     button.className = "confirmBTN";
                     button.id = user[i];
                     button.addEventListener("click", viewDeactivateUser(user[i]));
-                    
+
 
                     td11.innerHTML = user[i];
                     td12.innerHTML = user[i + 1];
@@ -100,7 +100,7 @@ function viewDeactivateUser(user_id) {
                 document.getElementById("lname").value = user.lname;
                 document.getElementById("addno").value = user.address_no;
                 document.getElementById("city").value = user.city;
-                document.getElementById("province").value = user.street;
+                document.getElementById("province").value = user.province;
                 document.getElementById("gender").value = user.genderId;
 
             }
@@ -111,4 +111,26 @@ function viewDeactivateUser(user_id) {
     request.send("userid=" + user_id);
 }
 
+function viewDeactivate() {
 
+    var user_id = document.getElementById("userid").value;
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                alert(responce);
+                
+ 
+            }
+        }
+
+    }
+
+    request.open("POST", "../../DeactivateUser", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("deactivate=" + user_id);
+}
