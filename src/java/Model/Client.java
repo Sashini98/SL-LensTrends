@@ -19,23 +19,22 @@ public class Client {
     String fname;
     String lname;
     String address_no;
-    String street;
     String city;
+    String province;
     int genderId;
 
     public Client() {
     }
-    
 
-    public Client(int clientId, String email, String password, String fname, String lname, String address_no, String street, String city, int genderId) {
+    public Client(int clientId, String email, String password, String fname, String lname, String address_no, String city, String province, int genderId) {
         this.clientId = clientId;
         this.email = email;
         this.password = password;
         this.fname = fname;
         this.lname = lname;
         this.address_no = address_no;
-        this.street = street;
         this.city = city;
+        this.province = province;
         this.genderId = genderId;
     }
 
@@ -87,20 +86,20 @@ public class Client {
         this.address_no = address_no;
     }
 
-    public String getStreet() {
-        return street;
-    }
-
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
     public String getCity() {
         return city;
     }
 
     public void setCity(String city) {
         this.city = city;
+    }
+
+    public String getProvince() {
+        return province;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     public int getGenderId() {
@@ -110,8 +109,6 @@ public class Client {
     public void setGenderId(int genderId) {
         this.genderId = genderId;
     }
-    
-    
     
     
 }

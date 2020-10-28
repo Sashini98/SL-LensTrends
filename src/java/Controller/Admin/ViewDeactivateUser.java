@@ -42,7 +42,7 @@ public class ViewDeactivateUser extends HttpServlet {
                 c.setLname(client.getString("Lname"));
                 c.setAddress_no(client.getString("Address_No"));
                 c.setCity(client.getString("City"));
-                c.setStreet(client.getString("Province"));
+                c.setProvince(client.getString("Province"));
                 c.setGenderId(client.getInt("Gender_Id"));
                 
                 Gson g = new Gson();
