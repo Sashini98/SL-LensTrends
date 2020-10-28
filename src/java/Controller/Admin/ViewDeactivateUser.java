@@ -36,7 +36,7 @@ public class ViewDeactivateUser extends HttpServlet {
             if (client.next()) {
 
                 Client c = new Client();
-                c.setClientId(client.getInt("Client_Id"));
+                c.setClientId(client.getString("Client_Id"));
                 c.setEmail(client.getString("Email"));
                 c.setFname(client.getString("Fname"));
                 c.setLname(client.getString("Lname"));
@@ -51,7 +51,7 @@ public class ViewDeactivateUser extends HttpServlet {
 
             } else {
                 Photographer p = new Photographer();
-                p.setPhotographerId(photographer.getInt("photographer_Id"));
+                p.setPhotographerId(photographer.getString("photographer_Id"));
                 p.setEmail(photographer.getString("Email"));
                 p.setFname(photographer.getString("Fname"));
                 p.setLname(photographer.getString("Lname"));

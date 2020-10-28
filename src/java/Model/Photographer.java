@@ -14,7 +14,7 @@ import java.util.Date;
  */
 public class Photographer{
     
-    int photographerId;
+    String photographerId;
     String email;
     String password;
     String fname;
@@ -35,7 +35,7 @@ public class Photographer{
     public Photographer() {
     }
 
-    public Photographer(int photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, String mobile, String website, String bio, String fielsOfdInterest, int postalCode) {
+    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, String mobile, String website, String bio, String fielsOfdInterest, int postalCode) {
         this.photographerId = photographerId;
         this.email = email;
         this.password = password;
@@ -54,11 +54,11 @@ public class Photographer{
         this.postalCode = postalCode;
     }
 
-    public int getPhotographerId() {
+    public String getPhotographerId() {
         return photographerId;
     }
 
-    public void setPhotographerId(int photographerId) {
+    public void setPhotographerId(String photographerId) {
         this.photographerId = photographerId;
     }
 

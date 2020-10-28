@@ -71,7 +71,7 @@ public class Login extends HttpServlet {
                         ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
                         if (client.next()) {
                             Client c = new Client();
-                            c.setClientId(client.getInt("Client_Id"));
+                            c.setClientId(client.getString("Client_Id"));
                             c.setEmail(client.getString("Email"));
                             c.setPassword(client.getString("Password"));
                             c.setFname(client.getString("Fname"));
@@ -100,7 +100,7 @@ public class Login extends HttpServlet {
 
                         if (photographer.next()) {
                             Photographer p = new Photographer();
-                            p.setPhotographerId(photographer.getInt("Photographer_Id"));
+                            p.setPhotographerId(photographer.getString("Photographer_Id"));
                             p.setEmail(photographer.getString("Email"));
                             p.setPassword(photographer.getString("Password"));
                             p.setFname(photographer.getString("Fname"));
@@ -134,7 +134,7 @@ public class Login extends HttpServlet {
                     ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
                     if (client.next()) {
                         Client c = new Client();
-                        c.setClientId(client.getInt("Client_Id"));
+                        c.setClientId(client.getString("Client_Id"));
                         c.setEmail(client.getString("Email"));
                         c.setPassword(client.getString("Password"));
                         c.setFname(client.getString("Fname"));
@@ -163,7 +163,7 @@ public class Login extends HttpServlet {
 
                     if (photographer.next()) {
                         Photographer p = new Photographer();
-                        p.setPhotographerId(photographer.getInt("Photographer_Id"));
+                        p.setPhotographerId(photographer.getString("Photographer_Id"));
                         p.setEmail(photographer.getString("Email"));
                         p.setPassword(photographer.getString("Password"));
                         p.setFname(photographer.getString("Fname"));
