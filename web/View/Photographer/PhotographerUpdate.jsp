@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <%
 
-//Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotographer");
+Photographer p = (Photographer)request.getSession().getAttribute("loggedPhotographer");
 
 %>
 <html>
