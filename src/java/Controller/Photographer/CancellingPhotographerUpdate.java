@@ -84,7 +84,29 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } 
+        } else if (canceloption == "biotext") {
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select bio from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userbio = searchresult.getString("bio");
+                response.getWriter().write(userbio);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        } else if ( canceloption == "interest"){
+            try {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                int photographerId = p.getPhotographerId();
+                ResultSet searchresult = DB.search("select FieldofInterest from Photographer where Photographer_Id ='" + photographerId + "'");
+                searchresult.next();
+                String userinterest = searchresult.getString("FieldofInterest");
+                response.getWriter().write(userinterest);
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
 
     }
 }

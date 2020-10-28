@@ -143,7 +143,49 @@ function cancelupdate(cancel) {
         document.getElementById("pencil5").style.visibility = "visible";
         document.getElementById("ic9").style.visibility = "hidden";
         document.getElementById("ic10").style.visibility = "hidden";
-    } 
+        
+    } else if (cancel == "ic12"){
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("biotext").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='bio'");
+
+        document.getElementById("biotext").disabled = true;
+        document.getElementById("pencil6").style.visibility = "visible";
+        document.getElementById("ic11").style.visibility = "hidden";
+        document.getElementById("ic12").style.visibility = "hidden";
+        
+    } else if (canel == "ic14"){
+        var request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                    document.getElementById("interest").placeholder = responce;
+                }
+            }
+        }
+        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("canceledit='interest'");
+
+        document.getElementById("interest").disabled = true;
+        document.getElementById("pencil7").style.visibility = "visible";
+        document.getElementById("ic13").style.visibility = "hidden";
+        document.getElementById("ic14").style.visibility = "hidden";
+    }
 }
 
 function updatedata(field) {
