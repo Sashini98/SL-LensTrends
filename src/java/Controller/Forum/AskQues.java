@@ -39,32 +39,39 @@ public class AskQues extends HttpServlet {
         System.out.println(category);
 
         Date date = new Date();
-        System.out.println(date);
-//        SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String d = sdf.format(date);
+
+        System.out.println(d);
+
         String id = "";
 
         if (request.getSession().getAttribute("loggedPhotographer") == null) {
+             
             Client c = (Client) request.getSession().getAttribute("loggedClient");
             id = c.getClientId();
+            
+            
+            
             try {
-            DB.iud("INSERT INTO Question (title,Question,Categoty,Question_Date,Client_Id) VALUES ('" + title + "','" + body + "','" + category + "','" + date + "','"+ id +"')");
+                DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Client_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
-        } catch (Exception e) {
-
-        }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } else {
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             id = p.getPhotographerId();
             try {
-            DB.iud("INSERT INTO Question (title,Question,Categoty,Question_Date,Photographer_Id) VALUES ('" + title + "','" + body + "','" + category + "','" + date + "','"+ id +"')");
+               DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Photographer_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
-        } catch (Exception e) {
-
-        }
+            } catch (Exception e) {
+            e.printStackTrace();
+            }
         }
         System.out.println(id);
-        
+
     }
 
 }
