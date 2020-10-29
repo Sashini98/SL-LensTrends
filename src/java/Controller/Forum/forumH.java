@@ -32,10 +32,11 @@ public class forumH extends HttpServlet {
 
         try {
 
-            ArrayList<String> a = new ArrayList();
+            
             ResultSet ques = DB.search("SELECT * FROM Question");
 
             while (ques.next()) {
+                ArrayList<String> a = new ArrayList();
                 Question q = new Question();
                 String name="";
                 int cnt=0;
@@ -91,15 +92,10 @@ public class forumH extends HttpServlet {
                 a.add(q.getcategory());
                 a.add(cnt+"");
 
-            }
-            
-//            Gson g= new Gson();
-//            String toJson = g.toJson(a);
-//            response.getWriter().write(toJson);
-//            
+          
             request.setAttribute("questions", a);
             request.getRequestDispatcher("View/Fourm/ques.jsp").forward(request, response);
-
+            }
         } catch (Exception e) {
 
         }
