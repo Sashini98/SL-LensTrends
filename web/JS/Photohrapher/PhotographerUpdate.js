@@ -55,7 +55,6 @@ function pencileditenable(edit) {
 function cancelupdate(cancel) {
     alert(cancel);
     if (cancel == "ic2") {
-        alert(cancel);
 
         var request = new XMLHttpRequest();
 
@@ -64,9 +63,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(responce);
                     document.getElementById("fname").value = responce;
-
                     document.getElementById("fname").disabled = true;
                     document.getElementById("pencil1").style.visibility = "visible";
                     document.getElementById("ic1").style.visibility = "hidden";
@@ -315,8 +312,7 @@ function updatedata(field) {
         request.onreadystatechange = function () {
             if (request.status === 200) {
                 if (request.readyState === 4) {
-                    var responce = request.responseText;
-                    alert(responce);
+                    var responce = request.responseText;                    
                     document.getElementById("fname").disabled = true;
                     document.getElementById("pencil1").style.visibility = "visible";
                     document.getElementById("ic1").style.visibility = "hidden";
