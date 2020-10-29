@@ -81,7 +81,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption.equals("biotext")) {
+        } else if (canceloption.equals("bio")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();

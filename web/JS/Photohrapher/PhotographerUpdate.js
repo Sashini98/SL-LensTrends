@@ -422,7 +422,7 @@ function updatedata(field) {
 
                     var responce = request.responseText;
                     alert(responce);
-                    document.getElementById("bio").disabled = true;
+                    document.getElementById("biotext").disabled = true;
                     document.getElementById("pencil6").style.visibility = "visible";
                     document.getElementById("ic11").style.visibility = "hidden";
                     document.getElementById("ic12").style.visibility = "hidden";
