@@ -32,14 +32,13 @@ public class forumH extends HttpServlet {
 
         try {
 
-            
             ResultSet ques = DB.search("SELECT * FROM Question");
+            ArrayList<String> a = new ArrayList();
 
             while (ques.next()) {
-                ArrayList<String> a = new ArrayList();
                 Question q = new Question();
-                String name="";
-                int cnt=0;
+                String name = "";
+                int cnt = 0;
 
                 q.settitle(ques.getString("title"));
                 q.setquestion(ques.getString("Question"));
@@ -67,35 +66,31 @@ public class forumH extends HttpServlet {
 
                     }
                 }
-                    
-                    try
-                    {
-                        int qid=ques.getInt("Question_Id");
-                        ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM Answer WHERE Question_Id=" + qid + "");
-                        num.next();
-                        cnt=num.getInt("rowcount");
-                    }
-                    
-                    catch (Exception e){}
-                
-                
-                
-                
+
+                try {
+                    int qid = ques.getInt("Question_Id");
+                    ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM Answer WHERE Question_Id=" + qid + "");
+                    num.next();
+                    cnt = num.getInt("rowcount");
+                } catch (Exception e) {
+                }
+
                 a.add(name);
-                
-                SimpleDateFormat sdf= new SimpleDateFormat("dd/MM/yyyy");
-                String date=sdf.format(q.getquestion_date());
+
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                String date = sdf.format(q.getquestion_date());
                 a.add(date);
-                
+
                 a.add(q.gettitle());
                 a.add(q.getquestion());
                 a.add(q.getcategory());
-                a.add(cnt+"");
+                a.add(cnt + "");
 
-          
-            request.setAttribute("questions", a);
-            request.getRequestDispatcher("View/Fourm/ques.jsp").forward(request, response);
+               
             }
+            
+             request.setAttribute("questions", a);
+             request.getRequestDispatcher("View/Fourm/ques.jsp").forward(request, response);
         } catch (Exception e) {
 
         }
