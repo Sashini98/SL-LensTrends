@@ -295,8 +295,7 @@ function cancelupdate(cancel) {
 function updatedata(field) {
 
     if (field == "ic1") {
-        var fname = document.getElementById("fname").value;
-        alert(fname);
+        var fname = document.getElementById("fname").value;      
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
