@@ -51,9 +51,7 @@
                 </div>
 
                 <div class="logout">
-                    <% 
-                    %>
-                    <a href="../CheckLoginAccount?action=User" type="button"> Login </a>
+                    <button href="../CheckLoginAccount?action=User" type="button"> Login </button>
                 </div>
             </div>
         </div>
