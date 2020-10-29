@@ -17,7 +17,6 @@ function view()
                 var responce = request.responseText;
                 
                   document.getElementById("q").innerHTML=responce;
-                  alert(responce);
 
             }
         }
