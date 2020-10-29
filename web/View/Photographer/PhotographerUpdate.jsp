@@ -185,7 +185,7 @@
                     <br>
                     <div>
                         <input type="text" id="city" name="city" placeholder="Jaffna" disabled>
-                        <img id="pencil9" onclick="pencileditenable('City')" src="../../Resources/Img/edit.png">
+                        <img id="pencil9" onclick="pencileditenable('city')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
                         <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
                     </div>
@@ -205,7 +205,7 @@
                         <input type="text" id="zip" name="zip" placeholder="40000" disabled>
                         <img id="pencil11" onclick="pencileditenable('zip')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic21" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic21')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic22" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic122')" style="visibility:hidden;">
+                        <img class="icon2" id="ic22" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic22')" style="visibility:hidden;">
                     </div>
 
                 </form>

@@ -222,7 +222,7 @@ function cancelupdate(cancel) {
         document.getElementById("ic15").style.visibility = "hidden";
         document.getElementById("ic16").style.visibility = "hidden";
 
-    } else if (edit == "ic18") {
+    } else if (cancel == "ic18") {       
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -230,7 +230,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("address").placeholder = responce;
+                    document.getElementById("city").placeholder = responce;
                 }
             }
         }
@@ -243,7 +243,7 @@ function cancelupdate(cancel) {
         document.getElementById("ic17").style.visibility = "hidden";
         document.getElementById("ic18").style.visibility = "hidden";
 
-    } else if (edit == "ic20") {
+    } else if (cancel == "ic20") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -264,7 +264,7 @@ function cancelupdate(cancel) {
         document.getElementById("ic19").style.visibility = "hidden";
         document.getElementById("ic20").style.visibility = "hidden";
 
-    } else if (edit == "ic22") {
+    } else if (cancel == "ic22") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
