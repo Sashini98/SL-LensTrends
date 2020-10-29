@@ -106,7 +106,8 @@
     border: 10px solid RGB(187,187,187);
     border-radius: 50%;
     line-height: 1.5; 
-    padding-top: 23px;
+    box-sizing : border-box;
+    padding-top: 23px; 
     text-align: center;
     background-color: RGB(254,209,54);
 }
