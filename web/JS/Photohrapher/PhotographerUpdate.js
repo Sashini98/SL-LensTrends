@@ -52,8 +52,7 @@ function pencileditenable(edit) {
 
 }
 
-function cancelupdate(cancel) {
-    alert(cancel);
+function cancelupdate(cancel) {    
     if (cancel == "ic2") {
 
         var request = new XMLHttpRequest();
