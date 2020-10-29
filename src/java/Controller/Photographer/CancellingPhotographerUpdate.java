@@ -8,11 +8,8 @@ package Controller.Photographer;
 import DB.DB;
 import Model.Photographer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -28,8 +25,8 @@ public class CancellingPhotographerUpdate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String canceloption = request.getParameter("canceledit");
-
-        if (canceloption == "fname") {
+       
+        if (canceloption.equals("fname")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -40,7 +37,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "lname") {
+        } else if (canceloption.equals("lname")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -51,7 +48,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "uname") {
+        } else if (canceloption.equals("uname")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -62,7 +59,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "mnum") {
+        } else if (canceloption.equals("mnum")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -73,7 +70,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "web") {
+        } else if (canceloption.equals("web")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -84,7 +81,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "biotext") {
+        } else if (canceloption.equals("biotext")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -95,7 +92,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "interest") {
+        } else if (canceloption.equals("interest")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -106,7 +103,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "address") {
+        } else if (canceloption.equals("address")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -117,7 +114,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "city") {
+        } else if (canceloption.equals("city")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -128,7 +125,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "province") {
+        } else if (canceloption.equals("province")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();
@@ -139,7 +136,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption == "postal") {
+        } else if (canceloption.equals("postal")) {
             try {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 String photographerId = p.getPhotographerId();

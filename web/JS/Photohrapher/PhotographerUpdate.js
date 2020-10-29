@@ -53,7 +53,9 @@ function pencileditenable(edit) {
 }
 
 function cancelupdate(cancel) {
+    alert(cancel);
     if (cancel == "ic2") {
+        alert(cancel);
 
         var request = new XMLHttpRequest();
 
@@ -62,18 +64,20 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("fname").placeholder = responce;
+                    alert(responce);
+                    document.getElementById("fname").value = responce;
+
+                    document.getElementById("fname").disabled = true;
+                    document.getElementById("pencil1").style.visibility = "visible";
+                    document.getElementById("ic1").style.visibility = "hidden";
+                    document.getElementById("ic2").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='fname'");
+        request.send("canceledit=fname");
 
-        document.getElementById("fname").disabled = true;
-        document.getElementById("pencil1").style.visibility = "visible";
-        document.getElementById("ic1").style.visibility = "hidden";
-        document.getElementById("ic2").style.visibility = "hidden";
 
     } else if (cancel == "ic4") {
         var request = new XMLHttpRequest();
@@ -83,18 +87,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("lname").placeholder = responce;
+                    document.getElementById("lname").value = responce;
+                    document.getElementById("lname").disabled = true;
+                    document.getElementById("pencil2").style.visibility = "visible";
+                    document.getElementById("ic3").style.visibility = "hidden";
+                    document.getElementById("ic4").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='lname'");
 
-        document.getElementById("lname").disabled = true;
-        document.getElementById("pencil2").style.visibility = "visible";
-        document.getElementById("ic3").style.visibility = "hidden";
-        document.getElementById("ic4").style.visibility = "hidden";
+
 
     } else if (cancel == "ic6") {
         var request = new XMLHttpRequest();
@@ -104,18 +109,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("email").placeholder = responce;
+                    document.getElementById("email").value = responce;
+                    document.getElementById("email").disabled = true;
+                    document.getElementById("pencil3").style.visibility = "visible";
+                    document.getElementById("ic5").style.visibility = "hidden";
+                    document.getElementById("ic6").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='email'");
 
-        document.getElementById("email").disabled = true;
-        document.getElementById("pencil3").style.visibility = "visible";
-        document.getElementById("ic5").style.visibility = "hidden";
-        document.getElementById("ic6").style.visibility = "hidden";
+
 
     } else if (cancel == "ic8") {
         var request = new XMLHttpRequest();
@@ -125,18 +131,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("mnum").placeholder = responce;
+                    document.getElementById("mnum").value = responce;
+                    document.getElementById("mnum").disabled = true;
+                    document.getElementById("pencil4").style.visibility = "visible";
+                    document.getElementById("ic7").style.visibility = "hidden";
+                    document.getElementById("ic8").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='mnum'");
 
-        document.getElementById("mnum").disabled = true;
-        document.getElementById("pencil4").style.visibility = "visible";
-        document.getElementById("ic7").style.visibility = "hidden";
-        document.getElementById("ic8").style.visibility = "hidden";
+
 
     } else if (cancel == "ic10") {
         var request = new XMLHttpRequest();
@@ -146,18 +153,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("web").placeholder = responce;
+                    document.getElementById("web").value = responce;
+                    document.getElementById("web").disabled = true;
+                    document.getElementById("pencil5").style.visibility = "visible";
+                    document.getElementById("ic9").style.visibility = "hidden";
+                    document.getElementById("ic10").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='web'");
 
-        document.getElementById("web").disabled = true;
-        document.getElementById("pencil5").style.visibility = "visible";
-        document.getElementById("ic9").style.visibility = "hidden";
-        document.getElementById("ic10").style.visibility = "hidden";
+
 
     } else if (cancel == "ic12") {
         var request = new XMLHttpRequest();
@@ -167,18 +175,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("biotext").placeholder = responce;
+                    document.getElementById("biotext").value = responce;
+                    document.getElementById("biotext").disabled = true;
+                    document.getElementById("pencil6").style.visibility = "visible";
+                    document.getElementById("ic11").style.visibility = "hidden";
+                    document.getElementById("ic12").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='bio'");
 
-        document.getElementById("biotext").disabled = true;
-        document.getElementById("pencil6").style.visibility = "visible";
-        document.getElementById("ic11").style.visibility = "hidden";
-        document.getElementById("ic12").style.visibility = "hidden";
+
 
     } else if (cancel == "ic14") {
         var request = new XMLHttpRequest();
@@ -188,18 +197,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("interest").placeholder = responce;
+                    document.getElementById("interest").value = responce;
+                    document.getElementById("interest").disabled = true;
+                    document.getElementById("pencil7").style.visibility = "visible";
+                    document.getElementById("ic13").style.visibility = "hidden";
+                    document.getElementById("ic14").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='interest'");
 
-        document.getElementById("interest").disabled = true;
-        document.getElementById("pencil7").style.visibility = "visible";
-        document.getElementById("ic13").style.visibility = "hidden";
-        document.getElementById("ic14").style.visibility = "hidden";
+
 
     } else if (cancel == "ic16") {
         var request = new XMLHttpRequest();
@@ -209,20 +219,21 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("address").placeholder = responce;
+                    document.getElementById("address").value = responce;
+                    document.getElementById("address").disabled = true;
+                    document.getElementById("pencil8").style.visibility = "visible";
+                    document.getElementById("ic15").style.visibility = "hidden";
+                    document.getElementById("ic16").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='address'");
 
-        document.getElementById("address").disabled = true;
-        document.getElementById("pencil8").style.visibility = "visible";
-        document.getElementById("ic15").style.visibility = "hidden";
-        document.getElementById("ic16").style.visibility = "hidden";
 
-    } else if (cancel == "ic18") {       
+
+    } else if (cancel == "ic18") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -230,18 +241,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("city").placeholder = responce;
+                    document.getElementById("city").value = responce;
+                    document.getElementById("city").disabled = true;
+                    document.getElementById("pencil9").style.visibility = "visible";
+                    document.getElementById("ic17").style.visibility = "hidden";
+                    document.getElementById("ic18").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='city'");
 
-        document.getElementById("city").disabled = true;
-        document.getElementById("pencil9").style.visibility = "visible";
-        document.getElementById("ic17").style.visibility = "hidden";
-        document.getElementById("ic18").style.visibility = "hidden";
+
 
     } else if (cancel == "ic20") {
         var request = new XMLHttpRequest();
@@ -251,18 +263,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("province").placeholder = responce;
+                    document.getElementById("province").value = responce;
+                    document.getElementById("province").disabled = true;
+                    document.getElementById("pencil10").style.visibility = "visible";
+                    document.getElementById("ic19").style.visibility = "hidden";
+                    document.getElementById("ic20").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='province'");
 
-        document.getElementById("province").disabled = true;
-        document.getElementById("pencil10").style.visibility = "visible";
-        document.getElementById("ic19").style.visibility = "hidden";
-        document.getElementById("ic20").style.visibility = "hidden";
+
 
     } else if (cancel == "ic22") {
         var request = new XMLHttpRequest();
@@ -272,18 +285,19 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    document.getElementById("zip").placeholder = responce;
+                    document.getElementById("zip").value = responce;
+                    document.getElementById("zip").disabled = true;
+                    document.getElementById("pencil11").style.visibility = "visible";
+                    document.getElementById("ic21").style.visibility = "hidden";
+                    document.getElementById("ic22").style.visibility = "hidden";
                 }
             }
         }
-        request.open("POST", "../../CancellingPhotographerUpdata", false);
+        request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit='postal'");
 
-        document.getElementById("zip").disabled = true;
-        document.getElementById("pencil11").style.visibility = "visible";
-        document.getElementById("ic21").style.visibility = "hidden";
-        document.getElementById("ic22").style.visibility = "hidden";
+
     }
 }
 
@@ -295,15 +309,14 @@ function cancelupdate(cancel) {
 function updatedata(field) {
 
     if (field == "ic1") {
-        var fname = document.getElementById("fname").value;      
+        var fname = document.getElementById("fname").value;
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
             if (request.status === 200) {
                 if (request.readyState === 4) {
-
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("fname").disabled = true;
                     document.getElementById("pencil1").style.visibility = "visible";
                     document.getElementById("ic1").style.visibility = "hidden";
@@ -325,7 +338,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("lname").disabled = true;
                     document.getElementById("pencil2").style.visibility = "visible";
                     document.getElementById("ic3").style.visibility = "hidden";
@@ -347,7 +360,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("email").disabled = true;
                     document.getElementById("pencil3").style.visibility = "visible";
                     document.getElementById("ic5").style.visibility = "hidden";
@@ -369,7 +382,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("mnum").disabled = true;
                     document.getElementById("pencil4").style.visibility = "visible";
                     document.getElementById("ic7").style.visibility = "hidden";
@@ -391,7 +404,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("web").disabled = true;
                     document.getElementById("pencil5").style.visibility = "visible";
                     document.getElementById("ic9").style.visibility = "hidden";
@@ -413,7 +426,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("bio").disabled = true;
                     document.getElementById("pencil6").style.visibility = "visible";
                     document.getElementById("ic11").style.visibility = "hidden";
@@ -435,7 +448,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("interest").disabled = true;
                     document.getElementById("pencil7").style.visibility = "visible";
                     document.getElementById("ic13").style.visibility = "hidden";
@@ -457,7 +470,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("address").disabled = true;
                     document.getElementById("pencil8").style.visibility = "visible";
                     document.getElementById("ic15").style.visibility = "hidden";
@@ -479,7 +492,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("city").disabled = true;
                     document.getElementById("pencil9").style.visibility = "visible";
                     document.getElementById("ic17").style.visibility = "hidden";
@@ -501,7 +514,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("province").disabled = true;
                     document.getElementById("pencil10").style.visibility = "visible";
                     document.getElementById("ic19").style.visibility = "hidden";
@@ -523,7 +536,7 @@ function updatedata(field) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
-                    alert(response);
+                    alert(responce);
                     document.getElementById("zip").disabled = true;
                     document.getElementById("pencil11").style.visibility = "visible";
                     document.getElementById("ic21").style.visibility = "hidden";
