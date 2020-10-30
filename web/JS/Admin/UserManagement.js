@@ -28,6 +28,16 @@ function viewResults() {
     var search = document.getElementById("deactivateUser").value;
     var request = new XMLHttpRequest();
 
+    document.getElementById("reportedUserTableBody").innerHTML = "";
+    document.getElementById("userid").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("fname").value = "";
+    document.getElementById("lname").value = "";
+    document.getElementById("addno").value = "";
+    document.getElementById("city").value = "";
+    document.getElementById("province").value = "";
+    document.getElementById("gender").value = "";
+
     request.onreadystatechange = function () {
 
         if (request.status === 200) {
@@ -48,7 +58,37 @@ function viewResults() {
                     button.style.backgroundColor = "blueviolet";
                     button.className = "confirmBTN";
                     button.id = user[i];
-                    button.addEventListener("click", viewDeactivateUser(user[i]));
+                    var user_id = user[i];
+                    button.onclick = function () {
+//                        viewDeactivateUser(user[i]);
+                        var request = new XMLHttpRequest();
+                        request.onreadystatechange = function () {
+                            if (request.status === 200) {
+                                if (request.readyState === 4) {
+
+                                    var responce = request.responseText;
+                                    var user = JSON.parse(responce);
+                                    if (user.clientId != null) {
+                                        document.getElementById("userid").value = user.clientId;
+                                    } else {
+                                        document.getElementById("userid").value = user.photographerId;
+                                    }
+                                    document.getElementById("email").value = user.email;
+                                    document.getElementById("fname").value = user.fname;
+                                    document.getElementById("lname").value = user.lname;
+                                    document.getElementById("addno").value = user.address_no;
+                                    document.getElementById("city").value = user.city;
+                                    document.getElementById("province").value = user.province;
+                                    document.getElementById("gender").value = user.genderId;
+
+                                }
+                            }
+                        }
+                        request.open("POST", "../../ViewDeactivateUser", false);
+                        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        request.send("userid=" + user_id);
+                    }
+//                    button.addEventListener("click", viewDeactivateUser(user[i]));
 
 
                     td11.innerHTML = user[i];
@@ -80,36 +120,36 @@ function viewResults() {
 
 }
 
-function viewDeactivateUser(user_id) {
-
-    var request = new XMLHttpRequest();
-
-    request.onreadystatechange = function () {
-        if (request.status === 200) {
-            if (request.readyState === 4) {
-
-                var responce = request.responseText;
-                var user = JSON.parse(responce);
-                if (user.clientId != null) {
-                    document.getElementById("userid").value = user.clientId;
-                } else {
-                    document.getElementById("userid").value = user.photographerId;
-                }
-                document.getElementById("email").value = user.email;
-                document.getElementById("fname").value = user.fname;
-                document.getElementById("lname").value = user.lname;
-                document.getElementById("addno").value = user.address_no;
-                document.getElementById("city").value = user.city;
-                document.getElementById("province").value = user.province;
-                document.getElementById("gender").value = user.genderId;
-
-            }
-        }
-    }
-    request.open("POST", "../../ViewDeactivateUser", false);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("userid=" + user_id);
-}
+//function viewDeactivateUser(user_id) {
+//
+//    var request = new XMLHttpRequest();
+//    alert(user_id);
+//    request.onreadystatechange = function () {
+//        if (request.status === 200) {
+//            if (request.readyState === 4) {
+//
+//                var responce = request.responseText;
+//                var user = JSON.parse(responce);
+//                if (user.clientId != null) {
+//                    document.getElementById("userid").value = user.clientId;
+//                } else {
+//                    document.getElementById("userid").value = user.photographerId;
+//                }
+//                document.getElementById("email").value = user.email;
+//                document.getElementById("fname").value = user.fname;
+//                document.getElementById("lname").value = user.lname;
+//                document.getElementById("addno").value = user.address_no;
+//                document.getElementById("city").value = user.city;
+//                document.getElementById("province").value = user.province;
+//                document.getElementById("gender").value = user.genderId;
+//
+//            }
+//        }
+//    }
+//    request.open("POST", "../../ViewDeactivateUser", false);
+//    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//    request.send("userid=" + user_id);
+//}
 
 function viewDeactivate() {
 
@@ -123,19 +163,19 @@ function viewDeactivate() {
 
                 var responce = request.responseText;
                 alert(responce);
-                
-                document.getElementById("deactivateUser").value = " ";
-                document.getElementById("reportedUserTableBody").innerHTML = " ";
-                document.getElementById("userid").value = " ";
-                document.getElementById("email").value = " ";
-                document.getElementById("fname").value = " ";
-                document.getElementById("lname").value = " ";
-                document.getElementById("addno").value = " ";
-                document.getElementById("city").value = " ";
-                document.getElementById("province").value = " ";
-                document.getElementById("gender").value = " ";
-                
- 
+
+                document.getElementById("deactivateUser").value = "";
+                document.getElementById("reportedUserTableBody").innerHTML = "";
+                document.getElementById("userid").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("fname").value = "";
+                document.getElementById("lname").value = "";
+                document.getElementById("addno").value = "";
+                document.getElementById("city").value = "";
+                document.getElementById("province").value = "";
+                document.getElementById("gender").value = "";
+
+
             }
         }
 

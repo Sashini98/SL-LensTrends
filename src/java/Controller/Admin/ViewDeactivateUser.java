@@ -28,7 +28,7 @@ public class ViewDeactivateUser extends HttpServlet {
             throws ServletException, IOException {
 
         String userid = request.getParameter("userid");
-
+        System.out.println(userid);
         try {
             ResultSet client = DB.search("SELECT * FROM Client where Client_Id = '"+ userid +"' ");
             ResultSet photographer = DB.search("SELECT * FROM Photographer where Photographer_Id = '"+ userid +"'");
@@ -50,8 +50,9 @@ public class ViewDeactivateUser extends HttpServlet {
                 response.getWriter().write(toJson);
 
             } else {
+                photographer.next();
                 Photographer p = new Photographer();
-                p.setPhotographerId(photographer.getString("photographer_Id"));
+                p.setPhotographerId(photographer.getString("Photographer_Id"));
                 p.setEmail(photographer.getString("Email"));
                 p.setFname(photographer.getString("Fname"));
                 p.setLname(photographer.getString("Lname"));

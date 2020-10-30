@@ -29,7 +29,6 @@ public class UserMgt extends HttpServlet {
             throws ServletException, IOException {
 
         String email = request.getParameter("search");
-        System.out.println(email);
 
         try {
 
@@ -60,17 +59,10 @@ public class UserMgt extends HttpServlet {
             } else if (photographerAcc) {
 
                 a.add(photographer.getString("Photographer_Id"));
-                a.add(photographer.getString("Fname") + " " + client.getString("Lname"));
-                a.add("Photographer");
-                
-
+                a.add(photographer.getString("Fname") + " " + photographer.getString("Lname"));
+                a.add("Photographer");               
             }
             
-            
-            for (String string : a) {
-                System.out.println(string);
-            }
-
          
             Gson g = new Gson();
             String toJson = g.toJson(a);
