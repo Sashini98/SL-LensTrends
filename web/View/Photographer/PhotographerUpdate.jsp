@@ -8,9 +8,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-
-    Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-    System.out.println(p.getFname());
+    Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");    
 %>
 <html>
 
