@@ -97,7 +97,7 @@ and open the template in the editor.
 
 .logout  button {
     /*list-style-type: none;*/
-    background-color: black;
+    background-color: #222;
     border: none;
     padding-left: 20px;
     text-decoration: none;
