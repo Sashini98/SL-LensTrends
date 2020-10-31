@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="../../CSS/Admin/ApprovePhotos.css">
         <title>Approve Photographs</title>
     </head>
-    <body style="background-image: url(../../Resources/Img/approve.jpg); background-size: 100% ; ">
+    <body>
         <div class="container1"></div>
 
         <form>

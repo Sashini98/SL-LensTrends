@@ -8,13 +8,10 @@ and open the template in the editor.
     Author     : Madusha
 */
 
-body{
-    font-family: "Trebuchet MS";
-}
 
 .table_top{
-    background-color: white;
-    font-family: "Trebuchet MS";
+    background-color: lightblue;
+    font-family: 'Rubik', sans-serif;
     color: black;
     border-radius: 5px;
 }
@@ -36,27 +33,6 @@ body{
     border-radius: 15px;
 }
 
-.hilight{
-    background-color: #81BDC5;
-    font-family: "Trebuchet MS";
-    color: darkblue;
-    font-weight: 400;
-    font-size:18px;
-    font-style: normal;
-    padding: 15px 32px;
-    border: none ;
-    border-radius: 15px;
-    
-}
-
-.index{
-    border-radius: 15px;
-    background-color:white;
-    opacity: 0.85;
-    margin-top: 80px;
-    color:black;
-    text-align:center;
-}
 .cardimg{
     position: relative;
     max-width:300px;
@@ -65,29 +41,31 @@ body{
     height: auto;
     width: auto;
     margin-left:150px;
-    
+
 }
 
- .card {
+.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1);
+    background-color:  #EBF6FA;
     margin: 20px;
     text-align: center;
     color: #ddd;
+    font-family: 'Kadwa', serif;
+    color: black;
     font-size: 14px;
-    background-color: #f1f1f1;
     max-height: 500px;
-    background-color:rgba(0,0,0,0.6);
-  }
-  
-   .column {
+    
+}
+
+.column {
     float: right;   
     width: 32%;
     padding: 0 7px;
-  }
-  
-  .row {margin: 0 -1px;}
-  
-  .btn2{
+}
+
+.row {margin: 0 -1px;}
+
+.btn2{
     background-color: rgb(46, 43, 43);
     color: white;
     padding: 16px 20px;
@@ -98,23 +76,27 @@ body{
     margin-top: 6px;
     margin-bottom: 6px;
     border-radius: 10px;
-  }
+}
 
 .column2 {
     float: left;   
     width: 32%;
     padding: 0 7px;
-  }
-  
-.confirmBTN{
-	background-color: #4169E1;
-	border: none;
-	color: white;
-	padding: 6px 12px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 12px;
-	padding-left:10px;
 }
 
+.confirmBTN{
+    background-color: #4169E1;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    padding-left:10px;
+}
+
+hr {
+  border: 1px solid #12a8e0;
+  margin-bottom: 25px;
+}

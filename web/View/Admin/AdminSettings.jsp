@@ -13,8 +13,9 @@
         <link rel="stylesheet" href="../../CSS/Admin/Admin.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/Admin/AdminHeader.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
     </head>
-    <body style="background-image: url(../../Resources/Img/settings.jpg); background-size: 100% ; ">
+    <body>
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -49,7 +50,7 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <font color="red">Suspend the application</font>
+                    <font color="blue">Suspend the application</font>
                     <hr>
                     <table border="0" width="100%" height="40px">
                         <tr>
@@ -72,7 +73,7 @@
                 <div class="card">
                     <form>
                         <fieldset>
-                            <legend><font color="red">Profile</font></legend>
+                            <legend><font color="blue">Profile</font></legend>
                             <table border="0" width="100%" height="40px" >
                                 <tr>
                                     <td align="left">First Name</td>
@@ -111,7 +112,7 @@
                                     <td><input type=password name=name size="30" maxlength="25"></td>
                                 </tr>
                                 <tr>
-                                    <td>Profile picture</td>
+                                    <td align="left">Profile picture</td>
                                     <td><input type=file name="profile"></td>
                                 </tr>
                                 <tr>
@@ -129,7 +130,7 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <font color="red">Send System Notifications</font>
+                    <font color="blue">Send System Notifications</font>
                     <hr>
                     <textarea name="message" rows="8" cols="42"></textarea>
 
