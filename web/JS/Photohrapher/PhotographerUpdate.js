@@ -61,7 +61,8 @@ function cancelupdate(cancel) {
             if (request.status === 200) {
                 if (request.readyState === 4) {
 
-                    var responce = request.responseText;
+                    var responce = request.responseText;               
+                    document.getElementById("fname").placeholder = responce;
                     document.getElementById("fname").value = responce;
                     document.getElementById("fname").disabled = true;
                     document.getElementById("pencil1").style.visibility = "visible";
@@ -83,6 +84,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("lname").placeholder = responce;
                     document.getElementById("lname").value = responce;
                     document.getElementById("lname").disabled = true;
                     document.getElementById("pencil2").style.visibility = "visible";
@@ -105,6 +107,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("email").placeholder = responce;
                     document.getElementById("email").value = responce;
                     document.getElementById("email").disabled = true;
                     document.getElementById("pencil3").style.visibility = "visible";
@@ -127,6 +130,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("mnum").placeholder = responce;
                     document.getElementById("mnum").value = responce;
                     document.getElementById("mnum").disabled = true;
                     document.getElementById("pencil4").style.visibility = "visible";
@@ -149,6 +153,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("web").placeholder = responce;
                     document.getElementById("web").value = responce;
                     document.getElementById("web").disabled = true;
                     document.getElementById("pencil5").style.visibility = "visible";
@@ -171,6 +176,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("biotext").placeholder = responce;
                     document.getElementById("biotext").value = responce;
                     document.getElementById("biotext").disabled = true;
                     document.getElementById("pencil6").style.visibility = "visible";
@@ -193,6 +199,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("interest").placeholder = responce;
                     document.getElementById("interest").value = responce;
                     document.getElementById("interest").disabled = true;
                     document.getElementById("pencil7").style.visibility = "visible";
@@ -215,6 +222,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("address").placeholder = responce;
                     document.getElementById("address").value = responce;
                     document.getElementById("address").disabled = true;
                     document.getElementById("pencil8").style.visibility = "visible";
@@ -237,6 +245,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("city").placeholder = responce;
                     document.getElementById("city").value = responce;
                     document.getElementById("city").disabled = true;
                     document.getElementById("pencil9").style.visibility = "visible";
@@ -259,6 +268,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("province").placeholder = responce;
                     document.getElementById("province").value = responce;
                     document.getElementById("province").disabled = true;
                     document.getElementById("pencil10").style.visibility = "visible";
@@ -281,6 +291,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    document.getElementById("zip").placeholder = responce;
                     document.getElementById("zip").value = responce;
                     document.getElementById("zip").disabled = true;
                     document.getElementById("pencil11").style.visibility = "visible";

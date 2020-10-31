@@ -43,10 +43,11 @@ public class PhotographerUpdate extends HttpServlet {
 
         }
 
+        Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+        String photographerId = p.getPhotographerId();
+        
         if (fname != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Fname='" + fname + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("First Name Updated Successfully");
             } catch (SQLException ex) {
@@ -56,8 +57,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (lname != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Lname='" + lname + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Last Name Updated Successfully");
             } catch (SQLException ex) {
@@ -67,8 +66,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (email != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Email='" + email + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Email Updated Successfully");
             } catch (SQLException ex) {
@@ -78,8 +75,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (mnum != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Mobile='" + mnum + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Mobile Number Updated Successfully");
             } catch (SQLException ex) {
@@ -89,8 +84,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (web != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Website='" + web + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Website Updated Successfully");
             } catch (SQLException ex) {
@@ -100,8 +93,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (bio != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set bio='" + bio + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("You Bio Updated Successfully");
             } catch (SQLException ex) {
@@ -111,8 +102,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (interest != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set FieldofInterest='" + interest + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Your Field of interest Updated Successfully");
             } catch (SQLException ex) {
@@ -122,8 +111,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (address != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Address_No='" + address + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Address Updated Successfully");
             } catch (SQLException ex) {
@@ -133,8 +120,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (city != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set City'" + city + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("City Updated Successfully");
             } catch (SQLException ex) {
@@ -144,8 +129,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (province != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set Province'" + province + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Province Updated Successfully");
             } catch (SQLException ex) {
@@ -155,8 +138,6 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (zip != null) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 DB.iud("update Photographer set PostalCode'" + postal + "' where Photographer_Id = '" + photographerId + "'");
                 response.getWriter().write("Postal code Updated Successfully");
             } catch (SQLException ex) {

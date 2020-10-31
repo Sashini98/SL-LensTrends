@@ -10,7 +10,6 @@
 <%
 
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-    System.out.println(p.getFname());
 %>
 <html>
 
