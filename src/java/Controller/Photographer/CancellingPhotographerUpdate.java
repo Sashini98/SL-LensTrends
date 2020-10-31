@@ -25,11 +25,12 @@ public class CancellingPhotographerUpdate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String canceloption = request.getParameter("canceledit");
-       
+
+        Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+        String photographerId = p.getPhotographerId();
+        
         if (canceloption.equals("fname")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Fname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userfname = searchresult.getString("Fname");
@@ -39,8 +40,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("lname")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userlname = searchresult.getString("Lname");
@@ -50,8 +49,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("uname")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Email from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String useremail = searchresult.getString("Email");
@@ -61,8 +58,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("mnum")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Mobile from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String usermnum = searchresult.getString("Mobile");
@@ -72,8 +67,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("web")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Website from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userweb = searchresult.getString("Website");
@@ -83,8 +76,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("bio")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select bio from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userbio = searchresult.getString("bio");
@@ -94,8 +85,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("interest")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select FieldofInterest from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userinterest = searchresult.getString("FieldofInterest");
@@ -105,8 +94,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("address")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Address_No from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String useraddress = searchresult.getString("Address_No");
@@ -116,8 +103,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("city")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select City from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String usercity = searchresult.getString("City");
@@ -127,8 +112,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("province")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select Province from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userprovince = searchresult.getString("Province");
@@ -138,8 +121,6 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             }
         } else if (canceloption.equals("postal")) {
             try {
-                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-                String photographerId = p.getPhotographerId();
                 ResultSet searchresult = DB.search("select PostalCode from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userpostal = searchresult.getString("PostalCode");
