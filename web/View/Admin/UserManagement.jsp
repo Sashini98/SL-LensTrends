@@ -64,6 +64,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
+                            <th>Type</th>
                             <th>Option</th>
                         </tr>
                     </thead>

@@ -1,0 +1,62 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 31, 2020, 10:25:21 PM
+    Author     : Madusha
+*/
+
+.leftp
+{
+   
+    opacity: 0.7;
+    background-size: 100% 100%;
+    float: left;
+    background-color: lightblue;
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 10px;
+    flex-basis: 45%;
+    width: 12%;
+}
+
+.rightp
+{    
+    margin-bottom: 0.8%;
+    margin-left: 14%;
+    width: 70%;
+}
+
+.active
+{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.contain
+{
+    opacity: 0.9;
+    float: left;
+    background-color: transparent;    
+    width: 80%;
+    
+}
+
+input[type=button]
+{     
+  background-color: transparent;
+  border: 0.1px solid transparent; 
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;  
+}
+
+input[type=button]:active 
+{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
