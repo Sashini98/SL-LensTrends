@@ -13,8 +13,9 @@
         <link rel="stylesheet" href ="../../CSS/Admin/Admin.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/Admin/AdminHeader.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
     </head>
-    <body style="background-image: url(../../Resources/Img/message.jpg); background-size: 100% ; ">
+    <body>
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -49,7 +50,7 @@
         <div class="row">
             <div class="column">
                 <div class="card">
-                    <font color="red">Client Notifications</font><hr>
+                    <font color="blue">Client Notifications</font><hr>
                     <textarea name="message" rows="4" cols="52"></textarea>
                     <table border="0" width="100%" height="40px" >
                         <td><font>Email</font></td>
@@ -58,7 +59,7 @@
                     <button class="btn2">Send</button>
                 </div>
                 <div class="card">
-                    <font color="red">Photographer Notifications</font><hr>
+                    <font color="blue">Photographer Notifications</font><hr>
                     <textarea name="message" rows="4" cols="52"></textarea>
                     <table border="0" width="100%" height="40px" >
                         <td><font>Email</font></td>
@@ -71,7 +72,7 @@
         <div class="row">
             <div class="column">
                 <div class='card'>
-                    <font color="red">Messages</font>
+                    <font color="blue">Messages</font>
                     <hr>
                     <table border="1" width="100%" height="40px" >
                         <tr>
@@ -103,7 +104,7 @@
                 <div class="card">
                     <form>
                         <fieldset>
-                            <legend><font color="red">Message</font></legend>
+                            <legend><font color="blue">Message</font></legend>
                             <textarea name="message" rows="5" cols="48"></textarea>
                         </fieldset>
                     </form>

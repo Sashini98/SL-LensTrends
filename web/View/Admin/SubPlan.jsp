@@ -14,8 +14,9 @@
         <link rel="stylesheet" href ="../../CSS/Admin/SubPlan.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/Admin/AdminHeader.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
 </head>
-<body style="background-image: url(../../Resources/Img/pregister.jpg); background-size: 100% ; ">
+<body>
 
     <div class="fixedheader">  
             <div class="pageheader">

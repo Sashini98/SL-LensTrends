@@ -14,8 +14,9 @@
         <link rel="stylesheet" href ="../../CSS/Admin/intermediate.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/Admin/AdminHeader.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
     </head>
-    <body style="background-image: url(../../Resources/Img/proback.jpg); background-size: 100% ;">
+    <body>
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -50,21 +51,14 @@
         <div class="row">
             <div class='column'>
                 <div class='card'>
-                    <img class='cardimg' src= "../../Resources/Img/category.jpg"><br>
-                    <font>Top Category</font>
-                </div>
-                <div class='card'>
-                    <font color="red">Category</font>
+                    <font color="blue">Category</font>
                     <hr>
                     <table border="0" width="100%" height="40px" >
-
                         <tr>
                             <th align="left">Add Category</th>
                             <th><input type=text name=name size="20" maxlength="25"></th>
                             <th><button>Save</button></th>
                         </tr>
-                        <tr><th></th></tr>
-                        <tr><th></th></tr>
                         <tr>
                             <th></th>
                             <td><center><input id="option" class="btn2" type='submit' value="Options"></center></td>
@@ -72,8 +66,8 @@
                     </table>
                 </div>
                 <div class='card'>
-                    <font color="red">In-review Photographs </font><br>
-                    <hr><br>
+                    <font color="blue">In-review Photographs </font><br>
+                    <hr>
                     <button class='btn2'>VIew</button>
                 </div>
             </div>
@@ -81,25 +75,31 @@
         <div class="row">
             <div class='column'>
                 <div class='card'>
-                    <font color="red">Reported Photographs</font>
-                    <hr><br>
+                    <font color="blue">Reported Photographs</font>
+                    <hr>
                     <table border="1" width="100%" height="40px" >
-                        <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Option</th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th><input id="viewPhoto" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
+                        <thead class="table_top">
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
                     </table><br>
+                    <form>
+                        <table border="0" width="100%" height="40px" >
+                            <tr>
+                                <td align="left">Reason</td>
+                                <td><input class="textbox" type=text name=name size="30" maxlength="25"></td>
+                            </tr>
+                        </table><br>
+                    </form>
                 </div>
+
                 <div class='card'>
+                    <font color="blue">Remove Photographs</font><hr>
                     <input type="text" placeholder="Type here">
                     <button>Search</button>
-                    <hr>
                     <table border="0" width="100%" height="40px" >
                         <tr>
                         <div class='card'>
@@ -131,19 +131,16 @@
         <div class="row">
             <div class="column">
                 <div class='card'>
-                    <font color="red">Reported Forum Questions</font>
+                    <font color="blue">Reported Forum Questions</font>
                     <hr><br>
                     <table border="1" width="100%" height="40px" >
-                        <tr>
-                            <th>ID</th>
-                            <th>Title</th>
-                            <th>Option</th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
+                        <thead class="table_top">
+                            <tr>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
                     </table><br>
                     <form>
                         <table border="0" width="100%" height="40px" >

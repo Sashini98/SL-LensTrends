@@ -14,11 +14,12 @@
         <link rel="stylesheet" href ="../../CSS/Admin/intermediate.css">
         <link rel="stylesheet" href="../../CSS/footer.css">
         <link rel="stylesheet" href="../../CSS/Admin/AdminHeader.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kadwa&display=swap" rel="stylesheet">
 
 
 
     </head>
-    <body style="background-image: url(../../Resources/Img/userback.jpg)">
+    <body>
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -54,21 +55,18 @@
         <div class="row">
             <div class='column'>
                 <div class='card'>
-                    <font color="red">Activate Users</font><hr><br>
+                    <font color="blue">Activate Users</font><hr>
                     <input type="text" placeholder="Type here">
                     <button>Search</button>
-                    <br><br>
+                    <br>
                     <table border="1" width="100%" height="40px" >
+                        <thead class="table_top" >
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Option</th>
                         </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th><input id="vie" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
+                    </thead>
                     </table><br>
                     <button class='btn2'>Add User</button>
                 </div>
@@ -79,19 +77,16 @@
         <div class="row">
             <div class="column">
                 <div class='card'>
-                    <font color="red">Reported Users</font>
-                    <hr><br>
+                    <font color="blue">Reported Users</font>
+                    <hr>
                     <table border="1" width="100%" height="40px" >
+                        <thead class="table_top" >
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
                             <th>Option</th>
                         </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th><input id="view" class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
+                        </thead>
                     </table><br>
                     <form>
                         <table border="0" width="100%" height="40px" >
@@ -108,20 +103,22 @@
                 </div>
 
                 <div class='card'>
-                    <font color="red">Deactivate Users</font><hr><br>
+                    <font color="blue">Deactivate Users</font><hr>
                     <input id="deactivateUser" type="text" placeholder="Type here">
                     <button onclick="viewResults()">Search</button>
                     <br><br>
 
                     <table id="reportedUserTable" border="1" width="100%" height="40px">
-                        <tr>
+                        <thead class="table_top" >
+                            <tr>
 
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Option</th>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Option</th>
 
-                        </tr>
+                            </tr>
+                        </thead>
                         <tbody id="reportedUserTableBody">
 
                         </tbody>
@@ -155,8 +152,8 @@
                             <td align="left">City</td>
                             <td><input type="text" name="cit" id="city" size="30" maxlength="25"></td>
                         </tr>
-                            <td align="left">Province</td>
-                            <td><input type="text" name="pro" id="province" size="30" maxlength="25"></td>
+                        <td align="left">Province</td>
+                        <td><input type="text" name="pro" id="province" size="30" maxlength="25"></td>
                         </tr>
                         <tr>
                             <td align="left">Gender</td>
@@ -176,19 +173,15 @@
             <div class='column'>
                 <div class='card'>
                     <img class='cardimg' src= "../../Resources/Img/online.png"><br>
-                    <font>Online Users</font>
+                    <font>ONLINE USERS</font>
                 </div>
                 <div class='card'>
                     <img class='cardimg' src= "../../Resources/Img/inactive.png"><br>
-                    <font>Inactive Users</font>
+                    <font>INACTIVE USERS</font>
                 </div>
                 <div class='card'>
                     <img class='cardimg' src= "../../Resources/Img/reported.png"><br>
-                    <font>Reported Users</font>
-                </div>
-                <div class='card'>
-                    <img class='cardimg' src= "../../Resources/Img/photograp.jpg"><br>
-                    <font>Top Photographer</font>
+                    <font>REPORTED USERS</font>
                 </div>
             </div>
         </div>
