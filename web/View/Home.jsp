@@ -6,10 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <%
-
-
+    boolean logged = (Boolean) request.getAttribute("logged");
 %>
 
 <html>
@@ -51,7 +49,17 @@
                 </div>
 
                 <div class="logout">
-                    <button href="../CheckLoginAccount?action=User" type="button"> Login </button>
+                    <%
+                        if (!logged) {
+                    %>
+                    <a href="../View/login.jsp?action=User&loc=ch" >Login</a> 
+                    <%
+                    } else {
+                    %>
+                    <a href="../LogOut?loc=ch" >Log Out</a> 
+                    <%
+                        }
+                    %>
                 </div>
             </div>
         </div>

@@ -8,8 +8,13 @@
     <script src="../../JS/User/AdvancedSearch.js" type="text/javascript"></script>
 </head>
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;display: flex;align-items: center">
-    <span style="font-size: 1.2em"><i class="material-icons">filter_alt</i><b>Filter</b></span>
-    <span style="margin-left: auto;margin-right: 0;font-size: 0.8em;margin-top: 4%"><b>Clear</b></span>
+    <span style="font-size: 1.2em">
+        <i class="material-icons">filter_alt</i>
+        <b>Filter</b>
+    </span>
+    <span style="margin-left: auto;margin-right: 0;font-size: 0.8em;margin-top: 4%">
+        <b>Clear</b>
+    </span>
 </div>
 <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
     <div style="display: flex;align-items: center">

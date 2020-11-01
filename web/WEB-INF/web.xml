@@ -44,6 +44,10 @@
         <servlet-name>DeactivateUser</servlet-name>
         <servlet-class>Controller.Admin.DeactivateUser</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>Controller.LogOut</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -88,12 +92,32 @@
         <servlet-name>DeactivateUser</servlet-name>
         <url-pattern>/DeactivateUser</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/LogOut</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
-            30
+            10
         </session-timeout>
     </session-config>
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+    <filter>
+        <filter-name>CheckLogin</filter-name>
+        <filter-class>Controller.Filters.CheckLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CheckLogin</filter-name>
+        <url-pattern>/View/login.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>ClientHomeFilter</filter-name>
+        <filter-class>Controller.Filters.ClientHomeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ClientHomeFilter</filter-name>
+        <url-pattern>/View/Home.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
