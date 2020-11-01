@@ -1,0 +1,101 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 1, 2020, 9:10:18 PM
+    Author     : ASUS
+*/
+
+
+.pageheader{
+    background-color: #222;
+    padding: 0% 0% 1.4% 0%;
+    position: fixed;   
+    width: 100%;
+    color: white;
+    margin-left: -0.5%;
+    margin-top: -0.5%;
+    top: 1%;
+    height: 6.5%;
+}
+
+.pageheader img{
+    margin-left: 2%;
+    margin-top: 0.5%;
+}
+
+.pageheader h1{
+    color: white;
+    margin-top: -3.5%;
+    margin-left: 7%;
+    font-family: 'Cinzel Decorative', cursive;
+    width: 20%;
+}
+
+
+.headerul {
+    flex: 1;
+    margin-left: 25%;
+    margin-top: -3.5%;
+    width: 40%;
+}
+
+.headerul ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 3%;
+}
+
+.headerul ul li:first-child {
+    border-left: 2px solid #999;
+    padding-left: 2%;
+}
+
+.headerul ul li a {
+    text-decoration: none;
+    color: #999;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: lighter;
+    font-size: 110%;
+}
+
+.headerul ul li a:hover {
+    color: white;
+}
+
+.notifyicn{
+    margin-top: -2.5%;
+    margin-left: 89%;
+    width: 2%;
+}
+.notifyicn a img{
+    filter: saturate(100%) grayscale(0) contrast(0);
+    height: 25px;
+    width: 25px;
+}
+
+.notifyicn a img:hover {
+    filter: saturate(100%) grayscale(0) contrast(0) sepia(100%);
+}
+
+.logout{
+    margin-top: -1.95%;
+    margin-left: 92%;
+}
+
+.logout a {
+    border: none;
+    /*padding-left: 20px;*/
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: lighter;
+    font-size: 110%;
+    color: #999;
+}
+
+.logout a:hover {
+    color: white;
+    cursor: pointer;
+}
