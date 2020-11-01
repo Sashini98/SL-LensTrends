@@ -82,7 +82,11 @@ public class Login extends HttpServlet {
                             c.setGenderId(client.getInt("Gender_Id"));
 
                             request.getSession().setAttribute("loggedClient", c);
-                            response.sendRedirect("View/Home.jsp");
+                            String page = (String) request.getSession().getAttribute("PageLocation");
+                            if (page.equals("ch")) {
+                                response.sendRedirect("View/Home.jsp");
+
+                            }
 
                         }
 
@@ -118,7 +122,7 @@ public class Login extends HttpServlet {
                             p.setPostalCode(photographer.getInt("PostalCode"));
 
                             request.getSession().setAttribute("loggedPhotographer", p);
-                            response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
+                            response.sendRedirect("View/Photographer/PhotographerUpdate.jsp");
                         }
 
                     } catch (Exception e) {
@@ -145,7 +149,11 @@ public class Login extends HttpServlet {
                         c.setGenderId(client.getInt("Gender_Id"));
 
                         request.getSession().setAttribute("loggedClient", c);
-                        response.sendRedirect("View/Home.jsp");
+                        String page = (String) request.getSession().getAttribute("PageLocation");
+                        if (page.equals("ch")) {
+                            response.sendRedirect("View/Home.jsp");
+
+                        }
 
                     }
 
@@ -181,7 +189,7 @@ public class Login extends HttpServlet {
                         p.setPostalCode(photographer.getInt("PostalCode"));
 
                         request.getSession().setAttribute("loggedPhotographer", p);
-                        response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
+                        response.sendRedirect("View/Photographer/PhotographerUpdate.jsp");
                     }
 
                 } catch (Exception e) {

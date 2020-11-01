@@ -18,6 +18,7 @@ and open the template in the editor.
 
 .pageheader{
     background-color: #222;
+    /*background-color: #000023;*/
     /*box-sizing: content-box;*/
     /*position: fixed;*/
     /*height: 15%;*/
@@ -95,7 +96,7 @@ and open the template in the editor.
     filter: saturate(100%) grayscale(0) contrast(0) sepia(100%);
 }
 
-.logout  button {
+.logout  a {
     /*list-style-type: none;*/
     background-color: #222;
     border: none;
@@ -108,7 +109,7 @@ and open the template in the editor.
 
 }
 
-.logout button:hover {
+.logout a:hover {
     color: white;
     cursor: pointer;
 }

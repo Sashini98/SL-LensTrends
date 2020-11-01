@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <button href="../login.jsp" type="button"> Login </button>
                 </div>
             </div>
         </div>
@@ -51,7 +51,7 @@
         <div class="outterdiv">
 
             <div class="d1">
-                <img src="../../Resources/Img/Logo/Picture1.png"/>
+<!--                <img src="../../Resources/Img/Logo/Picture1.png"/>-->
             </div>
             <div class="form">
 
@@ -71,23 +71,23 @@
                     </div>
 
                     <div class="formContent" style="align-items: space-between;">
-                        <input type="text" name="fname" required style="width: 49%; align-items: space-between;"/>
-                        <label for="fname" class="label_name" style="width: 45%; align-items: space-between; ">
-                            <span class="content_name" style="width: 45%; align-items: space-between;"> First name </span>
+                        <input type="text" name="fname" required/>
+                        <label for="fname" class="label_name">
+                            <span class="content_name" > First name </span>
                         </label>
-                        <input type="text" name="lname" required style="width: 50%; align-items: space-between;"/>
+<!--                        <input type="text" name="lname" required style="width: 50%; align-items: space-between;"/>
                         <label for="lname" class="label_name" style="width: 50%; left: 50%;">
                             <span class="content_name" style="width: 45%; align-items: space-between; "> Last Name</span>
-                        </label>
+                        </label>-->
                     </div>
 
-<!--
+
                     <div class="formContent">
                         <input type="text" name="lname" required/>
                         <label for="lname" class="label_name">
                             <span class="content_name"> Last Name</span>
                         </label>
-                    </div>-->
+                    </div>
 
 
                     <div class="formContent">
