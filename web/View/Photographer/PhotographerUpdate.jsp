@@ -1,7 +1,7 @@
- <%-- 
-    Document   : Photographer
-    Created on : Oct 8, 2020, 11:13:19 AM
-    Author     : ASUS
+<%-- 
+   Document   : Photographer
+   Created on : Oct 8, 2020, 11:13:19 AM
+   Author     : ASUS
 --%>
 
 <%@page import="Model.Photographer"%>
@@ -19,8 +19,6 @@
         <link rel="stylesheet" href="../../CSS/Photographer/PhotographerUpdate.css">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet">  
-
-
     </head>
 
     <body>
@@ -89,81 +87,82 @@
             </ul>	
 
         </div>
-        <div class="account" id="accsec">
-            <div class="heading" >
-                <p>Account                                                            
-                    <label> <a href="#" type="button">Client View </a></label>
-                </p>
+        <div>
+            <div class="account" id="accsec">
+                <div class="heading" >
+                    <p>Account                                                            
+                        <label> <a href="#" type="button">Client View </a></label>
+                    </p>
 
-            </div> <br>
-            <div class="edit">
-                <form>                                                        
-                    <label for="fname">First Name </label> 
-                    <br> 
-                    <div class="icon">
-                        <input type="text" id="fname" name="fname" placeholder="<%= p.getFname()%>" disabled> 
-                        <img id ="pencil1" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic1')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic2')" style="visibility:hidden;">
-                    </div>
-                    <br> 
-                    <label for="lname">Last Name </label>  
-                    <br> 
-                    <div class="icon">
-                        <input type="text" id="lname" name="lname" placeholder="<%= p.getLname()%>" disabled> 
-                        <img id="pencil2" onclick="pencileditenable('lname')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic3" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic3')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic4" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic4')" style="visibility:hidden;">
-                    </div>                   
-                    <br> 
-                    <label for="email">Email </label>  
-                    <br> 
-                    <div class="icon"> 
-                        <input type="text" id="email" name="email" placeholder="<%= p.getEmail()%>" disabled> 
-                        <img id="pencil3" onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic5" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic5')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic6" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic6')" style="visibility:hidden;">
-                    </div>
-                    <br> 
-                    <label for="mnum">Mobile Number </label>  
-                    <br> 
-                    <div class="icon"> 
-                        <input type="text" id="mnum" name="mnum" placeholder="<%= p.getMobile()%>" disabled> 
-                        <img id="pencil4" onclick="pencileditenable('mnum')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic7" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic7')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic8" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic8')" style="visibility:hidden;">
-                    </div>
-                    <br> 
-                    <label for="website">Website </label>  
-                    <br> 
-                    <div class="icon"> 
-                        <input type="text" id="web" name="web" placeholder="<%= p.getWebsite()%>" disabled> 
-                        <img id="pencil5" onclick="pencileditenable('web')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic9" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic9')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic10" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic10')" style="visibility:hidden;">
-                    </div>
-                    <br> 
-                    <label for="Bio">Bio</label>
-                    <br> 
-                    <div class="icon"> 
-                        <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="<%= p.getBio()%>" disabled></textarea>
-                        <img id="pencil6" onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic11" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic11')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic12" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic12')" style="visibility:hidden;">
-                    </div>
-                    <br> 
-                    <label for="interest">Field of Interest</label>
-                    <br> 
-                    <div class="icon">
-                        <textarea id="interest" name="interest" cols="57" rows="3" placeholder="<%= p.getFielsOfdInterest()%>" disabled></textarea>
-                        <img id="pencil7" onclick="pencileditenable('interest')" src="../../Resources/Img/edit.png">
-                        <img class="icon1" id="ic13" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic13')" style="visibility:hidden;" >
-                        <img class="icon2" id="ic14" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic14')" style="visibility:hidden;">
-                    </div>
-                </form>
-            </div>
-        </div> 
-
+                </div> <br>
+                <div class="edit">
+                    <form>                                                        
+                        <label for="fname">First Name </label> 
+                        <br> 
+                        <div class="icon">
+                            <input type="text" id="fname" name="fname" placeholder="<%= p.getFname()%>" disabled> 
+                            <img id ="pencil1" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic1')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic2')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+                        <label for="lname">Last Name </label>  
+                        <br> 
+                        <div class="icon">
+                            <input type="text" id="lname" name="lname" placeholder="<%= p.getLname()%>" disabled> 
+                            <img id="pencil2" onclick="pencileditenable('lname')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic3" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic3')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic4" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic4')" style="visibility:hidden;">
+                        </div>                   
+                        <br> 
+                        <label for="email">Email </label>  
+                        <br> 
+                        <div class="icon"> 
+                            <input type="text" id="email" name="email" placeholder="<%= p.getEmail()%>" disabled> 
+                            <img id="pencil3" onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic5" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic5')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic6" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic6')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+                        <label for="mnum">Mobile Number </label>  
+                        <br> 
+                        <div class="icon"> 
+                            <input type="text" id="mnum" name="mnum" placeholder="<%= p.getMobile()%>" disabled> 
+                            <img id="pencil4" onclick="pencileditenable('mnum')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic7" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic7')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic8" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic8')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+                        <label for="website">Website </label>  
+                        <br> 
+                        <div class="icon"> 
+                            <input type="text" id="web" name="web" placeholder="<%= p.getWebsite()%>" disabled> 
+                            <img id="pencil5" onclick="pencileditenable('web')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic9" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic9')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic10" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic10')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+                        <label for="Bio">Bio</label>
+                        <br> 
+                        <div class="icon"> 
+                            <textarea id="biotext" name="biotext" cols="57" rows="5" placeholder="<%= p.getBio()%>" disabled></textarea>
+                            <img id="pencil6" onclick="pencileditenable('biotext')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic11" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic11')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic12" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic12')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+                        <label for="interest">Field of Interest</label>
+                        <br> 
+                        <div class="icon">
+                            <textarea id="interest" name="interest" cols="57" rows="3" placeholder="<%= p.getFielsOfdInterest()%>" disabled></textarea>
+                            <img id="pencil7" onclick="pencileditenable('interest')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic13" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic13')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic14" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic14')" style="visibility:hidden;">
+                        </div>
+                    </form>
+                </div>
+            </div> 
+        </div>
         <div class="address" id="addsec">
             <div class="heading">
                 <p>Address</p>
