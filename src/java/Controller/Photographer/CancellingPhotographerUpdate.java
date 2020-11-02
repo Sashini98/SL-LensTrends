@@ -28,21 +28,25 @@ public class CancellingPhotographerUpdate extends HttpServlet {
 
         Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
         String photographerId = p.getPhotographerId();
-        
+        System.out.println(canceloption);
         if (canceloption.equals("fname")) {
             try {
                 ResultSet searchresult = DB.search("select Fname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userfname = searchresult.getString("Fname");
+                System.out.println(userfname);
                 response.getWriter().write(userfname);
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         } else if (canceloption.equals("lname")) {
+                System.out.println("awaaaa11111");
             try {
+                System.out.println("awaaaa");
                 ResultSet searchresult = DB.search("select Lname from Photographer where Photographer_Id ='" + photographerId + "'");
                 searchresult.next();
                 String userlname = searchresult.getString("Lname");
+                System.out.println(userlname);
                 response.getWriter().write(userlname);
             } catch (SQLException ex) {
                 ex.printStackTrace();
