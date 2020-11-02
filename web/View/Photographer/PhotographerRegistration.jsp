@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
 
     </head>
-    <body style="background-image: url(../../Resources/Img/pregister.jpg); background-size: 100% ; ">
+    <body>
 
 
         <div class="fixedheader">  
@@ -50,7 +50,7 @@
         </div>
 
 
-        <br><br><br><br><br><br><br><br> <font color="red"><h1>Choose Your Plan</h1></font><br><hr>
+        <br><br><br><br><br> <font color="blue"><h1>Choose Your Plan</h1></font><hr>
         <div class="columns">
             <ul class="price">
                 <li class="header1">Free</li>
@@ -113,7 +113,7 @@
 
                     <div class="caption">
                         <p>
-                            If you already have an account.<a href="../login.jsp">Sign In</a>
+                            If you already have an account. <a href="../login.jsp">Sign In</a>
                         </p>
                     </div>
 
