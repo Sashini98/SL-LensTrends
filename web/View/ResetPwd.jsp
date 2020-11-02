@@ -10,64 +10,47 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Reset Password</title>
-        <link rel="stylesheet" href ="../CSS/resetPwd.css">
-        <link type="text/css" rel="stylesheet" href="../CSS/header.css" />
+        <link rel="stylesheet" href ="../CSS/log.css">
+
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
-        
-        </head>
-    
+
+    </head>
+
     <body style="background-image: url(../Resources/Img/reset.jpg); background-size: 100%;">
-        
-        <div class="fixedheader">  
-            <div class="pageheader">
-                <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
-                <h1>Sl Lens Trends </h1>
 
-                <div class="headerul">
-                    <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
-                        <li><a href="Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="#" type="button"> Notifications </a></li>
+        <div class="container"> 
 
-                    </ul>
+            <div class="logo">
+                <img src="../Resources/Img/6.png">
+            </div>
+            <h1>Forgot Your Password?</h1>
+
+            <div class="caption">
+                <p>
+                    Enter your email address below and we will send you a link to reset your password.<br><br>
+                </p>
+            </div>
+
+            <div class="passinfo">
+                <form action="../Login" method="POST">
+                    <fieldset class="cpass">
+                        <legend> Email Address </legend>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                    </fieldset>
+                </form><br><br><br>
+                
+                <div class="change">
+                    <input type="submit" id="reset" value="Send Reset Link">
                 </div>
 
-                <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../Resources/Img/notification.png"> </a>
+                <p>
+                    <a href="login.jsp">Back to login</a><br><br>
+                </p>
 
-                </div>
-
-                <div class="logout">
-                    <a href="login.jsp" type="button"> Login </a>
-                </div>
             </div>
         </div>
-
-        
-        <div class="box">
-             <form>
-                <table width="400px" height="400px" class="tb" border="0">
-                    <tr>
-                        <th height="70px" style="font-size: 28px;"> Forgot your password? </th>
-                    </tr>
-                    <tr>
-                        <th height="70px" style="font-size: 16px;"> Enter your email address below and we will send you a link to reset your password.  </th>
-                    </tr>
-                    <tr>
-                        <td height="60px" ><center><input type="text" name="name" size="45px" placeholder="Email Address"></center></td>
-                    </tr>
-                    <tr>
-                        <td><center><input type="reset" value="Send reset link" ></center> </td>
-                    </tr>
-                    <tr>
-                        <td><center><a href="login.jsp">Back to login</a></center></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-    </body>
+    </div>
+</body>
 </html>

@@ -75,31 +75,15 @@
                     <font color="blue">Messages</font>
                     <hr>
                     <table border="1" width="100%" height="40px" >
-                        <tr>
-                            <th>Subject</th>
-                            <th>From</th>
-                            <th>Date</th>
-
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th><input class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th><input class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th><input class="confirmBTN" type='submit' value="View" name='view' style="background-color:blueviolet"></th>
-                        </tr>
-                    </table>
+                        <thead class="table_top">
+                            <tr>
+                                <th>Subject</th>
+                                <th>From</th>
+                                <th>Date</th>
+                                <th>Option</th>
+                            </tr>
+                        </thead>
+                    </table><br>
                 </div>
                 <div class="card">
                     <form>

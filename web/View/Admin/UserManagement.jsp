@@ -58,12 +58,13 @@
                     <font color="blue">Activate Users</font><hr>
                     <input type="text" placeholder="Type here">
                     <button>Search</button>
-                    <br>
+                    <br><br>
                     <table border="1" width="100%" height="40px" >
                         <thead class="table_top" >
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
+                            <th>Type</th>
                             <th>Option</th>
                         </tr>
                     </thead>
