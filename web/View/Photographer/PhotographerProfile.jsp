@@ -123,17 +123,6 @@
             </div>
         </div>
 
-           <div class="pagefooter">
-            <div class="contact">
-                <p><a href="../Home.jsp" type="button">Sl Lens Trends</a></p>
-            </div> 
-            <div class="footnote">
-                <ul>
-                    <li> <a href="" type="button">Copyright © 2020 Adobe Systems Incorporated. All rights reserved.</a> </li>
-                    <li> <a href="#" type="button"> Terms and Condition </a> </li>
-                    <li> <a href="#" type="button"> Contact Us </a> </li>
-                </ul>
-            </div>        
-        </div> 
+        
     </body>
 </html>
