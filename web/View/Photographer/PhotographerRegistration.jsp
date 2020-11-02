@@ -13,7 +13,7 @@
         <link rel="stylesheet" href ="../../CSS/Photographer/PhotographerRegistration.css">
         <link rel="stylesheet" href ="../../CSS/Photographer/changepassword.css">
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
 
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <a href="../../login.jsp" type="button"> Login </a>
                 </div>
             </div>
         </div>
@@ -137,10 +137,8 @@
                             <div class="change">
                                 <a href="#" type="button">Submit</a>
                             </div>
-                        </form>
+                        </form><br><br><br>
                         <font size="2px">The SL-Lens Trends may keep me informed with personalized email about products and services.See our Privacy Policy for more details or to opt-out at any time.</font>
-                        
-
                     </div>
                 </div>
             </div>
