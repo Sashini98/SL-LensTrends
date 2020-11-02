@@ -101,7 +101,8 @@
         </div>
 
         <div class="welcome-note">
-            <p>Athavan</p>
+            <img src="../../Resources/Img/bg.svg">
+            <p>Welcome to my <br> &nbsp; &nbsp; &nbsp; &nbsp; Collections !</p>
         </div>
 
     </body>
