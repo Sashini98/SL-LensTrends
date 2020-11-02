@@ -48,15 +48,20 @@
 
 
         <div class="profilebox">
-            <div class="user-image">
-                <img src="../../Resources/Img/athavan.jpg">
-            </div>
-            <div class="username">
-                <p>Mr.ATHAVAN T </p>
-            </div>
-            <div class="location">
-                <p>Jaffna,Srilanka</p>
-                <p>www.Ikongraphy.lk</p>
+            <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                <div class="user-image">
+                    <img src="../../Resources/Img/athavan.jpg">
+                </div>
+
+                <div class="username">
+                    <p>Mr.ATHAVAN T </p>
+                </div>
+                <div class="location">
+                    <p>Jaffna,Srilanka</p>
+                    <p>www.Ikongraphy.lk</p>
+                </div>
+
             </div>
             <div class="bio">
                 <h3>ABOUT ME</h3>
@@ -87,7 +92,7 @@
             <div class="editprofile">
                 <a type="button" href="../../View/Photographer/PhotographerUpdate.jsp"> Edit Your Profile </a>
             </div>
-            
+
             <div class="member">
                 <p>MEMBER SINCE: OCTOBER 31,2020</p>
             </div>
