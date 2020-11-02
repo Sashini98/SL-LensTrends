@@ -48,6 +48,7 @@
             </div>
 
         </div>
+
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -99,5 +100,29 @@
             </div>
         </div>
 
+        <div class="welcome-note">
+            <img src="../../Resources/Img/bg.svg">
+            <p>Welcome to my <br> &nbsp; &nbsp; &nbsp; &nbsp; Collections !</p>
+        </div>
+        
+        <div class="image-content">
+            <div class="image">
+                <img src="../../Resources/Img/profile/p1.jpg">
+                <img src="../../Resources/Img/profile/p2.jpg">
+                <img src="../../Resources/Img/profile/p3.jpg">
+                 <img src="../../Resources/Img/profile/p4.jpg">
+                 <img src="../../Resources/Img/profile/p5.jpg">
+                 <img src="../../Resources/Img/profile/p6.jpg">
+                 <img src="../../Resources/Img/profile/l1.jpg">
+                 <img src="../../Resources/Img/profile/l2.jpg">
+                 <img src="../../Resources/Img/profile/l3.jpg">
+                 <img src="../../Resources/Img/profile/l4.jpg">
+                 <img src="../../Resources/Img/profile/l5.jpg">
+                 <img src="../../Resources/Img/profile/l6.jpg">
+                 
+            </div>
+        </div>
+
+        
     </body>
 </html>

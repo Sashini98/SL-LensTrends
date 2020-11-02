@@ -9,8 +9,8 @@ and open the template in the editor.
 */
 body{
 
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0;
+    padding: 0;
 
 }
 .fixedheader{
@@ -20,6 +20,8 @@ body{
     display: flex;
     flex-direction: column;
     z-index: 30;
+    top: 0%;
+
 }
 
 .pageheader{

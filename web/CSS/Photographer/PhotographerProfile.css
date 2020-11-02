@@ -14,10 +14,9 @@ and open the template in the editor.
     margin-left: 1%;
     width: 20%;
     background-color: #fff;
-    height: 50%;
     border-radius: 5px;
-    margin-top: 6.5%;
-    padding: 0% 3% 17.5%;
+    margin-top: 6%;
+    padding: 0% 3% 0%;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     position: fixed;
     align-content: center;
@@ -31,7 +30,7 @@ and open the template in the editor.
     margin-top: -2%;
     padding-bottom: 3%;
     padding-top: 3%;
-    
+
 }
 
 .user-image img {
@@ -63,7 +62,7 @@ and open the template in the editor.
 .bio {
     justify-content: center;
     margin-top: -1%;
-    
+
 }
 
 .bio h3 {
@@ -131,6 +130,48 @@ and open the template in the editor.
     font-size: 70%;
 }
 
-/*.bg-color {
-    background-color: #00478a;
-}*/
+
+/*main content*/
+.welcome-note{
+    float: left;
+    margin-top: 3%; 
+    width: 50%;
+    margin-left: 28.5%;
+
+}
+.welcome-note p{
+    font-family: 'Oxygen', sans-serif;
+    font-weight: 700;
+    font-size: 400%;
+    margin-top: -35%;
+    margin-left: -0.5%;
+
+}
+
+.welcome-note img{
+    margin-top: 1%;
+    margin-left: -5%;
+    height: 90%;
+    width: 90%;
+}
+
+.image-content {
+    float: left;
+    margin-top: 5%; 
+    width: 70%;
+    margin-left: 28.5%;
+    /*    background-color: red;*/
+    display: flex;
+}
+
+.image-content .image{
+       margin-left:5%; 
+}
+
+.image-content .image img {
+    height: 293px;
+    width: 293px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
