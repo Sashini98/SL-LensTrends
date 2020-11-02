@@ -28,11 +28,11 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
+                       <li><a href="../Events/EventHome.jsp" type="button"> Events </a></li>
                         <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
                         <li><a href="../User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="#" type="button"> Notifications </a></li>
+                        <li><a href="forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
 
                     </ul>
                 </div>
