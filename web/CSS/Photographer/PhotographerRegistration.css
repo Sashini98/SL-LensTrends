@@ -12,6 +12,18 @@ and open the template in the editor.
   box-sizing: border-box;
 }
 
+.cont {
+    margin: 4% 27% 0 33%; 
+    border-radius: 17px;
+    background-color: #fff;
+    height: 820px;
+    width: 500px;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .columns {
   float: left;
   width: 25%;
@@ -89,12 +101,13 @@ and open the template in the editor.
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background-color: #f4f4f4;
   margin:10% auto; 
   padding: 20px;
   border: 1px solid #888;
   width: 80%; 
-  height: 150%
+  height: 150%;
+ 
 }
 
 .close {

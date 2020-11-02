@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../../login.jsp" type="button"> Login </a>
+                    <a href="../login.jsp" type="button"> Login </a>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <div class="container"> 
+                <div class="cont"> 
 
                     <div class="logo">
                         <img src="../../Resources/Img/6.png">
@@ -113,7 +113,7 @@
 
                     <div class="caption">
                         <p>
-                            If you already have an account.<a href="login.jsp">Sign In</a>
+                            If you already have an account.<a href="../login.jsp">Sign In</a>
                         </p>
                     </div>
 
