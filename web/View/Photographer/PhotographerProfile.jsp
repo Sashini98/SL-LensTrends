@@ -97,6 +97,10 @@
             <div class="member">
                 <p>MEMBER SINCE: OCTOBER 31,2020</p>
             </div>
+
+            <div class="welcome-note">
+                <p>Welcome to my Collections !</p>
+            </div>
         </div>
 
     </body>

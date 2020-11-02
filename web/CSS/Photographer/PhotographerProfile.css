@@ -131,6 +131,14 @@ and open the template in the editor.
     font-size: 70%;
 }
 
-/*.bg-color {
-    background-color: #00478a;
-}*/
+
+/*main content*/
+
+.welcome-note {
+    margin-left: 40%;
+    margin-top: 10%;
+}
+.welcome-note {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 10%;
+}
