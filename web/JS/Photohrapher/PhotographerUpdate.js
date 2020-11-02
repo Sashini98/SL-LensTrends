@@ -95,7 +95,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='lname'");
+        request.send("canceledit=lname");
 
 
 
@@ -118,7 +118,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='email'");
+        request.send("canceledit=email");
 
 
 
@@ -141,7 +141,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='mnum'");
+        request.send("canceledit=mnum");
 
 
 
@@ -164,7 +164,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='web'");
+        request.send("canceledit=web");
 
 
 
@@ -187,7 +187,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='bio'");
+        request.send("canceledit=bio");
 
 
 
@@ -210,7 +210,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='interest'");
+        request.send("canceledit=interest");
 
 
 
@@ -233,7 +233,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='address'");
+        request.send("canceledit=address");
 
 
 
@@ -256,7 +256,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='city'");
+        request.send("canceledit=city");
 
 
 
@@ -279,7 +279,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='province'");
+        request.send("canceledit=province");
 
 
 
@@ -302,7 +302,7 @@ function cancelupdate(cancel) {
         }
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("canceledit='postal'");
+        request.send("canceledit=postal");
 
 
     }
