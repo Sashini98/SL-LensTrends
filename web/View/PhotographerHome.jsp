@@ -6,6 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    boolean logged = (Boolean) request.getAttribute("logged");
+%>
+
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,16 +19,58 @@
     </head>
     <body>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="../CSS/Home.css"/>
+        <link type="text/css" rel="stylesheet" href="../CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9dd75719fe.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
+
         <title>SL-Lesns Trends</title>
     </head>
 <body>
+    
+    <div class="fixedheader" style="z-index: 20;">  
+            <div class="pageheader">
+                <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul" style="margin-left: 30px;">
+                    <ul>
+
+                        <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                        <li><a href="User/ClientProfileUpdate" type="button"> Profile </a></li>
+                        <li><a href="Fourm/forum home.jsp" type="button"> Forum </a></li>
+                        <li><a href="Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
+
+                </div>
+
+                <div class="logout">
+                    <%
+                        if (!logged) {
+                    %>
+                    <a href="../View/login.jsp?action=User&loc=ch" >Login</a> 
+                    <%
+                    } else {
+                    %>
+                    <a href="../LogOut?loc=ch" >Log Out</a> 
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+        </div>
+    
+    
     <div class="HeaderPart" id="HeaderPart">
         <div class="Welcome">
             <h1 class="WelcomeText1">Welcome To SL-Lens Trends!</h1>
