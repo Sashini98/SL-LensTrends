@@ -5,28 +5,32 @@
  */
 package Model;
 
-
-
 /**
  *
  * @author Madusha
  */
 public class Client {
-    
-    String clientId;
-    String email;
-    String password;
-    String fname;
-    String lname;
-    String address_no;
-    String city;
-    String province;
-    int genderId;
+
+    public static final int MALE = 1;
+    public static final int FEMALE = 0;
+    public static final int ACTIVE = 1;
+    public static final int DEACTIVE = 0;
+
+    private String clientId;
+    private String email;
+    private String password;
+    private String fname;
+    private String lname;
+    private String address_no;
+    private String city;
+    private String province;
+    private int genderId;
+    private int activeStatus;
 
     public Client() {
     }
 
-    public Client(String clientId, String email, String password, String fname, String lname, String address_no, String city, String province, int genderId) {
+    public Client(String clientId, String email, String password, String fname, String lname, String address_no, String city, String province, int genderId, int activeStatus) {
         this.clientId = clientId;
         this.email = email;
         this.password = password;
@@ -36,6 +40,7 @@ public class Client {
         this.city = city;
         this.province = province;
         this.genderId = genderId;
+        this.activeStatus = activeStatus;
     }
 
     public String getClientId() {
@@ -109,7 +114,13 @@ public class Client {
     public void setGenderId(int genderId) {
         this.genderId = genderId;
     }
-    
-    
-}
 
+    public int getActiveStatus() {
+        return activeStatus;
+    }
+
+    public void setActiveStatus(int activeStatus) {
+        this.activeStatus = activeStatus;
+    }
+
+}
