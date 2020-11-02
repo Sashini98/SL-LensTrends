@@ -154,3 +154,24 @@ and open the template in the editor.
     height: 90%;
     width: 90%;
 }
+
+.image-content {
+    float: left;
+    margin-top: 5%; 
+    width: 70%;
+    margin-left: 28.5%;
+    /*    background-color: red;*/
+    display: flex;
+}
+
+.image-content .image{
+       margin-left:5%; 
+}
+
+.image-content .image img {
+    height: 293px;
+    width: 293px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
