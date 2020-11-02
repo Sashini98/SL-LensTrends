@@ -48,6 +48,7 @@
             </div>
 
         </div>
+
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -100,8 +101,8 @@
         </div>
 
         <div class="welcome-note">
-            <p>athavan</p>
+            <p>Athavan</p>
         </div>
-        
+
     </body>
 </html>
