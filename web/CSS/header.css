@@ -7,7 +7,12 @@ and open the template in the editor.
     Created on : Oct 12, 2020, 6:09:16 PM
     Author     : Sashini Shihara
 */
+body{
 
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+}
 .fixedheader{
     /*margin-bottom: 10%;*/
     width: 100%;

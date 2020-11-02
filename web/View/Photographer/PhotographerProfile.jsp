@@ -10,7 +10,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
         <link type="text/css" rel="stylesheet" href="../../CSS/Photographer/PhotographerProfile.css">
-        <link type="text/css" rel="stylesheet" href="../../CSS/Mainheader.css">
+        <!--<link type="text/css" rel="stylesheet" href="../../CSS/Mainheader.css">-->
+        <link type="text/css" rel="stylesheet" href="../../CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
@@ -19,34 +20,34 @@
         <title>Profile</title>
     </head>
     <body style="background-color: #f9f9f9;">
+        <div class="fixedheader">  
+            <div class="pageheader">
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
 
-        <div class="pageheader">
-            <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-            <h1>Sl Lens Trends </h1>
+                <div class="headerul">
+                    <ul>
 
-            <div class="headerul">
-                <ul>
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="#" type="button"> Album </a></li>
+                        <li><a href="#" type="button"> Profile </a></li>
+                        <li><a href="#" type="button"> Settings </a></li>
 
-                    <li><a href="#" type="button"> Events </a></li>
-                    <li><a href="#" type="button"> Album </a></li>
-                    <li><a href="#" type="button"> Profile </a></li>
-                    <li><a href="#" type="button"> Settings </a></li>
+                    </ul>
+                </div>
 
-                </ul>
-            </div>
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
-            <div class="notifyicn">
-                <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                </div>
 
-            </div>
+                <div class="logout">
+                    <a href="#" type="button"> Logout </a>
+                </div>
 
-            <div class="logout">
-                <a href="#" type="button"> Logout </a>
             </div>
 
         </div>
-
-
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
