@@ -16,7 +16,7 @@ and open the template in the editor.
     background-color: #fff;
     height: 50%;
     border-radius: 5px;
-    margin-top: 6.5%;
+    margin-top: 5.2%;
     padding: 0% 3% 17.5%;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -31,7 +31,7 @@ and open the template in the editor.
     margin-top: -2%;
     padding-bottom: 3%;
     padding-top: 3%;
-    
+
 }
 
 .user-image img {
@@ -63,7 +63,7 @@ and open the template in the editor.
 .bio {
     justify-content: center;
     margin-top: -1%;
-    
+
 }
 
 .bio h3 {
@@ -133,12 +133,12 @@ and open the template in the editor.
 
 
 /*main content*/
-
-.welcome-note {
-    margin-left: 40%;
+.welcome-note{
+    margin-left: 50%;
     margin-top: 10%;
 }
-.welcome-note {
+.welcome-note p{
     font-family: 'Oxygen', sans-serif;
-    font-size: 10%;
+    font-size: 100%;
+    
 }
