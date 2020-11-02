@@ -73,6 +73,7 @@ and open the template in the editor.
 }
 
 .bio p {
+    margin-top: -1%;
     font-size: 100%;    
     color: #696969;
     font-family: acumin-pro, sans-serif;
@@ -110,7 +111,7 @@ and open the template in the editor.
 }
 .editprofile {
     margin-left: 17%;
-    margin-top:0%;
+    margin-top:0.5%;
     padding-bottom: 5%;
 }
 
