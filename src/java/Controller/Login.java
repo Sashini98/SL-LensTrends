@@ -86,6 +86,8 @@ public class Login extends HttpServlet {
                             if (page.equals("ch")) {
                                 response.sendRedirect("View/Home.jsp");
 
+                            } else if (page.equals("cu")) {
+                                response.sendRedirect("View/User/ClientProfileUpdate.jsp");
                             }
 
                         }
@@ -153,6 +155,8 @@ public class Login extends HttpServlet {
                         if (page.equals("ch")) {
                             response.sendRedirect("View/Home.jsp");
 
+                        } else if (page.equals("cu")) {
+                            response.sendRedirect("View/User/ClientProfileUpdate.jsp");
                         }
 
                     }

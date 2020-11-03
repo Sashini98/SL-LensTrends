@@ -5,6 +5,7 @@
  */
 package Controller.Filters;
 
+import Model.Admin;
 import Model.Client;
 import Model.Photographer;
 import java.io.IOException;
@@ -21,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kesh
  */
-public class CheckLogin implements Filter {
+public class FilterLoggedClient implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -30,41 +31,25 @@ public class CheckLogin implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
-
         Client c = (Client) req.getSession().getAttribute("loggedClient");
         Photographer p = (Photographer) req.getSession().getAttribute("loggedPhotographer");
-
+        Admin a = (Admin) req.getSession().getAttribute("loggedAdmin");
+        
         if (c != null) {
-            resp.sendRedirect("/GroupProject/View/Home.jsp");
+            chain.doFilter(request, response);
         } else if (p != null) {
+            // 404
             resp.sendRedirect("/GroupProject/View/PhotographerHome.jsp");
-        } else {
-
-            String action = request.getParameter("action");
-            String page = request.getParameter("loc");
-            
-            try {
-                if (action.equals("User")) {
-                    request.setAttribute("User", "Client");
-                    req.getSession().setAttribute("PageLocation", page);
-                     chain.doFilter(request, response);
-                } else {
-                    request.setAttribute("User", "Photographer");
-                    req.getSession().setAttribute("PageLocation", page);
-                     chain.doFilter(request, response);
-                }
-
-            } catch (Exception e) {
-                // something went wrong page
-                e.printStackTrace();
-                resp.sendRedirect("/GroupProject/View/Home.jsp");
-            }
-
-           
+        }else if (a != null) {
+            //404
+         
+        }else{
+             resp.sendRedirect("/GroupProject/View/login.jsp?action=User&loc=cu");
+        
         }
+
     }
 
     @Override

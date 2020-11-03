@@ -48,6 +48,14 @@
         <servlet-name>LogOut</servlet-name>
         <servlet-class>Controller.LogOut</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CancellingClientUpdate</servlet-name>
+        <servlet-class>Controller.Clent.CancellingClientUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClientDetailsUpdate</servlet-name>
+        <servlet-class>Controller.Clent.ClientDetailsUpdate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -96,6 +104,14 @@
         <servlet-name>LogOut</servlet-name>
         <url-pattern>/LogOut</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancellingClientUpdate</servlet-name>
+        <url-pattern>/CancellingClientUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientDetailsUpdate</servlet-name>
+        <url-pattern>/ClientDetailsUpdate</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10
@@ -111,6 +127,14 @@
     <filter-mapping>
         <filter-name>CheckLogin</filter-name>
         <url-pattern>/View/login.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedClient</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedClient</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedClient</filter-name>
+        <url-pattern>/View/User/ClientProfileUpdate.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>ClientHomeFilter</filter-name>

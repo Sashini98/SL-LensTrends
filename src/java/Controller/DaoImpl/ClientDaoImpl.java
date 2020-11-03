@@ -15,25 +15,24 @@ import java.sql.SQLException;
  *
  * @author kesh
  */
-public class ClientDaoImpl implements ClientDao{
+public class ClientDaoImpl implements ClientDao {
 
     @Override
-    public void addClient(Client client) throws SQLException{
+    public void addClient(Client client) throws SQLException {
         DB.iud("INSERT INTO client (Client_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Gender_id, ActiveStatus) "
-                + "VALUES ('"+ client.getClientId() +"', '"+ client.getEmail() +"', '"+ client.getPassword() +"', '"+ client.getFname() +"',"
-                        + " '"+ client.getLname() +"', '"+ client.getAddress_no() +"', '"+ client.getCity() +"', '"+ client.getProvince()  +"',"
-                                + " '"+ client.getGenderId() +"', '"+ client.getActiveStatus() +"' ) ");
-    }
-
-
-    @Override
-    public void deleteClient(String clientId) throws SQLException{
-      DB.iud("DELETE FROM client where Client_id = '"+ clientId +"'");
+                + "VALUES ('" + client.getClientId() + "', '" + client.getEmail() + "', '" + client.getPassword() + "', '" + client.getFname() + "',"
+                + " '" + client.getLname() + "', '" + client.getAddress_no() + "', '" + client.getCity() + "', '" + client.getProvince() + "',"
+                + " '" + client.getGenderId() + "', '" + client.getActiveStatus() + "' ) ");
     }
 
     @Override
-    public Client getClient(String clientId) throws SQLException{
-        ResultSet client = DB.search("SELECT * FROM client WHERE Client_id = '"+ clientId +"'");
+    public void deleteClient(String clientId) throws SQLException {
+        DB.iud("DELETE FROM client where Client_id = '" + clientId + "'");
+    }
+
+    @Override
+    public Client getClient(String clientId) throws SQLException {
+        ResultSet client = DB.search("SELECT * FROM client WHERE Client_id = '" + clientId + "'");
         if (client.next()) {
             Client c = new Client();
             c.setClientId(client.getString("Client_Id"));
@@ -46,9 +45,9 @@ public class ClientDaoImpl implements ClientDao{
             c.setProvince(client.getString("Province"));
             c.setGenderId(client.getInt("Gender_Id"));
             c.setActiveStatus(client.getInt("ActiveStatus"));
-            
+
             return c;
-            
+
         } else {
             return null;
         }
@@ -56,7 +55,7 @@ public class ClientDaoImpl implements ClientDao{
 
     @Override
     public void updateClientEmail(String email, String cilentId) throws SQLException {
-       DB.iud("UPDATE client SET Email='" + email + "' WHERE Client_Id = '" + cilentId + "'");
+        DB.iud("UPDATE client SET Email='" + email + "' WHERE Client_Id = '" + cilentId + "'");
     }
 
     @Override
@@ -98,5 +97,6 @@ public class ClientDaoImpl implements ClientDao{
     public void updateClientActiveStatus(int status, String cilentId) throws SQLException {
         DB.iud("UPDATE client SET ActiveStatus='" + status + "' WHERE Client_Id = '" + cilentId + "'");
     }
-    
+
+
 }

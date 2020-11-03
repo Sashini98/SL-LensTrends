@@ -74,16 +74,33 @@
                 <div class="edit">
                     <form>                                                        
                         <label for="fname">First Name </label> 
-                        <br> <input type="text" id="fname" name="fname" placeholder="Theivendram"> 
-                        <br> <label for="lname">Last Name </label>  
-                        <br> <input type="text" id="lname" name="lname" placeholder="Athavan"> 
-                        <br> <label for="uname">User Name </label>  
-                        <br> <input type="text" id="uname" name="uname" placeholder="Aaketk17"> 
-                        <br> <label for="email">Email </label>  
-                        <br> <input type="text" id="email" name="email" placeholder="thavanthya@gmail.com"> 
-                        <br> <label for="email">Mobile Number </label>  
-                        <br> <input type="text" id="mnum" name="mnum" placeholder="+94 77 946 2554"> 
-                        <br>
+                        <br> 
+                        <div class="icon">
+                            <input type="text" id="fname" name="fname" placeholder="<%= c.getFname()%>" disabled> 
+                            <img id ="pencil1" onclick="pencileditenable('fname')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic1" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic1')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic2" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic2')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+                        <label for="lname">Last Name </label>  
+                        <br> 
+                        <div class="icon">
+                            <input type="text" id="lname" name="lname" placeholder="<%= c.getLname()%>" disabled> 
+                            <img id="pencil2" onclick="pencileditenable('lname')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic3" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic3')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic4" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic4')" style="visibility:hidden;">
+                        </div>                   
+                        <br> 
+                        <label for="email">Email </label>  
+                        <br> 
+                        <div class="icon"> 
+                            <input type="text" id="email" name="email" placeholder="<%= c.getEmail()%>" disabled> 
+                            <img id="pencil3" onclick="pencileditenable('email')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic5" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic5')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic6" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic6')" style="visibility:hidden;">
+                        </div>
+                        <br> 
+
                     </form>
                 </div>
             </div>
@@ -94,15 +111,34 @@
                 </div> <br>
                 <div class="edit">
                     <form>
-                        <label for="fname" >Address </label> 
-                        <br><input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil."> 
-                        <br><label for="fname">City </label> 
-                        <br><input type="text" id="city" name="city" placeholder="Jaffna"> 
-                        <br><label for="fname">Province </label>  
-                        <br><input type="text" id="province" name="province" placeholder="North"> 
-                        <br><label for="fname">Country  </label>  
-                        <br><input type="text" id="conutry" name="country" placeholder="Srilanka"> 
+                        <label for="address" >Address </label> 
                         <br>
+                        <div class="icon"> 
+                            <input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil." disabled> 
+                            <img id="pencil8" onclick="pencileditenable('address')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic15" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic15')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic16" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic16')" style="visibility:hidden;">
+                        </div>
+                        <br>
+                        <label for="city">City </label>                     
+                        <br>
+                        <div>
+                            <input type="text" id="city" name="city" placeholder="Jaffna" disabled>
+                            <img id="pencil9" onclick="pencileditenable('city')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
+                        </div>
+                        <br>
+                        <label for="province">Province </label>  
+                        <br>
+                        <div>
+                            <input type="text" id="province" name="province" placeholder="North" disabled> 
+                            <img id="pencil10" onclick="pencileditenable('province')" src="../../Resources/Img/edit.png">
+                            <img class="icon1" id="ic19" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic19')" style="visibility:hidden;" >
+                            <img class="icon2" id="ic20" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic20')" style="visibility:hidden;">
+                        </div>                   
+                        <br>
+                        
                     </form>
                 </div>
             </div> 
@@ -130,5 +166,7 @@
             </div> 
 
         </div>
+
+        <script type="text/javascript" src="../../JS/User/ClientProfileUpdate.js" ></script>    
     </body>
 </html>

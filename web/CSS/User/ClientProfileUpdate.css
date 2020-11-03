@@ -1,3 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 13, 2020, 12:35:41 PM
+    Author     : Athavan
+*/
+
+
+body{
+    font-family: calibri;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #f4f4f4;
+}
+
+.profile-header{
+    /*  height: 150px;
+      width: 100%;
+      background-color: #EBF6FA;
+      border-bottom: 2px solid #E2F3FB;
+      position: fixed;
+      margin-top: 4%;*/
+
+    width: 100%;
+    height: 100%;
+    background-color: #EBF6FA;
+    border-bottom: 2px solid #E2F3FB;
+    display: flex;
+    justify-content: center;
+    
+}
+.user-detail{
+    /*  position: relative;
+      width: 75%;
+      margin: 0 auto;
+      height: 100%;*/
+
+    display: flex;
+    align-items: center;
+    width: 75%;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.user-image{
+    /*  float: left;
+      position: relative;
+      height: 80%;*/
+    height: 120px;
+    width: 120px;
+    position: relative;
+    
+}
+
+.user-image img{
+    /*    width: 100%;
+        height: 100%;
+        border-radius: 60%;
+        margin-top: 18%;*/
+    width: 100%;
+    height: 100%;
+    border-radius: 60%;
+    position: relative;
+    
+}
+
+
+.user-image .label {
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    bottom: 3px;
+    color: #fff;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    transition:0.2s all;
+    border-bottom-left-radius: 60%;
+    border-bottom-right-radius:60%;
+    font-family: 'Didact Gothic', sans-serif;
+    padding-bottom: 9%;
+    cursor: pointer;
+}
+
+.user-image:hover .label {
+    bottom: 0px;
+    background: url("../../Resources/Img/camera.png") no-repeat;
+    background-position-x: 5%;
+}
+
+.prof-label{
+    position: absolute;
+    background: #8C13A0;
+    color: #fff;
+    padding: 9px 4px;
+    border-radius: 50%;
+    top: 155px;
+    left: 42px;
+    font-size: 12px;
+}
+.user-data{
+    float: left;
+    width: 20%;
+    padding-left: 27px;
+
+}
+.user-data h2{ 
+    margin-bottom: 0px;
+    margin-top: 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.user-data .post-label{
+    font-size: 10px;
+    border: 1px solid #C3CECB;
+    padding: 0px 4px;
+    border-radius: 4px;
+    background: #F3F5F5;
+    margin-right: 5px;
+}
+.user-data .post-label:hover{
+    background-color: #F8EDE7;
+    border-color: #F2D4BA;
+}
+.user-data p{
+    font-size: 12px;
+    color: #404040;
+}
+
+.user-detail a:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+    background-color: #008CBA;
+    color: white;  
+}
 
 .skill-box{
 
@@ -8,7 +146,7 @@
     padding: 10px;
     height: 1000px;
     width: 14%;
-    margin-top: 10%;
+    margin-top: 100px;
     position: fixed;
 }    
 
@@ -46,7 +184,7 @@
     border-radius: 4px;
     background-color: #fbfbfb;  
     border-radius: 10px;
-    margin: 10% 25% 0 0;
+    margin: 100px 25% 0 0;
 
 }
 
@@ -58,6 +196,17 @@
     font-weight: 600;
     font-size: 25px;
 
+}
+.account .heading label a{
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid #ededed;
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+    padding: 2px 1px 2px 5px;
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -76,6 +225,10 @@
     margin-left: 0px;
 }
 
+.account .heading label a:hover{
+    background-color:  #e7e7e7;
+    color: black !important;
+}
 .account .edit{
     padding: 10px 10px 10px 10px;
     text-align: justify;
@@ -97,11 +250,11 @@
     font-family: 'Didact Gothic', sans-serif;
 }
 
-.edit input:hover{
+/*.edit input:hover{
     background: url("../../Resources/Img/edit.png") no-repeat;
     background-position-x: 100%;
     cursor: pointer;
-}
+}*/
 
 .edit label{
     font-size: 18px;
@@ -113,6 +266,8 @@
 .edit textarea{
     font-family: 'Didact Gothic', sans-serif;
     outline: none;
+    margin-bottom: 20px;
+    font-size: 18px;
 }
 
 .address{
@@ -144,6 +299,65 @@
     font-size: 13px;
 
 }
+
+.tax-info {
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: #fbfbfb; 
+    margin-right: 10%;
+    border-radius: 10px;
+    margin-bottom: 13px;
+    margin: 3% 25% 0 0;
+    padding: 0 0 0 2%;
+}
+
+.tax-info .heading{
+    padding: 10px 0px 10px 10px;
+}
+
+.tax-info .heading p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 25px;
+
+
+}
+
+
+.tax-info .edit{
+    padding: 10px 10px 10px 10px;
+    text-align: justify;
+    color: #838383;
+    font-size: 13px;
+}
+
+.tax-info .edit p{
+    text-align: justify;
+    color: #838383;
+    font-size: 16px;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: -1%;
+}
+.tax-info .edit a{
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #008CBA;
+    text-decoration: none;  
+    font-size: 15px;
+    margin-left: 20px;
+}
+
+.tax-info .edit a:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+    background-color: #006CBE;
+    color: white;  
+}
+
 
 .password {
     float: right;
@@ -202,6 +416,73 @@
     color: white;  
 }
 
+.pagefooter {
+    width: 100%;
+    background-color: #222; 
+    margin: 45% 0 0 0;
+    padding: 1 1 1 1;
+    bottom: 0;
+    position: fixed;
+    height: 5%;
+
+}
+
+
+.pagefooter .contact {
+    margin-left: 3%;   
+}
+
+.pagefooter .contact p {
+    width:20%;
+    margin-top: 0.7%;
+}
+
+.pagefooter .contact p a {
+    text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
+    color: #999;
+    font-weight: bolder;
+
+}
+
+.pagefooter .contact p a:hover {
+    color: white;
+}
+
+.footnote ul {
+    margin-top: -2.5%;
+    margin-left: 44%;
+
+}
+.footnote ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 1%;
+    padding-right: 1%;
+
+}
+
+.footnote ul li:first-child{
+    border-right: 2px solid #999;
+    padding-right: 1.5%;
+}
+.footnote ul li:last-child{
+    border-left: 2px solid #999;
+    padding-left: 1.5%;
+}
+
+.footnote ul li a{
+    font-family: 'Syne', sans-serif;
+    color: #999;
+    text-decoration: none;
+
+
+}
+
+
+.footnote ul li a:hover{
+    color: white;
+}
 
 .deleteacc {
     float: right;
@@ -260,3 +541,84 @@
     background-color: #006CBE;
     color: white;  
 }
+
+.connaccount {
+    float: right;
+    width: 50%;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: #fbfbfb; 
+    margin-right: 10%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin: 3% 25% 0 0;
+    padding: 0 0 7% 2%;
+}
+
+.connaccount .heading{
+    padding: 10px 0px 10px 10px;
+}
+
+.connaccount .heading p{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.connaccount .edit{
+    padding: 0px 10px 0px 10px;
+    text-align: justify;
+    color: #838383;
+    font-size: 13px;
+
+}
+
+.connaccount .edit p{
+    text-align: justify;
+    color: #838383;
+    font-size: 16px;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: -0.1%;
+}
+.connaccount .icons a{
+    display: inline-block;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: white;
+    background-color: #008CBA;
+    text-decoration: none;  
+    font-size: 15px;
+    margin-top: -0.2%;
+    float: right;
+    margin-right: 7%;
+}
+
+.icons img {
+    margin-left: 5%;
+} 
+
+.icons label i {
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #999;
+    margin-left: 26%;
+}
+
+
+.connaccount .icons a:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+    background-color: #006CBE;
+    color: white;  
+}
+
+.icon .icon1{
+    margin-left: 4%;
+}
+
+.icon .icon2{
+    margin-left: 1%;
+}
+

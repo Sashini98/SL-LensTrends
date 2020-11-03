@@ -17,6 +17,7 @@ import java.sql.SQLException;
 public interface ClientDao {
     
     public void  addClient(Client client) throws SQLException;
+    
     public void  updateClientEmail(String email, String cilentId) throws SQLException;
     public void  updateClientPassword(String password, String cilentId) throws SQLException;
     public void  updateClientFname(String fname, String cilentId) throws SQLException;
@@ -26,7 +27,9 @@ public interface ClientDao {
     public void  updateClientProvince(String province, String cilentId) throws SQLException;
     public void  updateClientGender(int gender, String cilentId) throws SQLException;
     public void  updateClientActiveStatus(int status, String cilentId) throws SQLException;
+        
     public void  deleteClient(String clientId) throws SQLException;
+    
     public Client  getClient(String clientId) throws SQLException;
     
     
