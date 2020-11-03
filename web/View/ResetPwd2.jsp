@@ -41,14 +41,14 @@
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pw" placeholder="Password">
                     </fieldset>
+
+
+                    <div class="change">
+                        <input type="submit" id="login" value="Login">
+                    </div>
                 </form><br><br><br>
-
-                <div class="change">
-                    <input type="submit" id="login" value="Login">
-                </div>
-
                 <p>
-                    Did you not receive an email? <a href="ResetPwd.jsp">Try Againg</a><br><br>
+                    Did you not receive an email? <a href="ResetPwd.jsp">Try Again</a><br><br>
                 </p>
 
             </div>
