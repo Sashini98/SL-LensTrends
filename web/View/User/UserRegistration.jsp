@@ -10,14 +10,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>User Registration</title>
-        <link rel="stylesheet" href ="../../CSS/Photographer/changepassword.css">
-        <link rel="stylesheet" href ="../../CSS/Photographer/PhotographerRegistration.css">
+<!--        <link rel="stylesheet" href ="../../CSS/Photographer/changepassword.css">
+        <link rel="stylesheet" href ="../../CSS/Photographer/PhotographerRegistration.css">-->
+        <link rel="stylesheet" href ="../../CSS/User/UserRegistration.css">
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body>
+    <body style="background-image: url(../../Resources/Img/uRe.jpg); background-size: 100%;">
         
         <div class="fixedheader">  
             <div class="pageheader">
@@ -57,7 +58,7 @@
 
                     <div class="caption">
                         <p>
-                            If you already have an account.<a href="../login.jsp">Sign In</a>
+                            If you already have an account.<a href="../login.jsp"> Sign In</a>
                         </p>
                     </div>
 
@@ -69,13 +70,13 @@
                                 <legend> First Name </legend>
                                 <input type="text" id="fname" name="name">
                                 <legend> Last Name </legend>
-                                <input type="text" id="lname" name="namel" >
+                                <input type="text" id="lname" name="lname" >
                                 <legend> Password </legend>
-                                <input type="password" id="pw" name="password">
+                                <input type="password" id="pw" name="pass" >
                                 <legend> Date of Birth </legend>
-                                <input type="text" id="dob" name="birth">
+                                <input type="text" id="dob" name="birth" >
                                 <legend> Country </legend>
-                                <input type="text" id="country" name="contr">
+                                <input type="text" id="country" name="count" >
                             </fieldset>                        
 
                             <div class="change">
