@@ -63,20 +63,61 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="content">
-            <div class="box">
+            <div class="box" id="box1">
                 <h2>Free</h2>
-                <img src="../../Resources/Img/pot1.svg">
+                <div class="icon1">
+                    <img src="../../Resources/Img/pot1.png">
+                </div>
+                <div class="hover-content">
+                    <p>0$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
+                </div>
+              
+                    <img src="../../Resources/Img/close.png" id="close">
+                    <p id="fix-price">Fix the price</p>
+                
+                    <div class="arrow">
+                        <a href="#" type="button" id="free"><img src="../../Resources/Img/arrow.png"></a>
+                    </div>
             </div>
-             <div class="box" id="box-color1">
+            <div class="box" id="box-color1">
                 <h2>Standard</h2>
+                <div class="icon">
+                    <img src="../../Resources/Img/pot2.png">
+                </div> <br> <br> <br> 
+                <div class="hover-content">
+                    <p>40$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
+                </div>
+               
+                    <img src="../../Resources/Img/check-mark.png" id="close">
+                    <p id="fix-price">Fix the price up to 20$</p>
+                    
+                    <div class="arrow">
+                        <a href="#" type="button" id="standard"><img src="../../Resources/Img/arrow.png"></a>
+                    </div>
+               
             </div>
-             <div class="box" id="box-color2">
+            <div class="box" id="box-color2">
                 <h2>Premium</h2>
+                <div class="icon">                    
+                    <img src="../../Resources/Img/pot3.png">
+                </div> <br> <br> <br>
+                <div class="hover-content">
+                    <p>85$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
+                </div>
+              
+                    <img src="../../Resources/Img/close.png" id="close">
+                    <p id="fix-price">Fix the price up to 60$</p>
+                    
+                    <div class="arrow">
+                        <a href="#" type="button" id="premium"><img src="../../Resources/Img/arrow.png"></a>
+                    </div>
+                
+
             </div>            
-           
+
         </div>
-           
+
     </body>
 </html>
