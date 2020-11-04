@@ -26,13 +26,13 @@
             </div>
             <h1>Sign in</h1>
 
-            <div class="caption">
-                <p>
+            <div  class="caption">
+                <span >
                     New User  <a href="../View/User/UserRegistration.jsp">Create an account</a><br><br>
-                </p>
+                </span>
             </div>
 
-            <div class="passinfo">
+            <div class="passinfo" >
                 <form action="../Login" method="POST">
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
@@ -43,180 +43,19 @@
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pw" placeholder="Password">
                     </fieldset>
-                
-                <div class="change">
-                    <input type="submit" id="login" value="Login">
-                </div>
+                    <div style="display: felx;">
+                        <div class="change">
+                            <button type="submit" class="loginbtn" id="login"><span>Login</span></button>
+                        </div>
 
-                <p>
-                    <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                </p>
+                        <p class="forgotpwpara">
+                            <a href="ResetPwd.jsp" class="forgotpw">Forgot Password?</a><br><br>
+                        </p>
+                    </div>
                 </form>
-                <font size="2px">Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Services.</font>
+                <hr />
+                <span style="font-size: 18px; font-family: 'Tenali Ramakrishna', sans-serif;">Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Services.</sapn>
             </div>
         </div>
-<!--                <div class="slideshow-container">
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg2.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg3.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg4.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg5.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br>
-                                
-                                <input type="text" id="email" name="email" placeholder="Email">
-                                <br><br>
-                                
-                                <input type="password" id="pw" name="pw" placeholder="Password">
-                                <br>
-                                
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login"  value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg6.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg7.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br>
-                                <input type="text" id="email" name="email" placeholder="Email">
-                                <br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login">
-                                <br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-        
-                    <div class="mySlides fade">
-                        <div class="img"><img src="../Resources/Img/user.png" style="width:15%;height:15%;margin-left:94%;margin-top:4%;margin-bottom: -2.3%;"></div>
-                        <img src="../Resources/Img/loginbg8.jpg" style="width:100%">
-                        <div class="form"> 
-                            <form action="../Login" method="POST">
-                                <br><br><br><input type="text" id="email" name="email" placeholder="Email"><br><br>
-                                <input type="password" id="pw" name="pw" placeholder="Password"><br>
-                                <a href="ResetPwd.jsp">Forgot Password?</a><br><br>
-                                <input type="submit" id="login" value="Login"><br><br>
-        
-                            </form>
-                        </div>
-                    </div>
-        
-        
-                </div>
-                <br>
-        
-                <div style="text-align:center">
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
-                    <span class="dot"></span> 
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>-->
-        <!--        </div>-->
-
-        <!--        <script>
-                    var slideIndex = 0;
-                    showSlides();
-        
-                    function showSlides() {
-                        var i;
-                        var slides = document.getElementsByClassName("mySlides");
-                        var dots = document.getElementsByClassName("dot");
-                        for (i = 0; i < slides.length; i++) {
-                            slides[i].style.display = "none";
-        
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) {
-                            slideIndex = 1
-                        }
-                        for (i = 0; i < dots.length; i++) {
-                            dots[i].className = dots[i].className.replace(" active", "");
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                        dots[slideIndex - 1].className += " active";
-                        setTimeout(showSlides, 5000);
-                    }
-                </script>-->
-
     </body>
 </html> 
