@@ -24,11 +24,11 @@
                 <img src="../Resources/Img/6.png">
             </div>
             <h1>Email Sent</h1>
-
+            <br />
             <div class="caption">
-                <p>
+                <span style="line-height: 25px;">
                     Please check your inbox or spam folder for a link to reset your password.<br><br>
-                </p>
+                </span>
             </div>
 
             <div class="passinfo">
@@ -44,11 +44,15 @@
 
 
                     <div class="change">
-                        <input type="submit" id="login" value="Login">
+                        <button type="submit" id="login">Login</button>
                     </div>
                 </form><br><br><br>
-                <p>
-                    Did you not receive an email? <a href="ResetPwd.jsp">Try Again</a><br><br>
+                <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif;">
+                    Did you not receive an email?
+                    <a href="ResetPwd.jsp" style="text-decoration: none; color: RGB(20,115,230);">
+                        Try Again
+                    </a>
+                    <br><br>
                 </p>
 
             </div>

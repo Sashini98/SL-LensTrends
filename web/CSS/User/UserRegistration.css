@@ -25,15 +25,15 @@
     margin-bottom: 0;
 }
 .caption p{
+
     margin-top: -3%;
-    font-size: 21px;
+    font-size: 23px;
     font-family: 'Tenali Ramakrishna', sans-serif;
 }
 
-
-.passinfo{
-
-    margin-top: 10%;
+.caption a{
+    color: RGB(20,115,230);
+    text-decoration: none;
 }
 
 .passinfo .cpass{

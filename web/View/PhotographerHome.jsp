@@ -4,11 +4,16 @@
     Author     : Madusha
 --%>
 
+<%@page import="Model.Photographer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <%
-    boolean logged = (Boolean) request.getAttribute("logged");
+    Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+    boolean logged = false;
+    if (p != null) {
+        logged = true;
+    }
 %>
 
 
@@ -19,7 +24,7 @@
     </head>
     <body>
 
-         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="../CSS/Home.css"/>
         <link type="text/css" rel="stylesheet" href="../CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
@@ -31,46 +36,46 @@
         <title>SL-Lesns Trends</title>
     </head>
 <body>
-    
+
     <div class="fixedheader" style="z-index: 20;">  
-            <div class="pageheader">
-                <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
-                <h1>Sl Lens Trends </h1>
+        <div class="pageheader">
+            <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
+            <h1>Sl Lens Trends </h1>
 
-                <div class="headerul" style="margin-left: 30px;">
-                    <ul>
+            <div class="headerul" style="margin-left: 30px;">
+                <ul>
 
-                        <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="User/ClientProfileUpdate" type="button"> Profile </a></li>
-                        <li><a href="Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
+                    <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
+                    <li><a href="User/AdvancedSearch.jsp" type="button"> Album </a></li>
+                    <li><a href="User/ClientProfileUpdate" type="button"> Profile </a></li>
+                    <li><a href="Fourm/forum home.jsp" type="button"> Forum </a></li>
+                    <li><a href="Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
 
-                    </ul>
-                </div>
+                </ul>
+            </div>
 
-                <div class="notifyicn">
-                    <a href="#" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
+            <div class="notifyicn">
+                <a href="#" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
 
-                </div>
+            </div>
 
-                <div class="logout">
-                    <%
-                        if (!logged) {
-                    %>
-                    <a href="../View/login.jsp?action=User&loc=ch" >Login</a> 
-                    <%
-                    } else {
-                    %>
-                    <a href="../LogOut?loc=ch" >Log Out</a> 
-                    <%
-                        }
-                    %>
-                </div>
+            <div class="logout">
+                <%
+                    if (!logged) {
+                %>
+                <a href="../View/login.jsp?action=User&loc=ch" >Login</a> 
+                <%
+                } else {
+                %>
+                <a href="../LogOut?loc=ch" >Log Out</a> 
+                <%
+                    }
+                %>
             </div>
         </div>
-    
-    
+    </div>
+
+
     <div class="HeaderPart" id="HeaderPart">
         <div class="Welcome">
             <h1 class="WelcomeText1">Welcome To SL-Lens Trends!</h1>

@@ -39,9 +39,12 @@ and open the template in the editor.
 .caption{
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
+
 }
 .caption span{
     margin-top: 0; 
@@ -50,7 +53,7 @@ and open the template in the editor.
     font-size: 23px;
     font-family: 'Tenali Ramakrishna', sans-serif;
     margin-bottom: 0;
-    font-weight: bold;
+
 }
 
 .caption a{
@@ -114,7 +117,7 @@ and open the template in the editor.
     margin-right: 20px;
 }
 
-.loginbtn{
+.change button{
     font-family: 'Tenali Ramakrishna', sans-serif;
     font-size: 23px;
     padding: 0px 25px;
@@ -126,10 +129,14 @@ and open the template in the editor.
     text-align: center;
     border: none;
 }
-.loginbtn:hover{
+.change button:hover{
     box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
     background-color: #006CBE;
     color: white;  
+}
+
+button:focus {
+    outline:0;
 }
 
 .forgotpwpara{

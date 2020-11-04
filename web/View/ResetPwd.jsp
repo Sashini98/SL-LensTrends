@@ -26,11 +26,11 @@
                 <img src="../Resources/Img/6.png">
             </div>
             <h1>Forgot Your Password?</h1>
-
+            <br />
             <div class="caption">
-                <p>
+                <span style="line-height: 25px;">
                     Enter your email address below and we will send you a link to reset your password.<br><br>
-                </p>
+                </span>
             </div>
 
             <div class="passinfo">
@@ -39,15 +39,22 @@
                         <legend> Email Address </legend>
                         <input type="text" id="email" name="email" placeholder="Email">
                     </fieldset>
-                </form><br><br><br>
-                
-                <div class="change">
-                    <input type="submit" id="reset" value="Send Reset Link">
-                </div>
+                </form>
+                <br><br><br>
 
-                <p>
-                    <a href="login.jsp">Back to login</a><br><br>
-                </p>
+                <div class="change" style=" width: 100%;">
+                    <button type="submit" id="reset" style="width: 100%; margin-left: 5%; margin-right: 5%; float: none;">
+                        Send Reset Link
+                    </button>
+                </div> 
+                <br /><br /><br />
+                <hr />
+                  <br />
+                <div class="change" style=" width: 100%;">
+                    <button type="submit" id="reset" style="width: 100%; margin-left: 5%; margin-right: 5%; float: none; background-color: rgb(218,57,40);">
+                        Back To Login
+                    </button>
+                </div> 
 
             </div>
         </div>

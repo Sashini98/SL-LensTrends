@@ -27,7 +27,7 @@
             <h1>Sign in</h1>
 
             <div  class="caption">
-                <span >
+                <span>
                     New User  <a href="../View/User/UserRegistration.jsp">Create an account</a><br><br>
                 </span>
             </div>
@@ -54,7 +54,9 @@
                     </div>
                 </form>
                 <hr />
-                <span style="font-size: 18px; font-family: 'Tenali Ramakrishna', sans-serif;">Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Services.</sapn>
+                <span style="font-size: 18px; font-family: 'Tenali Ramakrishna', sans-serif;">
+                    Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Services.
+                </sapn>
             </div>
         </div>
     </body>
