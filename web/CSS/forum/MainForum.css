@@ -215,6 +215,7 @@ body {
     background-color: white;
     margin-right: 5%;
     text-align: center;
+    transition: transform .5s ease-in-out;
 }
 
 .box .box2 {
@@ -224,6 +225,7 @@ body {
     box-shadow: 2px 5px 8px rgba(12,13,14,0.15);
     background-color: white;
     text-align: center;
+    transition: transform .5s ease-in-out;
 }
 
 .box .box2 img {
@@ -291,4 +293,14 @@ body {
     height: 15%;
     width: 100%;
     padding: 1% 15%;
+}
+
+.box .box1:hover{
+    transform: scale(1.05);
+
+}
+
+.box .box2:hover{
+    transform: scale(1.05);
+
 }
