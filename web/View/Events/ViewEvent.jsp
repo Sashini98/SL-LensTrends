@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
         
         </head>
-    <body style="background-image: url(../../Resources/Img/VieweEvent.jpg);background-size: 100% ; ">
+    <body style="background-image: url(../../Resources/Img/VieweEvent.jpg);background-size: 100%; ">
         
         <div class="fixedheader">  
             <div class="pageheader">
