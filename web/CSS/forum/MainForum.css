@@ -1,8 +1,6 @@
 body {
-    background-image: url('../../Resources/Img/bgforum.svg');     
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    margin: 0;
+    padding: 0;
 }
 
 .header-main {
@@ -125,8 +123,18 @@ body {
 
 
 .top {
+    background-image: url('../../Resources/Img/bgforum.svg');     
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    margin-top: 15%;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    width: 100%;
+    /*padding-top: 15%;*/
     text-align: center;
 
 }
@@ -228,10 +236,10 @@ body {
 }*/
 
 .box .box1 h2{
-   font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
 }
 .box .box2 h2{
-   font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .content {
