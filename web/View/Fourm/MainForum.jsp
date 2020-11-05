@@ -82,7 +82,7 @@
             <div class="box2">
                 <img src="../../Resources/Img/search1.png">
                 <h2>Ask Questions</h2>
-                <p>Having doubt is not a fault but being with <br> doubtis fault 
+                <p>Having doubt is not a fault but being with <br> doubt is fault 
                     ask your doubts, we have experts to give you the solution</p>
                 <a href="#">Ask Questions</a>
             </div>
