@@ -55,7 +55,7 @@
         <div class="top">
             <ul>
                 <li>We love people with <span style="color:#f7c947;"> Doubts</span></li>
-                <li><p><span>Doubts are the best teacher</span> <br> Get answers to your questions from experts and and  <br>give back by sharing your knowledge with others.</p></li>
+                <li><p><span>Doubts are the best teacher</span> <br> Get answers to your questions from experts and   <br>give back by sharing your knowledge with others.</p></li>
             </ul>
         </div>
 
