@@ -3,11 +3,6 @@ body {
     padding: 0;
 }
 
-.header-main {
-    position: fixed;
-    background-color: #fafafb;
-}
-
 .fixedheader{
     /*margin-bottom: 10%;*/
     width: 100%;
