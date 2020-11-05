@@ -14,7 +14,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="../../CSS/forum/MainForum.css"/>
-
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        
         <title>Ask !</title>
     </head>
 
@@ -49,39 +51,43 @@
             </div>
 
         </div>
-      
-            <div class="top">
-                <ul>
-                    <li>We love people with <span style="color:#f7c947;"> Doubts</span></li>
-                    <li><p><span>Doubts are the best teacher</span> <br> Get answers to your questions from experts and and  <br>give back by sharing your knowledge with others.</p></li>
-                </ul>
-            </div>
 
-            <div class="middle">
-                <!--            <div class="line">
-                                <img src="../../Resources/Img/line.png"> 
-                            </div>-->
-                <ul>               
-                    <li>For Photographers,by Photographers</li>
-                    <li><p>Lens Trends is an <span>open community </span>for passionate Photographers<br>  We help you get answers to your questions,<br>share knowledge with your coworkers and become an expert.</p></li>
-                </ul>
-            </div>
-    
-        
+        <div class="top">
+            <ul>
+                <li>We love people with <span style="color:#f7c947;"> Doubts</span></li>
+                <li><p><span>Doubts are the best teacher</span> <br> Get answers to your questions from experts and and  <br>give back by sharing your knowledge with others.</p></li>
+            </ul>
+        </div>
+
+        <div class="middle">
+            <!--            <div class="line">
+                            <img src="../../Resources/Img/line.png"> 
+                        </div>-->
+            <ul>               
+                <li>For Photographers, by Photographers</li>
+                <li><p><span><a href="../Home.jsp">Lens Trends </a></span>is an open community for passionate Photographers<br>  We help you get answers to your questions,<br>share knowledge with your coworkers and become an expert.</p></li>
+            </ul>
+        </div>
+
+
         <div class="box">
-            <div class="box1"> 
-                
-                <img src="../../Resources/Img/questions1.png">
-                
+            <div class="box1">
+                <img src="../../Resources/Img/questions1.png">                
                 <h2>Browse Questions</h2>
+                <p>Persons may differ,questions and solutions <br>may be the same, 
+                    Browse others questions to get knowledge and to answer </p>
+                <a href="#">Browse</a>
             </div>
 
             <div class="box2">
                 <img src="../../Resources/Img/search1.png">
                 <h2>Ask Questions</h2>
+                <p>Having doubt is not a fault but being with <br> doubtis fault 
+                    ask your doubts, we have experts to give you the solution</p>
+                <a href="#">Ask Questions</a>
             </div>
         </div>
-        
+
 
     </body>
 </html>
