@@ -133,53 +133,6 @@
             </div>
         </div>
 
-        <script>
-            var modal = document.getElementById("myModal");
-            var btn = document.getElementById("free");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function () {
-                modal.style.display = "block";
-            }
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-            var modal = document.getElementById("myModal");
-            var btn = document.getElementById("standard");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function () {
-                modal.style.display = "block";
-            }
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-
-            var modal = document.getElementById("myModal");
-            var btn = document.getElementById("premium");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function () {
-                modal.style.display = "block";
-            }
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-
-        
+       <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
     </body>
 </html>
