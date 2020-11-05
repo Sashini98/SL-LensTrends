@@ -119,7 +119,7 @@ body {
 
 .content .box .icon1 img:hover {
     transform:scale(1.5);
-    transition: transform .5s; /* Animation */
+    transition: transform .5s ease-in-out; /* Animation */
 }
 
 .content .box .icon1 img{

@@ -9,12 +9,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<%
-   
+<% 
     
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("questions");
-    for (int i = 0; i < s.size() / 6; i++) {
-        
+    for (int i = 0; i < s.size() / 6; i++) {      
         
 
 
