@@ -124,7 +124,70 @@
                     <span id="down">126</span>
                 </div>
                 <div class="answer">
-                    <a href="#" type="button" id="counts">5 answers</a>
+                    <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')">5 answers</a>
+                    <a href="#" type="button" id="myAns1">Answer Now</a>
+                </div>
+
+                <div id="myModal1" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close1">&times;</span>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">43</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">456</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Aaketk</span> <span id="time">12 Jan 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">13</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">46</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <div class="answerimg">
+                                <img src="../../Resources/Img/answer1.jpg">
+                                <img src="../../Resources/Img/answer2.jpg">
+                            </div>
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 
@@ -143,8 +206,71 @@
                     <span id="down">23</span>
                 </div>
                 <div class="answer">
-                    <a href="#" type="button" id="counts">15 answers</a>
+                    <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">45 answers</a>
+                    <a href="#" type="button" id="myAns2">Answer Now</a>
                 </div>
+                <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close2">&times;</span>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">43</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">456</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Aaketk</span> <span id="time">12 Jan 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">13</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">46</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <div class="answerimg">
+                                <img src="../../Resources/Img/answer1.jpg">
+                                <img src="../../Resources/Img/answer2.jpg">
+                            </div>
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
             <div class="questions">                
@@ -168,18 +294,81 @@
                     <span id="down">12</span>
                 </div>
                 <div class="answer">
-                    <a href="#" type="button" id="counts">0 answers</a>
+                    <a href="#" type="button" id="myBtn3" onclick="popupanswer('myBtn3')">0 answers</a>
+                    <a href="#" type="button" id="myAns3">Answer Now</a>
+                </div>
+
+                <div id="myModal3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close3">&times;</span>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">43</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">456</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Aaketk</span> <span id="time">12 Jan 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">13</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">46</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <div class="answerimg">
+                                <img src="../../Resources/Img/answer1.jpg">
+                                <img src="../../Resources/Img/answer2.jpg">
+                            </div>
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
 
             <div class="questions">                
                 <h2>Change the ISO or shutter speed</h2>
                 <p>I am tring to control the ISO and the shutter speed for the iphone, but it has no API in AVFoundation. It can only change the exposure, wb for iphone. How can i control the ISO or shutter speed?</p>
-                <div class="image-inquestion">
+                <div class="image-content">
                     <img src="../../Resources/Img/shutter.jpg">
                     <img src="../../Resources/Img/shutter.jpg">
                 </div>
-                
+
                 <label><a href="#" type="button">photography</a></label>
                 <label><a href="#" type="button">FoV</a></label>
                 <label><a href="#" type="button">camera</a></label>
@@ -192,13 +381,64 @@
                     <span id="down">2k</span>
                 </div>
                 <div class="answer">
-                    <a href="#" type="button" id="counts">1.5k answers</a>
+                    <a href="#" type="button" id="myBtn4" onclick="popupanswer('myBtn4')">1.5k answers</a>
+                    <a href="#" type="button" id="myAns4">Answer Now</a>
                 </div>
+
+                <div id="myModal4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close4">&times;</span>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">43</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">456</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                            <span>Posted by: Aaketk</span> <span id="time">12 Jan 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">13</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">46</span>
+                            </div>
+                        </div>
+
+                        <div class="answerqn">
+                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
+                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                            <div class="updown">
+                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                <span id="up">103</span> 
+                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                <span id="down">416</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
             </div>
 
         </div>
 
 
+        <script type="text/javascript" src="../../JS/Forum/BrowseQn.js"></script>
 
     </body>
 </html>
