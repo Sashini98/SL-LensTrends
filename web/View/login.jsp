@@ -8,8 +8,9 @@
 <!DOCTYPE html>
 <%
 
+    String attribute = (String) request.getAttribute("account");
+    System.out.println(attribute);
 %>
-
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,6 +20,35 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
     <body style="background-image: url(../Resources/Img/loginbg.jpg); background-size: 100%">
+
+        <%
+            if (attribute.equals("select")) {
+        %>
+
+        <div style="display: flex; justify-content: center;">
+            <div class="logAccount" id="ReportPhoto">
+                <div class="logAccountHeader">
+                    <h3>Login Account</h3>
+                    <i class="fas fa-times close" style="color: black; margin: auto; cursor: pointer;"></i>
+                </div>
+
+                <div>
+                    <h4>Do you want to Login as a Contributor or User ?</h4>
+
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; " class="selections">
+                        <button style="flex: 1; margin-right: 3px; " onclick="reportItemClicked('Inappropriate')" id="contributor">Contributor</button>
+                        <button style="flex: 1; margin-left: 3px;" onclick="reportItemClicked('quality')" id="user">User</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <%    }
+
+        %>
+
         <div class="container"> 
 
             <div class="logo">
@@ -56,7 +86,7 @@
                 <hr />
                 <span style="font-size: 18px; font-family: 'Tenali Ramakrishna', sans-serif;">
                     Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Services.
-                </sapn>
+                    </sapn>
             </div>
         </div>
     </body>
