@@ -14,8 +14,7 @@ function view()
             if (request.readyState === 4) {
 
 
-                var responce = request.responseText;
-                
+                var responce = request.responseText;                
                   document.getElementById("q").innerHTML=responce;
 
             }
