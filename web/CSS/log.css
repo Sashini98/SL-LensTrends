@@ -81,6 +81,7 @@ and open the template in the editor.
 }
 
 .caption{
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,20 +92,25 @@ and open the template in the editor.
 
 }
 .caption span{
-    margin-top: 0; 
-    margin: 0;
-    padding: 0;
+
     font-size: 23px;
     font-family: 'Tenali Ramakrishna', sans-serif;
-    margin-bottom: 0;
+
 
 }
 
 .caption a{
     color: RGB(20,115,230);
     text-decoration: none;
+    
 }
 
+.loginErrorMessage{
+    color: red;
+    text-align: center;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 18px;
+}
 
 #email{
     color: #333;

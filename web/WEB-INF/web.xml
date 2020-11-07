@@ -56,6 +56,10 @@
         <servlet-name>ClientDetailsUpdate</servlet-name>
         <servlet-class>Controller.Clent.ClientDetailsUpdate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ContributorOrClintLogin</servlet-name>
+        <servlet-class>Controller.ContributorOrClintLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>ClientDetailsUpdate</servlet-name>
         <url-pattern>/ClientDetailsUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContributorOrClintLogin</servlet-name>
+        <url-pattern>/ContributorOrClintLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

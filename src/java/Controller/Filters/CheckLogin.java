@@ -68,7 +68,6 @@ public class CheckLogin implements Filter {
 
                 } else {
                     req.setAttribute("account", "false");
-                    System.out.println("awaa");
                 }
 
                 chain.doFilter(request, response);
