@@ -5,13 +5,11 @@
  */
 package Controller.Photographer;
 
-import DB.DB;
+import Controller.DaoImpl.PhotographerDaoImp;
+import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -45,10 +43,12 @@ public class PhotographerUpdate extends HttpServlet {
 
         Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
         String photographerId = p.getPhotographerId();
-        
+        PhotographerDao photographerDao = new PhotographerDaoImp();
+
         if (fname != null) {
             try {
-                DB.iud("update Photographer set Fname='" + fname + "' where Photographer_Id = '" + photographerId + "'");
+                
+                photographerDao.updatePhotographerFname(fname, photographerId);
                 response.getWriter().write("First Name Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating First Name");
@@ -57,7 +57,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (lname != null) {
             try {
-                DB.iud("update Photographer set Lname='" + lname + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerLname(lname, photographerId);
                 response.getWriter().write("Last Name Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Last Name");
@@ -66,7 +66,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (email != null) {
             try {
-                DB.iud("update Photographer set Email='" + email + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerEmail(email, photographerId);
                 response.getWriter().write("Email Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Email");
@@ -75,7 +75,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (mnum != null) {
             try {
-                DB.iud("update Photographer set Mobile='" + mnum + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerMobile(mnum, photographerId);
                 response.getWriter().write("Mobile Number Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Mobile Number");
@@ -84,7 +84,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (web != null) {
             try {
-                DB.iud("update Photographer set Website='" + web + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerWebsite(web, photographerId);
                 response.getWriter().write("Website Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Website");
@@ -93,7 +93,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (bio != null) {
             try {
-                DB.iud("update Photographer set bio='" + bio + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerBio(bio, photographerId);
                 response.getWriter().write("You Bio Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Your Bio");
@@ -102,7 +102,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (interest != null) {
             try {
-                DB.iud("update Photographer set FieldofInterest='" + interest + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerFieldOfInterest(interest, photographerId);
                 response.getWriter().write("Your Field of interest Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Field of interest");
@@ -111,7 +111,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (address != null) {
             try {
-                DB.iud("update Photographer set Address_No='" + address + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerAddressNo(address, photographerId);
                 response.getWriter().write("Address Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Address");
@@ -120,7 +120,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (city != null) {
             try {
-                DB.iud("update Photographer set City'" + city + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerCity(city, photographerId);
                 response.getWriter().write("City Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating City");
@@ -129,7 +129,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (province != null) {
             try {
-                DB.iud("update Photographer set Province'" + province + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerProvince(province, photographerId);
                 response.getWriter().write("Province Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Province");
@@ -138,7 +138,7 @@ public class PhotographerUpdate extends HttpServlet {
 
         } else if (zip != null) {
             try {
-                DB.iud("update Photographer set PostalCode'" + postal + "' where Photographer_Id = '" + photographerId + "'");
+                photographerDao.updatePhotographerPostalCode(postal, photographerId);
                 response.getWriter().write("Postal code Updated Successfully");
             } catch (SQLException ex) {
                 response.getWriter().write("Error Updating Postal code");
