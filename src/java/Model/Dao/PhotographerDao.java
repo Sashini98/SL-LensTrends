@@ -31,8 +31,8 @@ public interface PhotographerDao {
     public void  updatePhotographerWebsite(String website, String photographerId) throws SQLException;
     public void  updatePhotographerBio(String bio, String photographerId) throws SQLException;
     public void  updatePhotographerFieldOfInterest(String fielsOfdInterest, String photographerId) throws SQLException;
-    public void  updateCPhotographerPostalCode(int postalCode, String cphotographerId) throws SQLException;
-    public void  updateCPhotographerActiveStatus(int status, String cphotographerId) throws SQLException;
+    public void  updatePhotographerPostalCode(int postalCode, String cphotographerId) throws SQLException;
+    public void  updatePhotographerActiveStatus(int status, String cphotographerId) throws SQLException;
         
     public void  deletePhotographer(String photographerId) throws SQLException;
     

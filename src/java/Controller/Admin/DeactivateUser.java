@@ -5,7 +5,11 @@
  */
 package Controller.Admin;
 
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import DB.DB;
+import Model.Dao.ClientDao;
+import Model.Dao.PhotographerDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -27,21 +31,25 @@ public class DeactivateUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String userid = request.getParameter("deactivate");
+        String clientId = request.getParameter("deactivate");
+        int status = 0;
         
         try{
-            char first = userid.charAt(0);
+            char first = clientId.charAt(0);
             
             if(first=='C'){
-                DB.iud("UPDATE Client SET ActiveStatus = 0 where Client_Id = '"+ userid +"'");
+                ClientDao clientDao = new ClientDaoImpl();
+                clientDao.updateClientActiveStatus(status, clientId);
+                
             }else{
-                DB.iud("UPDATE Photographer SET ActiveStatus = 0 where Photographer_Id = '"+ userid +"'");
+                PhotographerDao photographerDao = new PhotographerDaoImp();
+                photographerDao.updatePhotographerActiveStatus(status, clientId);
             }
             
             response.getWriter().write("User Deactivated Successfully.");
             
         }catch(Exception e){
-            response.getWriter().write("There is an error..");
+            response.getWriter().write("There is an error.");
             e.printStackTrace();
             
         }

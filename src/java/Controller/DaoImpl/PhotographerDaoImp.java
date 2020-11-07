@@ -98,12 +98,12 @@ public class PhotographerDaoImp implements PhotographerDao {
     }
 
     @Override
-    public void updateCPhotographerPostalCode(int postalCode, String photographerId) throws SQLException {
+    public void updatePhotographerPostalCode(int postalCode, String photographerId) throws SQLException {
         DB.iud("UPDATE photographer SET PostalCode='" + postalCode + "' WHERE Photographer_Id = '" + photographerId + "'");
     }
 
     @Override
-    public void updateCPhotographerActiveStatus(int status, String photographerId) throws SQLException {
+    public void updatePhotographerActiveStatus(int status, String photographerId) throws SQLException {
         DB.iud("UPDATE photographer SET ActiveStatus='" + status + "' WHERE Photographer_Id = '" + photographerId + "'");
     }
 
