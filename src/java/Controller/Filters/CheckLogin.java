@@ -62,12 +62,12 @@ public class CheckLogin implements Filter {
             } catch (Exception e) {
                 // ask contrtibutor or client if its  same email and pw
 
-                String attribute = (String) request.getAttribute("error");
+                String attribute = (String) request.getAttribute("account");
                 if (attribute != (null)) {
-                    req.setAttribute("account", "select");
+                    req.setAttribute("account", "true");
 
                 } else {
-                    req.setAttribute("account", "selected");
+                    req.setAttribute("account", "false");
                     System.out.println("awaa");
                 }
 

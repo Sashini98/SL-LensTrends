@@ -9,20 +9,20 @@
 <%
 
     String attribute = (String) request.getAttribute("account");
-    System.out.println(attribute);
+    System.out.println(attribute + " jjjjjjjjjj");
 %>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../CSS/log.css">
+        <link rel="stylesheet" href="<%= request.getContextPath() %>/CSS/log.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body style="background-image: url(../Resources/Img/loginbg.jpg); background-size: 100%">
+    <body style="background-image: url(<%= request.getContextPath() %>/Resources/Img/loginbg.jpg); background-size: 100%">
 
         <%
-            if (attribute.equals("select")) {
+            if (attribute.equals("true")) {
         %>
 
         <div style="display: flex; justify-content: center;">
@@ -52,7 +52,7 @@
         <div class="container"> 
 
             <div class="logo">
-                <img src="../Resources/Img/6.png">
+                <img src="<%= request.getContextPath() %>/Resources/Img/6.png">
             </div>
             <h1>Sign in</h1>
 
