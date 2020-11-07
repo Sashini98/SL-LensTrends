@@ -7,14 +7,9 @@ package Controller.Admin;
 
 import Controller.DaoImpl.ClientDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
-import DB.DB;
 import Model.Dao.ClientDao;
 import Model.Dao.PhotographerDao;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,19 +26,19 @@ public class DeactivateUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String clientId = request.getParameter("deactivate");
+        String userid = request.getParameter("deactivate");
         int status = 0;
         
         try{
-            char first = clientId.charAt(0);
+            char first = userid.charAt(0);
             
             if(first=='C'){
                 ClientDao clientDao = new ClientDaoImpl();
-                clientDao.updateClientActiveStatus(status, clientId);
+                clientDao.updateClientActiveStatus(status, userid);
                 
             }else{
                 PhotographerDao photographerDao = new PhotographerDaoImp();
-                photographerDao.updatePhotographerActiveStatus(status, clientId);
+                photographerDao.updatePhotographerActiveStatus(status, userid);
             }
             
             response.getWriter().write("User Deactivated Successfully.");
