@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Questions</title>
     </head>
-    <body style="background-color: #f7f6f9;">
+    <body style="background-color: #f7f6f9;" onload="view()">
 
         <div class="fixedheader">  
 
@@ -108,8 +108,9 @@
                     <a href="#" type="button">Ask Questions <a/>
                 </div>
 
-            </div>          
-            <div class="questions">                
+            </div>  
+            <div name="s" id="s">
+<!--            <div class="questions">                
                 <h2>FoV of One Plus 6T?</h2>
                 <p>I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ... </p>
                 <label><a href="#" type="button">photography</a></label>
@@ -130,7 +131,7 @@
 
                 <div id="myModal1" class="modal">
 
-                    <!-- Modal content -->
+                     Modal content 
                     <div class="modal-content">
                         <span class="close1">&times;</span>
 
@@ -211,7 +212,7 @@
                 </div>
                 <div id="myModal2" class="modal">
 
-                    <!-- Modal content -->
+                     Modal content 
                     <div class="modal-content">
                         <span class="close2">&times;</span>
 
@@ -300,7 +301,7 @@
 
                 <div id="myModal3" class="modal">
 
-                    <!-- Modal content -->
+                     Modal content 
                     <div class="modal-content">
                         <span class="close3">&times;</span>
 
@@ -387,7 +388,7 @@
 
                 <div id="myModal4" class="modal">
 
-                    <!-- Modal content -->
+                     Modal content 
                     <div class="modal-content">
                         <span class="close4">&times;</span>
 
@@ -433,12 +434,13 @@
                 </div>
 
 
+            </div>-->
             </div>
 
         </div>
 
 
-        <script type="text/javascript" src="../../JS/Forum/BrowseQn.js"></script>
+        <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
 
     </body>
 </html>
