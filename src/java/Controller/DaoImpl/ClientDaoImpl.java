@@ -55,7 +55,7 @@ public class ClientDaoImpl implements ClientDao {
     
     @Override
     public Client getClientbyEmail(String email) throws SQLException {
-       ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "'");
+        ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "'");
         if (client.next()) {
             Client c = new Client();
             c.setClientId(client.getString("Client_Id"));
