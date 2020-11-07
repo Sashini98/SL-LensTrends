@@ -30,6 +30,7 @@ public class Photographer{
     String bio;
     String fielsOfdInterest;
     int postalCode;
+    private int activeStatus;
     
 
     public Photographer() {
@@ -180,6 +181,14 @@ public class Photographer{
 
     public void setPostalCode(int postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public int getActiveStatus() {
+        return activeStatus;
+    }
+    
+    public void setActiveStatus(int aInt) {
+        this.activeStatus = activeStatus;
     }
     
 
