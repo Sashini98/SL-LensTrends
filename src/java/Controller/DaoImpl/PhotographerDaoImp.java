@@ -16,14 +16,15 @@ import java.util.Date;
  *
  * @author Madusha
  */
-public class PhotographerDaoImp implements PhotographerDao{
+public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public void addPhotographer(Photographer photographer) throws SQLException {
         DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Plan_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus) "
                 + "VALUES ('" + photographer.getPhotographerId() + "', '" + photographer.getEmail() + "', '" + photographer.getPassword() + "', '" + photographer.getFname() + "',"
-                + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "',"
-                + " '" + photographer.getGenderId() + "', '" + photographer.getActiveStatus() + "' ) ");
+                + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','" + photographer.getJoined_date() + "',"
+                + " '" + photographer.getGenderId() + "', '" + photographer.getPlanId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
+                + " '" + photographer.getFielsOfdInterest()+ "', '" + photographer.getPostalCode()+ "', '" + photographer.getActiveStatus() + "' ) ");
     }
 
     @Override
@@ -43,7 +44,7 @@ public class PhotographerDaoImp implements PhotographerDao{
 
     @Override
     public void updatePhotographerLname(String lname, String photographerId) throws SQLException {
-        DB.iud("UPDATE photographer SET Lname='" + lname + "' WHERE Photographer_Id= '" + photographerId+ "'");
+        DB.iud("UPDATE photographer SET Lname='" + lname + "' WHERE Photographer_Id= '" + photographerId + "'");
     }
 
     @Override
@@ -139,7 +140,6 @@ public class PhotographerDaoImp implements PhotographerDao{
             return null;
         }
     }
-    
 
     @Override
     public Photographer getPhotographerByEmail(String email) throws SQLException {
@@ -168,5 +168,5 @@ public class PhotographerDaoImp implements PhotographerDao{
             return null;
         }
     }
-    
+
 }

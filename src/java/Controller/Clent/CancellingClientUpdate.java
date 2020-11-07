@@ -34,7 +34,7 @@ public class CancellingClientUpdate extends HttpServlet {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
                 
-                Client client = clientdao.getClient(clientid);
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getFname());
                 
             } catch (SQLException ex) {
@@ -44,7 +44,7 @@ public class CancellingClientUpdate extends HttpServlet {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
                 
-                Client client = clientdao.getClient(clientid);
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getLname());
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -53,7 +53,7 @@ public class CancellingClientUpdate extends HttpServlet {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
                 
-                Client client = clientdao.getClient(clientid);
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getEmail());
                 
             } catch (SQLException ex) {
@@ -63,7 +63,7 @@ public class CancellingClientUpdate extends HttpServlet {
             try {
                ClientDao clientdao = new ClientDaoImpl();
                 
-                Client client = clientdao.getClient(clientid);
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getAddress_no());
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -72,7 +72,7 @@ public class CancellingClientUpdate extends HttpServlet {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
                 
-                Client client = clientdao.getClient(clientid);
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getCity());
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -81,7 +81,7 @@ public class CancellingClientUpdate extends HttpServlet {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
                 
-                Client client = clientdao.getClient(clientid);
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getProvince());
             } catch (SQLException ex) {
                 ex.printStackTrace();

@@ -5,9 +5,11 @@
  */
 package Controller.Admin;
 
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import DB.DB;
-import Model.Client;
-import Model.Photographer;
+import Model.Dao.ClientDao;
+import Model.Dao.PhotographerDao;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -30,40 +32,42 @@ public class UserMgt extends HttpServlet {
 
         String email = request.getParameter("search");
 
+        ClientDao clientDao = new ClientDaoImpl();
+        PhotographerDao pd = new PhotographerDaoImp();
+        clientDao.getClient(email)
+
         try {
 
-            ResultSet client = DB.search("SELECT Client_Id, Fname, Lname FROM Client Where Email = '" + email + "' ");
-            ResultSet photographer = DB.search("SELECT Photographer_Id, Fname, Lname FROM Photographer Where Email = '" + email + "' ");
-
+//            ResultSet client = DB.search("SELECT Client_Id, Fname, Lname FROM Client Where Email = '" + email + "' ");
+//            ResultSet photographer = DB.search("SELECT Photographer_Id, Fname, Lname FROM Photographer Where Email = '" + email + "' ");
             boolean clientAcc = client.next();
             boolean photographerAcc = photographer.next();
 
             ArrayList<String> a = new ArrayList();
-            
+
             if (clientAcc && photographerAcc) {
 
                 a.add(client.getString("Client_Id"));
-                a.add(client.getString("Fname") + " " + client.getString("Lname") );
+                a.add(client.getString("Fname") + " " + client.getString("Lname"));
                 a.add("Client");
-                
+
                 a.add(photographer.getString("Photographer_Id"));
                 a.add(photographer.getString("Fname") + " " + client.getString("Lname"));
                 a.add("Photographer");
-                
+
             } else if (clientAcc) {
 
                 a.add(client.getString("Client_Id"));
-                a.add(client.getString("Fname") + " " + client.getString("Lname") );
+                a.add(client.getString("Fname") + " " + client.getString("Lname"));
                 a.add("Client");
-                
+
             } else if (photographerAcc) {
 
                 a.add(photographer.getString("Photographer_Id"));
                 a.add(photographer.getString("Fname") + " " + photographer.getString("Lname"));
-                a.add("Photographer");               
+                a.add("Photographer");
             }
-            
-         
+
             Gson g = new Gson();
             String toJson = g.toJson(a);
             response.getWriter().write(toJson);

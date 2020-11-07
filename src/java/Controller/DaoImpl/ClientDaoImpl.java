@@ -31,7 +31,7 @@ public class ClientDaoImpl implements ClientDao {
     }
 
     @Override
-    public Client getClient(String clientId) throws SQLException {
+    public Client getClientbyId(String clientId) throws SQLException {
         ResultSet client = DB.search("SELECT * FROM client WHERE Client_id = '" + clientId + "'");
         if (client.next()) {
             Client c = new Client();
@@ -51,6 +51,30 @@ public class ClientDaoImpl implements ClientDao {
         } else {
             return null;
         }
+    }
+    
+    @Override
+    public Client getClientbyEmail(String email) throws SQLException {
+       ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "'");
+        if (client.next()) {
+            Client c = new Client();
+            c.setClientId(client.getString("Client_Id"));
+            c.setEmail(client.getString("Email"));
+            c.setPassword(client.getString("Password"));
+            c.setFname(client.getString("Fname"));
+            c.setLname(client.getString("Lname"));
+            c.setAddress_no(client.getString("Address_No"));
+            c.setCity(client.getString("City"));
+            c.setProvince(client.getString("Province"));
+            c.setGenderId(client.getInt("Gender_Id"));
+            c.setActiveStatus(client.getInt("ActiveStatus"));
+
+            return c;
+
+        } else {
+            return null;
+        }
+        
     }
 
     @Override
@@ -97,6 +121,8 @@ public class ClientDaoImpl implements ClientDao {
     public void updateClientActiveStatus(int status, String cilentId) throws SQLException {
         DB.iud("UPDATE client SET ActiveStatus='" + status + "' WHERE Client_Id = '" + cilentId + "'");
     }
+
+    
 
 
 }
