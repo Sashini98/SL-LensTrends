@@ -74,23 +74,23 @@ public class forumH extends HttpServlet {
                     cnt = num.getInt("rowcount");
                 } catch (Exception e) {
                 }
-
+                a.add(q.gettitle());
+                a.add(q.getquestion());
+                a.add(q.getcategory());
+                
                 a.add(name);
 
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 String date = sdf.format(q.getquestion_date());
-                a.add(date);
-
-                a.add(q.gettitle());
-                a.add(q.getquestion());
-                a.add(q.getcategory());
+                a.add(date);       
+                           
                 a.add(cnt + "");
 
                
             }
             
              request.setAttribute("questions", a);
-             request.getRequestDispatcher("View/Fourm/ques.jsp").forward(request, response);
+             request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
         } catch (Exception e) {
 
         }
