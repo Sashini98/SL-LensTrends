@@ -160,7 +160,7 @@ public class PhotographerDaoImp implements PhotographerDao {
             p.setWebsite(photographer.getString("Website"));
             p.setBio(photographer.getString("Bio"));
             p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
-            p.setPostalCode(photographer.getInt("Postal_Code"));
+            p.setPostalCode(photographer.getInt("PostalCode"));
 
             return p;
 
