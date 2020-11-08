@@ -1,0 +1,271 @@
+.fixedheader{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 30;
+    top: 0%;
+    left: 0%;
+    border-top: 5px solid #cc7106;
+}
+
+.pageheader{
+    background-color: #fafafb;
+    height: 10%;  
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px 5%;
+    box-shadow: 0 5px 8px rgba(12,13,14,0.15);
+
+}
+
+.pageheader h1{
+    color: #383838;
+    margin-left: 2%;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 900;
+}
+
+.pageheader img {
+    height: 60px;
+    width: auto;
+}
+
+.headerul {
+    flex: 1;
+}
+
+.headerul ul li {
+    display: inline-block;
+    padding-right: 3%;
+}
+
+.headerul ul li:first-child{
+    border-left: 2px solid #999;
+    padding-left: 2%;
+}
+
+.headerul ul li a {
+    text-decoration: none;
+    color: #383838;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.headerul ul li a:hover {
+    color: #cc7106;
+}
+
+
+.notifyicn{
+    width: 2%;
+    border-right: 2px solid #999;
+    padding-right: 20px;
+
+}
+.notifyicn a img{
+
+    height: 25px;
+    width: 25px;
+    padding-right: 5%;
+
+
+}
+
+.logout  a {
+    border: none;
+    padding-left: 20px;
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight:bold;
+    font-size: 110%;
+    color: #383838;
+
+}
+
+.logout a:hover {
+    color:#cc7106;
+    cursor: pointer;
+}
+
+.searchInput {
+    margin-left: -1%;
+    margin-top: -0.9%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+}
+
+.searchInput input {
+    border:none;
+    background:white;
+    border-radius: 40px;
+    outline:none; 
+    color: black;
+    font-size: 18px;
+    transition:1s;
+    line-height: 28px;  
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 120%;
+    padding: 0% 7% 0% 7%;
+
+}
+
+.searchInput input:focus {
+    box-shadow: 0.1px 0.1px 5px #cc7106;
+}
+
+.main-content {
+    margin-top:9%;
+    margin-left: 0.5%;
+    /*display: flex;*/
+
+}
+
+.main-content .side-box {
+    background-color:#f0efef;
+    width: 13%;
+    border-top-right-radius:  10px;    
+    margin-top:-4%;
+    padding: 1% 1% 1% 1%;;
+    position: fixed;
+    height: 100%;
+    /*box-shadow: 0px 0.3px 5px #999;*/
+    margin-left: -1%;
+}
+
+.side-box .home ul {
+    list-style: none;
+    margin-left: -10%;
+    margin-top: 20%;
+}
+
+.side-box .home ul li {
+    margin-bottom: 7%;
+}
+
+.side-box .home ul li a {
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 100%;
+    margin-left:3%;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.main-content .ask-qn {
+    background-color: #415daa;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1%;
+    width:60%;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+
+.main-content .ask-qn a{
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+    font-size: 110%;
+
+}
+
+.questions {
+    background-color: #f0efef;
+    width: 65%;
+    height:auto;
+    margin-top: 2%;
+    margin-left:17%;        
+    border-radius: 10px;
+    padding: 1% 1.5% 3% 1.5%;
+    margin-bottom: 2%;
+    /*box-shadow: 0.1px 0.1px 10px #ccc;*/
+}
+
+.questions p {
+    font-family: 'Be Vietnam', sans-serif;
+    font-weight: lighter;
+}
+
+.questions h2{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.questions label {    
+    padding: 0.2% 0.5%;
+    border-radius: 5px;
+}
+
+.questions label a {
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: #415daa;
+    font-size: 80%;
+}
+
+.questions span {
+    font-family: 'Barlow', sans-serif;
+    float: right;
+    color: #676966;
+    text-decoration: none;
+}
+
+
+
+input[type=submit]
+{
+  display: inline-block;
+  padding: 2% 2%;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #335fa6;
+  border: none;
+  border-radius: 15px;
+}
+
+
+input[type=submit]:active 
+{
+  background-color: #083885;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+input[type=text]
+{
+   width : 95%;
+   height: 11%;
+}
+
+textarea
+{
+   width : 95%;
+}
+
+btn-group , button 
+{     
+  background-color: transparent;
+  border: 0.1px solid transparent; 
+  color: black;
+  float: left;
+  padding: 2% 4%;
+  text-align: center;
+  display: inline-block;
+  float: left;
+  
+}
+

@@ -32,6 +32,7 @@
                 <div class="answer">
                     <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i*6)+5) %> answers</a>
                     <a href="#" type="button" id="myAns1">Answer Now</a>
+                    <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
                 </div>
 
                 <div id="myModal1" class="modal">
@@ -51,22 +52,39 @@
                                 <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
                                 <span id="down">456</span>
                             </div>
-                        </div>
-
-                        <div class="answerqn">
-                            <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
-                                Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
-                                I hope that iOS6 will give developers greater control as it is a PITA.</p> 
-                            <span>Posted by: Aaketk</span> <span id="time">12 Jan 2020</span>
-                            <div class="updown">
-                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                                <span id="up">13</span> 
-                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-                                <span id="down">46</span>
+                            <div class="answer">
+                             <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">5 comments</a>
+                            <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="answerqn">
+                </div>
+                    
+                                       
+                    <div id="myModal4" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close4">&times;</span>
+                           <div class="answerqn">
+                               <form>
+                                   <h3><label for="Body"><b>Reasons for Reporting</b></label><br></h3><br>
+                                    <textarea id="body" name="body" rows="10" cols="100"></textarea><br><br><br>         
+                  
+                                     <input type="submit" id="submit" value="Report"><br><br><br>
+                               </form>
+                        </div>
+                    </div>
+
+                </div>
+                    
+                    <div id="myModal2" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close2">&times;</span>
+                           <div class="answerqn">
                             <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
                             <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
                             <div class="updown">
@@ -77,23 +95,29 @@
                             </div>
                         </div>
 
-                        <div class="answerqn">
-                            <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
-                            <div class="answerimg">
-                                <img src="../../Resources/Img/answer1.jpg">
-                                <img src="../../Resources/Img/answer2.jpg">
-                            </div>
-                            <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
-                            <div class="updown">
-                                <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                                <span id="up">103</span> 
-                                <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-                                <span id="down">416</span>
-                            </div>
-                        </div>
 
                     </div>
 
                 </div>
+                    
+                    <div id="myModal3" class="modal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close3">&times;</span>
+                           <div class="answerqn">
+                               <form>
+                                   <h3><label for="Body"><b>Comment</b></label><br></h3><br>
+                                    <textarea id="body" name="body" rows="10" cols="100"></textarea><br><br><br>         
+                  
+                                     <input type="submit" id="submit" value="Post Comment"><br><br><br>
+                               </form>
+                        </div>
+
+
+                    </div>
+
+                </div>
+ 
             </div>
 <%}%>
