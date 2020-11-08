@@ -13,6 +13,9 @@ body {
     height: 100%;
     text-align: center;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
 }
 
 .side-nav a {
@@ -33,7 +36,8 @@ body {
     margin-top: 15%;
     /*text-align: center;*/
     /*margin-left: 11%;*/
-    display: felx;
+    /*display: felx;*/
+    background-color: blue;
 }
 
 .side-nav .notification img {
@@ -43,8 +47,9 @@ body {
     float: left;
     margin-left:15%; 
     padding-right: 3%;
-    color: blue;
-    fill:white;
+    /*color: blue;*/
+    /*fill:white;*/
+    /*background: red;*/
 
 }
 
@@ -53,12 +58,15 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 110%;
     float: left;
+    /*background: red;*/
     
 }
 
 .side-nav .notification:hover {
     /*filter:  invert(100%) sepia(0%) saturate(7452%) hue-rotate(252deg) brightness(105%) contrast(99%);*/
-    background-color: blue;
+    background: red;
+    /*background-image: url('../..//Resources/Img/notify-white.svg');*/
+    color: white;
 }
 
 /*.side-nav .notification img {
