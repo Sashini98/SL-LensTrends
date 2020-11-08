@@ -31,6 +31,7 @@ public class DeactivateUser extends HttpServlet {
         
         try{
             char first = userid.charAt(0);
+            System.out.println(first);
             
             if(first=='C'){
                 ClientDao clientDao = new ClientDaoImpl();
