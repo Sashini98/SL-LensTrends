@@ -52,13 +52,16 @@
 
         </div>
 
-        <div class="sidebar">
-            <a class="active" href="#home">Home</a>
-            <a href="../Home.jsp">Post Event</a>
-            <a href="../Home.jsp">Past Event</a>
-        </div>
-        
         <div class="main-content">
+            <div class="side-box"> 
+                <div class="home">
+                    <ul>
+                        <li><a href="../../View/Home.jsp"> Home </a></li>
+                        <li><a href=""> Post Event </a></li>
+                        <li><a href=""> Past Event </a></li>
+                    </ul>
+                </div>
+            </div>
             <div class="events">                
                 <h2>Annual Get together</h2>
                 <p>Event Date:  </p>
