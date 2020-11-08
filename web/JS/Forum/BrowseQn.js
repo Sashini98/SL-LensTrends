@@ -1,36 +1,42 @@
 // Get the modal
 function popupanswer(btnid) {
 
-    if (btnid == "myBtn4") {
+    if (btnid == "myBtn1") {
 
-        var btn = document.getElementById("myBtn4");
+        var btn = document.getElementById("myBtn1");
 
-        var modal = document.getElementById("myModal4");
+        var modal = document.getElementById("myModal1");
 
-        var span = document.getElementsByClassName("close4")[0];
-
-    } else if (btnid == "myBtn3") {
-        
-        var btn = document.getElementById("myBtn3");
-
-        var modal = document.getElementById("myModal3");
-
-        var span = document.getElementsByClassName("close3")[0];
+        var span = document.getElementsByClassName("close1")[0];
 
     } else if (btnid == "myBtn2") {
+        
         var btn = document.getElementById("myBtn2");
 
         var modal = document.getElementById("myModal2");
 
         var span = document.getElementsByClassName("close2")[0];
 
-    } else if (btnid == "myBtn1") {
-        var btn = document.getElementById("myBtn1");
+    } 
+     else if (btnid == "comm") {
+        
+        var btn = document.getElementById("comm");
 
-        var modal = document.getElementById("myModal1");
+        var modal = document.getElementById("myModal3");
 
-        var span = document.getElementsByClassName("close1")[0];
-    }
+        var span = document.getElementsByClassName("close3")[0];
+
+    } 
+    
+     else if (btnid == "report") {
+        
+        var btn = document.getElementById("report");
+
+        var modal = document.getElementById("myModal4");
+
+        var span = document.getElementsByClassName("close4")[0];
+
+    } 
 
 
 
@@ -58,7 +64,7 @@ function view()
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
-
+       
         if (request.status === 200) {
             if (request.readyState === 4) {
 
@@ -67,6 +73,7 @@ function view()
                 var responce = request.responseText;
                 
                   document.getElementById("s").innerHTML=responce;
+                  alert(responce);
 
             }
         }

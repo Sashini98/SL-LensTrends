@@ -5,8 +5,10 @@
  */
 package Controller.Forum;
 
+import Controller.DaoImpl.QuestionDaoImpl;
 import DB.DB;
 import Model.Client;
+import Model.Dao.QuestionDao;
 import Model.Photographer;
 import Model.Question;
 import java.time.LocalDateTime;
@@ -29,11 +31,10 @@ public class AskQues extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String title = request.getParameter("title");
         System.out.println(title);
-
         String body = request.getParameter("body");
-        System.out.println(body);
 
         String category = request.getParameter("Category");
         System.out.println(category);
@@ -41,8 +42,16 @@ public class AskQues extends HttpServlet {
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
-
-        System.out.println(d);
+        
+        Question ques=new Question();
+        ques.settitle(title);
+        ques.setquestion(body);
+        ques.setcategory(category);
+        ques.setquestion_date(date);
+        
+        String t="";
+        t=ques.gettitle();
+        System.out.println(t);
 
         String id = "";
 
@@ -50,11 +59,14 @@ public class AskQues extends HttpServlet {
              
             Client c = (Client) request.getSession().getAttribute("loggedClient");
             id = c.getClientId();
-            
+            ques.setclientId(id);
+            System.out.println(ques.getclientId());
             
             
             try {
-                DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Client_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
+                QuestionDao questionDao = new QuestionDaoImpl();
+                questionDao.addQuestionifClient(ques);
+//                DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Client_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -63,14 +75,17 @@ public class AskQues extends HttpServlet {
         } else {
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             id = p.getPhotographerId();
+            ques.setPhotographerId(id);
             try {
-               DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Photographer_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
+                QuestionDao questionDao = new QuestionDaoImpl();
+                questionDao.addQuestionifPhotographer(ques);
+//               DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Photographer_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
             } catch (Exception e) {
             e.printStackTrace();
             }
         }
-        System.out.println(id);
+       
 
     }
 

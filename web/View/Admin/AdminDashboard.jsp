@@ -20,7 +20,14 @@
     <body style="background-color: #f7f6f9";>
         
         <div class="side-nav">
+            
             <a href="../Home.jsp"><img src="../../Resources/Img/7.png"></a>
+            
+            <div class="notification">
+                <img src="../../Resources/Img/notify.svg">
+                <p id="notify">Notification</p>
+            </div>
+            
         </div>
 
     </body>

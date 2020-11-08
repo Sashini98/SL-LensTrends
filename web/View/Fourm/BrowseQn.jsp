@@ -105,7 +105,7 @@
                 </div>
 
                 <div class="ask-qn">
-                    <a href="#" type="button">Ask Questions <a/>
+                    <a href="AskQues.jsp" type="button">Ask Questions <a/>
                 </div>
 
             </div>  
