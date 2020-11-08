@@ -5,7 +5,11 @@
  */
 package Controller.Admin;
 
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import DB.DB;
+import Model.Dao.ClientDao;
+import Model.Dao.PhotographerDao;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -27,6 +31,9 @@ public class UserMgt extends HttpServlet {
             throws ServletException, IOException {
 
         String email = request.getParameter("search");
+        
+        ClientDao clientDao = new ClientDaoImpl();
+        PhotographerDao photographerDao = new PhotographerDaoImp();
 
         try {
 
@@ -37,31 +44,30 @@ public class UserMgt extends HttpServlet {
             boolean photographerAcc = photographer.next();
 
             ArrayList<String> a = new ArrayList();
-            
+
             if (clientAcc && photographerAcc) {
 
                 a.add(client.getString("Client_Id"));
-                a.add(client.getString("Fname") + " " + client.getString("Lname") );
+                a.add(client.getString("Fname") + " " + client.getString("Lname"));
                 a.add("Client");
-                
+
                 a.add(photographer.getString("Photographer_Id"));
                 a.add(photographer.getString("Fname") + " " + client.getString("Lname"));
                 a.add("Photographer");
-                
+
             } else if (clientAcc) {
 
                 a.add(client.getString("Client_Id"));
-                a.add(client.getString("Fname") + " " + client.getString("Lname") );
+                a.add(client.getString("Fname") + " " + client.getString("Lname"));
                 a.add("Client");
-                
+
             } else if (photographerAcc) {
 
                 a.add(photographer.getString("Photographer_Id"));
                 a.add(photographer.getString("Fname") + " " + photographer.getString("Lname"));
-                a.add("Photographer");               
+                a.add("Photographer");
             }
-            
-         
+
             Gson g = new Gson();
             String toJson = g.toJson(a);
             response.getWriter().write(toJson);
