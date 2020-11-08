@@ -23,12 +23,12 @@
             
             <a href="../Home.jsp"><img src="../../Resources/Img/7.png"></a>
             
-            <div class="notification">
-                <img src="../../Resources/Img/notify.svg" />
+            <div id="notifyDiv" onmouseover="notifyButtonChange()" onmouseout="notifyButtonBack()" class="notification">
+                <img id="notificationIcon" src="../../Resources/Img/notify.svg" />
                 <p id="notify">Notification</p>
             </div>
             
         </div>
-
+        <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
     </body>
 </html>
