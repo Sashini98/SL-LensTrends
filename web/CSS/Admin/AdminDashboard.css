@@ -72,7 +72,7 @@ body {
 .side-nav .notification:hover {
     /*filter:  invert(100%) sepia(0%) saturate(7452%) hue-rotate(252deg) brightness(105%) contrast(99%);*/
     /*background-image: url('../..//Resources/Img/notify-white.svg');*/
-    color: white;
+    /*color: white;*/
 }
 
 /*.side-nav .notification img {
