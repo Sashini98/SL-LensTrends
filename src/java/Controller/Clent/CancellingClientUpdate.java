@@ -24,27 +24,27 @@ public class CancellingClientUpdate extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String field = request.getParameter("canceledit");
-         
+
         Client c = (Client) request.getSession().getAttribute("loggedClient");
         String clientid = c.getClientId();
 
         if (field.equals("fname")) {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
-                
-                Client client = clientdao.getClient(clientid);
+
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getFname());
-                
+
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         } else if (field.equals("lname")) {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
-                
-                Client client = clientdao.getClient(clientid);
+
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getLname());
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -52,18 +52,18 @@ public class CancellingClientUpdate extends HttpServlet {
         } else if (field.equals("email")) {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
-                
-                Client client = clientdao.getClient(clientid);
+
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getEmail());
-                
+
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
         } else if (field.equals("address")) {
             try {
-               ClientDao clientdao = new ClientDaoImpl();
-                
-                Client client = clientdao.getClient(clientid);
+                ClientDao clientdao = new ClientDaoImpl();
+
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getAddress_no());
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -71,8 +71,8 @@ public class CancellingClientUpdate extends HttpServlet {
         } else if (field.equals("city")) {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
-                
-                Client client = clientdao.getClient(clientid);
+
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getCity());
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -80,13 +80,13 @@ public class CancellingClientUpdate extends HttpServlet {
         } else if (field.equals("province")) {
             try {
                 ClientDao clientdao = new ClientDaoImpl();
-                
-                Client client = clientdao.getClient(clientid);
+
+                Client client = clientdao.getClientbyId(clientid);
                 response.getWriter().write(client.getProvince());
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } 
+        }
     }
 
 }

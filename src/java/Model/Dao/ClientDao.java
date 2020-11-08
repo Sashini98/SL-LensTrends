@@ -30,7 +30,9 @@ public interface ClientDao {
         
     public void  deleteClient(String clientId) throws SQLException;
     
-    public Client  getClient(String clientId) throws SQLException;
+    public Client  getClientbyId(String clientId) throws SQLException;
+    
+    public Client  getClientbyEmail(String clientId) throws SQLException;
     
     
 }

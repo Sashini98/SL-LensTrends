@@ -6,8 +6,6 @@
 package Controller.Admin;
 
 import DB.DB;
-import Model.Client;
-import Model.Photographer;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.sql.ResultSet;

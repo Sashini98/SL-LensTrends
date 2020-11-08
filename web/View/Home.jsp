@@ -52,7 +52,7 @@
                     <%
                         if (!logged) {
                     %>
-                    <a href="../View/login.jsp?action=User&loc=ch" >Login</a> 
+                    <a href="../View/login.jsp?loc=ch" >Login</a> 
                     <%
                     } else {
                     %>
