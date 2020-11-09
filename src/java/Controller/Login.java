@@ -120,7 +120,7 @@ public class Login extends HttpServlet {
             } else if (photographerAcc) {
 
                 try {
-
+                    System.out.println("awwwaaaaaa");
                     ResultSet photographer = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' AND Password = '" + pw + "' ");
 
                     if (photographer.next()) {
@@ -151,6 +151,7 @@ public class Login extends HttpServlet {
                     }
 
                 } catch (Exception e) {
+                    System.out.println("loooll");
                     request.setAttribute("account", "false");
                     request.setAttribute("msg", "Invalid Password");
                     request.getRequestDispatcher("View/login.jsp").forward(request, response);
