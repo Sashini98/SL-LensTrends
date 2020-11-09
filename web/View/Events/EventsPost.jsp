@@ -54,8 +54,8 @@
         </div>
 
         <div class="main-content">
-            
-             <div class="side-box"> 
+
+            <div class="side-box"> 
                 <div class="home">
                     <ul>
                         <li><a href="../../View/Home.jsp"> Home </a></li>
@@ -66,76 +66,73 @@
 
 
             </div>  
-            <div name="s" id="s">
-                <div class="events">                
-                    <form>
-                         <div class="formContent">                             
+
+            <div class="events">                
+                <form>
+                    <h2>Enter Your Event Details</h2>
+                    <div class="formContent">                             
                         <span class="content_name"> Event Name </span><br>
                         <input type="text" name="name" required/>
                         <label for="name" class="label_name">
                         </label>
                     </div><br>
-                    
-                     <div class="formContent">
-                            <span class="content_name"> Date of Event </span><br>
+
+                    <div class="formContent">
+                        <span class="content_name"> Date of Event </span><br>
                         <input type="date" name="dob" required class="doe"/>
                         <label for="doe" class="label_name">
                         </label>
                     </div><br>
-                    
-                     <div class="formContent">
-                            <span class="content_name"> Event Venue </span><br>
+
+                    <div class="formContent">
+                        <span class="content_name"> Event Venue </span><br>
                         <input type="text" name="venue" required/>
                         <label for="venue" class="label_name">
                         </label>
                     </div><br>
-                    
-                     <div class="formContent">
-                            <span class="content_name"> Event Starting Time </span><br>
+
+                    <div class="formContent">
+                        <span class="content_name"> Event Starting Time </span><br>
                         <input type="text" name="time" required/>
                         <label for="time" class="label_name">
                         </label>
                     </div><br>
-                    
-                     <div class="formContent">
-                            <span class="content_name"> Event Description </span><br>
+
+                    <div class="formContent">
+                        <span class="content_name"> Event Description </span><br>
                         <input type="text" name="desc" required rows="10" cols="50"/>
                         <label for="desc" class="label_name">
                         </label>
                     </div><br>
-                    
+
                     <div class="formContent">
-                            <span class="content_name"> Photographer Name </span><br>
+                        <span class="content_name"> Photographer Name </span><br>
                         <input type="text" name="pname" required/>
                         <label for="pname" class="label_name">
                         </label>
                     </div><br>
-                    
+
                     <div class="formContent">
-                            <span class="content_name"> Estimated Budget Range</span><br>
+                        <span class="content_name"> Estimated Budget Range</span><br>
                         <input type="text" name="estimate" required/>
                         <label for="estimate" class="label_name">
                         </label>
                     </div>
                     <br><br><br>
-                <input type="submit" id="submit" value="Post Event"><br><br><br>
+                    <div class="formContent">
+                        <input type="submit" id="submit" value="Post Event">
+                    </div>
+                    <br><br><br>
 
 
-                    </form>
-                </div>       
-            </div>
+                </form>
+            </div>       
 
         </div>
-    </div>
 
 
-</div>
+        <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
 
-</div>
-
-
-<script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
-
-</body>
+    </body>
 </html>
 
