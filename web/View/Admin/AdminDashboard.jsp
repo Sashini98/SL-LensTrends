@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Admin</title>
     </head>
-    <body style="background-color: #fff;">
+    <body style="background-color: #f7f6f9;">
 
         <div class="side-nav">
 
@@ -54,6 +54,11 @@
             </div>
 
         </div>
+        
+        
+        
+        
+        
         <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
     </body>
 </html>

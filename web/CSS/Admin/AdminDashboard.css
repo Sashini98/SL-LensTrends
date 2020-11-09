@@ -6,7 +6,7 @@ body {
 
 .side-nav {
     float: left;
-    background-color: #f7f6f9;
+    background-color: #fff;
     /*border-right: 4px solid #cc7106;*/
     padding: 2% 0%;
     width:16%;
@@ -47,8 +47,8 @@ body {
 
 .side-nav .notification img {
     height: 100%;
-    width: 11%;
-    padding: 0% 5% 1% 5%;
+    width: 13%;
+    padding: 0% 8.5% 1% 5%;
     /*margin-top: 0%;*/
     /*float: left;*/
     /*margin-left:15%;*/ 
@@ -71,7 +71,7 @@ body {
 }
 
 .side-nav  .notification p a{
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Lato', sans-serif;
     font-size: 110%;
     text-decoration: none;
     color: black;
@@ -84,7 +84,7 @@ body {
     background: #2196F3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 5%;
+    /*height: 5%;*/
     /*color: white;*/
 
 }
@@ -104,8 +104,8 @@ body {
 
 .side-nav .photomanage img {
     height: 100%;
-    width: 13%;
-    padding: 0% 3% 1% 5%;
+    width: 17%;
+    padding: 0% 5.5% 1% 4%;
     /*margin-top: 0%;*/
     /*float: left;*/
     /*margin-left:15%;*/ 
@@ -128,7 +128,7 @@ body {
 }
 
 .side-nav  .photomanage p a{
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Lato', sans-serif;
     font-size: 110%;
     text-decoration: none;
     color: black;
@@ -141,7 +141,7 @@ body {
     background: #2196F3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 5%;
+    /*height: 5%;*/
     /*color: white;*/
 
 }
@@ -161,8 +161,8 @@ body {
 
 .side-nav .photoapproval img {
     height: 100%;
-    width: 11%;
-    padding: 0% 5% 1% 5%;
+    width: 13%;
+    padding: 0% 8.5% 1% 5%;
     /*margin-top: 0%;*/
     /*float: left;*/
     /*margin-left:15%;*/ 
@@ -185,7 +185,7 @@ body {
 }
 
 .side-nav  .photoapproval p a{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 110%;
     text-decoration: none;
     color: black;
@@ -198,7 +198,7 @@ body {
     background: #2196F3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 5%;
+    /*height: 5%;*/
     /*color: white;*/
 
 }
@@ -218,8 +218,8 @@ body {
 
 .side-nav .forum img {
     height: 100%;
-    width: 14%;
-    padding: 0% 2% 1% 5%;
+    width: 17%;
+    padding: 0% 6% 1% 4%;
     /*margin-top: 0%;*/
     /*float: left;*/
     /*margin-left:15%;*/ 
@@ -242,7 +242,7 @@ body {
 }
 
 .side-nav  .forum p a{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 110%;
     text-decoration: none;
     color: black;
@@ -255,7 +255,7 @@ body {
     background: #2196F3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 5%;
+    /*height: 5%;*/
     /*color: white;*/
 
 }
@@ -276,7 +276,7 @@ body {
 .side-nav .user img {
     height: 100%;
     width: 17%;
-    padding: 0% 0% 1% 5%;
+    padding: 0% 5.5% 1% 5%;
     /*margin-top: 0%;*/
     /*float: left;*/
     /*margin-left:15%;*/ 
@@ -299,7 +299,7 @@ body {
 }
 
 .side-nav  .user p a{
-    font-family: 'Poppins', sans-serif;
+   font-family: 'Lato', sans-serif;
     font-size: 110%;
     text-decoration: none;
     color: black;
@@ -312,7 +312,7 @@ body {
     background: #2196F3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 5%;
+    /*height: 5%;*/
     /*color: white;*/
 
 }
@@ -333,7 +333,7 @@ body {
 .side-nav .summary  img {
     height: 100%;
     width: 14%;
-    padding: 0% 3% 1% 5%;
+    padding: 0% 6.5% 1% 7%;
     /*margin-top: 0%;*/
     /*float: left;*/
     /*margin-left:15%;*/ 
@@ -352,11 +352,12 @@ body {
         font-size: 130%;*/
     /*float: left;*/
     /*background: red;*/
+    padding: 0%;
 
 }
 
 .side-nav  .summary  p a{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 110%;
     text-decoration: none;
     color: black;
@@ -369,7 +370,6 @@ body {
     background: #2196F3;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    height: 5%;
-    /*color: white;*/
+
 
 }
