@@ -7,99 +7,78 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>View Events</title>
-        <link rel="stylesheet" href ="../../CSS/Events/ViewEvent.css">
-        <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
-        
-        </head>
-    <body style="background-image: url(../../Resources/Img/VieweEvent.jpg);background-size: 100%; ">
-        
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../../CSS/Events/ViewEvent.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        <title> View Event</title>
+
+
+
+
+    </head>
+    <body style="background-color: #f7f6f9;" onload="view()">
+
         <div class="fixedheader">  
+
             <div class="pageheader">
+
                 <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
                     <ul>
 
-                       <li><a href="EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="../Photographer/PhotographerUpdate.jsp" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="#" type="button"> Profile </a></li>
+                        <li><a href="#" type="button"> Settings </a></li>
 
                     </ul>
                 </div>
-
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <a href="#" type="button"> Logout </a>
                 </div>
+
             </div>
-        </div>      
 
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h1>Client Details</h1>
-                    <hr>
-                    <form>   
-                        <label for="name"><b>Name</b></label><br>
-                        <input type="text" name="name"><br>
-
-                        <label for="date"><b>Email</b></label><br>
-                        <input type="text" name="email"><br>
-
-                        <label for="Event Venue"><b>Contact Number</b></label><br>
-                        <input type="text" name="number"><br>
-
-                        <label for="Event Starting Time"><b>Address</b></label><br>
-                        <input type="text" name="address"><br>
-
-                    </form>
-                </div>
-            </div>
         </div>
 
-        <div class="row">
-            <div class="column">
-                <div class="card">
-                    <h1>New Event</h1>
-                    <hr>
-                    
-                    <form>
-                    <label for="name"><b>Event Name</b></label><br>
-                    <input type="text" name="name"><br>
-
-                    <label for="date"><b>Date Of Event</b></label><br>
-                    <input type="text" name="date"><br>
-
-                    <label for="Event Venue"><b>Event Venue</b></label><br>
-                    <input type="text" name="Event Venue"><br>
-
-                    <label for="Event Starting Time"><b>Event Starting Time</b></label><br>
-                    <input type="text" name="Event Starting Time"><br>
-
-                    <label for="Event Description"><b>Event Description</b></label><br>
-                    <input type="text" name="Event Description"><br>
-
-                    <label for="Estimated Budget Range"><b>Estimated Budget Range</b></label><br>
-                    <input type="text" name="Estimated Budget Range"><br>
-
-                    <div class="clearfix">
-                        <button type="submit" class="acceptbtn">Accept</button>
-                        <button type="button" class="cancelbtn">Reject</button>
-                    </div>
-                    </form>
+        <div class="main-content">
+            <div class="side-box"> 
+                <div class="home">
+                    <ul>
+                        <li><a href="../../View/Home.jsp"> Home </a></li>
+                        <li><a href=""> Post Event </a></li>
+                        <li><a href=""> Past Event </a></li>
+                    </ul>
                 </div>
+            </div>
+            <div class="events">                
+                <h2>Event Details</h2>
+                <p>Event Date:  </p>
+                <p>Event venue:</p>
+                <p>Estimate Budget:</p>
+
+                <button type="submit" class="Approvebtn">Accept</button>
+                <button type="button" class="Closebtn">Reject</button>
+
+            </div>
+
+            <div class="clients">                
+                <h2>Client Details</h2>
+                <p>Client Name:  </p>
+                <p>Email:</p>
+                <p>Address:</p>
+                <br><br><br>
             </div>
         </div>
 
