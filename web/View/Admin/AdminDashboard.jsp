@@ -17,17 +17,42 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Admin</title>
     </head>
-    <body style="background-color: #f7f6f9;">
-        
+    <body style="background-color: #fff;">
+
         <div class="side-nav">
-            
+
             <a href="../Home.jsp"><img src="../../Resources/Img/7.png"></a>
-            
-            <div id="notifyDiv" onmouseover="notifyButtonChange()" onmouseout="notifyButtonBack()" class="notification">
+
+            <div id="notifyDiv" onmouseover="notifyButtonChange('notifyDiv')" onmouseout="notifyButtonBack('notifyDiv')" class="notification">
                 <img id="notificationIcon" src="../../Resources/Img/notify.svg" />
-                <p id="notify">Notification</p>
+                <p><a href="#" type="button"  id="notify">Notification</a></p>
+            </div>
+
+            <div id="photomanageDiv" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" class="photomanage">
+                <img id="photomanageIcon" src="../../Resources/Img/photomanagement.svg" />
+                <p><a href="#" type="button"  id="photomanagement">Manage Photo</a></p>
+            </div>
+
+            <div id="photoapprovalDiv" onmouseover="photoapprovalButtonChange('photoapprovalDiv')" onmouseout="photoapprovalButtonBack('photoapprovalDiv')" class="photoapproval">
+                <img id="photoapprovalIcon" src="../../Resources/Img/photoreview.svg" />
+                <p><a href="#" type="button"  id="photo-approval">Photo Approval</a></p>
+            </div>
+
+            <div id="forumDiv" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" class="forum">
+                <img id="forumIcon" src="../../Resources/Img/forummangement.svg" />
+                <p><a href="#" type="button"  id="forummanage">Manage Forum</a></p>
+            </div>
+
+            <div id="userDiv" onmouseover="userButtonChange('userDiv')" onmouseout="userButtonBack('userDiv')" class="user">
+                <img id="userIcon" src="../../Resources/Img/user.svg" />
+                <p><a href="#" type="button"  id="usermanage">Manage User</a></p>
             </div>
             
+            <div id="summaryDiv" onmouseover="summaryButtonChange('summaryDiv')" onmouseout="summaryButtonBack('summaryDiv')" class="summary">
+                <img id="summaryIcon" src="../../Resources/Img/summary.svg" />
+                <p><a href="#" type="button"  id="summarytext">Summary</a></p>
+            </div>
+
         </div>
         <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
     </body>
