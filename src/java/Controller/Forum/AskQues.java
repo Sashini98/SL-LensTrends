@@ -34,7 +34,7 @@ public class AskQues extends HttpServlet {
         
         String title = request.getParameter("title");
         System.out.println(title);
-        String body = request.getParameter("body");
+        String body = request.getParameter("data");
 
         String category = request.getParameter("Category");
         System.out.println(category);

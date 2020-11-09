@@ -15,6 +15,7 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/forum/AskQues.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <title>Questions</title>
     </head>
     <body style="background-color: #f7f6f9;">
@@ -54,8 +55,8 @@
         </div>
 
         <div class="main-content">
-            
-             <div class="side-box"> 
+
+            <div class="side-box"> 
                 <div class="home">
                     <ul>
                         <li><a href="../../View/Home.jsp"> Home </a></li>
@@ -73,58 +74,72 @@
                 <div class="questions">                
                     <form action="../../AskQues" method="POST">
                         <h3><label for="Title"><b>Title</b></label><br></h3>
-                    <input type="text" id="title" name="title"><br><br><br>
+                        <input type="text" id="title" name="title"><br><br><br>
 
-                    <h3><label for="Body"><b>Body</b></label><br></h3>
-                    <div class="btn-group">
+                        <h3><label for="Body"><b>Body</b></label><br></h3>
+<!--                        <div class="btn-group">
 
-                        <button type="button" style="margin-left:4%"id="bold" name="bold"> <b>B</b> </button>
-                        <button type="button" id="italic"><i>I</i></button><br>      
-<!--                        <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:7%;height:6%;"></button>
-                        <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:7%;height:6%;left: 0%"></button>-->
-
-
-                    </div><br><br><br>
+                            <button type="button" style="margin-left:4%"id="b" name="b" onclick="bold()"> <b>B</b> </button>
+                            <button type="button" id="italic"><i>I</i></button><br>      
+                                                    <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:7%;height:6%;"></button>
+                                                    <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:7%;height:6%;left: 0%"></button>
 
 
-                    <textarea id="body" name="body" rows="10" cols="50"></textarea><br><br><br>
+                        </div>-->
+<br><br><br>
 
-                    <h3><label for="Category"><b>Category</b></label><br></h3>
-<!--                    <div class="dropdown-container">
-                        <select name="Category">
-                            <option value="beginers">-------------<p><i class="arrow down"></i></p></option>
-                            <option value="beginers">Beginners questions</option>
-                            <option value="equipments">Photo Equipments</option>
-                            <option value="techniques">Photography and Techniques</option>
-                            <option value="mobile">Mobile Photography</option>
-                        </select>
-                    </div>-->
-                    
-                    
-                     <div class="filter-radio">
-                    <label class="container-radio">Beginners questions
-                        <input type="radio" checked="checked" name="Category" value="Beginners questions">
-                        <span class="checkmark-radio"></span>
-                    </label>
-                    <label class="container-radio">Photo Equipments
-                        <input type="radio" name="Category" value="Photo Equipments">
-                        <span class="checkmark-radio"></span>
-                    </label>
-                    <label class="container-radio">Photography and Techniques
-                        <input type="radio" name="Category" value="Photography and Techniques">
-                        <span class="checkmark-radio"></span>
-                    </label>
-                    <label class="container-radio">Mobile Photography
-                        <input type="radio" name="Category" value="Mobile Photography">
-                        <span class="checkmark-radio"></span>
-                    </label>
+                        <fieldset>
+                            <button type="button" class="fontStyle" onclick="document.execCommand('italic', false, null);" title="Italicize Highlighted Text"><i>I</i>
+                            </button>
+                            <button type="button" class="fontStyle" onclick="document.execCommand('bold', false, null);" title="Bold Highlighted Text"><b>B</b>
+                            </button>
+                            <button type="button" class="fontStyle" onclick="document.execCommand('underline', false, null);"><u>U</u>
+                            </button>
+                        </fieldset>
 
-                </div>
-                    
-                    
-                    
-                    <br><br><br>
-                <input type="submit" id="submit" value="Ask my question"><br><br><br>
+                        <div id="editor1" contenteditable="true">
+                            
+                        </div>
+                        
+
+                        <!--<textarea id="body" name="body" rows="10" cols="50"contenteditable="true"></textarea><br><br><br>-->
+
+                        <h3><label for="Category"><b>Category</b></label><br></h3>
+                        <!--                    <div class="dropdown-container">
+                                                <select name="Category">
+                                                    <option value="beginers">-------------<p><i class="arrow down"></i></p></option>
+                                                    <option value="beginers">Beginners questions</option>
+                                                    <option value="equipments">Photo Equipments</option>
+                                                    <option value="techniques">Photography and Techniques</option>
+                                                    <option value="mobile">Mobile Photography</option>
+                                                </select>
+                                            </div>-->
+
+
+                        <div class="filter-radio">
+                            <label class="container-radio"><h8>Beginners questions</h8>
+                                <input type="radio" checked="checked" name="Category" value="Beginners questions">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                            <label class="container-radio"><h8>Photo Equipments</h8>
+                                <input type="radio" name="Category" value="Photo Equipments">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                            <label class="container-radio"><h8>Photography and Techniques</h8>
+                                <input type="radio" name="Category" value="Photography and Techniques">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                            <label class="container-radio"><h8>Mobile Photography</h8>
+                                <input type="radio" name="Category" value="Mobile Photography">
+                                <span class="checkmark-radio"></span>
+                            </label>
+
+                        </div>
+
+
+
+                        <br><br><br>
+                        <input type="submit" id="submit" value="Ask my question"><br><br><br>
 
 
                     </form>
@@ -140,7 +155,7 @@
 </div>
 
 
-<script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
+<script src="../../JS/Forum/AskQues.js" type="text/javascript" ></script>
 
 </body>
 </html>

@@ -224,48 +224,109 @@
 
 input[type=submit]
 {
-  display: inline-block;
-  padding: 2% 2%;
-  font-size: 15px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #335fa6;
-  border: none;
-  border-radius: 15px;
+    display: inline-block;
+    padding: 2% 2%;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #335fa6;
+    border: none;
+    border-radius: 15px;
 }
 
 
 input[type=submit]:active 
 {
-  background-color: #083885;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #083885;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 input[type=text]
 {
-   width : 95%;
-   height: 11%;
+    width : 95%;
+    height: 11%;
 }
 
 textarea
 {
-   width : 95%;
+    width : 95%;
 }
 
 btn-group , button 
 {     
-  background-color: transparent;
-  border: 0.1px solid transparent; 
-  color: black;
-  float: left;
-  padding: 2% 4%;
-  text-align: center;
-  display: inline-block;
-  float: left;
-  
+    background-color: transparent;
+    border: 0.1px solid transparent; 
+    color: black;
+    float: left;
+    padding: 2% 4%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+
 }
 
+
+.filter-radio .container-radio {
+    margin-left: 15%;
+}
+
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 25%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    font-size: 100%;
+    font-family: 'Didact Gothic', sans-serif;
+    /*margin-top: -2%;*/
+}
+/* Hide the browser's default radio button */
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-radius:50%;
+    margin-top: 0.5%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark-radio {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark-radio {
+    background-color: #f7830f;
+}
+
+h8
+{
+    margin-left: 5%;
+}
+
+#editor1 {
+    background-color: white;
+    width : 95%;
+    margin: 2px;
+    height:300px;
+}
+fieldset {
+    margin: 0.5px;
+    width: 50%;;
+}
