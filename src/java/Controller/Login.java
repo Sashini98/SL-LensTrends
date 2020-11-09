@@ -52,7 +52,7 @@ public class Login extends HttpServlet {
                         a.setAdminId(admin.getInt("Admin_id"));
 
                         request.getSession().setAttribute("loggedAdmin", a);
-                        response.sendRedirect("View/Admin/UserManagement.jsp");
+                        response.sendRedirect("View/Admin/AdminDashboard.jsp");
 
                     } else {
                         request.setAttribute("account", "false");
