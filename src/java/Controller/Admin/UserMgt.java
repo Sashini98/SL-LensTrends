@@ -38,14 +38,13 @@ public class UserMgt extends HttpServlet {
 
             ClientDao clientDao = new ClientDaoImpl();
             Client client = clientDao.getClientbyEmail(email);
-            
+
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerByEmail(email);
 
             ArrayList<String> a = new ArrayList();
 
-            if (client!= null && photographer!= null) {
-
+            if (client != null && photographer != null) {
                 a.add(client.getClientId());
                 a.add(client.getFname() + " " + client.getLname());
                 a.add("Client");
@@ -54,19 +53,21 @@ public class UserMgt extends HttpServlet {
                 a.add(photographer.getFname() + " " + photographer.getLname());
                 a.add("Photographer");
 
-            } else if (client!= null) {
+            } else if (client != null) {
 
                 a.add(client.getClientId());
                 a.add(client.getFname() + " " + client.getLname());
                 a.add("Client");
 
-            } else if (photographer!= null) {
+            } else if (photographer != null) {
 
                 a.add(photographer.getPhotographerId());
                 a.add(photographer.getFname() + " " + photographer.getLname());
                 a.add("Photographer");
+            } else {
+                a.add("error");
             }
-
+            
             Gson g = new Gson();
             String toJson = g.toJson(a);
             response.getWriter().write(toJson);

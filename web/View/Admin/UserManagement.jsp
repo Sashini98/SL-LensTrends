@@ -107,8 +107,8 @@
                     <font color="blue">Deactivate Users</font><hr>
                     <input id="deactivateUser" type="text" placeholder="Type here">
                     <button onclick="viewResults()">Search</button>
-                    <br><br>
-
+                    <br>
+                    <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
                     <table id="reportedUserTable" border="1" width="100%" height="40px">
                         <thead class="table_top" >
                             <tr>
@@ -162,6 +162,9 @@
                         </tr>
                         <tr>
                             <th colspan =2><button onclick="viewDeactivate()" class='btn2' id="deactivate">Deactivate</button></th>
+                        </tr>
+                        <tr>
+                            <th colspan =2><button onclick="clearFieldsofDeactivateUsers()" class='btn2' id="deactivate">Clear Fields</button></th>
                         </tr>
 
                     </table>
