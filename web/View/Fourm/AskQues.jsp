@@ -72,69 +72,68 @@
             </div>  
             <div name="s" id="s">
                 <div class="questions">                
-                    <form action="../../AskQues" method="POST">
+                    <form action="../../AskQues" method="POST" onsubmit="FormSubmit(this);">
                         <h3><label for="Title"><b>Title</b></label><br></h3>
                         <input type="text" id="title" name="title"><br><br><br>
 
                         <h3><label for="Body"><b>Body</b></label><br></h3>
-<!--                        <div class="btn-group">
-
-                            <button type="button" style="margin-left:4%"id="b" name="b" onclick="bold()"> <b>B</b> </button>
-                            <button type="button" id="italic"><i>I</i></button><br>      
-                                                    <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:7%;height:6%;"></button>
-                                                    <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:7%;height:6%;left: 0%"></button>
-
-
-                        </div>-->
-<br><br><br>
+                        <!--                        <div class="btn-group">
+                        
+                                                    <button type="button" style="margin-left:4%"id="b" name="b" onclick="bold()"> <b>B</b> </button>
+                                                    <button type="button" id="italic"><i>I</i></button><br>      
+                                                                            <button type="button" id="image"><img src="../../Resources/Img/gallery.png" style="width:7%;height:6%;"></button>
+                                                                            <button type="button" id="link"><img src="../../Resources/Img/link.png" style="width:7%;height:6%;left: 0%"></button>
+                        
+                        
+                                                </div>-->
+                        <br><br><br>
 
                         <fieldset>
-                            <button type="button" class="fontStyle" onclick="document.execCommand('italic', false, null);" title="Italicize Highlighted Text"><i>I</i>
+                            <button type="button" class="fontStyle" onclick="javascript:lbc('editor1', '*', '*');" title="Italicize Highlighted Text"><i>I</i>
                             </button>
                             <button type="button" class="fontStyle" onclick="document.execCommand('bold', false, null);" title="Bold Highlighted Text"><b>B</b>
                             </button>
-                            <button type="button" class="fontStyle" onclick="document.execCommand('underline', false, null);"><u>U</u>
+                            <button type="button" class="fontStyle" onclick="document.execCommand('underline', false, null);" title="Underline Highlighted Text"><u>U</u>
                             </button>
                         </fieldset>
 
-                        <div id="editor1" contenteditable="true">
-                            
-                        </div>
-                        
+                        <div id="editor1" contenteditable="true"></div><br><br><br>
+
 
                         <!--<textarea id="body" name="body" rows="10" cols="50"contenteditable="true"></textarea><br><br><br>-->
 
-                        <h3><label for="Category"><b>Category</b></label><br></h3>
-                        <!--                    <div class="dropdown-container">
-                                                <select name="Category">
-                                                    <option value="beginers">-------------<p><i class="arrow down"></i></p></option>
-                                                    <option value="beginers">Beginners questions</option>
-                                                    <option value="equipments">Photo Equipments</option>
-                                                    <option value="techniques">Photography and Techniques</option>
-                                                    <option value="mobile">Mobile Photography</option>
-                                                </select>
-                                            </div>-->
+                        <h3><label for="Category"><b>Category</b></label></h3>
+                        <div class="box">
+                            <input type="hidden" name="category" />
+                            <select name="categ" onchange="DropDownChanged(this);">
+                                <option value="beginers">Beginners questions</option>
+                                <option value="equipments">Photo Equipments</option>
+                                <option value="techniques">Photography and Techniques</option>
+                                <option value="mobile">Mobile Photography</option>
+                                <option value="">Other..</option>
+                            </select> <input type="text" name="c_txt" style="display: none;" />
+                        </div>
 
-
+<!--
                         <div class="filter-radio">
                             <label class="container-radio"><h8>Beginners questions</h8>
-                                <input type="radio" checked="checked" name="Category" value="Beginners questions">
+                                <input type="checkbox" checked="checked" name="Category" value="Beginners questions">
                                 <span class="checkmark-radio"></span>
                             </label>
                             <label class="container-radio"><h8>Photo Equipments</h8>
-                                <input type="radio" name="Category" value="Photo Equipments">
+                                <input type="checkbox" name="Category" value="Photo Equipments">
                                 <span class="checkmark-radio"></span>
                             </label>
                             <label class="container-radio"><h8>Photography and Techniques</h8>
-                                <input type="radio" name="Category" value="Photography and Techniques">
+                                <input type="checkbox" name="Category" value="Photography and Techniques">
                                 <span class="checkmark-radio"></span>
                             </label>
                             <label class="container-radio"><h8>Mobile Photography</h8>
-                                <input type="radio" name="Category" value="Mobile Photography">
+                                <input type="checkbox" name="Category" value="Mobile Photography">
                                 <span class="checkmark-radio"></span>
                             </label>
 
-                        </div>
+                        </div>-->
 
 
 
