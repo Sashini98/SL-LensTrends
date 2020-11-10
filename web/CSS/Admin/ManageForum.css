@@ -42,29 +42,31 @@
   background-color: #d9d9d9;
 }
 
-.searchInput {
-    margin-left: 25%;
-    margin-top: -0.9%;
-    position: absolute;
+div .search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 75%;
+  background: #f1f1f1;
 }
 
-.searchInput input {
-    border:none;
-    background:#f1f1f1;
-    border-radius: 40px;
-    outline:none; 
-    color: black;
-    font-size: 18px;
-    line-height: 28px;  
-    font-family: 'Source Sans Pro', sans-serif;
-    width: 120%;
-    padding: 0% 7% 0% 7%;
-
+div .search button {
+  float: left;
+  width: 25%;
+  padding: 4.1px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
 }
 
-.searchInput input:focus {
-    box-shadow: 0.1px 0.1px 5px #cc7106;
+div .search button:hover {
+  background: #0b7dda;
 }
+
 
 .formContent{
     display: flex;
@@ -97,7 +99,7 @@ input[type=text]
     background-color: #f0efef;
 }
 
-button {
+.btn {
   background-color: #335fa6;
   color: white;
   padding: 14px 20px;

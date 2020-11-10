@@ -1,11 +1,12 @@
 .box {
+    background-color: white;
     width: 75%;
     height:auto;
     margin-top: 2%;
     margin-left:20%;        
     border-radius: 10px;
-    padding: 1% 1.5% 3% 1.5%;
-    margin-bottom: 2%;
+    padding: 1% 1.5% 1% 1.5%;
+/*    margin-bottom: 2%;*/
     /*box-shadow: 0.1px 0.1px 10px #ccc;*/
 }
 
@@ -33,9 +34,9 @@
     transition: transform .5s ease-in-out;
 }
 
-.column a img:hover{
+/*.column a img:hover{
     transform: scale(1.5);
-}
+}*/
 
 @media screen and (max-width: 800px) {
     .column {

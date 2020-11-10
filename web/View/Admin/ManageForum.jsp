@@ -21,9 +21,10 @@
 
         <div class="box">                
             <h2>Reported Forum Questions</h2>
-            <div class="searchInput">
-                <input type="text" placeholder="Search" id="serach">                   
-            </div><br><br>
+            <div class="search" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Search" name="search2">
+                <button type="submit">Search</button>
+            </div><br><br><br>
             <table class="table">
                 <th class="th"> ID </th>
                 <th class="th" id="th-color1"> TITLE </th>
@@ -52,8 +53,8 @@
                     </label>
                 </div>
 
-                <button id="remove" type="submit">Remove</button>
-                
+                <button id="remove" type="submit" class="btn">Remove</button>
+
 
 
             </form>

@@ -21,9 +21,10 @@
 
         <div class="box">                
             <h2>Reported Photographs</h2>
-            <div class="searchInput">
-                <input type="text" placeholder="Search" id="serach">                   
-            </div><br><br>
+            <div class="search" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Search" name="search2">
+                <button type="submit">Search</button>
+            </div><br><br><br>
             <table class="table">
                 <th class="th"> ID </th>
                 <th class="th" id="th-color1"> TITLE </th>
@@ -32,70 +33,72 @@
         </div>
 
         <div class="box">
-            
+
             <h2>Remove Photographs</h2>
-            <div class="searchInput">
-                <input type="text" placeholder="Search" id="serach">                   
-            </div><br>
+            <div class="search" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Search" name="search2">
+                <button type="submit">Search</button>
+            </div><br><br><br>
             <form>
-                    <div class="formContent">                             
-                        <span class="content_name"> Category </span><br>
-                        <input type="text" name="category" disabled="" required/>
-                        <label for="category" class="label_name">
-                        </label>
-                    </div>
-                    
-                    <div class="formContent">                             
-                        <span class="content_name"> Selling Price </span><br>
-                        <input type="text" name="price" disabled="" required/>
-                        <label for="price" class="label_name">
-                        </label>
-                    </div>
-                    
-                    <div class="formContent">                             
-                        <span class="content_name"> Photographer </span><br>
-                        <input type="text" name="pname" disabled="" required/>
-                        <label for="pname" class="label_name">
-                        </label>
-                    </div>
-                    
-                    <div class="formContent">                             
-                        <span class="content_name"> Reason </span><br>
-                        <input type="text" name="reason" disabled="" required/>
-                        <label for="reason" class="label_name">
-                        </label>
-                    </div>
-                
-                <button id="remove" type="submit">Remove</button>
+                <div class="formContent">                             
+                    <span class="content_name"> Category </span><br>
+                    <input type="text" name="category" disabled="" required/>
+                    <label for="category" class="label_name">
+                    </label>
+                </div>
+
+                <div class="formContent">                             
+                    <span class="content_name"> Selling Price </span><br>
+                    <input type="text" name="price" disabled="" required/>
+                    <label for="price" class="label_name">
+                    </label>
+                </div>
+
+                <div class="formContent">                             
+                    <span class="content_name"> Photographer </span><br>
+                    <input type="text" name="pname" disabled="" required/>
+                    <label for="pname" class="label_name">
+                    </label>
+                </div>
+
+                <div class="formContent">                             
+                    <span class="content_name"> Reason </span><br>
+                    <input type="text" name="reason" disabled="" required/>
+                    <label for="reason" class="label_name">
+                    </label>
+                </div>
+
+                <button id="remove" type="submit" class="btn1">Remove</button>
             </form>
-             
+
         </div>
 
         <div class="box">                
-            
+
             <h2> Category </h2>
-            <div class="searchInput">
-                <input type="text" placeholder="Search" id="serach">                   
-            </div><br>
+            <div class="search" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Search" name="search2">
+                <button type="submit">Search</button>
+            </div><br><br><br>
             <form>
-                    <div class="formContent">                             
-                        <span class="content_name"> Category </span><br>
-                        <input type="text" name="cate" required/>
-                        <label for="cate" class="label_name">
-                        </label>
-                    </div>
-                    
-                    <div class="formContent">                             
-                        <span class="content_name"> Category Type </span><br>
-                        <input type="text" name="type" required/>
-                        <label for="type" class="label_name">
-                        </label>
-                    </div>
-                   
+                <div class="formContent">                             
+                    <span class="content_name"> Category </span><br>
+                    <input type="text" name="cate" required/>
+                    <label for="cate" class="label_name">
+                    </label>
+                </div>
+
+                <div class="formContent">                             
+                    <span class="content_name"> Category Type </span><br>
+                    <input type="text" name="type" required/>
+                    <label for="type" class="label_name">
+                    </label>
+                </div>
+
                 <button class="btn" id="Update" type="submit">Update</button>
                 <button class="btn" id="remove" type="submit" style=" background-color: #f44336">Remove</button>
-                
-                
+
+
             </form>
         </div>
     </body>
