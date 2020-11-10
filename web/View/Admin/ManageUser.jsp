@@ -45,9 +45,9 @@
             <div class="b1">               
                 <h2>Reported Users</h2><br>
                 <form class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search" name="search2">
-                <button type="submit">Search</button>
-            </form><br>
+                    <input type="text" placeholder="Search" name="search2">
+                    <button type="submit">Search</button>
+                </form><br>
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
                     <th class="th" id="th-color1"> TYPE </th>
@@ -59,9 +59,9 @@
             <div class="b2">
                 <h2>Activate Users</h2><br>
                 <form class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search" name="search2">
-                <button type="submit">Search</button>
-            </form><br>
+                    <input type="text" placeholder="Search" name="search2">
+                    <button type="submit">Search</button>
+                </form><br>
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
                     <th class="th" id="th-color1"> TYPE </th>
@@ -73,10 +73,11 @@
 
         <div class="b3">                
             <h2>Deactivate Users</h2>
-            
+
             <form class="search" style="margin:auto;max-width:300px">
                 <input type="text" placeholder="Search" id="deactivateUser">
                 <button onclick="viewResults()">Search</button>
+                <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
             </form><br><br>
 
             <table id="reportedUserTable" width="100%">
@@ -128,10 +129,13 @@
                 <tr>
                     <th colspan =2><button class="btn" onclick="viewDeactivate()"  id="deactivate">Deactivate</button></th>
                 </tr>
+                <tr>
+                    <th colspan =2><button onclick="clearFieldsofDeactivateUsers()" class='btn' id="deactivate">Clear Fields</button></th>
+                </tr>
 
             </table>
         </div>
-        
+
         <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
     </body>
 </html>
