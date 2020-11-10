@@ -71,7 +71,7 @@
 
 
         <div class="box">
-            <div class="box1">
+            <div class="box1" style="cursor: pointer;" onclick="window.location.href = '../../View/Fourm/BrowseQn.jsp';">
                 <img src="../../Resources/Img/questions1.png">                
                 <h2>Browse Questions</h2>
                 <p>Persons may differ,questions and solutions <br>may be the same, 
@@ -79,7 +79,7 @@
                 <a href="../../View/Fourm/BrowseQn.jsp" type="button">Browse</a>
             </div>
 
-            <div class="box2">
+            <div class="box2" style="cursor: pointer;" onclick="window.location.href = '../../View/Fourm/AskQues.jsp';">
                 <img src="../../Resources/Img/search1.png">
                 <h2>Ask Questions</h2>
                 <p>Having doubt is not a fault but being with <br> doubt is fault 

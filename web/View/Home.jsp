@@ -37,8 +37,15 @@
                         <li><a href="User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
                         <li><a href="User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
                         <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="Fourm/BrowseQn.jsp" type="button"> Forum </a></li>
-                        <li><a href="User/ClientProfileUpdate" type="button"> Profile </a></li>
+                        <li><a href="Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                            <%
+                                if (logged) {
+                            %>
+                        <li><a href="User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            %>
                         <!--<li><a href="Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>-->
 
                     </ul>

@@ -3,6 +3,9 @@
     Created on : Oct 16, 2020, 7:13:45 PM
     Author     : kesh
 --%>
+<%
+    boolean logged = (Boolean) request.getAttribute("logged");
+%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,17 +31,23 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
-                        <li><a href="User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="Fourm/BrowseQn.jsp" type="button"> Forum </a></li>
-                        <li><a href="User/ClientProfileUpdate" type="button"> Profile </a></li>
-
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                            <%
+                                if (logged) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            %>
                     </ul>
                 </div>
 
                 <div class="notifyicn">
-                    <a href="Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
