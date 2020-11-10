@@ -27,17 +27,17 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="../Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="ClientProfileUpdate" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
+                        <li><a href="User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="Fourm/BrowseQn.jsp" type="button"> Forum </a></li>
+                        <li><a href="User/ClientProfileUpdate" type="button"> Profile </a></li>
 
                     </ul>
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 

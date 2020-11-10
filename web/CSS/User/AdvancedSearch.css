@@ -16,6 +16,38 @@ body{
     border-radius: 10%
 }
 
+.searchInput {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    flex-wrap: wrap;
+/*    padding-left: 10%;*/
+    /*padding-right: 10%;*/
+}
+
+
+.searchInput input {
+    border:none;
+    background:white;
+    border-radius: 40px;
+    outline:none; 
+    color: black;
+    font-size: 18px;
+    /*transition:1s;*/
+    line-height: 28px;  
+    font-family: 'Source Sans Pro', sans-serif;
+    /*width: 100%;*/
+    flex: 0.8;
+    padding: 0% 20px;
+    margin-right: 3px;
+
+}
+
+.searchInput input:focus {
+    box-shadow: 0.1px 0.1px 5px #cc7106;
+}
 
 .row {
     display: -ms-flexbox; 

@@ -36,10 +36,7 @@
                     </ul>
                 </div>
                 <div class="searchInput">
-
                     <input type="text" placeholder="Search">                   
-
-
                 </div>
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
