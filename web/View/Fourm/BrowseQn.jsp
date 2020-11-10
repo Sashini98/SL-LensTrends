@@ -110,7 +110,7 @@
 
             </div>  
             <div name="s" id="s">
-                <div class="questions">                
+<!--                <div class="questions">                
                     <h2>FoV of One Plus 6T?</h2>
                     <p>I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ... </p>
                     <label><a href="#" type="button">photography</a></label>
@@ -434,7 +434,7 @@
                     </div>
 
 
-                </div>
+                </div>-->
             </div>
 
         </div>

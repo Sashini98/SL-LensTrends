@@ -213,38 +213,47 @@
     font-family: 'Didact Gothic', sans-serif;
     font-size: 100%;
     font-weight: bold;
+    padding: 0.2% 0.5%;
+    border-radius: 5px;
 }
 
 
-
+label
+{
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    color: black;
+    font-size: 80%;
+}
 input[type=submit]
 {
-  display: inline-block;
-  padding: 2% 2%;
-  font-size: 15px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #335fa6;
-  border: none;
-  border-radius: 15px;
+    display: inline-block;
+    padding: 2% 2%;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #335fa6;
+    border: none;
+    border-radius: 15px;
 }
 
 
 input[type=submit]:active 
 {
-  background-color: #083885;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #083885;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 input[type=text]
 {
-   width : 98%;
-   height: 30px;
-   font-family: 'Tenali Ramakrishna', sans-serif;
+    width : 98%;
+    height: 30px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid black;
@@ -259,9 +268,9 @@ input[type=text]
 
 input[type=date]
 {
-   width : 98%;
-   height: 30px;
-   font-family: 'Tenali Ramakrishna', sans-serif;
+    width : 98%;
+    height: 30px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid black;
@@ -276,3 +285,108 @@ input[type=date]
 
 
 
+.filter-radio .container-radio {
+    margin-left: 10%;
+}
+
+.container-radio {
+    display: block;
+    position: relative;
+    padding-left: 25%;
+    margin-bottom: 3%;
+    cursor: pointer;
+    font-size: 100%;
+    font-family: 'Didact Gothic', sans-serif;
+    /*margin-top: -2%;*/
+}
+/* Hide the browser's default radio button */
+.container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border-radius:50%;
+    margin-top: 0.5%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radio:hover input ~ .checkmark-radio {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radio input:checked ~ .checkmark-radio {
+    background-color: #f7830f;
+}
+h8
+{
+    margin-left: 5%;
+}
+
+button 
+{     
+    background-color: transparent;
+    border: 0.1px solid; 
+    color: black;
+    float: left;
+    padding: 2% 4%;
+    text-align: center;
+    display: inline-block;
+    float: left;
+
+}
+
+textarea
+{
+    background-color: transparent;
+    border: 1px solid;
+}
+
+
+.box select {
+    margin-left: 10%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-size: 80%;
+    background-color: #cad2de;
+    color: black;
+    padding: 5px;
+    width: 50%;
+    border: none;
+    -webkit-appearance: button;
+    appearance: button;
+}
+
+.box::before {
+    content: "\f13a";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.box select option {
+    padding: 30px;
+}
