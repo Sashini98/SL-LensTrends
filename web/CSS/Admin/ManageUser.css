@@ -182,10 +182,6 @@ input[type=text]
     background-color: #12a8e0;
 }
 
-.tr:nth-child(even) {
-  background-color: #d9d9d9;
-}
-
 .b3 {
     background-color: #fff;
     width: 71%;
