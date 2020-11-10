@@ -3,6 +3,9 @@
     Created on : Oct 16, 2020, 7:13:45 PM
     Author     : kesh
 --%>
+<%
+    boolean logged = (Boolean) request.getAttribute("logged");
+%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -28,17 +31,23 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="../Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="ClientProfileUpdate" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
-
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                            <%
+                                if (logged) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            %>
                     </ul>
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
@@ -59,6 +68,10 @@
 
                 </iframe>
                 <div style="background-color: bisque;width: 100%;">
+                    <div class="searchInput">
+                        <input type="text" placeholder="Search for Photographers" >      
+                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
+                    </div>
                     <div class="row"> 
                         <div class="column">
                             <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%">

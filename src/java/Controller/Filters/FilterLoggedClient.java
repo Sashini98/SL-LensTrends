@@ -44,7 +44,7 @@ public class FilterLoggedClient implements Filter {
             resp.sendRedirect("/GroupProject/View/PhotographerHome.jsp");
         }else if (a != null) {
             //404
-         
+             resp.sendRedirect("/GroupProject/View/Admin/AdminDashboard.jsp");
         }else{
              resp.sendRedirect("/GroupProject/View/login.jsp?action=User&loc=cu");
         

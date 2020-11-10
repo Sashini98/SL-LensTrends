@@ -57,8 +57,8 @@
                 <div class="home">
                     <ul>
                         <li><a href="../../View/Home.jsp"> Home </a></li>
-                        <li><a href=""> Post Event </a></li>
-                        <li><a href=""> Past Event </a></li>
+                        <li><a href=""> Post An Event </a></li>
+                        <li><a href=""> Past Events </a></li>
                     </ul>
                 </div>
             </div>

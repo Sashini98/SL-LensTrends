@@ -151,5 +151,7 @@
     <filter-mapping>
         <filter-name>ClientHomeFilter</filter-name>
         <url-pattern>/View/Home.jsp</url-pattern>
+        <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
+        <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
     </filter-mapping>
 </web-app>

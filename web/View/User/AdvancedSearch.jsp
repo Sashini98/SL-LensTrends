@@ -6,6 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    boolean logged = (Boolean) request.getAttribute("logged");
+%>
+
 
 <html>
     <head>
@@ -21,36 +25,42 @@
     <body>
         <div>
             <div class="fixedheader">  
-            <div class="pageheader">
-                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                <h1>Sl Lens Trends </h1>
+                <div class="pageheader">
+                    <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <h1>Sl Lens Trends </h1>
 
-                <div class="headerul">
-                    <ul>
+                    <div class="headerul">
+                        <ul>
 
-                       <li><a href="../Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="ClientProfileUpdate" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                            <%
+                                if (logged) {
+                            %>
+                            <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <% 
+                            }
+                            %>
 
+                        </ul>
+                    </div>
 
-                    </ul>
-                </div>
+                    <div class="notifyicn">
+                        <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
-                <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    </div>
 
-                </div>
-
-                <div class="logout">
-                    <a href="../View/login.jsp" >Login</a> 
+                    <div class="logout">
+                        <a href="../View/login.jsp" >Login</a> 
+                    </div>
                 </div>
             </div>
-        </div>
-            
+
             <br><br><br><br><br>
-        
+
             <div style="display: flex;min-height: 88vh">
                 <div style="position: fixed;width: 2%;height: 88vh;background-color: #FAFAFA;padding-top: 1.8%;padding-left: .5%;padding-right: 1.2%;border-right:solid 2px #EAEAEA">
                     <i class="material-icons sidemenu-icons">filter_alt</i>
@@ -60,7 +70,11 @@
                 <iframe style="width: 25%;margin-left: 3.8%;border: none" src="AdvancedFilter.jsp">
 
                 </iframe>
-                <div style="background-color: bisque;width: 100%;">
+                <div style="background-color: bisque;width: 100%; ">
+                    <div class="searchInput">
+                        <input type="text" placeholder="Search for Photographs" >      
+                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
+                    </div>
                     <div class="row"> 
                         <div class="column">
                             <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%">
