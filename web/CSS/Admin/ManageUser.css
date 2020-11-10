@@ -138,7 +138,8 @@ input[type=text]
     border: none;
     border-bottom: 1px solid black;
     padding-left: 5px;
-    font-size: 16px;
+    font-size: 18px;
+    color: black;
     width: 100%;
     margin-bottom: 2%;
     outline: none;

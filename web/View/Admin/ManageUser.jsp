@@ -47,7 +47,7 @@
                 <div class="search" style="margin:auto;max-width:300px">
                     <input type="text" placeholder="Search" name="search2">
                     <button type="submit">Search</button>
-                </div><br>
+                </div><br><br><br>
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
                     <th class="th" id="th-color1"> TYPE </th>
@@ -62,7 +62,7 @@
                     <input type="text" placeholder="Search" name="search2">
                     <button type="submit">Search</button>
  
-                </div><br>
+                </div><br><br><br>
 
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
@@ -78,11 +78,11 @@
 
             <div class="search" style="margin:auto;max-width:300px">
                 <input id="deactivateUser" type="text" placeholder="Search">
-                <button onclick="viewResults()">Search</button>
+                <button onclick="viewResults()">Search</button><br>
                 <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
-
             </div>
-            <br><br>
+            
+            <br><br><br>
 
 
             <table id="reportedUserTable" width="100%">
