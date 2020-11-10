@@ -75,7 +75,7 @@
             <h2>Deactivate Users</h2>
 
             <form class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search" id="deactivateUser">
+                <input id="deactivateUser" type="text" placeholder="Search">
                 <button onclick="viewResults()">Search</button>
                 <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
             </form><br><br>
