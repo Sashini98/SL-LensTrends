@@ -20,10 +20,10 @@
     
     <body>
         
-                <div style="background-color: bisque;width: 100%;">
+        <div class="box" style="background-color: bisque;">
                     <div class="row"> 
                         <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%">
+                            <a href="#" type="button" id="standard"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%"></a>
                             <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
                             <img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">
                         </div>
