@@ -1,0 +1,131 @@
+.box {
+    display: flex;
+    margin-left: 20%;
+    margin-top:3%;
+    margin-bottom: 1.5%;
+
+}
+
+.box h2{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.box .box1 {
+    padding: 32px;
+    width: 35%;
+    background-color: white;
+    margin-right: 5%;
+    text-align: left;
+
+}
+
+.box .box2 {
+    margin-left: 5%;
+    padding: 32px;
+    width: 35%;
+    background-color: white;
+    text-align: left;
+
+}
+
+.box .box2 img {
+    position: relative;
+    max-width:300px;
+    max-height: 100px;
+    display: block;
+    height: auto;
+    width: auto;
+    margin-left:150px;
+}
+
+.box .box1 img {
+    position: relative;
+    max-width:300px;
+    max-height: 100px;
+    display: block;
+    height: auto;
+    width: auto;
+    margin-left:150px;
+}
+
+.formContent{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-start;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.formContent span{
+    align-items: flex-end;
+    color: black;
+}
+
+input[type=text]
+{
+    width : 98%;
+    height: 30px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 16px;
+    margin-top: 1px;
+    width: 100%;
+    margin-bottom: 2%;
+    outline: none;
+    background-color: #f0efef;
+}
+
+input[type=date]
+{
+    width : 98%;
+    height: 30px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 4%;
+    outline: none;
+    background-color: #f0efef;
+}
+
+.textarea
+{
+    width : 98%;
+    row:4;
+    columns: 100;
+    resize: none;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 4%;
+    outline: none;
+    background-color: #f0efef;
+}
+
+button {
+    background-color: #335fa6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.9;
+    margin-left: 35%;
+}

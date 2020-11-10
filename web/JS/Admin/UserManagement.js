@@ -56,7 +56,7 @@ function viewResults() {
                     var button = document.createElement("button");
                     button.innerHTML = "View";
                     button.style.backgroundColor = "blueviolet";
-                    button.className = "confirmBTN";
+                    button.className = "btn";
                     button.id = user[i];
                     var user_id = user[i];
                     button.onclick = function () {
