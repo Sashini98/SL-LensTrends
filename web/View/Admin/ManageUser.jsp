@@ -44,10 +44,10 @@
         <div class="contain">
             <div class="b1">               
                 <h2>Reported Users</h2><br>
-                <form class="search" style="margin:auto;max-width:300px">
+                <div class="search" style="margin:auto;max-width:300px">
                     <input type="text" placeholder="Search" name="search2">
                     <button type="submit">Search</button>
-                </form><br><br><br>
+                </div><br>
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
                     <th class="th" id="th-color1"> TYPE </th>
@@ -58,10 +58,12 @@
 
             <div class="b2">
                 <h2>Activate Users</h2><br>
-                <form class="search" style="margin:auto;max-width:300px">
+                <div class="search" style="margin:auto;max-width:300px">
                     <input type="text" placeholder="Search" name="search2">
                     <button type="submit">Search</button>
-                </form><br><br><br>
+ 
+                </div><br>
+
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
                     <th class="th" id="th-color1"> TYPE </th>
@@ -74,11 +76,14 @@
         <div class="b3">                
             <h2>Deactivate Users</h2>
 
-            <form class="search" style="margin:auto;max-width:300px">
+            <div class="search" style="margin:auto;max-width:300px">
                 <input id="deactivateUser" type="text" placeholder="Search">
                 <button onclick="viewResults()">Search</button>
                 <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
-            </form><br><br><br>
+
+            </div>
+            <br><br>
+
 
             <table id="reportedUserTable" width="100%">
                 <thead class="table">
