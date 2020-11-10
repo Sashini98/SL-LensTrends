@@ -32,7 +32,7 @@ public class ViewDeactivateUser extends HttpServlet {
             throws ServletException, IOException {
 
         String userid = request.getParameter("userid");
-        System.out.println(userid);
+
         try {
 
             ClientDao clientDao = new ClientDaoImpl();

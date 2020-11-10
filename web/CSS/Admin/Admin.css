@@ -63,7 +63,7 @@ and open the template in the editor.
     padding: 0 7px;
 }
 
-.row {margin: 0 -1px;}
+.row {margin: 0 0px;}
 
 .btn2{
     background-color: rgb(46, 43, 43);
