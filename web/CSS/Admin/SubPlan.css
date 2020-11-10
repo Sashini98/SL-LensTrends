@@ -1,16 +1,9 @@
-body {
-    background-image:url('../..//Resources/Img/camera.svg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
-
 .top {
     width: 100%;
     display: flex;
 }
 .heading {
-    margin-left: 18%;
+    margin-left: 42%;
     width: 30%;
     margin-top: -0.5%;
     text-align: center;
@@ -33,28 +26,8 @@ body {
     margin-top: -10%;
 }
 
-.logo {    
-    width: 30%;
-    margin-left: 2%;
-    margin-top: 1%;
-    display: flex;
-}
-
-.logo h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    padding-left: 4%;
-    font-weight: 900;
-    color: #120050;
-    margin-top: 0.5%;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-}
-
 .content {
-    margin-left: 33%;
+    margin-left: 20%;
     margin-top: 4%;
     display: flex;
 }
@@ -139,14 +112,6 @@ body {
     font-size: 250%;
     font-weight: 700;
     
-}
-
-.box .hover-content {
-    transition: transform .5s ease-in-out;
-}
-
-.box .hover-content:hover {
-    transform: scale(1.5);
 }
 
 .arrow a {

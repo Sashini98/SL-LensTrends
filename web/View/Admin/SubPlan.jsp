@@ -17,40 +17,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
         <title>Subscription</title>
     </head>
-    <body style="background-color: #f9f9f9;">
-        <!--        <div class="fixedheader">  
-                    <div class="pageheader">
-                        <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
-                        <h1>Sl Lens Trends </h1>
+    <body style="background-color: #f7f6f9;">
         
-                        <div class="headerul">
-                            <ul>
-        
-                                <li><a href="#" type="button"> Events </a></li>
-                                <li><a href="#" type="button"> Album </a></li>
-                                <li><a href="#" type="button"> Profile </a></li>
-                                <li><a href="#" type="button"> Settings </a></li>
-        
-                            </ul>
-                        </div>
-        
-                        <div class="notifyicn">
-                            <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
-        
-                        </div>
-        
-                        <div class="logout">
-                            <a href="#" type="button"> Logout </a>
-                        </div>
-        
-                    </div>
-        
-                </div>-->
-        <div class="top">
-            <div class="logo">
-                <img src="../../Resources/Img/7.png">
-                <h1>Sl Lens Trends</h1>
-            </div>
             <div class="heading">
                 <p id='p1'>Plans and Pricing</p> <br>
                 <p id='p2'>UPDATE HERE</p>

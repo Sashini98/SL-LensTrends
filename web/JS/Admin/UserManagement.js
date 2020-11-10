@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 var modal = document.getElementById("myModal");
 
 var btn = document.getElementById("vie");
@@ -59,7 +53,7 @@ function viewResults() {
                         var button = document.createElement("button");
                         button.innerHTML = "View";
                         button.style.backgroundColor = "blueviolet";
-                        button.className = "confirmBTN";
+                        button.className = "btn";
                         button.id = user[i * 3];
 
                         td11.innerHTML = user[i * 3];

@@ -76,6 +76,13 @@
                         <label for="name" class="label_name">
                         </label>
                     </div><br>
+                    
+                    <div class="formContent">
+                        <span class="content_name"> Event Type </span><br>
+                        <input type="text" name="type" required/>
+                        <label for="type" class="label_name">
+                        </label>
+                    </div><br>
 
                     <div class="formContent">
                         <span class="content_name"> Date of Event </span><br>
@@ -100,24 +107,62 @@
 
                     <div class="formContent">
                         <span class="content_name"> Event Description </span><br>
-                        <input type="text" name="desc" required rows="10" cols="50"/>
+                        <textarea name="desc" required rows="10" cols="50"></textarea>
+                        <!--<input type="text" name="desc" required rows="10" cols="50"/>-->
                         <label for="desc" class="label_name">
                         </label>
                     </div><br>
 
                     <div class="formContent">
-                        <span class="content_name"> Photographer Name </span><br>
-                        <input type="text" name="pname" required/>
-                        <label for="pname" class="label_name">
+                        <span class="content_name"> Estimated Budget Range</span><br>
+                        <input type="text" name="estimate" placeholder="LKR" required/>
+                        <label for="estimate" class="label_name">
                         </label>
                     </div><br>
 
-                    <div class="formContent">
-                        <span class="content_name"> Estimated Budget Range</span><br>
-                        <input type="text" name="estimate" required/>
-                        <label for="estimate" class="label_name">
+                    <div class="filter-radio">
+                        <label class="container-radio"><h8>Specify Photographers</h8>
+                            <input type="radio" id="chkYes" name="photographers" value="Specify Photographers" onclick="ShowHideDiv()">
+                            <span class="checkmark-radio"></span>
                         </label>
+                        <label class="container-radio"><h8>All Photographers</h8>
+                            <input type="radio" id="chkNo" name="photographers" value="All Photographers" onclick="ShowHideDiv()">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                    </div><br><br>
+
+
+
+                    <div id="photo" style="display: none">
+                        <span class="content_name" style="margin-left: 5%;"> Name :  </span><br><br>
+                        <div class="formContent">
+                            <span class="content_name"> Photographer Name </span><br>
+                            <input type="text" name="pname" required/>
+                            <label for="pname" class="label_name">
+                            </label>
+                            <button type="button" id="add">Add</button> 
+                        </div>
                     </div>
+                    
+                    <div id="area" style="display: none">
+                        <span class="content_name" style="margin-left: 10%;">Photographers from : </span><br>
+                        <div class="box">
+                        <select name="area">
+                                <option value="All Island">All Island</option>
+                                <option value="Central Province">Central Province</option>
+                                <option value="Western Province">Western Province</option>
+                                <option value="Southern Province">Southern Province</option>
+                                <option value="Uva Province">Uva Province</option>
+                                <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+                                <option value="North Western Province">North Western Province</option>
+                                <option value="North Central Province">North Central Province</option>
+                                <option value="Northern Province">Northern Province</option>
+                                <option value="Eastern Province">Eastern Province</option>
+                            </select>
+                        </div>
+                    </div>
+
+
                     <br><br><br>
                     <div class="formContent">
                         <input type="submit" id="submit" value="Post Event">
@@ -126,12 +171,15 @@
 
 
                 </form>
+                <form>
+
+                </form>
             </div>       
 
         </div>
 
 
-        <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
+        <script src="../../JS/Events/PostEvents.js" type="text/javascript" ></script>
 
     </body>
 </html>
