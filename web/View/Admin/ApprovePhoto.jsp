@@ -12,49 +12,43 @@
         <link rel="stylesheet" href="../../CSS/Admin/ApprovePhotos.css">
         <title>Approve Photographs</title>
     </head>
-    <body>
-        <div class="container1"></div>
-
-        <form>
-            <div class="container2">
-                <hr>
-
-                <label for="name"><b>Photograph Name</b></label><br>
-                <input type="text" name="name"><br>
-
-                <label for="pname"><b>Photographer</b></label><br>
-                <input type="text" name="date"><br>
-
-                <label for="category"><b>Category</b></label><br>
-                <input type="text" name="category"><br>
-
-                <label for="keywords"><b>Keywords</b></label><br>
-                <input type="text" name="keywords"><br>
-
-                <hr>
+    <body style="background-color: #f7f6f9;">
+        
+        <div class="photos">
+            <div class="details">
+                <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg">
+                <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <p>Submitted On <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <button id="remove" type="submit" class="btn">Review</button>
             </div>
-        </form>
-
-        <form>
-            <div class="container2">
-
-                <label for="resolution"><b>Resolution</b></label><br>
-                <input type="text" name="resolution"><br>
-
-                <label for="size"><b>Size</b></label><br>
-                <input type="text" name="size"><br>
-                
-                <label for="file type"><b>File Type</b></label><br>
-                <input type="text" name="file type"><br>
-
-                <div class="clearfix">
-                    <button type="submit" class="Approvebtn">Accept</button>
-                    <button type="button" class="Closebtn">Reject</button>
-
-                </div>
+        </div>
+        
+        <div class="photos">
+            <div class="details">
+                <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg">
+                <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <p>Submitted On <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <button id="remove" type="submit" class="btn">Review</button>
             </div>
-        </form>
-
+        </div>
+        
+        <div class="photos">
+            <div class="details">
+                <img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg">
+                <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <p>Submitted On <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <button id="remove" type="submit" class="btn">Review</button>
+            </div>
+        </div>
+        
+        <div class="photos">
+            <div class="details">
+                <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg">
+                <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <p>Submitted On <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                <button id="remove" type="submit" class="btn">Review</button>
+            </div>
+        </div>
 
     </body>
 </html>

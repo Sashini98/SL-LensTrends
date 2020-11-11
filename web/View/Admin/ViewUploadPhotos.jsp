@@ -21,27 +21,51 @@
     <body style="background-color: #f7f6f9;">
         
         <div class="box">
-                    <div class="row"> 
-                        <div class="column">
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%"></a>
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%"></a>
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%"></a>
-                        </div>
-                        <div class="column">
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%"></a>
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%"></a>
-                        </div>
-                        <div class="column">
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%"></a>
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%"></a>
-
-                        </div>  
-                        <div class="column">
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%"></a>
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%"></a>
-                            <a href="#" type="button"><img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%"></a>
-                        </div>  
-                    </div>
-                </div>
+            <div class="details">
+                <a href=""><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>
+            </div>
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Title</td>
+                    <td><input type="text" name="title" id="title" disabled=""></td>
+                    <td align="left">Resolution</td>
+                    <td><input type="text" name="res" id="reso" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Description</td>
+                    <td><input type="text" name="des" id="desc" disabled=""></td>
+                    <td align="left">Size</td>
+                    <td><input type="text" name="size" id="size" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Submitted Date</td>
+                    <td><input type="date" name="date" id="sdate" disabled=""></td>
+                    <td align="left">Height</td>
+                    <td><input type="text" name="hei" id="height" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Photographer Name</td>
+                    <td><input type="text" name="name" id="pname" disabled=""></td>
+                    <td align="left">width</td>
+                    <td><input type="text" name="wid" id="width" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Category</td>
+                    <td><input type="text" name="cate" id="cate" disabled=""></td>
+                    <td align="left">File Id</td>
+                    <td><input type="text" name="file" id="fid" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Keywords</td>
+                    <td><input type="text" name="key" id="key" disabled=""></td>
+                    <td align="left">Release Form</td>
+                    <td><input type="text" name="rform" id="form" disabled=""></td>
+                </tr>
+                <tr>
+                    <th colspan =2><button class="btn" id="approve">Approve</button></th>
+                    <th colspan =2><button class="btn" id="reject" style="background-color: #f44336">Reject</button></th>
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
