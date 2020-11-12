@@ -19,45 +19,49 @@
     </head>
     <body style="background-color: #f7f6f9;">
 
-        <div class="box">                
-            <h2>Reported Forum Questions</h2>
-            <div class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search" name="search2">
-                <button type="submit">Search</button>
-            </div><br><br><br>
-            <table class="table">
-                <th class="th"> ID </th>
-                <th class="th" id="th-color1"> TITLE </th>
-                <th class="th" id="th-color2"> OPTION </th>
-            </table><br><br>
-
-            <form>
-                <div class="formContent">                             
-                    <span class="content_name"> Category </span><br>
-                    <input type="text" name="category" disabled="" required/>
-                    <label for="category" class="label_name">
-                    </label>
-                </div>
-
-                <div class="formContent">                             
-                    <span class="content_name">Tags </span><br>
-                    <input type="text" name="tags" disabled="" required/>
-                    <label for="tags" class="label_name">
-                    </label>
-                </div>
-
-                <div class="formContent">                             
-                    <span class="content_name">Reason </span><br>
-                    <input type="text" name="reason" disabled="" required/>
-                    <label for="reason" class="label_name">
-                    </label>
-                </div>
-
-                <button id="remove" type="submit" class="btn">Remove</button>
-
-
-
-            </form>
+        <div class="questions">
+            <div class="details">
+                <h2>FoV of One Plus 6T?</h2><br>
+            </div>
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Uploaded By</td>
+                    <td><input type="text" name="upload" id="upload" disabled=""></td>
+                    <td align="left">Reported By</td>
+                    <td><input type="text" name="rep" id="report" disabled=""></td>
+                    <td><button class="btn" id="view">View</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="questions">
+            <div class="details">
+                <h2>NFC Photography Identification</h2><br>
+            </div>
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Uploaded By</td>
+                    <td><input type="text" name="upload" id="upload" disabled=""></td>
+                    <td align="left">Reported By</td>
+                    <td><input type="text" name="rep" id="report" disabled=""></td>
+                    <td><button class="btn" id="view">View</button></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="questions">
+            <div class="details">
+                <h2>Digital Image Processing </h2><br>
+            </div>
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Uploaded By</td>
+                    <td><input type="text" name="upload" id="upload" disabled=""></td>
+                    <td align="left">Reported By</td>
+                    <td><input type="text" name="rep" id="report" disabled=""></td>
+                    <td><button class="btn" id="view">View</button></td>
+                </tr>
+            </table>
         </div>
     </body>
 </html>

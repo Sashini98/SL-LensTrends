@@ -1,86 +1,26 @@
-.box {
-    background-color: #fff;
-    width: 65%;
+.questions {
+    background-color: white;
+    width: 75%;
     height:auto;
     margin-top: 2%;
-    margin-left:25%;        
+    margin-left:20%;        
     border-radius: 10px;
-    padding: 1% 1.5% 3% 1.5%;
-    margin-bottom: 2%;
+    padding: 1% 1.5% 1% 1.5%;
     /*box-shadow: 0.1px 0.1px 10px #ccc;*/
 }
 
-.box h2{
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 150%;
-    font-weight: bold;
-    margin-left: 5%;
-}
-
-.table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.th {
-  background-color: #f0efef;
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
-
-#th-color1{
-    background-color: #DFF0F7;
-}
-
-#th-color2{
-    background-color: #C4E8F2;
-}
-
-.tr:nth-child(even) {
-  background-color: #d9d9d9;
-}
-
-div .search input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 75%;
-  background: #f1f1f1;
-}
-
-div .search button {
-  float: left;
-  width: 25%;
-  padding: 4.1px;
-  background: #2196F3;
+.btn {
+  background-color: #335fa6;
   color: white;
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
   cursor: pointer;
+  width: 90%;
+  opacity: 0.9;
+  margin-left: 8%;
 }
 
-div .search button:hover {
-  background: #0b7dda;
-}
-
-
-.formContent{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: flex-start;
-    margin-right: 5%;
-    margin-left: 5%;
-}
-
-.formContent span{
-    align-items: flex-end;
-    color: black;
-}
 
 input[type=text]
 {
@@ -92,28 +32,28 @@ input[type=text]
     border-bottom: 1px solid black;
     padding-left: 5px;
     font-size: 18px;
-    margin-top: 1px;
-    width: 100%;
+    width: 75%;
     margin-bottom: 2%;
     outline: none;
-    background-color: #f0efef;
+    background-color: #fff;
 }
 
-.btn {
-  background-color: #335fa6;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 30%;
-  opacity: 0.9;
-  margin-left: 36%;
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0%;
 }
 
-button:hover {
-  opacity:1;
+.details p  {
+    margin: auto;
+    margin-left: 0;
 }
 
-
-
+.details h2{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 150%;
+    font-weight: bold;
+    margin-right: 20%;
+}

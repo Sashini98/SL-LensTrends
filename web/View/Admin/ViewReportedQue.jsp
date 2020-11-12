@@ -1,0 +1,45 @@
+<%-- 
+    Document   : ViewReportedQue
+    Created on : Nov 12, 2020, 9:28:22 AM
+    Author     : Madusha
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ViewReportedQue.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        <title>View Reported Questions</title>
+    </head>
+    <body style="background-color: #f7f6f9;">
+        <div class="box">
+            <div class="details">
+                <p>I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ...</p>
+            </div>
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Title</td>
+                    <td><input type="text" name="title" id="title" disabled=""></td>
+                    <td align="left">Uploaded Date</td>
+                    <td><input type="date" name="date" id="sdate" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Category</td>
+                    <td><input type="text" name="cate" id="cate" disabled=""></td>
+                    <td align="left">Question Id</td>
+                    <td><input type="text" name="file" id="fid" disabled=""></td>
+                </tr>
+                <tr>
+                    <th colspan =2><button class="btn" id="approve">Keep Question</button></th>
+                    <th colspan =2><button class="btn" id="reject" style="background-color: #f44336">Remove</button></th>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
