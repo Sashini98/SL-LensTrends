@@ -10,11 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<!--        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">-->
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageUser.css"/>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+<!--        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">-->
         <title>Manage Users</title>
     </head>
     <body style="background-color: #f7f6f9;">
@@ -58,23 +58,23 @@
                
                 <table border="0" width="100%" height="40px" >
                 <tr>
-                    <td align="left">Email</td>
+                    <th align="left">Email</th>
                     <td><input type="text" name="mail" id="email" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Address No</td>
+                    <th align="left">Address No</th>
                     <td><input type="text" name="address" id="addno" disabled=""></td>
                 </tr>
                 <tr>
                 <tr>
-                    <td align="left">City</td>
+                    <th align="left">City</th>
                     <td><input type="text" name="cit" id="city" disabled=""></td>
                 </tr>
-                <td align="left">Province</td>
+                <th align="left">Province</th>
                 <td><input type="text" name="pro" id="province" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Gender</td>
+                    <th align="left">Gender</th>
                     <td><input type="text" name="gen" id="gender" disabled=""></td>
                 </tr>
                 <tr>
@@ -100,23 +100,23 @@
                 
                 <table border="0" width="100%" height="40px" >
                 <tr>
-                    <td align="left">Email</td>
+                    <th align="left">Email</th>
                     <td><input type="text" name="mail" id="email" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Address No</td>
+                    <th align="left">Address No</th>
                     <td><input type="text" name="address" id="addno" disabled=""></td>
                 </tr>
                 <tr>
                 <tr>
-                    <td align="left">City</td>
+                    <th align="left">City</th>
                     <td><input type="text" name="cit" id="city" disabled=""></td>
                 </tr>
-                <td align="left">Province</td>
+                <th align="left">Province</th>
                 <td><input type="text" name="pro" id="province" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Gender</td>
+                    <th align="left">Gender</th>
                     <td><input type="text" name="gen" id="gender" disabled=""></td>
                 </tr>
                 <tr>
@@ -153,35 +153,35 @@
 
             <table border="0" width="100%" height="40px" >
                 <tr>
-                    <td align="left">User Id</td>
+                    <th align="left">User Id</th>
                     <td><input type="text" name="uid" id="userid" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Email</td>
+                    <th align="left">Email</th>
                     <td><input type="text" name="mail" id="email" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">First Name</td>
+                    <th align="left">First Name</th>
                     <td><input type="text" name="finame" id="fname" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Last Name</td>
+                    <th align="left">Last Name</th>
                     <td><input type="text" name="laname" id="lname" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Address No</td>
+                    <th align="left">Address No</th>
                     <td><input type="text" name="address" id="addno" disabled=""></td>
                 </tr>
                 <tr>
                 <tr>
-                    <td align="left">City</td>
+                    <th align="left">City</th>
                     <td><input type="text" name="cit" id="city" disabled=""></td>
                 </tr>
-                <td align="left">Province</td>
+                <th align="left">Province</th>
                 <td><input type="text" name="pro" id="province" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Gender</td>
+                    <th align="left">Gender</th>
                     <td><input type="text" name="gen" id="gender" disabled=""></td>
                 </tr>
                 <tr>
