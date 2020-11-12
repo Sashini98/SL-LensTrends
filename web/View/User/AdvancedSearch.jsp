@@ -36,14 +36,15 @@
                             <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
                             <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
                             <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
-                            <%
-                                if (logged) {
-                            %>
+                                <%
+                                    if (logged) {
+                                %>
                             <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
                             <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
-                            <% 
-                            }
-                            %>
+                                <%
+                                    }
+                                %>
 
                         </ul>
                     </div>
@@ -54,7 +55,17 @@
                     </div>
 
                     <div class="logout">
-                        <a href="../View/login.jsp" >Login</a> 
+                        <%
+                            if (!logged) {
+                        %>
+                        <a href="../login.jsp?loc=cph" >Log In</a> 
+                        <%
+                        } else {
+                        %>
+                        <a href="../../LogOut?loc=cph" type="button"> Log Out </a>
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
             </div>

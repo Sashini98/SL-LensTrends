@@ -47,21 +47,22 @@ public class CheckLogin implements Filter {
             String page = request.getParameter("loc");
 
             try {
-                if (action.equals("User")) {
-                    request.setAttribute("User", "Client");
+                
+//                if (action.equals("User")) {
+//                    request.setAttribute("User", "Client");
                     req.getSession().setAttribute("PageLocation", page);
                     req.setAttribute("account", "selected");
                     chain.doFilter(request, response);
-                } else {
-                    request.setAttribute("User", "Photographer");
-                    req.getSession().setAttribute("PageLocation", page);
-                    req.setAttribute("account", "selected");
-                    chain.doFilter(request, response);
-                }
+//                } else {
+//                    request.setAttribute("User", "Photographer");
+//                    req.getSession().setAttribute("PageLocation", page);
+//                    req.setAttribute("account", "selected");
+//                    chain.doFilter(request, response);
+//                }
 
             } catch (Exception e) {
                 // ask contrtibutor or client if its  same email and pw
-
+                System.out.println("exception bnnn hadapn");
                 String attribute = (String) request.getAttribute("account");
                 if (attribute != (null)) {
                     req.setAttribute("account", "true");

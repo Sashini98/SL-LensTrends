@@ -143,6 +143,8 @@
     <filter-mapping>
         <filter-name>FilterLoggedClientAccessOnly</filter-name>
         <url-pattern>/View/User/ClientProfileUpdate.jsp</url-pattern>
+         <url-pattern>/View/User/Cart.jsp</url-pattern>
+         <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClient</filter-name>

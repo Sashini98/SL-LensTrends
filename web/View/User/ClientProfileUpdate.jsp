@@ -36,6 +36,7 @@
                             <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
                             <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                             <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                            <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
                             <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
 
                         </ul>
@@ -47,7 +48,7 @@
                     </div>
 
                     <div class="logout">
-                        <a href="#" type="button"> Logout </a>
+                        <a href="../../LogOut?loc=ch" type="button"> Logout </a>
                     </div>
                 </div>
             </div>
@@ -112,10 +113,10 @@
                 </div> <br>
                 <div class="edit">
                     <form>
-                        <label for="address" >Address </label> 
+                        <label for="address" >Address No</label> 
                         <br>
                         <div class="icon"> 
-                            <input type="text" id="address" name="address" placeholder="Vanniyasingam veethy, Thavady North, Kokuvil." disabled> 
+                            <input type="text" id="address" name="address" placeholder="<%= c.getAddress_no()%>" disabled> 
                             <img id="pencil8" onclick="pencileditenable('address')" src="../../Resources/Img/edit.png">
                             <img class="icon1" id="ic15" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic15')" style="visibility:hidden;" >
                             <img class="icon2" id="ic16" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic16')" style="visibility:hidden;">
@@ -124,7 +125,7 @@
                         <label for="city">City </label>                     
                         <br>
                         <div>
-                            <input type="text" id="city" name="city" placeholder="Jaffna" disabled>
+                            <input type="text" id="city" name="city" placeholder="<%= c.getCity()%>" disabled>
                             <img id="pencil9" onclick="pencileditenable('city')" src="../../Resources/Img/edit.png">
                             <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
                             <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
@@ -133,7 +134,7 @@
                         <label for="province">Province </label>  
                         <br>
                         <div>
-                            <input type="text" id="province" name="province" placeholder="North" disabled> 
+                            <input type="text" id="province" name="province" placeholder="<%= c.getProvince()%>" disabled> 
                             <img id="pencil10" onclick="pencileditenable('province')" src="../../Resources/Img/edit.png">
                             <img class="icon1" id="ic19" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic19')" style="visibility:hidden;" >
                             <img class="icon2" id="ic20" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic20')" style="visibility:hidden;">
@@ -150,7 +151,7 @@
                 </div> 
                 <div class="edit">
                     <p>To change your password, you’ll need to verify the current one first. Then create a password you’re not using elsewhere, and be sure to change it regularly as well as anytime you suspect it’s been compromised.</p>
-                    <a href="changepassword.jsp" type="button">Change Password</a>
+                    <a href="../Photographer/changepassword.jsp" type="button">Change Password</a>
                 </div>
 
             </div> 

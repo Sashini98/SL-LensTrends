@@ -38,4 +38,5 @@ public interface PhotographerDao {
     
     public Photographer getPhotographerById(String photographerId) throws SQLException;
     public Photographer getPhotographerByEmail(String email) throws SQLException;
+    public Photographer getPhotographerByEmailAndPassword(String email,String password) throws SQLException;
 }
