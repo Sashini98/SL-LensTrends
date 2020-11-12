@@ -29,7 +29,30 @@
                 <th class="th"> ID </th>
                 <th class="th" id="th-color1"> TITLE </th>
                 <th class="th" id="th-color2"> OPTION </th>
-            </table>  
+            </table>
+            <br><br>
+            
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Description</td>
+                    <td><textarea class="textarea" disabled=""></textarea></td>
+                </tr>
+                <tr>
+                    <td align="left">Category</td>
+                    <td><input type="text" name="cate" id="category" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Photographer</td>
+                    <td><input type="text" name="name" id="pname" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Uploaded Date</td>
+                    <td><input type="date" name="date" id="udate" disabled=""></td>
+                </tr>
+                <tr>
+                    <th colspan =2><button class="btn" id="clear">Clear</button></th>
+                </tr>
+                </table>
         </div>
 
         <div class="box">
@@ -39,37 +62,28 @@
                 <input type="text" placeholder="Search" name="search2">
                 <button type="submit">Search</button>
             </div><br><br><br>
-            <form>
-                <div class="formContent">                             
-                    <span class="content_name"> Category </span><br>
-                    <input type="text" name="category" disabled="" required/>
-                    <label for="category" class="label_name">
-                    </label>
-                </div>
-
-                <div class="formContent">                             
-                    <span class="content_name"> Selling Price </span><br>
-                    <input type="text" name="price" disabled="" required/>
-                    <label for="price" class="label_name">
-                    </label>
-                </div>
-
-                <div class="formContent">                             
-                    <span class="content_name"> Photographer </span><br>
-                    <input type="text" name="pname" disabled="" required/>
-                    <label for="pname" class="label_name">
-                    </label>
-                </div>
-
-                <div class="formContent">                             
-                    <span class="content_name"> Reason </span><br>
-                    <input type="text" name="reason" disabled="" required/>
-                    <label for="reason" class="label_name">
-                    </label>
-                </div>
-
-                <button id="remove" type="submit" class="btn1">Remove</button>
-            </form>
+            
+            <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Title</td>
+                    <td><input type="text" name="title" id="title" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Category</td>
+                    <td><input type="text" name="cate" id="category" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Photographer</td>
+                    <td><input type="text" name="name" id="pname" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Uploaded Date</td>
+                    <td><input type="date" name="date" id="udate" disabled=""></td>
+                </tr>
+                <tr>
+                    <th colspan =2><button class="btn1" id="remove">Remove</button></th>
+                </tr>
+            </table>
 
         </div>
 
