@@ -5,7 +5,7 @@
  */
 package Controller.Filters;
 
-import Model.Client;
+import Model.Photographer;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -19,20 +19,20 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author kesh
  */
-public class FilterLoggedClient implements Filter {
+public class FilterLoggedPhotographer implements Filter{
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-
+  
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+     
+          HttpServletRequest req = (HttpServletRequest) request;
 
-        HttpServletRequest req = (HttpServletRequest) request;
-
-        Client loggedClient = (Client) req.getSession().getAttribute("loggedClient");
-        if (loggedClient != null) {
+        Photographer loggedPhotographer = (Photographer) req.getSession().getAttribute("loggedPhotographer");
+        if (loggedPhotographer != null) {
             request.setAttribute("logged", true);
 
         }else{
@@ -45,7 +45,7 @@ public class FilterLoggedClient implements Filter {
 
     @Override
     public void destroy() {
-
+    
     }
-
+    
 }

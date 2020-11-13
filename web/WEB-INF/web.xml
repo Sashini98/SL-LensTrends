@@ -137,21 +137,48 @@
         <url-pattern>/View/login.jsp</url-pattern>
     </filter-mapping>
     <filter>
+        <filter-name>FilterLoggedClientAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedClientAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedClientAccessOnly</filter-name>
+        <url-pattern>/View/User/ClientProfileUpdate.jsp</url-pattern>
+        <url-pattern>/View/User/Cart.jsp</url-pattern>
+        <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
         <filter-name>FilterLoggedClient</filter-name>
         <filter-class>Controller.Filters.FilterLoggedClient</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>FilterLoggedClient</filter-name>
-        <url-pattern>/View/User/ClientProfileUpdate.jsp</url-pattern>
-    </filter-mapping>
-    <filter>
-        <filter-name>ClientHomeFilter</filter-name>
-        <filter-class>Controller.Filters.ClientHomeFilter</filter-class>
-    </filter>
-    <filter-mapping>
-        <filter-name>ClientHomeFilter</filter-name>
         <url-pattern>/View/Home.jsp</url-pattern>
         <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedPhotographer</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedPhotographer</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedPhotographer</filter-name>
+        <url-pattern>/View/PhotographerHome.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedPhotographersAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
+        <url-pattern>/View/Photographer/uploadPhotos.jsp</url-pattern>
+        <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedClientOrPhotographer</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedClientOrPhotographer</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedClientOrPhotographer</filter-name>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
+        <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
     </filter-mapping>
 </web-app>

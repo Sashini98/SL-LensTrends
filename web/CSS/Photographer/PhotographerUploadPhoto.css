@@ -57,12 +57,12 @@
 .content .image-box label {
     display:block;
     margin-right: 3.3%;
-    margin-bottom: 3.5%;
+    margin-bottom: 3%;
 }
 
 input:checked + label{
     border-bottom: 5px solid  #ff8622; 
-    transform: scale(1.2);
+    transform: scale(1.1);
 
 
 }
@@ -78,28 +78,108 @@ input:checked + label{
     background-color: #fff;
     margin-top: 2%;
     margin-left: 3%;
-    width: 33%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     border-radius: 10px;
+    padding:0;
+    height: 100%;
 }
 
 .details .images {
     display: flex;
     flex-wrap: wrap;
-    height: 50%;
+    height:30%;
     width: 50%; 
     margin-top: -10%;
     margin-left: 38%;
+    margin-bottom: 0;
 }
 
 .details .images img {
-    height: 45%;
-    width: 45%; 
+    height: auto;
+    width: 60%; 
 }
 
 #delete {
     margin-top: 10%;
-    margin-left: 32%;
+    margin-left: 50%;
+}
+
+.details p {
+    margin-top: 13%;
+}
+
+.details .category {
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+
+.details .category label {
+    padding-right: 5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+
+}
+
+.details .category select{
+    outline: none;
+    border:none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+    width: 15%;
+    color:#707070;
+    position:fixed;
+}
+
+.details .category select:focus{
+    box-shadow:0 0 8px 0 rgba(12, 18, 28, 0.12);
+}
+
+.details .category select:hover {
+    color:#4b4b4b;
+}
+
+.details .releases {
+    margin-left: 10%;
+    padding:5px;
+    margin-top: 5%;
+    border: 1px solid rgba(12, 18, 28, 0.12);
+    width:59%;
+    height: 25%;
+    padding: 0 0 0 3%;
+    border-radius: 5px;
+}
+
+
+.details .releases p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+    margin-top: 5%;
+}
+
+#download{
+    cursor: pointer;
+}
+
+.title-area {
+    margin-left: 10%;
+}
+
+.title-area textarea {
+    margin-top: 5%;
+    border-radius: 5px;
+    border: 1px solid rgba(12, 18, 28, 0.12);
+    outline: none;
+    resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+}
+
+.title-area textarea:placeholder-shown{
+    font-style:italic;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 100%;
 }

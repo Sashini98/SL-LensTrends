@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author kesh
  */
-public class FilterLoggedClient implements Filter {
+public class FilterLoggedClientAccessOnly implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -28,19 +28,17 @@ public class FilterLoggedClient implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
         HttpServletRequest req = (HttpServletRequest) request;
 
-        Client loggedClient = (Client) req.getSession().getAttribute("loggedClient");
-        if (loggedClient != null) {
-            request.setAttribute("logged", true);
-
+        Client c = (Client) req.getSession().getAttribute("loggedClient");
+      
+        if (c != null) {
+            chain.doFilter(request, response);   
         }else{
-            request.setAttribute("logged", false);
+            // 404 
         
         }
-        chain.doFilter(request, response);
-        
+
     }
 
     @Override

@@ -5,9 +5,15 @@
  */
 package Controller;
 
+import Controller.DaoImpl.AdminDaoImpl;
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import DB.DB;
 import Model.Admin;
 import Model.Client;
+import Model.Dao.AdminDao;
+import Model.Dao.ClientDao;
+import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -32,41 +38,37 @@ public class Login extends HttpServlet {
 
         try {
 
-            ResultSet clientEmail = DB.search("SELECT * FROM Client Where Email = '" + email + "' ");
-            ResultSet photographerEmail = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' ");
-            ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' ");
+            ClientDao clientDao = new ClientDaoImpl();
+            Client clientbyEmail = clientDao.getClientbyEmail(email);
 
-            boolean adminAcc = AdminEmail.next();
-            boolean clientAcc = clientEmail.next();
-            boolean photographerAcc = photographerEmail.next();
+            PhotographerDao photographerDao = new PhotographerDaoImp();
+            Photographer photographerByEmail = photographerDao.getPhotographerByEmail(email);
 
-            if (adminAcc) {
+            AdminDao adminDao = new AdminDaoImpl();
+            Admin adminByEmail = adminDao.getAdminByEmail(email);
+
+            if (adminByEmail != null) {
                 try {
-                    ResultSet admin = DB.search("SELECT * FROM Admin Where Email = '" + email + "' AND Password = '" + pw + "' ");
-                    if (admin.next()) {
+                    Admin adminByEmailAndPassword = adminDao.getAdminByEmailAndPassword(email, pw);
 
-                        Admin a = new Admin();
-                        a.setEmail(admin.getString("Email"));
-                        a.setPassword(admin.getString("Password"));
-                        a.setType(admin.getString("Type"));
-                        a.setAdminId(admin.getInt("Admin_id"));
+                    if (adminByEmailAndPassword != null) {
 
-                        request.getSession().setAttribute("loggedAdmin", a);
+                        request.getSession().setAttribute("loggedAdmin", adminByEmailAndPassword);
                         response.sendRedirect("View/Admin/AdminDashboard.jsp");
 
                     } else {
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");
-                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                        request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                     }
 
                 } catch (Exception e) {
                     // inavalid password
                     request.setAttribute("account", "false");
                     request.setAttribute("msg", "Invalid Password");
-                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                    request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
-            } else if (clientAcc && photographerAcc) {
+            } else if (clientbyEmail != null && photographerByEmail != null) {
 
                 request.setAttribute("account", "true");
                 request.getSession().setAttribute("pw", pw);
@@ -75,29 +77,23 @@ public class Login extends HttpServlet {
 
                 //logged palace
 //               
-            } else if (clientAcc) {
+            } else if (clientbyEmail != null) {
                 try {
-                    ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
-                    if (client.next()) {
-                        Client c = new Client();
-                        c.setClientId(client.getString("Client_Id"));
-                        c.setEmail(client.getString("Email"));
-                        c.setPassword(client.getString("Password"));
-                        c.setFname(client.getString("Fname"));
-                        c.setLname(client.getString("Lname"));
-                        c.setAddress_no(client.getString("Address_No"));
-                        c.setProvince(client.getString("Province"));
-                        c.setCity(client.getString("City"));
-                        c.setGenderId(client.getInt("Gender_Id"));
+                    Client clientbyEmailAndPassword = clientDao.getClientbyEmailAndPassword(email, pw);
 
-                        request.getSession().setAttribute("loggedClient", c);
+                    if (clientbyEmailAndPassword != null) {
+
+                        request.getSession().setAttribute("loggedClient", clientbyEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
+
                         if (page != null) {
                             if (page.equals("ch")) {
                                 response.sendRedirect("View/Home.jsp");
 
                             } else if (page.equals("cu")) {
                                 response.sendRedirect("View/User/ClientProfileUpdate.jsp");
+                            } else if (page.equals("cph")) {
+                                response.sendRedirect("View/User/AdvancedSearch.jsp");
                             }
                         } else {
                             response.sendRedirect("View/Home.jsp");
@@ -106,7 +102,7 @@ public class Login extends HttpServlet {
                     } else {
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");
-                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                        request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                     }
 
                 } catch (Exception e) {
@@ -114,36 +110,20 @@ public class Login extends HttpServlet {
                     e.printStackTrace();
                     request.setAttribute("account", "false");
                     request.setAttribute("msg", "Invalid Password");
-                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                    request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
 
-            } else if (photographerAcc) {
+            } else if (photographerByEmail != null) {
 
                 try {
-                    System.out.println("awwwaaaaaa");
+                    Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
                     ResultSet photographer = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' AND Password = '" + pw + "' ");
 
-                    if (photographer.next()) {
-                        Photographer p = new Photographer();
-                        p.setPhotographerId(photographer.getString("Photographer_Id"));
-                        p.setEmail(photographer.getString("Email"));
-                        p.setPassword(photographer.getString("Password"));
-                        p.setFname(photographer.getString("Fname"));
-                        p.setLname(photographer.getString("Lname"));
-                        p.setAddress_no(photographer.getString("Address_No"));
-                        p.setCity(photographer.getString("City"));
-                        p.setProvince(photographer.getString("Province"));
-                        p.setJoined_date(photographer.getDate("Joined_Date"));
-                        p.setGenderId(photographer.getInt("Gender_Id"));
-                        p.setPlanId(photographer.getInt("Plan_Id"));
-                        p.setMobile(photographer.getString("Mobile"));
-                        p.setWebsite(photographer.getString("Website"));
-                        p.setBio(photographer.getString("bio"));
-                        p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
-                        p.setPostalCode(photographer.getInt("PostalCode"));
+                    if (photographerByEmailAndPassword != null) {                 
 
-                        request.getSession().setAttribute("loggedPhotographer", p);
+                        request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
                         response.sendRedirect("View/PhotographerHome.jsp");
+                        
                     } else {
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");
@@ -151,16 +131,15 @@ public class Login extends HttpServlet {
                     }
 
                 } catch (Exception e) {
-                    System.out.println("loooll");
                     request.setAttribute("account", "false");
                     request.setAttribute("msg", "Invalid Password");
-                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                    request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
 
             } else {
                 request.setAttribute("account", "false");
                 request.setAttribute("msg", "Invalid Email");
-                request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                request.getRequestDispatcher("/View/login.jsp").forward(request, response);
             }
 
         } catch (SQLException ex) {
@@ -170,7 +149,7 @@ public class Login extends HttpServlet {
             e.printStackTrace();
             //invalid username 
             request.setAttribute("msg", "Invalid Email");
-            request.getRequestDispatcher("View/login.jsp").forward(request, response);
+            request.getRequestDispatcher("/View/login.jsp").forward(request, response);
         }
 
 //        System.out.println(getServletContext().getRealPath(""));

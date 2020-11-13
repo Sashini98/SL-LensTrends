@@ -5,8 +5,12 @@
  */
 package Controller;
 
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import DB.DB;
 import Model.Client;
+import Model.Dao.ClientDao;
+import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -33,27 +37,22 @@ public class ContributorOrClintLogin extends HttpServlet {
 
             if (user.equals("u")) {
                 try {
-                    ResultSet client = DB.search("SELECT * FROM Client Where Email = '" + email + "' AND Password = '" + pw + "' ");
-                    if (client.next()) {
-                        Client c = new Client();
-                        c.setClientId(client.getString("Client_Id"));
-                        c.setEmail(client.getString("Email"));
-                        c.setPassword(client.getString("Password"));
-                        c.setFname(client.getString("Fname"));
-                        c.setLname(client.getString("Lname"));
-                        c.setAddress_no(client.getString("Address_No"));
-                        c.setCity(client.getString("City"));
-                        c.setProvince(client.getString("Province"));
-                        c.setGenderId(client.getInt("Gender_Id"));
+                    ClientDao clientDao = new ClientDaoImpl();
+                    Client clientbyEmailAndPassword = clientDao.getClientbyEmailAndPassword(email, pw);
+                    
+                    if (clientbyEmailAndPassword != null) {
 
-                        request.getSession().setAttribute("loggedClient", c);
+                        request.getSession().setAttribute("loggedClient", clientbyEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
+                        
                         if (page != null) {
                             if (page.equals("ch")) {
                                 response.sendRedirect("View/Home.jsp");
 
                             } else if (page.equals("cu")) {
                                 response.sendRedirect("View/User/ClientProfileUpdate.jsp");
+                            }else if (page.equals("cph")) {
+                                response.sendRedirect("View/User/AdvancedSearch.jsp");
                             }
                         } else {
                             response.sendRedirect("View/Home.jsp");
@@ -62,65 +61,51 @@ public class ContributorOrClintLogin extends HttpServlet {
                     } else {
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");
-                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                        request.getRequestDispatcher("/View/login.jsp").forward(request, response);
 
                     }
 
                 } catch (Exception e) {
                     // inavalid password
                     request.setAttribute("msgp", "Invalid Password");
-                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                    request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
 
             } else if (user.equals("c")) {
 
                 try {
 
-                    ResultSet photographer = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' AND Password = '" + pw + "' ");
+                    PhotographerDao photographerDao = new PhotographerDaoImp();
+                    Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
+                   
 
-                    if (photographer.next()) {
-                        Photographer p = new Photographer();
-                        p.setPhotographerId(photographer.getString("Photographer_Id"));
-                        p.setEmail(photographer.getString("Email"));
-                        p.setPassword(photographer.getString("Password"));
-                        p.setFname(photographer.getString("Fname"));
-                        p.setLname(photographer.getString("Lname"));
-                        p.setAddress_no(photographer.getString("Address_No"));
-                        p.setCity(photographer.getString("City"));
-                        p.setProvince(photographer.getString("Province"));
-                        p.setJoined_date(photographer.getDate("Joined_Date"));
-                        p.setGenderId(photographer.getInt("Gender_Id"));
-                        p.setPlanId(photographer.getInt("Plan_Id"));
-                        p.setMobile(photographer.getString("Mobile"));
-                        p.setWebsite(photographer.getString("Website"));
-                        p.setBio(photographer.getString("bio"));
-                        p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
-                        p.setPostalCode(photographer.getInt("PostalCode"));
+                    if (photographerByEmailAndPassword != null) {
 
-                        request.getSession().setAttribute("loggedPhotographer", p);
+                        request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
                         response.sendRedirect("View/Photographer/PhotographerUpdate.jsp");
+                        
                     } else {
 
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");
-                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                        request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                     }
 
                 } catch (Exception e) {
                     request.setAttribute("msgp", "Invalid Password");
-                    request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                    request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
 
             } else {
                 request.setAttribute("account", "false");
                 request.setAttribute("msg", "Invalid Email");
-                request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                request.getRequestDispatcher("/View/login.jsp").forward(request, response);
 
             }
 
         } catch (Exception e) {
             request.setAttribute("error", "true");
-            request.getRequestDispatcher("View/login.jsp").forward(request, response);
+            request.getRequestDispatcher("/View/login.jsp").forward(request, response);
         }
 
     }

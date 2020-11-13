@@ -21,7 +21,7 @@ body {
     background-color: #fff;
     /*border-right: 4px solid #cc7106;*/
     padding: 2% 0%;
-    width:16%;
+    width: 20%;
     height: 100%;
     text-align: center;
     position: fixed;
@@ -443,11 +443,11 @@ body {
 }
 
 .heading {
-    margin-left: 20%;
-    background: red;
-    height: 0%;
-    padding: 0%;
-    margin-top: 0%;
+    margin-left: 5%;
+    /*    background: red;
+        height: 0%;
+        padding: 0%;
+        margin-top: 0%;*/
 }
 
 .heading h1 {
@@ -456,57 +456,99 @@ body {
 }
 
 .chart-photo {
-    margin-left: -8%;
-    margin-top: 8%;  
+    /*margin-left: -8%;*/
+    /*margin-top: 8%;*/  
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    height:0%;
-    background: red;
+    /*width: 80%;*/
+    /*height:0%;*/
     padding: 0%;
+    align-content: space-around;
+    justify-content: center;
 
 }
 
-
-#myChart1 {
+.upload-for-review{
+    flex: 0.5;
     background-color: #fff;
     border-radius: 10px;
     padding:5% 0% 5% 0%;
     box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
-    margin-bottom: 8%;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+.approved-photos{
+    flex: 0.5;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:5% 0% 5% 0%;
+    box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+    margin: 1%;
+    margin-bottom: 5%;
+    /*margin-left: 12%;*/
+}
+
+.rejected-photos{
+    flex: 0.5;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:5% 0% 5% 0%;
+    box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+.photos-summary{
+    flex: 0.5;
+    background-color: #fff;
+    border-radius: 10px;
+    padding:5% 0% 5% 0%;
+    box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+    margin: 1%;
+    margin-bottom: 5%;
+    /*margin-left: 12%;*/
+}
+
+#myChart1 {
+    /*    background-color: #fff;
+        border-radius: 10px;
+        padding:5% 0% 5% 0%;
+        box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+        margin-bottom: 8%;*/
 }
 
 #myChart2 {
-    background-color: #fff;
-    border-radius: 10px;
-    padding:5% 0% 5% 0%;
-    box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
-    margin-left: 12%;
+    /*    background-color: #fff;
+        border-radius: 10px;
+        padding:5% 0% 5% 0%;
+        box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+        margin-left: 12%;*/
 
 }
 
 #myChart3 {
-    background-color: #fff;
-    border-radius: 10px;
-    padding:5% 0% 5% 0%;
-    box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+    /*    background-color: #fff;
+        border-radius: 10px;
+        padding:5% 0% 5% 0%;
+        box-shadow: 0 5px 8px rgba(12,13,14,0.15); */
     /*margin-left: 12%;*/
 
 }
 
 #myChart4 {
-    background-color: #fff;
-    border-radius: 10px;
-    padding:5% 0% 5% 0%;
-    box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
-    margin-left: 12%;
+    /*    background-color: #fff;
+        border-radius: 10px;
+        padding:5% 0% 5% 0%;
+        box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
+        margin-left: 12%;*/
 
 }
 
 
 .heading2 {
     float: left;
-    margin-top: 80%;
+    margin-top: 5%;
     height:0%;
     margin-left: 0%;
     /*margin-right: 80%;*/

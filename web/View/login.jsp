@@ -75,7 +75,7 @@
                 %>
                 <div class="passinfo">
 
-                    <form action="../Login" method="POST">
+                    <form action="<%= request.getContextPath()%>/Login" method="POST">
                         <fieldset class="cpass">
                             <legend> Email Address </legend>
                             <input type="text" id="email" name="email" placeholder="Email">

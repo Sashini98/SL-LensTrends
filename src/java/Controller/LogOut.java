@@ -28,6 +28,8 @@ public class LogOut extends HttpServlet {
             if (location.equals("ch")) {
                 response.sendRedirect("/GroupProject/View/Home.jsp");
 
+            } else if (location.equals("cph")){
+                response.sendRedirect("/GroupProject/View/User/AdvancedSearch.jsp");
             } else {
                 response.sendRedirect("/GroupProject/View/login.jsp");
             }
