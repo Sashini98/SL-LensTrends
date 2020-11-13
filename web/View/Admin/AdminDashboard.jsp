@@ -292,7 +292,7 @@
 
                     </div>
                 </div>
-                <div class="Forum">
+<!--                <div class="Forum">
                     <div class="heading2">
                         <h1>Forum</h1>
                     </div>
@@ -300,7 +300,7 @@
                     <div class="chart-forum">
 
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>

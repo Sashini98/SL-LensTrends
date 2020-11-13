@@ -108,7 +108,8 @@
                 </div>
                 <div class="category">
                     <label for="category">Category:</label>
-                    <select name="category" id="category">
+                    <select name="category" id="category" onfocus="this.size = 10;" onblur='this.size = 1;' 
+                            onchange='this.size = 1;this.blur();'>
 
                         <option value="Animals">Animals</option>
                         <option value="Buildings and Architecture">Buildings and Architecture</option>
@@ -135,7 +136,11 @@
                     </select>
                 </div>
                 <div class="releases">
-                    <p>Recognizable Property or Release ?</p>
+                    <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6);">For recognizable people or property.</span><br><br>
+                        <span style="color:#415daa;" id="download">Download Releases</span></p>
+                </div>
+                <div class="title-area">
+                    <textarea id="title-area" name="title" rows="5" cols="37" placeholder="Type title here (Max: 200 Characters)"></textarea>
                 </div>
             </div>
         </div>
@@ -144,7 +149,7 @@
         <script>
             window.onload = function () {
                 elm = document.querySelectorAll('.selection-img');
-//	main = document.querySelectorAll('main')[0];
+                //	main = document.querySelectorAll('main')[0];
                 detailsimg = document.querySelector('.detailsimg');
                 detailsimg.src = "../../Resources/Img/profile/l1.jpg";
 
