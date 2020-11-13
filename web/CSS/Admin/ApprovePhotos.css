@@ -26,7 +26,7 @@ input[type=text]
 {
     width : 98%;
     height: 30px;
-    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid black;
@@ -56,4 +56,6 @@ input[type=text]
 .details p  {
     margin: auto;
     margin-left: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
 }
