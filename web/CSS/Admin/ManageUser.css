@@ -162,6 +162,7 @@ input[type=text]
   font-family: 'Poppins', sans-serif;
   border-collapse: collapse;
   width: 100%;
+  
 }
 
 .th {
@@ -169,7 +170,8 @@ input[type=text]
   border: 1px solid #dddddd;
   text-align: center;
   padding: 8px;
-/*  font-family: 'Poppins', sans-serif;*/
+  font-family: 'Poppins', sans-serif;
+  
 }
 
 #th-color1{
