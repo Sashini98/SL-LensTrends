@@ -135,12 +135,13 @@
 
                     </select>
                 </div>
-                <div class="releases">
-                    <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6);">For recognizable people or property.</span><br><br>
-                        <span style="color:#415daa;" id="download">Download Releases</span></p>
-                </div>
                 <div class="title-area">
                     <textarea id="title-area" name="title" rows="5" cols="37" placeholder="Type title here (Max: 200 Characters)"></textarea>
+                </div>
+                <div class="releases">
+                    <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6);">For recognizable people or property.</span><br><br>
+                        <span style="color:#415daa;" id="download">Download Releases</span> <br> <br><span style="color:#f6862a;" id="download">Add Releases</span></p>
+
                 </div>
             </div>
         </div>
