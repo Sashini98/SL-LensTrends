@@ -143,8 +143,8 @@
     <filter-mapping>
         <filter-name>FilterLoggedClientAccessOnly</filter-name>
         <url-pattern>/View/User/ClientProfileUpdate.jsp</url-pattern>
-         <url-pattern>/View/User/Cart.jsp</url-pattern>
-         <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
+        <url-pattern>/View/User/Cart.jsp</url-pattern>
+        <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClient</filter-name>
@@ -154,7 +154,6 @@
         <filter-name>FilterLoggedClient</filter-name>
         <url-pattern>/View/Home.jsp</url-pattern>
         <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
-        <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedPhotographer</filter-name>
@@ -172,5 +171,14 @@
         <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
         <url-pattern>/View/Photographer/uploadPhotos.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedClientOrPhotographer</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedClientOrPhotographer</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedClientOrPhotographer</filter-name>
+        <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
+        <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
     </filter-mapping>
 </web-app>
