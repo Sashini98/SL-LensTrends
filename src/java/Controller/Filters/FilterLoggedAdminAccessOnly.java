@@ -5,7 +5,7 @@
  */
 package Controller.Filters;
 
-import Model.Client;
+import Model.Admin;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author kesh
  */
-public class FilterLoggedClient implements Filter {
+public class FilterLoggedAdminAccessOnly implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -28,19 +28,17 @@ public class FilterLoggedClient implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-
+        
         HttpServletRequest req = (HttpServletRequest) request;
 
-        Client loggedClient = (Client) req.getSession().getAttribute("loggedClient");
-        if (loggedClient != null) {
-            request.setAttribute("logged", true);
+        Admin a = (Admin) req.getSession().getAttribute("loggedAdmin");
 
-        }else{
-            request.setAttribute("logged", false);
-        
+        if (a != null) {
+            chain.doFilter(request, response);
+        } else {
+            // 404 
+
         }
-        chain.doFilter(request, response);
-        
     }
 
     @Override

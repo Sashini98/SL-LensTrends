@@ -156,4 +156,21 @@
         <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedPhotographer</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedPhotographer</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedPhotographer</filter-name>
+        <url-pattern>/View/PhotographerHome.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedPhotographersAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
+        <url-pattern>/View/Photographer/uploadPhotos.jsp</url-pattern>
+        <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
+    </filter-mapping>
 </web-app>
