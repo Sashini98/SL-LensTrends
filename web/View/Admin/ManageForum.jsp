@@ -23,7 +23,7 @@
             <div class="details">
                 <h2>FoV of One Plus 6T?</h2><br>
             </div>
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Uploaded By</td>
                     <td><input type="text" name="upload" id="upload" disabled=""></td>
@@ -38,7 +38,7 @@
             <div class="details">
                 <h2>NFC Photography Identification</h2><br>
             </div>
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Uploaded By</td>
                     <td><input type="text" name="upload" id="upload" disabled=""></td>
@@ -53,7 +53,7 @@
             <div class="details">
                 <h2>Digital Image Processing </h2><br>
             </div>
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Uploaded By</td>
                     <td><input type="text" name="upload" id="upload" disabled=""></td>

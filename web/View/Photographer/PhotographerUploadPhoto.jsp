@@ -61,55 +61,112 @@
             <div class="image-box">
                 <input type="radio" id="r1" name="radio" checked />
                 <label for="r1">
-                    <img src="../../Resources/Img/profile/l1.jpg" id="ls1">
+                    <img src="../../Resources/Img/profile/l1.jpg" class="selection-img" id="ls1">
                 </label>
 
                 <input type="radio" id="r2" name="radio" />
                 <label for="r2">
-                    <img src="../../Resources/Img/profile/l2.jpg" id="ls2">
+                    <img src="../../Resources/Img/profile/l2.jpg" id="ls2" class="selection-img">
                 </label>
 
                 <input type="radio" id="r3" name="radio" />
                 <label for="r3">
-                    <img src="../../Resources/Img/profile/l3.jpg" id="ls3">
+                    <img src="../../Resources/Img/profile/l3.jpg" id="ls3" class="selection-img">
                 </label>
 
                 <input type="radio" id="r4" name="radio" />
                 <label for="r4">
-                    <img src="../../Resources/Img/profile/l4.jpg" id="ls4"> 
+                    <img src="../../Resources/Img/profile/l4.jpg" id="ls4" class="selection-img"> 
                 </label>
 
                 <input type="radio" id="r5" name="radio" />
                 <label for="r5">
-                    <img src="../../Resources/Img/profile/p1.jpg" id="p1">
+                    <img src="../../Resources/Img/profile/p1.jpg" id="p1" class="selection-img">
                 </label>
 
                 <input type="radio" id="r6" name="radio" />
                 <label for="r6">
-                    <img src="../../Resources/Img/profile/p2.jpg" id="p2">
+                    <img src="../../Resources/Img/profile/p2.jpg" id="p2" class="selection-img">
                 </label>
 
                 <input type="radio" id="r7" name="radio" />
                 <label for="r7">
-                    <img src="../../Resources/Img/profile/p3.jpg" id="p3">
+                    <img src="../../Resources/Img/profile/p3.jpg" id="p3" class="selection-img">
                 </label>
 
                 <input type="radio" id="r8" name="radio" />
                 <label for="r8">
-                    <img src="../../Resources/Img/profile/p4.jpg" id="p4">
+                    <img src="../../Resources/Img/profile/p4.jpg" id="p4" class="selection-img">
                 </label>
 
             </div>
 
             <div class="details">
-                <img src="../../Resources/Img/delete.svg" id="delete">
+                <img src="../../Resources/Img/delete.svg" id="delete" style="cursor: pointer">
                 <div class="images">
-                    <img src="../../Resources/Img/profile/l1.jpg" style="visibility: visible" id="image">                   
+                    <img src="" class="detailsimg" id="image">                   
                 </div>
+                <div class="category">
+                    <label for="category">Category:</label>
+                    <select name="category" id="category">
 
+                        <option value="Animals">Animals</option>
+                        <option value="Buildings and Architecture">Buildings and Architecture</option>
+                        <option value="Business">Business</option>
+                        <option value="Drinks">Drinks</option>
+                        <option value="The Environment">The Environment</option>
+                        <option value="States of Mind">States of Mind</option>
+                        <option value="Food">Food</option>
+                        <option value="Hobbies and Leisure">Hobbies and Leisure</option>
+                        <option value="Industry">Industry</option>
+                        <option value="Landscapes">Landscapes</option>
+                        <option value="Lifestyle">Lifestyle</option>
+                        <option value="People">People</option>
+                        <option value="Plants and Flowers">Plants and Flowers</option>
+                        <option value="Culture and Religion">Culture and Religion</option>
+                        <option value="Science">Science</option>
+                        <option value="Social Issues">Social Issues</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Transport">Transport</option>
+                        <option value="Travel">Travel</option>
+                        <option value="volvo">Portraits</option>
+
+                    </select>
+                </div>
+                <div class="releases">
+                    <p>Recognizable Property or Release ?</p>
+                </div>
             </div>
         </div>
 
-        <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
+        <!--<script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>-->
+        <script>
+            window.onload = function () {
+                elm = document.querySelectorAll('.selection-img');
+//	main = document.querySelectorAll('main')[0];
+                detailsimg = document.querySelector('.detailsimg');
+                detailsimg.src = "../../Resources/Img/profile/l1.jpg";
+
+
+                var images = ['../../Resources/Img/profile/l1.jpg', '../../Resources/Img/profile/l2.jpg', '../../Resources/Img/profile/l3.jpg',
+                    '../../Resources/Img/profile/l4.jpg', '../../Resources/Img/profile/p1.jpg', '../../Resources/Img/profile/p2.jpg',
+                    '../../Resources/Img/profile/p3.jpg', '../../Resources/Img/profile/p4.jpg'];
+                var img_now = 0;
+
+
+
+                elm.forEach(function (elm) {
+                    elm.addEventListener('click', function (event) {
+                        detailsimg.src = event.target.src;
+                        if (img_now >= images.length) {
+                            img_now = 0;
+                        }
+                    })
+                })
+
+            }
+        </script>
+
     </body>
 </html>
