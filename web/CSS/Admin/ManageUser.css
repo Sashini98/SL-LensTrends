@@ -91,7 +91,7 @@
 }
 
 .contain h2{
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 150%;
     font-weight: bold;
 
@@ -133,7 +133,7 @@ input[type=text]
 {
     width : 98%;
     height: 30px;
-    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     border: none;
     border-bottom: 1px solid black;
@@ -159,9 +159,10 @@ input[type=text]
 }
 
 .table {
-  font-family: arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   border-collapse: collapse;
   width: 100%;
+  
 }
 
 .th {
@@ -169,6 +170,8 @@ input[type=text]
   border: 1px solid #dddddd;
   text-align: center;
   padding: 8px;
+  font-family: 'Poppins', sans-serif;
+  
 }
 
 #th-color1{
@@ -196,7 +199,7 @@ input[type=text]
 }
 
 .b3 h2{
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 150%;
     font-weight: bold;
 

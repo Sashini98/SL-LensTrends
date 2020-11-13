@@ -22,7 +22,7 @@
             <div class="details">
                 <p>I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ...</p>
             </div>
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Title</td>
                     <td><input type="text" name="title" id="title" disabled=""></td>

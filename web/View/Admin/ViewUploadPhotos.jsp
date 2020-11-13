@@ -24,7 +24,7 @@
             <div class="details">
                 <a href=""><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>
             </div>
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Title</td>
                     <td><input type="text" name="title" id="title" disabled=""></td>

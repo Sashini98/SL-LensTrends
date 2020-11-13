@@ -32,7 +32,7 @@
             </table>
             <br><br>
             
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Description</td>
                     <td><textarea class="textarea" disabled=""></textarea></td>
@@ -63,7 +63,7 @@
                 <button type="submit">Search</button>
             </div><br><br><br>
             
-            <table border="0" width="100%" height="40px" >
+            <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Title</td>
                     <td><input type="text" name="title" id="title" disabled=""></td>
