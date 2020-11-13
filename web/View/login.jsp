@@ -25,6 +25,7 @@
             if (attribute.equals("true")) {
         %>
 
+
         <div style="display: flex; justify-content: center;">
             <div class="logAccount" id="ReportPhoto">
                 <div class="logAccountHeader">
@@ -67,7 +68,7 @@
                     if (message != null) {
                 %>
                 <div class="loginErrorMessage">
-                    <span><%= message %></span>
+                    <span><%= message%></span>
                 </div>
                 <%
                     }

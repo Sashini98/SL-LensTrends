@@ -50,10 +50,37 @@
                 </div><br><br><br>
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
-                    <th class="th" id="th-color1"> TYPE </th>
+                    <th class="th" id="th-color1"> NAME </th>
+                    <th class="th" id="th-color2"> TYPE </th>
+                    <th class="th" id="th-color3"> OPTION </th>
                 </table>  
                 <br><br>
-                <button id="view" type="submit" class="btn">View</button>
+               
+                <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Email</td>
+                    <td><input type="text" name="mail" id="email" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Address No</td>
+                    <td><input type="text" name="address" id="addno" disabled=""></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td align="left">City</td>
+                    <td><input type="text" name="cit" id="city" disabled=""></td>
+                </tr>
+                <td align="left">Province</td>
+                <td><input type="text" name="pro" id="province" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Gender</td>
+                    <td><input type="text" name="gen" id="gender" disabled=""></td>
+                </tr>
+                <tr>
+                    <th colspan =2><button class="btn" id="clear">Clear</button></th>
+                </tr>
+                </table>
             </div>
 
             <div class="b2">
@@ -66,10 +93,36 @@
 
                 <table class="table" width="100%">
                     <th class="th"> ID </th>
-                    <th class="th" id="th-color1"> TYPE </th>
-                    <th class="th" id="th-color2"> OPTION </th>
+                    <th class="th" id="th-color1"> NAME </th>
+                    <th class="th" id="th-color2"> TYPE </th>
+                    <th class="th" id="th-color3"> OPTION </th>
                 </table> <br><br>
-                <button id="activate" type="submit" class="btn">Activate</button>
+                
+                <table border="0" width="100%" height="40px" >
+                <tr>
+                    <td align="left">Email</td>
+                    <td><input type="text" name="mail" id="email" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Address No</td>
+                    <td><input type="text" name="address" id="addno" disabled=""></td>
+                </tr>
+                <tr>
+                <tr>
+                    <td align="left">City</td>
+                    <td><input type="text" name="cit" id="city" disabled=""></td>
+                </tr>
+                <td align="left">Province</td>
+                <td><input type="text" name="pro" id="province" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Gender</td>
+                    <td><input type="text" name="gen" id="gender" disabled=""></td>
+                </tr>
+                <tr>
+                    <th colspan =2><button class="btn" id="activate">Activate</button></th>
+                </tr>
+                </table>
             </div>
         </div>
 
