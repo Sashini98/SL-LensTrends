@@ -32,7 +32,7 @@ public class FilterLoggedPhotographersAccessOnly implements Filter{
         
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
-        Photographer p = (Photographer) req.getSession().getAttribute("loggedClient");
+        Photographer p = (Photographer) req.getSession().getAttribute("loggedPhotographer");
       
         if (p != null) {
             chain.doFilter(request, response);   

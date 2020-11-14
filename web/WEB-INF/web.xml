@@ -211,6 +211,14 @@
         <url-pattern>/View/Admin/AdminSummery.jsp</url-pattern>
         <url-pattern>/View/Admin/ManageUser.jsp</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedActor</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedActor</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedActor</filter-name>
+        <url-pattern>/View/Photographer/changepassword.jsp</url-pattern>
+    </filter-mapping>
     <error-page>
         <error-code>404</error-code>
         <location>/View/Error404.jsp</location>
