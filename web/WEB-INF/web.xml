@@ -60,6 +60,10 @@
         <servlet-name>ContributorOrClintLogin</servlet-name>
         <servlet-class>Controller.ContributorOrClintLogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminDasboardHandler</servlet-name>
+        <servlet-class>Controller.Admin.AdminDasboardHandler</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -119,6 +123,10 @@
     <servlet-mapping>
         <servlet-name>ContributorOrClintLogin</servlet-name>
         <url-pattern>/ContributorOrClintLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminDasboardHandler</servlet-name>
+        <url-pattern>/AdminDasboardHandler</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -180,5 +188,27 @@
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedAdminAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedAdminAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedAdminAccessOnly</filter-name>
+        <url-pattern>/View/Admin/AdminDashboard.jsp</url-pattern>
+        <url-pattern>/View/Admin/AdminNotification.jsp</url-pattern>
+        <url-pattern>/View/Admin/ManagePhoto.jsp</url-pattern>
+        <url-pattern>/View/Admin/ApprovePhoto.jsp</url-pattern>
+        <url-pattern>/View/Admin/ManageForum.jsp</url-pattern>
+        <url-pattern>/View/Admin/AdminProfile.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedAdminMainAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedAdminMainAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedAdminMainAccessOnly</filter-name>
+        <url-pattern>/View/Admin/AdminSummery.jsp</url-pattern>
+        <url-pattern>/View/Admin/ManageUser.jsp</url-pattern>
     </filter-mapping>
 </web-app>

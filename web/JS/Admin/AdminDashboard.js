@@ -128,3 +128,86 @@ function logoutButtonBack() {
 //    document.getElementById("notifyDiv").style.backgroundColor = "white";
 }
 
+function show(selectedTab) {
+
+    if (selectedTab === 'notification') {
+        document.getElementById("notificationCss").disabled = false;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+
+    } else if (selectedTab === 'photomanage') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = false;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+
+    } else if (selectedTab === 'photoapproval') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = false;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+
+    } else if (selectedTab === 'forum') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = false;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+
+    } else if (selectedTab === 'user') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = false;
+        document.getElementById("settingCss").disabled = true;
+
+    } else if (selectedTab === 'summary') {
+//        document.getElementById("notificationCss").disabled = true;
+//        document.getElementById("managePhotoCss").disabled = true;
+//        document.getElementById("photoapprovalCss").disabled = true;
+//        document.getElementById("forumCss").disabled = true;
+//        document.getElementById("userCss").disabled = false;
+//        document.getElementById("settingCss").disabled = true;
+
+    } else if (selectedTab === 'setting') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = false;
+    }
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+                var responce = request.responseText;
+//                alert(responce);
+                document.getElementById("DashboardBody").innerHTML = responce;
+
+            }
+        }
+
+    };
+    request.open("POST", "../../AdminDasboardHandler", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("selectedTab=" + selectedTab);
+
+}
+
+function logout(){
+    
+    window.location.assign("../../LogOut?loc=ch");
+    
+}

@@ -6,12 +6,9 @@
 package Controller.Clent;
 
 import Controller.DaoImpl.ClientDaoImpl;
-import DB.DB;
 import Model.Client;
 import Model.Dao.ClientDao;
-import Model.Photographer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

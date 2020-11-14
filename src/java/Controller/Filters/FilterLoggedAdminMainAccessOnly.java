@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletRequest;
  *
  * @author kesh
  */
-public class FilterLoggedAdminAccessOnly implements Filter {
+public class FilterLoggedAdminMainAccessOnly implements Filter {
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -28,15 +28,21 @@ public class FilterLoggedAdminAccessOnly implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        
         HttpServletRequest req = (HttpServletRequest) request;
 
         Admin a = (Admin) req.getSession().getAttribute("loggedAdmin");
-
+        System.out.println("loooooooooooooooooooooooooooooooooooooooooooooool");
         if (a != null) {
             String type = a.getType();
-            req.setAttribute("type", type);
-            chain.doFilter(request, response);
+            if (type.equalsIgnoreCase("Main")) {
+                 req.setAttribute("type", type);
+                 System.out.println("awaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                chain.doFilter(request, response);
+
+            } else {
+                System.out.println("nooooooooooooooooooooooooooooooooooooooo");
+                //404
+            }
         } else {
             // 404 
 

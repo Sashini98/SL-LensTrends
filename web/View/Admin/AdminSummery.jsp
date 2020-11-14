@@ -1,16 +1,5 @@
-<%-- 
-    Document   : AdminDashboard
-    Created on : Nov 7, 2020, 2:41:58 PM
-    Author     : ASUS
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
-<%
-    String type = (String) request.getAttribute("type");
-%>
-
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,77 +9,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminDashboard.css" />
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminNotification.css" id="notificationCss"/>
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManagePhoto.css" id="managePhotoCss"/>
-        <link rel="stylesheet" href="../../CSS/Admin/ApprovePhotos.css" id="photoapprovalCss">
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageForum.css" id="forumCss"/>
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageUser.css" id="userCss"/>
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminProfile.css" id="settingCss"/>
-
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminDashboard.css"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminNotification.css"/>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>            
         <title>Admin</title>
     </head>
     <body style="background-color: #f8f9fb;">
 
-
-        <div class="side-nav">
-
-            <a href="../Home.jsp"><img src="../../Resources/Img/7.png"></a>
-                <%
-                    if (type.equalsIgnoreCase("Main")) {
-                %>
-            <div id="summaryDiv"  onclick="show('summary')" onmouseover="summaryButtonChange('summaryDiv')" onmouseout="summaryButtonBack('summaryDiv')" class="summary">
-                <img id="summaryIcon" src="../../Resources/Img/summary.svg" />
-                <p><a href="#" type="button"  id="summarytext">Dash Board</a></p>
-            </div>
-            <%
-                }
-            %>
-            <div id="photomanageDiv" onclick="show('photomanage')" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" class="photomanage">
-                <img id="photomanageIcon" src="../../Resources/Img/photomanagement.svg" />
-                <p><a href="#" type="button"  id="photomanagement">Manage Photo</a></p>
-            </div>
-
-            <div id="photoapprovalDiv" onclick="show('photoapproval')" onmouseover="photoapprovalButtonChange('photoapprovalDiv')" onmouseout="photoapprovalButtonBack('photoapprovalDiv')" class="photoapproval">
-                <img id="photoapprovalIcon" src="../../Resources/Img/photoreview.svg" />
-                <p><a href="#" type="button"  id="photo-approval">Photo Approval</a></p>
-            </div>
-
-            <div id="forumDiv" onclick="show('forum')" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" class="forum">
-                <img id="forumIcon" src="../../Resources/Img/forummangement.svg" />
-                <p><a href="#" type="button"  id="forummanage">Manage Forum</a></p>
-            </div>
-
-            <%
-                if (type.equalsIgnoreCase("Main")) {
-            %>
-            <div id="userDiv" onclick="show('user')"  onmouseover="userButtonChange('userDiv')" onmouseout="userButtonBack('userDiv')" class="user">
-                <img id="userIcon" src="../../Resources/Img/user.svg" />
-                <p><a href="#" type="button"  id="usermanage">Manage User</a></p>
-            </div>
-            <%
-                }
-            %>
-
-            <div id="settingDiv" onclick="show('setting')" onclick="show('settingDiv')" onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" class="setting">
-                <img id="settingIcon" src="../../Resources/Img/settings.svg" />
-                <p><a href="#" type="button"  id="settingtext">Settings</a></p>
-            </div>
-
-            <div id="notifyDiv" onclick="show('notification')" onmouseover="notifyButtonChange('notifyDiv')" onmouseout="notifyButtonBack('notifyDiv')" class="notification">
-                <img id="notificationIcon" src="../../Resources/Img/notify.svg" />
-                <p><a href="#" type="button"  id="notify">Notification</a></p>
-            </div>
-
-            <div id="logoutDiv" onclick="logout()" onmouseover="logoutButtonChange('logoutDiv')" onmouseout="logoutButtonBack('logoutDiv')" class="logout">
-                <img id="logoutIcon" src="../../Resources/Img/logout.svg" />
-                <p><a href="../../LogOut?loc=ch" type="button"  id="logouttext">logout</a></p>
-            </div>
-
-        </div>
-
-        <div id="DashboardBody" class="DashboardBody" style="margin-left: 20%; width: 100%;" >
+        <div id="DashboardBody" class="DashboardBody" style="margin-left: 20%;" >
             <div class="summeryBody" style=" display: flex; flex-direction: column;">
                 <div class="Photos">
                     <div class="heading">
@@ -327,6 +254,6 @@
                                 </div>-->
             </div>
         </div>
-        <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
+        <!--<script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>-->
     </body>
 </html>
