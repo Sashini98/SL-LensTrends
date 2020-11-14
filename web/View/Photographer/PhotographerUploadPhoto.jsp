@@ -139,8 +139,8 @@
                     <textarea id="title-area" name="title" rows="5" cols="37" placeholder="Type title here (Max: 200 Characters)"></textarea>
                 </div>
                 <div class="releases">
-                    <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6);">For recognizable people or property.</span><br><br>
-                        <span style="color:#415daa;" id="download">Download Releases</span> <br> <br><span style="color:#f6862a;" id="download">Add Releases</span></p>
+                    <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6); margin-bottom: 5%;" >For recognizable people or property.</span><br>
+                        <span style="color:#415daa;" id="download">Download Releases</span> &nbsp; &nbsp; &nbsp;<span style="color:#f6862a;" id="download">Add release</span></p>
 
                 </div>
             </div>
