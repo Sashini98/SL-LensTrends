@@ -35,5 +35,5 @@ public interface ClientDao {
     public Client  getClientbyEmail(String email) throws SQLException;
     public Client  getClientbyEmailAndPassword(String email, String password) throws SQLException;
     
-    
+    public String getLastId() throws SQLException;
 }
