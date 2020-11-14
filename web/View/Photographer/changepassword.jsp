@@ -6,6 +6,10 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    String actor = (String) request.getAttribute("actor");
+    System.out.println(actor);
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,24 +19,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
-        
-           </head>
+
+    </head>
     <body>
-        
-          <div class="fixedheader">  
+
+        <div class="fixedheader">  
             <div class="pageheader">
                 <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
                     <ul>
-
-                         <li><a href="../Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="PhotographerUpdate.jsp" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
-
+                        <%
+                            if (actor.equals("client")) {
+                        %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                            } else if (actor.equals("photographer")) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
+                            <%
+                                }else if (actor.equals("admin")) {
+                            %>
+                           <li><a href="<%= request.getContextPath()%>/View/Admin/AdminDashboard.jsp" type="button"> Dash Board </a></li>
+                           <%
+                           }
+                           %>
                     </ul>
                 </div>
 
@@ -47,43 +68,43 @@
             </div>
         </div>
         <br><br><br><br>
-        
+
         <div class="container"> 
-            
+
             <div class="logo">
                 <img src="../../Resources/Img/6.png">
             </div>
-                <h1>Change Password</h1>
+            <h1>Change Password</h1>
 
 
-                <div class="caption">
-                  <p>
-                      You will change the password for: &nbsp <strong id="email">th******ya@g***l.com</strong>
-                  </p>
+            <div class="caption">
+                <p>
+                    You will change the password for: &nbsp <strong id="email">th******ya@g***l.com</strong>
+                </p>
+            </div>
+
+            <div class="passinfo">
+                <form>
+                    <fieldset class="cpass">
+                        <legend> Confirm your current password </legend>
+                        <input type="text" id="cpass" name="cpass" placeholder="Current Password">
+                    </fieldset>
+
+                    <fieldset class="rpass">
+                        <legend> Enter you New Password </legend>
+                        <input type="text" id="npass" name="npass" placeholder="New Password">
+                        <input type="text" id="rpass" name="rpass" placeholder="Retype Password">
+                    </fieldset>
+                </form>
+
+                <div class="change">
+                    <a href="#" type="button">Change</a>
                 </div>
-                
-                <div class="passinfo">
-                    <form>
-                        <fieldset class="cpass">
-                            <legend> Confirm your current password </legend>
-                            <input type="text" id="cpass" name="cpass" placeholder="Current Password">
-                        </fieldset>
-                        
-                        <fieldset class="rpass">
-                            <legend> Enter you New Password </legend>
-                            <input type="text" id="npass" name="npass" placeholder="New Password">
-                            <input type="text" id="rpass" name="rpass" placeholder="Retype Password">
-                        </fieldset>
-                    </form>
-                    
-                    <div class="change">
-                        <a href="#" type="button">Change</a>
-                    </div>
-                    
-                    <div class="cancel">
-                        <a href="PhotographerUpdate.jsp" type="button">Cancel</a>
-                    </div>
+
+                <div class="cancel">
+                    <a href="PhotographerUpdate.jsp" type="button">Cancel</a>
                 </div>
+            </div>
         </div>
     </body>
 </html>
