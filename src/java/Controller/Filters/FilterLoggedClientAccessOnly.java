@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -29,14 +30,14 @@ public class FilterLoggedClientAccessOnly implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest req = (HttpServletRequest) request;
-
+        HttpServletResponse resp = (HttpServletResponse) response;
         Client c = (Client) req.getSession().getAttribute("loggedClient");
       
         if (c != null) {
             chain.doFilter(request, response);   
         }else{
             // 404 
-        
+            resp.sendRedirect("/GroupProject/View/Error404.jsp");
         }
 
     }

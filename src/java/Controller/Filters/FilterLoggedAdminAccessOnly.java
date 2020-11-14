@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -28,8 +29,9 @@ public class FilterLoggedAdminAccessOnly implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        
+
         HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse resp = (HttpServletResponse) response;
 
         Admin a = (Admin) req.getSession().getAttribute("loggedAdmin");
 
@@ -39,6 +41,7 @@ public class FilterLoggedAdminAccessOnly implements Filter {
             chain.doFilter(request, response);
         } else {
             // 404 
+            resp.sendRedirect("/GroupProject/View/Error404.jsp");
 
         }
     }
