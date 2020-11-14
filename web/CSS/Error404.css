@@ -1,0 +1,44 @@
+body {
+    background-image:url('../Resources/Img/errbg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0%;
+}
+
+.details p  {
+    margin-top: 50%;
+    margin-left: 0;
+    margin-right: 5%;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.details p span{
+    text-decoration: none;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: 900;
+    color: #0057ff;
+    font-size:100%;
+}
+
+.details p a{
+    text-decoration: none;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: 500;
+    color: #8C13A0;
+    font-size:80%;
+}
+
+.details img{
+    height: 60%;
+    width: 50%;
+}

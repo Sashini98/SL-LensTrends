@@ -1,0 +1,45 @@
+body {
+  background: linear-gradient(90deg, white 40%, #bbe4fc 60%);
+}
+
+.details {
+    margin-top: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0%;
+}
+
+.details p  {
+    margin: auto;
+    margin-left: 0;
+    margin-right: 5%;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+}
+
+.details p span{
+    text-decoration: none;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: 900;
+    color: navy;
+    font-size:100%;
+}
+
+.details p a{
+    text-decoration: none;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-weight: 500;
+    color: #8C13A0;
+    font-size:80%;
+}
+
+.details img{
+    height: 20%;
+    width: 20%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
