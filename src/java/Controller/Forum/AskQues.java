@@ -34,9 +34,10 @@ public class AskQues extends HttpServlet {
         
         String title = request.getParameter("title");
         System.out.println(title);
-        String body = request.getParameter("editor1");
+        String body = request.getParameter("body");
+        System.out.println(body);
 
-        String category = request.getParameter("fruit");
+        String category = request.getParameter("category");
         System.out.println(category);
 
         Date date = new Date();
@@ -54,6 +55,7 @@ public class AskQues extends HttpServlet {
         System.out.println(t);
 
         String id = "";
+        try{
 
         if (request.getSession().getAttribute("loggedPhotographer") == null) {
              
@@ -84,6 +86,12 @@ public class AskQues extends HttpServlet {
             } catch (Exception e) {
             e.printStackTrace();
             }
+        }
+         response.sendRedirect("View/Fourm/MainForum.jsp");
+        }
+        catch(Exception e)
+        {
+            response.sendRedirect("View/Fourm/AskQues.jsp");
         }
        
 
