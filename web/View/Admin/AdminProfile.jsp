@@ -62,7 +62,7 @@
         </div> <br>
         <div class="edit">
             <form>
-                <label for="address" >Address </label> 
+                <label for="address" >Address No</label> 
                 <br>
                 <div class="icon"> 
                     <input type="text" id="address" name="address" placeholder="" disabled> 

@@ -40,7 +40,7 @@
             </div>
 
             <div class="passinfo">
-                <form>
+                <form id="ARegister" action="../../AdminRegister" method="POST">
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
                         <input type="text" id="email" name="mail" >
@@ -48,12 +48,28 @@
                         <input type="text" id="fname" name="name">
                         <legend> Last Name </legend>
                         <input type="text" id="lname" name="lname" >
+                        <legend> Mobile Number </legend>
+                        <input type="text" id="mobile" name="mnumber" >
+                        <legend> Address No </legend>
+                        <input type="text" id="address" name="add" >
+                        <legend> City </legend>
+                        <input type="text" id="city" name="city" >
+                        <legend> Province </legend>
+                        <input type="text" id="province" name="pro" >
+                        <legend> Gender </legend>
+                        <div><input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label></div>
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pass" >
-                        <legend> Date of Birth </legend>
-                        <input type="text" id="dob" name="birth" >
-                        <legend> Country </legend>
-                        <input type="text" id="country" name="count" >
+                        <legend> Confirm Password </legend>
+                        <input type="password" id="repPw" name="passR" >
+                        <legend> Type </legend>
+                        <div><input type="radio" id="main" name="type" value="Main">
+                            <label for="male">Main Administrator</label>
+                            <input type="radio" id="co" name="type" value="Co">
+                            <label for="female">Co-Administrator</label></div>
                     </fieldset>                        
 
                     <div class="change">

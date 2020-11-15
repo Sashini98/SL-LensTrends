@@ -68,6 +68,10 @@
         <servlet-name>ClientRegister</servlet-name>
         <servlet-class>Controller.Clent.ClientRegister</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminRegister</servlet-name>
+        <servlet-class>Controller.Admin.AdminRegister</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>ClientRegister</servlet-name>
         <url-pattern>/ClientRegister</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminRegister</servlet-name>
+        <url-pattern>/AdminRegister</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
