@@ -73,7 +73,7 @@
                     </fieldset>                        
 
                     <div class="change">
-                        <a href="#" type="button">Submit</a>
+                        <a type="button">Submit</a>
                     </div>
                 </form><br><br><br>
                 <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">
