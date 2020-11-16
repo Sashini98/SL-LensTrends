@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body style="background-image: url(../../Resources/Img/uRe.jpg); background-size: 100%;">
+    <body style="background-image: url(../../Resources/Img/uRe.jpg); background-size: cover;">
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -30,7 +30,7 @@
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
-                        
+
 
                     </ul>
                 </div>
@@ -61,24 +61,33 @@
             </div>
 
             <div class="passinfo">
-                <form>
+                <form id="CRegister" action="../../ClientRegister" method="POST">
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
-                        <input type="text" id="email" name="mail" >
+                        <input type="text" id="email" name="email" >
                         <legend> First Name </legend>
-                        <input type="text" id="fname" name="name">
+                        <input type="text" id="fname" name="fname">
                         <legend> Last Name </legend>
                         <input type="text" id="lname" name="lname" >
+                        <legend>Address </legend>
+                        <input type="text" id="address" name="address" >
+                        <legend> City </legend>
+                        <input type="text" id="city" name="city" >
+                        <legend> Province </legend>
+                        <input type="text" id="province" name="province" >
+                        <legend> Gender </legend>
+                        <div><input type="radio" id="male" name="gender" value="male">
+                            <label for="male">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Female</label></div>
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pass" >
-                        <legend> Date of Birth </legend>
-                        <input type="text" id="dob" name="birth" >
-                        <legend> Country </legend>
-                        <input type="text" id="country" name="count" >
+                        <legend> Confirm Password </legend>
+                        <input type="password" id="repPw" name="passR" >
                     </fieldset>                        
 
                     <div class="change">
-                        <a href="#" type="button">Submit</a>
+                        <input type="submit" value="submit">
                     </div>
                 </form><br><br><br>
                 <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">

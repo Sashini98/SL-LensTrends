@@ -145,4 +145,20 @@ public class ClientDaoImpl implements ClientDao {
         DB.iud("UPDATE client SET ActiveStatus='" + status + "' WHERE Client_Id = '" + cilentId + "'");
     }
 
+    @Override
+    public String getLastId() throws SQLException {
+       String id="";
+       ResultSet cid=DB.search("SELECT Client_Id as cid FROM client ORDER BY Client_Id DESC LIMIT 1; ");
+      
+       
+        if (cid.next()) {
+            id=cid.getString("cid");
+            return id;
+
+        } else {
+            return null;
+        }
+       
+    }
+
 }

@@ -83,68 +83,7 @@ public class forumH extends HttpServlet {
                 a.add(cnt + "");
 
             }
-//            while (ques.next()) {
-//                Question q = new Question();
-//                String name = "";
-//                
-//
-//                q.settitle(ques.getString("title"));
-//                q.setquestion(ques.getString("Question"));
-//                q.setcategory(ques.getString("Category"));
-//                q.setquestion_date(ques.getDate("Question_Date"));
-//
-//                try {
-//                    q.setclientId(ques.getString("Client_Id"));
-//
-//                    String cId = ques.getString("Client_Id");
-//                    
-//                    ClientDao clientDao= new ClientDaoImpl();
-//                    clientDao.getClientbyId(cId);
-//                    
-//                    
-//                    ResultSet client = DB.search("SELECT Fname,Lname FROM Client where Client_Id='" + cId + "'");
-//
-//                    if (client.next()) {
-//                        name = client.getNString("Fname") + " " + client.getNString("Lname");
-//
-//                    }
-//                } catch (Exception e) {
-//                    q.setPhotographerId(ques.getString("Photographer_Id"));                    
-//                    String pId = ques.getString("Photographer_Id");
-//                    
-//                    
-//                    PhotographerDao pDao= new PhotographerDaoImp();
-//                    pDao.getPhotographerById(pId);
-//                    
-//                    ResultSet photo = DB.search("SELECT Fname,Lname FROM Photographer where Photographer_Id='" + pId + "'");
-//
-//                    if (photo.next()) {
-//                        name = photo.getNString("Fname") + " " + photo.getNString("Lname");
-//
-//                    }
-//                }
-//
-//                try {
-//                    int qid = ques.getInt("Question_Id");
-//                    ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM Answer WHERE Question_Id=" + qid + "");
-//                    num.next();
-//                    cnt = num.getInt("rowcount");
-//                } catch (Exception e) {
-//                }
-//                a.add(q.gettitle());
-//                a.add(q.getquestion());
-//                a.add(q.getcategory());
-//                
-//                a.add(name);
-//
-//                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-//                String date = sdf.format(q.getquestion_date());
-//                a.add(date);       
-//                           
-//                a.add(cnt + "");
-//
-//               
-//            }
+//           
 
             request.setAttribute("questions", a);
             request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);

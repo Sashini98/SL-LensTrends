@@ -33,13 +33,8 @@ public class AskQues extends HttpServlet {
             throws ServletException, IOException {
         
         String title = request.getParameter("title");
-        System.out.println(title);
         String body = request.getParameter("body");
-        System.out.println(body);
-
         String category = request.getParameter("category");
-        System.out.println(category);
-
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);

@@ -64,6 +64,10 @@
         <servlet-name>AdminDasboardHandler</servlet-name>
         <servlet-class>Controller.Admin.AdminDasboardHandler</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClientRegister</servlet-name>
+        <servlet-class>Controller.Clent.ClientRegister</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -127,6 +131,10 @@
     <servlet-mapping>
         <servlet-name>AdminDasboardHandler</servlet-name>
         <url-pattern>/AdminDasboardHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ClientRegister</servlet-name>
+        <url-pattern>/ClientRegister</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -226,5 +234,5 @@
     <error-page>
         <error-code>500</error-code>
         <location>/View/Error500.jsp</location>
-    </error-page>   
+    </error-page>
 </web-app>
