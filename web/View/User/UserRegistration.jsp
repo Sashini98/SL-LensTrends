@@ -61,10 +61,14 @@
             </div>
 
             <div class="passinfo">
-                <form id="CRegister" action="../../ClientRegister" method="POST">
+                <form id="CRegister" action="../../ClientRegister" method="POST" onsubmit="return validateForm()">
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
-                        <input type="text" id="email" name="email" >
+                        <input type="text" id="email" name="email" onfocusout="emailValid()" >
+                        <legend> Password </legend>
+                        <input type="password" id="pw" name="pass" >
+                        <legend> Confirm Password </legend>
+                        <input type="password" id="repPw" name="passR" onfocusout="pwValid()">
                         <legend> First Name </legend>
                         <input type="text" id="fname" name="fname">
                         <legend> Last Name </legend>
@@ -80,10 +84,7 @@
                             <label for="male">Male</label>
                             <input type="radio" id="female" name="gender" value="female">
                             <label for="female">Female</label></div>
-                        <legend> Password </legend>
-                        <input type="password" id="pw" name="pass" >
-                        <legend> Confirm Password </legend>
-                        <input type="password" id="repPw" name="passR" >
+                        
                     </fieldset>                        
 
                     <div class="change">
@@ -95,5 +96,8 @@
                 </p>
             </div>
         </div>
+        
+                <script src="../../JS/User/userRegistration.js" type="text/javascript" ></script>
+
     </body>
 </html>
