@@ -74,7 +74,7 @@
             </div>  
             <div name="s" id="s">
                 <div class="questions">                
-                    <form id="askQ" action="../../AskQues" method="POST" onsubmit="FormSubmit(this);">
+                    <form id="askQ" action="../../AskQues" method="POST" onsubmit="return validateForm()">
                         <h3><label for="Title"><b>Title</b></label><br></h3>
                         <input type="text" id="title" name="title"><br><br><br>
 

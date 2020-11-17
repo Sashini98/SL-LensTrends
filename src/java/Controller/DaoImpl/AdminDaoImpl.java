@@ -54,4 +54,24 @@ public class AdminDaoImpl implements AdminDao {
         } 
     }
 
+    @Override
+    public void addAdmin(Admin admin) throws SQLException {
+        DB.iud("INSERT INTO admin (Admin_Id, Email, Password, Type)" + "VALUES ('" + admin.getAdminId() + "', '" + admin.getEmail() + "', '" + admin.getPassword() + "', '" + admin.getType() +"' ) ");
+    }
+
+    @Override
+    public int getLastId() throws SQLException {
+        int id=0;
+       ResultSet aid=DB.search("SELECT Admin_Id as aid FROM admin ORDER BY admin_Id DESC LIMIT 1; ");
+      
+       
+        if (aid.next()) {
+            id=aid.getInt("aid");
+            return id;
+
+        } else {
+            return 0;
+        }
+    }
+
 }

@@ -40,24 +40,22 @@
             </div>
 
             <div class="passinfo">
-                <form>
+                <form id="ARegister" action="../../AdminRegistration" method="POST">
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
-                        <input type="text" id="email" name="mail" >
+                        <input type="text" id="email" name="email" >
                         <legend> First Name </legend>
                         <input type="text" id="fname" name="name">
                         <legend> Last Name </legend>
                         <input type="text" id="lname" name="lname" >
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pass" >
-                        <legend> Date of Birth </legend>
-                        <input type="text" id="dob" name="birth" >
-                        <legend> Country </legend>
-                        <input type="text" id="country" name="count" >
+                        <legend> Type </legend>
+                        <input type="text" id="type" name="type" >
                     </fieldset>                        
 
                     <div class="change">
-                        <a href="#" type="button">Submit</a>
+                        <input type="submit" value="submit">
                     </div>
                 </form><br><br><br>
                 <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">

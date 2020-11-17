@@ -16,18 +16,21 @@ function FormSubmit(oForm) {
         oHidden.value = (oDDL.value == "") ? oTextbox.value : oDDL.value;
 }
 
+function trimfield(str) 
+{ 
+    return str.replace(/^\s+|\s+$/g,''); 
+}
 
-function validate()
-{
-    var x = document.forms["askQ"]["title"].value;
-    if (x == "") {
-        alert("Title must be filled out");
-        return false;
-    }
-
-//    var y = document.forms["askQ"]["body"].value;
-//    if (y == "") {
-//        alert("Question must be filled out");
-//        return false;
-//    }
+function validateForm() {
+  var title = document.forms["askQ"]["title"].value;
+  if (title == "" || title == null) {
+    alert("Title must be filled out");
+    return false;
+  }
+  
+  var body = document.getElementById("body")
+  if(trimfield(body.value) == '')  {
+    alert("Question must be filled out");
+    return false;
+  }
 }
