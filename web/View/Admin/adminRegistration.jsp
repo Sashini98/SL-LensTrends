@@ -41,7 +41,7 @@
 
             <div class="passinfo">
 
-                <form id="ARegister" action="../../AdminRegistration" method="POST">
+                <form id="ARegister" action="../../AdminRegister" method="POST">
 
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
