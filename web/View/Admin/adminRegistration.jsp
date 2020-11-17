@@ -41,23 +41,23 @@
 
             <div class="passinfo">
 
-                <form id="ARegister" action="../../AdminRegister" method="POST">
+                <form id="ARegister" action="../../AdminRegister" method="POST" onsubmit="return validateForm()">
 
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
-                        <input type="text" id="email" name="email" >
+                        <input type="text" id="email" name="email" onfocusout="emailValid()" >
                         <legend> First Name </legend>
                         <input type="text" id="fname" name="name">
                         <legend> Last Name </legend>
                         <input type="text" id="lname" name="lname" >
                         <legend> Mobile Number </legend>
-                        <input type="text" id="mobile" name="mnumber" >
+                        <input type="text" id="mobile" name="mobile" >
                         <legend> Address No </legend>
-                        <input type="text" id="address" name="add" >
+                        <input type="text" id="address" name="address" >
                         <legend> City </legend>
                         <input type="text" id="city" name="city" >
                         <legend> Province </legend>
-                        <input type="text" id="province" name="pro" >
+                        <input type="text" id="province" name="province" >
                         <legend> Gender </legend>
                         <div><input type="radio" id="male" name="gender" value="male">
                             <label for="male">Male</label>
@@ -66,7 +66,7 @@
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pass" >
                         <legend> Confirm Password </legend>
-                        <input type="password" id="repPw" name="passR" >
+                        <input type="password" id="repPw" name="passR" onfocusout="passValid()" >
                         <legend> Type </legend>
                         <input type="text" id="type" name="type" >
                     </fieldset>                        
@@ -80,3 +80,8 @@
                 </p>
             </div>
         </div>
+
+        <script src="../../JS/Admin/AdminRegistration.js" type="text/javascript" ></script>
+        
+    </body>
+</html>
