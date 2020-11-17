@@ -111,7 +111,7 @@ public class AdminDaoImpl implements AdminDao {
 
     @Override
     public String getLastId() throws SQLException {
-        String id="";
+       String id="";
        ResultSet aid=DB.search("SELECT Admin_Id as aid FROM admin ORDER BY Admin_Id DESC LIMIT 1; ");
       
        

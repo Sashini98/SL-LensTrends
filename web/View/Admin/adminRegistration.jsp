@@ -40,10 +40,12 @@
             </div>
 
             <div class="passinfo">
-                <form id="ARegister" action="../../AdminRegister" method="POST">
+
+                <form id="ARegister" action="../../AdminRegistration" method="POST">
+
                     <fieldset class="cpass">
                         <legend> Email Address </legend>
-                        <input type="text" id="email" name="mail" >
+                        <input type="text" id="email" name="email" >
                         <legend> First Name </legend>
                         <input type="text" id="fname" name="name">
                         <legend> Last Name </legend>
@@ -65,15 +67,11 @@
                         <input type="password" id="pw" name="pass" >
                         <legend> Confirm Password </legend>
                         <input type="password" id="repPw" name="passR" >
-                        <legend> Type </legend>
-                        <div><input type="radio" id="main" name="type" value="Main">
-                            <label for="male">Main Administrator</label>
-                            <input type="radio" id="co" name="type" value="Co">
-                            <label for="female">Co-Administrator</label></div>
+                        <input type="text" id="type" name="type" >
                     </fieldset>                        
 
                     <div class="change">
-                        <a type="button">Submit</a>
+                        <input type="submit" value="submit">
                     </div>
                 </form><br><br><br>
                 <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">
