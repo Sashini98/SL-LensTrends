@@ -67,6 +67,7 @@
                         <input type="password" id="pw" name="pass" >
                         <legend> Confirm Password </legend>
                         <input type="password" id="repPw" name="passR" >
+                        <legend> Type </legend>
                         <input type="text" id="type" name="type" >
                     </fieldset>                        
 

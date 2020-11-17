@@ -145,9 +145,10 @@
         <url-pattern>/ClientRegister</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-
         <servlet-name>AdminRegister</servlet-name>
         <url-pattern>/AdminRegister</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>PhotographerRegistration</servlet-name>
         <url-pattern>/PhotographerRegistration</url-pattern>
     </servlet-mapping>
