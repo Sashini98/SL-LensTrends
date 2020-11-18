@@ -62,7 +62,7 @@
         </div> <br>
         <div class="edit">
             <form>
-                <label for="address" >Address </label> 
+                <label for="address" >Address No</label> 
                 <br>
                 <div class="icon"> 
                     <input type="text" id="address" name="address" placeholder="" disabled> 
@@ -89,15 +89,6 @@
                     <img class="icon2" id="ic20" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic20')" style="visibility:hidden;">
                 </div>                   
                 <br>
-                <label for="zip">Zip/Postal </label>  
-                <br>
-                <div>
-                    <input type="text" id="zip" name="zip" placeholder="" disabled>
-                    <img id="pencil11" onclick="pencileditenable('zip')" src="../../Resources/Img/edit.png">
-                    <img class="icon1" id="ic21" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic21')" style="visibility:hidden;" >
-                    <img class="icon2" id="ic22" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic22')" style="visibility:hidden;">
-                </div>
-
             </form>
         </div>
     </div>

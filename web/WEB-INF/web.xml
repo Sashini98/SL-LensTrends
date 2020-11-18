@@ -73,8 +73,8 @@
         <servlet-class>Controller.Photographer.PhotographerRegistration</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AdminRegistration</servlet-name>
-        <servlet-class>Controller.Admin.AdminRegistration</servlet-class>
+        <servlet-name>AdminRegister</servlet-name>
+        <servlet-class>Controller.Admin.AdminRegister</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -145,13 +145,14 @@
         <url-pattern>/ClientRegister</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>AdminRegister</servlet-name>
+        <url-pattern>/AdminRegister</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>PhotographerRegistration</servlet-name>
         <url-pattern>/PhotographerRegistration</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>AdminRegistration</servlet-name>
-        <url-pattern>/AdminRegistration</url-pattern>
-    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             10
