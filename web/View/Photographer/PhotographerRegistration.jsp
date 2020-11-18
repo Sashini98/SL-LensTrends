@@ -108,7 +108,7 @@
                 <tr>
                     <td align="left">Province</td>
                     <td><input type="text" id="province" name="province" ></td>
-                    <td align="left">Caregory</td>
+                    <td align="left">Category</td>
                     <td><input type="text" name="category" id="category"></td>
                 </tr>
                 <tr>
