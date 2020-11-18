@@ -25,7 +25,18 @@
 
         <div class="fixedheader">  
             <div class="pageheader">
+                <%
+                    if (logged.equals("client") || logged.equals("nl")) {
+                %>
                 <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                    } else if (logged.equals("photographer")) {
+                    %>
+
+                <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                        }
+                    %>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
@@ -36,8 +47,8 @@
 
                         <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
                             <%
                                 if (logged.equals("client")) {
                             %>

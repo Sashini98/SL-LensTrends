@@ -186,6 +186,7 @@
         <filter-name>FilterLoggedClient</filter-name>
         <url-pattern>/View/Home.jsp</url-pattern>
         <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
+        <url-pattern>/View/User/PurchasePhoto.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedPhotographer</filter-name>
