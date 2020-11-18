@@ -90,7 +90,7 @@
                 <tr>
                     <td align="left">Last Name</td>
                     <td><input type="text" id="lname" name="lname" ></td>
-                    <td align="left">Website</td>
+                    <td align="left">Web site</td>
                     <td><input type="text" name="web" id="web"></td>
                 </tr>
                 <tr>
