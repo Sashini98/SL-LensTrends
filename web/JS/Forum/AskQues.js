@@ -21,12 +21,12 @@ function trimfield(str)
     return str.replace(/^\s+|\s+$/g,''); 
 }
 
-//function validateForm() {
-//  var title = document.forms["askQ"]["title"].value;
-//  if (title == "" || title == null) {
-//    alert("Title must be filled out");
-//    return false;
-//  }
-//  
-//  
-//}
+function validateForm() {
+  var title = document.forms["askQ"]["title"].value;
+  if (title == "" || title == null) {
+    alert("Title must be filled out");
+    return false;
+  }
+  
+  
+}
