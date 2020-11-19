@@ -54,7 +54,7 @@
             </div>
 
             <div class="notifyicn">
-                <a href="#" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
+                <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
 
             </div>
 
