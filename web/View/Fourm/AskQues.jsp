@@ -80,7 +80,7 @@
 
 
 
-                        <textarea id="body" name="body"></textarea>  <br><br><br>
+                        <textarea id="Questionbody" name="Questionbody"></textarea>  <br><br><br>
 
                         <h3><label for="Category"><b>Category</b></label></h3>
                         <div class="box" id="category" name="category">
