@@ -286,12 +286,13 @@ input:checked + label{
     background-color: #00478a;
     width: 80%;
     margin: auto;
+    padding: 2%;
     
 }
 
 .submit a {
     text-decoration: none;
     color: white;
-    font-size: 120%;
+    font-size: 110%;
     font-family: 'Didact Gothic', sans-serif;
 }
