@@ -34,7 +34,7 @@ public class AskQues extends HttpServlet {
         
         String title = request.getParameter("title");
         String body = request.getParameter("body");
-        String category = request.getParameter("category");
+        String category = request.getParameter("categ");
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);

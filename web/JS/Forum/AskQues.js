@@ -28,9 +28,5 @@ function validateForm() {
     return false;
   }
   
-  var body = document.getElementById("body")
-  if(trimfield(body.value) == '')  {
-    alert("Question must be filled out");
-    return false;
-  }
+  
 }
