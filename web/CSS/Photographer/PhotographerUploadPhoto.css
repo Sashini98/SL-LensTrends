@@ -34,10 +34,11 @@
     border-bottom: 2px solid #d86f19;
 }
 
-.content {
+/*.content {
     display: flex;
     flex-wrap: wrap;
-}
+width: auto;
+}*/
 
 .content .image-box {
     /*background-color: red;*/
@@ -61,7 +62,7 @@
 }
 
 input:checked + label{
-    border-bottom: 5px solid  #ff8622; 
+    border-top: 5px solid  #ff8622; 
     transform: scale(1.1);
 
 
@@ -70,21 +71,25 @@ input:checked + label{
 .content .image-box label img {
     height: 200px;
     width: 200px;
-    display: block;
+    /*display: block;*/
 
 }
 
 .details {
     background-color: #fff;
-    margin-top: 2%;
-    margin-left: 3%;
+    margin-top: -31%;
+    margin-left: 67%;
+    margin-bottom: 3%;
     width: 30%;
     display: flex;
+/*    flex: 1 0 300px;*/
     flex-direction: column;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     border-radius: 10px;
-    padding:0;
-    height: 100%;
+    padding:0 0 3% 0;
+    height: 50%;
+    overflow: auto;
+    box-sizing: border-box;
 }
 
 .details .images {
@@ -131,7 +136,7 @@ input:checked + label{
     font-size: 100%;
     width: 15%;
     color:#707070;
-    position:fixed;
+    position:absolute;
 }
 
 .details .category select:focus{
@@ -160,7 +165,15 @@ input:checked + label{
     margin-top: 5%;
 }
 
+.details .releases p span a {
+    text-decoration: none;
+}
+
 #download{
+    cursor: pointer;
+}
+
+#upload{
     cursor: pointer;
 }
 
@@ -182,4 +195,103 @@ input:checked + label{
     font-style:italic;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 100%;
+}
+
+.keyword-area {
+    margin-left: 10%;
+
+}
+
+.keyword-area textarea {
+    margin-top: 5%;
+    border-radius: 5px;
+    border: 1px solid rgba(12, 18, 28, 0.12);
+    outline: none;
+    resize: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+}
+
+.keyword-area textarea:placeholder-shown{
+    font-style:italic;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 100%;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% 35%;
+    padding: 15px 15px 30px 20px;
+    border: 1px solid #888;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.modal-content .modal-heading {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.modal-content .form-download a {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color:orange;
+}
+.modal-content .modal-heading p{
+    color:rgba(12, 18, 28, 0.6);
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.file-name {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.file-name p{
+    padding: 0;
+    margin-top: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.submit {
+    text-align: center;
+    height: 10%;
+    background-color: #00478a;
+    width: 80%;
+    margin: auto;
+    
+}
+
+.submit a {
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+    font-family: 'Didact Gothic', sans-serif;
 }

@@ -57,7 +57,7 @@
             </ul>                    
         </div>
 
-        <div class="content">
+        <div class="content" style="visibility: visible;">
             <div class="image-box">
                 <input type="radio" id="r1" name="radio" checked />
                 <label for="r1">
@@ -98,7 +98,6 @@
                 <label for="r8">
                     <img src="../../Resources/Img/profile/p4.jpg" id="p4" class="selection-img">
                 </label>
-
             </div>
 
             <div class="details">
@@ -140,38 +139,81 @@
                 </div>
                 <div class="releases">
                     <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6); margin-bottom: 5%;" >For recognizable people or property.</span><br>
-                        <span style="color:#415daa;" id="download">Download Releases</span> &nbsp; &nbsp; &nbsp;<span style="color:#f6862a;" id="download">Add release</span></p>
+                        <span style="color:#415daa;" id="download">Download Releases</span> &nbsp; &nbsp; &nbsp;<span style="color:#f6862a;" id="upload">Add release</span></p>
+
+                    <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="modal-heading">
+                                <h1>Digital release type </h1>
+                                <p> Which type of release do you need? </p>
+                            </div>
+                            <div class="form-download">
+                                <p>Model Release</p><a href="../../Resources/Forms/model release.pdf" download>Download</a> <br> <br>
+                                <p>Property Release</p><a href="../../Resources/Forms/property release.pdf" download>Download</a>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
+
+                <div class="keyword-area">
+                    <textarea id="keyword-area" name="title" rows="5" cols="45" placeholder="Add Keywords (Max: 50 keywords) &#10separate with commas"></textarea>
+                </div>
+
+                <div class="file-name">
+                    <p>File ID(s): 365447169 </p>
+                    <p>Original name(s): IGP_4237_1.jpg </p>
+                </div>
+                
+                <div class="submit">
+                    <a href="#" type="button" id="submit">Submit</a>
+                </div>
+                
             </div>
+
+
         </div>
 
-        <!--<script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>-->
+        <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
         <script>
-            window.onload = function () {
-                elm = document.querySelectorAll('.selection-img');
-                //	main = document.querySelectorAll('main')[0];
-                detailsimg = document.querySelector('.detailsimg');
-                detailsimg.src = "../../Resources/Img/profile/l1.jpg";
+                                window.onload = function () {
+                                    elm = document.querySelectorAll('.selection-img');
+                                    //	main = document.querySelectorAll('main')[0];
+                                    detailsimg = document.querySelector('.detailsimg');
+                                    detailsimg.src = "../../Resources/Img/profile/l1.jpg";
 
 
-                var images = ['../../Resources/Img/profile/l1.jpg', '../../Resources/Img/profile/l2.jpg', '../../Resources/Img/profile/l3.jpg',
-                    '../../Resources/Img/profile/l4.jpg', '../../Resources/Img/profile/p1.jpg', '../../Resources/Img/profile/p2.jpg',
-                    '../../Resources/Img/profile/p3.jpg', '../../Resources/Img/profile/p4.jpg'];
-                var img_now = 0;
+                                    var images = ['../../Resources/Img/profile/l1.jpg', '../../Resources/Img/profile/l2.jpg', '../../Resources/Img/profile/l3.jpg',
+                                        '../../Resources/Img/profile/l4.jpg', '../../Resources/Img/profile/p1.jpg', '../../Resources/Img/profile/p2.jpg',
+                                        '../../Resources/Img/profile/p3.jpg', '../../Resources/Img/profile/p4.jpg'];
+                                    var img_now = 0;
 
 
 
-                elm.forEach(function (elm) {
-                    elm.addEventListener('click', function (event) {
-                        detailsimg.src = event.target.src;
-                        if (img_now >= images.length) {
-                            img_now = 0;
-                        }
-                    })
-                })
+                                    elm.forEach(function (elm) {
+                                        elm.addEventListener('click', function (event) {
+                                            detailsimg.src = event.target.src;
+                                            if (img_now >= images.length) {
+                                                img_now = 0;
+                                            }
+                                        })
+                                    })
 
-            }
+                                }
+
+                                function chooseFile()
+                                {
+                                    document.getElementById("upload").click();
+                                }
+                                var loadFile = function (event)
+                                {
+                                    var image = document.getElementById('output');
+                                    image.src = URL.createObjectURL(event.target.files[0]);
+                                };
         </script>
 
     </body>
