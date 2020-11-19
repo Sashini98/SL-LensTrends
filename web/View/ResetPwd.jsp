@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Reset Password</title>
-        <link rel="stylesheet" href ="<%= request.getContextPath() %>/CSS/log.css">
+        <link rel="stylesheet" href ="<%= request.getContextPath()%>/CSS/log.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
@@ -49,13 +49,14 @@
                 </div> 
                 <br /><br /><br />
                 <hr />
-                  <br />
-                <div class="change" style=" width: 100%;">
-                    <button type="submit" id="reset" style="width: 100%; margin-left: 5%; margin-right: 5%; float: none; background-color: rgb(218,57,40);">
-                        Back To Login
-                    </button>
-                </div> 
-
+                <br />
+                <form action="login.jsp" method="POST">
+                    <div class="change" style=" width: 100%;">
+                        <button type="submit" id="reset" style="width: 100%; margin-left: 5%; margin-right: 5%; float: none; background-color: rgb(218,57,40);">
+                            Back To Login
+                        </button>
+                    </div> 
+                </form>
             </div>
         </div>
     </div>

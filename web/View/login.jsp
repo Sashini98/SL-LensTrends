@@ -10,6 +10,8 @@
 
     String attribute = (String) request.getAttribute("account");
     String message = (String) request.getAttribute("msg");
+    System.out.println(attribute);
+    System.out.println(message);
 %>
 <html>
     <head>

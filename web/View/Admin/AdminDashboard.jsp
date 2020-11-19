@@ -42,7 +42,7 @@
                 %>
             <div id="summaryDiv"  onclick="show('summary')" onmouseover="summaryButtonChange('summaryDiv')" onmouseout="summaryButtonBack('summaryDiv')" class="summary">
                 <img id="summaryIcon" src="../../Resources/Img/summary.svg" />
-                <p><a href="#" type="button"  id="summarytext">Dash Board</a></p>
+                <p><a href="#" type="button"  id="summarytext">Dashboard</a></p>
             </div>
             <%
                 }

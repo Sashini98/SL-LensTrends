@@ -159,7 +159,7 @@
         </session-timeout>
     </session-config>
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>View/Home.jsp</welcome-file>
     </welcome-file-list>
     <filter>
         <filter-name>CheckLogin</filter-name>
@@ -187,6 +187,7 @@
         <filter-name>FilterLoggedClient</filter-name>
         <url-pattern>/View/Home.jsp</url-pattern>
         <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
+        <url-pattern>/View/User/PurchasePhoto.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedPhotographer</filter-name>
@@ -204,6 +205,7 @@
         <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
         <url-pattern>/View/Photographer/uploadPhotos.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
+        <url-pattern>/View/Photographer/PhotographerUpdate.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>

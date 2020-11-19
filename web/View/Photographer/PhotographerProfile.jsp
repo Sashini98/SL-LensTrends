@@ -22,27 +22,27 @@
     <body style="background-color: #f9f9f9;">
         <div class="fixedheader">  
             <div class="pageheader">
-                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <a href="../LogOut" type="button"> Logout </a>
                 </div>
 
             </div>
@@ -104,25 +104,25 @@
             <img src="../../Resources/Img/bg.svg">
             <p>Welcome to my <br> &nbsp; &nbsp; &nbsp; &nbsp; Collections !</p>
         </div>
-        
+
         <div class="image-content">
             <div class="image">
                 <img src="../../Resources/Img/profile/p1.jpg">
                 <img src="../../Resources/Img/profile/p2.jpg">
                 <img src="../../Resources/Img/profile/p3.jpg">
-                 <img src="../../Resources/Img/profile/p4.jpg">
-                 <img src="../../Resources/Img/profile/p5.jpg">
-                 <img src="../../Resources/Img/profile/p6.jpg">
-                 <img src="../../Resources/Img/profile/l1.jpg">
-                 <img src="../../Resources/Img/profile/l2.jpg">
-                 <img src="../../Resources/Img/profile/l3.jpg">
-                 <img src="../../Resources/Img/profile/l4.jpg">
-                 <img src="../../Resources/Img/profile/l5.jpg">
-                 <img src="../../Resources/Img/profile/l6.jpg">
-                 
+                <img src="../../Resources/Img/profile/p4.jpg">
+                <img src="../../Resources/Img/profile/p5.jpg">
+                <img src="../../Resources/Img/profile/p6.jpg">
+                <img src="../../Resources/Img/profile/l1.jpg">
+                <img src="../../Resources/Img/profile/l2.jpg">
+                <img src="../../Resources/Img/profile/l3.jpg">
+                <img src="../../Resources/Img/profile/l4.jpg">
+                <img src="../../Resources/Img/profile/l5.jpg">
+                <img src="../../Resources/Img/profile/l6.jpg">
+
             </div>
         </div>
 
-        
+
     </body>
 </html>
