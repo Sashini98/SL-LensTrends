@@ -82,7 +82,7 @@ input:checked + label{
     margin-bottom: 3%;
     width: 30%;
     display: flex;
-/*    flex: 1 0 300px;*/
+    /*    flex: 1 0 300px;*/
     flex-direction: column;
     /*flex-wrap: wrap;*/
     border-radius: 10px;
@@ -287,7 +287,7 @@ input:checked + label{
     width: 80%;
     margin: auto;
     padding: 2%;
-    
+
 }
 
 .submit a {
@@ -295,4 +295,87 @@ input:checked + label{
     color: white;
     font-size: 110%;
     font-family: 'Didact Gothic', sans-serif;
+}
+
+#upload-photo {
+    border: 2px solid #d86f19;
+    border-radius: 10px;
+    height: 5%;
+    padding: 0;
+    font-size: 130%;
+    padding: 0 5% 0 5%;
+    color:#415daa;
+}
+
+.upload-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.upload-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 15px 15px 30px 20px;
+    border: 1px solid #888;
+    width: 20%;
+    border-radius: 10px;
+}
+
+.upload-modal-content .upload-modal-image {
+    height: 50%;
+    width:50%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.upload-modal-content .upload-modal-image a {
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    /*margin-left: 38%;*/
+    font-size: 123%;
+    background-color:#00478a; 
+    color: white;
+    padding: 3% 15%;
+    border-radius: 10px;
+}
+
+.upload-modal-content .upload-modal-image .list{
+    margin-top: 15%;
+    text-align: left;
+    margin-left: -60%;
+
+    font-family: 'Didact Gothic', sans-serif;
+}
+.upload-modal-content .upload-modal-image .list ul {
+        width: 150%;
+}
+.upload-modal-content .upload-modal-image .list ul li{
+    padding: 2%;
+}
+
+/* The Close Button */
+.upload-close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.upload-close:hover,
+.upload-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }

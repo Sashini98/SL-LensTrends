@@ -54,7 +54,29 @@
                 <li><a href="#" type="button">In Review</a></li>
                 <li><a href="#" type="button">Not Accepted</a></li>
                 <li><a href="#" type="button">Reviewed</a></li>
-            </ul>                    
+                <li><a href="#" type="button" id="upload-photo" onclick="modal('upload-photo');">Upload</a></li>
+            </ul>     
+
+            <div id="upload-modal" class="upload-modal">
+
+                <!-- Modal content -->
+                <div class="upload-modal-content">
+                    <span class="upload-close">&times;</span>
+                    <div class="upload-modal-image">
+                        <img src="../../Resources/Img/upload.svg">
+                        <a href="#" type="button" id="browseimage">Browse</a>
+                        <div class="list">
+                            <ul>
+                                <li>JPEG format only</li>
+                                <li>Minimum image resolution is 4MP</li>
+                                <li>Maximum image resolution is 100MP</li>
+                                <li>Maximum file size is 45MB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <div class="content" style="visibility: visible;">
@@ -168,17 +190,18 @@
                     <p>File ID(s): 365447169 </p>
                     <p>Original name(s): IGP_4237_1.jpg </p>
                 </div>
-                
+
                 <div class="submit">
                     <a href="#" type="button" id="submit">Submit</a>
                 </div>
-                
+
             </div>
 
 
         </div>
-        
+
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
+        <script type="text/javascript" src="../../JS/Photohrapher/check.js"></script>
         <script>
                                 window.onload = function () {
                                     elm = document.querySelectorAll('.selection-img');
