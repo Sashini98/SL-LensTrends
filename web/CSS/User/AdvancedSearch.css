@@ -69,7 +69,8 @@ body{
 .column img {
     margin-top: 8px;
     vertical-align: middle;
-    width: 100%;
+    width: 100%; 
+    cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {

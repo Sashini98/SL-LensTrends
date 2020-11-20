@@ -331,13 +331,13 @@ fieldset {
 
 
 .box select {
-  margin-left: 15%;
-  background-color: grey;
+  /*margin-left: 2%;*/
+  background-color: #e1e4e8;
   color: black;
   padding: 9px;
-  width: 150px;
+  width: 200px;
   border: none;
-  font-size: 10px;
+  font-size: 15px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
   -webkit-appearance: button;
   appearance: button;

@@ -34,19 +34,19 @@
                 <div class="headerul">
                     <ul>
 
-                    <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
-                            <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                            <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
-                            <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
-                                <%
-                                    if (logged) {
-                                %>
-                            <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
-                            <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
-                            <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
-                                <%
-                                    }
-                                %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
+                            <%
+                                if (logged) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            %>
 
                     </ul>
                 </div>
@@ -57,7 +57,17 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> LogOut </a>
+                    <%
+                        if (!logged) {
+                    %>
+                    <a href="../login.jsp?loc=cpp" >Log In</a> 
+                    <%
+                    } else {
+                    %>
+                    <a href="../../LogOut?loc=cpp" type="button"> Log Out </a>
+                    <%
+                        }
+                    %>
                 </div>
             </div>
         </div>
@@ -124,7 +134,7 @@
                     <hr />
                     <div class="ImageActions">
                         <button class="BuyBtn">Buy Photo</button>
-                        <button class="CartBtn">Add to Favourite</button>
+                        <button class="CartBtn" onclick="window.location.href = 'Cart.jsp'">Add to Favourite</button>
                         <button class="ReportBtn" id="ReportBtn">Report Photo</button>
                     </div>
                 </div>

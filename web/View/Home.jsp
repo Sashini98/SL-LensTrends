@@ -13,8 +13,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="../CSS/Home.css"/>
-        <link type="text/css" rel="stylesheet" href="../CSS/header.css"/>
+        <link type="text/css" rel="stylesheet" href="<%= request.getContextPath()%>/CSS/Home.css"/>
+        <link type="text/css" rel="stylesheet" href="<%= request.getContextPath()%>/CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9dd75719fe.js" crossorigin="anonymous"></script>
@@ -28,22 +28,22 @@
 
         <div class="fixedheader" style="z-index: 20;">  
             <div class="pageheader">
-                <a href="Home.jsp" type="button"> <img src="../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <a href="Home.jsp" type="button"> <img src="<%= request.getContextPath()%>/Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul" style="margin-left: 30px;">
                     <ul>
 
-                        <li><a href="User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
-                        <li><a href="User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="Fourm/MainForum.jsp" type="button"> Forum </a></li>
-                        <li><a href="Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
                             <%
                                 if (logged) {
                             %>
-                        <li><a href="User/Cart.jsp" type="button"> Cart </a></li>
-                        <li><a href="User/purchasehistory.jsp" type="button"> Purchase History </a></li>
-                        <li><a href="User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
                             <%
                                 }
                             %>
@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="notifyicn">
-                    <a href="Notifications/notificationsHome.jsp" type="button" style=""> <img src="../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button" style=""> <img src="<%= request.getContextPath()%>/Resources/Img/notification.png"> </a>
 
                 </div>
 
@@ -61,7 +61,7 @@
                     <%
                         if (!logged) {
                     %>
-                    <a href="../View/login.jsp?loc=ch" >Login</a> 
+                    <a href="<%= request.getContextPath()%>/View/login.jsp?loc=ch" >Login</a> 
                     <%
                     } else {
                     %>
@@ -169,7 +169,7 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <img class="aboutImg" src="../Resources/Img/germ-plant-seedling-live.jpg"/>
+                    <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/germ-plant-seedling-live.jpg"/>
 
                 </div>
                 <div>
@@ -179,7 +179,7 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <img class="aboutImg" src="../Resources/Img/Our-Mission.jpg"/>
+                    <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/Our-Mission.jpg"/>
 
                 </div>
                 <div>
@@ -215,7 +215,7 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <img class="aboutImg" src="../Resources/Img/mission.jpg"/>
+                    <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/mission.jpg"/>
 
                 </div>
                 <div>
@@ -238,7 +238,7 @@
         <div class="team">
             <div class="teamContent">
                 <div class="teamMember">
-                    <img class="teamImg" src="../Resources/Img/IMG_2019.jpg"/>
+                    <img class="teamImg" src="<%= request.getContextPath()%>/Resources/Img/IMG_2019.jpg"/>
                     <br />
                     <br />
                     <h4 style="font-size: 22px;">B.R.H.K. Balasuriya</h4>
@@ -250,7 +250,7 @@
                     </div>
                 </div>
                 <div class="teamMember">
-                    <img class="teamImg" src="../Resources/Img/Screenshot_2020-10-16-08-26-52-621_com.whatsapp.jpg"/>
+                    <img class="teamImg" src="<%= request.getContextPath()%>/Resources/Img/Screenshot_2020-10-16-08-26-52-621_com.whatsapp.jpg"/>
                     <br />
                     <br />
                     <h4 style="font-size: 22px;">Theivendram Athavan</h4>
@@ -262,7 +262,7 @@
                     </div>
                 </div>
                 <div class="teamMember">
-                    <img class="teamImg" src="../Resources/Img/Screenshot_2020-10-16-08-27-05-933_com.whatsapp.jpg"/>
+                    <img class="teamImg" src="<%= request.getContextPath()%>/Resources/Img/Screenshot_2020-10-16-08-27-05-933_com.whatsapp.jpg"/>
                     <br />
                     <br />
                     <h4 style="font-size: 22px;">R.M.S. Shihara</h4>
@@ -275,7 +275,7 @@
 
                 </div>
                 <div class="teamMember">
-                    <img class="teamImg" src="../Resources/Img/Screenshot_2020-10-16-08-27-22-000_com.whatsapp.jpg"/>
+                    <img class="teamImg" src="<%= request.getContextPath()%>/Resources/Img/Screenshot_2020-10-16-08-27-22-000_com.whatsapp.jpg"/>
                     <br />
                     <br />
                     <h4 style="font-size: 22px;">M. Mahendran</h4>
@@ -322,7 +322,7 @@
             </div>
         </div>
 
-        <script type="text/javascript" src="../JS/Home.js" />
+        <script type="text/javascript" src="<%= request.getContextPath()%>/JS/Home.js" />
 
     </body>
 </html>
