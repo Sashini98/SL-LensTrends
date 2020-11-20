@@ -7,103 +7,44 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<div class="managephotoBody" style=" ">
-
-    <div class="box">                
-        <h2>Reported Photographs</h2>
-        <div class="search" style="margin:auto;max-width:300px">
-            <input type="text" placeholder="Search" name="search2">
-            <button type="submit">Search</button>
-        </div><br><br><br>
-        <table class="table">
-            <th class="th"> ID </th>
-            <th class="th" id="th-color1"> TITLE </th>
-            <th class="th" id="th-color2"> OPTION </th>
-        </table>
-        <br><br>
-
-        <table class="table" border="0" width="100%" height="40px" >
-            <tr>
-                <td align="left">Description</td>
-                <td><textarea class="textarea" disabled=""></textarea></td>
-            </tr>
-            <tr>
-                <td align="left">Category</td>
-                <td><input type="text" name="cate" id="category" disabled=""></td>
-            </tr>
-            <tr>
-                <td align="left">Photographer</td>
-                <td><input type="text" name="name" id="pname" disabled=""></td>
-            </tr>
-            <tr>
-                <td align="left">Uploaded Date</td>
-                <td><input type="date" name="date" id="udate" disabled=""></td>
-            </tr>
-            <tr>
-                <th colspan =2><button class="btn" id="clear">Clear</button></th>
-            </tr>
-        </table>
+<div class="managephotoBody" style="background-color: #f7f6f9;">
+    <div class="heading">
+        <h1> Reported Photographs</h1>
+    </div>
+    <div class="photos">
+        <div class="details">
+            <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg">
+            <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+        </div>
     </div>
 
-    <div class="box">
-
-        <h2>Remove Photographs</h2>
-        <div class="search" style="margin:auto;max-width:300px">
-            <input type="text" placeholder="Search" name="search2">
-            <button type="submit">Search</button>
-        </div><br><br><br>
-
-        <table class="table" border="0" width="100%" height="40px" >
-            <tr>
-                <td align="left">Title</td>
-                <td><input type="text" name="title" id="title" disabled=""></td>
-            </tr>
-            <tr>
-                <td align="left">Category</td>
-                <td><input type="text" name="cate" id="category" disabled=""></td>
-            </tr>
-            <tr>
-                <td align="left">Photographer</td>
-                <td><input type="text" name="name" id="pname" disabled=""></td>
-            </tr>
-            <tr>
-                <td align="left">Uploaded Date</td>
-                <td><input type="date" name="date" id="udate" disabled=""></td>
-            </tr>
-            <tr>
-                <th colspan =2><button class="btn1" id="remove">Remove</button></th>
-            </tr>
-        </table>
-
+    <div class="photos">
+        <div class="details">
+            <img src="../../Resources/Img/Gallery Sample Images/Photographer/julie-ricard-RmFX5bxHqCg-unsplash.jpg">
+            <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+        </div>
     </div>
 
-    <div class="box">                
+    <div class="photos">
+        <div class="details">
+            <img src="../../Resources/Img/Gallery Sample Images/Photographer/mike-swigunski-zDDQZgZjFtM-unsplash.jpg">
+            <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+        </div>
+    </div>
 
-        <h2> Category </h2>
-        <div class="search" style="margin:auto;max-width:300px">
-            <input type="text" placeholder="Search" name="search2">
-            <button type="submit">Search</button>
-        </div><br><br><br>
-        <form>
-            <div class="formContent">                             
-                <span class="content_name"> Category </span><br>
-                <input type="text" name="cate" required/>
-                <label for="cate" class="label_name">
-                </label>
-            </div>
-
-            <div class="formContent">                             
-                <span class="content_name"> Category Type </span><br>
-                <input type="text" name="type" required/>
-                <label for="type" class="label_name">
-                </label>
-            </div>
-
-            <button class="btn" id="Update" type="submit">Update</button>
-            <button class="btn" id="remove" type="submit" style=" background-color: #f44336">Remove</button>
-
-
-        </form>
+    <div class="photos">
+        <div class="details">
+            <img src="../../Resources/Img/Gallery Sample Images/Photographer/rowan-heuvel-qfiSDPQD9Ws-unsplash.jpg">
+            <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
+            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+        </div>
     </div>
 </div>
 

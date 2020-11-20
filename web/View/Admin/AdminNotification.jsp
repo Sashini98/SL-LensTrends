@@ -20,7 +20,7 @@
 </div>
 
 <div class="box">
-    <div class="box1" style="background-color: #DFF0F7;">               
+    <div class="box1">               
         <h2>Client Notifications</h2>
 
         <form>
@@ -49,7 +49,7 @@
         <button id="csend" type="submit">Send</button>
     </div>
 
-    <div class="box2" style="background-color: #DFF0F7;">
+    <div class="box2">
         <h2>Photographer Notifications</h2>
 
         <form>
@@ -80,7 +80,7 @@
 </div>
 
 <div class="box">
-    <div class="box1" style="background-color: #C4E8F2;">               
+    <div class="box1">               
         <h2>System Notifications</h2>
 
         <form>
@@ -109,7 +109,7 @@
         <button id="ssend" type="submit">Send</button>
     </div>
 
-    <div class="box2" style="background-color: #C4E8F2;">
+    <div class="box2">
         <h2>Suspend The System</h2>
 
         <form>
