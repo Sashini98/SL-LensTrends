@@ -50,16 +50,16 @@
 
         <div class="inside-header">
             <ul>
-                <li><a href="#" type="button"  autofocus>To Submit</a></li>
-                <li><a href="#" type="button">In Review</a></li>
-                <li><a href="#" type="button">Not Accepted</a></li>
-                <li><a href="#" type="button">Reviewed</a></li>
-                <li><a href="#" type="button" id="upload-photo" onclick="modal('upload-photo');">Upload</a></li>
+                <li><a href="#" type="button"  autofocus id="tosubmit" onclick="navigation('tosubmit')">To Submit</a></li>
+                <li><a href="#" type="button" id="inreview" onclick="navigation('inreview')">In Review</a></li>
+                <li><a href="#" type="button" id="notaccepted" onclick="navigation('notaccepted')">Not Accepted</a></li>
+                <li><a href="#" type="button" id="reviewed" onclick="navigation('reviewed')">Reviewed</a></li>
+                <li><a href="#" type="button" id="upload-photo" >Upload</a> </li>
             </ul>     
 
             <div id="upload-modal" class="upload-modal">
 
-                <!-- Modal content -->
+                <!-- Upload Modal content -->
                 <div class="upload-modal-content">
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
@@ -79,7 +79,8 @@
             </div>
         </div>
 
-        <div class="content" style="visibility: visible;">
+        <div class="content" style="display: block;" id="tosubmit-content">
+
             <div class="image-box">
                 <input type="radio" id="r1" name="radio" checked />
                 <label for="r1">
@@ -197,46 +198,73 @@
 
             </div>
 
+        </div>
+
+        <div class="inreview-content" style="display:none;" id="inreview-content">
+
+            <div class="image-box">
+
+                <img src="../../Resources/Img/profile/p1.jpg" id="re1" onclick="clickimage('re1')">
+                <img src="../../Resources/Img/profile/p2.jpg" id="re2" onclick="clickimage('re2')" >
+                <img src="../../Resources/Img/profile/p3.jpg" id="re3" onclick="clickimage('re3')">
+                <img src="../../Resources/Img/profile/p4.jpg" id="re4" onclick="clickimage('re4')">
+
+            </div>
+
+            <div class="inreview-details">
+                <div class="detail-inreview">
+                    <h3>Glass with Red</h3> 
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="notaccepted-content" style="display:none;" id="notaccepted-content">
+
+            <p>athavan2</p>
+
+        </div>
+
+        <div class="accepted-content" style="display:none;" id="accepted-content">
+
+            <p>athavan3</p>
 
         </div>
 
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
         <script type="text/javascript" src="../../JS/Photohrapher/check.js"></script>
         <script>
-                                window.onload = function () {
-                                    elm = document.querySelectorAll('.selection-img');
-                                    //	main = document.querySelectorAll('main')[0];
-                                    detailsimg = document.querySelector('.detailsimg');
-                                    detailsimg.src = "../../Resources/Img/profile/l1.jpg";
+                    window.onload = function () {
+                        elm = document.querySelectorAll('.selection-img');
+                        //	main = document.querySelectorAll('main')[0];
+                        detailsimg = document.querySelector('.detailsimg');
+                        detailsimg.src = "../../Resources/Img/profile/l1.jpg";
 
 
-                                    var images = ['../../Resources/Img/profile/l1.jpg', '../../Resources/Img/profile/l2.jpg', '../../Resources/Img/profile/l3.jpg',
-                                        '../../Resources/Img/profile/l4.jpg', '../../Resources/Img/profile/p1.jpg', '../../Resources/Img/profile/p2.jpg',
-                                        '../../Resources/Img/profile/p3.jpg', '../../Resources/Img/profile/p4.jpg'];
-                                    var img_now = 0;
+                        var images = ['../../Resources/Img/profile/l1.jpg', '../../Resources/Img/profile/l2.jpg', '../../Resources/Img/profile/l3.jpg',
+                            '../../Resources/Img/profile/l4.jpg', '../../Resources/Img/profile/p1.jpg', '../../Resources/Img/profile/p2.jpg',
+                            '../../Resources/Img/profile/p3.jpg', '../../Resources/Img/profile/p4.jpg'];
 
 
+                        elm.forEach(function (elm) {
+                            elm.addEventListener('click', function (event) {
+                                detailsimg.src = event.target.src;
+                            })
+                        })
 
-                                    elm.forEach(function (elm) {
-                                        elm.addEventListener('click', function (event) {
-                                            detailsimg.src = event.target.src;
-                                            if (img_now >= images.length) {
-                                                img_now = 0;
-                                            }
-                                        })
-                                    })
+                    }
 
-                                }
-
-                                function chooseFile()
-                                {
-                                    document.getElementById("upload").click();
-                                }
-                                var loadFile = function (event)
-                                {
-                                    var image = document.getElementById('output');
-                                    image.src = URL.createObjectURL(event.target.files[0]);
-                                };
+                    function chooseFile()
+                    {
+                        document.getElementById("upload").click();
+                    }
+                    var loadFile = function (event)
+                    {
+                        var image = document.getElementById('output');
+                        image.src = URL.createObjectURL(event.target.files[0]);
+                    };
         </script>
 
     </body>

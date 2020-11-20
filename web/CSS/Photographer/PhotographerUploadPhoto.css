@@ -4,7 +4,7 @@
     height: 30%;
     background-color: #fff; 
     padding:1% 0 0.2% 0;  
-    box-shadow: 0 5px 8px rgba(12,13,14,0.15);    
+    box-shadow: 0 5px 8px rgba(12,13,14,0.15);   
 }
 
 .inside-header ul li{
@@ -85,11 +85,12 @@ input:checked + label{
     /*    flex: 1 0 300px;*/
     flex-direction: column;
     /*flex-wrap: wrap;*/
-    border-radius: 10px;
+    /*border-radius: 10px;*/
     padding:0 0 3% 0;
     height: 50%;
     overflow: auto;
     box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
 .details .images {
@@ -378,4 +379,51 @@ input:checked + label{
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.inreview-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex:1;*/
+}
+
+.inreview-content .image-box {
+    /*background-color: red;*/
+    width: 70%; 
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-left: 1%;*/
+    justify-content: center;
+    margin-top:2%;
+}
+
+#re1 {
+    transform:scale(1.1);
+    border: 5px solid  #415daa;
+}
+
+.inreview-content .image-box img {
+    height: 200px;
+    width:200px;
+    margin-right: 5%;
+    padding:0;
+}
+
+.inreview-content .inreview-details {
+    width: 28%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    flex: 1;
+    background-color: #fff;
+    float: right;
+    margin-right: 1%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    padding: 1% 2%;
+    margin-top: -13%;
+}
+
+.inreview-details .details-inreview h3 {
+    
 }

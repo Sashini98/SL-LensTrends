@@ -24,4 +24,69 @@ window.onclick = function (event) {
 }
 
 
+function navigation(button) {
 
+    if (button == "tosubmit") {
+        document.getElementById("tosubmit-content").style.display = "block";
+        document.getElementById("inreview-content").style.display = "none";
+        document.getElementById("notaccepted-content").style.display = "none";
+        document.getElementById("accepted-content").style.display = "none";
+    } else if (button == "inreview") {
+        document.getElementById("tosubmit-content").style.display = "none";
+        document.getElementById("inreview-content").style.display = "block";
+        document.getElementById("notaccepted-content").style.display = "none";
+        document.getElementById("accepted-content").style.display = "none";
+    } else if (button == "notaccepted") {
+        document.getElementById("tosubmit-content").style.display = "none";
+        document.getElementById("inreview-content").style.display = "none";
+        document.getElementById("notaccepted-content").style.display = "block";
+        document.getElementById("accepted-content").style.display = "none";
+    } else if (button == "reviewed") {
+        document.getElementById("tosubmit-content").style.display = "none";
+        document.getElementById("inreview-content").style.display = "none";
+        document.getElementById("notaccepted-content").style.display = "none";
+        document.getElementById("accepted-content").style.display = "block";
+    }
+}
+
+
+function clickimage(click) {
+
+    if (click == "re1") {
+        document.getElementById("re1").style.transform = "scale(1.1)";
+        document.getElementById("re1").style.border = "5px solid  #415daa";
+        document.getElementById("re2").style.transform = "";
+        document.getElementById("re2").style.border = "none";
+        document.getElementById("re3").style.transform = "";
+        document.getElementById("re3").style.border = "none";
+        document.getElementById("re4").style.transform = "";
+        document.getElementById("re4").style.border = "none";
+    } else if (click == "re2") {
+        document.getElementById("re1").style.transform = "";
+        document.getElementById("re1").style.border = "none";
+        document.getElementById("re2").style.transform = "scale(1.1)";
+        document.getElementById("re2").style.border = "5px solid  #415daa";
+        document.getElementById("re3").style.transform = "";
+        document.getElementById("re3").style.border = "none";
+        document.getElementById("re4").style.transform = "";
+        document.getElementById("re4").style.border = "none";
+    } else if (click == "re3") {
+        document.getElementById("re1").style.transform = "";
+        document.getElementById("re1").style.border = "none";
+        document.getElementById("re3").style.transform = "scale(1.1)";
+        document.getElementById("re3").style.border = "5px solid  #415daa";
+        document.getElementById("re2").style.transform = "";
+        document.getElementById("re2").style.border = "none";
+        document.getElementById("re4").style.transform = "";
+        document.getElementById("re4").style.border = "none";
+    } else if (click == "re4") {
+        document.getElementById("re1").style.transform = "";
+        document.getElementById("re1").style.border = "none";
+        document.getElementById("re4").style.transform = "scale(1.1)";
+        document.getElementById("re4").style.border = "5px solid  #415daa";
+        document.getElementById("re3").style.transform = "";
+        document.getElementById("re3").style.border = "none";
+        document.getElementById("re2").style.transform = "";
+        document.getElementById("re2").style.border = "none";
+    }
+}
