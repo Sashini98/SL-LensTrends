@@ -328,5 +328,6 @@
             </div>
         </div>
         <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
+        <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
     </body>
 </html>

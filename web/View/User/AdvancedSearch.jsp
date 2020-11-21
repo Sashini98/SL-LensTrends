@@ -81,7 +81,7 @@
                 <iframe style="width: 25%;margin-left: 3.8%;border: none" src="AdvancedFilter.jsp">
 
                 </iframe>
-                <div style="background-color: bisque;width: 100%; ">
+                <div style="background-color:  #FAFAFA; width: 100%; ">
                     <div class="searchInput">
                         <input type="text" placeholder="Search for Photographs" >      
                         <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
