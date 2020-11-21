@@ -4,6 +4,16 @@
     align-items: center;
 }
 
+.heading {
+    text-align: left;
+    margin-right: 55%;
+}
+
+.heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 200%;
+}
+
 .questions {
     background-color: white;
     width: 75%;
@@ -66,7 +76,7 @@ input[type=text]
 
 .details h2{
     font-family: 'Poppins', sans-serif;
-    font-size: 150%;
+    font-size: 100%;
     font-weight: bold;
     margin-right: 20%;
 }

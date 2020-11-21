@@ -30,26 +30,87 @@
             </div> <br> <br> <br>
         </div>            
     </div>
+    <br> <br> 
+    <div class="b3">                
+        <h2 style="text-align: center;">Reported Users</h2>
+        <br>
+        <table width="100%">
+            <thead class="table">
+            <th class="th"> ID </th>
+            <th class="th"> NAME </th>
+            <th class="th"> TYPE </th>
+            <th class="th"> REPORTED BY </th>
+            <th class="th"> REASON </th>
+            <th class="th"> DESCRIPTION </th>
+            <th class="th"> OPTION </th>
+            </thead>
+
+            <tbody>
+                <tr class="tr">
+                    <td>C01</td>
+                    <td>Sunil Perera</td>
+                    <td>Client</td>
+                    <td>Lahiru Rathnayake</td>
+                    <td>Fake Account</td>
+                    <td>There is another account in the same details in the system.</td>
+                    <td><button class="btn1" id="view">View</button></td>
+                </tr>
+                
+                <tr class="tr">
+                    <td>P05</td>
+                    <td>Darshana Silva</td>
+                    <td>Photographer</td>
+                    <td>Hashan Lakmal</td>
+                    <td>Fake Account</td>
+                    <td>There is another account in the same details in the system.</td>
+                    <td><button class="btn1" id="view">View</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div class="contain">
         <div class="b1">               
-            <h2 style="text-align: center;">Reported Users</h2><br>
+            <h2 style="text-align: center;">Deactivate Users</h2>
+
             <div class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search" name="search2">
-                <button type="submit">Search</button>
-            </div><br><br><br>
-            <table class="table" width="100%">
+                <input id="deactivateUser" type="text" placeholder="Search">
+                <button onclick="viewResults()">Search</button><br>
+                <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
+            </div>
+
+            <br><br><br>
+
+
+            <table id="reportedUserTable" width="100%">
+                <thead class="table">
                 <th class="th"> ID </th>
-                <th class="th" id="th-color1"> NAME </th>
-                <th class="th" id="th-color2"> TYPE </th>
-                <th class="th" id="th-color3"> OPTION </th>
-            </table>  
-            <br><br>
+                <th class="th"> NAME </th>
+                <th class="th"> TYPE </th>
+                <th class="th"> OPTION </th>
+                </thead>
+
+                <tbody id="reportedUserTableBody">
+
+                </tbody>
+            </table><br><br>
 
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
+                    <th align="left">User Id</th>
+                    <td><input type="text" name="uid" id="userid" disabled=""></td>
+                </tr>
+                <tr>
                     <th align="left">Email</th>
                     <td><input type="text" name="mail" id="email" disabled=""></td>
+                </tr>
+                <tr>
+                    <th align="left">First Name</th>
+                    <td><input type="text" name="finame" id="fname" disabled=""></td>
+                </tr>
+                <tr>
+                    <th align="left">Last Name</th>
+                    <td><input type="text" name="laname" id="lname" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Address No</th>
@@ -67,31 +128,49 @@
                     <th align="left">Gender</th>
                     <td><input type="text" name="gen" id="gender" disabled=""></td>
                 </tr>
-                <tr>
-                    <th colspan =2><button class="btn" id="clear">Clear</button></th>
-                </tr>
             </table>
+            <br>
+            <div class="clearfix">
+                <button class="btn" onclick="viewDeactivate()"  id="deactivate">Deactivate</button>
+                <button onclick="clearFieldsofDeactivateUsers()" class='btn' id="deactivate">Clear Fields</button>
+            </div>
         </div>
 
         <div class="b2">
-            <h2 style="text-align: center;">Activate Users</h2><br>
+            <h2 style="text-align: center;">Activate Users</h2>
+
             <div class="search" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="Search" name="search2">
-                <button type="submit">Search</button>
+                <input id="deactivateUser" type="text" placeholder="Search">
+                <button>Search</button><br>
+            </div>
 
-            </div><br><br><br>
-
-            <table class="table" width="100%">
+            <br><br><br>
+            <table  width="100%">
+                <thead class="table">
                 <th class="th"> ID </th>
-                <th class="th" id="th-color1"> NAME </th>
-                <th class="th" id="th-color2"> TYPE </th>
-                <th class="th" id="th-color3"> OPTION </th>
-            </table> <br><br>
+                <th class="th"> NAME </th>
+                <th class="th"> TYPE </th>
+                <th class="th"> OPTION </th>
+                </thead>
+
+            </table><br><br>
 
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
+                    <th align="left">User Id</th>
+                    <td><input type="text" name="uid" id="userid" disabled=""></td>
+                </tr>
+                <tr>
                     <th align="left">Email</th>
                     <td><input type="text" name="mail" id="email" disabled=""></td>
+                </tr>
+                <tr>
+                    <th align="left">First Name</th>
+                    <td><input type="text" name="finame" id="fname" disabled=""></td>
+                </tr>
+                <tr>
+                    <th align="left">Last Name</th>
+                    <td><input type="text" name="laname" id="lname" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Address No</th>
@@ -109,80 +188,18 @@
                     <th align="left">Gender</th>
                     <td><input type="text" name="gen" id="gender" disabled=""></td>
                 </tr>
-                <tr>
-                    <th colspan =2><button class="btn" id="activate">Activate</button></th>
-                </tr>
             </table>
+            <br>
+            <div class="clearfix">
+                <button type="submit" class="btn">Activate</button>
+                <button type="submit" class="btn">Clear Fields</button>
+            </div>
+
+
         </div>
     </div>
 
-    <div class="b3">                
-        <h2 style="text-align: center;">Deactivate Users</h2>
 
-        <div class="search" style="margin:auto;max-width:300px">
-            <input id="deactivateUser" type="text" placeholder="Search">
-            <button onclick="viewResults()">Search</button><br>
-            <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
-        </div>
-
-        <br><br><br>
-
-
-        <table id="reportedUserTable" width="100%">
-            <thead class="table">
-            <th class="th"> ID </th>
-            <th class="th" id="th-color1"> NAME </th>
-            <th class="th" id="th-color2"> TYPE </th>
-            <th class="th" id="th-color3"> OPTION </th>
-            </thead>
-
-            <tbody id="reportedUserTableBody">
-
-            </tbody>
-        </table><br><br>
-
-        <table class="table" border="0" width="100%" height="40px" >
-            <tr>
-                <th align="left">User Id</th>
-                <td><input type="text" name="uid" id="userid" disabled=""></td>
-            </tr>
-            <tr>
-                <th align="left">Email</th>
-                <td><input type="text" name="mail" id="email" disabled=""></td>
-            </tr>
-            <tr>
-                <th align="left">First Name</th>
-                <td><input type="text" name="finame" id="fname" disabled=""></td>
-            </tr>
-            <tr>
-                <th align="left">Last Name</th>
-                <td><input type="text" name="laname" id="lname" disabled=""></td>
-            </tr>
-            <tr>
-                <th align="left">Address No</th>
-                <td><input type="text" name="address" id="addno" disabled=""></td>
-            </tr>
-            <tr>
-            <tr>
-                <th align="left">City</th>
-                <td><input type="text" name="cit" id="city" disabled=""></td>
-            </tr>
-            <th align="left">Province</th>
-            <td><input type="text" name="pro" id="province" disabled=""></td>
-            </tr>
-            <tr>
-                <th align="left">Gender</th>
-                <td><input type="text" name="gen" id="gender" disabled=""></td>
-            </tr>
-            <tr>
-                <th colspan =2><button class="btn" onclick="viewDeactivate()"  id="deactivate">Deactivate</button></th>
-            </tr>
-            <tr>
-                <th colspan =2><button onclick="clearFieldsofDeactivateUsers()" class='btn' id="deactivate">Clear Fields</button></th>
-            </tr>
-
-        </table>
-    </div>
 
     <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
 </div>
