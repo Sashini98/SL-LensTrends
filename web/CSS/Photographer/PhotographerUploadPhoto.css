@@ -425,5 +425,5 @@ input:checked + label{
 }
 
 .inreview-details .details-inreview h3 {
-    
+    font-family: 'Questrial', sans-serif;
 }

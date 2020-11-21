@@ -91,30 +91,175 @@
                 <iframe  id="selectors" style="width: 23%;margin-left: 3.8%;border: none" src="PhotographerAdvancedFilter.jsp">
 
                 </iframe>
-                <div style="background-color: bisque;width: 100%;">
+                <div style="background-color:  #FAFAFA;width: 100%;">
                     <div class="searchInput">
                         <input type="text" placeholder="Search for Photographers" >      
                         <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
                     </div>
                     <div class="row"> 
                         <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">
+
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mr.ATHAVAN T </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mr.ATHAVAN T </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+                           
                         </div>
                         <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%">
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mr.ATHAVAN T </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mr.ATHAVAN T </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+                           
                         </div>
                         <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%">
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mr.ATHAVAN T </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            
 
                         </div>  
                         <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%">
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mr.ATHAVAN T </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+                           
                         </div>  
                     </div>
                 </div>

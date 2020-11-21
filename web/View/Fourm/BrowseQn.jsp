@@ -17,7 +17,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Questions</title>
     </head>
-    <body style="background-color: #f7f6f9;" onload="view()">
+    <!--<body style="background-color: #f7f6f9;" onload="view()">-->
+    <body style="background-color: #f7f6f9;">
 
         <div class="fixedheader">  
 
@@ -102,14 +103,18 @@
                 </div>
 
                 <div class="ask-qn">
-                    <a href="AskQues.jsp" type="button">Ask Questions <a/>
+                    <a href="AskQues.jsp" type="button">Ask Questions </a>
                 </div>
 
             </div>  
             <div name="s" id="s">
-<!--                <div class="questions">                
-                    <h2>FoV of One Plus 6T?</h2>
-                    <p>I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ... </p>
+                <div class="questions">                
+                    <h2>
+                        FoV of One Plus 6T?
+                    </h2>
+                    <p>
+                        I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ... 
+                    </p>
                     <label><a href="#" type="button">photography</a></label>
                     <label><a href="#" type="button">FoV</a></label>
                     <label><a href="#" type="button">camera</a></label>
@@ -431,7 +436,7 @@
                     </div>
 
 
-                </div>-->
+                </div>
             </div>
 
         </div>

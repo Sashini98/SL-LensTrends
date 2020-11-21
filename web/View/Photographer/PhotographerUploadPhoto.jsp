@@ -186,6 +186,10 @@
                 <div class="keyword-area">
                     <textarea id="keyword-area" name="title" rows="5" cols="45" placeholder="Add Keywords (Max: 50 keywords) &#10separate with commas"></textarea>
                 </div>
+                
+                <div class="sale-album">
+                    <p>Is it for Sale or 
+                </div>
 
                 <div class="file-name">
                     <p>File ID(s): 365447169 </p>
@@ -212,8 +216,9 @@
             </div>
 
             <div class="inreview-details">
-                <div class="detail-inreview">
+                <div class="details-inreview">
                     <h3>Glass with Red</h3> 
+                    <p>Submitted 4 days ago </p>
                 </div>
             </div>
 
