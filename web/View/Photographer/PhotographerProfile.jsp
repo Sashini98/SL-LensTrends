@@ -13,9 +13,11 @@
         <!--<link type="text/css" rel="stylesheet" href="../../CSS/Mainheader.css">-->
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.typekit.net/mzc0rkn.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/raw6dfn.css">
 
         <title>Profile</title>
     </head>
@@ -102,7 +104,7 @@
 
         <div class="welcome-note">
             <img src="../../Resources/Img/bg.svg">
-            <p>Welcome to my <br> &nbsp; &nbsp; &nbsp; &nbsp; Collections !</p>
+            <p>Welcome to my Collections !</p>
         </div>
 
         <div class="image-content">
