@@ -8,6 +8,9 @@
 <!DOCTYPE html>
 
 <div class="approvePhotosBody" style="background-color: #f7f6f9;">
+    <div class="heading">
+        <h1> Uploaded Photographs</h1>
+    </div>
 
     <div class="photos">
         <div class="details">

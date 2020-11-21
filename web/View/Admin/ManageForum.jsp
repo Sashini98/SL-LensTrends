@@ -8,6 +8,9 @@
 <!DOCTYPE html>
 
 <div class="manageFourmBody" style="background-color: #f7f6f9;">
+    <div class="heading">
+        <h1> Reported Questions</h1>
+    </div>
 
     <div class="questions">
         <div class="details">

@@ -106,15 +106,17 @@
     background-color: white;
     /*margin-right: 5%;*/
     text-align: left;
+    border-radius: 10px;
 
 }
 
 .contain .b2 {
-    margin-left: 5%;
+    margin-left: 4%;
     padding: 32px;
     width: 39%;
     background-color: white;
     text-align: left;
+    border-radius: 10px;
 
 }
 
@@ -146,7 +148,7 @@ input[type=text]
     width: 100%;
     margin-bottom: 2%;
     outline: none;
-    background-color: #f0efef;
+    background-color: #fff;
 }
 
 .btn {
@@ -156,9 +158,29 @@ input[type=text]
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 30%;
+    width: 40%;
     opacity: 0.9;
-    margin-left: 35%;
+    margin-left: 7%;
+}
+
+.btn1 {
+    background-color: #335fa6;
+    color: white;
+    padding: 10px 40px 5px 9px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;
+    text-align: center;
+    margin-right: 5%;
+}
+
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .table {
@@ -174,25 +196,23 @@ input[type=text]
   text-align: center;
   padding: 8px;
   font-family: 'Poppins', sans-serif;
+  background-color: #DFF0F7;
   
 }
 
-#th-color1{
-    background-color: #DFF0F7;
-}
-
-#th-color2{
-    background-color: #C4E8F2;
-}
-
-#th-color3{
-    background-color: #12a8e0;
+.tr {
+  background-color: #f0efef;
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 6px;
+  font-family: 'Poppins', sans-serif;
+  
 }
 
 .b3 {
     
     background-color: #fff;
-    width: 71%;
+    width: 88%;
     height:auto;
     border-radius: 10px;
     padding: 1% 1.5% 3% 1.5%;

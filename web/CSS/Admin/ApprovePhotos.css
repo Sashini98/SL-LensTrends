@@ -4,6 +4,16 @@
     align-items: center;
 }
 
+.heading {
+    text-align: left;
+    margin-right: 50%;
+}
+
+.heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 200%;
+}
+
 .photos {
     background-color: white;
     width: 75%;
