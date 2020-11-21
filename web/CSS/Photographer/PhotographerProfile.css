@@ -140,10 +140,10 @@ and open the template in the editor.
 
 }
 .welcome-note p{
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;
     font-weight: 700;
-    font-size: 400%;
-    margin-top: -35%;
+    font-size: 250%;
+    margin-top: -30%;
     margin-left: -0.5%;
 
 }
