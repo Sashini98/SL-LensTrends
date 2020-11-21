@@ -32,7 +32,7 @@
                     Enter your email address below and we will send you a link to reset your password.<br><br>
                 </span>
             </div>
-
+            <br />
             <div class="passinfo">
                 <form action="../Login" method="POST">
                     <fieldset class="cpass">

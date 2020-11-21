@@ -16,13 +16,13 @@
         <title>Error 404 Page</title>
     </head>
     <body  style="background-color: #f7f6f9;">
-        
+
         <div class="details">
             <img src="<%= request.getContextPath()%>/Resources/Img/Error.png">
-            
+
             <p><span style="font-size: 50px; color: black">404</span><br><span>OOPS! PAGE NOT BE FOUND</span><br><span style="font-size: 20px; color: black">Sorry but the page you are looking for does not exist,<br>
                     have been removed, name changed or is temporarily unavailable.</span><br>
-                    <a href="Home.jsp">Back To Home</a></p>       
+                <a href="Home.jsp">Back To Home</a></p>       
         </div>
 
     </body>

@@ -16,7 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
         <title>My Favourites</title>
     </head>
-    <body>
+    <body style="background-color: #f9f9f9;">
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -58,7 +58,7 @@
 
                     </h1>
                     <span>
-                        Items (9)
+                        Images (9)
                     </span>
                 </div>
                 <div class="row"> 

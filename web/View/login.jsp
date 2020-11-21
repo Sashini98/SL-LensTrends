@@ -10,8 +10,6 @@
 
     String attribute = (String) request.getAttribute("account");
     String message = (String) request.getAttribute("msg");
-    System.out.println(attribute);
-    System.out.println(message);
 %>
 <html>
     <head>
@@ -21,14 +19,19 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body  style="background-image: url(<%= request.getContextPath()%>/Resources/Img/bg-video.svg); background-size: 100%">
+    <body  style="background-size: 100%">
+
+        <video autoplay muted loop id="myVideo">
+            <source src="<%= request.getContextPath()%>/Resources/video/bg.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
 
         <%
             if (attribute.equals("true")) {
         %>
 
 
-        <div style="display: flex; justify-content: center;">
+        <div style="display: flex; justify-content: center; z-index: 2;  position: fixed;">
             <div class="logAccount" id="ReportPhoto">
                 <div class="logAccountHeader">
                     <h3>Login Account</h3>
@@ -53,7 +56,7 @@
 
         %>
 
-        <div  id="content" style="margin: 0; padding: 0; "> 
+        <div  id="content" style="margin: 0; padding: 0; z-index: 2;  position: fixed;"> 
             <div class="container" id="container"> 
 
                 <div class="logo">
