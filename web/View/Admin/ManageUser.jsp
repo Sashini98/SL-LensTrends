@@ -36,7 +36,7 @@
         <br>
         <table width="100%">
             <thead class="table">
-            <th class="th"> ID </th>
+            <th class="th"> EMAIL </th>
             <th class="th"> NAME </th>
             <th class="th"> TYPE </th>
             <th class="th"> REPORTED BY </th>
@@ -47,7 +47,7 @@
 
             <tbody>
                 <tr class="tr">
-                    <td>C01</td>
+                    <td>sunil@gmail.com</td>
                     <td>Sunil Perera</td>
                     <td>Client</td>
                     <td>Lahiru Rathnayake</td>
@@ -57,7 +57,7 @@
                 </tr>
                 
                 <tr class="tr">
-                    <td>P05</td>
+                    <td>darsha11@gmail.com</td>
                     <td>Darshana Silva</td>
                     <td>Photographer</td>
                     <td>Hashan Lakmal</td>

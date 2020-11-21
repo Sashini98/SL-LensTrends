@@ -7,17 +7,38 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<div class="box">
-    <div class="box1" style="background-color: #EAEAEA; display: flex; flex-direction: column; justify-content: center; align-items: center;">               
-        <img src="../../Resources/Img/newmsg.png">  
-        <h2><center>New Messages</center></h2> 
-    </div>
+    <div class="b3">                
+        <h2 style="text-align: center;">New Messages</h2>
+        <br>
+        <table width="100%">
+            <thead class="table">
+            <th class="th"> EMAIL </th>
+            <th class="th"> NAME </th>
+            <th class="th"> MOBILE </th>
+            <th class="th"> MESSAGE </th>
+            <th class="th"> OPTION </th>
+            </thead>
 
-    <div class="box2" style="background-color: #EAEAEA; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-        <img src="../../Resources/Img/replied.png"> 
-        <h2><center>Replied</center></h2> 
+            <tbody>
+                <tr class="tr">
+                    <td>sunil@gmail.com</td>
+                    <td>Sunil Perera</td>
+                    <td>071-2569874</td>
+                    <td>There is another account in the same details in the system.</td>
+                    <td><a href=""><button class="btn1" id="view">Reply</button></a></td>
+                </tr>
+                <tr class="tr">
+                    <td>saman@gmail.com</td>
+                    <td>Saman Rathnayake</td>
+                    <td>071-8967412</td>
+                    <td>I can I buy a photograph?</td>
+                    <td><a href=""><button class="btn1" id="view">Reply</button></a></td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
     </div>
-</div>
 
 <div class="box">
     <div class="box1">               
