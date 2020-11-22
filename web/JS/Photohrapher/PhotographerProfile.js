@@ -2,7 +2,7 @@
 var uploadmodal = document.getElementById("upload-modal");
 
 // Get the button that opens the modal
-var btnup = document.getElementById("upload-photo");
+var btnup = document.getElementById("upload-image-front");
 
 // Get the <span> element that closes the modal
 var spanup = document.getElementsByClassName("upload-close")[0];
@@ -26,3 +26,26 @@ window.onclick = function (event) {
 
 
 
+window.pressed = function () {
+
+    uploadimage.innerHTML = "Choose file";
+    var a = document.getElementById('up-image');
+
+    if (a.value == "")
+    {
+        uploadimage.innerHTML = "Choose file";
+    } else
+    {
+        var theSplit = a.value.split('\\');
+        uploadimage.innerHTML = theSplit[theSplit.length - 1];
+//        uploadimage.innerHTML = "Choose file";
+    } 
+};
+
+function upload(btn) {
+    
+    if (btn == "final-upload") {
+        
+        uploadmodal.style.display = "none";
+    } 
+}

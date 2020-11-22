@@ -1,5 +1,5 @@
 <%-- 
-    Document   : AskQues
+    Document   : Event Post
     Created on : Nov 8, 2020, 8:02:42 AM
     Author     : Sashini Shihara
 --%>
@@ -15,7 +15,7 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Events/EventsPost.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
-        <title>Questions</title>
+        <title>Post Events</title>
     </head>
     <body style="background-color: #f7f6f9;">
 
@@ -29,18 +29,14 @@
                 <div class="headerul">
                     <ul>
 
+                        <li><a href="#" type="button"> Forum </a></li>
                         <li><a href="#" type="button"> Events </a></li>
                         <li><a href="#" type="button"> Profile </a></li>
                         <li><a href="#" type="button"> Settings </a></li>
 
                     </ul>
                 </div>
-                <div class="searchInput">
-
-                    <input type="text" placeholder="Search">                   
-
-
-                </div>
+               
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
                 </div>
@@ -54,18 +50,6 @@
         </div>
 
         <div class="main-content">
-
-            <div class="side-box"> 
-                <div class="home">
-                    <ul>
-                        <li><a href="../../View/Home.jsp"> Home </a></li>
-                        <li><a href="../../View/Fourm/MainForum.jsp"> Past Events</a></li>
-                        <li><a href="../../View/Fourm/MainForum.jsp"> Post Event</a></li>
-                    </ul>
-                </div>
-
-
-            </div>  
 
             <div class="events">                
                 <form>
@@ -110,13 +94,6 @@
                         <textarea name="desc" required rows="10" cols="50"></textarea>
                         <!--<input type="text" name="desc" required rows="10" cols="50"/>-->
                         <label for="desc" class="label_name">
-                        </label>
-                    </div><br>
-
-                    <div class="formContent">
-                        <span class="content_name"> Estimated Budget Range</span><br>
-                        <input type="text" name="estimate" placeholder="LKR" required/>
-                        <label for="estimate" class="label_name">
                         </label>
                     </div><br>
 

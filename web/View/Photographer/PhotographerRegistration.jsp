@@ -18,7 +18,7 @@
     </head>
     <body style="background-color: #f7f6f9;">
 
-<div class="fixedheader">  
+        <div class="fixedheader">  
             <div class="pageheader">
                 <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
@@ -62,68 +62,65 @@
             </div>
 
             <div class="passinfo">
-                <table class="table" border="0" width="100%" height="40px" >
-                <tr>
-                    <td align="left">Email</td>
-                    <td><input type="text" id="email" name="email"></td>
-                    <td align="left">Joined Date</td>
-                    <td><input type="date" name="jdate" id="jdate"></td>
-                </tr>
-                <tr>
-                    <td align="left">password</td>
-                    <td><input type="password" id="pw" name="pass" ></td>
-                    <td align="left">Gender</td>
-                    <td><input type="text" name="gen" id="gender"></td>
-                </tr>
-                <tr>
-                    <td align="left">Confirm Password</td>
-                    <td><input type="password" id="repPw" name="passR"></td>
-                    <td align="left">Plan Id</td>
-                    <td><input type="text" name="pid" id="pid"></td>
-                </tr>
-                <tr>
-                    <td align="left">First Name</td>
-                    <td><input type="text" id="fname" name="fname"></td>
-                    <td align="left">Mobile</td>
-                    <td><input type="text" name="mobile" id="mobile"></td>
-                </tr>
-                <tr>
-                    <td align="left">Last Name</td>
-                    <td><input type="text" id="lname" name="lname" ></td>
-                    <td align="left">Web site</td>
-                    <td><input type="text" name="web" id="web"></td>
-                </tr>
-                <tr>
-                    <td align="left">Address No</td>
-                    <td><input type="text" id="address" name="address" ></td>
-                    <td align="left">Field Of Interest</td>
-                    <td><input type="text" name="field" id="field"></td>
-                </tr>
-                <tr>
-                    <td align="left">City</td>
-                    <td><input type="text" id="city" name="city" ></td>
-                    <td align="left">Postal Code</td>
-                    <td><input type="text" name="pcode" id="pcode"></td>
-                </tr>
-                <tr>
-                    <td align="left">Province</td>
-                    <td><input type="text" id="province" name="province" ></td>
-                    <td align="left">Category</td>
-                    <td><input type="text" name="category" id="category"></td>
-                </tr>
-                <tr>
-                   <td align="left">Bio</td>
-                   <td><textarea class="textarea"></textarea></td>
-                   <td class="change"><input type="submit" value="submit"></td>
-                </tr>
-            </table>                        
-                <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">
-                    The SL-Lens Trends may keep me informed with personalized email about products and services.See our Privacy Policy for more details or to opt-out at any time.
-                </p>
+                <center>
+                    <table class="table" border="0" width="100%" height="40px" >
+                        <tr>
+                            <td align="left">Email</td>
+                            <td><input type="text" id="email" name="email"></td>
+                            <td align="left">Province</td>
+                            <td><input type="text" id="province" name="province" ></td>
+                        </tr>
+                        <tr>
+                            <td align="left">password</td>
+                            <td><input type="password" id="pw" name="pass" ></td>
+                            <td align="left">Gender</td>
+                            <td><input type="text" name="gen" id="gender"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Confirm Password</td>
+                            <td><input type="password" id="repPw" name="passR"></td>
+                            <td align="left">Mobile</td>
+                            <td><input type="text" name="mobile" id="mobile"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">First Name</td>
+                            <td><input type="text" id="fname" name="fname"></td>
+                            <td align="left">Web site</td>
+                            <td><input type="text" name="web" id="web"></td>                    
+                        </tr>
+                        <tr>
+                            <td align="left">Last Name</td>
+                            <td><input type="text" id="lname" name="lname" ></td>
+                            <td align="left">Field Of Interest</td>
+                            <td><input type="text" name="field" id="field"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">Address No</td>
+                            <td><input type="text" id="address" name="address" ></td>
+                            <td align="left">Postal Code</td>
+                            <td><input type="text" name="pcode" id="pcode"></td>
+                        </tr>
+                        <tr>
+                            <td align="left">City</td>
+                            <td><input type="text" id="city" name="city" ></td> 
+                            <td align="left">Bio</td>
+                            <td><textarea class="textarea"></textarea></td>
+                        </tr>
+                        <tr>
+
+                        </tr>
+                        <tr>                  
+                            <td class="change"><input type="submit" value="submit"></td>
+                        </tr>      
+                    </table>
+                    <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">
+                        The SL-Lens Trends may keep me informed with personalized email about products and services.See our Privacy Policy for more details or to opt-out at any time.
+                    </p>
+
             </div>
         </div>
-        
-                
+
+
 
     </body>
 </html>
