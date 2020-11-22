@@ -92,6 +92,18 @@ body {
     color: black;
 }
 
+.side-nav .notification label{
+    display: flex;
+    margin-right: 15px;
+    background-color: rgb(246,55,55);
+    color: white;
+    border-radius: 25%;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
 .side-nav .notification:hover {
     /*filter:  invert(100%) sepia(0%) saturate(7452%) hue-rotate(252deg) brightness(105%) contrast(99%);*/
     /*background-image: url('../..//Resources/Img/notify-white.svg');*/
@@ -108,13 +120,10 @@ body {
 .side-nav .photomanage {
     margin-top: 5%;
     display: flex;
-    /*flex-wrap: wrap;*/
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    /*text-align: center;*/
     margin-left: 10%;
-    /*display: felx;*/
     padding: 0%;
     height: 45px;
 }
@@ -123,17 +132,9 @@ body {
     height: 100%;
     width: 17%;
     padding: 0% 5.5% 1% 4%;
-    /*margin-top: 0%;*/
-    /*float: left;*/
-    /*margin-left:15%;*/ 
-    /*padding-right: 3%;*/
-    /*color: blue;*/
-    /*fill:white;*/
-    /*background: red;*/
-
 }
 
-.side-nav  .photomanage p  {
+.side-nav .photomanage p  {
     /*margin-top: 0%;*/
     margin: auto;
     margin-left: 0;
@@ -142,6 +143,19 @@ body {
     /*float: left;*/
     /*background: red;*/
 
+}
+
+.side-nav .photomanage label{
+    display: flex;
+      margin-right: 15px;
+    background-color: rgb(246,55,55);
+    color: white;
+    border-radius: 25%;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .side-nav  .photomanage p a{
@@ -210,6 +224,19 @@ body {
     color: black;
 }
 
+.side-nav .photoapproval label{
+    display: flex;
+      margin-right: 15px;
+    background-color: rgb(246,55,55);
+    color: white;
+    border-radius: 25%;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
 .side-nav .photoapproval:hover {
     /*filter:  invert(100%) sepia(0%) saturate(7452%) hue-rotate(252deg) brightness(105%) contrast(99%);*/
     /*background-image: url('../..//Resources/Img/notify-white.svg');*/
@@ -269,6 +296,19 @@ body {
     color: black;
 }
 
+.side-nav .forum label{
+    display: flex;
+      margin-right: 15px;
+    background-color: rgb(246,55,55);
+    color: white;
+    border-radius: 25%;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
 .side-nav .forum:hover {
     /*filter:  invert(100%) sepia(0%) saturate(7452%) hue-rotate(252deg) brightness(105%) contrast(99%);*/
     /*background-image: url('../..//Resources/Img/notify-white.svg');*/
@@ -326,6 +366,19 @@ body {
     font-size: 110%;
     text-decoration: none;
     color: black;
+}
+
+.side-nav .user label{
+    display: flex;
+    margin-right: 15px;
+    background-color: rgb(246,55,55);
+    color: white;
+    border-radius: 25%;
+    padding: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .side-nav .user:hover {
@@ -400,6 +453,65 @@ body {
 
 }
 
+
+.side-nav .subscription {
+    margin-top:2%;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    /*text-align: center;*/
+    margin-left: 10%;
+    /*display: felx;*/
+    padding: 0%;
+    height: 45px;
+}
+
+.side-nav .subscription  img {
+    height: 100%;
+    width: 14%;
+    padding: 0% 6.5% 1% 7%;
+    /*margin-top: 0%;*/
+    /*float: left;*/
+    /*margin-left:15%;*/ 
+    /*padding-right: 3%;*/
+    /*color: blue;*/
+    /*fill:white;*/
+    /*background: red;*/
+
+}
+
+.side-nav  .subscription  p  {
+    /*margin-top: 0%;*/
+    margin: auto;
+    margin-left: 0;
+    /*    font-family: 'Poppins', sans-serif;
+        font-size: 130%;*/
+    /*float: left;*/
+    /*background: red;*/
+    padding: 0%;
+
+}
+
+.side-nav  .subscription  p a{
+    font-family: 'Lato', sans-serif;
+    font-size: 110%;
+    text-decoration: none;
+    color: black;
+}
+
+.side-nav .subscription:hover {
+    /*filter:  invert(100%) sepia(0%) saturate(7452%) hue-rotate(252deg) brightness(105%) contrast(99%);*/
+    /*background-image: url('../..//Resources/Img/notify-white.svg');*/
+    /*color: white;*/
+    background: #2196F3;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+
+
+}
 
 .side-nav .logout {
     margin-top:2%;

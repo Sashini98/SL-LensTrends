@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<!--<html>
     <head>
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css"/>
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/SubPlan.css"/>
@@ -16,13 +16,12 @@
         <link rel="stylesheet" href="https://use.typekit.net/mzc0rkn.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
         <title>Subscription</title>
-    </head>
-    <body style="background-color: #f7f6f9;">
-        
-            <div class="heading">
-                <p id='p1'>Plans and Pricing</p> <br>
-                <p id='p2'>UPDATE HERE</p>
-            </div>
+    </head>-->
+    <div style="background-color: #f7f6f9; margin: auto;">
+
+        <div class="heading">
+            <p id='p1'>Plans and Pricing</p> <br>
+            <p id='p2'>UPDATE HERE</p>
         </div>
 
         <div class="content">
@@ -34,10 +33,10 @@
                 <div class="hover-content">
                     <p>0$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
-              
-                    <div class="arrow">
-                        <a id="free"><img src="../../Resources/Img/arrow.png"></a>
-                    </div>
+
+                <div class="arrow">
+                    <a id="free"><img src="../../Resources/Img/arrow.png"></a>
+                </div>
             </div>
             <div class="box" id="box-color1">
                 <h2>Standard</h2>
@@ -47,11 +46,11 @@
                 <div class="hover-content">
                     <p>40$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
-              
-                    <div class="arrow">
-                        <a type="button" id="standard"><img src="../../Resources/Img/arrow.png"></a>
-                    </div>
-               
+
+                <div class="arrow">
+                    <a type="button" id="standard"><img src="../../Resources/Img/arrow.png"></a>
+                </div>
+
             </div>
             <div class="box" id="box-color2">
                 <h2>Premium</h2>
@@ -61,14 +60,11 @@
                 <div class="hover-content">
                     <p>85$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
-              
-                    <div class="arrow">
-                        <a type="button" id="premium"><img src="../../Resources/Img/arrow.png"></a>
-                    </div>
-                
 
+                <div class="arrow">
+                    <a type="button" id="premium"><img src="../../Resources/Img/arrow.png"></a>
+                </div>
             </div>            
-
         </div>
 
         <div id="myModal" class="modal">
@@ -101,6 +97,6 @@
             </div>
         </div>
 
-       <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
-    </body>
-</html>
+        <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
+    </div>
+<!--</html>-->

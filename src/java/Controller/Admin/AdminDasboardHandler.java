@@ -44,6 +44,9 @@ public class AdminDasboardHandler extends HttpServlet {
         }else if (tab.equals("setting")) {
             request.getRequestDispatcher("/View/Admin/AdminProfile.jsp").forward(request, response);
             
+        }else if (tab.equals("subscription")) {
+            request.getRequestDispatcher("/View/Admin/SubPlan.jsp").forward(request, response);
+            
         }
         
     }

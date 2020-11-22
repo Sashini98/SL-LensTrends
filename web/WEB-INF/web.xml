@@ -203,7 +203,7 @@
     </filter>
     <filter-mapping>
         <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
-        <url-pattern>/View/Photographer/uploadPhotos.jsp</url-pattern>
+        <url-pattern>/View/Photographer/PhotographerUploadPhoto.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerUpdate.jsp</url-pattern>
     </filter-mapping>
@@ -246,6 +246,7 @@
         <filter-name>FilterLoggedActor</filter-name>
         <url-pattern>/View/Photographer/changepassword.jsp</url-pattern>
     </filter-mapping>
+   
     <error-page>
         <error-code>404</error-code>
         <location>/View/Error404.jsp</location>
