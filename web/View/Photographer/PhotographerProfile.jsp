@@ -105,7 +105,39 @@
         <div class="welcome-note">
             <img src="../../Resources/Img/bg.svg">
             <p>Welcome to my Collections !</p>
+            <a type="button" id="upload-image-front">Upload</a>
+
+            <div id="upload-modal" class="upload-modal">
+
+                <!-- Upload Modal content -->
+                <div class="upload-modal-content">
+                    <span class="upload-close">&times;</span>
+                    <div class="upload-modal-image">
+                        <img src="../../Resources/Img/upload.svg">
+                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressed()">
+                        <label for="up-image">
+                            <a type="file" id="upload-image"> Browse</a>
+                        </label> <br> <br>
+                        <label id="uploadimage">
+                            Choose file                            
+                        </label>
+                        <div class="list">
+                            <ul>
+                                <li>JPEG format only</li>
+                                <li>Maximum file size is 10MB</li>
+                            </ul>
+                        </div>                        
+                    </div>
+                    <div class="upload"> 
+                        <label>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload')">Upload</a>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
         </div>
+
 
         <div class="image-content">
             <div class="image">
@@ -125,6 +157,6 @@
             </div>
         </div>
 
-
+        <script  type="text/javascript" src="../../JS/Photohrapher/PhotographerProfile.js"></script>
     </body>
 </html>
