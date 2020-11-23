@@ -39,23 +39,23 @@ public class ContributorOrClintLogin extends HttpServlet {
                 try {
                     ClientDao clientDao = new ClientDaoImpl();
                     Client clientbyEmailAndPassword = clientDao.getClientbyEmailAndPassword(email, pw);
-                    
+
                     if (clientbyEmailAndPassword != null) {
 
                         request.getSession().setAttribute("loggedClient", clientbyEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
-                        
+
                         if (page != null) {
                             if (page.equals("ch")) {
                                 response.sendRedirect("View/Home.jsp");
 
                             } else if (page.equals("cu")) {
                                 response.sendRedirect("View/User/ClientProfileUpdate.jsp");
-                            }else if (page.equals("cph")) {
+                            } else if (page.equals("cph")) {
                                 response.sendRedirect("View/User/AdvancedSearch.jsp");
-                            }else if (page.equals("cpp")) {
+                            } else if (page.equals("cpp")) {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
-                            }else if (page.equals("fh")) {
+                            } else if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
                             }
                         } else {
@@ -81,21 +81,22 @@ public class ContributorOrClintLogin extends HttpServlet {
 
                     PhotographerDao photographerDao = new PhotographerDaoImp();
                     Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
-                   
 
                     if (photographerByEmailAndPassword != null) {
 
                         request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
-                        
+
                         if (page != null) {
                             if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else {
+                                response.sendRedirect("View/PhotographerHome.jsp");
                             }
                         } else {
                             response.sendRedirect("View/PhotographerHome.jsp");
                         }
-                        
+
                     } else {
 
                         request.setAttribute("account", "false");

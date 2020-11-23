@@ -122,23 +122,24 @@ public class Login extends HttpServlet {
 
                 try {
                     Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
-                    ResultSet photographer = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' AND Password = '" + pw + "' ");
 
-                    if (photographerByEmailAndPassword != null) {                 
+                    if (photographerByEmailAndPassword != null) {
 
                         request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
-                        
+
                         if (page != null) {
                             if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else {
+                                System.out.println("awaa");
+                                response.sendRedirect("View/PhotographerHome.jsp");
                             }
                         } else {
+                            System.out.println("awaa");
                             response.sendRedirect("View/PhotographerHome.jsp");
                         }
-                        
-                        
-                        
+
                     } else {
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");
