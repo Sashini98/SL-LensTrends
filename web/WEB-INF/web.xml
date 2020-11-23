@@ -217,6 +217,14 @@
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
     </filter-mapping>
     <filter>
+        <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedClientOrPhotographerAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
+        <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
         <filter-name>FilterLoggedAdminAccessOnly</filter-name>
         <filter-class>Controller.Filters.FilterLoggedAdminAccessOnly</filter-class>
     </filter>
