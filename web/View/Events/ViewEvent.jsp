@@ -53,7 +53,7 @@
         </div>
 
         <div class="main-content">
-            <div class="side-box"> 
+<!--            <div class="side-box"> 
                 <div class="home">
                     <ul>
                         <li><a href="../../View/Home.jsp"> Home </a></li>
@@ -61,7 +61,7 @@
                         <li><a href=""> Past Events </a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
             <div class="events">                
                 <h2>Event Details</h2>
                 <p>Event Date:  </p>
