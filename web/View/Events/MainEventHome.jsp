@@ -6,6 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    boolean logged = (boolean) request.getAttribute("logged");
+%>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,9 +20,9 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Events/MainEventHome.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
-        
+
     </head>
-<body style="background-color: #f7f6f9;">
+    <body style="background-color: #f7f6f9;">
 
         <div class="fixedheader">  
 
@@ -28,10 +33,19 @@
 
                 <div class="headerul">
                     <ul>
-
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
+                            <%
+                                if (logged) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            %>
 
                     </ul>
                 </div>
@@ -42,7 +56,17 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <%
+                        if (!logged) {
+                    %>
+                    <a href="../login.jsp?loc=me" >Log In</a> 
+                    <%
+                    } else {
+                    %>
+                    <a href="../../LogOut?loc=me" type="button"> Log Out </a>
+                    <%
+                        }
+                    %>
                 </div>
 
             </div>

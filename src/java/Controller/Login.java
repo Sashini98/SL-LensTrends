@@ -97,6 +97,8 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
                             } else if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else if (page.equals("me")) {
+                                response.sendRedirect("View/Events/MainEventHomes.jsp");
                             }
                         } else {
                             response.sendRedirect("View/Home.jsp");
