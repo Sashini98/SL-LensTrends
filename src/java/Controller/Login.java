@@ -95,6 +95,8 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
                             } else if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else if (page.equals("fhbq")) {
+                                response.sendRedirect("View/Fourm/BrowseQn.jsp");
                             } else if (page.equals("me")) {
                                 response.sendRedirect("View/Events/MainEventHomes.jsp");
                             } else {
@@ -131,6 +133,8 @@ public class Login extends HttpServlet {
                         if (page != null) {
                             if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else if (page.equals("fhbq")) {
+                                response.sendRedirect("View/Fourm/BrowseQn.jsp");
                             } else {
                                 System.out.println("awaa");
                                 response.sendRedirect("View/PhotographerHome.jsp");

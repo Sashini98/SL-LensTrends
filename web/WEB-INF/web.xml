@@ -219,6 +219,7 @@
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
+        <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
@@ -226,7 +227,6 @@
     </filter>
     <filter-mapping>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
-        <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
         <url-pattern>/View/Fourm/AskQues.jsp</url-pattern>
     </filter-mapping>
     <filter>
