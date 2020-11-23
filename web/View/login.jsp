@@ -19,12 +19,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body  style="background-size: 100%">
+    <body  style="background-size:100%; background-image:url(<%= request.getContextPath()%>/Resources/Img/bg3.jpg);">
+   
 
-        <video autoplay muted loop id="myVideo">
-            <source src="<%= request.getContextPath()%>/Resources/video/bg.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
+        <!--        <video autoplay muted loop id="myVideo">
+                    <source src="<%= request.getContextPath()%>/Resources/video/bg.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>-->
 
         <%
             if (attribute.equals("true")) {
