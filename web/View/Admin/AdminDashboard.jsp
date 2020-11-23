@@ -19,6 +19,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/mzc0rkn.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
 
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminDashboard.css" />
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminNotification.css" id="notificationCss"/>
@@ -27,6 +29,7 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageForum.css" id="forumCss"/>
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageUser.css" id="userCss"/>
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminProfile.css" id="settingCss"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/SubPlan.css" id="subCss"/>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>            
         <title>Admin</title>
@@ -50,16 +53,19 @@
             <div id="photomanageDiv" onclick="show('photomanage')" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" class="photomanage">
                 <img id="photomanageIcon" src="../../Resources/Img/photomanagement.svg" />
                 <p><a href="#" type="button"  id="photomanagement">Manage Photo</a></p>
+                <label>4</label>
             </div>
 
             <div id="photoapprovalDiv" onclick="show('photoapproval')" onmouseover="photoapprovalButtonChange('photoapprovalDiv')" onmouseout="photoapprovalButtonBack('photoapprovalDiv')" class="photoapproval">
                 <img id="photoapprovalIcon" src="../../Resources/Img/photoreview.svg" />
                 <p><a href="#" type="button"  id="photo-approval">Photo Approval</a></p>
+                <label>4</label>
             </div>
 
             <div id="forumDiv" onclick="show('forum')" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" class="forum">
                 <img id="forumIcon" src="../../Resources/Img/forummangement.svg" />
                 <p><a href="#" type="button"  id="forummanage">Manage Forum</a></p>
+                <label>3</label>
             </div>
 
             <%
@@ -68,20 +74,28 @@
             <div id="userDiv" onclick="show('user')"  onmouseover="userButtonChange('userDiv')" onmouseout="userButtonBack('userDiv')" class="user">
                 <img id="userIcon" src="../../Resources/Img/user.svg" />
                 <p><a href="#" type="button"  id="usermanage">Manage User</a></p>
+                <label>2</label>
             </div>
             <%
                 }
             %>
 
-            <div id="settingDiv" onclick="show('setting')" onclick="show('settingDiv')" onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" class="setting">
-                <img id="settingIcon" src="../../Resources/Img/settings.svg" />
-                <p><a href="#" type="button"  id="settingtext">Settings</a></p>
-            </div>
-
             <div id="notifyDiv" onclick="show('notification')" onmouseover="notifyButtonChange('notifyDiv')" onmouseout="notifyButtonBack('notifyDiv')" class="notification">
                 <img id="notificationIcon" src="../../Resources/Img/notify.svg" />
                 <p><a href="#" type="button"  id="notify">Notification</a></p>
+                <label>2</label>
             </div>
+
+            <div id="subscriptionDiv" onclick="show('subscription')" onclick="show('subscription')" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" class="subscription">
+                <img id="subscriptionIcon" src="../../Resources/Img/settings.svg" />
+                <p><a href="#" type="button"  id="subscriptiontext">Subscription Plans</a></p>
+            </div>
+
+            <div id="settingDiv" onclick="show('setting')"  onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" class="setting">
+                <img id="settingIcon" src="../../Resources/Img/settings.svg" />
+                <p><a href="#" type="button"  id="settingtext">User Account</a></p>
+            </div>
+
 
             <div id="logoutDiv" onclick="logout()" onmouseover="logoutButtonChange('logoutDiv')" onmouseout="logoutButtonBack('logoutDiv')" class="logout">
                 <img id="logoutIcon" src="../../Resources/Img/logout.svg" />
@@ -329,5 +343,6 @@
         </div>
         <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
         <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
+        <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
     </body>
 </html>
