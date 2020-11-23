@@ -6,6 +6,12 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    String loggedAs = (String) request.getAttribute("loggedAs");
+%>
+
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -32,9 +38,28 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                         <%
+                            if (loggedAs.equals("client")) {
+                        %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                            } else if (loggedAs.equals("photographer")) {
+                            %>
+
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
+
+                        <%
+                            }
+                        %>
 
                     </ul>
                 </div>
@@ -49,7 +74,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <a href="../../LogOut?loc=fh" type="button"> Logout </a>
                 </div>
 
             </div>
