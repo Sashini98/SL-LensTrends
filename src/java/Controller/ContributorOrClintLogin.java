@@ -7,13 +7,11 @@ package Controller;
 
 import Controller.DaoImpl.ClientDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
-import DB.DB;
 import Model.Client;
 import Model.Dao.ClientDao;
 import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
-import java.sql.ResultSet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -57,6 +55,8 @@ public class ContributorOrClintLogin extends HttpServlet {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
                             } else if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else {
+                                response.sendRedirect("View/Home.jsp");
                             }
                         } else {
                             response.sendRedirect("View/Home.jsp");

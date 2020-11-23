@@ -32,13 +32,25 @@
 
             <div class="pageheader">
 
+                <%
+                    if (loggedAs.equals("client")) {
+                %>
                 <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                    } else if (loggedAs.equals("photographer")) {
+                    %>
+
+                <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+
+                <%
+                    }
+                %> 
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
                     <ul>
 
-                         <%
+                        <%
                             if (loggedAs.equals("client")) {
                         %>
                         <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>

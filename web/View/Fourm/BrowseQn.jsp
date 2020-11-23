@@ -28,8 +28,19 @@
         <div class="fixedheader">  
 
             <div class="pageheader">
-
+                <%
+                    if (loggedAs.equals("client")) {
+                %>
                 <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <%
+                } else if (loggedAs.equals("photographer")) {
+                 %>
+                
+                <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+
+                <% 
+                }
+                %>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
@@ -78,13 +89,6 @@
         <div class="main-content">
 
             <div class="side-box"> 
-                <div class="home">
-                    <ul>
-                        <li><a href="../../View/Home.jsp"> Home </a></li>
-                        <li><a href="../../View/Fourm/MainForum.jsp"> Forum Home </a></li>
-                    </ul>
-                </div>
-
                 <div class="filter">
                     <p>Filer by:</p>
                     <label class="container">No answer
