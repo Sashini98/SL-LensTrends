@@ -76,7 +76,17 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <%
+                        if (!logged.equals("nl")) {
+                    %>
+                    <a href="../../LogOut?loc=fh" type="button"> Logout </a>
+                    <%
+                    } else {
+                    %>
+                    <a href="../login.jsp?loc=fh" >Login</a> 
+                    <%
+                        }
+                    %>
                 </div>
             </div>
         </div>
