@@ -203,7 +203,7 @@
     </filter>
     <filter-mapping>
         <filter-name>FilterLoggedPhotographersAccessOnly</filter-name>
-        <url-pattern>/View/Photographer/uploadPhotos.jsp</url-pattern>
+        <url-pattern>/View/Photographer/PhotographerUploadPhoto.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerUpdate.jsp</url-pattern>
     </filter-mapping>
@@ -215,6 +215,15 @@
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
+        <filter-class>Controller.Filters.FilterLoggedClientOrPhotographerAccessOnly</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
+        <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
+        <url-pattern>/View/Fourm/AskQues.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedAdminAccessOnly</filter-name>
@@ -246,6 +255,7 @@
         <filter-name>FilterLoggedActor</filter-name>
         <url-pattern>/View/Photographer/changepassword.jsp</url-pattern>
     </filter-mapping>
+   
     <error-page>
         <error-code>404</error-code>
         <location>/View/Error404.jsp</location>

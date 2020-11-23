@@ -14,6 +14,22 @@ function notifyButtonBack() {
 //    document.getElementById("notifyDiv").style.backgroundColor = "white";
 }
 
+function subscriptionButtonChange() {
+
+    document.getElementById("subscriptionIcon").src = "../../Resources/Img/notify-white.svg";
+    document.getElementById("subscriptiontext").style.color = "white";
+//    document.getElementById("notifyDiv").style.backgroundColor = "red";
+
+
+}
+
+function subscriptionButtonBack() {
+
+    document.getElementById("subscriptionIcon").src = "../../Resources/Img/notify.svg";
+    document.getElementById("subscriptiontext").style.color = "black";
+//    document.getElementById("notifyDiv").style.backgroundColor = "white";
+}
+
 function photomanageButtonChange() {
 
     document.getElementById("photomanageIcon").src = "../../Resources/Img/photomanagement-white.svg";
@@ -137,6 +153,7 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
 
     } else if (selectedTab === 'photomanage') {
         document.getElementById("notificationCss").disabled = true;
@@ -145,6 +162,7 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
 
     } else if (selectedTab === 'photoapproval') {
         document.getElementById("notificationCss").disabled = true;
@@ -153,6 +171,7 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
 
     } else if (selectedTab === 'forum') {
         document.getElementById("notificationCss").disabled = true;
@@ -161,6 +180,7 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = false;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
 
     } else if (selectedTab === 'user') {
         document.getElementById("notificationCss").disabled = true;
@@ -169,6 +189,7 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = false;
         document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
 
     } else if (selectedTab === 'summary') {
 //        document.getElementById("notificationCss").disabled = true;
@@ -185,6 +206,16 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = false;
+        document.getElementById("subCss").disabled = true;
+        
+    } else if (selectedTab === 'subscription') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = false;
     }
 
     var request = new XMLHttpRequest();
