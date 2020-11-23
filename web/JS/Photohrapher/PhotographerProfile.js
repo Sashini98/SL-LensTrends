@@ -27,7 +27,7 @@ window.onclick = function (event) {
 
 
 window.pressed = function () {
-
+    document.getElementById("sample").style.display = "block";
     uploadimage.innerHTML = "Choose file";
     var a = document.getElementById('up-image');
 
@@ -38,14 +38,35 @@ window.pressed = function () {
     {
         var theSplit = a.value.split('\\');
         uploadimage.innerHTML = theSplit[theSplit.length - 1];
-//        uploadimage.innerHTML = "Choose file";
-    } 
+        
+    }
 };
 
 function upload(btn) {
-    
+
     if (btn == "final-upload") {
-        
+
         uploadmodal.style.display = "none";
-    } 
+        uploadimage.innerHTML = "Choose file";
+    }
+}
+
+
+function showPreviewOne(event) {
+    if (event.target.files.length > 0) {
+        let src = URL.createObjectURL(event.target.files[0]);
+        let preview = document.getElementById("sample");
+        preview.src = src;
+        preview.style.display = "block";
+        document.getElementById("title-input").style.display = "block";
+    }
+}
+
+function myImgRemoveFunctionOne(btn2) {
+    if (btn2 == "remove-upload") {
+        document.getElementById("sample").style.display = "none";
+        document.getElementById("up-image").value = "";
+        uploadimage.innerHTML = "Choose file";
+        document.getElementById("title-input").style.display = "none";
+    }
 }

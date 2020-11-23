@@ -90,3 +90,27 @@ function clickimage(click) {
         document.getElementById("re2").style.border = "none";
     }
 }
+
+window.pressed = function () {
+
+    uploadimage.innerHTML = "Choose file";
+    var a = document.getElementById('up-image');
+
+    if (a.value == "")
+    {
+        uploadimage.innerHTML = "Choose file";
+    } else
+    {
+        var theSplit = a.value.split('\\');
+        uploadimage.innerHTML = theSplit[theSplit.length - 1];
+//        uploadimage.innerHTML = "Choose file";
+    }
+};
+
+function upload(btn) {
+
+    if (btn == "final-upload") {
+
+        uploadmodal.style.display = "none";
+    }
+}
