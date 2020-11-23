@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-    System.out.println(p.getFname());
 %>
 <html>
 
@@ -32,9 +31,9 @@
                 <div class="headerul">
                     <ul>
 
-                          <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>

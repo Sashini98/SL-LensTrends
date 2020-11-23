@@ -179,6 +179,7 @@
         <url-pattern>/View/User/Cart.jsp</url-pattern>
         <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
         <url-pattern>/View/Events/EventsPost.jsp</url-pattern>
+        <url-pattern>/View/Events/PastEvents.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClient</filter-name>
@@ -208,6 +209,7 @@
         <url-pattern>/View/Photographer/PhotographerUploadPhoto.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerUpdate.jsp</url-pattern>
+        <url-pattern>/View/Events/ViewEvent.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>

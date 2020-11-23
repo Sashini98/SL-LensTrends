@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 
 <%
-    boolean logged = (boolean) request.getAttribute("logged");
+    boolean logged = (Boolean) request.getAttribute("logged");
 %>
 
 <html>

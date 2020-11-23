@@ -27,7 +27,8 @@ public class LogOut extends HttpServlet {
             request.getSession().invalidate();
             if (location.equals("ch")) {
                 response.sendRedirect("/GroupProject/View/Home.jsp");
-
+            } else if (location.equals("ph")) {
+                response.sendRedirect("/GroupProject/View/PhotographerHome.jsp");
             } else if (location.equals("cph")) {
                 response.sendRedirect("/GroupProject/View/User/AdvancedSearch.jsp");
             } else if (location.equals("cpp")) {

@@ -28,10 +28,10 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>
                 </div>
