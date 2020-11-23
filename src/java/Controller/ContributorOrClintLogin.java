@@ -55,6 +55,8 @@ public class ContributorOrClintLogin extends HttpServlet {
                                 response.sendRedirect("View/User/AdvancedSearch.jsp");
                             }else if (page.equals("cpp")) {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
+                            }else if (page.equals("fh")) {
+                                response.sendRedirect("View/Fourm/MainForum.jsp");
                             }
                         } else {
                             response.sendRedirect("View/Home.jsp");
@@ -84,7 +86,15 @@ public class ContributorOrClintLogin extends HttpServlet {
                     if (photographerByEmailAndPassword != null) {
 
                         request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
-                        response.sendRedirect("View/Photographer/PhotographerUpdate.jsp");
+                        String page = (String) request.getSession().getAttribute("PageLocation");
+                        
+                        if (page != null) {
+                            if (page.equals("fh")) {
+                                response.sendRedirect("View/Fourm/MainForum.jsp");
+                            }
+                        } else {
+                            response.sendRedirect("View/PhotographerHome.jsp");
+                        }
                         
                     } else {
 

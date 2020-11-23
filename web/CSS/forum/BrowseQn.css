@@ -363,12 +363,12 @@
 
 .questions .answer {
     float: right;
-    margin-right: -5%;
     width: 25%;
 
 }
 
 .questions .answer a{
+    float: right;
     text-decoration: none;
     font-family: 'Barlow', sans-serif;
     font-weight: bold;
