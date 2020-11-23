@@ -5,8 +5,13 @@
  */
 package Controller.Photographer;
 
+import Controller.DaoImpl.PhotographerDaoImp;
+import Model.Dao.PhotographerDao;
+import Model.Photographer;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,69 +23,81 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PhotographerRegistration extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet PhotographerRegistration</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet PhotographerRegistration at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
-    }
+    
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       
+        String id = "";
+        int gender = 0;
+        int planid=1;
+        String email = request.getParameter("email");
+        System.out.println(email);
+        String fname = request.getParameter("fname");
+        String lname = request.getParameter("lname");
+        String address = request.getParameter("address");
+        String city = request.getParameter("city");
+        String province = request.getParameter("province");
+        String mobile = request.getParameter("mobile");
+        String web = request.getParameter("web");
+        String bio = request.getParameter("bio");
+        String foa = request.getParameter("field");
+        String pcode = request.getParameter("pcode");
+        System.out.println(pcode);
+        String g = request.getParameter("gender");
+        String pw = request.getParameter("pass");
+        
+        
+        int pc=Integer.parseInt(pcode);
+        
+        if (g == "male") {
+            gender = 1;
+        } else {
+            gender = 2;
+        }
+        System.out.println(gender);
+        Date date = new Date();
+        
+        try {
+            PhotographerDao photo=new PhotographerDaoImp();
+            id = photo.getLastId();
+
+            String[] parts = id.split("p");
+            String row = parts[1];
+            int lastId = Integer.parseInt(row);
+            int newId = lastId + 1;
+            String pid = Integer.toString(newId);
+            pid = "p" + pid;
+            System.out.println(pid);
+            
+            Photographer p= new Photographer();
+            p.setPhotographerId(pid);
+            p.setEmail(email);
+            p.setPassword(pw);
+            p.setFname(fname);
+            p.setLname(lname);
+            p.setAddress_no(address);
+            p.setCity(city);
+            p.setProvince(province);
+            p.setJoined_date(date);
+            p.setGenderId(gender);
+            p.setPlanId(planid);
+            p.setMobile(mobile);
+            p.setWebsite(web);
+            p.setBio(bio);
+            p.setFielsOfdInterest(foa);
+            p.setPostalCode(pc);
+            p.setActiveStatus(1);
+            
+            photo.addPhotographer(p);
+            
+       
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

@@ -62,6 +62,7 @@
             </div>
 
             <div class="passinfo">
+                <form  id="CRegister" action="../../PhotographerRegistration" method="POST">
                 <center>
                     <table class="table" border="0" width="100%" height="40px" >
                         <tr>
@@ -104,7 +105,7 @@
                             <td align="left">City</td>
                             <td><input type="text" id="city" name="city" ></td> 
                             <td align="left">Bio</td>
-                            <td><textarea class="textarea"></textarea></td>
+                            <td><textarea class="textarea" name="bio"></textarea></td>
                         </tr>
                         <tr>
 
@@ -113,6 +114,9 @@
                             <td class="change"><input type="submit" value="submit"></td>
                         </tr>      
                     </table>
+                    
+                </center>
+                </form>
                     <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif; line-height: 15px;">
                         The SL-Lens Trends may keep me informed with personalized email about products and services.See our Privacy Policy for more details or to opt-out at any time.
                     </p>
