@@ -15,39 +15,38 @@ import java.sql.SQLException;
  * @author acer
  */
 public class DB {
-    
+
     private static Connection con;
-    
-    public static synchronized Connection getConnection(){
-        
-        if(con == null){
-        
+
+    public static synchronized Connection getConnection() {
+
+        if (con == null) {
+
             try {
 
                 Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sl_lens_trends", "root", "");
-
             } catch (ClassNotFoundException ex) {
                 ex.printStackTrace();
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-            
+
         }
         return con;
-    
+
     }
-    
-    public static void iud(String query) throws SQLException{
+
+    public static void iud(String query) throws SQLException {
         getConnection();
         getConnection().createStatement().executeUpdate(query);
-    
+
     }
-    
-    public static ResultSet search(String query) throws SQLException{
+
+    public static ResultSet search(String query) throws SQLException {
         getConnection();
         return getConnection().createStatement().executeQuery(query);
-            
+
     }
-    
+
 }

@@ -8,7 +8,6 @@ package Controller;
 import Controller.DaoImpl.AdminDaoImpl;
 import Controller.DaoImpl.ClientDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
-import DB.DB;
 import Model.Admin;
 import Model.Client;
 import Model.Dao.AdminDao;
@@ -16,7 +15,6 @@ import Model.Dao.ClientDao;
 import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -97,6 +95,12 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
                             } else if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else if (page.equals("fhbq")) {
+                                response.sendRedirect("View/Fourm/BrowseQn.jsp");
+                            } else if (page.equals("me")) {
+                                response.sendRedirect("View/Events/MainEventHomes.jsp");
+                            } else {
+                                response.sendRedirect("View/Home.jsp");
                             }
                         } else {
                             response.sendRedirect("View/Home.jsp");
@@ -120,23 +124,26 @@ public class Login extends HttpServlet {
 
                 try {
                     Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
-                    ResultSet photographer = DB.search("SELECT * FROM Photographer Where Email = '" + email + "' AND Password = '" + pw + "' ");
 
-                    if (photographerByEmailAndPassword != null) {                 
+                    if (photographerByEmailAndPassword != null) {
 
                         request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
-                        
+
                         if (page != null) {
                             if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
+                            } else if (page.equals("fhbq")) {
+                                response.sendRedirect("View/Fourm/BrowseQn.jsp");
+                            } else {
+                                System.out.println("awaa");
+                                response.sendRedirect("View/PhotographerHome.jsp");
                             }
                         } else {
+                            System.out.println("awaa");
                             response.sendRedirect("View/PhotographerHome.jsp");
                         }
-                        
-                        
-                        
+
                     } else {
                         request.setAttribute("account", "false");
                         request.setAttribute("msg", "Invalid Password");

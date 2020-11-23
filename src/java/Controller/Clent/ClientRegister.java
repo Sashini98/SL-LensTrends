@@ -45,7 +45,7 @@ public class ClientRegister extends HttpServlet {
             ClientDao client = new ClientDaoImpl();
             id = client.getLastId();
 
-            String[] parts = id.split("c");
+            String[] parts = id.split("C");
             String row = parts[1];
             int lastId = Integer.parseInt(row);
             int newId = lastId + 1;

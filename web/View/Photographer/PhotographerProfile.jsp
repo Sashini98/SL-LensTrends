@@ -18,9 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/raw6dfn.css">
-        <!--        <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
-                <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-                <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>-->
+
 
         <title>Profile</title>
     </head>
@@ -35,7 +33,7 @@
 
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>
@@ -117,7 +115,7 @@
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <input type="file" accept=".jpg" id="up-image" style="display:none;" onchange="pressed();showPreviewOne(event);">
+                        <input type="file" id="up-image" style="display:none;" onchange="pressed();showPreviewOne(event);">
                         <label for="up-image">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>
@@ -141,7 +139,7 @@
                     </div>
                     <div class="upload"> 
                         <label>
-                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload')">Upload</a>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = ''">Upload</a>
                         </label>
                         <label id="reset">
                             <a href="#" type="button" id="remove-upload" onclick="myImgRemoveFunctionOne('remove-upload')">Reset</a>

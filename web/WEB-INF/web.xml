@@ -178,6 +178,8 @@
         <url-pattern>/View/User/ClientProfileUpdate.jsp</url-pattern>
         <url-pattern>/View/User/Cart.jsp</url-pattern>
         <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
+        <url-pattern>/View/Events/EventsPost.jsp</url-pattern>
+        <url-pattern>/View/Events/PastEvents.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClient</filter-name>
@@ -188,6 +190,7 @@
         <url-pattern>/View/Home.jsp</url-pattern>
         <url-pattern>/View/User/AdvancedSearch.jsp</url-pattern>
         <url-pattern>/View/User/PurchasePhoto.jsp</url-pattern>
+        <url-pattern>/View/Events/MainEventHome.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedPhotographer</filter-name>
@@ -206,6 +209,7 @@
         <url-pattern>/View/Photographer/PhotographerUploadPhoto.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerProfile.jsp</url-pattern>
         <url-pattern>/View/Photographer/PhotographerUpdate.jsp</url-pattern>
+        <url-pattern>/View/Events/ViewEvent.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>
@@ -215,6 +219,7 @@
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
+        <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
@@ -222,7 +227,6 @@
     </filter>
     <filter-mapping>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
-        <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
         <url-pattern>/View/Fourm/AskQues.jsp</url-pattern>
     </filter-mapping>
     <filter>

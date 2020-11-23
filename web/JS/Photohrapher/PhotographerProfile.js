@@ -15,13 +15,17 @@ btnup.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 spanup.onclick = function () {
     uploadmodal.style.display = "none";
+    document.getElementById("up-image").value = "";
+    uploadimage.innerHTML = "Choose file";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == uploadmodal) {
         uploadmodal.style.display = "none";
+        document.getElementById("up-image").value ="";
     }
+
 }
 
 
@@ -38,16 +42,16 @@ window.pressed = function () {
     {
         var theSplit = a.value.split('\\');
         uploadimage.innerHTML = theSplit[theSplit.length - 1];
-        
+//        document.getElementById('up-image').value = '';
     }
 };
 
 function upload(btn) {
 
     if (btn == "final-upload") {
-
         uploadmodal.style.display = "none";
         uploadimage.innerHTML = "Choose file";
+        document.getElementById("up-image").value = "";
     }
 }
 
