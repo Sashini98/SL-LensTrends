@@ -73,10 +73,10 @@
         <div class="b1">               
             <h2 style="text-align: center;">Deactivate Users</h2>
 
-            <div class="search" style="margin:auto;max-width:300px">
+            <div class="search" style="margin:auto;max-width:300px;font-family: 'Poppins', sans-serif; ">
                 <input id="deactivateUser" type="text" placeholder="Search">
-                <button onclick="viewResults()">Search</button><br>
-                <label id="deacError" style="color: red; display: none;">Invalid Email!</label>
+                <button onclick="viewResults()">Search</button><br><br>
+                <label id="deacError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label>
             </div>
 
             <br><br><br>
@@ -90,7 +90,7 @@
                 <th class="th"> OPTION </th>
                 </thead>
 
-                <tbody id="reportedUserTableBody">
+                <tbody id="reportedUserTableBody" style="font-family: 'Poppins', sans-serif;">
 
                 </tbody>
             </table><br><br>

@@ -53,7 +53,7 @@ function viewResults() {
                         var button = document.createElement("button");
                         button.innerHTML = "View";
                         button.style.backgroundColor = "blueviolet";
-                        button.className = "btn";
+                        button.className = "btn1";
                         button.id = user[i * 3];
 
                         td11.innerHTML = user[i * 3];
