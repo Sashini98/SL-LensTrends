@@ -22,7 +22,7 @@
                 <td><input type="text" name="upload" id="upload" disabled=""></td>
                 <td align="left">Reported By</td>
                 <td><input type="text" name="rep" id="report" disabled=""></td>
-                <td><button class="btn" id="view" onclick="location.href = 'ViewReportedQue.jsp'">View</button></td>
+                <td><button class="btn" id="view" onclick="show('reportedQuestion')">View</button></td>
             </tr>
         </table>
     </div>
@@ -37,7 +37,7 @@
                 <td><input type="text" name="upload" id="upload" disabled=""></td>
                 <td align="left">Reported By</td>
                 <td><input type="text" name="rep" id="report" disabled=""></td>
-                <td><button class="btn" id="view" onclick="location.href = 'ViewReportedQue.jsp'">View</button></td>
+                <td><button class="btn" id="view" onclick="show('reportedQuestion')">View</button></td>
             </tr>
         </table>
     </div>
@@ -52,7 +52,7 @@
                 <td><input type="text" name="upload" id="upload" disabled=""></td>
                 <td align="left">Reported By</td>
                 <td><input type="text" name="rep" id="report" disabled=""></td>
-                <td><button class="btn" id="view" onclick="location.href = 'ViewReportedQue.jsp'">View</button></td>
+                <td><button class="btn" id="view" onclick="show('reportedQuestion')">View</button></td>
             </tr>
         </table>
     </div>

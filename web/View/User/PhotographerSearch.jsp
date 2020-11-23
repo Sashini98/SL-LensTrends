@@ -79,11 +79,11 @@
                     <%
                         if (!logged.equals("nl")) {
                     %>
-                    <a href="../../LogOut?loc=fh" type="button"> Logout </a>
+                    <a href="../../LogOut?loc=ps" type="button"> Logout </a>
                     <%
                     } else {
                     %>
-                    <a href="../login.jsp?loc=fh" >Login</a> 
+                    <a href="../login.jsp?loc=ps" >Login</a> 
                     <%
                         }
                     %>

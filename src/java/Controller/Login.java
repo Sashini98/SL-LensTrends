@@ -91,6 +91,8 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/User/ClientProfileUpdate.jsp");
                             } else if (page.equals("cph")) {
                                 response.sendRedirect("View/User/AdvancedSearch.jsp");
+                            } else if (page.equals("ps")) {
+                                response.sendRedirect("View/User/PhotographerSearch.jsp");
                             } else if (page.equals("cpp")) {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
                             } else if (page.equals("fh")) {
@@ -135,36 +137,37 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
                             } else if (page.equals("fhbq")) {
                                 response.sendRedirect("View/Fourm/BrowseQn.jsp");
+                            }    else if (page.equals("ps")) {
+                                response.sendRedirect("View/User/PhotographerSearch.jsp");
+                            } else {
+                                response.sendRedirect("View/PhotographerHome.jsp");
+                            }
                             } else {
                                 System.out.println("awaa");
                                 response.sendRedirect("View/PhotographerHome.jsp");
                             }
+
                         } else {
-                            System.out.println("awaa");
-                            response.sendRedirect("View/PhotographerHome.jsp");
+                            request.setAttribute("account", "false");
+                            request.setAttribute("msg", "Invalid Password");
+                            request.getRequestDispatcher("View/login.jsp").forward(request, response);
                         }
 
-                    } else {
-                        request.setAttribute("account", "false");
-                        request.setAttribute("msg", "Invalid Password");
-                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
-                    }
-
-                } catch (Exception e) {
+                    }catch (Exception e) {
                     request.setAttribute("account", "false");
                     request.setAttribute("msg", "Invalid Password");
                     request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
 
-            } else {
+                }else {
                 request.setAttribute("account", "false");
                 request.setAttribute("msg", "Invalid Email");
                 request.getRequestDispatcher("/View/login.jsp").forward(request, response);
             }
 
-        } catch (SQLException ex) {
+            }catch (SQLException ex) {
             ex.printStackTrace();
-        } catch (NullPointerException e) {
+        }catch (NullPointerException e) {
 
             e.printStackTrace();
             //invalid username 
@@ -175,6 +178,6 @@ public class Login extends HttpServlet {
 //        System.out.println(getServletContext().getRealPath(""));
 //        request.getRequestDispatcher("/View/Photographer/PhotographerProfile.jsp").forward(request, response);
 //        response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
-    }
+        }
 
-}
+    }
