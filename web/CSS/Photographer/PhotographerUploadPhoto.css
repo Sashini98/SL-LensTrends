@@ -427,3 +427,26 @@ input:checked + label{
 .inreview-details .details-inreview h3 {
     font-family: 'Questrial', sans-serif;
 }
+
+.upload-review label a {
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    margin-left: 38%;
+    font-size: 123%;
+    background-color: #f48024;
+    color:white;
+    padding: 2% 3%;
+    margin-top: 110%;
+
+}
+
+#uploadimage{
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    font-size: 100%;
+    color:#f48024;
+    padding: 3% 15%;
+    border-radius: 10px;
+}

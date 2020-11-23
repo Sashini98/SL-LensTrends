@@ -64,7 +64,15 @@
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <a href="#" type="button" id="browseimage">Browse</a>
+                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressed();">
+                        <label for="up-image">
+                            <a type="file" id="upload-image"> Browse</a>
+                        </label> <br> <br>
+                        <label id="uploadimage">
+                            Choose file                            
+                        </label>
+
+                        <!--<a href="#" type="button" id="browseimage">Browse</a>-->
                         <div class="list">
                             <ul>
                                 <li>JPEG format only</li>
@@ -73,6 +81,11 @@
                                 <li>Maximum file size is 45MB</li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="upload-review"> 
+                        <label>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload')">Submit</a>
+                        </label>
                     </div>
                 </div>
 
@@ -186,7 +199,7 @@
                 <div class="keyword-area">
                     <textarea id="keyword-area" name="title" rows="5" cols="45" placeholder="Add Keywords (Max: 50 keywords) &#10separate with commas"></textarea>
                 </div>
-                
+
                 <div class="sale-album">
                     <p>Is it for Sale or 
                 </div>
