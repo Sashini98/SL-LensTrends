@@ -33,20 +33,21 @@
 
             <div class="passinfo">
                 <form action="../Login" method="POST">
-                    <fieldset class="cpass">
-                        <legend> Email Address </legend>
-                        <input type="text" id="email" name="email" placeholder="Email">
-                    </fieldset>
                     <fieldset class="rpass">
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pw" placeholder="Password">
                     </fieldset>
-
-
+                    <fieldset class="cpass">
+                        <legend> Confirm Password </legend>
+                        <input type="text" id="cpw" name="cpw" placeholder="Confirm Password">
+                    </fieldset>
+                </form>
+                <form action="login.jsp" method="POST">
                     <div class="change">
                         <button type="submit" id="login">Login</button>
                     </div>
-                </form><br><br><br>
+                </form>
+                <br><br><br>
                 <p style="font-size: 20px; font-family: 'Tenali Ramakrishna', sans-serif;">
                     Did you not receive an email?
                     <a href="ResetPwd.jsp" style="text-decoration: none; color: RGB(20,115,230);">
