@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <a href="../../LogOut?loc=ph" type="button"> Logout </a>
                 </div>
 
             </div>
