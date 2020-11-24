@@ -33,10 +33,10 @@ public class AdminRegister extends HttpServlet {
         String email = request.getParameter("email");
         String fname = request.getParameter("fname");
         String lname = request.getParameter("lname");
-        String mobile = request.getParameter("mnumber");
-        String address = request.getParameter("add");
+        String mobile = request.getParameter("mobile");
+        String address = request.getParameter("address");
         String city = request.getParameter("city");
-        String province = request.getParameter("pro");
+        String province = request.getParameter("province");
         String gen = request.getParameter("gender");
         String pw = request.getParameter("pass");
         String t = request.getParameter("type");
@@ -72,8 +72,10 @@ public class AdminRegister extends HttpServlet {
             a.setType(t);
                        
             admin.addAdmin(a);
+            response.sendRedirect("View/login.jsp");
 
         } catch (Exception e) {
+            response.sendRedirect("View/Home.jsp");
             System.out.println(e);
         }
 

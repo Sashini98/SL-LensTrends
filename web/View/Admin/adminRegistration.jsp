@@ -47,7 +47,7 @@
                         <legend> Email Address </legend>
                         <input type="text" id="email" name="email" onfocusout="emailValid()" >
                         <legend> First Name </legend>
-                        <input type="text" id="fname" name="name">
+                        <input type="text" id="fname" name="fname">
                         <legend> Last Name </legend>
                         <input type="text" id="lname" name="lname" >
                         <legend> Mobile Number </legend>
