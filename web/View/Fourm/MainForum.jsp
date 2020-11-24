@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
