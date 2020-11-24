@@ -15,7 +15,7 @@ btnup.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 spanup.onclick = function () {
     uploadmodal.style.display = "none";
-    document.getElementById("up-image").value = "";
+    document.getElementById('up-image').value= "";
     uploadimage.innerHTML = "Choose file";
 }
 
@@ -23,9 +23,10 @@ spanup.onclick = function () {
 window.onclick = function (event) {
     if (event.target == uploadmodal) {
         uploadmodal.style.display = "none";
-        document.getElementById("up-image").value ="";
+        document.getElementById("up-image").value = "null";
+        uploadimage.innerHTML = "Choose file";
     }
-
+    
 }
 
 
