@@ -31,7 +31,7 @@
                 </div>
                 <div class="answer">
                     <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i*6)+5) %> answers</a>
-                    <a href="#" type="button" id="myAns1">Answer Now</a>
+                    <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
                     <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
                 </div>
 

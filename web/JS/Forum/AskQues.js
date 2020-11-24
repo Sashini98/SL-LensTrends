@@ -29,10 +29,10 @@ function validateForm() {
         return false;
     }
 
-    var bd = document.getElementById("Questionbody");
-
-    if (trimfield(bd.value) == '') {
-        alert("Question must be filled out");
-        return false;
-    }
+//    var bd = document.getElementById("Questionbody");
+//
+//    if (trimfield(bd.value) == '') {
+//        alert("Question must be filled out");
+//        return false;
+//    }
 }

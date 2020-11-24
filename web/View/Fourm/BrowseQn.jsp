@@ -22,8 +22,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Questions</title>
     </head>
-    <!--<body style="background-color: #f7f6f9;" onload="view()">-->
-    <body style="background-color: #f7f6f9;">
+    <body style="background-color: #f7f6f9;" onload="view()">
+   
 
         <div class="fixedheader">  
 
@@ -77,9 +77,6 @@
                         %>
 
                     </ul>
-                </div>
-                <div class="searchInput">
-                    <input type="text" placeholder="Search">                   
                 </div>
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
@@ -153,7 +150,7 @@
 
             </div>  
             <div name="s" id="s">
-                <div class="questions">                
+<!--                <div class="questions">                
                     <h2>
                         FoV of One Plus 6T?
                     </h2>
@@ -487,7 +484,7 @@
                     </div>
 
 
-                </div>
+                </div>-->
             </div>
 
         </div>

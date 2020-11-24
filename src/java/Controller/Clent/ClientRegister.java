@@ -45,12 +45,12 @@ public class ClientRegister extends HttpServlet {
             ClientDao client = new ClientDaoImpl();
             id = client.getLastId();
 
-            String[] parts = id.split("C");
+            String[] parts = id.split("c");
             String row = parts[1];
             int lastId = Integer.parseInt(row);
             int newId = lastId + 1;
             String cid = Integer.toString(newId);
-            cid = "C" + cid;
+            cid = "c" + cid;
 
             Client c = new Client();
             c.setClientId(cid);
@@ -67,9 +67,12 @@ public class ClientRegister extends HttpServlet {
             
             
             client.addClient(c);
+            
+            response.sendRedirect("View/login.jsp");
 
         } catch (Exception e) {
             System.out.println(e);
+             response.sendRedirect("View/Home.jsp");
         }
 
     }

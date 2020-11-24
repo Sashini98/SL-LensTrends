@@ -10,6 +10,7 @@ import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -20,9 +21,13 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public void addPhotographer(Photographer photographer) throws SQLException {
+         Date d=photographer.getJoined_date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(d);
+        
         DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Plan_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus) "
                 + "VALUES ('" + photographer.getPhotographerId() + "', '" + photographer.getEmail() + "', '" + photographer.getPassword() + "', '" + photographer.getFname() + "',"
-                + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','" + photographer.getJoined_date() + "',"
+                + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','"+date+"',"
                 + " '" + photographer.getGenderId() + "', '" + photographer.getPlanId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
                 + " '" + photographer.getFielsOfdInterest()+ "', '" + photographer.getPostalCode()+ "', '" + photographer.getActiveStatus() + "' ) ");
     }
@@ -197,4 +202,19 @@ public class PhotographerDaoImp implements PhotographerDao {
         }
     }
 
+    @Override
+    public String getLastId() throws SQLException {
+       String id="";
+       ResultSet cid=DB.search("SELECT Photographer_Id as pid FROM photographer ORDER BY Photographer_Id DESC LIMIT 1; ");
+      
+       
+        if (cid.next()) {
+            id=cid.getString("pid");
+            return id;
+
+        } else {
+            return null;
+        }
+
+}
 }
