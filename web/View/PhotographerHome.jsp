@@ -21,7 +21,7 @@
     <body>
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="../CSS/Home.css"/>
+        <link type="text/css" rel="stylesheet" href="../CSS/PhotographerHome.css"/>
         <link type="text/css" rel="stylesheet" href="../CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap" rel="stylesheet">
