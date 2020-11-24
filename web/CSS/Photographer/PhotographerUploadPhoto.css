@@ -34,6 +34,10 @@
     border-bottom: 2px solid #d86f19;
 }
 
+#tosubmit {
+    color: #d86f19;
+    border-bottom: 2px solid #d86f19;
+}
 /*.content {
     display: flex;
     flex-wrap: wrap;
@@ -190,6 +194,7 @@ input:checked + label{
     resize: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
+    padding-left: 3%;
 }
 
 .title-area textarea:placeholder-shown{
@@ -211,6 +216,7 @@ input:checked + label{
     resize: none;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
+    padding-left: 3%;
 }
 
 .keyword-area textarea:placeholder-shown{
@@ -279,6 +285,7 @@ input:checked + label{
     padding: 0;
     margin-top: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color:#514f4f ;
 }
 
 .submit {
@@ -360,7 +367,7 @@ input:checked + label{
     font-family: 'Didact Gothic', sans-serif;
 }
 .upload-modal-content .upload-modal-image .list ul {
-        width: 150%;
+    width: 150%;
 }
 .upload-modal-content .upload-modal-image .list ul li{
     padding: 2%;
@@ -412,10 +419,10 @@ input:checked + label{
 
 .inreview-content .inreview-details {
     width: 28%;
-    display: flex;
-    position: relative;
-    flex-wrap: wrap;
-    flex: 1;
+    /*    display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex: 1;*/
     background-color: #fff;
     float: right;
     margin-right: 1%;
@@ -424,8 +431,26 @@ input:checked + label{
     margin-top: -13%;
 }
 
-.inreview-details .details-inreview h3 {
+.inreview-details .details-inreview-title h3 {
     font-family: 'Questrial', sans-serif;
+}
+
+
+.inreview-details .details-inreview-title p {
+    font-family: 'Questrial', sans-serif;
+}
+
+.inreview-details .details-inreview {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.inreview-details .details-inreview p {
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 0 0 2% 0;
+    margin: 0;
 }
 
 .upload-review label a {
@@ -449,4 +474,133 @@ input:checked + label{
     color:#f48024;
     padding: 3% 15%;
     border-radius: 10px;
+}
+
+.notaccepted-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex:1;*/
+}
+
+.notaccepted-content .image-box-rejected {
+    /*background-color: red;*/
+    width: 70%; 
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-left: 1%;*/
+    justify-content: center;
+    margin-top:2%;
+}
+
+#re5 {
+    transform:scale(1.1);
+    border: 5px solid  #ff6969;
+}
+
+.notaccepted-content .image-box-rejected img {
+    height: 200px;
+    width:200px;
+    margin-right: 5%;
+    padding:0;
+}
+
+.notaccepted-content .notaccepted-details {
+    width: 28%;
+    /*    display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex: 1;*/
+    background-color: #fff;
+    float: right;
+    margin-right: 1%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    padding: 1% 2%;
+    margin-top: -13%;
+}
+
+.notaccepted-details .details-notaccepted-title h3 {
+    font-family: 'Questrial', sans-serif;
+
+}
+
+
+.notaccepted-details .details-notaccepted-title p {
+    font-family: 'Questrial', sans-serif;
+    color:#9D9D9D;
+}
+
+.notaccepted-details .details-notaccepted {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.notaccepted-details .details-notaccepted p {
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 0 0 2% 0;
+    margin: 0;
+}
+
+.notaccepted-details .details-notaccepted span {
+    background-color: #ff6969;
+    color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    padding: 2% 5%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}
+
+.accepted-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex:1;*/
+}
+
+.accepted-content .image-box-accepted {
+    /*background-color: red;*/
+    width: 70%; 
+    display: flex;
+    flex-wrap: wrap;
+    /*margin-left: 1%;*/
+    justify-content: center;
+    margin-top:2%;
+}
+
+#re9 {
+    transform:scale(1.1);
+    border: 5px solid  #3eb80e;
+}
+
+.accepted-content .image-box-accepted img {
+    height: 200px;
+    width:200px;
+    margin-right: 5%;
+    padding:0;
+}
+
+.sale-album {
+    margin-left: 10%;
+    margin-top: 5%;
+}
+.sale-album p{
+    padding: 0;
+    margin-top: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.sale-album input {
+    margin-left: 4%;
+    outline: none;
+    /*    border-top: none;
+        border-left: none;
+        border-right: none;*/
+    border: 1px solid rgba(12, 18, 28, 0.12);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 100%;
+    border-radius: 5px;
+    padding-left: 3%;
 }
