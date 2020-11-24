@@ -67,7 +67,7 @@
 
                 <div  class="caption">
                     <span>
-                        New User  <a href="../View/User/UserRegistration.jsp">Create an account</a><br><br>
+                        New User  <a href="<%= request.getContextPath()%>/View/User/UserRegistration.jsp">Create an account</a><br><br>
                     </span>
                 </div>
                 <%
