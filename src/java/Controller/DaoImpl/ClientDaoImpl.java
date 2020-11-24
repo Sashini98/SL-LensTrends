@@ -149,8 +149,7 @@ public class ClientDaoImpl implements ClientDao {
     public String getLastId() throws SQLException {
        String id="";
        ResultSet cid=DB.search("SELECT Client_Id as cid FROM client ORDER BY Client_Id DESC LIMIT 1; ");
-      
-       
+           
         if (cid.next()) {
             id=cid.getString("cid");
             return id;

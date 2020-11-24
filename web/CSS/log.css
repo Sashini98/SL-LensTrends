@@ -3,16 +3,16 @@
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
-    width: 33%;
-    margin: auto;
+    /*width: 33%;*/
+    margin: auto;   
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 2px 2px 4px #000000;
     border-radius: 15px;
     background-color: white;
     /*display: none;*/
-    z-index: 1; 
-    position: fixed;
+    z-index: 2; 
+    /*position: fixed;*/
     margin-top: 150px;
 
 }
