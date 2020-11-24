@@ -29,7 +29,7 @@
                 <div class="headerul">
                     <ul>
 
-                       <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
@@ -39,7 +39,7 @@
 
                     </ul>
                 </div>
-               
+
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
                 </div>
@@ -63,7 +63,7 @@
                         <label for="name" class="label_name">
                         </label>
                     </div><br>
-                    
+
                     <div class="formContent">
                         <span class="content_name"> Event Type </span><br>
                         <input type="text" name="type" required/>
@@ -123,11 +123,11 @@
                             <button type="button" id="add">Add</button> 
                         </div>
                     </div>
-                    
+
                     <div id="area" style="display: none">
                         <span class="content_name" style="margin-left: 10%;">Photographers from : </span><br>
                         <div class="box">
-                        <select name="area">
+                            <select name="area">
                                 <option value="All Island">All Island</option>
                                 <option value="Central Province">Central Province</option>
                                 <option value="Western Province">Western Province</option>
@@ -154,15 +154,35 @@
             </div>       
 
         </div>
-        
+
         <div class="sidenav">
-  <button class="dropdown-btn">Dropdown
-  </button>
-  <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
-  </div>
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Step 1: Draft your event<img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown" class="dropdown-content">
+
+                <a><b>Summarize the event</b></a>
+                <ul>
+                    <li>Include details about your goal</li><br>
+                    <li>Describe expected and actual outcome</li><br>
+                    <li>Include any special requirements</li><br>
+                </ul>
+
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction1()" class="dropbtn">Step 2:Post your event <img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown1" class="dropdown-content">
+
+                <a><b>Write to us</b></a>
+                <ul>
+                    <li>Enter your event details</li><br>
+                    <li>Get expert in the field.</li><br>
+                </ul>
+
+            </div>
+            <img src="../../Resources/Img/eventpost.jpg" style="width: 100%; height: 40%; margin-top: 12%">
         </div>
 
 
