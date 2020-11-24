@@ -41,12 +41,14 @@
                     </fieldset>
                 </form>
                 <br><br><br>
-
+                
+                <form action="ResetPwd2.jsp" method="POST">
                 <div class="change" style=" width: 100%;">
                     <button type="submit" id="reset" style="width: 100%; margin-left: 5%; margin-right: 5%; float: none;">
                         Send Reset Link
                     </button>
-                </div> 
+                </div>
+                </form>
                 <br /><br /><br />
                 <hr />
                 <br />
