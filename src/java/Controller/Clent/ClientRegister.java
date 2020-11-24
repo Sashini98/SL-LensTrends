@@ -67,9 +67,12 @@ public class ClientRegister extends HttpServlet {
             
             
             client.addClient(c);
+            
+            response.sendRedirect("View/login.jsp");
 
         } catch (Exception e) {
             System.out.println(e);
+             response.sendRedirect("View/home.jsp");
         }
 
     }

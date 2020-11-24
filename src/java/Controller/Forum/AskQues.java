@@ -82,7 +82,7 @@ public class AskQues extends HttpServlet {
             e.printStackTrace();
             }
         }
-         response.sendRedirect("View/Fourm/MainForum.jsp");
+         response.sendRedirect("View/Fourm/BrowseQn.jsp");
         }
         catch(Exception e)
         {

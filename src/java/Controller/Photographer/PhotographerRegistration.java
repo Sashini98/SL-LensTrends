@@ -93,9 +93,11 @@ public class PhotographerRegistration extends HttpServlet {
             
             photo.addPhotographer(p);
             
-       
+            response.sendRedirect("View/login.jsp");
+
         } catch (Exception e) {
             System.out.println(e);
+             response.sendRedirect("View/home.jsp");
         }
     }
 
