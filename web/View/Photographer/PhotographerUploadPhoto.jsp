@@ -245,7 +245,7 @@
                 <div id="image2" style='display:none;'>
                     <div class="details-inreview-title">
                         <h3>Boat</h3> 
-                        <p>Submitted 16hrs days ago </p>
+                        <p>Submitted 16hrs ago </p>
                     </div>
                     <div class="details-inreview">                    
                         <p>Title : <span style='color: #9D9D9D;'>Boat</span> </p>
