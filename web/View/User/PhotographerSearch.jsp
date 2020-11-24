@@ -61,7 +61,7 @@
                             %>
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                         <%
@@ -76,7 +76,17 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <%
+                        if (!logged.equals("nl")) {
+                    %>
+                    <a href="../../LogOut?loc=ps" type="button"> Logout </a>
+                    <%
+                    } else {
+                    %>
+                    <a href="../login.jsp?loc=ps" >Login</a> 
+                    <%
+                        }
+                    %>
                 </div>
             </div>
         </div>

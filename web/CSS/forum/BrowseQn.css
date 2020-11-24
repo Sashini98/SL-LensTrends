@@ -138,25 +138,6 @@
     margin-left: -1%;
 }
 
-.side-box .home ul {
-    list-style: none;
-    margin-left: -10%;
-    margin-top: 20%;
-}
-
-.side-box .home ul li {
-    margin-bottom: 7%;
-}
-
-.side-box .home ul li a {
-    text-decoration: none;
-    font-family: 'Didact Gothic', sans-serif;
-    font-size: 100%;
-    margin-left:3%;
-    color: black;
-    text-decoration: none;
-}
-
 .filter p {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 120%;

@@ -80,11 +80,16 @@
                         <legend> Province </legend>
                         <input type="text" id="province" name="province" >
                         <legend> Gender </legend>
-                        <div><input type="radio" id="male" name="gender" value="male">
-                            <label for="male">Male</label>
-                            <input type="radio" id="female" name="gender" value="female">
-                            <label for="female">Female</label></div>
-                        
+                        <div class="filter-radio">
+                        <label class="container-radio"><h4>Male</h4>
+                            <input type="radio" id="male" name="gender" value="Male">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                        <label class="container-radio"><h4>Female</h4>
+                            <input type="radio" id="female" name="gender" value="Female">
+                            <span class="checkmark-radio"></span>
+                        </label>
+                    </div>
                     </fieldset>                        
 
                     <div class="change">

@@ -28,16 +28,16 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
@@ -50,7 +50,7 @@
 
         <div class="inside-header">
             <ul>
-                <li><a href="#" type="button"  autofocus id="tosubmit" onclick="navigation('tosubmit')">To Submit</a></li>
+                <li><a href="#" type="button" id="tosubmit" onclick="navigation('tosubmit')">To Submit</a></li>
                 <li><a href="#" type="button" id="inreview" onclick="navigation('inreview')">In Review</a></li>
                 <li><a href="#" type="button" id="notaccepted" onclick="navigation('notaccepted')">Not Accepted</a></li>
                 <li><a href="#" type="button" id="reviewed" onclick="navigation('reviewed')">Reviewed</a></li>
@@ -64,7 +64,15 @@
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <a href="#" type="button" id="browseimage">Browse</a>
+                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressed();">
+                        <label for="up-image">
+                            <a type="file" id="upload-image"> Browse</a>
+                        </label> <br> <br>
+                        <label id="uploadimage">
+                            Choose file                            
+                        </label>
+
+                        <!--<a href="#" type="button" id="browseimage">Browse</a>-->
                         <div class="list">
                             <ul>
                                 <li>JPEG format only</li>
@@ -73,6 +81,11 @@
                                 <li>Maximum file size is 45MB</li>
                             </ul>
                         </div>
+                    </div>
+                    <div class="upload-review"> 
+                        <label>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload')">Submit</a>
+                        </label>
                     </div>
                 </div>
 
@@ -186,9 +199,9 @@
                 <div class="keyword-area">
                     <textarea id="keyword-area" name="title" rows="5" cols="45" placeholder="Add Keywords (Max: 50 keywords) &#10separate with commas"></textarea>
                 </div>
-                
+
                 <div class="sale-album">
-                    <p>Is it for Sale or 
+                    <p>Price <span style="color:#9D9D9D; "> ($) </span><input type="text" id='price'> </p>                     
                 </div>
 
                 <div class="file-name">
@@ -208,17 +221,64 @@
 
             <div class="image-box">
 
-                <img src="../../Resources/Img/profile/p1.jpg" id="re1" onclick="clickimage('re1')">
-                <img src="../../Resources/Img/profile/p2.jpg" id="re2" onclick="clickimage('re2')" >
-                <img src="../../Resources/Img/profile/p3.jpg" id="re3" onclick="clickimage('re3')">
-                <img src="../../Resources/Img/profile/p4.jpg" id="re4" onclick="clickimage('re4')">
+                <img src="../../Resources/Img/profile/n1.jpg" id="re1" onclick="clickimage('re1')">
+                <img src="../../Resources/Img/profile/n2.jpg" id="re2" onclick="clickimage('re2')" >
+                <img src="../../Resources/Img/profile/n3.jpg" id="re3" onclick="clickimage('re3')">
+                <img src="../../Resources/Img/profile/n4.jpg" id="re4" onclick="clickimage('re4')">
 
             </div>
 
             <div class="inreview-details">
-                <div class="details-inreview">
-                    <h3>Glass with Red</h3> 
-                    <p>Submitted 4 days ago </p>
+                <div id="image1">
+                    <div class="details-inreview-title">
+                        <h3>Happy Faces</h3> 
+                        <p>Submitted 2 days ago </p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Happy Faces</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>People</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>365447169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_4237_1.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image2" style='display:none;'>
+                    <div class="details-inreview-title">
+                        <h3>Boat</h3> 
+                        <p>Submitted 16hrs ago </p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Boat</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>Transport</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>312447169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_4256.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image3" style='display:none;'>
+                    <div class="details-inreview-title">
+                        <h3>Children</h3> 
+                        <p>Submitted 5 days ago</p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Children</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>People</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>905892469</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_7847.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image4" style='display:none;'>
+                    <div class="details-inreview-title">
+                        <h3>Cultural Dance</h3> 
+                        <p>Submitted 7 days ago </p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Cultural Dance</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>Culture and Religion</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>890257169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_1725.jpg</span> </p>
+                    </div>
                 </div>
             </div>
 
@@ -228,13 +288,82 @@
 
         <div class="notaccepted-content" style="display:none;" id="notaccepted-content">
 
-            <p>athavan2</p>
+            <div class="image-box-rejected">
+
+                <img src="../../Resources/Img/profile/n5.jpg" id="re5" onclick="clickimage('re5')">
+                <img src="../../Resources/Img/profile/n6.jpg" id="re6" onclick="clickimage('re6')" >
+                <img src="../../Resources/Img/profile/n7.jpg" id="re7" onclick="clickimage('re7')">
+                <img src="../../Resources/Img/profile/n8.jpg" id="re8" onclick="clickimage('re8')">
+
+            </div>
+
+            <div class="notaccepted-details">
+                <div id="image5">
+                    <div class="details-notaccepted-title">
+                        <h3>White Tiger</h3> 
+                        <p>Submitted 2 days ago </p>
+                    </div>
+                    <div class="details-notaccepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>Image with Water Mark</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716797169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_8756.jpg</span> </p>
+
+                    </div>
+                </div>
+
+                <div id="image6" style='display:none;'>
+                    <div class="details-notaccepted-title">
+                        <h3>Lord Murugan</h3> 
+                        <p>Submitted on Oct 20 2020</p>
+                    </div>
+                    <div class="details-notaccepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>Image with Noise</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>312447169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_4256.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image7" style='display:none;'>
+                    <div class="details-notaccepted-title">
+                        <h3>Delft, Jaffna</h3> 
+                        <p>Submitted 15 days ago</p>
+                    </div>
+                    <div class="details-notaccepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>Low Resolution Image</span>
+                        <p>File ID(s): <span style='color: #9D9D9D;  background-color: transparent; padding: 0; margin: 0;'>905892469</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;  background-color: transparent; padding: 0; margin: 0;'>IGP_7847.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image8" style='display:none;'>
+                    <div class="details-notaccepted-title">
+                        <h3>Green Land</h3> 
+                        <p>Submitted on April 30 2020 </p>
+                    </div>
+                    <div class="details-notaccepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>No Release Submitted</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>800234169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>IGP_8925.jpg</span> </p>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
         <div class="accepted-content" style="display:none;" id="accepted-content">
 
-            <p>athavan3</p>
+            <div class="image-box-accepted">
+
+                <img src="../../Resources/Img/profile/n9.jpg" id="re9" onclick="clickimage('re9')">
+                <img src="../../Resources/Img/profile/n10.jpg" id="re10" onclick="clickimage('re10')" >
+                <img src="../../Resources/Img/profile/n11.jpg" id="re11" onclick="clickimage('re11')">
+                <img src="../../Resources/Img/profile/n12.jpg" id="re12" onclick="clickimage('re12')">
+
+            </div>
 
         </div>
 

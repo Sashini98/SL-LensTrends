@@ -19,6 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.typekit.net/raw6dfn.css">
 
+
         <title>Profile</title>
     </head>
     <body style="background-color: #f9f9f9;">
@@ -32,7 +33,7 @@
 
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>
@@ -44,7 +45,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../LogOut" type="button"> Logout </a>
+                    <a href="../../LogOut?loc=ph" type="button"> Logout </a>
                 </div>
 
             </div>
@@ -114,25 +115,37 @@
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressed()">
+                        <input type="file" id="up-image" style="display:none;" onchange="pressed();showPreviewOne(event);">
                         <label for="up-image">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>
                         <label id="uploadimage">
                             Choose file                            
                         </label>
-                        <div class="list">
-                            <ul>
-                                <li>JPEG format only</li>
-                                <li>Maximum file size is 10MB</li>
-                            </ul>
-                        </div>                        
+
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>JPEG format only</li>
+                            <li>Maximum file size is 10MB</li>
+                        </ul>
+                    </div> 
+                    <div  class="sample-image">
+                        <img id="sample" src="" style="display: none;" alt="yourimage"/>
+                    </div>
+                    <div class="title-input" id="title-input">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
                     </div>
                     <div class="upload"> 
                         <label>
-                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload')">Upload</a>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = ''">Upload</a>
+                        </label>
+                        <label id="reset">
+                            <a href="#" type="button" id="remove-upload" onclick="myImgRemoveFunctionOne('remove-upload')">Reset</a>
                         </label>
                     </div>
+
                 </div>
 
             </div>
@@ -141,6 +154,7 @@
 
         <div class="image-content">
             <div class="image">
+
                 <img src="../../Resources/Img/profile/p1.jpg">
                 <img src="../../Resources/Img/profile/p2.jpg">
                 <img src="../../Resources/Img/profile/p3.jpg">

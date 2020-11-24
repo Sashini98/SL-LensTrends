@@ -29,20 +29,23 @@
                 <div class="headerul">
                     <ul>
 
-                        <li><a href="#" type="button"> Forum </a></li>
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
 
                     </ul>
                 </div>
-               
+
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <a href="../../LogOut?loc=me" type="button"> Logout </a>
                 </div>
 
             </div>
@@ -60,7 +63,7 @@
                         <label for="name" class="label_name">
                         </label>
                     </div><br>
-                    
+
                     <div class="formContent">
                         <span class="content_name"> Event Type </span><br>
                         <input type="text" name="type" required/>
@@ -120,11 +123,11 @@
                             <button type="button" id="add">Add</button> 
                         </div>
                     </div>
-                    
+
                     <div id="area" style="display: none">
                         <span class="content_name" style="margin-left: 10%;">Photographers from : </span><br>
                         <div class="box">
-                        <select name="area">
+                            <select name="area">
                                 <option value="All Island">All Island</option>
                                 <option value="Central Province">Central Province</option>
                                 <option value="Western Province">Western Province</option>
@@ -147,12 +150,51 @@
                     <br><br><br>
 
 
-                </form>
-                <form>
-
-                </form>
+                </form> 
             </div>       
 
+        </div>
+
+        <div class="sidenav">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Step 1: Draft your event<img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown" class="dropdown-content">
+
+                <a><b>Summarize the event</b></a>
+                <ul>
+                    <li>Include details about your goal</li><br>
+                    <li>Describe expected and actual outcome</li><br>
+                    <li>Include any special requirements</li><br>
+                </ul>
+
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction1()" class="dropbtn">Step 2: Post your event <img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown1" class="dropdown-content">
+
+                <a><b>Write to us</b></a>
+                <ul>
+                    <li>Enter your event details</li><br>
+                    <li>Get expert in the field.</li><br>
+                </ul>
+
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction2()" class="dropbtn">Step 3:Share your views<img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown2" class="dropdown-content">
+
+                <a><b>Like your photographer</b></a>
+                <ul>
+                    <li>Share your experience.</li>
+                </ul>
+
+            </div>
+            <img src="../../Resources/Img/eventpost.jpg" style="width: 100%; height: 40%; margin-top: 12%">
         </div>
 
 

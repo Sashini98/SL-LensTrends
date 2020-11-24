@@ -90,7 +90,7 @@
                 <th class="th"> OPTION </th>
                 </thead>
 
-                <tbody id="reportedUserTableBody" style="font-family: 'Poppins', sans-serif;">
+                <tbody id="reportedUserTableBody" style="font-family: 'Poppins', sans-serif; text-align: center">
 
                 </tbody>
             </table><br><br>

@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-    System.out.println(p.getFname());
 %>
 <html>
 
@@ -32,9 +31,9 @@
                 <div class="headerul">
                     <ul>
 
-                          <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
                     </ul>
@@ -46,7 +45,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../LogOut" type="button"> Logout </a>
+                    <a href="../../LogOut?loc=ph" type="button"> Logout </a>
                 </div>
 
 
@@ -80,7 +79,7 @@
             <ul>
                 <li><a href="#accsec">Account</a></li> <br> <br>
                 <li><a href="#addsec">Address</a></li> <br> <br>
-                <li><a href="#taxsec">Tax Information</a></li> <br> <br>
+                <li><a href="#taxsec">Subscription</a></li> <br> <br>
                 <li><a href="#passsec">Password</a></li> <br> <br>
                 <li><a href="#delsec">Delete Account</a></li> <br> <br>
                 <li><a href="#connsec">Connected Account</a></li> <br> <br>
@@ -211,11 +210,11 @@
 
         <div class="tax-info" id="taxsec">
             <div class="heading">
-                <p>Tax Information</p>
+                <p>Subscription</p>
             </div> 
             <div class="edit">
-                <p> Fill up your tax form! You could avoid up to 30% withholding's on your revenue  </p>
-                <a href="#" type="button">Add Tax Information</a>
+                <p>Starts on Nov 12th 2020 End on Dec 12 2020</p>
+                <a href="#" type="button">Change Subscription</a>
             </div>
         </div>
 

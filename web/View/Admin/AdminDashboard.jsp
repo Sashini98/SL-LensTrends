@@ -22,15 +22,18 @@
         <link rel="stylesheet" href="https://use.typekit.net/mzc0rkn.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
 
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminDashboard.css" />
-        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminNotification.css" id="notificationCss"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminNotification.css"  id="notificationCss" />
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManagePhoto.css" id="managePhotoCss"/>
         <link rel="stylesheet" href="../../CSS/Admin/ApprovePhotos.css" id="photoapprovalCss">
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageForum.css" id="forumCss"/>
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ManageUser.css" id="userCss"/>
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminProfile.css" id="settingCss"/>
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/SubPlan.css" id="subCss"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ViewReportedPhotos.css" id="reportedphotoCss"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ViewUploadPhotos.css" id="uplodedPhotosCss"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/ViewReportedQue.css" id="reportedQuetionsCss"/>
 
+        <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminDashboard.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>            
         <title>Admin</title>
     </head>
@@ -107,8 +110,8 @@
         <div id="DashboardBody" class="DashboardBody" style="margin-left: 20%; width: 100%;" >
             <div class="summeryBody" style=" display: flex; flex-direction: column;">
                 <div class="Photos">
-                    <div class="heading">
-                        <h1>Photos</h1>
+                    <div class="heading" style="margin-left: 5px;">
+                        <h1 style="margin-left: 0px;">Photos</h1>
                     </div>
 
                     <div class="chart-photo" style=" ">
