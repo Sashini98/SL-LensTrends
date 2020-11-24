@@ -19,7 +19,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body  style="background-size:100%; background-image:url(<%= request.getContextPath()%>/Resources/Img/bg3.jpg);">
+    <body  style="background-size:100%; background-image:url(<%= request.getContextPath()%>/Resources/Img/bg-login2.jpg);">
    
 
         <!--        <video autoplay muted loop id="myVideo">
@@ -67,7 +67,7 @@
 
                 <div  class="caption">
                     <span>
-                        New User  <a href="../View/User/UserRegistration.jsp">Create an account</a><br><br>
+                        New User  <a href="<%= request.getContextPath()%>/View/User/UserRegistration.jsp">Create an account</a><br><br>
                     </span>
                 </div>
                 <%
@@ -103,7 +103,7 @@
                     </form>
                     <hr />
                     <span style="font-size: 18px; font-family: 'Tenali Ramakrishna', sans-serif;">
-                        Protected by reCAPTCHA and subject to the Google Privacy Policy and Terms of Services.
+                        Protected by reCAPTCHA and subject to the Google Privacy &nbsp;&nbsp;&nbsp; Policy and Terms of Services.
                     </span>
 
                     <%
