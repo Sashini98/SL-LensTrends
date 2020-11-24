@@ -171,7 +171,7 @@
             </div>
             
             <div class="dropdown">
-                <button onclick="myFunction1()" class="dropbtn">Step 2:Post your event <img src="../../Resources/Img/down.png"></button>
+                <button onclick="myFunction1()" class="dropbtn">Step 2: Post your event <img src="../../Resources/Img/down.png"></button>
             </div>        
             <div id="myDropdown1" class="dropdown-content">
 
@@ -179,6 +179,18 @@
                 <ul>
                     <li>Enter your event details</li><br>
                     <li>Get expert in the field.</li><br>
+                </ul>
+
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction2()" class="dropbtn">Step 3:Share your views<img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown2" class="dropdown-content">
+
+                <a><b>Like your photographer</b></a>
+                <ul>
+                    <li>Share your experience.</li>
                 </ul>
 
             </div>
