@@ -47,6 +47,15 @@ public class AdminDasboardHandler extends HttpServlet {
         }else if (tab.equals("subscription")) {
             request.getRequestDispatcher("/View/Admin/SubPlan.jsp").forward(request, response);
             
+        }else if (tab.equals("approvePhoto")) {
+            request.getRequestDispatcher("/View/Admin/ViewUploadPhotos.jsp").forward(request, response);
+            
+        }else if (tab.equals("reportedQuestion")) {
+            request.getRequestDispatcher("/View/Admin/ViewReportedQue.jsp").forward(request, response);
+            
+        }else if (tab.equals("reportedPhoto")) {
+            request.getRequestDispatcher("/View/Admin/ViewReportedPhotos.jsp").forward(request, response);
+            
         }
         
     }

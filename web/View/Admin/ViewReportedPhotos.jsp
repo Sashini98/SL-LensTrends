@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<!--<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
@@ -16,9 +16,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>View Reported Photos</title>
-    </head>
+    </head>-->
 
-    <body style="background-color: #f7f6f9;">
+    <div style="background-color: #f7f6f9; align-items: center;">
 
         <div class="box">
             <div class="details">
@@ -81,10 +81,10 @@
                     <td><input type="text" name="rform" id="form" disabled=""></td>
                 </tr>
                 <tr>
-                    <th colspan =2><button class="btn" id="approve">Clear</button></th>
+                    <th colspan =2><button  onclick="show('photomanage')" class="btn" id="approve">Back</button></th>
                     <th colspan =2><button class="btn" id="reject" style="background-color: #f44336">Remove</button></th>
                 </tr>
             </table>
         </div>
-    </body>
-</html>
+    </div>
+<!--</html>-->

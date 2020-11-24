@@ -16,7 +16,7 @@
             <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg">
             <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
             <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
-            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+            <button id="remove" type="submit" class="btn" onclick="show('reportedPhoto')" >View</button>
         </div>
     </div>
 
@@ -25,7 +25,7 @@
             <img src="../../Resources/Img/Gallery Sample Images/Photographer/julie-ricard-RmFX5bxHqCg-unsplash.jpg">
             <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
             <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
-            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+            <button id="remove" type="submit" class="btn" onclick="show('reportedPhoto')">View</button>
         </div>
     </div>
 
@@ -34,7 +34,7 @@
             <img src="../../Resources/Img/Gallery Sample Images/Photographer/mike-swigunski-zDDQZgZjFtM-unsplash.jpg">
             <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
             <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
-            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+            <button id="remove" type="submit" class="btn" onclick="show('reportedPhoto')">View</button>
         </div>
     </div>
 
@@ -43,7 +43,7 @@
             <img src="../../Resources/Img/Gallery Sample Images/Photographer/rowan-heuvel-qfiSDPQD9Ws-unsplash.jpg">
             <p>Uploaded By<input type="text" name="Submitted" id="Submit" disabled=""></p>
             <p>Reported By <input type="text" name="Submitted" id="Submit" disabled=""></p>
-            <button id="remove" type="submit" class="btn" onclick="location.href = 'ViewReportedPhotos.jsp'">View</button>
+            <button id="remove" type="submit" class="btn" onclick="show('reportedPhoto')">View</button>
         </div>
     </div>
 </div>

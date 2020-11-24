@@ -147,49 +147,64 @@ function logoutButtonBack() {
 function show(selectedTab) {
 
     if (selectedTab === 'notification') {
-        document.getElementById("notificationCss").disabled = false;
         document.getElementById("managePhotoCss").disabled = true;
         document.getElementById("photoapprovalCss").disabled = true;
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
         document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("notificationCss").disabled = false;
 
     } else if (selectedTab === 'photomanage') {
         document.getElementById("notificationCss").disabled = true;
-        document.getElementById("managePhotoCss").disabled = false;
         document.getElementById("photoapprovalCss").disabled = true;
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
         document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = false;
 
     } else if (selectedTab === 'photoapproval') {
         document.getElementById("notificationCss").disabled = true;
         document.getElementById("managePhotoCss").disabled = true;
-        document.getElementById("photoapprovalCss").disabled = false;
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
         document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = false;
 
     } else if (selectedTab === 'forum') {
         document.getElementById("notificationCss").disabled = true;
         document.getElementById("managePhotoCss").disabled = true;
         document.getElementById("photoapprovalCss").disabled = true;
-        document.getElementById("forumCss").disabled = false;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
         document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("forumCss").disabled = false;
 
     } else if (selectedTab === 'user') {
         document.getElementById("notificationCss").disabled = true;
         document.getElementById("managePhotoCss").disabled = true;
         document.getElementById("photoapprovalCss").disabled = true;
         document.getElementById("forumCss").disabled = true;
-        document.getElementById("userCss").disabled = false;
         document.getElementById("settingCss").disabled = true;
         document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("userCss").disabled = false;
 
     } else if (selectedTab === 'summary') {
 //        document.getElementById("notificationCss").disabled = true;
@@ -205,9 +220,12 @@ function show(selectedTab) {
         document.getElementById("photoapprovalCss").disabled = true;
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
-        document.getElementById("settingCss").disabled = false;
         document.getElementById("subCss").disabled = true;
-        
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("settingCss").disabled = false;
+
     } else if (selectedTab === 'subscription') {
         document.getElementById("notificationCss").disabled = true;
         document.getElementById("managePhotoCss").disabled = true;
@@ -215,7 +233,46 @@ function show(selectedTab) {
         document.getElementById("forumCss").disabled = true;
         document.getElementById("userCss").disabled = true;
         document.getElementById("settingCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
         document.getElementById("subCss").disabled = false;
+
+    } else if (selectedTab === 'reportedPhoto') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = false;
+        
+    } else if (selectedTab === 'approvePhoto') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = false;
+        
+    } else if (selectedTab === 'reportedQuestion') {
+        document.getElementById("notificationCss").disabled = true;
+        document.getElementById("managePhotoCss").disabled = true;
+        document.getElementById("photoapprovalCss").disabled = true;
+        document.getElementById("forumCss").disabled = true;
+        document.getElementById("userCss").disabled = true;
+        document.getElementById("settingCss").disabled = true;
+        document.getElementById("subCss").disabled = true;
+        document.getElementById("reportedphotoCss").disabled = true;
+        document.getElementById("uplodedPhotosCss").disabled = true;
+        document.getElementById("reportedQuetionsCss").disabled = false;
     }
 
     var request = new XMLHttpRequest();
@@ -237,8 +294,8 @@ function show(selectedTab) {
 
 }
 
-function logout(){
-    
+function logout() {
+
     window.location.assign("../../LogOut?loc=ch");
-    
+
 }

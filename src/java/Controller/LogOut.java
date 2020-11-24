@@ -31,6 +31,8 @@ public class LogOut extends HttpServlet {
                 response.sendRedirect("/GroupProject/View/PhotographerHome.jsp");
             } else if (location.equals("cph")) {
                 response.sendRedirect("/GroupProject/View/User/AdvancedSearch.jsp");
+            } else if (location.equals("ps")) {
+                response.sendRedirect("/GroupProject/View/User/PhotographerSearch.jsp");
             } else if (location.equals("cpp")) {
                 response.sendRedirect("View/User/PurchasePhoto.jsp");
             } else if (location.equals("fh")) {
