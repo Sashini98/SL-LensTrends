@@ -47,6 +47,7 @@ public class LogOut extends HttpServlet {
 
         } catch (Exception e) {
             e.printStackTrace();
+            response.sendRedirect("/GroupProject/View/Home.jsp");
         }
 
     }

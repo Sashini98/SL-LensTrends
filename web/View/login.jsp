@@ -32,7 +32,7 @@
         %>
 
 
-        <div style="display: flex; justify-content: center; z-index: 2;  position: fixed;">
+        <div style="display: flex; justify-content: center; align-items: center; z-index: 2; left: 40%; position: fixed;">
             <div class="logAccount" id="ReportPhoto">
                 <div class="logAccountHeader">
                     <h3>Login Account</h3>
@@ -57,7 +57,7 @@
 
         %>
 
-        <div  id="content" style="margin: 0; padding: 0; z-index: 2;  position: fixed;"> 
+        <div  id="content" style="margin: 0; padding: 0; z-index: 1;  position: fixed;"> 
             <div class="container" id="container"> 
 
                 <div class="logo">

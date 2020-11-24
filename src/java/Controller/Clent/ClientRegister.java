@@ -35,7 +35,7 @@ public class ClientRegister extends HttpServlet {
         String g = request.getParameter("gender");
         String pw = request.getParameter("pass");
 
-        if (g == "male") {
+        if (g.equalsIgnoreCase("male")) {
             gender = 1;
         } else {
             gender = 2;
@@ -50,7 +50,7 @@ public class ClientRegister extends HttpServlet {
             int lastId = Integer.parseInt(row);
             int newId = lastId + 1;
             String cid = Integer.toString(newId);
-            cid = "c" + cid;
+            cid = "C" + cid;
 
             Client c = new Client();
             c.setClientId(cid);
