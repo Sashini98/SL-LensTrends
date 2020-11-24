@@ -72,7 +72,7 @@
             </div>
         </div>
 
-        <div class="HeaderPart" id="HeaderPart" >
+        <div class="HeaderPart" id="HeaderPart">
             <div class="Welcome">
                 <h1 class="WelcomeText1">Welcome To SL-Lens Trends!</h1>
 
