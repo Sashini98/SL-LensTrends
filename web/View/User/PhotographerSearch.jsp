@@ -108,7 +108,33 @@
                     </div>
                     <div class="row"> 
                         <div class="column">
+                            <a href="../Photographer/UserViewPhotographerProfile.jsp" style="text-decoration: none;">
+                                <div class="profilebox">
+                                    <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
+                                        <div class="user-image">
+                                            <img src="../../Resources/Img/athavan.jpg">
+                                        </div>
+
+                                        <div class="username">
+                                            <p>Mr.ATHAVAN T </p>
+                                        </div>
+                                        <div class="location">
+                                            <p>Jaffna,Srilanka</p>
+                                            <p>www.Ikongraphy.lk</p>
+                                        </div>
+
+                                    </div>
+                                    <div class="bio"> 
+                                        <div>
+                                            <p>Wild life</p>
+                                            <p>Portraits</p>
+                                            <p>Landscape</p>
+                                            <p>Astro</p>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </a>
                             <div class="profilebox">
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -134,32 +160,7 @@
                                     </div>
                                 </div> 
                             </div>
-                            <div class="profilebox">
-                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
-                                    <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
-                                    </div>
-
-                                    <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
-                                    </div>
-                                    <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
-                                    </div>
-
-                                </div>
-                                <div class="bio"> 
-                                    <div>
-                                        <p>Wild life</p>
-                                        <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
-                                    </div>
-                                </div> 
-                            </div>
-                           
                         </div>
                         <div class="column">
                             <div class="profilebox">
@@ -212,7 +213,7 @@
                                     </div>
                                 </div> 
                             </div>
-                           
+
                         </div>
                         <div class="column">
                             <div class="profilebox">
@@ -240,7 +241,7 @@
                                     </div>
                                 </div> 
                             </div>
-                            
+
 
                         </div>  
                         <div class="column">
@@ -269,7 +270,7 @@
                                     </div>
                                 </div> 
                             </div>
-                           
+
                         </div>  
                     </div>
                 </div>

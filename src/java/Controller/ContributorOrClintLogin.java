@@ -61,6 +61,10 @@ public class ContributorOrClintLogin extends HttpServlet {
                                 response.sendRedirect("View/Fourm/BrowseQn.jsp");
                             } else if (page.equals("me")) {
                                 response.sendRedirect("View/Events/MainEventHomes.jsp");
+                            } else if (page.equals("cspp")) {
+                                response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
+                            } else if (page.equals("nh")) {
+                                response.sendRedirect("View/Notifications/notificationsHome.jsp");
                             } else {
                                 response.sendRedirect("View/Home.jsp");
                             }
@@ -100,6 +104,10 @@ public class ContributorOrClintLogin extends HttpServlet {
                                 response.sendRedirect("View/Fourm/BrowseQn.jsp");
                             } else if (page.equals("ps")) {
                                 response.sendRedirect("View/User/PhotographerSearch.jsp");
+                            } else if (page.equals("cspp")) {
+                                response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
+                            } else if (page.equals("nh")) {
+                                response.sendRedirect("View/Notifications/notificationsHome.jsp");
                             } else {
                                 response.sendRedirect("View/PhotographerHome.jsp");
                             }

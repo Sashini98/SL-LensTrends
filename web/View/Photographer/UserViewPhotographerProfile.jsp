@@ -3,99 +3,217 @@
     Created on : Oct 23, 2020, 6:10:09 PM
     Author     : kesh
 --%>
+<%
+    String logged = (String) request.getAttribute("loggedAs");
+%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link type="text/css" rel="stylesheet" href="../../CSS/Photographer/UserViewPhotographerProfile.css" />
-        <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet">  
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <div class="content">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
+        <link type="text/css" rel="stylesheet" href="../../CSS/Photographer/PhotographerProfile.css">
+        <link type="text/css" rel="stylesheet" href="../../CSS/header.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/raw6dfn.css">
 
- <div class="fixedheader">  
+
+        <title>Profile</title>
+    </head>
+    <body style="background-color: #f9f9f9;">
+        <div class="fixedheader">  
             <div class="pageheader">
+                <%
+                    if (logged.equals("client") || logged.equals("nl")) {
+                %>
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                    } else if (logged.equals("photographer")) {
+                    %>
+
                 <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                        }
+                    %>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
                     <ul>
 
-                       <li><a href="../Events/EventHome.jsp" type="button"> Events </a></li>
-                        <li><a href="../User/AdvancedSearch.jsp" type="button"> Album </a></li>
-                        <li><a href="../User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
-                        <li><a href="../Fourm/forum home.jsp" type="button"> Forum </a></li>
-                        <li><a href="../Notifications/notificationsHome.jsp" type="button"> Notifications </a></li>
+                        <%
+                            if (logged.equals("client") || logged.equals("nl")) {
+                        %>
 
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
+                            <%
+                                if (logged.equals("client")) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            } else if (logged.equals("photographer")) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
+
+                        <%
+                            }
+                        %>
                     </ul>
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> LogOut </a>
-                </div>
-            </div>
-                      <div class="profile-header">
-                    <div class="user-detail">
-                        <div class="user-image">
-                            <img src="../../Resources/Img/athavan.jpg">
-                        </div>
-                        <div class="user-data">
-                            <h2>Theivendram Athavan</h2>
-                            <span class="post-label">Wildlife</span>
-                            <span class="post-label">Portraits</span>
-                            <span class="post-label">Fashion</span>
-                            <span class="post-label">Landscape</span>
-                            <p>Founder <strong>IkonGraphy</strong><br>
-                                <i>Jaffna, Srilanka</i> 
-                            </p>
-                        </div>
-                        <div class="social-icons">
-                            <img src="../../Resources/Img/facebook.png">
-                            <img src="../../Resources/Img/instagram.png">
-                            <img src="../../Resources/Img/twitter.png">
-                            <img src="../../Resources/Img/google.png">                       
-                            <br> <br>
-                        </div>                                
-                    </div>				
+                   <%
+                        if (!logged.equals("nl")) {
+                    %>
+                    <a href="../../LogOut?loc=cspp" type="button"> Logout </a>
+                    <%
+                    } else {
+                    %>
+                    <a href="../login.jsp?loc=cspp" >Login</a> 
+                    <%
+                        }
+                    %>
                 </div>
 
             </div>
 
-            <div class="photographBody">
-                <div class="photographs" style="">
-                    <div class="row"> 
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%">
+        </div>
 
-                        </div>  
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%">
-                        </div>  
-                    </div>
+        <div class="profilebox">
+            <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                <div class="user-image">
+                    <img src="../../Resources/Img/athavan.jpg">
                 </div>
+
+                <div class="username">
+                    <p>Mr.ATHAVAN T </p>
+                </div>
+                <div class="location">
+                    <p>Jaffna,Srilanka</p>
+                    <p>www.Ikongraphy.lk</p>
+                </div>
+
+            </div>
+            <div class="bio">
+                <h3>ABOUT ME</h3>
+                <p>My name is Athavan, I come from Jaffna (now based in Colombo). I feel passionate about Wild life and Astro Photography. Obsessed with PHOTOGRAPHY. <br> </p>
+                <ul>
+                    <li>Wild life</li>
+                    <li>Portraits</li>
+                    <li>Landscape</li>
+                    <li>Astro</li>
+                </ul>
+            </div> 
+            <div class="count">
+                <table>
+                    <tr>
+                        <th>Rating</th>
+                        <th id="color">68%</th>
+                    </tr>
+                    <tr>
+                        <th>Uploads</th>
+                        <th id="color">68</th>
+                    </tr>
+                    <tr>
+                        <th>Completed Events</th>
+                        <th id="color">20</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="editprofile">
+                <a type="button" href=""> Rate Photographer </a>
+            </div>
+
+            <div class="member">
+                <p>MEMBER SINCE: OCTOBER 31,2020</p>
             </div>
         </div>
+
+        <div class="welcome-note">
+            <img src="../../Resources/Img/bg.svg">
+            <p>Welcome to my Collections !</p>
+
+            <div id="upload-modal" class="upload-modal">
+
+                <!-- Upload Modal content -->
+                <div class="upload-modal-content">
+                    <span class="upload-close">&times;</span>
+                    <div class="upload-modal-image">
+                        <img src="../../Resources/Img/upload.svg">
+                        <input type="file" id="up-image" style="display:none;" onchange="pressed();showPreviewOne(event);">
+                        <label for="up-image">
+                            <a type="file" id="upload-image"> Browse</a>
+                        </label> <br> <br>
+                        <label id="uploadimage">
+                            Choose file                            
+                        </label>
+
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>JPEG format only</li>
+                            <li>Maximum file size is 10MB</li>
+                        </ul>
+                    </div> 
+                    <div  class="sample-image">
+                        <img id="sample" src="" style="display: none;" alt="yourimage"/>
+                    </div>
+                    <div class="title-input" id="title-input">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title">
+                    </div>
+                    <div class="upload"> 
+                        <label>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = ''">Upload</a>
+                        </label>
+                        <label id="reset">
+                            <a href="#" type="button" id="remove-upload" onclick="myImgRemoveFunctionOne('remove-upload')">Reset</a>
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="image-content">
+            <div class="image">
+
+                <img src="../../Resources/Img/profile/p1.jpg">
+                <img src="../../Resources/Img/profile/p2.jpg">
+                <img src="../../Resources/Img/profile/p3.jpg">
+                <img src="../../Resources/Img/profile/p4.jpg">
+                <img src="../../Resources/Img/profile/p5.jpg">
+                <img src="../../Resources/Img/profile/p6.jpg">
+                <img src="../../Resources/Img/profile/l1.jpg">
+                <img src="../../Resources/Img/profile/l2.jpg">
+                <img src="../../Resources/Img/profile/l3.jpg">
+                <img src="../../Resources/Img/profile/l4.jpg">
+                <img src="../../Resources/Img/profile/l5.jpg">
+                <img src="../../Resources/Img/profile/l6.jpg">
+
+            </div>
+        </div>
+
+        <script  type="text/javascript" src="../../JS/Photohrapher/PhotographerProfile.js"></script>
     </body>
 </html>

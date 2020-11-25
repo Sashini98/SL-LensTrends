@@ -101,6 +101,10 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/Fourm/BrowseQn.jsp");
                             } else if (page.equals("me")) {
                                 response.sendRedirect("View/Events/MainEventHomes.jsp");
+                            } else if (page.equals("cspp")) {
+                                response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
+                            } else if (page.equals("nh")) {
+                                response.sendRedirect("View/Notifications/notificationsHome.jsp");
                             } else {
                                 response.sendRedirect("View/Home.jsp");
                             }
@@ -137,36 +141,40 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
                             } else if (page.equals("fhbq")) {
                                 response.sendRedirect("View/Fourm/BrowseQn.jsp");
-                            }    else if (page.equals("ps")) {
+                            } else if (page.equals("ps")) {
                                 response.sendRedirect("View/User/PhotographerSearch.jsp");
+                            } else if (page.equals("cspp")) {
+                                response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
+                            } else if (page.equals("nh")) {
+                                response.sendRedirect("View/Notifications/notificationsHome.jsp");
                             } else {
                                 response.sendRedirect("View/PhotographerHome.jsp");
                             }
-                            } else {
-                                response.sendRedirect("View/PhotographerHome.jsp");
-                            }
-
                         } else {
-                            request.setAttribute("account", "false");
-                            request.setAttribute("msg", "Invalid Password");
-                            request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                            response.sendRedirect("View/PhotographerHome.jsp");
                         }
 
-                    }catch (Exception e) {
+                    } else {
+                        request.setAttribute("account", "false");
+                        request.setAttribute("msg", "Invalid Password");
+                        request.getRequestDispatcher("View/login.jsp").forward(request, response);
+                    }
+
+                } catch (Exception e) {
                     request.setAttribute("account", "false");
                     request.setAttribute("msg", "Invalid Password");
                     request.getRequestDispatcher("/View/login.jsp").forward(request, response);
                 }
 
-                }else {
+            } else {
                 request.setAttribute("account", "false");
                 request.setAttribute("msg", "Invalid Email");
                 request.getRequestDispatcher("/View/login.jsp").forward(request, response);
             }
 
-            }catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
-        }catch (NullPointerException e) {
+        } catch (NullPointerException e) {
 
             e.printStackTrace();
             //invalid username 
@@ -177,6 +185,6 @@ public class Login extends HttpServlet {
 //        System.out.println(getServletContext().getRealPath(""));
 //        request.getRequestDispatcher("/View/Photographer/PhotographerProfile.jsp").forward(request, response);
 //        response.sendRedirect("View/Photographer/PhotographerProfile.jsp");
-        }
-
     }
+
+}

@@ -3,7 +3,9 @@
     Created on : Nov 2, 2020, 10:16:16 AM
     Author     : Sashini Shihara
 --%>
-
+<%
+    String logged = (String) request.getAttribute("loggedAs");
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,55 +25,85 @@
         <div class="fixedheader">  
 
             <div class="pageheader">
-
+                <%
+                    if (logged.equals("client") || logged.equals("nl")) {
+                %>
                 <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                    } else if (logged.equals("photographer")) {
+                    %>
+
+                <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                    <%
+                        }
+                    %>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
                     <ul>
+                        <%
+                            if (logged.equals("client") || logged.equals("nl")) {
+                        %>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
+                            <%
+                                if (logged.equals("client")) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/ClientProfileUpdate.jsp" type="button"> Profile </a></li>
+                            <%
+                                }
+                            } else if (logged.equals("photographer")) {
+                            %>
+                        <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerUploadPhoto.jsp" type="button"> Upload </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
 
+                        <%
+                            }
+                        %>
                     </ul>
                 </div>
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
                 </div>
 
                 <div class="logout">
-                    <a href="#" type="button"> Logout </a>
+                    <%
+                        if (!logged.equals("nl")) {
+                    %>
+                    <a href="../../LogOut?loc=nh" type="button"> Logout </a>
+                    <%
+                    } else {
+                    %>
+                    <a href="../login.jsp?loc=nh" >Login</a> 
+                    <%
+                        }
+                    %>
                 </div>
 
             </div>
 
         </div>
         <div class="main-content">
-            <div class="notifications">                
-                <h2>Annual Get together</h2>
-                <p>Event Date:  </p>
-                <p>Event venue: Royal Hotel, New Mary Street, Colombo 12.</p>
-                <p>Estimate Budget:</p>
-                <span id="time">2020/11/02</span>   
-                <div class="updown">
-                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                    <span id="up">Mark as read</span>
+            <a href="../Events/ViewEvent.jsp" style="text-decoration: none; color: black;">
+                <div class="notifications">                
+                    <h2>Annual Get together</h2>
+                    <p>Event Date:  </p>
+                    <p>Event venue: Royal Hotel, New Mary Street, Colombo 12.</p>
+                    <p>Estimate Budget:</p>
+                    <span id="time">2020/11/02</span>   
+                    <div class="updown">
+                        <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                        <span id="up">Mark as read</span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="notifications">                
-                <h2>Annual Get together</h2>
-                <p>Event Date:  </p>
-                <p>Event venue: Royal Hotel, New Mary Street, Colombo 12.</p>
-                <p>Estimate Budget:</p>
-                <span id="time">2020/11/02</span>   
-                <div class="updown">
-                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                    <span id="up">Mark as read</span>
-                </div>
-            </div>
-            
+            </a>
             <div class="notifications">                
                 <h2>Annual Get together</h2>
                 <p>Event Date:  </p>
@@ -84,7 +116,19 @@
                 </div>
             </div>
 
-            
+            <div class="notifications">                
+                <h2>Annual Get together</h2>
+                <p>Event Date:  </p>
+                <p>Event venue: Royal Hotel, New Mary Street, Colombo 12.</p>
+                <p>Estimate Budget:</p>
+                <span id="time">2020/11/02</span>   
+                <div class="updown">
+                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                    <span id="up">Mark as read</span>
+                </div>
+            </div>
+
+
 
 
         </div>

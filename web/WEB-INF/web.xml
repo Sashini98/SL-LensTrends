@@ -218,6 +218,8 @@
     <filter-mapping>
         <filter-name>FilterLoggedClientOrPhotographer</filter-name>
         <url-pattern>/View/User/PhotographerSearch.jsp</url-pattern>
+        <url-pattern>/View/Photographer/UserViewPhotographerProfile.jsp</url-pattern>
+        <url-pattern>/View/Notifications/notificationsHome.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
     </filter-mapping>

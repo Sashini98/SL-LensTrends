@@ -70,7 +70,7 @@
             </div>
             <div class="bio">
                 <h3>ABOUT ME</h3>
-                <p>My name is Daria, I come from Ukraine (now based in Amsterdam). I feel passionate about internet and mobile apps. Obsessed with data & metrics gathering.  <br> </p>
+                <p>My name is Athavan, I come from Jaffna (now based in Colombo). I feel passionate about Wild life and Astro Photography. Obsessed with PHOTOGRAPHY.  <br> </p>
                 <ul>
                     <li>Wild life</li>
                     <li>Portraits</li>
