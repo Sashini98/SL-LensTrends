@@ -18,6 +18,11 @@
 
 %>
 
+<br><div class="searchInput">
+                        <input type="text" placeholder="Search for Questions" >      
+                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
+                    </div>
+
 <div class="questions">                
                 <h2><%= s.get(i*6)%></h2>
                 <p><%= s.get((i*6)+1) %></p>

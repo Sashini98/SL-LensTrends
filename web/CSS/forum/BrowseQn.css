@@ -488,3 +488,36 @@
     border-collapse: separate; 
     margin-right: 5%;
 }
+
+.searchInput {
+    margin-top: -17%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 50%;
+    flex-wrap: wrap;
+    margin-left: -20%;
+    padding-right: 10%;
+}
+
+
+.searchInput input {
+    border:none;
+    background:white;
+    border-radius: 40px;
+    outline:none; 
+    color: black;
+    font-size: 18px;
+    /*transition:1s;*/
+    line-height: 28px;  
+    font-family: 'Source Sans Pro', sans-serif;
+    /*width: 100%;*/
+    flex: 0.8;
+    padding: 0% 20px;
+    width: 380%;
+
+}
+
+.searchInput input:focus {
+    box-shadow: 0.1px 0.1px 5px #cc7106;
+}

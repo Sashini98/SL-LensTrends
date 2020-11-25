@@ -225,14 +225,21 @@ if (logged) {
 
                 </div>
                 <div>
-                    <div class="about-heading" class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
-                        <h4>Our Mission</h4>
-                    </div>
-                    <div class="about-body" class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
-                        <p class="text-muted">
-                            Our mission is 
-                        </p>
-                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: flex-end;">
+                            <h4>Our Mission</h4>
+                        </div>
+                        <div  style="display: flex; flex-direction: column; align-items: flex-end; font-size: 14px;">
+                            <p>
+                                To create a vibrant community of successful 
+                            </p>
+                            <p>
+                                professional SriLankan photographers and make 
+                            </p>
+                            <p>
+                                it easy for clients to access their work.
+                            </p>
+                            
+                        </div>
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
