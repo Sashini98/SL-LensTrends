@@ -35,7 +35,7 @@
 
         <link type="text/css" rel="stylesheet" href="../../CSS/Admin/AdminDashboard.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>            
-        <title>Admin</title>
+        <title>Administrator</title>
     </head>
     <body style="background-color: #f8f9fb;">
 
