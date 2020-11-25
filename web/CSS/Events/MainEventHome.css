@@ -118,7 +118,7 @@ body {
 
 
 .top {
-    background-image: url('../../Resources/Img/bgforum.svg');     
+    background-image: url('../../Resources/Img/bgevent.svg');     
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -192,7 +192,7 @@ body {
     text-decoration: none;
     font-family: 'Didact Gothic', sans-serif;
     font-weight: 900;
-    color: #f7c947;
+    color: #415daa;
     font-size:100%;
 }
 

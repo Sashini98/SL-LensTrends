@@ -121,7 +121,7 @@ body {
     background-image: url('../../Resources/Img/bgforum.svg');     
     background-repeat: no-repeat;
     background-size: cover;
-
+    /*background: 100%;*/
     margin-top: 90px;
     display: flex;
     justify-content: center;
@@ -130,7 +130,7 @@ body {
     height: 450px;
     width: 100%;
     /*padding-top: 15%;*/
-    text-align: center;
+    /*text-align: center;*/
 
 }
 
