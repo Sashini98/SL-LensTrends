@@ -21,7 +21,7 @@
 
 
     </head>
-    <body style="background-color: #f7f6f9;" onload="view()">
+    <body style="background-color: #eff0f1; background-image: url(../../Resources/Img/eventanime.svg);background-repeat: no-repeat;" onload="view()">
 
         <div class="fixedheader">  
 
@@ -54,17 +54,63 @@
             </div>
 
         </div>
-
+<!--        <div class="bg-image">
+            <img src="../../Resources/Img/eventanime.svg">
+        </div>-->
+        <h2>Past Events</h2>
         <div class="main-content">
-            
+
             <div class="events">                
-                <h2>Past Event</h2>
-                <p>Event Date:  </p>
-                <p>Event venue: Royal Hotel, New Mary Street, Colombo 12.</p>
-                <p>Estimate Budget:</p>
+
+                <p style="font-weight: bold;">Event Date: <span style="color: #514f4f; font-weight: normal; margin-left: 6%;">12 Nov 2020</span></p>
+                <p style="font-weight: bold;">Event venue: <span style="color: #514f4f; font-weight: normal; margin-left: 5%;">Royal Hotel, New Mary Street, Colombo 12.</span></p>
+                <p style="font-weight: bold;">Posted By: <span style="color: #514f4f; font-weight: normal; margin-left: 7%;">Aaketk18</span></p>
+                <!--<p style="font-weight: bold;">Estimate Budget:</p>-->
                 <span id="time">2020/11/02</span>   
             </div>
-           
+
+
+        </div>
+
+        <div class="main-content">
+
+            <div class="events">                
+
+                <p style="font-weight: bold;">Event Date: <span style="color: #514f4f; font-weight: normal; margin-left: 6%;">12 Dec 2019</span></p>
+                <p style="font-weight: bold;">Event venue: <span style="color: #514f4f; font-weight: normal; margin-left: 5%;">Station Road, Kokuvil, Jaffna</span></p>
+                <p style="font-weight: bold;">Posted By: <span style="color: #514f4f; font-weight: normal; margin-left: 7%;">kesh18</span></p>
+                <!--<p style="font-weight: bold;">Estimate Budget:</p>-->
+                <span id="time">2020/09/07</span>   
+            </div>
+
+
+        </div>
+
+        <div class="main-content">
+
+            <div class="events">                
+
+                <p style="font-weight: bold;">Event Date: <span style="color: #514f4f; font-weight: normal; margin-left: 6%;">2 March 2019</span></p>
+                <p style="font-weight: bold;">Event venue: <span style="color: #514f4f; font-weight: normal; margin-left: 5%;">Manning place, New Mary Street, Colombo 12.</span></p>
+                <p style="font-weight: bold;">Posted By: <span style="color: #514f4f; font-weight: normal; margin-left: 7%;">Shihara</span></p>
+                <!--<p style="font-weight: bold;">Estimate Budget:</p>-->
+                <span id="time">2020/09/02</span>   
+            </div>
+
+
+        </div>
+
+        <div class="main-content">
+
+            <div class="events">                
+
+                <p style="font-weight: bold;">Event Date: <span style="color: #514f4f; font-weight: normal; margin-left: 6%;">4 April 2020</span></p>
+                <p style="font-weight: bold;">Event venue: <span style="color: #514f4f; font-weight: normal; margin-left: 5%;">Arthusa lane, Wellawate, Colombo 12.</span></p>
+                <p style="font-weight: bold;">Posted By: <span style="color: #514f4f; font-weight: normal; margin-left: 7%;">Madhusha</span></p>
+                <!--<p style="font-weight: bold;">Estimate Budget:</p>-->
+                <span id="time">2020/05/02</span>   
+            </div>
+
 
         </div>
 
