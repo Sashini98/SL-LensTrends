@@ -1,0 +1,148 @@
+.container {
+    /*margin: 4% 5% 0 55%;*/ 
+    /*border-radius: 17px;*/
+    background-color: #fff;
+    height: 600px;
+    width: 400px;
+    padding-left:2%;
+    padding-right:2%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    /*float: right;*/
+    margin-left: 60%;
+    margin-top: 5%;
+    
+}
+
+.container h1{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #323232;
+    margin-top: 2%;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.container .logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.caption{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+
+}
+.caption span{
+
+    font-size: 23px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+
+
+}
+
+.caption a{
+    color: RGB(20,115,230);
+    text-decoration: none;
+
+}
+
+
+
+#email{
+    color: #333;
+    white-space: nowrap;
+}
+
+
+
+.passinfo .cpass{
+    border: none;
+}
+
+.passinfo input {
+    outline: none;
+}
+
+.passinfo .cpass legend{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 22px;
+}
+
+.passinfo .cpass input{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.passinfo .rpass{
+    border: none;
+    margin-top: 2%;
+}
+
+.passinfo .rpass legend{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 22px;
+    margin-top: 3%;
+}
+
+.passinfo .rpass input{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.passinfo span {
+    padding-left: 5%;
+}
+
+.change{
+    float: right;
+    margin-right: 20px;
+}
+
+.change button{
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 23px;
+    padding: 0px 25px;
+    padding-top: 5px;
+    cursor: pointer;
+    border-radius: 22px;
+    color: white;
+    background-color: #008CBA;
+    text-align: center;
+    border: none;
+}
+.change button:hover{
+    box-shadow: 0 7px 8px 0 rgba(0,0,0,0),0 9px 25px 0 rgba(0,0,0,0.1);
+    background-color: #006CBE;
+    color: white;  
+}
+
+button:focus {
+    outline:0;
+}
+
+input:placeholder-shown {
+    font-style: italic;
+}
+
