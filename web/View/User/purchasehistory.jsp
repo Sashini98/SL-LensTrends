@@ -44,62 +44,53 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <a href="../../LogOut?loc=ch" type="button"> Log Out </a>
                 </div>
             </div>
         </div>
-        <br><br><br><br><br>
+        <br><br><br><br>
 
 
-        <div class="container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Column 1</th>
-                        <th>Column 2</th>
-                        <th>Column 3</th>
-                        <th>Column 4</th>
-                        <th>Column 5</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                    </tr>
-                    <tr>
-                        <td>Cell 1</td>
-                        <td>Cell 2</td>
-                        <td>Cell 3</td>
-                        <td>Cell 4</td>
-                        <td>Cell 5</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="managephotoBody" style="background-color: #f7f6f9;">
+            <div class="heading">
+                <h1> Purchase History</h1>
+            </div>
+            <div class="photos">
+                <div class="details">
+                    <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg">
+                    <p>Purchased Date<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <p>Price <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <button id="remove" type="submit" class="btn" >View</button>
+                </div>
+            </div>
+
+            <div class="photos">
+                <div class="details">
+                    <img src="../../Resources/Img/Gallery Sample Images/Photographer/julie-ricard-RmFX5bxHqCg-unsplash.jpg">
+                    <p>Purchased Date<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <p>Price <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <button id="remove" type="submit" class="btn">View</button>
+                </div>
+            </div>
+
+            <div class="photos">
+                <div class="details">
+                    <img src="../../Resources/Img/Gallery Sample Images/Photographer/mike-swigunski-zDDQZgZjFtM-unsplash.jpg">
+                    <p>Purchased Date<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <p>Price <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <button id="remove" type="submit" class="btn">View</button>
+                </div>
+            </div>
+
+            <div class="photos">
+                <div class="details">
+                    <img src="../../Resources/Img/Gallery Sample Images/Photographer/rowan-heuvel-qfiSDPQD9Ws-unsplash.jpg">
+                    <p>Purchased Date<input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <p>Price <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <button id="remove" type="submit" class="btn">View</button>
+                </div>
+            </div>
         </div>
+
     </body>
 </html>

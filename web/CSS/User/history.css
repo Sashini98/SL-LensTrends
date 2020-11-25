@@ -9,42 +9,85 @@ and open the template in the editor.
 */
 html,
 body {
-	height: 100%;
+    height: 100%;
 }
 
 body {
-	background :  url("../../Resources/Img/history.jpg") no-repeat center fixed;
-         background-size: cover;
-	font-family: sans-serif;
-	font-weight: 100;
+    font-family: sans-serif;
+    font-weight: 100;
 }
 
-.container {
-    margin-left: 20%;
-    margin-top: 10%;
+.heading {
+    text-align: left;
+    width: 75%;
+    margin: auto;
+    /*margin-right: 50%;*/
 }
 
-table {
-	width: 80%;
-	border-collapse: collapse;
-	overflow: hidden;
+.heading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 200%;
 }
 
-th,
-td {
-	padding: 15px;
-	background-color: rgba(255,255,255,0.5);
-	color: #fff;
+.photos {
+    background-color: white;
+    width: 75%;
+    height:auto;
+    margin: auto;
+    margin-top: 2%;
+    /*margin-left:20%;*/        
+    border-radius: 10px;
+    padding: 1% 1.5% 1% 1.5%;
+    /*box-shadow: 0.1px 0.1px 10px #ccc;*/
 }
 
-th {
-	text-align: left;
+.photos .btn {
+    background-color: #335fa6;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.9;
+    margin-left: 12%;
 }
 
-thead {
-	th {
-		background-color: #a8a291;
-                border: 2px white; 
-	}
+
+input[type=text]
+{
+    width : 98%;
+    height: 30px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+    font-size: 18px;
+    width: 75%;
+    margin-bottom: 2%;
+    outline: none;
+    background-color: #fff;
 }
 
+.details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 0%;
+}
+
+.details img {
+    height: 50%;
+    width: 20%;
+    border-radius: 10px 10px 10px 10px;
+    border-collapse: separate; 
+    margin-right: 5%;
+}
+.details p  {
+    margin: auto;
+    margin-left: 0;
+    font-family: 'Poppins', sans-serif;
+    /*    font-weight: bold;*/
+}
