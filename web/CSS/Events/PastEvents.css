@@ -289,17 +289,26 @@
 }
 
 .events {
-    background-color: #f0efef;
+    background-color: #fff;
     width: 65%;
     height:auto;
-    margin-top: 2%;
+    margin-top: -7%;
     margin-left:17%;        
-    border-radius: 10px;
+    /*border-radius: 10px;*/
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06),0 2px 6px rgba(0,0,0,0.06),0 3px 8px rgba(0,0,0,0.09);
     padding: 1% 1.5% 3% 1.5%;
     margin-bottom: 2%;
     /*box-shadow: 0.1px 0.1px 10px #ccc;*/
 }
 
+
+h2 {
+    margin-top: 8%;
+    margin-bottom: 0;
+    margin-left: 18%;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 180%;
+}
 .events p {
     font-family: 'Be Vietnam', sans-serif;
     font-weight: lighter;
@@ -323,11 +332,12 @@
     font-weight: bold;
     color: #415daa;
     font-size: 80%;
+   
 }
 
 .events span {
     font-family: 'Barlow', sans-serif;
-    float: right;
+    /*float: right;*/
     color: #676966;
     text-decoration: none;
 }

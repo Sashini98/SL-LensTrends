@@ -93,7 +93,7 @@
 
         <div class="box">
             <div class="box1" style="cursor: pointer;" onclick="window.location.href = '../../View/Events/PastEvents.jsp';">
-                <img src="../../Resources/Img/questions1.png">                
+                <img src="../../Resources/Img/calendar.svg" height="100px" width="100px">                
                 <h2>Past Events</h2>
                 <p>Do you want to see your past events?<br>may be the same, 
                     Browse your past events to get back the wonderful memories. </p>
@@ -101,7 +101,7 @@
             </div>
 
             <div class="box2" style="cursor: pointer;" onclick="window.location.href = '../../View/Events/EventsPost.jsp';">
-                <img src="../../Resources/Img/search1.png">
+                <img src="../../Resources/Img/add-calendar.svg" height="100px" width="100px">
                 <h2>Post Events</h2>
                 <p>Are You Ready to post your event?<br> We have the best photographers to conduct your event with a grand success. Make it a memorable one!</p>
                 <a href="#" type="button">Post</a>

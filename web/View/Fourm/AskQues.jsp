@@ -25,7 +25,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <title>Questions</title>
     </head>
-    <body style="background-color: #f7f6f9;">
+    <body style="background-color: #eff0f1; background-image: url(../../Resources/Img/forumanimie.svg); background-repeat: no-repeat;">
 
         <div class="fixedheader">  
 
@@ -88,16 +88,14 @@
         </div>
 
         <div class="main-content">
-  
+
             <div name="s" id="s">
                 <div class="questions">                
                     <form id="askQ" action="../../AskQues" method="POST" onsubmit="return validateForm()">
                         <h3><label for="Title"><b>Title</b></label><br></h3>
-                        <input type="text" id="title" name="title"><br><br><br>
-
-
-
-                        <textarea id="Questionbody" name="Questionbody"></textarea>  <br><br><br>
+                        <input type="text" id="title" name="title">
+                        <h3 style="margin-top: -2%;"><b>Question</b></h3>
+                        <textarea id="Questionbody" name="Questionbody" rows="20"></textarea>  <br>
 
                         <h3><label for="Category"><b>Category</b></label></h3>
                         <div class="box" id="category" name="category">
@@ -124,7 +122,7 @@
             </div>
 
         </div>
-                        
+
         <div class="sidenav">
             <div class="dropdown">
                 <button onclick="myFunction()" class="dropbtn">Step 1: Draft your question <img src="../../Resources/Img/down.png"></button>
@@ -139,7 +137,7 @@
                 </ul>
 
             </div>
-            
+
             <div class="dropdown">
                 <button onclick="myFunction1()" class="dropbtn">Step 2: Add the experience <img src="../../Resources/Img/down.png"></button>
             </div>        
@@ -152,7 +150,7 @@
                 </ul>
 
             </div>
-            
+
             <div class="dropdown">
                 <button onclick="myFunction2()" class="dropbtn">Step 3: Give your feedback  <img src="../../Resources/Img/down.png"></button>
             </div>        
@@ -164,14 +162,20 @@
                 </ul>
 
             </div>
-            <img src="../../Resources/Img/askque.jpg" style="width: 100%; height: 40%; margin-top: 12%">
+            <img src="../../Resources/Img/question.svg" style="width:100px; height: 100px; margin-left: 40%;">
         </div>
-   
 
 
-</div>
 
-</div>
+
+<!--
+    </div>
+
+</div>-->
+<!--
+<div class="image" style="margin-top: -30%; z-index: 5; ">
+    <img src="../../Resources/Img/forumanimie.svg">
+</div>-->
 
 <script>
     tinymce.init({

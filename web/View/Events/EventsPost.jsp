@@ -15,9 +15,11 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Events/EventsPost.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
         <title>Post Events</title>
     </head>
-    <body style="background-color: #f7f6f9;">
+    <body style="background-color: #eff0f1;">
 
         <div class="fixedheader">  
 
@@ -51,7 +53,10 @@
             </div>
 
         </div>
-
+        <div class="heading">
+            <h3>Post your Events </h3>
+            
+        </div>
         <div class="main-content">
 
             <div class="events">                
@@ -117,7 +122,7 @@
                         <span class="content_name" style="margin-left: 5%;"> Name :  </span><br><br>
                         <div class="formContent">
                             <span class="content_name"> Photographer Name </span><br>
-                            <input type="text" name="pname" required/>
+                            <input  style="width: 80%;" type="text" name="pname" required/>
                             <label for="pname" class="label_name">
                             </label>
                             <button type="button" id="add">Add</button> 
@@ -169,7 +174,7 @@
                 </ul>
 
             </div>
-            
+
             <div class="dropdown">
                 <button onclick="myFunction1()" class="dropbtn">Step 2: Post your event <img src="../../Resources/Img/down.png"></button>
             </div>        
@@ -182,7 +187,7 @@
                 </ul>
 
             </div>
-            
+
             <div class="dropdown">
                 <button onclick="myFunction2()" class="dropbtn">Step 3:Share your views<img src="../../Resources/Img/down.png"></button>
             </div>        
@@ -194,7 +199,7 @@
                 </ul>
 
             </div>
-            <img src="../../Resources/Img/eventpost.jpg" style="width: 100%; height: 40%; margin-top: 12%">
+            <img src="../../Resources/Img/add-event.svg" style="width: 100%; height: 30%; margin-top: 6%">
         </div>
 
 
