@@ -52,13 +52,18 @@ public class ClientRegister extends HttpServlet {
         try {
             ClientDao client = new ClientDaoImpl();
             id = client.getLastId();
+            String cid ;
+            if (id != null) {
+                String[] parts = id.split("C");
+                String row = parts[1];
+                int lastId = Integer.parseInt(row);
+                int newId = lastId + 1;
+                cid = Integer.toString(newId);
+                cid = "C" + cid;
 
-            String[] parts = id.split("C");
-            String row = parts[1];
-            int lastId = Integer.parseInt(row);
-            int newId = lastId + 1;
-            String cid = Integer.toString(newId);
-            cid = "C" + cid;
+            } else {
+                cid = "C1";
+            }
 
             Client c = new Client();
             c.setClientId(cid);
@@ -109,17 +114,17 @@ public class ClientRegister extends HttpServlet {
                 emailtosend.setSubject(subject);
 
 //            email.setText(content);
-                String htmlContent = "<html><head><title>TODO supply a title</title><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link href=\"https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap\" rel=\"stylesheet\">\n" +
-"<link href=\"https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap\" rel=\"stylesheet\"></head><body>\n" +
-"<table style=\"text-align: center; width : 100%; height: 100%; border : 0; cellspacing : 0; cellpadding : 20px; background : url('https://images.unsplash.com/photo-1606056041654-f203e0351229?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60'); background-repeat: no-repeat; background-size: cover; \">\n" +
-"<tr><td><h3 style=\"font-family: 'Sansita Swashed', cursive; font-size: 56px; color: white;\">"
-                        + "Hi "+ fname +"!"
-                        + "</h3><h3 style=\"font-family: 'Roboto Slab', serif; font-size: 34px; color: #0092cc;\">IT'S NICE TO MEET YOU</h3>\n" +
-"<p style=\"font-family: 'Roboto Slab', serif; font-size: 34px; color: rgb(180,0,0); font-weight: bold;\">"
+                String htmlContent = "<html><head><title>TODO supply a title</title><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"><link href=\"https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap\" rel=\"stylesheet\">\n"
+                        + "<link href=\"https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap\" rel=\"stylesheet\"></head><body>\n"
+                        + "<table style=\"text-align: center; width : 100%; height: 100%; border : 0; cellspacing : 0; cellpadding : 20px; background : url('https://images.unsplash.com/photo-1606056041654-f203e0351229?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60'); background-repeat: no-repeat; background-size: cover; \">\n"
+                        + "<tr><td><h3 style=\"font-family: 'Sansita Swashed', cursive; font-size: 56px; color: white;\">"
+                        + "Hi " + fname + "!"
+                        + "</h3><h3 style=\"font-family: 'Roboto Slab', serif; font-size: 34px; color: #0092cc;\">IT'S NICE TO MEET YOU</h3>\n"
+                        + "<p style=\"font-family: 'Roboto Slab', serif; font-size: 34px; color: rgb(180,0,0); font-weight: bold;\">"
                         + "4560"
-                        + "</p><p style=\"font-family: 'Roboto Slab', serif; font-size: 24px; color: #0092cc;\">Enter this pin number to </p>\n" +
-"<p style=\"font-family: 'Roboto Slab', serif; font-size: 24px; color: rgb(11,207,1);\">Verify your email address</p>\n" +
-"</td></tr></table></body></html>";
+                        + "</p><p style=\"font-family: 'Roboto Slab', serif; font-size: 24px; color: #0092cc;\">Enter this pin number to </p>\n"
+                        + "<p style=\"font-family: 'Roboto Slab', serif; font-size: 24px; color: rgb(11,207,1);\">Verify your email address</p>\n"
+                        + "</td></tr></table></body></html>";
                 emailtosend.setContent(htmlContent, "text/html");
 
                 Transport.send(emailtosend);

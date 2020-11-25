@@ -54,7 +54,7 @@
                         %>
                         <li><a href="<%= request.getContextPath()%>/View/User/AdvancedSearch.jsp" type="button"> Photographs </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/PhotographerSearch.jsp" type="button"> Photographers </a></li>
-                        <li><a href="<%= request.getContextPath()%>/View/Events/EventHome.jsp" type="button"> Events </a></li>
+                        <li><a href="<%= request.getContextPath()%>/View/Events/MainEventHome.jsp" type="button"> Events </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Fourm/MainForum.jsp" type="button"> Forum </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/Cart.jsp" type="button"> Cart </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/User/purchasehistory.jsp" type="button"> Purchase History </a></li>
@@ -88,21 +88,7 @@
         </div>
 
         <div class="main-content">
-
-            <div class="side-box"> 
-                <div class="home">
-                    <ul>
-                        <li><a href="../../View/Home.jsp"> Home </a></li>
-                        <li><a href="../../View/Fourm/MainForum.jsp"> Forum Home </a></li>
-                    </ul>
-                </div>
-
-
-                <div class="ask-qn">
-                    <a href="AskQues.jsp" type="button">Ask Questions <a/>
-                </div>
-
-            </div>  
+  
             <div name="s" id="s">
                 <div class="questions">                
                     <form id="askQ" action="../../AskQues" method="POST" onsubmit="return validateForm()">
@@ -138,7 +124,49 @@
             </div>
 
         </div>
-    </div>
+                        
+        <div class="sidenav">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Step 1: Draft your question <img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown" class="dropdown-content">
+
+                <a><b>Summarize the problem</b></a>
+                <ul>
+                    <li>Include details about your goal.</li><br>
+                    <li>Describe expected and actual results.</li><br>
+                    <li>Include any errors.</li><br>
+                </ul>
+
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction1()" class="dropbtn">Step 2: Add the experience <img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown1" class="dropdown-content">
+
+                <a><b>Write to us</b></a>
+                <ul>
+                    <li>Write your experience.</li><br>
+                    <li>Get expert in the field.</li><br>
+                </ul>
+
+            </div>
+            
+            <div class="dropdown">
+                <button onclick="myFunction2()" class="dropbtn">Step 3: Give your feedback  <img src="../../Resources/Img/down.png"></button>
+            </div>        
+            <div id="myDropdown2" class="dropdown-content">
+
+                <a><b>Rate your expert's answers</b></a>
+                <ul>
+                    <li>Share your rating.</li>
+                </ul>
+
+            </div>
+            <img src="../../Resources/Img/askque.jpg" style="width: 100%; height: 40%; margin-top: 12%">
+        </div>
+   
 
 
 </div>
