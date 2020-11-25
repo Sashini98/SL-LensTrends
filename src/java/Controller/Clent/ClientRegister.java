@@ -58,7 +58,7 @@ public class ClientRegister extends HttpServlet {
             int lastId = Integer.parseInt(row);
             int newId = lastId + 1;
             String cid = Integer.toString(newId);
-            cid = "c" + cid;
+            cid = "C" + cid;
 
             Client c = new Client();
             c.setClientId(cid);

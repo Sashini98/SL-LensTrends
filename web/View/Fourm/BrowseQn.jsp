@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="../../CSS/forum/BrowseQn.css"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Questions</title>
@@ -99,8 +100,9 @@
             </div>
 
         </div>
-
+ 
         <div class="main-content">
+            
 
             <div class="side-box"> 
                 <div class="filter">
@@ -148,8 +150,11 @@
                     <a href="AskQues.jsp" type="button">Ask Questions </a>
                 </div>
 
-            </div>  
+            </div> 
+           
             <div name="s" id="s">
+                
+                
 <!--                <div class="questions">                
                     <h2>
                         FoV of One Plus 6T?

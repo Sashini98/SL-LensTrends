@@ -221,7 +221,12 @@
                         </div>
                         <div >
                             <p class="text-muted">
-                                Our vision is to
+                            <p>
+                                Be the leading professional source of creating
+                            </p>
+                            <p>
+                                a worldwide client base for Sri Lankan photographers
+                            </p>
                             </p>
                         </div>
 
@@ -238,11 +243,9 @@
                                 professional SriLankan photographers and make 
                             </p>
                             <p>
-                                it easy for worldwide clients to access their 
+                                it easy for clients to access their work.
                             </p>
-                            <p>
-                                work.
-                            </p>
+                            
                         </div>
 
                     </div>
