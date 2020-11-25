@@ -148,7 +148,7 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public Photographer getPhotographerByEmail(String email) throws SQLException {
-        ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "'");
+        ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "' AND ActiveStatus = 1");
         if (photographer.next()) {
             Photographer p = new Photographer();
             p.setPhotographerId(photographer.getString("Photographer_Id"));
@@ -176,7 +176,7 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public Photographer getPhotographerByEmailAndPassword(String email, String password) throws SQLException {
-        ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "'  AND Password = '" + password + "' ");
+        ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "'  AND Password = '" + password + "' AND ActiveStatus = 1");
         if (photographer.next()) {
             Photographer p = new Photographer();
             p.setPhotographerId(photographer.getString("Photographer_Id"));

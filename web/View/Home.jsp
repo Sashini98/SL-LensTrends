@@ -82,13 +82,13 @@
         %>
         <div class="HeaderPart" id="HeaderPart">
             <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid" class="bgvideo">
-                <source src="../Resources/video/bg.mp4" type="video/mp4">
+                <source src="<%= request.getContextPath()%>/Resources/video/bg.mp4" type="video/mp4">
             </video>
             <%
             } else {
             %>
 
-            <div class="HeaderPart" id="HeaderPart" style=" background : url('../Resources/Img/homebg-after-login.jpg') no-repeat center;  background-size: cover;">
+            <div class="HeaderPart" id="HeaderPart" style=" background : url('<%= request.getContextPath()%>/Resources/Img/homebg-after-login.jpg') no-repeat center;  background-size: cover;">
 
                 <%
                     }
@@ -219,14 +219,12 @@
                             <h4>Our Vision</h4>
 
                         </div>
-                        <div >
-                            <p class="text-muted">
+                        <div style="font-size: 14px;">
                             <p>
                                 Be the leading professional source of creating
                             </p>
                             <p>
                                 a worldwide client base for Sri Lankan photographers
-                            </p>
                             </p>
                         </div>
 
@@ -245,7 +243,7 @@
                             <p>
                                 it easy for clients to access their work.
                             </p>
-                            
+
                         </div>
 
                     </div>

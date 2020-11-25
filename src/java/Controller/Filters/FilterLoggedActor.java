@@ -31,14 +31,15 @@ public class FilterLoggedActor implements Filter{
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-         HttpServletRequest req = (HttpServletRequest) request;
+         
+        HttpServletRequest req = (HttpServletRequest) request;
          HttpServletResponse resp = (HttpServletResponse) response;
 
         Client loggedClient = (Client) req.getSession().getAttribute("loggedClient");
         Photographer loggedPhotographer = (Photographer) req.getSession().getAttribute("loggedPhotographer");
         Admin loggedAdmin = (Admin) req.getSession().getAttribute("loggedAdmin");
         
-        System.out.println("awaaaaaaaaa");
+     
         
         if (loggedAdmin != null) {
             req.setAttribute("actor", "admin");
