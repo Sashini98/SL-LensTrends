@@ -258,16 +258,14 @@ function cancelupdate(cancel) {
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=city");
 
-
-
     } else if (cancel == "ic20") {
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
             if (request.status === 200) {
                 if (request.readyState === 4) {
-
                     var responce = request.responseText;
+                    alert(responce);
                     document.getElementById("province").placeholder = responce;
                     document.getElementById("province").value = responce;
                     document.getElementById("province").disabled = true;

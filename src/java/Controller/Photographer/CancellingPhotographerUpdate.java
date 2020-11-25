@@ -49,11 +49,11 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             } catch (SQLException ex) {
                 ex.printStackTrace();
             }
-        } else if (canceloption.equals("uname")) {
+        } else if (canceloption.equals("email")) {
             try {
                 Photographer photographer = photographerDao.getPhotographerById(photographerId);
                 String useremail = photographer.getEmail();
-              
+                
                 response.getWriter().write(useremail);
             } catch (SQLException ex) {
                 ex.printStackTrace();
@@ -116,7 +116,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
             try {
                 Photographer photographer = photographerDao.getPhotographerById(photographerId);
                 String userprovince = photographer.getProvince();
-                
+                System.out.println(userprovince);
                 response.getWriter().write(userprovince);
             } catch (SQLException ex) {
                 ex.printStackTrace();
