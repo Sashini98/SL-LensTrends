@@ -75,8 +75,8 @@
 
         <div class="top">
             <ul>
-                <li>We love meeting new people,<span style="color:#f7c947;">get in touch. </span></li>
-                <li><p><span>It’s going to be a perfect blend of magical reality,</span> <br> as we transform  your events into a truly Magical Moment… </p></li>
+                <li>Hire from <span style='color:#415daa;'>Us!</span> and Feel the,<span style="color:#415daa;">Difference. </span></li>
+                <li><p><span style='color:#415daa;'>It’s going to be a perfect blend of magical reality,</span> <br> as we transform  your events into a truly Magical Moment… </p></li>
             </ul>
         </div>
 
