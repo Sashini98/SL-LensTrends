@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="<%= request.getContextPath()%>/View/Notifications/notificationsHome.jsp" type="button"> <img src="../../Resources/Img/notification.png"> </a>
 
                 </div>
 
@@ -92,7 +92,7 @@
 
 
         <div class="box">
-            <div class="box1" style="cursor: pointer;" onclick="window.location.href = '../../View/Events/Past Events.jsp';">
+            <div class="box1" style="cursor: pointer;" onclick="window.location.href = '../../View/Events/PastEvents.jsp';">
                 <img src="../../Resources/Img/questions1.png">                
                 <h2>Past Events</h2>
                 <p>Do you want to see your past events?<br>may be the same, 
