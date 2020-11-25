@@ -41,7 +41,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../login.jsp" type="button"> Login </a>
+                    <a href="<%= request.getContextPath()%>/View/login.jsp?loc=ch" type="button"> Login </a>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
 
             <div class="caption">
                 <p>
-                    If you already have an account.<a href="../login.jsp"> Sign In</a>
+                    If you already have an account.<a href="<%= request.getContextPath()%>/View/login.jsp?loc=ch"> Sign In</a>
                 </p>
             </div>
 
@@ -81,11 +81,11 @@
                         <input type="text" id="province" name="province" >
                         <legend> Gender </legend>
                         <div class="filter-radio">
-                        <label class="container-radio"><h4>Male</h4>
+                        <label class="container-radio"><h4 style="font-weight: normal;">Male</h4>
                             <input type="radio" id="male" name="gender" value="Male">
                             <span class="checkmark-radio"></span>
                         </label>
-                        <label class="container-radio"><h4>Female</h4>
+                            <label class="container-radio"><h4 style="font-weight: normal;">Female</h4>
                             <input type="radio" id="female" name="gender" value="Female">
                             <span class="checkmark-radio"></span>
                         </label>

@@ -24,14 +24,7 @@
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
-                    <ul>
 
-                        <li><a href="#" type="button"> Events </a></li>
-                        <li><a href="#" type="button"> Album </a></li>
-                        <li><a href="#" type="button"> Profile </a></li>
-                        <li><a href="#" type="button"> Settings </a></li>
-
-                    </ul>
                 </div>
 
                 <div class="notifyicn">
@@ -40,7 +33,7 @@
                 </div>
 
                 <div class="logout">
-                    <a href="../../LogOut?loc=ph" type="button"> Logout </a>
+                    <a href="<%= request.getContextPath()%>/View/login.jsp?loc=ph" type="button"> Login </a>
                 </div>
 
             </div>
@@ -57,7 +50,7 @@
 
             <div class="caption">
                 <p>
-                    If you already have an account.<a href="../login.jsp"> Sign In</a>
+                    If you already have an account.<a href="<%= request.getContextPath()%>/View/login.jsp?loc=ph"> Sign In</a>
                 </p>
             </div>
 

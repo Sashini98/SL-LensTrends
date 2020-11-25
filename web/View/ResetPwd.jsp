@@ -20,7 +20,7 @@
     <body style="background-image: url(../Resources/Img/reset.jpg); background-size: 100%;">
 
 
-        <div class="container"> 
+        <div class="container" style=" margin: 0; z-index: 1;  position: fixed; right: 50px; top: 50px;"> 
 
             <div class="logo">
                 <img src="../Resources/Img/6.png">

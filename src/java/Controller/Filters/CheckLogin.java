@@ -43,7 +43,6 @@ public class CheckLogin implements Filter {
             resp.sendRedirect("/GroupProject/View/PhotographerHome.jsp");
         } else {
 
-            String action = request.getParameter("action");
             String page = request.getParameter("loc");
 
             try {

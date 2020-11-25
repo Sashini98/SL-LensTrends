@@ -143,7 +143,6 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/PhotographerHome.jsp");
                             }
                             } else {
-                                System.out.println("awaa");
                                 response.sendRedirect("View/PhotographerHome.jsp");
                             }
 

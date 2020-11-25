@@ -10,6 +10,11 @@
 
     String attribute = (String) request.getAttribute("account");
     String message = (String) request.getAttribute("msg");
+    String para = request.getParameter("loc");
+    
+    if (para == null) {
+            para = "ch";
+        }
 %>
 <html>
     <head>
@@ -20,7 +25,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
     <body  style="background-size:100%; background-image:url(<%= request.getContextPath()%>/Resources/Img/bg-login2.jpg);">
-   
+
 
         <!--        <video autoplay muted loop id="myVideo">
                     <source src="<%= request.getContextPath()%>/Resources/video/bg.mp4" type="video/mp4">
@@ -57,7 +62,7 @@
 
         %>
 
-        <div  id="content" style="margin: 0; padding: 0; z-index: 1;  position: fixed;"> 
+        <div  id="content" style="margin: 0; padding: 0; z-index: 1;  position: fixed; right: 50px; top: 50px;"> 
             <div class="container" id="container"> 
 
                 <div class="logo">
@@ -66,9 +71,21 @@
                 <h1>Sign in</h1>
 
                 <div  class="caption">
+                    <%
+                        if (para.equalsIgnoreCase("ph")) {
+                    %>
+                    <span>
+                        New Contributor  <a href="<%= request.getContextPath()%>/View/Photographer/PhotographerRegistration.jsp">Create an account</a><br><br>
+                    </span>
+                    <%
+                    } else {
+                    %>
                     <span>
                         New User  <a href="<%= request.getContextPath()%>/View/User/UserRegistration.jsp">Create an account</a><br><br>
                     </span>
+                    <%
+                        }
+                    %>
                 </div>
                 <%
                     if (message != null) {
