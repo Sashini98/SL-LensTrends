@@ -55,7 +55,7 @@
             %>
             <div id="photomanageDiv" onclick="show('photomanage')" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" class="photomanage">
                 <img id="photomanageIcon" src="../../Resources/Img/photomanagement.svg" />
-                <p><a href="#" type="button"  id="photomanagement">Manage Photo</a></p>
+                <p><a href="#" type="button"  id="photomanagement">Reported Photos</a></p>
                 <label>4</label>
             </div>
 
@@ -67,7 +67,7 @@
 
             <div id="forumDiv" onclick="show('forum')" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" class="forum">
                 <img id="forumIcon" src="../../Resources/Img/forummangement.svg" />
-                <p><a href="#" type="button"  id="forummanage">Manage Forum</a></p>
+                <p><a href="#" type="button"  id="forummanage">Reported Forum</a></p>
                 <label>3</label>
             </div>
 
