@@ -222,6 +222,7 @@
         <url-pattern>/View/Notifications/notificationsHome.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
+        <url-pattern>/View/Fourm/quest.jsp</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
