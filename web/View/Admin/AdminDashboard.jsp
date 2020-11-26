@@ -114,10 +114,10 @@
                         <h1 style="margin-left: 0px;">Photos</h1>
                     </div>
 
-                    <div class="chart-photo" style=" ">
+                    <div class="chart-photo">
 
-                        <div class="upload-for-review">
-                            <canvas id="myChart1" width="550" height="300"></canvas>
+                        <div class="upload-for-review" >
+                            <canvas id="myChart1" height="300px"  width="550px" ></canvas>
                             <script>
                                 Chart.defaults.global.animation.duration = 5000;
                                 var ctx = document.getElementById('myChart1').getContext('2d');

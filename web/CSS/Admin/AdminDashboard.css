@@ -659,10 +659,11 @@ body {
     flex: 0.5;
     background-color: #fff;
     border-radius: 10px;
-    padding:5% 0% 5% 0%;
+    padding:5% 1% 5% 0%;
     box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
     margin: 1%;
     margin-bottom: 5%;
+    
 }
 
 .approved-photos{
@@ -703,6 +704,7 @@ body {
         padding:5% 0% 5% 0%;
         box-shadow: 0 5px 8px rgba(12,13,14,0.15); 
         margin-bottom: 8%;*/
+    /*margin-left: -5%;*/
 }
 
 #myChart2 {
