@@ -604,3 +604,58 @@ input:checked + label{
     border-radius: 5px;
     padding-left: 3%;
 }
+
+.accepted-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex:1;*/
+}
+
+.accepted-content .accepted-details {
+    width: 28%;
+    /*    display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        flex: 1;*/
+    background-color: #fff;
+    float: right;
+    margin-right: 1%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    padding: 1% 2%;
+    margin-top: -13%;
+}
+
+.accepted-details .details-accepted-title h3 {
+    font-family: 'Questrial', sans-serif;
+
+}
+
+
+.accepted-details .details-accepted-title p {
+    font-family: 'Questrial', sans-serif;
+    color:#9D9D9D;
+}
+
+.accepted-details .details-accepted {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.accepted-details .details-accepted p {
+    font-family: 'Didact Gothic', sans-serif;
+    padding: 0 0 2% 0;
+    margin: 0;
+}
+
+.accepted-details .details-accepted span {
+    background-color: #ff6969;
+    color: white;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+    padding: 2% 5%;
+    margin-top: 4%;
+    margin-bottom: 5%;
+}

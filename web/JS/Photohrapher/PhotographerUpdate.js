@@ -70,7 +70,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic2").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=fname");
@@ -92,7 +92,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic4").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=lname");
@@ -115,7 +115,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic6").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=email");
@@ -138,7 +138,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic8").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=mnum");
@@ -161,7 +161,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic10").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=web");
@@ -184,7 +184,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic12").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=bio");
@@ -207,7 +207,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic14").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=interest");
@@ -230,7 +230,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic16").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=address");
@@ -253,7 +253,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic18").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=city");
@@ -265,7 +265,6 @@ function cancelupdate(cancel) {
             if (request.status === 200) {
                 if (request.readyState === 4) {
                     var responce = request.responseText;
-                    alert(responce);
                     document.getElementById("province").placeholder = responce;
                     document.getElementById("province").value = responce;
                     document.getElementById("province").disabled = true;
@@ -274,7 +273,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic20").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=province");
@@ -289,6 +288,7 @@ function cancelupdate(cancel) {
                 if (request.readyState === 4) {
 
                     var responce = request.responseText;
+                    alert(responce);
                     document.getElementById("zip").placeholder = responce;
                     document.getElementById("zip").value = responce;
                     document.getElementById("zip").disabled = true;
@@ -297,7 +297,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic22").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingPhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=postal");
@@ -327,7 +327,7 @@ function updatedata(field) {
                     document.getElementById("ic2").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userfname=" + fname);
@@ -349,7 +349,7 @@ function updatedata(field) {
                     document.getElementById("ic4").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userlname=" + lname);
@@ -371,7 +371,7 @@ function updatedata(field) {
                     document.getElementById("ic6").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("useremail=" + email);
@@ -393,7 +393,7 @@ function updatedata(field) {
                     document.getElementById("ic8").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("usermnum=" + mnum);
@@ -415,7 +415,7 @@ function updatedata(field) {
                     document.getElementById("ic10").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userweb=" + web);
@@ -437,7 +437,7 @@ function updatedata(field) {
                     document.getElementById("ic12").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userbio=" + bio);
@@ -459,7 +459,7 @@ function updatedata(field) {
                     document.getElementById("ic14").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userinterest=" + interest);
@@ -481,7 +481,7 @@ function updatedata(field) {
                     document.getElementById("ic16").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("useraddress=" + address);
@@ -503,13 +503,13 @@ function updatedata(field) {
                     document.getElementById("ic18").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("usercity=" + city);
 
     } else if (field == "ic19") {
-        var province = document.getElementById("city").value;
+        var province = document.getElementById("province").value;
 
         var request = new XMLHttpRequest();
 
@@ -525,14 +525,13 @@ function updatedata(field) {
                     document.getElementById("ic20").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("userprovince=" + province);
-
+        request.send("province=" + province);
+      
     } else if (field == "ic21") {
         var zip = document.getElementById("zip").value;
-        alert(zip);
         var request = new XMLHttpRequest();
 
         request.onreadystatechange = function () {
@@ -547,7 +546,7 @@ function updatedata(field) {
                     document.getElementById("ic22").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("userzip=" + zip);

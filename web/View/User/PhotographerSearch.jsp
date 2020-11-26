@@ -135,56 +135,70 @@
                                     </div> 
                                 </div>
                             </a>
+                           
                             <div class="profilebox">
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
+
+                                        <img src="../../Resources/Img/photographer4.jpg">
+
                                     </div>
 
                                     <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
+
+                                        <p>Ms.RAVISHIKA S</p>
+
                                     </div>
                                     <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
+
+                                        <p>Colombo 03,Srilanka</p>
+                                        <p>www.FabuSnap.lk</p>
+
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Wild life</p>
+
+                                        <p>Fashion</p>
                                         <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
+                                        <p> Fine Art</p>
+                                        <p>Advertising/Lifestyle</p>
+
+
                                     </div>
                                 </div> 
                             </div>
 
-                        </div>
+
+                        </div>  
+                        
+
+                        
                         <div class="column">
                             <div class="profilebox">
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
+                                        <img src="../../Resources/Img/geeshani.jpg">
                                     </div>
 
                                     <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
+                                        <p>Mrs.GEESHANI B </p>
                                     </div>
                                     <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
+                                        <p>Colombo,Srilanka</p>
+                                        <p>www.Click.lk</p>
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Wild life</p>
                                         <p>Portraits</p>
                                         <p>Landscape</p>
-                                        <p>Astro</p>
+                                        <p>Travel</p>
+                                        <p>Nature</p>
                                     </div>
                                 </div> 
                             </div>
@@ -220,24 +234,24 @@
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/photographer4.jpg">
+                                        <img src="../../Resources/Img/indika.jpg">
                                     </div>
 
                                     <div class="username">
-                                        <p>Ms.RAVISHIKA S</p>
+
+                                    <p>Mr.INDIKA A  </p>
+
                                     </div>
                                     <div class="location">
-                                        <p>Colombo 03,Srilanka</p>
-                                        <p>www.FabuSnap.lk</p>
+
+                                        <p>Badulla,Srilanka</p>
+                                        <p>www.Roopamandira.lk</p>
+
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Fashion</p>
-                                        <p>Portraits</p>
-                                        <p> Fine Art</p>
-                                        <p>Advertising/Lifestyle</p>
                                     </div>
                                 </div> 
                             </div>

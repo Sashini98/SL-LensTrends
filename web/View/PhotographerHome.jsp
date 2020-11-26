@@ -30,7 +30,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/9dd75719fe.js" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Lobster+Two:wght@700&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
 
         <title>SL-Lesns Trends</title>
@@ -81,12 +81,12 @@
     <%
         if (!logged) {
     %>
-    <div class="HeaderPart" id="HeaderPart" style= "background: url('../Resources/Img/bg-before-login-photographer.jpg') no-repeat center; background-size: cover;">
+    <div class="HeaderPart" id="HeaderPart" style= "background: url('../Resources/Img/before.jpg') no-repeat center; background-size: cover;">
         <%
         } else {
         %>
 
-        <div class="HeaderPart" id="HeaderPart" style= "background: url('../Resources/Img/bg-after-login-photographer.jpg') no-repeat center; background-size: cover;">
+        <div class="HeaderPart" id="HeaderPart" style= "background: url('../Resources/Img/photo-home-3.jpg') no-repeat center; background-size: cover;">
 
             <%
                 }
@@ -104,7 +104,7 @@
                 %>
                 <h1 class="WelcomeText1">Hello <%= p.getFname()%>!</h1>
 
-                <h3 class="WelcomeText2">IT'S NICE TO MEET YOU</h3>
+                <h3 class="WelcomeText2">IT'S NICE TO SEE YOU BACK</h3>
 
                 <%
                     }
@@ -199,7 +199,7 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <img class="aboutImg" src="../Resources/Img/germ-plant-seedling-live.jpg"/>
+                    <img class="aboutImg" src="../Resources/Img/start.svg"/>
 
                 </div>
                 <div>
@@ -209,7 +209,7 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <img class="aboutImg" src="../Resources/Img/Our-Mission.jpg"/>
+                    <img class="aboutImg" src="../Resources/Img/mission.svg"/>
 
                 </div>
                 <div>
@@ -246,7 +246,7 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <img class="aboutImg" src="../Resources/Img/mission.jpg"/>
+                    <img class="aboutImg" src="../Resources/Img/vision.svg"/>
 
                 </div>
                 <div>
@@ -256,8 +256,8 @@
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">
-                    <div  class="abouttext">
-                        <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
+                    <div  class="abouttext" style="color:white;">
+                        <h2>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h2>
                     </div>
                 </div>
                 <div>

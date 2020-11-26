@@ -15,10 +15,13 @@ import java.sql.SQLException;
  * @author acer
  */
 public class DB {
+    
+    private DB(){
+    }
 
     private static Connection con;
 
-    public static synchronized Connection getConnection() {
+    private static synchronized Connection getConnection() {
 
         if (con == null) {
 
