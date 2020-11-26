@@ -124,8 +124,7 @@ public class CancellingPhotographerUpdate extends HttpServlet {
         } else if (canceloption.equals("postal")) {
             try {
                 Photographer photographer = photographerDao.getPhotographerById(photographerId);
-                int userpostal = photographer.getPostalCode();
-                
+                String userpostal = photographer.getPostalCode() + "";
                 response.getWriter().write(userpostal);
             } catch (SQLException ex) {
                 ex.printStackTrace();

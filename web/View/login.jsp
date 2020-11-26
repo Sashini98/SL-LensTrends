@@ -48,8 +48,8 @@
                     <h4>Do you want to Login as a Contributor or User ?</h4>
 
                     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; " class="selections">
-                        <button style="flex: 1; margin-right: 3px; " id="contributor"><a href="<%= request.getContextPath()%>/ContributorOrClintLogin?a=c">Contributor</a></button>
-                        <button style="flex: 1; margin-left: 3px;" id="user"><a href="<%= request.getContextPath()%>/ContributorOrClintLogin?a=u">User</a></button>
+                        <button style="flex: 1; margin-right: 3px; " id="contributor"><a href="<%= request.getContextPath()%>/ContributorOrClintLogin?a=c" style="text-decoration: none; color: black;">Contributor</a></button>
+                        <button style="flex: 1; margin-left: 3px;" id="user"><a href="<%= request.getContextPath()%>/ContributorOrClintLogin?a=u" style="text-decoration: none; color: black;">User</a></button>
 
                     </div>
 
