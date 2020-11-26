@@ -6,6 +6,7 @@
 package Controller.Clent;
 
 import Controller.DaoImpl.ClientDaoImpl;
+import DB.DB;
 import Model.Client;
 import Model.Dao.ClientDao;
 import java.io.IOException;
@@ -49,6 +50,7 @@ public class ClientRegister extends HttpServlet {
             gender = 2;
         }
 
+        
         try {
             ClientDao client = new ClientDaoImpl();
             id = client.getLastId();
