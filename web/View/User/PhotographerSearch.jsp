@@ -192,24 +192,24 @@
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
+                                        <img src="../../Resources/Img/photographer3.jpg">
                                     </div>
 
                                     <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
+                                        <p>Mr.RANAWEERA H</p>
                                     </div>
                                     <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
+                                        <p>Matara,Srilanka</p>
+                                        <p>www.PhotoLanka.lk</p>
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Wild life</p>
-                                        <p>Portraits</p>
+                                        <p>Wild life</p>                                        
                                         <p>Landscape</p>
-                                        <p>Astro</p>
+                                        <p>Architectural</p>
+                                        <p>Aerial</p>
                                     </div>
                                 </div> 
                             </div>
@@ -220,24 +220,24 @@
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
+                                        <img src="../../Resources/Img/photographer4.jpg">
                                     </div>
 
                                     <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
+                                        <p>Ms.RAVISHIKA S</p>
                                     </div>
                                     <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
+                                        <p>Colombo 03,Srilanka</p>
+                                        <p>www.FabuSnap.lk</p>
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Wild life</p>
+                                        <p>Fashion</p>
                                         <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
+                                        <p> Fine Art</p>
+                                        <p>Advertising/Lifestyle</p>
                                     </div>
                                 </div> 
                             </div>
@@ -249,24 +249,26 @@
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
+                                        <img src="../../Resources/Img/photographer5.jpg">
                                     </div>
 
                                     <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
+                                        <p>Mr.CHARANA A</p>
                                     </div>
                                     <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
+                                        <p>Kandy,Srilanka</p>
+                                        <p>www.Picturesque.lk</p>
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Wild life</p>
-                                        <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
+                                        <p>Photojournalism </p>
+                                        <p>Wedding</p>
+                                        <p>Event</p>
+                                        <p>Sports</p>
+                                        <p>Product</p>
+                                        
                                     </div>
                                 </div> 
                             </div>
