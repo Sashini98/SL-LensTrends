@@ -33,7 +33,7 @@ public class PhotographerUpdate extends HttpServlet {
         String interest = request.getParameter("userinterest");
         String address = request.getParameter("useraddress");
         String city = request.getParameter("usercity");
-        String province = request.getParameter("userprovince");
+        String province = request.getParameter("province");
         String zip = request.getParameter("userzip");
         int postal = 0;
         if (zip != null) {

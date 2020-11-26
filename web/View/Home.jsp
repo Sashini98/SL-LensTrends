@@ -81,8 +81,8 @@
             if (!logged) {
         %>
         <div class="HeaderPart" id="HeaderPart">
-            <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid" class="bgvideo">
-                <source src="../Resources/video/check.mp4" type="video/mp4">
+            <video playsinline autoplay muted loop  id="bgvid" class="bgvideo">
+                <source src="<%= request.getContextPath()%>/Resources/video/check.mp4" type="video/mp4">
             </video>
             <%
             } else {
@@ -119,8 +119,8 @@
                 <div class="ServicesContent" style="display: flex;">
                     <div>
                         <span class="fa-stack fa-4x" style="color: #0092cc;">
-                            <i class="fa fa-circle fa-stack-2x text-info"></i>
-                            <i class="fa fa-search  fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-circle fa-stack-2x text-info"></i>
+                            <i class="fas fa-search  fa-stack-1x fa-inverse"></i>
                         </span>
                         <br />
                         <br />
@@ -132,8 +132,8 @@
                     </div> 
                     <div>
                         <span class="fa-stack fa-4x" style="color: #0092cc;">
-                            <i class="fa fa-circle fa-stack-2x text-info"></i>
-                            <i class="fa fa-camera  fa-stack-1x fa-inverse"></i>
+                            <i class="fas fa-circle fa-stack-2x text-info"></i>
+                            <i class="fas fa-camera  fa-stack-1x fa-inverse"></i>
                         </span>
                         <br />
                         <br />
@@ -145,7 +145,7 @@
                     </div>
                     <div>
                         <span class="fa-stack fa-4x" style="color: #0092cc;">
-                            <i class="fa fa-circle fa-stack-2x text-info"></i>
+                            <i class="fas fa-circle fa-stack-2x text-info"></i>
                             <i class="far fa-clipboard fa-stack-1x fa-inverse"></i>
                         </span>
                         <br />
