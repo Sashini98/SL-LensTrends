@@ -194,7 +194,7 @@
                 <div>
                     <div class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
                         <h4>2020</h4>
-                        <h4 class="subheading">Our Humble Beginning</h4>
+                        <h4 class="subheading" style="color:#f7c947;">Our Humble Beginning</h4>
                     </div>
 
                 </div>
@@ -214,7 +214,7 @@
                 </div>
                 <div>
                     <div class="about-heading">
-                        <h4>Our Vision</h4>
+                        <h4 style="color:#f7c947;">Our Vision</h4>
 
                     </div>
                     <div class="about-body" style="font-size: 14px;">
@@ -229,7 +229,7 @@
                 </div>
                 <div>
                     <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                        <h4>Our Mission</h4>
+                        <h4 style="color:#f7c947;">Our Mission</h4>
                     </div>
                     <div  style="display: flex; flex-direction: column; align-items: flex-end; font-size: 14px;">
                         <p>

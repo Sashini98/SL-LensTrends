@@ -155,8 +155,8 @@
 }
 
 .ContactUs{
-    height: 500px;
-    padding-top: 80px;
+    height: 530px;
+    /*padding-top: 80px;*/
     background-image: url("../Resources/Img/map.svg") no-repeat center;
     background-size: cover;
     background-color: RGB(33,37,41);
