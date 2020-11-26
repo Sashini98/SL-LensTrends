@@ -143,6 +143,59 @@
                                     </div>
 
                                     <div class="username">
+                                        <p>Mr.ATHAVAN</p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Jaffna,Srilanka</p>
+                                        <p>www.Ikongraphy.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Wild life</p>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Astro</p>
+                                    </div>
+                                </div> 
+                            </div>
+
+                        </div>
+                        <div class="column">
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/geeshani.jpg">
+                                    </div>
+
+                                    <div class="username">
+                                        <p>Mrs.GEESHANI B </p>
+                                    </div>
+                                    <div class="location">
+                                        <p>Colombo,Srilanka</p>
+                                        <p>www.Click.lk</p>
+                                    </div>
+
+                                </div>
+                                <div class="bio"> 
+                                    <div>
+                                        <p>Portraits</p>
+                                        <p>Landscape</p>
+                                        <p>Travel</p>
+                                        <p>Nature</p>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="profilebox">
+                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+
+                                    <div class="user-image">
+                                        <img src="../../Resources/Img/athavan.jpg">
+                                    </div>
+
+                                    <div class="username">
                                         <p>Mr.ATHAVAN T </p>
                                     </div>
                                     <div class="location">
@@ -167,77 +220,23 @@
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                                     <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
+                                        <img src="../../Resources/Img/indika.jpg">
                                     </div>
 
                                     <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
+                                            <p>Mr.INDIKA A  </p>
                                     </div>
                                     <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
+                                        <p>Badulla,Srilanka</p>
+                                        <p>www.Roopamandira.lk</p>
                                     </div>
 
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                        <p>Wild life</p>
-                                        <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
-                                    </div>
-                                </div> 
-                            </div>
-                            <div class="profilebox">
-                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
-
-                                    <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
-                                    </div>
-
-                                    <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
-                                    </div>
-                                    <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
-                                    </div>
-
-                                </div>
-                                <div class="bio"> 
-                                    <div>
-                                        <p>Wild life</p>
-                                        <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
-                                    </div>
-                                </div> 
-                            </div>
-
-                        </div>
-                        <div class="column">
-                            <div class="profilebox">
-                                <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
-
-                                    <div class="user-image">
-                                        <img src="../../Resources/Img/athavan.jpg">
-                                    </div>
-
-                                    <div class="username">
-                                        <p>Mr.ATHAVAN T </p>
-                                    </div>
-                                    <div class="location">
-                                        <p>Jaffna,Srilanka</p>
-                                        <p>www.Ikongraphy.lk</p>
-                                    </div>
-
-                                </div>
-                                <div class="bio"> 
-                                    <div>
-                                        <p>Wild life</p>
-                                        <p>Portraits</p>
-                                        <p>Landscape</p>
-                                        <p>Astro</p>
+                                        <p>Wedding</p>
+                                        <p>Celebrity Shooting</p>
+                                        <p>Storybooks</p>
                                     </div>
                                 </div> 
                             </div>
