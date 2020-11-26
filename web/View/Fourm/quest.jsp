@@ -102,7 +102,7 @@
             <span class="close2">&times;</span>
             <div class="answerqn">
                 <p>a space through which light passes in an optical or photographic instrument, especially the variable opening by which light enters a camera. In iOS you can not control the aperture of camera of device before iPhone 7. In latest device I am not sure. </p> 
-                <span>Posted by: Hiruna Keshara</span> <span id="time">14 Feb 2020</span>
+                <span>Posted by: Hiruna</span> <span id="time">14 Feb 2020</span>
                 <div class="updown">
                     <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
                     <span id="up">103</span> 
