@@ -55,6 +55,7 @@
                 <li><a href="#" type="button" id="notaccepted" onclick="navigation('notaccepted')">Not Accepted</a></li>
                 <li><a href="#" type="button" id="reviewed" onclick="navigation('reviewed')">Reviewed</a></li>
                 <li><a href="#" type="button" id="upload-photo" >Upload</a> </li>
+                <li id="earnings">Total Earning: $720</li>
             </ul>     
 
             <div id="upload-modal" class="upload-modal">
@@ -358,64 +359,79 @@
 
             <div class="image-box-accepted">
 
-                <img src="../../Resources/Img/profile/n9.jpg" id="re9" onclick="clickimage('re9')">
-                <img src="../../Resources/Img/profile/n10.jpg" id="re10" onclick="clickimage('re10')" >
-                <img src="../../Resources/Img/profile/n11.jpg" id="re11" onclick="clickimage('re11')">
-                <img src="../../Resources/Img/profile/n12.jpg" id="re12" onclick="clickimage('re12')">
+                <img src="../../Resources/Img/profile/a1.jpg" id="re9" onclick="clickimage('re9')">
+                <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
+                <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
+                <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">
 
             </div>
 
             <div class="accepted-details">
-                <div id="image5">
+                <div id="image9">
                     <div class="details-accepted-title">
-                        <h3>White Tiger</h3> 
-                        <p>Submitted 2 days ago </p>
+                        <h3>Sripada</h3> 
+                        <p>Submitted on 12th Nov 2018 </p>
                     </div>
                     <div class="details-accepted">                    
-                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
-                        <span>Image with Water Mark</span>
+
+
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;5 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $50</span>
                         <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716797169</span> </p>
                         <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_8756.jpg</span> </p>
 
                     </div>
                 </div>
 
-                <div id="image6" style='display:none;'>
+                <div id="image10" style='display:none;'>
                     <div class="details-accepted-title">
-                        <h3>Lord Murugan</h3> 
-                        <p>Submitted on Oct 20 2020</p>
+                        <h3>Beach Side</h3> 
+                        <p>Submitted on Oct 20 2019</p>
                     </div>
                     <div class="details-accepted">                    
-                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
-                        <span>Image with Noise</span>
-                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>312447169</span> </p>
-                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_4256.jpg</span> </p>
+
+
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;2 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$20</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $20</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>713456169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_2356.jpg</span> </p>
+
                     </div>
                 </div>
 
-                <div id="image7" style='display:none;'>
+                <div id="image11" style='display:none;'>
                     <div class="details-accepted-title">
-                        <h3>Delft, Jaffna</h3> 
-                        <p>Submitted 15 days ago</p>
+                        <h3>Pelican</h3> 
+                        <p>Submitted 25 days ago</p>
                     </div>
                     <div class="details-accepted">                    
-                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
-                        <span>Low Resolution Image</span>
-                        <p>File ID(s): <span style='color: #9D9D9D;  background-color: transparent; padding: 0; margin: 0;'>905892469</span> </p>
-                        <p>Original name(s) : <span style='color: #9D9D9D;  background-color: transparent; padding: 0; margin: 0;'>IGP_7847.jpg</span> </p>
+
+
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;25 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $250</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>457897169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_9056.jpg</span> </p>
+
                     </div>
                 </div>
 
-                <div id="image8" style='display:none;'>
+                <div id="image12" style='display:none;'>
                     <div class="details-accepted-title">
-                        <h3>Green Land</h3> 
-                        <p>Submitted on April 30 2020 </p>
+                        <h3>Kovil</h3> 
+                        <p>Submitted on April 23 2019 </p>
                     </div>
                     <div class="details-accepted">                    
-                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
-                        <span>No Release Submitted</span>
-                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>800234169</span> </p>
-                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>IGP_8925.jpg</span> </p>
+
+
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;20 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$20</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $400</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716426769</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_3456.jpg</span> </p>
+
                     </div>
                 </div>
             </div>

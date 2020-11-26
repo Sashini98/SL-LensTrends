@@ -651,11 +651,24 @@ input:checked + label{
 }
 
 .accepted-details .details-accepted span {
-    background-color: #ff6969;
+    background-color: #1d67b1;
     color: white;
     font-family: 'Didact Gothic', sans-serif;
     text-align: center;
-    padding: 2% 5%;
+    padding: 2% 3%;
+    /*width: 80%;*/
     margin-top: 4%;
     margin-bottom: 5%;
+}
+
+#earnings {
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
+    background-color: #ff2e40;
+    padding: 0.5%;
+    float: right;
+    margin-right: 4%;
+    font-weight: bold;
+    font-size: 110%;
+    /*margin-top: auto;*/
 }
