@@ -281,7 +281,7 @@ function updatedata(field) {
         request.send("usercity=" + city);
 
     } else if (field == "ic19") {
-        var province = document.getElementById("city").value;
+        var province = document.getElementById("province").value;
 
         var request = new XMLHttpRequest();
 
