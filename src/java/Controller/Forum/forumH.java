@@ -88,7 +88,7 @@ public class forumH extends HttpServlet {
             request.setAttribute("questions", a);
             request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
         } catch (Exception e) {
-e.printStackTrace();
+            e.printStackTrace();
         }
     }
 

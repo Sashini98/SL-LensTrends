@@ -100,7 +100,7 @@ public class Login extends HttpServlet {
                             } else if (page.equals("fhbq")) {
                                 response.sendRedirect("View/Fourm/BrowseQn.jsp");
                             } else if (page.equals("me")) {
-                                response.sendRedirect("View/Events/MainEventHomes.jsp");
+                                response.sendRedirect("View/Events/MainEventHome.jsp");
                             } else if (page.equals("cspp")) {
                                 response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
                             } else if (page.equals("nh")) {

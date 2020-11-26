@@ -55,7 +55,7 @@ public class ClientDaoImpl implements ClientDao {
 
     @Override
     public Client getClientbyEmail(String email) throws SQLException {
-        ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "'");
+        ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND ActiveStatus = 1");
         if (client.next()) {
             Client c = new Client();
             c.setClientId(client.getString("Client_Id"));
@@ -79,7 +79,7 @@ public class ClientDaoImpl implements ClientDao {
 
     @Override
     public Client getClientbyEmailAndPassword(String email, String password) throws SQLException {
-            ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND Password = '" + password + "' ");
+            ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND Password = '" + password + "' AND ActiveStatus = 1 ");
         if (client.next()) {
             Client c = new Client();
             c.setClientId(client.getString("Client_Id"));

@@ -11,8 +11,8 @@
 <%
     boolean logged = (Boolean) request.getAttribute("logged");
     Photographer p = new Photographer();
-if (logged) {
-        p = (Photographer)session.getAttribute("loggedPhotographer");
+    if (logged) {
+        p = (Photographer) session.getAttribute("loggedPhotographer");
     }
 %>
 
@@ -102,7 +102,7 @@ if (logged) {
                 <%
                 } else {
                 %>
-                <h1 class="WelcomeText1">Hello <%= p.getFname()  %>!</h1>
+                <h1 class="WelcomeText1">Hello <%= p.getFname()%>!</h1>
 
                 <h3 class="WelcomeText2">IT'S NICE TO MEET YOU</h3>
 
@@ -217,29 +217,32 @@ if (logged) {
                         <h4>Our Vision</h4>
 
                     </div>
-                    <div class="about-body">
-                        <p class="text-muted">
-                            Our vision is to
+                    <div class="about-body" style="font-size: 14px;">
+                        <p>
+                            Be the leading professional source of creating
+                        </p>
+                        <p>
+                            a worldwide client base for Sri Lankan photographers
                         </p>
                     </div>
 
                 </div>
                 <div>
                     <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                            <h4>Our Mission</h4>
-                        </div>
-                        <div  style="display: flex; flex-direction: column; align-items: flex-end; font-size: 14px;">
-                            <p>
-                                To create a vibrant community of successful 
-                            </p>
-                            <p>
-                                professional SriLankan photographers and make 
-                            </p>
-                            <p>
-                                it easy for clients to access their work.
-                            </p>
-                            
-                        </div>
+                        <h4>Our Mission</h4>
+                    </div>
+                    <div  style="display: flex; flex-direction: column; align-items: flex-end; font-size: 14px;">
+                        <p>
+                            To create a vibrant community of successful 
+                        </p>
+                        <p>
+                            professional SriLankan photographers and make 
+                        </p>
+                        <p>
+                            it easy for clients to access their work.
+                        </p>
+
+                    </div>
 
                 </div>
                 <div style="z-index: 10;" class="aboutItems">

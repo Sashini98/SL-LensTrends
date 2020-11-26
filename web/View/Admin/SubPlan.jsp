@@ -34,7 +34,7 @@
                     <p>0$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
 
-                <div class="arrow">
+                <div class="arrow"  onclick="viewEdit();">
                     <a id="free"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <p>40$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
 
-                <div class="arrow">
+                <div class="arrow" onclick="viewEdit();">
                     <a type="button" id="standard"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
 
@@ -61,7 +61,7 @@
                     <p>85$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
 
-                <div class="arrow">
+                <div class="arrow"  onclick="viewEdit();">
                     <a type="button" id="premium"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
             </div>            
@@ -69,7 +69,7 @@
 
         <div id="myModal" class="modal">
             <div class="modal-content">
-                <span class="close">&times;</span>
+                <span class="close" onclick="removeEdit();">&times;</span>
                 <div class="outterdiv">
                     <form>
                         <div class="container">
@@ -88,7 +88,6 @@
                             <div class="clearfix">
                                 <button type="submit" class="updatebtn">Update</button>
                                 <button type="button" class="closebtn">Close</button>
-
                             </div>
                         </div>
                     </form>
