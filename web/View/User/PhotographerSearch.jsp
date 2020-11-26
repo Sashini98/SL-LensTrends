@@ -252,6 +252,9 @@
                                 </div>
                                 <div class="bio"> 
                                     <div>
+                                         <p>Wedding</p>
+                                        <p>Celebrity Shooting</p>
+                                        <p>Storybooks</p>
                                     </div>
                                 </div> 
                             </div>
@@ -301,3 +304,4 @@
         </script>
     </body>
 </html>
+
