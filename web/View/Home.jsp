@@ -81,8 +81,8 @@
             if (!logged) {
         %>
         <div class="HeaderPart" id="HeaderPart">
-            <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid" class="bgvideo">
-                <source src="../Resources/video/check.mp4" type="video/mp4">
+            <video playsinline autoplay muted loop  id="bgvid" class="bgvideo">
+                <source src="<%= request.getContextPath()%>/Resources/video/check.mp4" type="video/mp4">
             </video>
             <%
             } else {
