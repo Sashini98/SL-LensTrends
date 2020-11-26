@@ -23,13 +23,13 @@
         <link type="text/css" rel="stylesheet" href="<%= request.getContextPath()%>/CSS/header.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Lobster+Two:wght@700&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/9dd75719fe.js" crossorigin="anonymous"></script>
         <title>SL-Lesns Trends</title>
 
     </head>
-    <body>
+    <body style="background-color: RGB(248,249,250);">
 
         <div class="fixedheader" style="z-index: 20;">  
             <div class="pageheader">
@@ -82,7 +82,7 @@
         %>
         <div class="HeaderPart" id="HeaderPart">
             <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid" class="bgvideo">
-                <source src="../Resources/video/bg.mp4" type="video/mp4">
+                <source src="../Resources/video/check.mp4" type="video/mp4">
             </video>
             <%
             } else {
@@ -97,9 +97,9 @@
                     <%
                         if (!logged) {
                     %>
-                    <h1 class="WelcomeText1">Welcome To SL-Lens Trends!</h1>
+                    <h1 class="WelcomeText1">We are Sl-Lens Trends!</h1>
 
-                    <h3 class="WelcomeText2">IT'S NICE TO MEET YOU</h3>
+                    <h3 class="WelcomeText2" style="margin-top:1%;">IT'S NICE TO MEET YOU</h3>
                     <%
                     } else {
                     %>
@@ -124,7 +124,7 @@
                         </span>
                         <br />
                         <br />
-                        <span style="font-size: 20px;">Search Photographs</span>
+                        <span style="font-size: 20px; font-weight: bold;">Search Photographs</span>
                         <br />
                         <span>
                             Find the most captivating photographs to suite your search. 
@@ -137,7 +137,7 @@
                         </span>
                         <br />
                         <br />
-                        <span style="font-size: 20px;">View Photographers</span>
+                        <span style="font-size: 20px; font-weight: bold;">View Photographers</span>
                         <br />
                         <span>
                             Search the best talent pool of photographers in Sri Lanka.
@@ -150,7 +150,7 @@
                         </span>
                         <br />
                         <br />
-                        <span style="font-size: 20px;">Post Your Events</span>
+                        <span style="font-size: 20px; font-weight: bold;">Post Your Events</span>
                         <br />
                         <span>
                             Let us know about your event. We got you covered. 
@@ -167,7 +167,7 @@
                         </span>
                         <br />
                         <br />
-                        <span style="font-size: 20px;">Get Answers For Your Questions</span>
+                        <span style="font-size: 20px; font-weight: bold;">Get Answers For Your Questions</span>
                         <br />
                         <span>
                             Ask away your questions to get expertise answers.   
@@ -180,7 +180,7 @@
                         </span>
                         <br />
                         <br />
-                        <span style="font-size: 20px;">Connect Photographers</span>
+                        <span style="font-size: 20px; font-weight: bold;">Connect Photographers</span>
                         <br />
                         <span>
                             Getting touch with your photographer once your event is approved.
@@ -196,12 +196,12 @@
                     <div>
                         <div class="about-heading" style="display: flex; flex-direction: column; align-items: flex-end; ">
                             <h4>2020</h4>
-                            <h4 class="subheading">Our Humble Beginning</h4>
+                            <h4 class="subheading" style="color:#415daa;">Our Humble Beginning</h4>
                         </div>
 
                     </div>
                     <div style="z-index: 10;" class="aboutItems">
-                        <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/germ-plant-seedling-live.jpg"/>
+                        <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/start.svg"/>
 
                     </div>
                     <div>
@@ -211,12 +211,12 @@
 
                     </div>
                     <div style="z-index: 10;" class="aboutItems">
-                        <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/Our-Mission.jpg"/>
+                        <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/vision.svg"/>
 
                     </div>
                     <div>
                         <div>
-                            <h4>Our Vision</h4>
+                            <h4 style="color:#415daa;">Our Vision</h4>
 
                         </div>
                         <div >
@@ -233,7 +233,7 @@
                     </div>
                     <div>
                         <div style="display: flex; flex-direction: column; align-items: flex-end;">
-                            <h4>Our Mission</h4>
+                            <h4 style="color:#415daa;">Our Mission</h4>
                         </div>
                         <div  style="display: flex; flex-direction: column; align-items: flex-end; font-size: 14px;">
                             <p>
@@ -245,12 +245,12 @@
                             <p>
                                 it easy for clients to access their work.
                             </p>
-                            
+
                         </div>
 
                     </div>
                     <div style="z-index: 10;" class="aboutItems">
-                        <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/mission.jpg"/>
+                        <img class="aboutImg" src="<%= request.getContextPath()%>/Resources/Img/mission.svg"/>
 
                     </div>
                     <div>
@@ -260,8 +260,8 @@
 
                     </div>
                     <div style="z-index: 10;" class="aboutItems">
-                        <div  class="abouttext">
-                            <h4>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h4>
+                        <div  class="abouttext" style="color:white;">
+                            <h2>Be Part<br>&nbsp;Of Our<br>&nbsp;Story!</h2>
                         </div>
                     </div>
                     <div>
@@ -346,7 +346,7 @@
                     </div>
                     <div style="width: 50%; display: flex; flex-direction: column;" >
                         <div class="form-group" style="height: 100%;">
-                            <textarea class="inputField" style="height: 100%;" placeholder="Your Message *"></textarea>
+                            <textarea class="inputField" style="height: 100%; padding-top: 3%;" placeholder="Your Message *"></textarea>
 
                         </div>
                     </div>
