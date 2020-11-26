@@ -42,30 +42,30 @@
 
         <div class="side-nav">
 
-            <a href="../Home.jsp"><img src="../../Resources/Img/7.png"></a>
+            <a href=""><img src="../../Resources/Img/7.png"></a>
                 <%
                     if (type.equalsIgnoreCase("Main")) {
                 %>
-            <div id="summaryDiv"  onclick="show('summary')" onmouseover="summaryButtonChange('summaryDiv')" onmouseout="summaryButtonBack('summaryDiv')" class="summary">
+            <div id="summaryDiv"  onmouseover="summaryButtonChange('summaryDiv')" onmouseout="summaryButtonBack('summaryDiv')" onclick="show('summary')" class="summary">
                 <img id="summaryIcon" src="../../Resources/Img/summary.svg" />
                 <p><a href="#" type="button"  id="summarytext">Dashboard</a></p>
             </div>
             <%
                 }
             %>
-            <div id="photomanageDiv" onclick="show('photomanage')" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" class="photomanage">
+            <div id="photomanageDiv" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" onclick="show('photomanage')" class="photomanage">
                 <img id="photomanageIcon" src="../../Resources/Img/photomanagement.svg" />
                 <p><a href="#" type="button"  id="photomanagement">Reported Photos</a></p>
                 <label>4</label>
             </div>
 
-            <div id="photoapprovalDiv" onclick="show('photoapproval')" onmouseover="photoapprovalButtonChange('photoapprovalDiv')" onmouseout="photoapprovalButtonBack('photoapprovalDiv')" class="photoapproval">
+            <div id="photoapprovalDiv" onmouseover="photoapprovalButtonChange('photoapprovalDiv')" onmouseout="photoapprovalButtonBack('photoapprovalDiv')" onclick="show('photoapproval')" class="photoapproval">
                 <img id="photoapprovalIcon" src="../../Resources/Img/photoreview.svg" />
                 <p><a href="#" type="button"  id="photo-approval">Photo Approval</a></p>
                 <label>4</label>
             </div>
 
-            <div id="forumDiv" onclick="show('forum')" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" class="forum">
+            <div id="forumDiv" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" onclick="show('forum')" class="forum">
                 <img id="forumIcon" src="../../Resources/Img/forummangement.svg" />
                 <p><a href="#" type="button"  id="forummanage">Reported Forum</a></p>
                 <label>3</label>
@@ -74,7 +74,7 @@
             <%
                 if (type.equalsIgnoreCase("Main")) {
             %>
-            <div id="userDiv" onclick="show('user')"  onmouseover="userButtonChange('userDiv')" onmouseout="userButtonBack('userDiv')" class="user">
+            <div id="userDiv" onmouseover="userButtonChange('userDiv')" onmouseout="userButtonBack('userDiv')" onclick="show('user')"  class="user">
                 <img id="userIcon" src="../../Resources/Img/user.svg" />
                 <p><a href="#" type="button"  id="usermanage">Manage User</a></p>
                 <label>2</label>
@@ -83,18 +83,18 @@
                 }
             %>
 
-            <div id="notifyDiv" onclick="show('notification')" onmouseover="notifyButtonChange('notifyDiv')" onmouseout="notifyButtonBack('notifyDiv')" class="notification">
+            <div id="notifyDiv"  onmouseover="notifyButtonChange('notifyDiv')" onmouseout="notifyButtonBack('notifyDiv')" onclick="show('notification')" class="notification">
                 <img id="notificationIcon" src="../../Resources/Img/notify.svg" />
                 <p><a href="#" type="button"  id="notify">Notification</a></p>
                 <label>2</label>
             </div>
 
-            <div id="subscriptionDiv" onclick="show('subscription')" onclick="show('subscription')" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" class="subscription">
+            <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">
                 <img id="subscriptionIcon" src="../../Resources/Img/settings.svg" />
                 <p><a href="#" type="button"  id="subscriptiontext">Subscription Plans</a></p>
             </div>
 
-            <div id="settingDiv" onclick="show('setting')"  onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" class="setting">
+            <div id="settingDiv"  onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" onclick="show('setting')"  class="setting">
                 <img id="settingIcon" src="../../Resources/Img/settings.svg" />
                 <p><a href="#" type="button"  id="settingtext">User Account</a></p>
             </div>
