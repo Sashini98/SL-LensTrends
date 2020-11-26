@@ -365,6 +365,61 @@
 
             </div>
 
+            <div class="accepted-details">
+                <div id="image5">
+                    <div class="details-accepted-title">
+                        <h3>White Tiger</h3> 
+                        <p>Submitted 2 days ago </p>
+                    </div>
+                    <div class="details-accepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>Image with Water Mark</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716797169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_8756.jpg</span> </p>
+
+                    </div>
+                </div>
+
+                <div id="image6" style='display:none;'>
+                    <div class="details-accepted-title">
+                        <h3>Lord Murugan</h3> 
+                        <p>Submitted on Oct 20 2020</p>
+                    </div>
+                    <div class="details-accepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>Image with Noise</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>312447169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_4256.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image7" style='display:none;'>
+                    <div class="details-accepted-title">
+                        <h3>Delft, Jaffna</h3> 
+                        <p>Submitted 15 days ago</p>
+                    </div>
+                    <div class="details-accepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>Low Resolution Image</span>
+                        <p>File ID(s): <span style='color: #9D9D9D;  background-color: transparent; padding: 0; margin: 0;'>905892469</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;  background-color: transparent; padding: 0; margin: 0;'>IGP_7847.jpg</span> </p>
+                    </div>
+                </div>
+
+                <div id="image8" style='display:none;'>
+                    <div class="details-accepted-title">
+                        <h3>Green Land</h3> 
+                        <p>Submitted on April 30 2020 </p>
+                    </div>
+                    <div class="details-accepted">                    
+                        <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
+                        <span>No Release Submitted</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>800234169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>IGP_8925.jpg</span> </p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>

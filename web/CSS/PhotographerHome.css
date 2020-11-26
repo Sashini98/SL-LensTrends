@@ -7,7 +7,7 @@
 
 
 .HeaderPart{
- 
+
     background-size: cover;
     width: 100%;
     height: 750px;
@@ -19,23 +19,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 45%;
 }
 
 .WelcomeText1{
-    font-family: 'Sansita Swashed', cursive;
-    font-size: 56px;
+    font-family: 'Lobster Two', cursive;
+    font-size: 450%;
+    font-weight: 700;
     color: white;
+    margin-top: 4%;
 }
 
 .WelcomeText2{
+    margin-top: 2%;
     font-family: 'Roboto Slab', serif;
     font-size: 34px;
     color: #0092cc;
 }
 
 
-.WelcomeBtn{
-    /*width: 75%;*/
+/*.WelcomeBtn{
+    width: 75%;
     text-decoration: none;
     margin-top: 20px;
     padding: 20px 30px;
@@ -47,10 +51,25 @@
     font-size: 20px;
     outline: none;
     cursor: pointer;
+}*/
+
+.WelcomeBtn{
+    /*width: 75%;*/
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color:  RGB(13,102,208);
+    border: none;
+    color: #f9c747;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
 }
 
 .services{
-    height: 850px;
+    height: 700px;
     padding: 100px 100px;
     background-color: RGB(248,249,250);
 }
@@ -102,18 +121,18 @@
 .abouttext{
     height: 150px;
     width: 150px;
-    border: 10px solid RGB(187,187,187);
+    border: 10px solid #f7c947;
     border-radius: 50%;
     line-height: 1.5; 
     box-sizing : border-box;
-    padding-top: 23px; 
+    padding-top: 11px; 
     text-align: center;
-    background-color: RGB(254,209,54);
+    background-color: #1d67b1;
 }
 
 .team{
     height: 800px;
-    padding-top: 100px;
+    padding-top: 70px;
     background-color: RGB(248,249,250);
 }
 
@@ -138,11 +157,14 @@
 }
 
 .ContactUs{
-    height: 700px;
-    padding-top: 100px;
-    background :  url("../Resources/Img/map-image.png") no-repeat center;
+    height: 500px;
+    padding-top: 80px;
+    /*background-image: url("../Resources/Img/map.svg") no-repeat center;*/
     background-size: cover;
     background-color: RGB(33,37,41);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: -8%;
 }
 
 
@@ -150,8 +172,13 @@
 
 .inputField{
     width: 100%;
-    height: 60px;
-    border-radius: 10px;
+    height: 50px;
+    border: 1px solid rgba(12, 18, 28, 0.12);
+    border-radius: 5px;
+    outline: none;
+    padding-left: 5%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 110%;
 }
 
 .form-group{
