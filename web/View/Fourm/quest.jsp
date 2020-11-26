@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 
 <% 
-    
+    String loggedAs = (String) request.getAttribute("loggedAs");
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("questions");
     for (int i = 0; i < s.size() / 6; i++) {      
         
@@ -29,15 +29,14 @@
                 <label><a href="#" type="button"><%= s.get((i*6)+2) %></a></label> 
                 <span>Posted by: <%= s.get((i*6)+3) %></span> <span id="time"><%= s.get((i*6)+4) %></span>   
                 <div class="updown">
-<!--                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                    <span id="up">300</span>
-                    <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-                    <span id="down">126</span>-->
+
                 </div>
                 <div class="answer">
                     <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i*6)+5) %> answers</a>
                     <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
-                    <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
+                        
+                        
+                                        <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
                 </div>
 
                 <div id="myModal1" class="modal">
