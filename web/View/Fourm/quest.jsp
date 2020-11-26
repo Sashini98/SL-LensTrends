@@ -15,18 +15,16 @@
 
     Photographer loggedPhotographer = (Photographer) session.getAttribute("loggedPhotographer");
     String loggedAs = "nl";
-     if (loggedPhotographer != null) {
+    if (loggedPhotographer != null) {
         loggedAs = "p";
 
-    } 
-
+    }
 
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("questions");
     for (int i = 0; i < s.size() / 6; i++) {
 
 
 %>
-
 <br><div class="searchInput">
     <input type="text" placeholder="Search for Questions" >      
     <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
@@ -38,20 +36,18 @@
     <label><a href="#" type="button"><%= s.get((i * 6) + 2)%></a></label> 
     <span>Posted by: <%= s.get((i * 6) + 3)%></span> <span id="time"><%= s.get((i * 6) + 4)%></span>   
     <div class="updown">
-        <!--                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                            <span id="up">300</span>
-                            <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-                            <span id="down">126</span>-->
+
     </div>
     <div class="answer">
         <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i * 6) + 5)%> answers</a>
         <%
-            if (loggedAs.equals("p")) {
+            if (loggedAs.equalsIgnoreCase("p")) {
         %>
         <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
         <%
             }
         %>
+
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
     </div>
 
