@@ -16,7 +16,7 @@ function notifyButtonBack() {
 
 function subscriptionButtonChange() {
 
-    document.getElementById("subscriptionIcon").src = "../../Resources/Img/notify-white.svg";
+    document.getElementById("subscriptionIcon").src = "../../Resources/Img/subscription-white.svg";
     document.getElementById("subscriptiontext").style.color = "white";
 //    document.getElementById("notifyDiv").style.backgroundColor = "red";
 
@@ -25,7 +25,7 @@ function subscriptionButtonChange() {
 
 function subscriptionButtonBack() {
 
-    document.getElementById("subscriptionIcon").src = "../../Resources/Img/notify.svg";
+    document.getElementById("subscriptionIcon").src = "../../Resources/Img/subscription.svg";
     document.getElementById("subscriptiontext").style.color = "black";
 //    document.getElementById("notifyDiv").style.backgroundColor = "white";
 }
