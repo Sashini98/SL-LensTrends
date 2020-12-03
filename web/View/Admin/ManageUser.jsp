@@ -76,7 +76,7 @@
             <div class="search" style="margin:auto;max-width:300px;font-family: 'Poppins', sans-serif; ">
                 <input id="deactivateUser" type="text" placeholder="Search">
                 <button onclick="viewResults()">Search</button><br><br>
-                <label id="deacError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label>
+                <label id="deacError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label><br>
             </div>
 
             <br><br><br>
@@ -140,18 +140,23 @@
             <h2 style="text-align: center;">Activate Users</h2>
 
             <div class="search" style="margin:auto;max-width:300px">
-                <input id="deactivateUser" type="text" placeholder="Search">
-                <button>Search</button><br>
+                <input id="activateUser" type="text" placeholder="Search">
+                <button onclick="viewUser()">Search</button><br>
+                <label id="acError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label><br>
             </div>
 
             <br><br><br>
-            <table  width="100%">
+            <table id="activateUserTable"  width="100%">
                 <thead class="table">
                 <th class="th"> ID </th>
                 <th class="th"> NAME </th>
                 <th class="th"> TYPE </th>
                 <th class="th"> OPTION </th>
                 </thead>
+                
+                <tbody id="activateUserTableBody" style="font-family: 'Poppins', sans-serif; text-align: center">
+
+                </tbody>
 
             </table><br><br>
 
@@ -166,7 +171,7 @@
                 </tr>
                 <tr>
                     <th align="left">First Name</th>
-                    <td><input type="text" name="finame" id="fname" disabled=""></td>
+                    <td><input type="text" name="fname" id="fname" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Last Name</th>
@@ -191,8 +196,9 @@
             </table>
             <br>
             <div class="clearfix">
-                <button type="submit" class="btn">Activate</button>
-                <button type="submit" class="btn">Clear Fields</button>
+                <button class="btn" onclick="viewActivate()"  id="activate">Activate</button>
+                <button onclick="clearFieldsofActivateUsers()" class='btn' id="activate">Clear Fields</button>
+
             </div>
 
 

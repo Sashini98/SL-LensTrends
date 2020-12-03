@@ -1,21 +1,3 @@
-var modal = document.getElementById("myModal");
-
-var btn = document.getElementById("vie");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function () {
-    modal.style.display = "block";
-}
-span.onclick = function () {
-    modal.style.display = "none";
-}
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
 function viewResults() {
 
     var search = document.getElementById("deactivateUser").value;
@@ -161,3 +143,4 @@ function clearFieldsofDeactivateUsers() {
     document.getElementById("province").value = "";
     document.getElementById("gender").value = "";
 }
+
