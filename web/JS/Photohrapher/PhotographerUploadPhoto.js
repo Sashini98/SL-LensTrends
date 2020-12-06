@@ -200,6 +200,10 @@ function clickimage(click) {
         document.getElementById("re11").style.border = "none";
         document.getElementById("re12").style.transform = "";
         document.getElementById("re12").style.border = "none";
+        document.getElementById("image9").style.display = "block";
+        document.getElementById("image10").style.display = "none";
+        document.getElementById("image11").style.display = "none";
+        document.getElementById("image12").style.display = "none";
     } else if (click == "re10") {
         document.getElementById("re9").style.transform = "";
         document.getElementById("re9").style.border = "none";
@@ -209,6 +213,10 @@ function clickimage(click) {
         document.getElementById("re11").style.border = "none";
         document.getElementById("re12").style.transform = "";
         document.getElementById("re12").style.border = "none";
+        document.getElementById("image10").style.display = "block";
+        document.getElementById("image9").style.display = "none";
+        document.getElementById("image11").style.display = "none";
+        document.getElementById("image12").style.display = "none";
     } else if (click == "re11") {
         document.getElementById("re10").style.transform = "";
         document.getElementById("re10").style.border = "none";
@@ -218,6 +226,10 @@ function clickimage(click) {
         document.getElementById("re9").style.border = "none";
         document.getElementById("re12").style.transform = "";
         document.getElementById("re12").style.border = "none";
+        document.getElementById("image11").style.display = "block";
+        document.getElementById("image10").style.display = "none";
+        document.getElementById("image9").style.display = "none";
+        document.getElementById("image12").style.display = "none";
     } else if (click == "re12") {
         document.getElementById("re10").style.transform = "";
         document.getElementById("re10").style.border = "none";
@@ -227,6 +239,10 @@ function clickimage(click) {
         document.getElementById("re9").style.border = "none";
         document.getElementById("re11").style.transform = "";
         document.getElementById("re11").style.border = "none";
+        document.getElementById("image12").style.display = "block";
+        document.getElementById("image10").style.display = "none";
+        document.getElementById("image11").style.display = "none";
+        document.getElementById("image9").style.display = "none";
     }
 }
 

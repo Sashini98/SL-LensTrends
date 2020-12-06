@@ -90,7 +90,7 @@
             </div>
 
             <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">
-                <img id="subscriptionIcon" src="../../Resources/Img/settings.svg" />
+                <img id="subscriptionIcon" src="../../Resources/Img/subscription.svg" />
                 <p><a href="#" type="button"  id="subscriptiontext">Subscription Plans</a></p>
             </div>
 
