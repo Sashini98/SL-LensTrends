@@ -160,4 +160,29 @@ public class ClientDaoImpl implements ClientDao {
        
     }
 
+    @Override
+    public Client getDeactivatedClientbyEmail(String email) throws SQLException {
+     
+        ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND ActiveStatus = 0");
+        if (client.next()) {
+            Client c = new Client();
+            c.setClientId(client.getString("Client_Id"));
+            c.setEmail(client.getString("Email"));
+            c.setPassword(client.getString("Password"));
+            c.setFname(client.getString("Fname"));
+            c.setLname(client.getString("Lname"));
+            c.setAddress_no(client.getString("Address_No"));
+            c.setCity(client.getString("City"));
+            c.setProvince(client.getString("Province"));
+            c.setGenderId(client.getInt("Gender_Id"));
+            c.setActiveStatus(client.getInt("ActiveStatus"));
+
+            return c;
+
+        } else {
+            return null;
+    }
+    }
 }
+
+

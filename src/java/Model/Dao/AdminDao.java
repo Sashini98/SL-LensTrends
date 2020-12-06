@@ -28,6 +28,7 @@ public interface AdminDao {
     
 
     public Admin getAdminByEmail(String email) throws SQLException;
+    public Admin getAdminById (String adminId) throws SQLException;
     public Admin getAdminByEmailAndPassword(String email, String password) throws SQLException;
 
     public String getLastId() throws SQLException;
