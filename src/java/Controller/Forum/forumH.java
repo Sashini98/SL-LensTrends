@@ -81,7 +81,7 @@ public class forumH extends HttpServlet {
                 a.add(date);
 
                 a.add(cnt + "");
-
+                a.add(q.getquestionId()+""); 
             }
 //           
 
