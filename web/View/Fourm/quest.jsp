@@ -21,7 +21,7 @@
     }
 
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("questions");
-    for (int i = 0; i < s.size() / 6; i++) {
+    for (int i = 0; i < s.size() / 7; i++) {
 
 
 %>
@@ -31,19 +31,19 @@
 </div>
 
 <div class="questions">                
-    <h2><%= s.get(i * 6)%></h2>
-    <p><%= s.get((i * 6) + 1)%></p>
-    <label><a href="#" type="button"><%= s.get((i * 6) + 2)%></a></label> 
-    <span>Posted by: <%= s.get((i * 6) + 3)%></span> <span id="time"><%= s.get((i * 6) + 4)%></span>   
+    <h2><%= s.get(i * 7)%></h2>
+    <p><%= s.get((i * 7) + 1)%></p>
+    <label><a href="#" type="button"><%= s.get((i * 7) + 2)%></a></label> 
+    <span>Posted by: <%= s.get((i * 7) + 3)%></span> <span id="time"><%= s.get((i * 7) + 4)%></span>   
     <div class="updown">
 
     </div>
     <div class="answer">
-        <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i * 6) + 5)%> answers</a>
+        <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i * 7) + 5)%> answers</a>
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
-        <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
+        <a href="AnswerQues.jsp" type="button" id="myAns1" onclick="answ(<%= s.get((i * 7) + 6)%>)">Answer Now</a>
         <%
             }
         %>
@@ -135,5 +135,7 @@
 
     </div>
 
-</div>
+</div
+
+ <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
 <%}%>
