@@ -26,20 +26,20 @@ public class ActivateUser extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        
-        String userid = request.getParameter("activate");
+        String userEmail = request.getParameter("activate");
         int status = 1;
         
         try{
-            char first = userid.charAt(0);
+            char first = userEmail.charAt(0);
             System.out.println(first);
             
             if(first=='C'){
                 ClientDao clientDao = new ClientDaoImpl();
-                clientDao.updateClientActiveStatus(status, userid);
+                clientDao.updateClientActiveStatus(status, userEmail);
                 
             }else{
                 PhotographerDao photographerDao = new PhotographerDaoImp();
-                photographerDao.updatePhotographerActiveStatus(status, userid);
+                photographerDao.updatePhotographerActiveStatus(status, userEmail);
             }
             
             response.getWriter().write("User Activated Successfully.");

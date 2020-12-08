@@ -9,7 +9,6 @@ import Controller.DaoImpl.AdminDaoImpl;
 import Model.Admin;
 import Model.Dao.AdminDao;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -111,7 +110,7 @@ public class AdminDetailsUpdate extends HttpServlet {
                 
                 response.getWriter().write("Mobile Updated Successfully");
             } catch (SQLException ex) {
-                response.getWriter().write("Error Updating Province");
+                response.getWriter().write("Error Updating Mobile");
                 ex.printStackTrace();
             }
         }

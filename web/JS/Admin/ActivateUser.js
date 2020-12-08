@@ -32,18 +32,18 @@ function viewUser() {
                         var td3 = document.createElement("td");
                         var td4 = document.createElement("td");
 
-                        var button1 = document.createElement("button");
-                        button1.innerHTML = "View";
-                        button1.style.backgroundColor = "blueviolet";
-                        button1.className = "btn1";
-                        button1.uid = user[j * 3];
+                        var button = document.createElement("button");
+                        button.innerHTML = "View";
+                        button.style.backgroundColor = "blueviolet";
+                        button.className = "btn1";
+                        button.id = user[j * 3];
 
                         td1.innerHTML = user[j * 3];
                         td2.innerHTML = user[(j * 3) + 1];
                         td3.innerHTML = user[(j * 3) + 2];
 
 
-                        td4.appendChild(button1);
+                        td4.appendChild(button);
 
                         tr.appendChild(td1);
                         tr.appendChild(td2);
@@ -52,7 +52,7 @@ function viewUser() {
 
                         document.getElementById("activateUserTableBody").appendChild(tr);
 
-                        setActionToBtn(button1.uid);
+                        setBtnAction(button.id);
                     }
                 }
             }
@@ -66,8 +66,8 @@ function viewUser() {
 
 }
 
-function setActionToBtn(uid) {
-    document.getElementById(uid).setAttribute('onclick', 'viewActivateUser(uid)');
+function setBtnAction(id) {
+    document.getElementById(id).setAttribute('onclick', 'viewActivateUser(id)');
 }
 
 function viewActivateUser(user_email) {
@@ -91,13 +91,13 @@ function viewActivateUser(user_email) {
                 document.getElementById("add").value = user.address_no;
                 document.getElementById("cit").value = user.city;
                 document.getElementById("pro").value = user.province;
-                var gender;
+                var gen;
                 if (user.genderId === 1) {
-                    gender = "Male"
+                    gen = "Male"
                 } else {
-                    gender = "Female"
+                    gen = "Female"
                 }
-                document.getElementById("gender").value = gender;
+                document.getElementById("gen").value = gen;
 
             }
         }
@@ -109,7 +109,7 @@ function viewActivateUser(user_email) {
 
 function viewActivate() {
 
-    var user_email = document.getElementById("userEmail").value;
+    var user_email = document.getElementById("uid").value;
 
     var request = new XMLHttpRequest();
 
@@ -119,7 +119,7 @@ function viewActivate() {
 
                 var responce = request.responseText;
                 alert(responce);
-                clearFieldsofDeactivateUsers();
+                clearFieldsofActivateUsers();
             }
         }
 
@@ -134,14 +134,14 @@ function viewActivate() {
 function clearFieldsofActivateUsers() {
     document.getElementById("activateUser").value = "";
     document.getElementById("activateUserTableBody").innerHTML = "";
-    document.getElementById("userid").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("fname").value = "";
-    document.getElementById("lname").value = "";
-    document.getElementById("addno").value = "";
-    document.getElementById("city").value = "";
-    document.getElementById("province").value = "";
-    document.getElementById("gender").value = "";
+    document.getElementById("uid").value = "";
+    document.getElementById("uemail").value = "";
+    document.getElementById("finame").value = "";
+    document.getElementById("laname").value = "";
+    document.getElementById("add").value = "";
+    document.getElementById("cit").value = "";
+    document.getElementById("pro").value = "";
+    document.getElementById("gen").value = "";
 }
 
 
