@@ -8,6 +8,8 @@ function popupanswer(btnid) {
         var modal = document.getElementById("myModal1");
 
         var span = document.getElementsByClassName("close1")[0];
+        
+        
 
     } else if (btnid == "myBtn2") {
         
@@ -84,6 +86,36 @@ function view()
 
 
     request.open("POST", "../../forumH", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+
+}
+
+function answer()
+{
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+       
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+
+
+                var responce = request.responseText;
+                
+                  document.getElementById("s").innerHTML=responce;
+
+
+            }
+        }
+
+    };
+
+
+
+
+    request.open("POST", "../../answer", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 
