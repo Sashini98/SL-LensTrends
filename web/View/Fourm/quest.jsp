@@ -42,40 +42,76 @@
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
-        <a href="AnswerQues.jsp" type="button" id="myAns1" >Answer Now</a>
+        <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
         <%
             }
         %>
-        <a href="#" type="button" id="myBtn1" onclick="popupanswer('myBtn1')"><%= s.get((i * 6) + 4)%> answers</a>
-        
+        <a href="#" type="button" id="answer_view" onclick="popupanswer()"><%= s.get((i * 6) + 4)%> answers</a>
+
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
     </div>
 
-    <div id="myModal1" class="modal">
+    <div id="answer1" class="modal">
 
         <!-- Modal content -->
-        <div name="ans" id="ans" onload="answer(<%= s.get((i * 6) + 5)%>)">
-<!--        <div class="modal-content">
-            <span class="close1">&times;</span>
 
-            <div class="answerqn">
-                <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
-                    Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
-                    I hope that iOS6 will give developers greater control as it is a PITA.</p> 
-                <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
-                <div class="updown">
-                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-                    <span id="up">43</span> 
-                    <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-                    <span id="down">456</span>
-                </div>
-                <div class="answer">
-                    <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">5 comments</a>
-                    <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
-                </div>
+        <div class="modal-content">
+            <span class="close_anwe">&times;</span>
+            
+            <div name="ans" id="ans">
+                <script>
+                    function a1(<%= s.get((i * 6) + 5)%>)
+{
+    var quesid=id;
+    
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+       
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+
+
+                var responce = request.responseText;
+                
+                  document.getElementById("ans").innerHTML=responce;
+
+
+            }
+        }
+
+    };
+
+
+
+
+    request.open("POST", "../../Answer_display", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("qid"+quesid);
+
+}
+                </script>
+                
+                <!--            <div class="answerqn">
+                                <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
+                                    Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
+                                    I hope that iOS6 will give developers greater control as it is a PITA.</p> 
+                                <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
+                                <div class="updown">
+                                    <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
+                                    <span id="up">43</span> 
+                                    <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
+                                    <span id="down">456</span>
+                                </div>
+                                <div class="answer">
+                                    <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">5 comments</a>
+                                    <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
+                                </div>
+                            </div>-->
             </div>
-        </div>-->
         </div>
 
     </div>
@@ -140,5 +176,5 @@
 
 </div
 
- <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>
+<script src="../../JS/Forum/BrowseQn.js" type="text/javascript" >
 <%}%>

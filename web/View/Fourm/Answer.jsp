@@ -4,16 +4,22 @@
     Author     : Sashini Shihara
 --%>
 
+<%@page import="java.util.ArrayList"%>
 
 <!DOCTYPE html>
- <div class="modal-content">
-            <span class="close1">&times;</span>
+<%
 
-            <div class="answerqn">
-                <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
-                    Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
-                    I hope that iOS6 will give developers greater control as it is a PITA.</p> 
-                <span>Posted by: Jhon</span> <span id="time">1Hour 30min</span>
+   
+
+    ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
+    for (int i = 0; i < s.size() / 2; i++) {
+
+
+%>
+
+ <div class="answerqn">
+                <p><%= s.get(i * 2)%></p> 
+                <span>Posted by: <%= s.get((i * 6) + 1)%></span> <span id="time">1Hour 30min</span>
                 <div class="updown">
                     <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
                     <span id="up">43</span> 
@@ -25,4 +31,4 @@
                     <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
                 </div>
             </div>
-        </div>
+<%}%>
