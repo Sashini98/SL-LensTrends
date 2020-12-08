@@ -72,7 +72,6 @@ public class forumH extends HttpServlet {
 
                 a.add(q.gettitle());
                 a.add(q.getquestion());
-                a.add(q.getcategory());
 
                 a.add(name);
 

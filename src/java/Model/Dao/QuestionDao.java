@@ -19,6 +19,7 @@ public interface QuestionDao {
     public void addQuestionifPhotographer(Question question) throws SQLException;
     
     public List getAllQuestions() throws SQLException;
+    public List getCategory(int questionId) throws SQLException;
     
     public void deleteQuestion(int questionId) throws SQLException;
     
