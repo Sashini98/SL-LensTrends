@@ -33,6 +33,7 @@
 <div class="questions">                
     <h2><%= s.get(i * 6)%></h2>
     <p><%= s.get((i * 6) + 1)%></p>
+    <input id="qid" type="text" value="<%= s.get((i * 6) + 5)%>" style="display: none;">
 <!--    <label><a href="#" type="button"><%= s.get((i * 7) + 2)%></a></label> -->
     <span>Posted by: <%= s.get((i * 6) + 2)%></span> <span id="time"><%= s.get((i * 6) + 3)%></span>   
     <div class="updown">
@@ -60,40 +61,7 @@
             <span class="close_anwe">&times;</span>
             
             <div name="ans" id="ans">
-                <script>
-                    function a1(<%= s.get((i * 6) + 5)%>)
-{
-    var quesid=id;
-    
-
-    var request = new XMLHttpRequest();
-
-    request.onreadystatechange = function () {
-       
-        if (request.status === 200) {
-            if (request.readyState === 4) {
-
-
-
-                var responce = request.responseText;
-                
-                  document.getElementById("ans").innerHTML=responce;
-
-
-            }
-        }
-
-    };
-
-
-
-
-    request.open("POST", "../../Answer_display", false);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("qid"+quesid);
-
-}
-                </script>
+               
                 
                 <!--            <div class="answerqn">
                                 <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.

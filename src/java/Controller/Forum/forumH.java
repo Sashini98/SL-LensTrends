@@ -60,15 +60,14 @@ public class forumH extends HttpServlet {
                     String cid = q.getclientId();
                     ClientDao clientDao = new ClientDaoImpl();
                     Client client = clientDao.getClientbyId(cid);
-                    System.out.println(q.getclientId());
 
                     name = client.getFname() + " " + client.getLname();
-                    System.out.println(client.getFname());
+                   
                 }
 
                 AnswerDao answ = new AnswerDaoImpl();
                 cnt = answ.answerCount(q.getquestionId());
-                System.out.println(cnt);
+                
 
                 a.add(q.gettitle());
                 a.add(q.getquestion());
