@@ -109,37 +109,26 @@ function view()
 
 function a1()
 {
-
-
     var quesid = document.getElementById("qid").value;
 
-    var request = new XMLHttpRequest();
-   
+    var request = new XMLHttpRequest();   
 
-    request.onreadystatechange = function () {
-         alert("a");
-
+    request.onreadystatechange = function () {      
         if (request.status === 200) {
              alert("b");
             if (request.readyState === 4) {
                  alert("c");
-
                 var responce = request.responseText;
-                document.getElementById("ans").innerHTML = responce;
-                 alert("d");
-
-
+                alert(responce);
+//                document.getElementById("ans").innerHTML = responce;                
             }
         }
 
     };
 
-
- alert("e");
-
-    request.open("POST", "../../Answer_display", false);
+    request.open("POST", "../../Answer_display", false);   
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("qid="+quesid);
+    request.send("qid="+quesid); 
 
 }
 
