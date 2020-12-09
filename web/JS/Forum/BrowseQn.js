@@ -1,44 +1,56 @@
 // Get the modal
-function popupanswer(btnid) {
 
-    if (btnid == "myBtn1") {
 
-        var btn = document.getElementById("myBtn1");
+function popupanswer()
+{
+    var btn = document.getElementById("answer_view");
 
-        var modal = document.getElementById("myModal1");
+        var modal = document.getElementById("answer1");
 
-        var span = document.getElementsByClassName("close1")[0];
+        var span = document.getElementsByClassName("close_anwe")[0];
         
-        
+     
 
-    } else if (btnid == "myBtn2") {
-        
-        var btn = document.getElementById("myBtn2");
-
-        var modal = document.getElementById("myModal2");
-
-        var span = document.getElementsByClassName("close2")[0];
-
-    } 
-     else if (btnid == "comm") {
-        
-        var btn = document.getElementById("comm");
-
-        var modal = document.getElementById("myModal3");
-
-        var span = document.getElementsByClassName("close3")[0];
-
-    } 
-    
-     else if (btnid == "report") {
-        
-        var btn = document.getElementById("report");
-
-        var modal = document.getElementById("myModal4");
-
-        var span = document.getElementsByClassName("close4")[0];
-
-    } 
+//function popupanswer(btnid) {
+//
+//    if (btnid == "myBtn1") {
+//
+//        var btn = document.getElementById("myBtn1");
+//
+//        var modal = document.getElementById("myModal1");
+//
+//        var span = document.getElementsByClassName("close1")[0];
+//        
+//        
+//
+//    } else if (btnid == "myBtn2") {
+//        
+//        var btn = document.getElementById("myBtn2");
+//
+//        var modal = document.getElementById("myModal2");
+//
+//        var span = document.getElementsByClassName("close2")[0];
+//
+//    } 
+//     else if (btnid == "comm") {
+//        
+//        var btn = document.getElementById("comm");
+//
+//        var modal = document.getElementById("myModal3");
+//
+//        var span = document.getElementsByClassName("close3")[0];
+//
+//    } 
+//    
+//     else if (btnid == "report") {
+//        
+//        var btn = document.getElementById("report");
+//
+//        var modal = document.getElementById("myModal4");
+//
+//        var span = document.getElementsByClassName("close4")[0];
+//
+//    } 
 
 
 
@@ -58,6 +70,8 @@ function popupanswer(btnid) {
             modal.style.display = "none";
         }
     }
+   
+       
 }
 
 
@@ -91,8 +105,11 @@ function view()
 
 }
 
-function answer()
+function a1(id)
 {
+    var quesid=id;
+    
+
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
@@ -104,7 +121,7 @@ function answer()
 
                 var responce = request.responseText;
                 
-                  document.getElementById("s").innerHTML=responce;
+                  document.getElementById("ans").innerHTML=responce;
 
 
             }
@@ -115,9 +132,9 @@ function answer()
 
 
 
-    request.open("POST", "../../answer", false);
+    request.open("POST", "../../Answer_display", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send();
+    request.send("qid"+quesid);
 
 }
 
