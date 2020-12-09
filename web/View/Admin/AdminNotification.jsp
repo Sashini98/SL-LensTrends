@@ -16,6 +16,7 @@
             <th class="th"> NAME </th>
             <th class="th"> MOBILE </th>
             <th class="th"> MESSAGE </th>
+            <th class="th"> DATE </th>
             <th class="th"> OPTION </th>
             </thead>
 
@@ -25,16 +26,9 @@
                     <td>Sunil Perera</td>
                     <td>071-2569874</td>
                     <td>There is another account in the same details in the system.</td>
+                    <td>2020/12/02</td>
                     <td><a href=""><button class="btn1" id="view">Reply</button></a></td>
                 </tr>
-                <tr class="tr">
-                    <td>saman@gmail.com</td>
-                    <td>Saman Rathnayake</td>
-                    <td>071-8967412</td>
-                    <td>I can I buy a photograph?</td>
-                    <td><a href=""><button class="btn1" id="view">Reply</button></a></td>
-                </tr>
-                
                 
             </tbody>
         </table>
