@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
+<body onload="viewMessages()">
     <div class="b3">                
         <h2 style="text-align: center;">New Messages</h2>
         <br>
@@ -20,16 +20,7 @@
             <th class="th"> OPTION </th>
             </thead>
 
-            <tbody>
-                <tr class="tr" id="messageTableBody">
-                    <td>sunil@gmail.com</td>
-                    <td>Sunil Perera</td>
-                    <td>071-2569874</td>
-                    <td>There is another account in the same details in the system.</td>
-                    <td>2020/12/02</td>
-                    <td><a href=""><button class="btn1" id="view">Reply</button></a></td>
-                </tr>
-                
+            <tbody id="messageTableBody">
             </tbody>
         </table>
     </div>
@@ -153,3 +144,5 @@
         <button id="send" type="submit">Send</button>
     </div>
 </div>
+    <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" ></script>
+</body>
