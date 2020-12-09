@@ -113,22 +113,22 @@ function a1()
 
     var request = new XMLHttpRequest();   
 
-    request.onreadystatechange = function () {      
-        if (request.status === 200) {
-             alert("b");
-            if (request.readyState === 4) {
-                 alert("c");
-                var responce = request.responseText;
-                alert(responce);
+//    request.onreadystatechange = function () {      
+//        if (request.status === 200) {
+//             alert("b");
+//            if (request.readyState === 4) {
+//                 alert("c");
+//                var responce = request.responseText;
+//                alert(responce);
 //                document.getElementById("ans").innerHTML = responce;                
-            }
-        }
-
-    };
+//            }
+//        }
+//
+//    };
 
     request.open("POST", "../../Answer_display", false);   
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("qid="+quesid); 
+    request.send("qid=" + quesid); 
 
 }
 
