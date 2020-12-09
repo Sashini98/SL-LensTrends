@@ -21,7 +21,7 @@
             </thead>
 
             <tbody>
-                <tr class="tr">
+                <tr class="tr" id="messageTableBody">
                     <td>sunil@gmail.com</td>
                     <td>Sunil Perera</td>
                     <td>071-2569874</td>
