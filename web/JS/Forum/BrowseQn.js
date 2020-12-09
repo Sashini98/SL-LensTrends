@@ -3,13 +3,15 @@
 
 function popupanswer()
 {
+
     var btn = document.getElementById("answer_view");
 
-        var modal = document.getElementById("answer1");
+    var modal = document.getElementById("answer1");
 
-        var span = document.getElementsByClassName("close_anwe")[0];
-        
-     
+    var span = document.getElementsByClassName("close_anwe")[0];
+
+
+
 
 //function popupanswer(btnid) {
 //
@@ -70,8 +72,8 @@ function popupanswer()
             modal.style.display = "none";
         }
     }
-   
-       
+
+    a1();
 }
 
 
@@ -80,15 +82,15 @@ function view()
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
-       
+
         if (request.status === 200) {
             if (request.readyState === 4) {
 
 
 
                 var responce = request.responseText;
-                
-                  document.getElementById("s").innerHTML=responce;
+
+                document.getElementById("s").innerHTML = responce;
 
 
             }
@@ -105,23 +107,26 @@ function view()
 
 }
 
-function a1(id)
+function a1()
 {
-    var quesid=id;
-    
+
+
+    var quesid = document.getElementById("qid").value;
 
     var request = new XMLHttpRequest();
+   
 
     request.onreadystatechange = function () {
-       
+         alert("a");
+
         if (request.status === 200) {
+             alert("b");
             if (request.readyState === 4) {
-
-
+                 alert("c");
 
                 var responce = request.responseText;
-                
-                  document.getElementById("ans").innerHTML=responce;
+                document.getElementById("ans").innerHTML = responce;
+                 alert("d");
 
 
             }
@@ -130,11 +135,11 @@ function a1(id)
     };
 
 
-
+ alert("e");
 
     request.open("POST", "../../Answer_display", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("qid"+quesid);
+    request.send("qid="+quesid);
 
 }
 

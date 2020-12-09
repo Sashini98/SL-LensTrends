@@ -30,12 +30,15 @@ public class Answer_display extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("hellooooooo");
+               String quesid = request.getParameter("qid");
+            int qid=parseInt(quesid);
+            System.out.println("qid:"+qid);
         
         try {
              ArrayList<String> a = new ArrayList();
              
-            String quesid = request.getParameter("qid");
-            int qid=parseInt(quesid);
+     
              
              AnswerDao answerDao=new AnswerDaoImpl();
              ArrayList<Answer> answ = (ArrayList<Answer>) answerDao.getAllAnswers(qid);
