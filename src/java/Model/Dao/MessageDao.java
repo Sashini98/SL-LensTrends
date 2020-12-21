@@ -10,13 +10,9 @@ import java.util.List;
 
 /**
  *
- * @author Sashini Shihara
+ * @author Madusha
  */
-public interface AnswerDao {
+public interface MessageDao {
     
-    
-    public int answerCount(int questionId) throws SQLException;
-    
-     public List getAllAnswers(int questionId) throws SQLException;
-    
+    public List getAllMessages() throws SQLException;
 }

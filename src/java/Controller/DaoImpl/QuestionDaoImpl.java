@@ -27,13 +27,13 @@ public class QuestionDaoImpl implements QuestionDao {
         Date d=question.getquestion_date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-         DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Client_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getcategory()+"', '"+date+"', '"+question.getclientId()+"');");
+         DB.iud("INSERT INTO question ( title, Question, Question_Date, Client_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+date+"', '"+question.getclientId()+"');");
     }
     
     
     @Override
     public void addQuestionifPhotographer(Question question) throws SQLException {
-        DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Photographer_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getcategory()+"', '"+question.getquestion_date()+"', '"+question.getPhotographerId()+"');");
+        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getcategory()+"', '"+question.getquestion_date()+"', '"+question.getPhotographerId()+"');");
     }
 
 
@@ -48,7 +48,6 @@ public class QuestionDaoImpl implements QuestionDao {
             q.setquestionId(ques.getInt("Question_Id"));
             q.settitle(ques.getString("title"));
             q.setquestion(ques.getString("Question"));
-            q.setcategory(ques.getString("Category"));
             q.setquestion_date(ques.getDate("Question_Date"));
             q.setclientId(ques.getString("Client_Id"));
             q.setPhotographerId(ques.getString("Photographer_Id"));
@@ -62,6 +61,18 @@ public class QuestionDaoImpl implements QuestionDao {
     @Override
     public void deleteQuestion(int questionId) throws SQLException {
          DB.iud("DELETE FROM Question where QuestionId = '" + questionId + "'");
+    }
+
+    @Override
+    public List getCategory(int questionId) throws SQLException {
+        ResultSet category=DB.search("SELECT * FROM Question");
+        ArrayList<Question> a = new ArrayList();
+        
+        while(category.next())
+        {
+            
+        }
+        return a;
     }
 
   

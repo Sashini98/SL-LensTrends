@@ -445,15 +445,15 @@
     cursor: pointer;
 }
 
-.close1 {
+.close_anwe {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
 
-.close1:hover,
-.close1:focus {
+.close_anwe:hover,
+.close_anwe:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

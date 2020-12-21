@@ -23,32 +23,32 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Madusha
  */
-public class ViewDeactivateUser extends HttpServlet {
+public class ViewActivateUser extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        String userid = request.getParameter("userid");
+        
+        String user = request.getParameter("userEmail");
 
         try {
 
             ClientDao clientDao = new ClientDaoImpl();
-            Client client = clientDao.getClientbyId(userid);
+            Client c = clientDao.getClientbyId(user);
             PhotographerDao photographerDao = new PhotographerDaoImp();
-            Photographer photographer = photographerDao.getPhotographerById(userid);
+            Photographer p = photographerDao.getPhotographerById(user);
             
             
-            if (client != null) {
+            if (c != null) {
                
                 Gson g = new Gson();
-                String toJson = g.toJson(client);
+                String toJson = g.toJson(c);
                 response.getWriter().write(toJson);
 
             } else {
                
                 Gson g = new Gson();
-                String toJson = g.toJson(photographer);
+                String toJson = g.toJson(p);
                 response.getWriter().write(toJson);
 
             }
@@ -57,5 +57,7 @@ public class ViewDeactivateUser extends HttpServlet {
             ex.printStackTrace();
         }
     }
+
+    
 
 }

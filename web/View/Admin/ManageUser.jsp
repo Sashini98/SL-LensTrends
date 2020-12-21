@@ -38,7 +38,6 @@
             <thead class="table">
             <th class="th"> EMAIL </th>
             <th class="th"> NAME </th>
-            <th class="th"> TYPE </th>
             <th class="th"> REPORTED BY </th>
             <th class="th"> REASON </th>
             <th class="th"> DESCRIPTION </th>
@@ -49,7 +48,6 @@
                 <tr class="tr">
                     <td>sunil@gmail.com</td>
                     <td>Sunil Perera</td>
-                    <td>Client</td>
                     <td>Lahiru Rathnayake</td>
                     <td>Fake Account</td>
                     <td>There is another account in the same details in the system.</td>
@@ -59,7 +57,6 @@
                 <tr class="tr">
                     <td>darsha11@gmail.com</td>
                     <td>Darshana Silva</td>
-                    <td>Photographer</td>
                     <td>Hashan Lakmal</td>
                     <td>Fake Account</td>
                     <td>There is another account in the same details in the system.</td>
@@ -76,7 +73,7 @@
             <div class="search" style="margin:auto;max-width:300px;font-family: 'Poppins', sans-serif; ">
                 <input id="deactivateUser" type="text" placeholder="Search">
                 <button onclick="viewResults()">Search</button><br><br>
-                <label id="deacError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label>
+                <label id="deacError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label><br>
             </div>
 
             <br><br><br>
@@ -140,59 +137,65 @@
             <h2 style="text-align: center;">Activate Users</h2>
 
             <div class="search" style="margin:auto;max-width:300px">
-                <input id="deactivateUser" type="text" placeholder="Search">
-                <button>Search</button><br>
+                <input id="activateUser" type="text" placeholder="Search">
+                <button onclick="viewUser()">Search</button><br>
+                <label id="acError" style="color: red; display: none; font-size: 16px; text-align: center">Invalid Email!</label><br>
             </div>
 
             <br><br><br>
-            <table  width="100%">
+            <table id="activateUserTable"  width="100%">
                 <thead class="table">
                 <th class="th"> ID </th>
                 <th class="th"> NAME </th>
                 <th class="th"> TYPE </th>
                 <th class="th"> OPTION </th>
                 </thead>
+                
+                <tbody id="activateUserTableBody" style="font-family: 'Poppins', sans-serif; text-align: center">
+
+                </tbody>
 
             </table><br><br>
 
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <th align="left">User Id</th>
-                    <td><input type="text" name="uid" id="userid" disabled=""></td>
+                    <td><input type="text" name="uid" id="uid" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Email</th>
-                    <td><input type="text" name="mail" id="email" disabled=""></td>
+                    <td><input type="text" name="mail" id="uemail" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">First Name</th>
-                    <td><input type="text" name="finame" id="fname" disabled=""></td>
+                    <td><input type="text" name="fname" id="finame" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Last Name</th>
-                    <td><input type="text" name="laname" id="lname" disabled=""></td>
+                    <td><input type="text" name="laname" id="laname" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Address No</th>
-                    <td><input type="text" name="address" id="addno" disabled=""></td>
+                    <td><input type="text" name="address" id="add" disabled=""></td>
                 </tr>
                 <tr>
                 <tr>
                     <th align="left">City</th>
-                    <td><input type="text" name="cit" id="city" disabled=""></td>
+                    <td><input type="text" name="cit" id="cit" disabled=""></td>
                 </tr>
                 <th align="left">Province</th>
-                <td><input type="text" name="pro" id="province" disabled=""></td>
+                <td><input type="text" name="pro" id="pro" disabled=""></td>
                 </tr>
                 <tr>
                     <th align="left">Gender</th>
-                    <td><input type="text" name="gen" id="gender" disabled=""></td>
+                    <td><input type="text" name="gen" id="gen" disabled=""></td>
                 </tr>
             </table>
             <br>
             <div class="clearfix">
-                <button type="submit" class="btn">Activate</button>
-                <button type="submit" class="btn">Clear Fields</button>
+                <button class="btn" onclick="viewActivate()"  id="activate">Activate</button>
+                <button onclick="clearFieldsofActivateUsers()" class='btn' id="activate">Clear Fields</button>
+
             </div>
 
 
@@ -202,5 +205,6 @@
 
 
     <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
+    <script src="../../JS/Admin/ActivateUser.js" type="text/javascript"></script>
 </div>
 

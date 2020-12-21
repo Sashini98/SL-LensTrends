@@ -125,4 +125,28 @@ public class AdminDaoImpl implements AdminDao {
        
     }
 
+    @Override
+    public Admin getAdminById(String adminId) throws SQLException {
+       ResultSet admin = DB.search("SELECT * FROM admin WHERE Admin_id = '" + adminId + "'");
+        if (admin.next()) {
+            Admin a = new Admin();
+            a.setAdminId(admin.getString("Admin_Id"));
+            a.setEmail(admin.getString("Email"));
+            a.setPassword(admin.getString("Password"));
+            a.setFname(admin.getString("Fname"));
+            a.setLname(admin.getString("Lname"));
+            a.setAddress_no(admin.getString("Address_No"));
+            a.setCity(admin.getString("City"));
+            a.setProvince(admin.getString("Province"));
+            a.setMobile(admin.getString("Mobile"));
+            a.setGenderId(admin.getInt("Gender_Id"));
+            
+
+            return a;
+
+        } else {
+            return null;
+        } 
+    }
+
 }
