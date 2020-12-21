@@ -62,3 +62,24 @@ function checkSubCategory(i, action) {
     }
 }
 
+function  keywordSearch(event){
+
+    if (event.which == 13) {
+        var request = new XMLHttpRequest();
+        var keyword = document.getElementById("keywordInput").value;
+
+        request.onreadystatechange = function () {
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+
+                    var responce = request.responseText;
+                   
+                }
+            }
+        };
+        request.open("POST", "../../PhotographSearch", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("keyword=" + keyword);
+    }
+}
+

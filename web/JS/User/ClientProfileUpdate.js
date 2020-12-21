@@ -48,7 +48,7 @@ function cancelupdate(cancel) {
                     document.getElementById("ic2").style.visibility = "hidden";
                 }
             }
-        }
+        };
         request.open("POST", "../../CancellingClientUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("canceledit=fname");

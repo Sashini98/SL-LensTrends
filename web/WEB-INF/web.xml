@@ -76,6 +76,10 @@
         <servlet-name>AdminRegister</servlet-name>
         <servlet-class>Controller.Admin.AdminRegister</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PhotographSearch</servlet-name>
+        <servlet-class>Controller.Clent.PhotographSearch</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -152,7 +156,10 @@
         <servlet-name>PhotographerRegistration</servlet-name>
         <url-pattern>/PhotographerRegistration</url-pattern>
     </servlet-mapping>
-    
+    <servlet-mapping>
+        <servlet-name>PhotographSearch</servlet-name>
+        <url-pattern>/PhotographSearch</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10
@@ -261,7 +268,6 @@
         <filter-name>FilterLoggedActor</filter-name>
         <url-pattern>/View/Photographer/changepassword.jsp</url-pattern>
     </filter-mapping>
-   
     <error-page>
         <error-code>404</error-code>
         <location>/View/Error404.jsp</location>
