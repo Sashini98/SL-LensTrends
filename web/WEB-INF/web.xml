@@ -80,6 +80,26 @@
         <servlet-name>PhotographSearch</servlet-name>
         <servlet-class>Controller.Clent.PhotographSearch</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ActivateUser</servlet-name>
+        <servlet-class>Controller.Admin.ActivateUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewActivateUser</servlet-name>
+        <servlet-class>Controller.Admin.ViewActivateUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ActivateUserMgt</servlet-name>
+        <servlet-class>Controller.Admin.ActivateUserMgt</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminDetailsUpdate</servlet-name>
+        <servlet-class>Controller.Admin.AdminDetailsUpdate</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CancellingAdminUpdate</servlet-name>
+        <servlet-class>Controller.Admin.CancellingAdminUpdate</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -159,6 +179,26 @@
     <servlet-mapping>
         <servlet-name>PhotographSearch</servlet-name>
         <url-pattern>/PhotographSearch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActivateUser</servlet-name>
+        <url-pattern>/ActivateUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewActivateUser</servlet-name>
+        <url-pattern>/ViewActivateUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ActivateUserMgt</servlet-name>
+        <url-pattern>/ActivateUserMgt</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminDetailsUpdate</servlet-name>
+        <url-pattern>/AdminDetailsUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CancellingAdminUpdate</servlet-name>
+        <url-pattern>/CancellingAdminUpdate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
