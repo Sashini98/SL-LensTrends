@@ -100,6 +100,10 @@
         <servlet-name>ViewMessages</servlet-name>
         <servlet-class>Controller.Admin.ViewMessages</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SendNotifications</servlet-name>
+        <servlet-class>Controller.Admin.SendNotifications</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -199,6 +203,10 @@
     <servlet-mapping>
         <servlet-name>ViewMessages</servlet-name>
         <url-pattern>/ViewMessages</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendNotifications</servlet-name>
+        <url-pattern>/SendNotifications</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

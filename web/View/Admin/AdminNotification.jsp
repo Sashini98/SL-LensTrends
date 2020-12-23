@@ -11,7 +11,7 @@
         <h2 style="text-align: center;">New Messages</h2>
         <br>
         <table width="100%">
-            <thead class="table">
+            <thead class="table" id="messageTable">
             <th class="th"> EMAIL </th>
             <th class="th"> NAME </th>
             <th class="th"> MOBILE </th>
@@ -20,7 +20,7 @@
             <th class="th"> OPTION </th>
             </thead>
 
-            <tbody id="messageTableBody">
+            <tbody id="messageTableBody" style="font-family: 'Poppins', sans-serif; text-align: center">
             </tbody>
         </table>
     </div>
@@ -29,24 +29,24 @@
     <div class="box1">               
         <h2>Client Notifications</h2>
 
-        <form>
+        <form action="../../SendNotifications" method="POST">
             <div class="formContent">                             
                 <span class="content_name">Title </span><br>
-                <input type="text" name="title" required/>
+                <input type="text" id="title" name="title" required/>
                 <label for="title" class="label_name">
                 </label>
             </div><br>
 
-            <div class="formContent">
+<!--            <div class="formContent">
                 <span class="content_name"> Date </span><br>
-                <input type="date" name="dob" required class="doe"/>
+                <input type="date" id="date" name="dob" required class="doe"/>
                 <label for="doe" class="label_name">
                 </label>
-            </div><br>
+            </div><br>-->
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" id="msgbody"></textarea>
                 <label for="msg" class="label_name">
                 </label>
             </div><br>
