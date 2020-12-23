@@ -77,6 +77,10 @@
         <servlet-class>Controller.Admin.AdminRegister</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>PhotographSearch</servlet-name>
+        <servlet-class>Controller.Clent.PhotographSearch</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ActivateUser</servlet-name>
         <servlet-class>Controller.Admin.ActivateUser</servlet-class>
     </servlet>
@@ -179,6 +183,10 @@
     <servlet-mapping>
         <servlet-name>PhotographerRegistration</servlet-name>
         <url-pattern>/PhotographerRegistration</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographSearch</servlet-name>
+        <url-pattern>/PhotographSearch</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ActivateUser</servlet-name>

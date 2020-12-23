@@ -6,11 +6,9 @@
 package Controller.Clent;
 
 import Controller.DaoImpl.ClientDaoImpl;
-import DB.DB;
 import Model.Client;
 import Model.Dao.ClientDao;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Properties;
 import javax.mail.Authenticator;
 import javax.mail.Message;

@@ -22,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
     </head>
-    <body>
+    <body onload="">
         <div>
             <div class="fixedheader">  
                 <div class="pageheader">
@@ -70,20 +70,20 @@
                 </div>
             </div>
 
-            <br><br><br><br><br>
+            <br><br><br><br>
 
             <div style="display: flex;min-height: 88vh">
-                <div style="position: fixed;width: 2%;height: 88vh;background-color: #FAFAFA;padding-top: 1.8%;padding-left: .5%;padding-right: 1.2%;border-right:solid 2px #EAEAEA">
-                    <i class="material-icons sidemenu-icons">filter_alt</i>
+                <div style="position: fixed;width: 2%;height: 88vh;background-color: #FAFAFA;padding-top: 1.8%;padding-left: .5%;padding-right: 1.2%;border-right:solid 2px #EAEAEA; cursor: pointer;">
+                    <i id="filterIcn" class="material-icons sidemenu-icons">filter_alt</i>
                     <br><br>
                     <!--<i class="material-icons sidemenu-icons">camera_alt</i>-->
                 </div>
-                <iframe style="width: 25%;margin-left: 3.8%;border: none" src="AdvancedFilter.jsp">
+                <iframe id="selectors" style="width: 25%;margin-left: 3.8%;border: none" src="AdvancedFilter.jsp">
 
                 </iframe>
                 <div style="background-color:  #FAFAFA; width: 100%; ">
                     <div class="searchInput">
-                        <input type="text" placeholder="Search for Photographs" >      
+                        <input type="text" id="keywordInput" placeholder="Search for Photographs" onkeyup="keywordSearch(event)">      
                         <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
                     </div>
                     <div class="row"> 
@@ -112,6 +112,13 @@
         </div>
 
         <script src="../../JS/User/AdvancedSearch.js" type="text/javascript"></script>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <!--<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+        <script>
+            $('#filterIcn').click(function () {
+                $("#selectors").toggle("fold");
+            });
+        </script>
     </body>
 </html>
 
