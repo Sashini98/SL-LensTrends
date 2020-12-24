@@ -11,11 +11,13 @@ import Model.Client;
 import Model.Dao.QuestionDao;
 import Model.Photographer;
 import Model.Question;
+import Model.QuestionCategory;
 import java.time.LocalDateTime;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,6 +33,24 @@ public class AskQues extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        try {
+            ArrayList<String> a = new ArrayList();
+             QuestionDao questionDao = new QuestionDaoImpl();
+             ArrayList<QuestionCategory> categ= (ArrayList<QuestionCategory>) questionDao.getQuestionCategory();
+             
+             for(QuestionCategory c: categ)
+             {
+                 a.add(c.getCategory());
+             }
+             request.setAttribute("category", a);
+            request.getRequestDispatcher("JS/Forum/AskQues.js").forward(request, response);
+            
+        } catch (Exception e) {
+        }
+        
+        
+        
         
         String title = request.getParameter("title");
         String body = request.getParameter("Questionbody");
