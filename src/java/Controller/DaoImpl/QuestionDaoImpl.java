@@ -8,6 +8,7 @@ package Controller.DaoImpl;
 import DB.DB;
 import Model.Dao.QuestionDao;
 import Model.Question;
+import Model.QuestionCategory;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -72,6 +73,22 @@ public class QuestionDaoImpl implements QuestionDao {
         {
             
         }
+        return a;
+    }
+
+    @Override
+    public List getQuestionCategory() throws SQLException {
+        ArrayList<QuestionCategory> a = new ArrayList();
+        ResultSet categ=DB.search("SELECT category FROM question_category");
+        
+        while(categ.next())
+        {
+            QuestionCategory q=new QuestionCategory();
+            q.setCategory(categ.getString("category"));
+            
+            a.add(q);
+        }
+        
         return a;
     }
 

@@ -23,4 +23,6 @@ public interface QuestionDao {
     
     public void deleteQuestion(int questionId) throws SQLException;
     
+    public List getQuestionCategory() throws SQLException;
+    
 }
