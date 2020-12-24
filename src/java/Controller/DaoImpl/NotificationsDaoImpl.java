@@ -8,6 +8,7 @@ package Controller.DaoImpl;
 import DB.DB;
 import Model.Dao.NotificationDao;
 import Model.Notifications;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,5 +27,5 @@ public class NotificationsDaoImpl implements NotificationDao{
         String date = sdf.format(d);
         DB.iud("INSERT INTO notification ( title, message, date, Admin_id) VALUES ( '"+notifications.getTitle()+"', '"+ notifications.getNotification()+"', '"+date+"', '"+notifications.getAdmin_id()+"');");
     }
-    
+
 }

@@ -29,7 +29,7 @@
     <div class="box1">               
         <h2>Client Notifications</h2>
 
-        <form action="../../SendNotifications" method="POST">
+        <form>
             <div class="formContent">                             
                 <span class="content_name">Title </span><br>
                 <input type="text" id="title" name="title" required/>
@@ -52,7 +52,7 @@
             </div><br>
 
         </form>
-        <button id="csend" type="submit">Send</button>
+        <button id="csend" type="submit" onclick="SendNotification()">Send</button>
     </div>
 
     <div class="box2">

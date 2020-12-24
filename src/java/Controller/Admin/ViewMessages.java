@@ -8,7 +8,6 @@ package Controller.Admin;
 import Controller.DaoImpl.MessageDaoImpl;
 import Model.Dao.MessageDao;
 import Model.Messages;
-import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -46,10 +45,8 @@ public class ViewMessages extends HttpServlet {
                 a.add(date); 
             }
 
-            Gson g = new Gson();
-            String toJson = g.toJson(a);
-            response.getWriter().write(toJson);
-            
+            request.setAttribute("message", a);
+            request.getRequestDispatcher("View/Admin/Message.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
         }

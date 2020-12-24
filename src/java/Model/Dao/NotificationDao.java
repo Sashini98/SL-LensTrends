@@ -15,4 +15,5 @@ import java.sql.SQLException;
 public interface NotificationDao {
     
     public void addNotification(Notifications notifications) throws SQLException;
+    
 }
