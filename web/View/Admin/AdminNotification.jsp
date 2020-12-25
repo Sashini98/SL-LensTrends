@@ -6,7 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<body onload="viewMessages()">
+<div onload="viewMessages();">
+    <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" ></script>
     <div class="b3">                
         <h2 style="text-align: center;">New Messages</h2>
         <br>
@@ -144,5 +145,5 @@
         <button id="send" type="submit">Send</button>
     </div>
 </div>
-    <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" ></script>
-</body>
+    
+</div>
