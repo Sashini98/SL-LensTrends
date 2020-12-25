@@ -1,6 +1,5 @@
 function viewMessages()
 {
-    alert("hiiii");
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
@@ -9,7 +8,6 @@ function viewMessages()
             if (request.readyState === 4) {
 
                 var responce = request.responseText;
-                alert(responce);
                 document.getElementById("messageTableBody").innerHTML = responce;
 
 
@@ -21,7 +19,6 @@ function viewMessages()
     request.open("POST", "../../ViewMessages", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
-    alert("Hello");
 }
 
 function SendNotification(){

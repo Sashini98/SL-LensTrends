@@ -19,8 +19,8 @@
     <td><%= m.get(i).getMobile()%></td>
     <td><%= m.get(i).getMessage()%></td>
     <td><%= m.get(i).getMessage_date()%></td>
-    <td><button class="btn1" id="<%= m.get(i).getMessageId() %>" onclick="window.open('https://mail.google.com/')">Reply</button></td>
-</tr>
+    <td><center><button class="btn1" id="<%= m.get(i).getMessageId() %>" onclick="window.open('https://mail.google.com/')">Reply</button></center></td>
+</tr
 
 
 <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" >

@@ -63,7 +63,7 @@ public class PhotographDaoImpl implements PhotographDao {
         {
             Photograph p =new Photograph();
                 p.setId(photographs.getInt("Photograph_Id"));
-                p.setCategoryId(photographs.getInt("category_id"));
+//                p.setCategoryId(photographs.getInt("category_id"));
                 p.setPath(photographs.getString("path"));
                 p.setSize(photographs.getString("Size"));
                 p.setQuality(photographs.getString("Quality"));

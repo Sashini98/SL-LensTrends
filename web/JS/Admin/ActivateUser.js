@@ -144,5 +144,27 @@ function clearFieldsofActivateUsers() {
     document.getElementById("gen").value = "";
 }
 
+function viewReportedUser(){
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                document.getElementById("reportedPhotographerTableBody").innerHTML = responce;
+
+
+            }
+        }
+
+    };
+
+    request.open("POST", "../../ViewReportedPhotographer", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
 
 

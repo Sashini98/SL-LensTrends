@@ -298,12 +298,16 @@ function show(selectedTab) {
 //                alert(responce);
                 document.getElementById("DashboardBody").innerHTML = responce;
                 if (selectedTab === 'notification') {
-                    alert("dd");
                      viewMessages();
-                     alert("22");
+                }else if(selectedTab === 'photoapproval'){
+                    viewPhotos();
+                }else if(selectedTab === 'user'){
+                    viewReportedUser();
+                }else if(selectedTab === 'photomanage'){
+                    viewReportedPhotos();
                 }
             }
-        }
+    }
 
     };
     request.open("POST", "../../AdminDasboardHandler", false);

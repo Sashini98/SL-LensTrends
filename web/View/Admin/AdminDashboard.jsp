@@ -350,5 +350,8 @@
         <script src="../../JS/Admin/ActivateUser.js" type="text/javascript"></script>
         <script src="../../JS/Admin/AdminProfileUpdate.js" type="text/javascript"></script>
         <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" ></script>
+        <script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>
+        <script src="../../JS/Admin/ReportedPhotos.js" type="text/javascript" ></script>
+        
     </body>
 </html>

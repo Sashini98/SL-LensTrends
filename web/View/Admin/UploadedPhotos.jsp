@@ -15,11 +15,14 @@
 
 <div class="photos">
         <div class="details">
-            <img src="<%=p.get(i).getPath()%>">
+            <img src="../../Resources/Img/Gallery Sample Images/<%=p.get(i).getPath()%>">
             <p>Uploaded By<input type="text" name="Submitted" value="<%=p.get(i).getPhotogrpherId()%>" disabled=""></p>
             <p>Submitted On <input type="text" id="Submit" value="<%=p.get(i).getUploadedDate()%>" disabled=""></p>
-            <button id="remove" type="submit" class="btn" onclick="show('approvePhoto')">Review</button>
+            <button id="<%= p.get(i).getId() %>" type="submit" class="btn" onclick="show('approvePhoto')">Review</button>
         </div>
-    </div>
+</div
+            
+            <script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>
+           
 
 <%}%>

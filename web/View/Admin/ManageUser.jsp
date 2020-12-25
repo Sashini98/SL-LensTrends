@@ -6,7 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
+<div onload="viewReportedUser();">
 <div style="background-color: #f7f6f9;">
     <div class="content">
         <div class="box" style="background-color: #EAEAEA">
@@ -44,24 +44,8 @@
             <th class="th"> OPTION </th>
             </thead>
 
-            <tbody>
-                <tr class="tr">
-                    <td>sunil@gmail.com</td>
-                    <td>Sunil Perera</td>
-                    <td>Lahiru Rathnayake</td>
-                    <td>Fake Account</td>
-                    <td>There is another account in the same details in the system.</td>
-                    <td><button class="btn1" id="view">View</button></td>
-                </tr>
-                
-                <tr class="tr">
-                    <td>darsha11@gmail.com</td>
-                    <td>Darshana Silva</td>
-                    <td>Hashan Lakmal</td>
-                    <td>Fake Account</td>
-                    <td>There is another account in the same details in the system.</td>
-                    <td><button class="btn1" id="view">View</button></td>
-                </tr>
+            <tbody id="reportedPhotographerTableBody" style="font-family: 'Poppins', sans-serif; text-align: justify">
+
             </tbody>
         </table>
     </div>
@@ -207,4 +191,4 @@
     <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
     <script src="../../JS/Admin/ActivateUser.js" type="text/javascript"></script>
 </div>
-
+</div>

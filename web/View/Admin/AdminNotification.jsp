@@ -21,7 +21,7 @@
             <th class="th"> OPTION </th>
             </thead>
 
-            <tbody id="messageTableBody" style="font-family: 'Poppins', sans-serif; text-align: center">
+            <tbody id="messageTableBody" style="font-family: 'Poppins', sans-serif; text-align: justify">
             </tbody>
         </table>
     </div>
@@ -62,13 +62,13 @@
                 <label for="title" class="label_name">
                 </label>
             </div><br>
-
+<!--
             <div class="formContent">
                 <span class="content_name"> Date </span><br>
                 <input type="date" name="dob" required class="doe"/>
                 <label for="doe" class="label_name">
                 </label>
-            </div><br>
+            </div><br>-->
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
@@ -93,13 +93,13 @@
                 <label for="title" class="label_name">
                 </label>
             </div><br>
-
+<!--
             <div class="formContent">
                 <span class="content_name"> Date </span><br>
                 <input type="date" name="dob" required class="doe"/>
                 <label for="doe" class="label_name">
                 </label>
-            </div><br>
+            </div><br>-->
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>

@@ -71,6 +71,7 @@ input[type=text]
   font-family: 'Poppins', sans-serif;
   border-collapse: collapse;
   width: 100%;
+  text-align: justify;
   
 }
 
@@ -87,7 +88,7 @@ input[type=text]
 .tr {
   background-color: #f0efef;
   border: 1px solid #dddddd;
-  text-align: center;
+  text-align: justify;
   padding: 6px;
   font-family: 'Poppins', sans-serif;
   

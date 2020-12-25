@@ -7,7 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<body onload="viewPhotos()">
+<div onload="viewPhotos();">
+    <script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>
 <div class="approvePhotosBody" style="background-color: #f7f6f9;">
     <div class="heading">
         <h1> Uploaded Photographs</h1>
@@ -53,5 +54,5 @@
     </div>
 
 </div>
-    <script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>
-</body>
+    
+</div>
