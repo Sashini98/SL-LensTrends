@@ -5,9 +5,9 @@
  */
 package Controller.Admin;
 
-import Controller.DaoImpl.MessageDaoImpl;
-import Model.Dao.MessageDao;
-import Model.Messages;
+import Controller.DaoImpl.PhotographDaoImpl;
+import Model.Dao.PhotographDao;
+import Model.Photograph;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -21,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Madusha
  */
-public class ViewMessages extends HttpServlet {
-    
+public class ViewUploadedPhotos extends HttpServlet {
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,28 +30,24 @@ public class ViewMessages extends HttpServlet {
         try {
             ArrayList<String> a = new ArrayList();
 
-            MessageDao messageDao = new MessageDaoImpl();
-            ArrayList<Messages> msg = (ArrayList<Messages>) messageDao.getAllMessages();
+            PhotographDao pDao = new PhotographDaoImpl();
+            ArrayList<Photograph> photos = (ArrayList<Photograph>) pDao.getAllPhotographs();
 
-            for(Messages m : msg) {
+            for(Photograph p : photos) {
                 
-                a.add(m.getEmail());
-                a.add(m.getName());
-                a.add(m.getMobile());
-                a.add(m.getMessage());
+                a.add(p.getPath());
+                a.add(p.getPhotogrpherId());
 
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                String date = sdf.format(m.getMessage_date());
+                String date = sdf.format(p.getUploadedDate());
                 a.add(date); 
             }
 
-            request.setAttribute("message", msg);
-            request.getRequestDispatcher("View/Admin/Message.jsp").forward(request, response);
+            request.setAttribute("photos", a);
+            request.getRequestDispatcher("View/Admin/UploadedPhotos.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
-        }
     }
 
-    
-
+}
 }
