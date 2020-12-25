@@ -60,23 +60,23 @@
             <div style="margin: 4% 3% 0;"> 
                 <div style="display: flex; justify-content: space-between;">
                     <label style="font-size: 15px; ">Minimum Width</label>
-                    <input  style="width: 20%;" id="minWidth" type="text" />
+                    <input  style="width: 20%;" id="minWidth" onkeypress="return enteredPixcelSize(event);" type="tel" />
                 </div>
 
                 <div style="display: flex; justify-content: space-between;">
                     <label style="font-size: 15px;">Minimum Height</label>
-                    <input style="width: 20%;" id="minHeight"  type="text" />
+                    <input style="width: 20%;" id="minHeight" onkeypress="return enteredPixcelSize(event);"  type="tel" />
                 </div>
 
                 <br/>
 
                 <div style="display: flex; justify-content: space-between;">
                     <label style="font-size: 15px;">Maximum Width</label>
-                    <input style="width: 20%;" id="maxWidth" type="text" />
+                    <input style="width: 20%;" id="maxWidth" onkeypress="return enteredPixcelSize(event);" type="tel" />
                 </div>
                 <div style="display: flex; justify-content: space-between;">
                     <label style="font-size: 15px;">Maximum Height</label>
-                    <input style="width: 20%;" id="maxHeight" type="text" />
+                    <input style="width: 20%;" id="maxHeight" onkeypress="return enteredPixcelSize(event);" type="tel" />
                 </div>
             </div>
         </div>

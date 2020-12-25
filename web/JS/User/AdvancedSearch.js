@@ -17,14 +17,14 @@ function checkSubCategory(i, action) {
             document.getElementById("WithPeople").checked = true;
             document.getElementById("WithoutPeople").checked = false;
 
-        } 
-        
+        }
+
         if (subCategory1.checked && subCategory2.checked) {
             subCategory.checked = true;
             subCategory1.checked = false;
             subCategory2.checked = false;
         }
-        
+
         if (!subCategory.checked && !subCategory1.checked && !subCategory2.checked) {
             document.getElementById("WithPeople").checked = false;
             document.getElementById("WithoutPeople").checked = true;
@@ -102,6 +102,21 @@ function  keywordSearch(event) {
     }
 }
 
+function enteredPixcelSize(evt) {
+
+    if (evt.which == 13) {
+        advancedSearch();
+        return true;
+    } else {
+        evt = (evt) ? evt : window.event;
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
+
+}
 
 function  advancedSearch() {
 
@@ -117,9 +132,9 @@ function  advancedSearch() {
     var undiscovered;
 
     if (document.getElementById('relevant').checked) {
-        sortBy = document.getElementById('relevant').value;
+        sortBy = 'relevant';
     } else {
-        sortBy = document.getElementById('fresh').value;
+        sortBy = 'fresh';
     }
 
     if (document.getElementById('AllOrientations').checked) {
@@ -141,18 +156,24 @@ function  advancedSearch() {
         orientation = 'AllOrientations';
     }
 
+    if (document.getElementById('Pixels').checked) {
+        sizePixel = 'Pixels';
+    } else {
+        sizePixel = 'sizePixel';
+    }
+
     if (document.getElementById('WithPeople').checked) {
         people = 'WithPeople';
     } else {
         people = 'WithoutPeople';
     }
-    
+
     if (document.getElementById('Both').checked) {
         gender = 'Both';
-        
+
     } else if (document.getElementById('Male').checked) {
         gender = 'Male';
-        
+
     } else {
         gender = 'WithoutPeople';
     }
@@ -166,21 +187,21 @@ function  advancedSearch() {
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
-            if (request.status === 200) {
-                if (request.readyState === 4) {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
 
-                    var responce = request.responseText;
-                    document.getElementById("row").innerHTML = responce;
+                var responce = request.responseText;
+                document.getElementById("row").innerHTML = responce;
 
-                }
             }
-        };
-        
-        var param = "sortBy="+sortBy+"&orientation="+orientation+"&sizePixel="+sizePixel+"&minWidth="+minWidth+"&maxWidth="+maxWidth+
-                "&minHeight="+minHeight+"&maxHeight="+maxHeight+"&people="+people+"&gender="+gender+"&undiscovered="+undiscovered;
-        
-        request.open("POST", "../../PhotographSearch", false);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send(param);
-    
+        }
+    };
+
+    var param = "sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
+            "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
+
+    request.open("POST", "../../PhotographAdvancedSearch", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(param);
+
 }
