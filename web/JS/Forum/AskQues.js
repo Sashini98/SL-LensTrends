@@ -102,10 +102,20 @@ function autocomplete(inp, arr) {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
-}
-alert("q");
 
-var categories;;
+    document.body.onkeyup = function (e) {
+        if (e.keyCode == 32) {
+            var categ = [];
+           C_value = document.getElementById('myInput').value;
+            categ.push(C_value);
+            document.getElementById("cat").innerHTML = categ;
+        }
+    }
+}
+
+
+var categories;
+
 
 var request = new XMLHttpRequest();
 
@@ -114,58 +124,52 @@ request.onreadystatechange = function () {
     if (request.status === 200) {
         if (request.readyState === 4) {
 
-
-
             var responce = request.responseText;
-            categories = request.getAttribute("category");
-            alert(categories);
-            
+            categories = JSON.parse(responce);
+            ;
 
-             
-            
-            }
-        }
-
-    };
-
-
-    request.open("POST", "../../AskQues", false);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send();
-
-    autocomplete(document.getElementById("myInput"), categories);
-
-
-
-    function DropDownChanged(oDDL) {
-        var oTextbox = oDDL.form.elements["c_txt"];
-        if (oTextbox) {
-            oTextbox.style.display = (oDDL.value == "") ? "" : "none";
-            if (oDDL.value == "") {
-                oTextbox.focus();
-            }
         }
     }
 
-    function FormSubmit(oForm) {
-        var oHidden = oForm.elements["category"];
-        var oDDL = oForm.elements["categ"];
-        var oTextbox = oForm.elements["c_txt"];
-        if (oHidden && oDDL && oTextbox)
-            oHidden.value = (oDDL.value == "") ? oTextbox.value : oDDL.value;
-    }
+};
 
-    function trimfield(str)
-    {
-        return str.replace(/^\s+|\s+$/g, '');
-    }
+request.open("POST", "../../category_suggest", false);
+request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+request.send();
 
-    function validateForm() {
-        var title = document.forms["askQ"]["title"].value;
-        if (title == "" || title == null) {
-            alert("Title must be filled out");
-            return false;
+autocomplete(document.getElementById("myInput"), categories);
+
+
+
+function DropDownChanged(oDDL) {
+    var oTextbox = oDDL.form.elements["c_txt"];
+    if (oTextbox) {
+        oTextbox.style.display = (oDDL.value == "") ? "" : "none";
+        if (oDDL.value == "") {
+            oTextbox.focus();
         }
+    }
+}
+
+function FormSubmit(oForm) {
+    var oHidden = oForm.elements["category"];
+    var oDDL = oForm.elements["categ"];
+    var oTextbox = oForm.elements["c_txt"];
+    if (oHidden && oDDL && oTextbox)
+        oHidden.value = (oDDL.value == "") ? oTextbox.value : oDDL.value;
+}
+
+function trimfield(str)
+{
+    return str.replace(/^\s+|\s+$/g, '');
+}
+
+function validateForm() {
+    var title = document.forms["askQ"]["title"].value;
+    if (title == "" || title == null) {
+        alert("Title must be filled out");
+        return false;
+    }
 
 //    var bd = document.getElementById("Questionbody");
 //
@@ -173,58 +177,58 @@ request.onreadystatechange = function () {
 //        alert("Question must be filled out");
 //        return false;
 //    }
-    }
+}
 
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
 
-    function filterFunction() {
-        var input, filter, ul, li, a, i;
-        div = document.getElementById("myDropdown");
-        a = div.getElementsByTagName("a");
-        for (i = 0; i < a.length; i++) {
-            txtValue = a[i].textContent || a[i].innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                a[i].style.display = "";
-            } else {
-                a[i].style.display = "none";
-            }
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
         }
     }
+}
 
-    function myFunction1() {
-        document.getElementById("myDropdown1").classList.toggle("show");
-    }
+function myFunction1() {
+    document.getElementById("myDropdown1").classList.toggle("show");
+}
 
-    function filterFunction() {
-        var input, filter, ul, li, a, i;
-        div = document.getElementById("myDropdown1");
-        a = div.getElementsByTagName("a");
-        for (i = 0; i < a.length; i++) {
-            txtValue = a[i].textContent || a[i].innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                a[i].style.display = "";
-            } else {
-                a[i].style.display = "none";
-            }
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    div = document.getElementById("myDropdown1");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
         }
     }
+}
 
-    function myFunction2() {
-        document.getElementById("myDropdown2").classList.toggle("show");
-    }
+function myFunction2() {
+    document.getElementById("myDropdown2").classList.toggle("show");
+}
 
-    function filterFunction() {
-        var input, filter, ul, li, a, i;
-        div = document.getElementById("myDropdown2");
-        a = div.getElementsByTagName("a");
-        for (i = 0; i < a.length; i++) {
-            txtValue = a[i].textContent || a[i].innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                a[i].style.display = "";
-            } else {
-                a[i].style.display = "none";
-            }
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    div = document.getElementById("myDropdown2");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
         }
     }
+}

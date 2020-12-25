@@ -33,82 +33,60 @@ public class AskQues extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        try {
-            ArrayList<String> a = new ArrayList();
-             QuestionDao questionDao = new QuestionDaoImpl();
-             ArrayList<QuestionCategory> categ= (ArrayList<QuestionCategory>) questionDao.getQuestionCategory();
-             
-             for(QuestionCategory c: categ)
-             {
-                 a.add(c.getCategory());
-             }
-             request.setAttribute("category", a);
-            
-            
-        } catch (Exception e) {
-        }
-        
-        
-        
-        
+
         String title = request.getParameter("title");
         String body = request.getParameter("Questionbody");
         String category = request.getParameter("categ");
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
-        
-        Question ques=new Question();
+
+        Question ques = new Question();
         ques.settitle(title);
         ques.setquestion(body);
         ques.setcategory(category);
         ques.setquestion_date(date);
-        
-        String t="";
-        t=ques.gettitle();
+
+        String t = "";
+        t = ques.gettitle();
         System.out.println(t);
 
         String id = "";
-        try{
+        try {
 
-        if (request.getSession().getAttribute("loggedPhotographer") == null) {
-             
-            Client c = (Client) request.getSession().getAttribute("loggedClient");
-            id = c.getClientId();
-            ques.setclientId(id);
-            System.out.println(ques.getclientId());
-            
-            
-            try {
-                QuestionDao questionDao = new QuestionDaoImpl();
-                questionDao.addQuestionifClient(ques);
+            if (request.getSession().getAttribute("loggedPhotographer") == null) {
+
+                Client c = (Client) request.getSession().getAttribute("loggedClient");
+                id = c.getClientId();
+                ques.setclientId(id);
+                System.out.println(ques.getclientId());
+
+                try {
+                    QuestionDao questionDao = new QuestionDaoImpl();
+                    questionDao.addQuestionifClient(ques);
 //                DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Client_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
-        } else {
-            Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-            id = p.getPhotographerId();
-            ques.setPhotographerId(id);
-            try {
-                QuestionDao questionDao = new QuestionDaoImpl();
-                questionDao.addQuestionifPhotographer(ques);
+            } else {
+                Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+                id = p.getPhotographerId();
+                ques.setPhotographerId(id);
+                try {
+                    QuestionDao questionDao = new QuestionDaoImpl();
+                    questionDao.addQuestionifPhotographer(ques);
 //               DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Photographer_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
-            } catch (Exception e) {
-            e.printStackTrace();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-        }
-         response.sendRedirect("View/Fourm/BrowseQn.jsp");
-        }
-        catch(Exception e)
-        {
+            response.sendRedirect("View/Fourm/BrowseQn.jsp");
+        } catch (Exception e) {
             response.sendRedirect("View/Fourm/AskQues.jsp");
         }
-       
 
     }
 
