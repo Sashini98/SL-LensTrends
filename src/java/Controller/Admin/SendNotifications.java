@@ -11,8 +11,11 @@ import Model.Dao.NotificationDao;
 import Model.Notifications;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,9 +36,21 @@ public class SendNotifications extends HttpServlet {
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
+        try {
+            date = sdf.parse(d);
+            System.out.println(date);
+        } catch (ParseException ex) {
+            ex.printStackTrace();
+        }
         Date time = new Date();
         SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
         String t = sdf2.format(date);
+        try {
+            time = sdf2.parse(t);
+            System.out.println(time);
+        } catch (ParseException ex) {
+            ex.printStackTrace();
+        }
 
         Notifications note = new Notifications();
         note.setTitle(title);
