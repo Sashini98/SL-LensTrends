@@ -14,6 +14,7 @@ import java.util.Date;
 public class Photograph {
 
     int id;
+    int categoryId;
     String path;
     String size;
     String quality;
@@ -25,16 +26,16 @@ public class Photograph {
     String title;
     String discription;
     boolean people;
-    ;
     int orientationId;
-    int state;
+    int stateId;
     int genderId;
 
     public Photograph() {
     }
 
-    public Photograph(int id, String path, String size, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int state, int genderId) {
+    public Photograph(int id, int categoryId, String path, String size, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
         this.id = id;
+        this.categoryId = categoryId;
         this.path = path;
         this.size = size;
         this.quality = quality;
@@ -47,16 +48,8 @@ public class Photograph {
         this.discription = discription;
         this.people = people;
         this.orientationId = orientationId;
-        this.state = state;
+        this.stateId = stateId;
         this.genderId = genderId;
-    }
-
-    public String getPhotogrpherId() {
-        return photogrpherId;
-    }
-
-    public void setPhotogrpherId(String photogrpherId) {
-        this.photogrpherId = photogrpherId;
     }
 
     public int getId() {
@@ -65,6 +58,14 @@ public class Photograph {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public String getPath() {
@@ -123,6 +124,14 @@ public class Photograph {
         this.undiscovered = undiscovered;
     }
 
+    public String getPhotogrpherId() {
+        return photogrpherId;
+    }
+
+    public void setPhotogrpherId(String photogrpherId) {
+        this.photogrpherId = photogrpherId;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -155,12 +164,12 @@ public class Photograph {
         this.orientationId = orientationId;
     }
 
-    public int getState() {
-        return state;
+    public int getStateId() {
+        return stateId;
     }
 
-    public void setState(int state) {
-        this.state = state;
+    public void setStateId(int stateId) {
+        this.stateId = stateId;
     }
 
     public int getGenderId() {
@@ -171,4 +180,7 @@ public class Photograph {
         this.genderId = genderId;
     }
 
+    
+    
+    
 }
