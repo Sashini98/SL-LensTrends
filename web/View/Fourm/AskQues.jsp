@@ -91,14 +91,18 @@
 
             <div name="s" id="s">
                 <div class="questions">                
-                    <form id="askQ" action="../../AskQues" method="POST" onsubmit="return validateForm()">
+                    <form id="askQ"  autocomplete="off" action="../../AskQues" method="POST" onsubmit="return validateForm()">
                         <h3><label for="Title"><b>Title</b></label><br></h3>
                         <input type="text" id="title" name="title">
                         <h3 style="margin-top: -2%;"><b>Question</b></h3>
                         <textarea id="Questionbody" name="Questionbody" rows="20"></textarea>  <br>
 
                         <h3><label for="Category"><b>Category</b></label></h3>
-                        <div class="box" id="category" name="category">
+                        <div class="autocomplete" style="width:300px;">
+                        <input id="myInput" type="text" name="myCountry">
+                        </div>
+                        
+<!--                        <div class="box" id="category" name="category">
                             <input type="hidden" name="category" />
                             <select name="categ" onchange="DropDownChanged(this);">
                                 <option value="Beginners questions">Beginners questions</option>
@@ -107,7 +111,7 @@
                                 <option value="Mobile Photography">Mobile Photography</option>
                                 <option value="">Other..</option>
                             </select> <input type="text" name="c_txt" style="display: none;" />
-                        </div>
+                        </div>-->
 
 
 

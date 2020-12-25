@@ -22,18 +22,18 @@ public class MessageDaoImpl implements MessageDao{
     @Override
     public List getAllMessages() throws SQLException {
        
-        ResultSet msg =DB.search("SELECT * FROM messages");
+        ResultSet msg =DB.search("SELECT * FROM message");
         ArrayList<Messages> a = new ArrayList();
         
         while(msg.next())
         {
             Messages m =new Messages();
-            m.setMessageId(msg.getInt("Question_Id"));
-            m.setMessage(msg.getString("title"));
-            m.setName(msg.getString("Question"));
-            m.setMessage_date(msg.getDate("Question_Date"));
-            m.setEmail(msg.getString("Client_Id"));
-            m.setMobile(msg.getString("Photographer_Id"));
+            m.setMessageId(msg.getInt("id"));
+            m.setMessage(msg.getString("Message"));
+            m.setName(msg.getString("name"));
+            m.setMessage_date(msg.getDate("date"));
+            m.setEmail(msg.getString("email"));
+            m.setMobile(msg.getString("phone"));
             m.setTime(msg.getTime("time"));
             
             a.add(m);
