@@ -19,7 +19,7 @@
     <td><%= m.get(i).getMobile()%></td>
     <td><%= m.get(i).getMessage()%></td>
     <td><%= m.get(i).getMessage_date()%></td>
-    <td></td>
+    <td><button class="btn1" id="<%= m.get(i).getMessageId() %>" onclick="window.open('https://mail.google.com/')">Reply</button></td>
 </tr>
 
 

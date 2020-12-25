@@ -29,8 +29,6 @@
 <div class="box">
     <div class="box1">               
         <h2>Client Notifications</h2>
-
-        <form>
             <div class="formContent">                             
                 <span class="content_name">Title </span><br>
                 <input type="text" id="title" name="title" required/>
@@ -51,8 +49,6 @@
                 <label for="msg" class="label_name">
                 </label>
             </div><br>
-
-        </form>
         <button id="csend" type="submit" onclick="SendNotification()">Send</button>
     </div>
 

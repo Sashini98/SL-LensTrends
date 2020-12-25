@@ -18,13 +18,13 @@ public class Notifications {
     String title;
     String notification;
     Date notify_date;
-    Time time;
+    Date time;
     String admin_id;
 
     public Notifications() {
     }
 
-    public Notifications(int notifyId, String title, String notification, Date notify_date, Time time, String admin_id) {
+    public Notifications(int notifyId, String title, String notification, Date notify_date, Date time, String admin_id) {
         this.notifyId = notifyId;
         this.title = title;
         this.notification = notification;
@@ -73,11 +73,11 @@ public class Notifications {
         this.notify_date = notify_date;
     }
 
-    public Time getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(Date time) {
         this.time = time;
     }
     

@@ -27,42 +27,45 @@ public class SendNotifications extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+
         String title = request.getParameter("title");
         String message = request.getParameter("msgbody");
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
-        
-        Notifications note=new Notifications();
+        Date time = new Date();
+        SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
+        String t = sdf2.format(date);
+
+        Notifications note = new Notifications();
         note.setTitle(title);
         note.setNotification(message);
         note.setNotify_date(date);
+        note.setTime(time);
         
+
         String id = "";
-        
+
         try {
-        Admin a = (Admin) request.getSession().getAttribute("loggedAdmin");
+            Admin a = (Admin) request.getSession().getAttribute("loggedAdmin");
             id = a.getAdminId();
             note.setAdmin_id(id);
-                       
+
             try {
                 NotificationDao notificationDao = new NotificationsDaoImpl();
                 notificationDao.addNotification(note);
-                
-                
-            } catch (Exception e) {                
+
+            } catch (Exception e) {
                 e.printStackTrace();
-            }    
-           
+            }
+
             response.getWriter().write("Notification Send Successfully.");
 
-    }
-        catch(Exception e){
+        } catch (Exception e) {
+             e.printStackTrace();
             response.getWriter().write("There is an error.");
-            
+
         }
 
-    
-}
+    }
 }

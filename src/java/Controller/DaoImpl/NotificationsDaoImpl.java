@@ -21,11 +21,7 @@ public class NotificationsDaoImpl implements NotificationDao{
 
     @Override
     public void addNotification(Notifications notifications) throws SQLException {
-        
-        Date d=notifications.getNotify_date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(d);
-        DB.iud("INSERT INTO notification ( title, message, date, Admin_id) VALUES ( '"+notifications.getTitle()+"', '"+ notifications.getNotification()+"', '"+date+"', '"+notifications.getAdmin_id()+"');");
+        DB.iud("INSERT INTO notification ( title, message, date,time, Admin_id) VALUES ( '"+notifications.getTitle()+"', '"+ notifications.getNotification()+"', '"+notifications.getNotify_date()+"','"+notifications.getTime()+"', '"+notifications.getAdmin_id()+"');");
     }
 
 }
