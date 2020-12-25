@@ -120,6 +120,10 @@
         <servlet-name>ViewReportedPhotographer</servlet-name>
         <servlet-class>Controller.Admin.ViewReportedPhotographer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>category_suggest</servlet-name>
+        <servlet-class>Controller.Forum.category_suggest</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -239,6 +243,10 @@
     <servlet-mapping>
         <servlet-name>ViewReportedPhotographer</servlet-name>
         <url-pattern>/ViewReportedPhotographer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>category_suggest</servlet-name>
+        <url-pattern>/category_suggest</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
