@@ -4,27 +4,61 @@
     Author     : kesh
 --%>
 
+<%@page import="Model.Photograph"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-System.out.println("akoooooooooooo");
+
+    ArrayList<Photograph> photos = (ArrayList<Photograph>) request.getAttribute("photos");
+
+    if (photos.size() > 0) {
+
 %>
 <div class="column">
-    <a href="PurchasePhoto.jsp"><img src="../../Resources/Img/A Mighty sunrise with a flight of birds..jpg" style="width:100%"></a>
-    <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
-    <!--<img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">-->
+    <%        for (int i = 0; i < photos.size(); i += 4) {
+        System.out.println(photos.get(i).getPath());
+    %>
+    <a href="PurchasePhoto.jsp"><img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%"></a>
+        <%
+            }
+        %>
 </div>
 <div class="column">
-    <img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%">
-    <img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%">
+    <%
+        for (int i = 1; i < photos.size(); i += 4) {
+    %>
+    <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
+    <%
+        }
+    %>
 </div>
 <div class="column">
-    <img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%">
-    <!--<img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%">-->
+    <%
+        for (int i = 2; i < photos.size(); i += 4) {
+    %>
+    <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
+    <%
+        }
+    %>
+</div>  
+<div class="column">
+    <%
+        for (int i = 3; i < photos.size(); i += 4) {
+    %>
+    <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
+    <%
+        }
+    %>
+</div>  
 
-</div>  
-<div class="column">
-    <img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%">
-<!--    <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%">
-    <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%">-->
-</div>  
+<%
+} else {
+%>
+<div style="text-align: center;"> 
+    <p>NO RESULTS FOUND</p>
+</div>
+<%
+    }
+
+%>

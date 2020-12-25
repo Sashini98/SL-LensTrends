@@ -84,9 +84,9 @@
                 <div style="background-color:  #FAFAFA; width: 100%; ">
                     <div class="searchInput">
                         <input type="text" id="keywordInput" placeholder="Search for Photographs" onkeyup="keywordSearch(event)">      
-                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
+                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="keywordSearch(event)"><i class="material-icons">search</i></button>
                     </div>
-                    <div class="row"> 
+                    <div class="row" id="row"> 
                         <div class="column">
                             <a href="PurchasePhoto.jsp"><img src="../../Resources/Img/A Mighty sunrise with a flight of birds..jpg" style="width:100%"></a>
                             <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">

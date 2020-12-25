@@ -6,12 +6,13 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
+<div onload="viewMessages();">
+    <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" ></script>
     <div class="b3">                
         <h2 style="text-align: center;">New Messages</h2>
         <br>
         <table width="100%">
-            <thead class="table">
+            <thead class="table" id="messageTable">
             <th class="th"> EMAIL </th>
             <th class="th"> NAME </th>
             <th class="th"> MOBILE </th>
@@ -20,16 +21,7 @@
             <th class="th"> OPTION </th>
             </thead>
 
-            <tbody>
-                <tr class="tr" id="messageTableBody">
-                    <td>sunil@gmail.com</td>
-                    <td>Sunil Perera</td>
-                    <td>071-2569874</td>
-                    <td>There is another account in the same details in the system.</td>
-                    <td>2020/12/02</td>
-                    <td><a href=""><button class="btn1" id="view">Reply</button></a></td>
-                </tr>
-                
+            <tbody id="messageTableBody" style="font-family: 'Poppins', sans-serif; text-align: center">
             </tbody>
         </table>
     </div>
@@ -37,31 +29,27 @@
 <div class="box">
     <div class="box1">               
         <h2>Client Notifications</h2>
-
-        <form>
             <div class="formContent">                             
                 <span class="content_name">Title </span><br>
-                <input type="text" name="title" required/>
+                <input type="text" id="title" name="title" required/>
                 <label for="title" class="label_name">
                 </label>
             </div><br>
 
-            <div class="formContent">
+<!--            <div class="formContent">
                 <span class="content_name"> Date </span><br>
-                <input type="date" name="dob" required class="doe"/>
+                <input type="date" id="date" name="dob" required class="doe"/>
                 <label for="doe" class="label_name">
                 </label>
-            </div><br>
+            </div><br>-->
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" id="msgbody"></textarea>
                 <label for="msg" class="label_name">
                 </label>
             </div><br>
-
-        </form>
-        <button id="csend" type="submit">Send</button>
+        <button id="csend" type="submit" onclick="SendNotification()">Send</button>
     </div>
 
     <div class="box2">
@@ -152,4 +140,6 @@
         </form>
         <button id="send" type="submit">Send</button>
     </div>
+</div>
+    
 </div>

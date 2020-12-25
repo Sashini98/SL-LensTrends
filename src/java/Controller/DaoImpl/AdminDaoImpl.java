@@ -47,6 +47,12 @@ public class AdminDaoImpl implements AdminDao {
             a.setType(AdminEmail.getString("Type"));
             a.setEmail(AdminEmail.getString("Email"));
             a.setPassword(AdminEmail.getString("Password"));
+            a.setFname(AdminEmail.getString("Fname"));
+            a.setLname(AdminEmail.getString("Lname"));
+            a.setMobile(AdminEmail.getString("Mobile"));
+            a.setAddress_no(AdminEmail.getString("Address_No"));
+            a.setCity(AdminEmail.getString("City"));
+            a.setProvince(AdminEmail.getString("Province"));
 
             return a;
         } else {

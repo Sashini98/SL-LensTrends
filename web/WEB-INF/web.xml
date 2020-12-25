@@ -100,6 +100,22 @@
         <servlet-name>CancellingAdminUpdate</servlet-name>
         <servlet-class>Controller.Admin.CancellingAdminUpdate</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewMessages</servlet-name>
+        <servlet-class>Controller.Admin.ViewMessages</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SendNotifications</servlet-name>
+        <servlet-class>Controller.Admin.SendNotifications</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PhotographAdvancedSearch</servlet-name>
+        <servlet-class>Controller.Clent.PhotographAdvancedSearch</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewUploadedPhotos</servlet-name>
+        <servlet-class>Controller.Admin.ViewUploadedPhotos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -199,6 +215,22 @@
     <servlet-mapping>
         <servlet-name>CancellingAdminUpdate</servlet-name>
         <url-pattern>/CancellingAdminUpdate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewMessages</servlet-name>
+        <url-pattern>/ViewMessages</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SendNotifications</servlet-name>
+        <url-pattern>/SendNotifications</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographAdvancedSearch</servlet-name>
+        <url-pattern>/PhotographAdvancedSearch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewUploadedPhotos</servlet-name>
+        <url-pattern>/ViewUploadedPhotos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

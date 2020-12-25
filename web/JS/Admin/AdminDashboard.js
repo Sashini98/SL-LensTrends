@@ -297,7 +297,11 @@ function show(selectedTab) {
                 var responce = request.responseText;
 //                alert(responce);
                 document.getElementById("DashboardBody").innerHTML = responce;
-
+                if (selectedTab === 'notification') {
+                    alert("dd");
+                     viewMessages();
+                     alert("22");
+                }
             }
         }
 
