@@ -44,7 +44,7 @@ public class AskQues extends HttpServlet {
                  a.add(c.getCategory());
              }
              request.setAttribute("category", a);
-            request.getRequestDispatcher("JS/Forum/AskQues.js").forward(request, response);
+            
             
         } catch (Exception e) {
         }

@@ -103,9 +103,9 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
 }
+alert("q");
 
-
-//var countries = ["begginers", "equipments", "techniques"];
+var categories;;
 
 var request = new XMLHttpRequest();
 
@@ -117,7 +117,8 @@ request.onreadystatechange = function () {
 
 
             var responce = request.responseText;
-            var countries = request.getAttribute("questions");
+            categories = request.getAttribute("category");
+            alert(categories);
             
 
              
@@ -125,17 +126,14 @@ request.onreadystatechange = function () {
             }
         }
 
-    }
-    ;
-
-
+    };
 
 
     request.open("POST", "../../AskQues", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 
-    autocomplete(document.getElementById("myInput"), countries);
+    autocomplete(document.getElementById("myInput"), categories);
 
 
 
