@@ -1,4 +1,4 @@
-function viewReportedPhotos(){
+function viewReportedPhotos() {
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
@@ -12,9 +12,9 @@ function viewReportedPhotos(){
 
             }
         }
-        };
+    };
 
-    request.open("POST", "../../ViewReportedPhotos", false);
+    request.open("POST", "../../ViewReportedPhotographs", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 }

@@ -12,6 +12,8 @@
     <div class="heading">
         <h1> Reported Photographs</h1>
     </div>
+    
+    <div name="r" id="r">
 <!--    <div class="photos">
         <div class="details">
             <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg">
@@ -48,4 +50,5 @@
         </div>
     </div>-->
 </div>
+    </div>
 </div>

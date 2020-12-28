@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <%
     ArrayList<Photograph> p = (ArrayList<Photograph>) request.getAttribute("photos");
-    for(int i = 0; i < p.size(); i++){
+    for (int i = 0; i < p.size(); i++) {
 %>
 
 <div class="photos">
