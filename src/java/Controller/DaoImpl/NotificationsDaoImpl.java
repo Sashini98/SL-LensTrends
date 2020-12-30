@@ -9,16 +9,27 @@ import DB.DB;
 import Model.Dao.NotificationDao;
 import Model.Notifications;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
  * @author Madusha
  */
-public class NotificationsDaoImpl implements NotificationDao{
+public class NotificationsDaoImpl implements NotificationDao {
 
     @Override
     public void addNotification(Notifications notifications) throws SQLException {
-        DB.iud("INSERT INTO notification ( title, message, date,time, Admin_id) VALUES ( '"+notifications.getTitle()+"', '"+ notifications.getNotification()+"', '"+notifications.getNotify_date()+"','"+notifications.getTime()+"', '"+notifications.getAdmin_id()+"');");
+
+        Date date = notifications.getNotify_date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String d = sdf.format(date);
+
+        Date time = notifications.getTime();
+        SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
+        String t = sdf2.format(time);
+        
+        DB.iud("INSERT INTO notification ( title, message, date,time, Admin_id) VALUES ( '" + notifications.getTitle() + "', '" + notifications.getNotification() + "', '" + d + "','" + t + "', '" + notifications.getAdmin_id() + "');");
     }
 
 }
