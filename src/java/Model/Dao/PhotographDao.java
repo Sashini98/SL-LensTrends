@@ -16,8 +16,7 @@ import java.util.List;
  */
 public interface PhotographDao {
     
-    public ArrayList<Photograph> getPhotographByKeyWord(String keyword);
-    
-     public List getAllPhotographs() throws SQLException;
+    public List<Photograph> getPhotographByKeyWord(String keyword);
+    public List getAllPhotographs() throws SQLException;
     
 }
