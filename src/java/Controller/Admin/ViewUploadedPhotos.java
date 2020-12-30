@@ -6,8 +6,11 @@
 package Controller.Admin;
 
 import Controller.DaoImpl.PhotographDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import Model.Dao.PhotographDao;
+import Model.Dao.PhotographerDao;
 import Model.Photograph;
+import Model.Photographer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -26,28 +29,35 @@ public class ViewUploadedPhotos extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         try {
             ArrayList<String> a = new ArrayList();
 
-            PhotographDao pDao = new PhotographDaoImpl();
-            ArrayList<Photograph> photos = (ArrayList<Photograph>) pDao.getAllPhotographs();
+            PhotographDao photoDao = new PhotographDaoImpl();
+            ArrayList<Photograph> photos = (ArrayList<Photograph>) photoDao.getAllPhotographs();
 
-            for(Photograph p : photos) {
-                
+            for (Photograph p : photos) {
+
+                String name = "";
+                String pid = p.getPhotogrpherId();
+                PhotographerDao pDao = new PhotographerDaoImp();
+                Photographer photographer = pDao.getPhotographerById(pid);;
+
+                name = photographer.getFname() + " " + photographer.getLname();
+
                 a.add(p.getPath());
                 a.add(p.getPhotogrpherId());
 
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 String date = sdf.format(p.getUploadedDate());
-                a.add(date); 
+                a.add(date);
             }
 
             request.setAttribute("photos", photos);
             request.getRequestDispatcher("View/Admin/UploadedPhotos.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
-    }
+        }
 
-}
+    }
 }
