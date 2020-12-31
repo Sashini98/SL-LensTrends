@@ -33,17 +33,14 @@ public class SendNotifications extends HttpServlet {
 
         String title = request.getParameter("title");
         String message = request.getParameter("msgbody");
-        Date date = new Date();       
-        
+        Date date = new Date();
         Date time = new Date();
-           
 
         Notifications note = new Notifications();
         note.setTitle(title);
         note.setNotification(message);
         note.setNotify_date(date);
         note.setTime(time);
-        
 
         String id = "";
 
@@ -63,7 +60,7 @@ public class SendNotifications extends HttpServlet {
             response.getWriter().write("Notification Send Successfully.");
 
         } catch (Exception e) {
-             e.printStackTrace();
+            e.printStackTrace();
             response.getWriter().write("There is an error.");
 
         }
