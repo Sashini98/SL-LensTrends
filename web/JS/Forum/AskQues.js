@@ -109,6 +109,7 @@ function autocomplete(inp, arr) {
            C_value = document.getElementById('myInput').value;
             categ.push(C_value);
             document.getElementById("cat").innerHTML = categ;
+            document. getElementById('myInput'). value = '';
         }
     }
 }
