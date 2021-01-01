@@ -15,7 +15,7 @@
     
     <div name="q" id="q">
 
-    <div class="questions">
+<!--    <div class="questions">
         <div class="details">
             <h2>FoV of One Plus 6T?</h2><br>
         </div>
@@ -60,5 +60,5 @@
         </table>
     </div>
 </div>
-</div>
+</div>-->
 </div>
