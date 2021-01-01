@@ -7,10 +7,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
+<div onload="viewQuestion();">
 <div class="manageFourmBody" style="background-color: #f7f6f9;">
     <div class="heading">
         <h1> Reported Questions</h1>
     </div>
+    
+    <div name="q" id="q">
 
     <div class="questions">
         <div class="details">
@@ -57,4 +60,5 @@
         </table>
     </div>
 </div>
-
+</div>
+</div>

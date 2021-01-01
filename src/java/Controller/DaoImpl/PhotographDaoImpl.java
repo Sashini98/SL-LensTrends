@@ -11,6 +11,7 @@ import Model.Photograph;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ import java.util.List;
 public class PhotographDaoImpl implements PhotographDao {
 
     @Override
-    public ArrayList<Photograph> getPhotographByKeyWord(String keyword) {
-        ArrayList<Photograph> photos = new ArrayList<>();
+    public List<Photograph> getPhotographByKeyWord(String keyword) {
+        List<Photograph> photos = new LinkedList<>();
         try {
             ResultSet photographs = DB.search("SELECT  * FROM photograph WHERE Keywords like '" + keyword + "'");
 
@@ -53,6 +54,8 @@ public class PhotographDaoImpl implements PhotographDao {
         }
         return photos;
     }
+    
+    
 
     @Override
     public List getAllPhotographs() throws SQLException {

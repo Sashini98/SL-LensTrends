@@ -5,18 +5,14 @@
  */
 package Model.Dao;
 
-import Model.Photograph;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author kesh
+ * @author Madusha
  */
-public interface PhotographDao {
+public interface ReportedQuestionDao {
     
-    public List<Photograph> getPhotographByKeyWord(String keyword);
-    public List getAllPhotographs() throws SQLException;
-    
+    public List getAllReportedQuestions() throws SQLException;
 }

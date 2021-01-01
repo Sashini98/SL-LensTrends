@@ -33,8 +33,8 @@ public class Photograph {
     public Photograph() {
     }
 
-    public Photograph(int id, int categoryId, String path, String size, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
-        this.id = id;
+    public Photograph( int categoryId, String path, String size, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
+//        this.id = id;
         this.categoryId = categoryId;
         this.path = path;
         this.size = size;

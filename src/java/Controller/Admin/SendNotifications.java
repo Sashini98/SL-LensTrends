@@ -34,30 +34,13 @@ public class SendNotifications extends HttpServlet {
         String title = request.getParameter("title");
         String message = request.getParameter("msgbody");
         Date date = new Date();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String d = sdf.format(date);
-        try {
-            date = sdf.parse(d);
-            System.out.println(date);
-        } catch (ParseException ex) {
-            ex.printStackTrace();
-        }
         Date time = new Date();
-        SimpleDateFormat sdf2 = new SimpleDateFormat("HH:mm:ss");
-        String t = sdf2.format(date);
-        try {
-            time = sdf2.parse(t);
-            System.out.println(time);
-        } catch (ParseException ex) {
-            ex.printStackTrace();
-        }
 
         Notifications note = new Notifications();
         note.setTitle(title);
         note.setNotification(message);
         note.setNotify_date(date);
         note.setTime(time);
-        
 
         String id = "";
 
@@ -77,7 +60,7 @@ public class SendNotifications extends HttpServlet {
             response.getWriter().write("Notification Send Successfully.");
 
         } catch (Exception e) {
-             e.printStackTrace();
+            e.printStackTrace();
             response.getWriter().write("There is an error.");
 
         }
