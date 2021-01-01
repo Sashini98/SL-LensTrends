@@ -5,6 +5,7 @@
  */
 package Model.Dao;
 
+import Model.Answer;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  */
 public interface AnswerDao {
     
-    
+    public void addAnswer(Answer answer) throws SQLException;
     public int answerCount(int questionId) throws SQLException;
     
      public List getAllAnswers(int questionId) throws SQLException;

@@ -11,7 +11,9 @@ import Model.Dao.AnswerDao;
 import Model.Question;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -46,6 +48,14 @@ public class AnswerDaoImpl implements AnswerDao{
 
         }
         return a;
+    }
+
+    @Override
+    public void addAnswer(Answer answer) throws SQLException {
+         Date d=answer.getanswerDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(d);
+         DB.iud("INSERT INTO answer (Answer, Answe_Date, Question_Id, Photographer_Id) VALUES ('"+answer.getanswer()+"', '"+date+"', '"+answer.getquestionId()+"', '"+answer.getPhotographerId()+"');");
     }
     
 }
