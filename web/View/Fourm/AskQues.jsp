@@ -97,7 +97,7 @@
                         <h3 style="margin-top: -2%;"><b>Question</b></h3>
                         <textarea id="Questionbody" name="Questionbody" rows="20"></textarea>  <br>
 
-                        <h3><label for="Category"><b>Category</b></label><h4 id="cat"></h4></h3>
+                        <h3><label for="Category"><b>Category</b></label><h4 id="cat" name="cat"></h4></h3>
                         <div class="autocomplete" style="width:300px;">
                         <input id="myInput" type="text" name="myCountry">
                         </div>

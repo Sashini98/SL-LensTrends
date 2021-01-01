@@ -36,7 +36,8 @@ public class AskQues extends HttpServlet {
 
         String title = request.getParameter("title");
         String body = request.getParameter("Questionbody");
-        String category = request.getParameter("categ");
+        String category = request.getParameter("cat");
+        System.out.println(category);
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
@@ -44,12 +45,11 @@ public class AskQues extends HttpServlet {
         Question ques = new Question();
         ques.settitle(title);
         ques.setquestion(body);
-        ques.setcategory(category);
         ques.setquestion_date(date);
 
         String t = "";
         t = ques.gettitle();
-        System.out.println(t);
+        
 
         String id = "";
         try {
@@ -59,7 +59,7 @@ public class AskQues extends HttpServlet {
                 Client c = (Client) request.getSession().getAttribute("loggedClient");
                 id = c.getClientId();
                 ques.setclientId(id);
-                System.out.println(ques.getclientId());
+                
 
                 try {
                     QuestionDao questionDao = new QuestionDaoImpl();

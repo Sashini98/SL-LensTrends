@@ -128,6 +128,10 @@
         <servlet-name>ViewReportedPhotographs</servlet-name>
         <servlet-class>Controller.Admin.ViewReportedPhotographs</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Add_answer</servlet-name>
+        <servlet-class>Controller.Forum.Add_answer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -255,6 +259,10 @@
     <servlet-mapping>
         <servlet-name>ViewReportedPhotographs</servlet-name>
         <url-pattern>/ViewReportedPhotographs</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add_answer</servlet-name>
+        <url-pattern>/Add_answer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
