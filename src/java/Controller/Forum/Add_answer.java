@@ -29,6 +29,7 @@ public class Add_answer extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String an = request.getParameter("answ");
+        String qid=request.getParameter("qid");
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);

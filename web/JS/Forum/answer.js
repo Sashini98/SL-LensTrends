@@ -4,34 +4,38 @@
  * and open the template in the editor.
  */
 
-var qid=document.getElementById('qid').value;
-alert(qid);
+var qid;
 
-question()
+function quesId()
+{
+    qid=document.getElementById('qid').value;
+}
+
+
+function question()
 {
 
-alert("hii");
-   
-     var request = new XMLHttpRequest();
-     alert(qid);
+alert(qid);
+    var request = new XMLHttpRequest();
+    
 
-request.onreadystatechange = function () {
+    request.onreadystatechange = function () {
 
-    if (request.status === 200) {
-        if (request.readyState === 4) {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
 
-            var responce = request.responseText;
-            ques = JSON.parse(responce);
-            alert(ques);
-            document.getElementById("quest").innerHTML = ques;
-            ;
+                var responce = request.responseText;
+                ques = JSON.parse(responce);
+                alert(ques);
+                document.getElementById("quest").innerHTML = ques;
 
+
+            }
         }
-    }
 
-};
+    };
 
-request.open("POST", "../../display_question_inAnswer", false);
-request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
- request.send("qid=" + qid);
+    request.open("POST", "../../display_question_inAnswer", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("qid=" + qid);
 }

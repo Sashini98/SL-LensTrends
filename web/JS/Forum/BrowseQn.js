@@ -89,7 +89,6 @@ function view()
 
 
                 var responce = request.responseText;
-                alert(responce);
 
                 document.getElementById("s").innerHTML = responce;
 

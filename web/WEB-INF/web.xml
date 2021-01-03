@@ -136,6 +136,14 @@
         <servlet-name>display_question_inAnswer</servlet-name>
         <servlet-class>Controller.Forum.display_question_inAnswer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Add_comment</servlet-name>
+        <servlet-class>Controller.Forum.Add_comment</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>View_comment</servlet-name>
+        <servlet-class>Controller.Forum.View_comment</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -271,6 +279,14 @@
     <servlet-mapping>
         <servlet-name>display_question_inAnswer</servlet-name>
         <url-pattern>/display_question_inAnswer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add_comment</servlet-name>
+        <url-pattern>/Add_comment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>View_comment</servlet-name>
+        <url-pattern>/View_comment</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
