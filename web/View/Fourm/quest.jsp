@@ -43,7 +43,7 @@
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
-        <a href="AnswerQues.jsp" type="button" id="myAns1" onclick="quesId()">Answer Now</a>
+        <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
         <%
             }
         %>
@@ -59,10 +59,10 @@
 
         <div class="modal-content">
             <span class="close_anwe">&times;</span>
-
+            
             <div name="ans" id="ans">
-
-
+               
+                
                 <!--            <div class="answerqn">
                                 <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
                                     Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
@@ -145,5 +145,5 @@
 </div
 <script src="../../JS/Forum/answer.js" type="text/javascript"></script>
 <script src="../../JS/Forum/BrowseQn.js" type="text/javascript"></script>
-
+    
 <%}%>

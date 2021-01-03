@@ -4,20 +4,15 @@
  * and open the template in the editor.
  */
 
-var qid;
-
-function quesId()
-{
-    qid=document.getElementById('qid').value;
-}
-
-
+var qid = document.getElementById('id').value;
 function question()
 {
-
-alert(qid);
-    var request = new XMLHttpRequest();
+    alert("hiiiii");
     
+
+    alert(qid);
+    var request = new XMLHttpRequest();
+
 
     request.onreadystatechange = function () {
 
