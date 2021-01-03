@@ -132,6 +132,10 @@
         <servlet-name>Add_answer</servlet-name>
         <servlet-class>Controller.Forum.Add_answer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>display_question_inAnswer</servlet-name>
+        <servlet-class>Controller.Forum.display_question_inAnswer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -263,6 +267,10 @@
     <servlet-mapping>
         <servlet-name>Add_answer</servlet-name>
         <url-pattern>/Add_answer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>display_question_inAnswer</servlet-name>
+        <url-pattern>/display_question_inAnswer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -17,7 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Questions</title>
     </head>
-    <body style="background-color: #f7f6f9;">
+    <body style="background-color: #f7f6f9;" onload="question()">
 
         <div class="fixedheader">  
 
@@ -72,10 +72,11 @@
             <div name="s" id="s">
                 <div class="questions">                
                     <form>
-                        <h3><label for="Question"><b>Question</b></label><br></h3>
+                        <h3 id="quest" name="quest"><label for="Question"><b></b></label><br></h3>
+                       
 
                     <h3><label for="Body"><b>Answer</b></label><br></h3>
-                    <textarea id="body" name="body" rows="10" cols="50"></textarea><br><br><br>         
+                    <textarea id="answ" name="answ" rows="10" cols="50"></textarea><br><br><br>         
                   
                     <input type="submit" id="submit" value="Post Answer"><br><br><br>
 
@@ -91,7 +92,7 @@
 </div>
 
 </div>
-
+<script src="../../JS/Forum/answer.js" type="text/javascript" ></script>
 
 </body>
 </html>
