@@ -16,7 +16,8 @@ public class Photograph {
     int id;
     int categoryId;
     String path;
-    String size;
+    double height;
+    double width;
     String quality;
     String keywords;
     Date uploadedDate;
@@ -33,11 +34,12 @@ public class Photograph {
     public Photograph() {
     }
 
-    public Photograph( int categoryId, String path, String size, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
-//        this.id = id;
+    public Photograph(int id, int categoryId, String path, double height, double width, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
+        this.id = id;
         this.categoryId = categoryId;
         this.path = path;
-        this.size = size;
+        this.height = height;
+        this.width = width;
         this.quality = quality;
         this.keywords = keywords;
         this.uploadedDate = uploadedDate;
@@ -76,12 +78,20 @@ public class Photograph {
         this.path = path;
     }
 
-    public String getSize() {
-        return size;
+    public double getHeight() {
+        return height;
     }
 
-    public void setSize(String size) {
-        this.size = size;
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWidth() {
+        return width;
+    }
+
+    public void setWidth(double width) {
+        this.width = width;
     }
 
     public String getQuality() {
