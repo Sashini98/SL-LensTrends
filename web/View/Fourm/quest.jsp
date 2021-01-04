@@ -43,11 +43,11 @@
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
-        <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
+        <a href="../../display_question_inAnswer?qid=<%= s.get((i * 6) + 5)%>" type="button" id="myAns1">Answer Now</a>
         <%
             }
         %>
-        <a href="#" type="button" id="answer_view" onclick="popupanswer()"><%= s.get((i * 6) + 4)%> answers</a>
+        <a href="#" type="button" id="answer_view" onclick="popupanswer(<%= s.get((i * 6) + 5)%>);"><%= s.get((i * 6) + 4)%> answers</a>
 
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
@@ -144,6 +144,7 @@
 
 </div
 <script src="../../JS/Forum/answer.js" type="text/javascript"></script>
+<script src="../../JS/Forum/answerDisplay.js" type="text/javascript"></script>
 <script src="../../JS/Forum/BrowseQn.js" type="text/javascript"></script>
     
 <%}%>

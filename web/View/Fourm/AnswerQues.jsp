@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    String ques=(String)request.getAttribute("question");
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Questions</title>
     </head>
-    <body style="background-color: #f7f6f9;" onload="question()">
+    <body style="background-color: #f7f6f9;">
 
         <div class="fixedheader">  
 
@@ -67,7 +70,7 @@
             <div name="s" id="s">
                 <div class="questions">                
                     <form>
-                        <h3 id="quest" name="quest"><label for="Question"><b></b></label><br></h3>
+                        <h3 id="quest" name="quest"><label for="Question"><b><%=ques%></b></label><br></h3>
                         <h4 id="quesid" name="quesid"></h4>
                        
 

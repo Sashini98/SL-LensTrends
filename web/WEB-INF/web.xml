@@ -144,6 +144,10 @@
         <servlet-name>View_comment</servlet-name>
         <servlet-class>Controller.Forum.View_comment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>quesId</servlet-name>
+        <servlet-class>Controller.Forum.quesId</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -287,6 +291,10 @@
     <servlet-mapping>
         <servlet-name>View_comment</servlet-name>
         <url-pattern>/View_comment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>quesId</servlet-name>
+        <url-pattern>/quesId</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

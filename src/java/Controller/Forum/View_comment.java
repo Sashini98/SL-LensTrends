@@ -23,6 +23,8 @@ public class View_comment extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String answerId=request.getParameter("answId");
+        
         
     }
 
