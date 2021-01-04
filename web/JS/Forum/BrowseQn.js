@@ -3,12 +3,13 @@
 
 function popupanswer()
 {
-
     var btn = document.getElementById("answer_view");
+
 
     var modal = document.getElementById("answer1");
 
     var span = document.getElementsByClassName("close_anwe")[0];
+
 
 
 
@@ -59,6 +60,7 @@ function popupanswer()
 // When the user clicks the button, open the modal 
     btn.onclick = function () {
         modal.style.display = "block";
+    
     }
 
 // When the user clicks on <span> (x), close the modal
@@ -72,8 +74,8 @@ function popupanswer()
             modal.style.display = "none";
         }
     }
+a1();
 
-    a1();
 }
 
 
@@ -89,8 +91,6 @@ function view()
 
 
                 var responce = request.responseText;
-                alert(responce);
-
                 document.getElementById("s").innerHTML = responce;
 
 
@@ -110,27 +110,5 @@ function view()
 
 function a1()
 {
-    var quesid = document.getElementById("qid").value;
-
-    var request = new XMLHttpRequest();   
-
-//    request.onreadystatechange = function () {      
-//        if (request.status === 200) {
-//             alert("b");
-//            if (request.readyState === 4) {
-//                 alert("c");
-//                var responce = request.responseText;
-//                alert(responce);
-//                document.getElementById("ans").innerHTML = responce;                
-//            }
-//        }
-//
-//    };
-
-    request.open("POST", "../../Answer_display", false);   
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("qid=" + quesid); 
-
+    alert("hi");
 }
-
-

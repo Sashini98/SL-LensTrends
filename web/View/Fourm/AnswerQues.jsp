@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    String ques=(String)request.getAttribute("question");
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -35,12 +38,7 @@
 
                     </ul>
                 </div>
-                <div class="searchInput">
-
-                    <input type="text" placeholder="Search">                   
-
-
-                </div>
+                
                 <div class="notifyicn">
                     <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
                 </div>
@@ -58,7 +56,7 @@
              <div class="side-box"> 
                 <div class="home">
                     <ul>
-                        <li><a href="../../View/Home.jsp"> Home </a></li>
+                     
                         <li><a href="../../View/Fourm/MainForum.jsp"> Forum Home </a></li>
                     </ul>
                 </div>
@@ -72,10 +70,12 @@
             <div name="s" id="s">
                 <div class="questions">                
                     <form>
-                        <h3><label for="Question"><b>Question</b></label><br></h3>
+                        <h3 id="quest" name="quest"><label for="Question"><b><%=ques%></b></label><br></h3>
+                        <h4 id="quesid" name="quesid"></h4>
+                       
 
                     <h3><label for="Body"><b>Answer</b></label><br></h3>
-                    <textarea id="body" name="body" rows="10" cols="50"></textarea><br><br><br>         
+                    <textarea id="answ" name="answ" rows="10" cols="50"></textarea><br><br><br>         
                   
                     <input type="submit" id="submit" value="Post Answer"><br><br><br>
 
@@ -91,7 +91,7 @@
 </div>
 
 </div>
-
+<script src="../../JS/Forum/answer.js" type="text/javascript" ></script>
 
 </body>
 </html>

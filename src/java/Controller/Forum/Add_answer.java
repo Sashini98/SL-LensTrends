@@ -5,12 +5,19 @@
  */
 package Controller.Forum;
 
+import Controller.DaoImpl.AnswerDaoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import DB.DB;
+import Model.Answer;
+import Model.Dao.AnswerDao;
+import Model.Photographer;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -18,12 +25,30 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Add_answer extends HttpServlet {
 
-   
-
-   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-    }
+        String an = request.getParameter("answ");
+        String qid=request.getParameter("qid");
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String d = sdf.format(date);
 
+        Answer answer = new Answer();
+        answer.setanswer(an);
+        answer.setanswerDate(date);
+
+        Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+        String id = p.getPhotographerId();
+        answer.setPhotographerId(id);
+        
+        try {
+            AnswerDao answ=new AnswerDaoImpl();
+            answ.addAnswer(answer);
+            response.sendRedirect("View/Fourm/BrowseQn.jsp");
+                    
+        } catch (Exception e) {
+        }
+
+    }
 }

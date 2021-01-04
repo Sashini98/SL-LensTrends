@@ -20,6 +20,8 @@ public interface QuestionDao {
     
     public List getAllQuestions() throws SQLException;
     public List getCategory(int questionId) throws SQLException;
+    public Question getQuestionbtId(int questionId) throws SQLException;
+            
     
     public void deleteQuestion(int questionId) throws SQLException;
     

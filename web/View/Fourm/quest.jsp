@@ -33,7 +33,7 @@
 <div class="questions">                
     <h2><%= s.get(i * 6)%></h2>
     <p><%= s.get((i * 6) + 1)%></p>
-    <input id="qid" type="text" value="<%= s.get((i * 6) + 5)%>" style="display: none;">
+    <input id="qid" name="qid" type="text" value="<%= s.get((i * 6) + 5)%>" style="display: none;">
 <!--    <label><a href="#" type="button"><%= s.get((i * 7) + 2)%></a></label> -->
     <span>Posted by: <%= s.get((i * 6) + 2)%></span> <span id="time"><%= s.get((i * 6) + 3)%></span>   
     <div class="updown">
@@ -43,11 +43,11 @@
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
-        <a href="AnswerQues.jsp" type="button" id="myAns1">Answer Now</a>
+        <a href="../../display_question_inAnswer?qid=<%= s.get((i * 6) + 5)%>" type="button" id="myAns1">Answer Now</a>
         <%
             }
         %>
-        <a href="#" type="button" id="answer_view" onclick="popupanswer()"><%= s.get((i * 6) + 4)%> answers</a>
+        <a href="#" type="button" id="answer_view" onclick="popupanswer(<%= s.get((i * 6) + 5)%>);"><%= s.get((i * 6) + 4)%> answers</a>
 
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
@@ -143,6 +143,8 @@
     </div>
 
 </div
-
-<script src="../../JS/Forum/BrowseQn.js" type="text/javascript" >
+<script src="../../JS/Forum/answer.js" type="text/javascript"></script>
+<script src="../../JS/Forum/answerDisplay.js" type="text/javascript"></script>
+<script src="../../JS/Forum/BrowseQn.js" type="text/javascript"></script>
+    
 <%}%>
