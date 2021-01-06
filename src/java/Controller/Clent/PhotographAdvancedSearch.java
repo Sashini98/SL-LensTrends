@@ -51,7 +51,7 @@ public class PhotographAdvancedSearch extends HttpServlet {
 
         LinkedList<Photograph> photos = (LinkedList<Photograph>) request.getSession().getAttribute("searchedPics");
 
-        // orientation sort
+        // orientation filter
         if (orientation.equalsIgnoreCase("AllOrientations")) {
            
             if (orientation.equalsIgnoreCase("Horizontal")) {
@@ -86,15 +86,37 @@ public class PhotographAdvancedSearch extends HttpServlet {
             
         }
         
-        // size sort
+        // size filter
         if (minWidth != 0.0) {
             for (Photograph photo : photos) {
-//                if (photo.get) {
-//                    
-//                }
+                if (!(photo.getWidth() > minWidth)) {
+                    photos.remove(photo);
+                }
+            }
+        }
+        if (minHeight != 0.0) {
+            for (Photograph photo : photos) {
+                if (!(photo.getHeight() > minHeight)) {
+                    photos.remove(photo);
+                }
+            }
+        }
+        if (maxWidth != 0.0) {
+            for (Photograph photo : photos) {
+                if (!(photo.getWidth() < maxWidth)) {
+                    photos.remove(photo);
+                }
+            }
+        }
+        if (maxHeight != 0.0) {
+            for (Photograph photo : photos) {
+                if (!(photo.getHeight() < maxHeight)) {
+                    photos.remove(photo);
+                }
             }
         }
         
-
+        // people filter
+        
     }
 }

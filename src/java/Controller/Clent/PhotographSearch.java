@@ -30,10 +30,10 @@ public class PhotographSearch extends HttpServlet {
         String keyword = request.getParameter("keyword");
         PhotographDao pd = new PhotographDaoImpl();
         
-        LinkedList<Photograph> photographByKeyWord = (LinkedList<Photograph>) pd.getPhotographByKeyWord(keyword);
+        ArrayList<Photograph> photographByKeyWord = (ArrayList<Photograph>) pd.getPhotographByKeyWord(keyword);
         
         if (photographByKeyWord == null) {
-            photographByKeyWord = new LinkedList<>();
+            photographByKeyWord = new ArrayList<>();
         }
         
         request.getSession().setAttribute("searchedPics", photographByKeyWord);
