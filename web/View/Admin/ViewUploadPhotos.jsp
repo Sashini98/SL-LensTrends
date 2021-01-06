@@ -34,8 +34,8 @@
                 <tr>
                     <td align="left">Description</td>
                     <td><input type="text" name="des" id="desc" disabled=""></td>
-                    <td align="left">Size</td>
-                    <td><input type="text" name="size" id="size" disabled=""></td>
+                    <td align="left">Orientation</td>
+                    <td><input type="text" name="size" id="orientation" disabled=""></td>
                 </tr>
                 <tr>
                     <td align="left">Uploaded Date</td>
