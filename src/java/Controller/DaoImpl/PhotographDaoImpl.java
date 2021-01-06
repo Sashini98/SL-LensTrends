@@ -47,8 +47,8 @@ public class PhotographDaoImpl implements PhotographDao {
     }
 
     @Override
-    public List getAllPhotographs() throws SQLException {
-        ResultSet photographs = DB.search("SELECT * FROM photograph");
+    public List getAllInReviewPhotographs() throws SQLException {
+        ResultSet photographs = DB.search("SELECT * FROM photograph WHERE state_id = 2");
         ArrayList<Photograph> photos = new ArrayList();
 
         while (photographs.next()) {

@@ -34,26 +34,26 @@ public class ViewUploadedPhotos extends HttpServlet {
             ArrayList<String> a = new ArrayList();
 
             PhotographDao photoDao = new PhotographDaoImpl();
-            ArrayList<Photograph> photos = (ArrayList<Photograph>) photoDao.getAllPhotographs();
+            ArrayList<Photograph> photos = (ArrayList<Photograph>) photoDao.getAllInReviewPhotographs();
+
+            PhotographerDao pDao = new PhotographerDaoImp();
 
             for (Photograph p : photos) {
 
                 String name = "";
                 String pid = p.getPhotogrpherId();
-                PhotographerDao pDao = new PhotographerDaoImp();
                 Photographer photographer = pDao.getPhotographerById(pid);;
 
-                name = photographer.getFname() + " " + photographer.getLname();
+                name = photographer.getFname() + " " + photographer.getLname();                
+                a.add(name);
 
-                a.add(p.getPath());
-                a.add(p.getPhotogrpherId());
-
-                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                String date = sdf.format(p.getUploadedDate());
-                a.add(date);
+//                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+//                String date = sdf.format(p.getUploadedDate());
+               
             }
 
             request.setAttribute("photos", photos);
+            request.setAttribute("photographer", a);
             request.getRequestDispatcher("View/Admin/UploadedPhotos.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();
