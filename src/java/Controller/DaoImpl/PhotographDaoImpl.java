@@ -22,29 +22,19 @@ public class PhotographDaoImpl implements PhotographDao {
 
     @Override
     public List<Photograph> getPhotographByKeyWord(String keyword) {
-        List<Photograph> photos = new LinkedList<>();
+        List<Photograph> photos = new ArrayList<>();
         try {
             ResultSet photographs = DB.search("SELECT  * FROM photograph WHERE Keywords like '" + keyword + "'");
 
             while (photographs.next()) {
-                Photograph p = new Photograph();
-                p.setId(photographs.getInt("Photograph_Id"));
-                p.setCategoryId(photographs.getInt("category_id"));
-                p.setPath(photographs.getString("path"));
-                p.setHeight(photographs.getDouble("Height"));
-                p.setWidth(photographs.getDouble("Width"));
-                p.setQuality(photographs.getString("Quality"));
-                p.setKeywords(photographs.getString("Keywords"));
-                p.setUploadedDate(photographs.getDate("Uploaded_Date"));
-                p.setForSale(photographs.getBoolean("For_Sale"));
-                p.setUndiscovered(photographs.getBoolean("Undiscovered"));
-                p.setPhotogrpherId(photographs.getString("Photographer_Id"));
-                p.setTitle(photographs.getString("Title"));
-                p.setDiscription(photographs.getString("Description"));
-                p.setPeople(photographs.getBoolean("People"));
-                p.setOrientationId(photographs.getInt("Orientation_Id"));
-                p.setStateId(photographs.getInt("state_id"));
-                p.setGenderId(photographs.getInt("Gender_Id"));
+                Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                        photographs.getDouble("Width"), photographs.getDouble("Height"),
+                        photographs.getString("Quality"), photographs.getString("Keywords"),
+                        photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
+                        photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
+                        photographs.getString("Title"), photographs.getInt("category_id"),
+                        photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
+                        photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
 
                 photos.add(p);
             }
@@ -62,29 +52,39 @@ public class PhotographDaoImpl implements PhotographDao {
         ArrayList<Photograph> photos = new ArrayList();
 
         while (photographs.next()) {
-            Photograph p = new Photograph();
-            p.setId(photographs.getInt("Photograph_Id"));
-//                p.setCategoryId(photographs.getInt("category_id"));
-            p.setPath(photographs.getString("path"));
-            p.setHeight(photographs.getDouble("Height"));
-            p.setWidth(photographs.getDouble("Width"));
-            p.setQuality(photographs.getString("Quality"));
-            p.setKeywords(photographs.getString("Keywords"));
-            p.setUploadedDate(photographs.getDate("Uploaded_Date"));
-            p.setForSale(photographs.getBoolean("For_Sale"));
-            p.setUndiscovered(photographs.getBoolean("Undiscovered"));
-            p.setPhotogrpherId(photographs.getString("Photographer_Id"));
-            p.setTitle(photographs.getString("Title"));
-            p.setDiscription(photographs.getString("Description"));
-            p.setPeople(photographs.getBoolean("People"));
-            p.setOrientationId(photographs.getInt("Orientation_Id"));
-            p.setStateId(photographs.getInt("state_id"));
-            p.setGenderId(photographs.getInt("Gender_Id"));
+            Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                    photographs.getDouble("Width"), photographs.getDouble("Height"),
+                    photographs.getString("Quality"), photographs.getString("Keywords"),
+                    photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
+                    photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
+                    photographs.getString("Title"), photographs.getInt("category_id"),
+                    photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
+                    photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
 
             photos.add(p);
 
         }
         return photos;
+    }
+
+    @Override
+    public Photograph getPhotographById(int id) throws SQLException {
+        ResultSet photograph = DB.search("SELECT * FROM photograph WHERE Photograph_Id = '" + id + "'");
+
+        if (photograph.next()) {
+            Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"),
+                    photograph.getDouble("Width"), photograph.getDouble("Height"),
+                    photograph.getString("Quality"), photograph.getString("Keywords"),
+                    photograph.getDate("Uploaded_Date"), photograph.getBoolean("For_Sale"),
+                    photograph.getBoolean("Undiscovered"), photograph.getString("Photographer_Id"),
+                    photograph.getString("Title"), photograph.getInt("category_id"),
+                    photograph.getBoolean("People"), photograph.getInt("Orientation_Id"),
+                    photograph.getInt("state_id"), photograph.getInt("Gender_Id"));
+            
+            return p;
+        }else{
+            return null;
+        }
     }
 
 }

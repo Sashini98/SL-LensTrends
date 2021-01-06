@@ -148,6 +148,10 @@
         <servlet-name>quesId</servlet-name>
         <servlet-class>Controller.Forum.quesId</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PurchasePhotoDetails</servlet-name>
+        <servlet-class>Controller.Clent.PurchasePhotoDetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -295,6 +299,10 @@
     <servlet-mapping>
         <servlet-name>quesId</servlet-name>
         <url-pattern>/quesId</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PurchasePhotoDetails</servlet-name>
+        <url-pattern>/PurchasePhotoDetails</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

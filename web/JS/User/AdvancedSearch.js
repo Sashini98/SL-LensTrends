@@ -181,7 +181,7 @@ function  advancedSearch() {
         gender = 'Male';
 
     } else {
-        gender = 'WithoutPeople';
+        gender = 'Female';
     }
 
     if (document.getElementById('Undiscovered').checked) {

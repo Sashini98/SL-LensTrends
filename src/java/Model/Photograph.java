@@ -14,10 +14,9 @@ import java.util.Date;
 public class Photograph {
 
     int id;
-    int categoryId;
     String path;
-    double height;
     double width;
+    double height;
     String quality;
     String keywords;
     Date uploadedDate;
@@ -25,7 +24,7 @@ public class Photograph {
     boolean undiscovered;
     String photogrpherId;
     String title;
-    String discription;
+    int categoryId;
     boolean people;
     int orientationId;
     int stateId;
@@ -34,12 +33,11 @@ public class Photograph {
     public Photograph() {
     }
 
-    public Photograph(int id, int categoryId, String path, double height, double width, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
+    public Photograph(int id, String path, double width, double height, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, int categoryId, boolean people, int orientationId, int stateId, int genderId) {
         this.id = id;
-        this.categoryId = categoryId;
         this.path = path;
-        this.height = height;
         this.width = width;
+        this.height = height;
         this.quality = quality;
         this.keywords = keywords;
         this.uploadedDate = uploadedDate;
@@ -47,7 +45,7 @@ public class Photograph {
         this.undiscovered = undiscovered;
         this.photogrpherId = photogrpherId;
         this.title = title;
-        this.discription = discription;
+        this.categoryId = categoryId;
         this.people = people;
         this.orientationId = orientationId;
         this.stateId = stateId;
@@ -62,14 +60,6 @@ public class Photograph {
         this.id = id;
     }
 
-    public int getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
-    }
-
     public String getPath() {
         return path;
     }
@@ -78,20 +68,20 @@ public class Photograph {
         this.path = path;
     }
 
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public double getWidth() {
         return width;
     }
 
     public void setWidth(double width) {
         this.width = width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public String getQuality() {
@@ -150,12 +140,12 @@ public class Photograph {
         this.title = title;
     }
 
-    public String getDiscription() {
-        return discription;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public boolean isPeople() {
@@ -190,7 +180,5 @@ public class Photograph {
         this.genderId = genderId;
     }
 
-    
-    
     
 }
