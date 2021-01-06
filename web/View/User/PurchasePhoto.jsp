@@ -9,6 +9,7 @@
 
 <%
     boolean logged = (Boolean) request.getAttribute("logged");
+    int id  = Integer.parseInt(request.getParameter("id"));
 %>
 
 
