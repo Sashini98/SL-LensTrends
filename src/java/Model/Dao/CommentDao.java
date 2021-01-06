@@ -5,7 +5,7 @@
  */
 package Model.Dao;
 
-import Model.Answer;
+import Model.Comment;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -13,11 +13,9 @@ import java.util.List;
  *
  * @author Sashini Shihara
  */
-public interface AnswerDao {
+public interface CommentDao {
+    public void  addCommentifClient(Comment comment) throws SQLException;
+     public void  addCommentifPhotographer(Comment comment) throws SQLException;
     
-    public void addAnswer(Answer answer) throws SQLException;
-    public int answerCount(int questionId) throws SQLException;
-    
-     public List getAllAnswers(int questionId) throws SQLException;
-    
+    public List getCommentbyId(int answerId) throws SQLException;
 }
