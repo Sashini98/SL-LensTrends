@@ -152,6 +152,10 @@
         <servlet-name>PurchasePhotoDetails</servlet-name>
         <servlet-class>Controller.Clent.PurchasePhotoDetails</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewReportedQuestions</servlet-name>
+        <servlet-class>Controller.Admin.ViewReportedQuestions</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -303,6 +307,10 @@
     <servlet-mapping>
         <servlet-name>PurchasePhotoDetails</servlet-name>
         <url-pattern>/PurchasePhotoDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewReportedQuestions</servlet-name>
+        <url-pattern>/ViewReportedQuestions</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

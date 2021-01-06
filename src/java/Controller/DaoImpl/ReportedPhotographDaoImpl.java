@@ -31,7 +31,7 @@ public class ReportedPhotographDaoImpl implements ReportedPhotographDao{
             p.setReportId(r.getInt("Report_Id"));
             p.setReason(r.getString("Reason"));
             p.setDescription(r.getString("Description"));
-            p.setPhotographId(r.getString("Photograph_Id"));
+            p.setPhotographId(r.getInt("Photograph_Id"));
             p.setClientId(r.getString("Client_Id"));
             
             a.add(p);

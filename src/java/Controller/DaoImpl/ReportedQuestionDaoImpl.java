@@ -31,8 +31,9 @@ public class ReportedQuestionDaoImpl implements ReportedQuestionDao{
             p.setReportId(rq.getInt("Report_Id"));
             p.setReason(rq.getString("Reason"));
             p.setDescription(rq.getString("Description"));
-            p.setQuestionId(rq.getString("Question_Id"));
+            p.setQuestionId(rq.getInt("Question_Id"));
             p.setClientId(rq.getString("Client_Id"));
+            p.setPhotographerId(rq.getString("Photographer_Id"));
             
             a.add(p);
 

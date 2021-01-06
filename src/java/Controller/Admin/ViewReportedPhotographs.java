@@ -5,8 +5,14 @@
  */
 package Controller.Admin;
 
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.PhotographDaoImpl;
 import Controller.DaoImpl.ReportedPhotographDaoImpl;
+import Model.Client;
+import Model.Dao.ClientDao;
+import Model.Dao.PhotographDao;
 import Model.Dao.ReportedPhotographDao;
+import Model.Photograph;
 import Model.ReportedPhotographs;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -31,14 +37,27 @@ public class ViewReportedPhotographs extends HttpServlet {
 
             ReportedPhotographDao reportDao = new ReportedPhotographDaoImpl();
             ArrayList<ReportedPhotographs> photos = (ArrayList<ReportedPhotographs>) reportDao.getAllReportedPhotos();
+            ClientDao cDao = new ClientDaoImpl();
+            PhotographDao pDao = new PhotographDaoImpl();
 
             for (ReportedPhotographs p : photos) {
+                String cname = "";
+                String cid = p.getClientId();
+                Client client = cDao.getClientbyId(cid);
 
-                a.add(p.getClientId());
+                cname = client.getFname() + " " + client.getLname();                
+                a.add(cname);
+                
+                String path = "";
+                int pid = p.getPhotographId();
+                Photograph photograph = pDao.getPhotographById(pid);
 
+                path = photograph.getPath();
+                a.add(path);
             }
 
             request.setAttribute("photos", photos);
+            request.setAttribute("client", a);
             request.getRequestDispatcher("View/Admin/ReportedPhotographs.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();

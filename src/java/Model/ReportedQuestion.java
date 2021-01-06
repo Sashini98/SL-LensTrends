@@ -14,18 +14,20 @@ public class ReportedQuestion {
     int reportId;
     String reason;
     String description;
-    String questionId;
+    int questionId;
     String clientId;
+    String photographerId;
 
     public ReportedQuestion() {
     }
 
-    public ReportedQuestion(int reportId, String reason, String description, String questionId, String clientId) {
+    public ReportedQuestion(int reportId, String reason, String description, int questionId, String clientId, String photographerId) {
         this.reportId = reportId;
         this.reason = reason;
         this.description = description;
         this.questionId = questionId;
         this.clientId = clientId;
+        this.photographerId = photographerId;
     }
 
     public int getReportId() {
@@ -52,11 +54,11 @@ public class ReportedQuestion {
         this.description = description;
     }
 
-    public String getQuestionId() {
+    public int getQuestionId() {
         return questionId;
     }
 
-    public void setQuestionId(String questionId) {
+    public void setQuestionId(int questionId) {
         this.questionId = questionId;
     }
 
@@ -66,6 +68,14 @@ public class ReportedQuestion {
 
     public void setClientId(String clientId) {
         this.clientId = clientId;
+    }
+
+    public String getPhotographerId() {
+        return photographerId;
+    }
+
+    public void setPhotographerId(String photographerId) {
+        this.photographerId = photographerId;
     }
     
     
