@@ -19,7 +19,7 @@
     <%        for (int i = 0; i < photos.size(); i += 4) {
        
     %>
-    <a href="PurchasePhoto.jsp?id=<%= photos.get(i).getId() %>">
+    <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId() %>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
     </a>
         <%
@@ -30,7 +30,7 @@
     <%
         for (int i = 1; i < photos.size(); i += 4) {
     %>
-    <a href="PurchasePhoto.jsp?id=<%= photos.get(i).getId() %>">
+    <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId() %>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
     </a>
     <%
@@ -41,7 +41,7 @@
     <%
         for (int i = 2; i < photos.size(); i += 4) {
     %>
-    <a href="PurchasePhoto.jsp?id=<%= photos.get(i).getId() %>">
+    <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId() %>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
     </a>
     <%
@@ -52,7 +52,7 @@
     <%
         for (int i = 3; i < photos.size(); i += 4) {
     %>
-    <a href="PurchasePhoto.jsp?id=<%= photos.get(i).getId() %>">
+    <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId() %>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
     </a>    
     <%

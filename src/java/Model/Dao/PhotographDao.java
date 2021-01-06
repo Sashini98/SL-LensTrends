@@ -7,7 +7,6 @@ package Model.Dao;
 
 import Model.Photograph;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,5 +17,6 @@ public interface PhotographDao {
     
     public List<Photograph> getPhotographByKeyWord(String keyword);
     public List getAllPhotographs() throws SQLException;
+    public Photograph getPhotographById(int id) throws SQLException;
     
 }

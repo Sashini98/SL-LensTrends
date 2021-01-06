@@ -14,7 +14,6 @@ import java.util.Date;
 public class Photograph {
 
     int id;
-    int categoryId;
     String path;
     double width;
     double height;
@@ -25,7 +24,7 @@ public class Photograph {
     boolean undiscovered;
     String photogrpherId;
     String title;
-    String discription;
+    int categoryId;
     boolean people;
     int orientationId;
     int stateId;
@@ -34,9 +33,8 @@ public class Photograph {
     public Photograph() {
     }
 
-    public Photograph(int id, int categoryId, String path, double width, double height, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, String discription, boolean people, int orientationId, int stateId, int genderId) {
+    public Photograph(int id, String path, double width, double height, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, int categoryId, boolean people, int orientationId, int stateId, int genderId) {
         this.id = id;
-        this.categoryId = categoryId;
         this.path = path;
         this.width = width;
         this.height = height;
@@ -47,7 +45,7 @@ public class Photograph {
         this.undiscovered = undiscovered;
         this.photogrpherId = photogrpherId;
         this.title = title;
-        this.discription = discription;
+        this.categoryId = categoryId;
         this.people = people;
         this.orientationId = orientationId;
         this.stateId = stateId;
@@ -60,14 +58,6 @@ public class Photograph {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(int categoryId) {
-        this.categoryId = categoryId;
     }
 
     public String getPath() {
@@ -150,12 +140,12 @@ public class Photograph {
         this.title = title;
     }
 
-    public String getDiscription() {
-        return discription;
+    public int getCategoryId() {
+        return categoryId;
     }
 
-    public void setDiscription(String discription) {
-        this.discription = discription;
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
     }
 
     public boolean isPeople() {

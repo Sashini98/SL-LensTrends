@@ -4,12 +4,15 @@
     Author     : kesh
 --%>
 
+<%@page import="Model.Photographer"%>
+<%@page import="Model.Photograph"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <%
     boolean logged = (Boolean) request.getAttribute("logged");
-    int id  = Integer.parseInt(request.getParameter("id"));
+    Photograph p = (Photograph)request.getAttribute("photo");
+    Photographer photographer = (Photographer)request.getAttribute("photographer");
 %>
 
 
@@ -110,18 +113,18 @@
                 <div class="Details"> 
                     <div class="NameDetails">
                         <span class="PhotoName">
-                            A Mighty sunrise with a flight of birds.
+                            <%= p.getTitle() %>
                         </span>
                         <br />
                         <span>
-                            By <a href="">Mr. Nimal Perera</a>
+                            By <a href=""> <%= photographer.getFname() %> <%= photographer.getLname() %></a>
                         </span>
                     </div>
                     <hr />
                     <div class="ImageDetails">
                         <div class="Dimention">
                             <span>Dimensions</span>
-                            <span class="detail">3298 x 4121</span>
+                            <span class="detail"><%= p.getWidth() %> x <%= p.getHeight() %></span>
                         </div>
                         <div>
                             <span>File Type</span>
@@ -129,7 +132,7 @@
                         </div>
                         <div>
                             <span>Category</span>
-                            <span class="detail">Wild Life Photography</span>
+                            <span class="detail"><%= p.getc %></span>
                         </div>
                     </div>
                     <hr />
