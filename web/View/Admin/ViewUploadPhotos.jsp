@@ -17,9 +17,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>View Upload Photos</title>
     </head>
-    -->
+-->
+<div onload="viewPhotoDetails();">
+    <script type="text/javascript" src="../../JS/Admin/ViewUploadPhotos.js" ></script>
     <div style="background-color: #f7f6f9;">
-            
+
         <div class="box"><br>
             <div class="details">
                 <a href="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" target="_blank"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>
@@ -68,4 +70,6 @@
             </table>
         </div>
     </div>
+</div>
+
 <!--</html>-->

@@ -156,6 +156,10 @@
         <servlet-name>ViewReportedQuestions</servlet-name>
         <servlet-class>Controller.Admin.ViewReportedQuestions</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewUploadedPhotoDetails</servlet-name>
+        <servlet-class>Controller.Admin.ViewUploadedPhotoDetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -311,6 +315,10 @@
     <servlet-mapping>
         <servlet-name>ViewReportedQuestions</servlet-name>
         <url-pattern>/ViewReportedQuestions</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewUploadedPhotoDetails</servlet-name>
+        <url-pattern>/ViewUploadedPhotoDetails</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
