@@ -305,6 +305,8 @@ function show(selectedTab) {
                     viewReportedUser();
                 }else if(selectedTab === 'photomanage'){
                     viewReportedPhotos();
+                }else if (selectedTab === 'forum'){
+                    viewQuestion();
                 }
             }
     }

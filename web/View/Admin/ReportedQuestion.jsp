@@ -9,7 +9,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    ArrayList<ReportedQuestion> q = (ArrayList<ReportedQuestion>) request.getAttribute("photos");
+    ArrayList<ReportedQuestion> q = (ArrayList<ReportedQuestion>) request.getAttribute("ques");
+    ArrayList<String> n = (ArrayList<String>) request.getAttribute("names");
     for (int i = 0; i < q.size(); i++) {
 %>
 
@@ -20,9 +21,9 @@
     <table class="table" border="0" width="100%" height="40px" >
         <tr>
             <td align="left">Uploaded By</td>
-            <td><input type="text" name="upload" id="upload" disabled=""></td>
+            <td><input type="text" name="upload" value="<%=n.get(i) %>" disabled=""></td>
             <td align="left">Reported By</td>
-            <td><input type="text" name="rep" id="report" disabled=""></td>
+            <td><input type="text" name="rep" value="<%=n.get(i+1) %>" disabled=""></td>
             <td><button class="btn" id="view" onclick="show('reportedQuestion')">View</button></td>
         </tr>
     </table>

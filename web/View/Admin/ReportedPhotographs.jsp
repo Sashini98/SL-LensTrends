@@ -10,14 +10,15 @@
 <!DOCTYPE html>
 <%
     ArrayList<ReportedPhotographs> p = (ArrayList<ReportedPhotographs>) request.getAttribute("photos");
+    ArrayList<String> c = (ArrayList<String>) request.getAttribute("client");
     for (int i = 0; i < p.size(); i++) {
 %>
 
 <div class="photos">
     <div class="details">
-        <img src="../../Resources/Img/Gallery Sample Images/">
+        <img src="../../Resources/Img/Gallery Sample Images/<%=c.get(i+1) %>">
         <p>Uploaded By<input type="text" name="Submitted" value="" disabled=""></p>
-        <p>Reported By <input type="text" name="Submitted" value="<%=p.get(i).getClientId()%>" disabled=""></p>
+        <p>Reported By <input type="text" name="Submitted" value="<%=c.get(i) %>" disabled=""></p>
         <button id="<%=p.get(i).getReportId()%>" type="submit" class="btn" onclick="show('reportedPhoto')">View</button>
     </div>
 </div

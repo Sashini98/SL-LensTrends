@@ -14,13 +14,13 @@ public class ReportedPhotographs {
     int reportId;
     String reason;
     String description;
-    String photographId;
+    int photographId;
     String clientId;
 
     public ReportedPhotographs() {
     }
 
-    public ReportedPhotographs(int reportId, String reason, String description, String photographId, String clientId) {
+    public ReportedPhotographs(int reportId, String reason, String description, int photographId, String clientId) {
         this.reportId = reportId;
         this.reason = reason;
         this.description = description;
@@ -52,11 +52,11 @@ public class ReportedPhotographs {
         this.description = description;
     }
 
-    public String getPhotographId() {
+    public int getPhotographId() {
         return photographId;
     }
 
-    public void setPhotographId(String photographId) {
+    public void setPhotographId(int photographId) {
         this.photographId = photographId;
     }
 
