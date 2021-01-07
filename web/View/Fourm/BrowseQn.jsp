@@ -494,7 +494,7 @@
 
         </div>
 
-
+<script src="../../JS/Forum/QuesDisplay.js" type="text/javascript"></script>
         <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>          
        
     </body>

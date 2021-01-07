@@ -63,7 +63,7 @@
             <div name="ans" id="ans">
                
                 
-                <!--            <div class="answerqn">
+                      <div class="answerqn">
                                 <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
                                     Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
                                     I hope that iOS6 will give developers greater control as it is a PITA.</p> 
@@ -78,7 +78,7 @@
                                     <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">5 comments</a>
                                     <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
                                 </div>
-                            </div>-->
+                            </div>
             </div>
         </div>
 
@@ -143,8 +143,7 @@
     </div>
 
 </div
-<script src="../../JS/Forum/answer.js" type="text/javascript"></script>
-<script src="../../JS/Forum/answerDisplay.js" type="text/javascript"></script>
-<script src="../../JS/Forum/BrowseQn.js" type="text/javascript"></script>
+
+<script src="../../JS/Forum/QuesDisplay.js" type="text/javascript"></script>
     
 <%}%>
