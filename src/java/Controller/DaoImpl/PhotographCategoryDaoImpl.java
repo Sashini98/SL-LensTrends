@@ -5,18 +5,26 @@
  */
 package Controller.DaoImpl;
 
+import DB.DB;
 import Model.Dao.PhotographCategoryDao;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
  *
  * @author kesh
  */
-public class PhotographCategoryDaoImpl implements PhotographCategoryDao{
+public class PhotographCategoryDaoImpl implements PhotographCategoryDao {
 
     @Override
     public String getCategory(int id) throws SQLException {
-        return "ff";
+        ResultSet category = DB.search("SELECT Category FROM photograph_category WHERE Id = '" + id + "'");
+        
+        if (category.next()) {
+            return category.getString("Category");
+        } else {
+            return null;
+        }
     }
-    
+
 }
