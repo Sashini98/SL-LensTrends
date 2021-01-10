@@ -14,6 +14,7 @@ import Model.Photographer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -26,41 +27,41 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class Answer_display extends HttpServlet {
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         System.out.println("hellooooooo");
-               String quesid = request.getParameter("qid");
-            int qid=parseInt(quesid);
-            System.out.println("qid:"+qid);
-        
-        try {
-             ArrayList<String> a = new ArrayList();
-             
-     
-             
-             AnswerDao answerDao=new AnswerDaoImpl();
-             ArrayList<Answer> answ = (ArrayList<Answer>) answerDao.getAllAnswers(qid);
-             
-             for (Answer an: answ)
-             {
-                 String name="";
-                 String pid = an.getPhotographerId();
-                    PhotographerDao pDao = new PhotographerDaoImp();
-                    Photographer photographer = pDao.getPhotographerById(pid);;
+        String quesid = request.getParameter("qid");
+        int qid = parseInt(quesid);
+        System.out.println("qid:" + qid);
 
-                    name = photographer.getFname() + " " + photographer.getLname();
-                    
-                    a.add(an.getanswer());
-                    a.add(an.getPhotographerId());
-             }
-             
-             request.setAttribute("answers", a);
+        try {
+            ArrayList<String> a = new ArrayList();
+
+            AnswerDao answerDao = new AnswerDaoImpl();
+            ArrayList<Answer> answ = (ArrayList<Answer>) answerDao.getAllAnswers(qid);
+
+            for (Answer an : answ) {
+                String name = "";
+                String pid = an.getPhotographerId();
+                PhotographerDao pDao = new PhotographerDaoImp();
+                Photographer photographer = pDao.getPhotographerById(pid);;
+
+                name = photographer.getFname() + " " + photographer.getLname();
+
+                SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                String date = sdf.format(an.getanswerDate());
+
+                a.add(an.getanswer());
+                a.add(an.getPhotographerId());
+                a.add(date);
+            }
+
+            request.setAttribute("answers", a);
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
         } catch (Exception e) {
         }
-       
+
     }
 
 }
