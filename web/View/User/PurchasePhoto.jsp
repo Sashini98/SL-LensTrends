@@ -11,8 +11,14 @@
 
 <%
     boolean logged = (Boolean) request.getAttribute("logged");
-    Photograph p = (Photograph)request.getAttribute("photo");
-    Photographer photographer = (Photographer)request.getAttribute("photographer");
+    Photograph p = (Photograph) request.getAttribute("photo");
+    String cat = (String) request.getAttribute("photographCategory");
+    Photographer photographer = (Photographer) request.getAttribute("photographer");
+    String keywords = p.getKeywords();
+    String[] keywordArray = keywords.split(",");
+    for (String keyword : keywordArray) {
+        keyword = keyword.trim();
+    }
 %>
 
 
@@ -107,24 +113,24 @@
             <div class="photodetails">
                 <div class="PhotoOuter">
                     <div class="Photo">
-
+                        <img src="../../Resources/Img/<%= p.getPath()%>" style="width:100%; height: 100%;"/>
                     </div>
                 </div>
                 <div class="Details"> 
                     <div class="NameDetails">
                         <span class="PhotoName">
-                            <%= p.getTitle() %>
+                            <%= p.getTitle()%>
                         </span>
                         <br />
                         <span>
-                            By <a href=""> <%= photographer.getFname() %> <%= photographer.getLname() %></a>
+                            By <a href=""> <%= photographer.getFname()%> <%= photographer.getLname()%></a>
                         </span>
                     </div>
                     <hr />
                     <div class="ImageDetails">
                         <div class="Dimention">
                             <span>Dimensions</span>
-                            <span class="detail"><%= p.getWidth() %> x <%= p.getHeight() %></span>
+                            <span class="detail"><%= p.getWidth()%> x <%= p.getHeight()%></span>
                         </div>
                         <div>
                             <span>File Type</span>
@@ -132,7 +138,7 @@
                         </div>
                         <div>
                             <span>Category</span>
-                            <span class="detail"><%= p.getc %></span>
+                            <span class="detail"><%= cat%></span>
                         </div>
                     </div>
                     <hr />
@@ -148,11 +154,16 @@
                     Related Keywords
                 </span>
                 <div class="KeywordsDiv">
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
+                    <%
+                    for (int i = 0; i < keywordArray.length; i++) {
+                          %>
+                          
+                          <span class="Keyword"><%= keywordArray[i] %></span>
+                          
+                          <%  
+                        }
+                    %>
+        
                 </div>
             </div>
             <div class="SimilarImagesDiv">
