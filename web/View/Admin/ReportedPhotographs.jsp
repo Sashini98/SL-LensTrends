@@ -17,7 +17,7 @@
 <div class="photos">
     <div class="details">
         <img src="../../Resources/Img/Gallery Sample Images/<%=c.get(i+1) %>">
-        <p>Uploaded By<input type="text" name="Submitted" value="" disabled=""></p>
+        <p>Uploaded By<input type="text" name="Submitted" value="<%=c.get(i+2) %>" disabled=""></p>
         <p>Reported By <input type="text" name="Submitted" value="<%=c.get(i) %>" disabled=""></p>
         <button id="<%=p.get(i).getReportId()%>" type="submit" class="btn" onclick="show('reportedPhoto')">View</button>
     </div>

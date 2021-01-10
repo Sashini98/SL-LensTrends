@@ -353,6 +353,7 @@
         <script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>
         <script src="../../JS/Admin/ReportedPhotos.js" type="text/javascript" ></script>
         <script src="../../JS/Admin/ReportedQuestion.js" type="text/javascript" ></script>
+        <script src="../../JS/Admin/ViewUploadPhotos.js" type="text/javascript" ></script>
         
     </body>
 </html>

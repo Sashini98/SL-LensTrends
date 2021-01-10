@@ -16,7 +16,7 @@
 
 <div class="questions">
     <div class="details">
-        <h2></h2><br>
+        <h2><%=q.get(i+2) %></h2><br>
     </div>
     <table class="table" border="0" width="100%" height="40px" >
         <tr>
