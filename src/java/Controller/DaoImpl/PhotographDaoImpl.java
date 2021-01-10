@@ -32,7 +32,7 @@ public class PhotographDaoImpl implements PhotographDao {
                         photographs.getString("Quality"), photographs.getString("Keywords"),
                         photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
                         photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
-                        photographs.getString("Title"), photographs.getInt("category_id"),
+                        photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
                         photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
                         photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
 
@@ -57,7 +57,7 @@ public class PhotographDaoImpl implements PhotographDao {
                     photographs.getString("Quality"), photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
                     photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
-                    photographs.getString("Title"), photographs.getInt("category_id"),
+                    photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
                     photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
                     photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
 
@@ -77,7 +77,7 @@ public class PhotographDaoImpl implements PhotographDao {
                     photograph.getString("Quality"), photograph.getString("Keywords"),
                     photograph.getDate("Uploaded_Date"), photograph.getBoolean("For_Sale"),
                     photograph.getBoolean("Undiscovered"), photograph.getString("Photographer_Id"),
-                    photograph.getString("Title"), photograph.getInt("category_id"),
+                    photograph.getString("Title"), photograph.getInt("Photograph_category_id"),
                     photograph.getBoolean("People"), photograph.getInt("Orientation_Id"),
                     photograph.getInt("state_id"), photograph.getInt("Gender_Id"));
             

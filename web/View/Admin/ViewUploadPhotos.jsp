@@ -17,12 +17,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>View Upload Photos</title>
     </head>
-    -->
+-->
+<div onload="viewPhotoDetails();">
+    <script type="text/javascript" src="../../JS/Admin/ViewUploadPhotos.js" ></script>
     <div style="background-color: #f7f6f9;">
-            
+
         <div class="box"><br>
             <div class="details">
-                <a href="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" target="_blank"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>
+<!--                <a href="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" target="_blank"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>-->
+<img id="img">
             </div>
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
@@ -32,8 +35,8 @@
                     <td><input type="text" name="res" id="reso" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Description</td>
-                    <td><input type="text" name="des" id="desc" disabled=""></td>
+                    <td align="left">Quality</td>
+                    <td><input type="text" name="qua" id="quality" disabled=""></td>
                     <td align="left">Orientation</td>
                     <td><input type="text" name="size" id="orientation" disabled=""></td>
                 </tr>
@@ -58,8 +61,8 @@
                 <tr>
                     <td align="left">Keywords</td>
                     <td><input type="text" name="key" id="key" disabled=""></td>
-                    <td align="left">Release Form</td>
-                    <td><input type="text" name="rform" id="form" disabled=""></td>
+                    <td align="left">Gender</td>
+                    <td><input type="text" name="gen" id="gen" disabled=""></td>
                 </tr>
                 <tr>
                     <th colspan =2><button onclick="show('photoapproval')"  class="btn" id="approve">Approve</button></th>
@@ -68,4 +71,6 @@
             </table>
         </div>
     </div>
+</div>
+
 <!--</html>-->

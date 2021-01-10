@@ -7,12 +7,15 @@ package Controller.Admin;
 
 import Controller.DaoImpl.ClientDaoImpl;
 import Controller.DaoImpl.PhotographDaoImpl;
+import Controller.DaoImpl.PhotographerDaoImp;
 import Controller.DaoImpl.ReportedPhotographDaoImpl;
 import Model.Client;
 import Model.Dao.ClientDao;
 import Model.Dao.PhotographDao;
+import Model.Dao.PhotographerDao;
 import Model.Dao.ReportedPhotographDao;
 import Model.Photograph;
+import Model.Photographer;
 import Model.ReportedPhotographs;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -39,6 +42,8 @@ public class ViewReportedPhotographs extends HttpServlet {
             ArrayList<ReportedPhotographs> photos = (ArrayList<ReportedPhotographs>) reportDao.getAllReportedPhotos();
             ClientDao cDao = new ClientDaoImpl();
             PhotographDao pDao = new PhotographDaoImpl();
+            PhotographerDao photographerDao = new PhotographerDaoImp();
+            
 
             for (ReportedPhotographs p : photos) {
                 String cname = "";
@@ -54,6 +59,11 @@ public class ViewReportedPhotographs extends HttpServlet {
 
                 path = photograph.getPath();
                 a.add(path);
+                
+                Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
+                a.add(photographer.getFname() + " " + photographer.getLname());
+                
+                
             }
 
             request.setAttribute("photos", photos);

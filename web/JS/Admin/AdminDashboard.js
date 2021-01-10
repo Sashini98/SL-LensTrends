@@ -307,7 +307,7 @@ function show(selectedTab) {
                     viewReportedPhotos();
                 }else if (selectedTab === 'forum'){
                     viewQuestion();
-                }
+                } 
             }
     }
 
@@ -323,3 +323,4 @@ function logout() {
     window.location.assign("../../LogOut?loc=ch");
 
 }
+
