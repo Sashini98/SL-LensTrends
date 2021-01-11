@@ -16,4 +16,5 @@ import java.util.List;
 public interface ReportedPhotographDao {
     
     public List getAllReportedPhotos() throws SQLException;
+    public ReportedPhotographs getReportedPhotographById(int id) throws SQLException;
 }

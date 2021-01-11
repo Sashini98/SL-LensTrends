@@ -55,8 +55,8 @@
                 <tr>
                     <td align="left">Category</td>
                     <td><input type="text" name="cate" id="cate" disabled=""></td>
-                    <td align="left">File Id</td>
-                    <td><input type="text" name="file" id="fid" disabled=""></td>
+                    <td align="left">Photograph Id</td>
+                    <td><input type="text" name="file" id="pid" disabled=""></td>
                 </tr>
                 <tr>
                     <td align="left">Keywords</td>
@@ -65,7 +65,7 @@
                     <td><input type="text" name="gen" id="gen" disabled=""></td>
                 </tr>
                 <tr>
-                    <th colspan =2><button onclick="show('photoapproval')"  class="btn" id="approve">Approve</button></th>
+                    <th colspan =2><button onclick="PhotoApprove()"  class="btn" id="approve">Approve</button></th>
                     <th colspan =2><button onclick="show('photoapproval')"  class="btn" id="reject" style="background-color: #f44336">Reject</button></th>
                 </tr>
             </table>

@@ -87,4 +87,9 @@ public class PhotographDaoImpl implements PhotographDao {
         }
     }
 
+    @Override
+    public void updatePhotographState(int status, int PhotographId) throws SQLException {
+        DB.iud("UPDATE photograph SET state_id='" + status + "' WHERE Photograph_Id = '" + PhotographId + "'");
+    }
+
 }

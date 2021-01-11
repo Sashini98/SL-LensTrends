@@ -36,13 +36,6 @@
                 </label>
             </div><br>
 
-<!--            <div class="formContent">
-                <span class="content_name"> Date </span><br>
-                <input type="date" id="date" name="dob" required class="doe"/>
-                <label for="doe" class="label_name">
-                </label>
-            </div><br>-->
-
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
                 <textarea class="textarea" id="msgbody"></textarea>
@@ -62,17 +55,10 @@
                 <label for="title" class="label_name">
                 </label>
             </div><br>
-<!--
-            <div class="formContent">
-                <span class="content_name"> Date </span><br>
-                <input type="date" name="dob" required class="doe"/>
-                <label for="doe" class="label_name">
-                </label>
-            </div><br>-->
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" id="msgbody"></textarea>
                 <label for="msg" class="label_name">
                 </label>
             </div><br>
@@ -93,17 +79,10 @@
                 <label for="title" class="label_name">
                 </label>
             </div><br>
-<!--
-            <div class="formContent">
-                <span class="content_name"> Date </span><br>
-                <input type="date" name="dob" required class="doe"/>
-                <label for="doe" class="label_name">
-                </label>
-            </div><br>-->
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" id="msgbody"></textarea>
                 <label for="msg" class="label_name">
                 </label>
             </div><br>

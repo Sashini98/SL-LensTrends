@@ -16,16 +16,18 @@ public class ReportedPhotographs {
     String description;
     int photographId;
     String clientId;
+    String photographerId;
 
     public ReportedPhotographs() {
     }
 
-    public ReportedPhotographs(int reportId, String reason, String description, int photographId, String clientId) {
+    public ReportedPhotographs(int reportId, String reason, String description, int photographId, String clientId, String PhotographerId) {
         this.reportId = reportId;
         this.reason = reason;
         this.description = description;
         this.photographId = photographId;
         this.clientId = clientId;
+        this.photographerId=PhotographerId;
     }
 
     public int getReportId() {
@@ -66,6 +68,14 @@ public class ReportedPhotographs {
 
     public void setClientId(String clientId) {
         this.clientId = clientId;
+    }
+
+    public String getPhotographerId() {
+        return photographerId;
+    }
+
+    public void setPhotographerId(String photographerId) {
+        this.photographerId = photographerId;
     }
     
     

@@ -95,7 +95,7 @@ public class QuestionDaoImpl implements QuestionDao {
     @Override
     public Question getQuestionbtId(int questionId) throws SQLException {
         
-         ResultSet ques=DB.search("SELECT * FROM Question where QuestionId = '" + questionId + "'");
+         ResultSet ques=DB.search("SELECT * FROM Question where Question_Id = '" + questionId + "'");
           Question q=new Question();
          if(ques.next())
          {
