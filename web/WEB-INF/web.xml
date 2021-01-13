@@ -173,8 +173,8 @@
         <servlet-class>Controller.Admin.ViewReportedQuesDetails</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>RemoveQuestion</servlet-name>
-        <servlet-class>Controller.Admin.RemoveQuestion</servlet-class>
+        <servlet-name>PastEvents</servlet-name>
+        <servlet-class>Controller.Event.PastEvents</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -349,8 +349,8 @@
         <url-pattern>/ViewReportedQuesDetails</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>RemoveQuestion</servlet-name>
-        <url-pattern>/RemoveQuestion</url-pattern>
+        <servlet-name>PastEvents</servlet-name>
+        <url-pattern>/PastEvents</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
