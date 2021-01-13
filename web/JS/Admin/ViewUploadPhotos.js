@@ -37,7 +37,7 @@ function viewPhotoDetails(id)
 }
 
 function PhotoApprove(){
-    alert("start");
+
     var photo_id = document.getElementById("pid").value;
     var request = new XMLHttpRequest();
 
@@ -47,7 +47,7 @@ function PhotoApprove(){
 
                 var responce = request.responseText;
                 alert(responce);
-                clearFieldsofDeactivateUsers();
+                
             }
         }
 
@@ -55,6 +55,5 @@ function PhotoApprove(){
 
     request.open("POST", "../../ApprovePhoto", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("id=" + Photo_id);
-    alert("end");
+    request.send("id=" + photo_id);
 }

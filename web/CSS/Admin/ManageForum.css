@@ -16,7 +16,7 @@
 
 .questions {
     background-color: white;
-    width: 75%;
+    width: 100%;
     height:auto;
     margin-top: 2%;      
     border-radius: 10px;
@@ -59,6 +59,7 @@ input[type=text]
     margin-bottom: 2%;
     outline: none;
     background-color: #fff;
+    text-align: center;
     
 }
 

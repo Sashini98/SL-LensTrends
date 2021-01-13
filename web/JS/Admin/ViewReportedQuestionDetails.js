@@ -30,4 +30,25 @@ function ViewQusetionDetails(id){
     
 }
 
+function RemoveQue(){
+    
+     var que_id = document.getElementById("qid").value;
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                alert(responce);
+                
+            }
+        }
+
+    };
+
+    request.open("POST", "../../RemoveQuestion", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("qid=" + que_id);
+}
 

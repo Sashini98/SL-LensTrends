@@ -5,8 +5,6 @@
  */
 package Controller.Admin;
 
-import Controller.DaoImpl.PhotographDaoImpl;
-import Model.Dao.PhotographDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -18,20 +16,19 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Madusha
  */
-public class ApprovePhoto extends HttpServlet {
+public class RemoveQuestion extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        int pid = Integer.parseInt(request.getParameter("id"));
+        
+        int qid = Integer.parseInt(request.getParameter("qid"));
         int status = 3;
 
         try {
-            PhotographDao pDao = new PhotographDaoImpl();
-            pDao.updatePhotographState(status, pid);
+            
 
-            response.getWriter().write("Approved Successfully.");
+            response.getWriter().write("Question removed Successfully.");
         } 
         catch (Exception ex) {
             response.getWriter().write("Error Occured.");
@@ -40,5 +37,6 @@ public class ApprovePhoto extends HttpServlet {
         }
 
     }
+    }
 
-}
+

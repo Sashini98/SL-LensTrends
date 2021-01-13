@@ -60,8 +60,8 @@
                     <td><input type="text" name="file" id="qid" disabled=""></td>
                 </tr>
                 <tr>
-                    <th colspan =2><button class="btn" id="approve">Keep Question</button></th>
-                    <th colspan =2><button class="btn" id="reject" style="background-color: #f44336">Remove</button></th>
+                    <th colspan =2><button class="btn" id="approve" onclick="show('forum')">Back</button></th>
+                    <th colspan =2><button class="btn" id="reject" style="background-color: #f44336" onclick="RemoveQue()" >Remove</button></th>
                 </tr>
             </table>
         </div>
