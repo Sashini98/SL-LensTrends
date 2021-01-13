@@ -11,6 +11,7 @@
 <%
     ArrayList<ReportedPhotographs> p = (ArrayList<ReportedPhotographs>) request.getAttribute("photos");
     ArrayList<String> c = (ArrayList<String>) request.getAttribute("client");
+    if (p.size() > 0) {
     for (int i = 0; i < p.size(); i++) {
 %>
 
@@ -25,4 +26,13 @@
 
 <script src="../../JS/Admin/ReportedPhotos.js" type="text/javascript" ></script>
 
-<%}%>
+<%}
+} else {
+
+%>
+<div style="text-align: center;"> 
+    <p>NO RESULTS FOUND</p>
+</div>
+
+<%}
+%>

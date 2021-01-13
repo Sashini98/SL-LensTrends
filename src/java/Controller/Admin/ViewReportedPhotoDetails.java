@@ -41,7 +41,7 @@ public class ViewReportedPhotoDetails extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            int photoid = Integer.parseInt(request.getParameter("id"));
+            int photoid = Integer.parseInt(request.getParameter("pid"));
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoid);
             PhotographerDao photographerDao = new PhotographerDaoImp();
@@ -58,6 +58,9 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             Date uploadedDate = photograph.getUploadedDate();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
             String date = sdf.format(uploadedDate);
+            c.add("../../Resources/Img/Gallery Sample Images/"+ photograph.getPath());
+            c.add(rphotograph.getReason());
+            c.add(rphotograph.getDescription());
             c.add(photograph.getTitle());
             c.add(photograph.getHeight() + "");
             c.add(photograph.getWidth() + "");
@@ -65,14 +68,10 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             c.add(date);
             c.add(photographer.getFname() + " " + photographer.getLname());
             c.add(category);
-            c.add(orientation);
             c.add(photograph.getQuality());
-            c.add(photograph.getGenderId() +"");
-            c.add("../../Resources/Img/Gallery Sample Images/"+ photograph.getPath());
             c.add(photograph.getHeight() * photograph.getWidth() / 1000000 + "");
             c.add(photograph.getId() +"");
-            c.add(rphotograph.getReason());
-            c.add(rphotograph.getDescription());
+            
 
             Gson g = new Gson();
             String toJson = g.toJson(c);

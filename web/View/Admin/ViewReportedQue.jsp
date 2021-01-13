@@ -19,27 +19,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>View Reported Questions</title>
     </head>-->
+<div onload="ViewQusetionDetails();"
+<script src="../../JS/Admin/ViewReportedQuestionDetails.js" type="text/javascript" ></script>
 <div style="background-color: #f7f6f9;">
 
     <div class="reportedQueBody">
         <div class="box">
             <div class="details">
-                <h1>FoV of One Plus 6T?</h1><br>
+                <h1 id="title"></h1><br>
             </div>
-            <p class="p">I was wondering what the Field of View is for the rear Camera is for the One Plus 6T. The information I've been able to gather so far but I'm not sure if the information is 100% right. 4.25mm focal ...</p>
+            <p class="p" id="question"></p>
 
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
                     <td align="left">Reported By</td>
                     <td><input type="text" name="reported" id="reported" disabled=""></td>
-                    <td align="left">Reported Date</td>
-                    <td><input type="date" name="date" id="rdate" disabled=""></td>
+                    <td align="left">Description</td>
+                    <td><textarea class="textarea" name="desc" id="desc" disabled=""></textarea></td>
                 </tr>
                 <tr>
                     <td align="left">Reason</td>
-                    <td><input type="text" name="reason" id="reason" disabled=""></td>
-                    <td align="left">Description</td>
-                    <td><textarea class="textarea" name="desc" id="desc" disabled=""></textarea></td>
+                    <td><input type="text" name="reason" id="reason" disabled=""></td>                    
                 </tr>
             </table>
         </div>
@@ -57,7 +57,7 @@
                     <td align="left">Category</td>
                     <td><input type="text" name="cate" id="cate" disabled=""></td>
                     <td align="left">Question Id</td>
-                    <td><input type="text" name="file" id="fid" disabled=""></td>
+                    <td><input type="text" name="file" id="qid" disabled=""></td>
                 </tr>
                 <tr>
                     <th colspan =2><button class="btn" id="approve">Keep Question</button></th>
@@ -66,5 +66,6 @@
             </table>
         </div>
     </div>
+</div>
 </div>
 <!--</html>-->

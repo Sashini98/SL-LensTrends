@@ -168,6 +168,10 @@
         <servlet-name>ViewReportedPhotoDetails</servlet-name>
         <servlet-class>Controller.Admin.ViewReportedPhotoDetails</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewReportedQuesDetails</servlet-name>
+        <servlet-class>Controller.Admin.ViewReportedQuesDetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -335,6 +339,10 @@
     <servlet-mapping>
         <servlet-name>ViewReportedPhotoDetails</servlet-name>
         <url-pattern>/ViewReportedPhotoDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewReportedQuesDetails</servlet-name>
+        <url-pattern>/ViewReportedQuesDetails</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
