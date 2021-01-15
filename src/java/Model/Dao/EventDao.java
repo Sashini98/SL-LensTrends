@@ -15,7 +15,9 @@ import java.util.List;
  */
 public interface EventDao {
     public void addEvent(Event event)throws SQLException;
-    public List getPastEvents(String clientId)throws SQLException;
+    public List getPastEvents(String eventId)throws SQLException;
     public List getEvents(String eventId)throws SQLException;
+    public List getPastEventList(String clientId)throws SQLException;
+    
     
 }

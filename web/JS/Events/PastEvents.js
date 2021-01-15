@@ -7,17 +7,19 @@
 
 function view()
 {
+    
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
-
+        
         if (request.status === 200) {
             if (request.readyState === 4) {
 
 
 
                 var responce = request.responseText;
-                document.getElementById("main-content").innerHTML = responce;
+                alert(responce);
+                document.getElementById("e").innerHTML = responce;
 
 
             }
@@ -28,7 +30,7 @@ function view()
 
 
 
-    request.open("POST", "../../forumH", false);
+    request.open("POST", "../../PastEvents", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 

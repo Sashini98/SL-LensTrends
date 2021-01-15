@@ -26,8 +26,8 @@ public class EventDaoImpl implements EventDao {
     }
 
     @Override
-    public List getPastEvents(String clientId) throws SQLException {
-        ResultSet event=DB.search("SELECT * FROM completed_events WHERE Event_Id=(SELECT Event_Id FROM event WHERE Client_Id='"+clientId+"')");
+    public List getPastEvents(String eventId) throws SQLException {
+        ResultSet event=DB.search("SELECT * FROM completed_events WHERE Event_Id='"+eventId+"'");
         ArrayList<PastEvent> a = new ArrayList();
         
         while(event.next())
@@ -67,6 +67,20 @@ public class EventDaoImpl implements EventDao {
         }
         return a;
         
+    }
+
+    @Override
+    public List getPastEventList(String clientId) throws SQLException {
+        ResultSet event=DB.search("SELECT Event_Id FROM event WHERE Client_Id='"+clientId+"'");
+        ArrayList a = new ArrayList();
+        
+        while(event.next())
+        {
+           
+           a.add(event.getString("Event_Id"));         
+
+        }
+        return a;
     }
     
 }
