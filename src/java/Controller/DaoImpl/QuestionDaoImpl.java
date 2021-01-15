@@ -66,12 +66,12 @@ public class QuestionDaoImpl implements QuestionDao {
 
     @Override
     public List getCategory(int questionId) throws SQLException {
-        ResultSet category=DB.search("SELECT * FROM Question");
-        ArrayList<Question> a = new ArrayList();
+        ResultSet category=DB.search("SELECT category_id FROM question_has_question_category where Question_Id = '" + questionId + "'");
+        ArrayList a = new ArrayList();
         
         while(category.next())
         {
-            
+            a.add(category.getString("category_id"));
         }
         return a;
     }

@@ -4,10 +4,15 @@
     Author     : Sashini Shihara
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-    String ques=(String)request.getAttribute("question");
+
+    ArrayList<String> q = (ArrayList<String>) request.getAttribute("question");
+    for (int i = 0; i < q.size() / 2; i++) {
+
+
 %>
 <html>
     <head>
@@ -18,7 +23,7 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/forum/AskQues.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
-        <title>Questions</title>
+        <title>Answer</title>
     </head>
     <body style="background-color: #f7f6f9;">
 
@@ -69,17 +74,15 @@
             </div>  
             <div name="s" id="s">
                 <div class="questions">                
-                    <form>
-                        <h3 id="quest" name="quest"><label for="Question"><b><%=ques%></b></label><br></h3>
-                        <h4 id="quesid" name="quesid"></h4>
+                    <form id="answer" action="../../Add_answer" method="POST">
+                        <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
+                        <h4 id="quesid" name="quesid" style="display: none"><%= q.get((i * 3) + 1)%></h4>
                        
 
                     <h3><label for="Body"><b>Answer</b></label><br></h3>
                     <textarea id="answ" name="answ" rows="10" cols="50"></textarea><br><br><br>         
                   
                     <input type="submit" id="submit" value="Post Answer"><br><br><br>
-
-
                     </form>
                 </div>       
             </div>
@@ -91,8 +94,10 @@
 </div>
 
 </div>
-<script src="../../JS/Forum/answer.js" type="text/javascript" ></script>
+<!--<script src="../../JS/Forum/answer.js" type="text/javascript" ></script>-->
 
 </body>
 </html>
+
+<%}%>
 

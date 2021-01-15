@@ -99,22 +99,8 @@
 
                         <h3><label for="Category"><b>Category</b></label><h4 id="cat" name="cat"></h4></h3>
                         <div class="autocomplete" style="width:300px;">
-                        <input id="myInput" type="text" name="myCountry">
+                            <input id="myInput" type="text" name="myInput">
                         </div>
-                        
-<!--                        <div class="box" id="category" name="category">
-                            <input type="hidden" name="category" />
-                            <select name="categ" onchange="DropDownChanged(this);">
-                                <option value="Beginners questions">Beginners questions</option>
-                                <option value="Photo Equipments">Photo Equipments</option>
-                                <option value="Photography and Techniques">Photography and Techniques</option>
-                                <option value="Mobile Photography">Mobile Photography</option>
-                                <option value="">Other..</option>
-                            </select> <input type="text" name="c_txt" style="display: none;" />
-                        </div>-->
-
-
-
 
 
                         <br><br><br>
@@ -172,27 +158,27 @@
 
 
 
-<!--
-    </div>
+        <!--
+            </div>
+        
+        </div>-->
+        <!--
+        <div class="image" style="margin-top: -30%; z-index: 5; ">
+            <img src="../../Resources/Img/forumanimie.svg">
+        </div>-->
 
-</div>-->
-<!--
-<div class="image" style="margin-top: -30%; z-index: 5; ">
-    <img src="../../Resources/Img/forumanimie.svg">
-</div>-->
+        <script>
+            tinymce.init({
+                selector: 'textarea',
+                plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+                toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+                toolbar_mode: 'floating',
+                tinycomments_mode: 'embedded',
+                tinycomments_author: 'Author name',
+            });
+        </script>
+        <script src="../../JS/Forum/AskQues.js" type="text/javascript" ></script>
 
-<script>
-    tinymce.init({
-        selector: 'textarea',
-        plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
-        toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
-        toolbar_mode: 'floating',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-    });
-</script>
-<script src="../../JS/Forum/AskQues.js" type="text/javascript" ></script>
-
-</body>
+    </body>
 </html>
 

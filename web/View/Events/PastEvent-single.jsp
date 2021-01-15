@@ -19,7 +19,7 @@
 <div class="events">                
 
                 <p style="font-weight: bold;">Event Date: <span style="color: #514f4f; font-weight: normal; margin-left: 6%;"><%= s.get((i * 3))%></span></p>
-                <p style="font-weight: bold;">Event venue: <span style="color: #514f4f; font-weight: normal; margin-left: 5%;">S<%= s.get((i * 3) + 1)%></span></p>
+                <p style="font-weight: bold;">Event venue: <span style="color: #514f4f; font-weight: normal; margin-left: 5%;"><%= s.get((i * 3) + 1)%></span></p>
                 <p style="font-weight: bold;">Covered By: <span style="color: #514f4f; font-weight: normal; margin-left: 7%;"><%= s.get((i * 3) + 2)%></span></p>
                 <!--<p style="font-weight: bold;">Estimate Budget:</p>-->
 <!--                <span id="time">2020/09/07</span>   -->
