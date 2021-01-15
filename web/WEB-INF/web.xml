@@ -176,6 +176,10 @@
         <servlet-name>PastEvents</servlet-name>
         <servlet-class>Controller.Event.PastEvents</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Add_category</servlet-name>
+        <servlet-class>Controller.Forum.Add_category</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -351,6 +355,10 @@
     <servlet-mapping>
         <servlet-name>PastEvents</servlet-name>
         <url-pattern>/PastEvents</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Add_category</servlet-name>
+        <url-pattern>/Add_category</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

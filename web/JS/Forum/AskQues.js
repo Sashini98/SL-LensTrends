@@ -8,7 +8,7 @@
 function autocomplete(inp, arr) {
 
     var currentFocus;
-    
+
 
     inp.addEventListener("input", function (e) {
         var a, b, i, val = this.value;
@@ -105,12 +105,11 @@ function autocomplete(inp, arr) {
     });
 
     document.body.onkeyup = function (e) {
-        if (e.keyCode == 32) {
-            var categ = [];
-           C_value = document.getElementById('myInput').value;
-            categ.push(C_value);
-            document.getElementById("cat").innerHTML = categ;
-            document. getElementById('myInput'). value = '';
+       
+        if (e.keyCode == 32 || e.keyCode == 13 ) {
+            C_value = document.getElementById('myInput').value; 
+            document.getElementById("cat").value = document.getElementById('cat').value+" "+C_value;
+            document.getElementById('myInput').value = '';
         }
     }
 }
@@ -172,6 +171,33 @@ function validateForm() {
         alert("Title must be filled out");
         return false;
     }
+    
+    
+//    var title = document.getElementById("title").value;
+//    var question= document.getElementById("Questionbody").innerHTML;
+//    var categ = document.getElementById("cat").innerHTML;
+//    var request = new XMLHttpRequest();
+//    
+//
+////    request.onreadystatechange = function () {      
+////        if (request.status === 200) {
+////             alert("b");
+////            if (request.readyState === 4) {
+////                 alert("c");
+////                var responce = request.responseText;
+////                alert(responce);
+////                document.getElementById("ans").innerHTML = responce;                
+////            }
+////        }
+////
+////    };
+//
+//    request.open("POST", "../../AskQues", false);
+//    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//    request.send("cat=" + categ+"&title="+title+"&question"+question);
+    
+    
+    
 
 //    var bd = document.getElementById("Questionbody");
 //

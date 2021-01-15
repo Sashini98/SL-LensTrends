@@ -111,6 +111,28 @@ public class QuestionDaoImpl implements QuestionDao {
         
     }
 
+    
+
+    @Override
+    public String getlastQuestionId() throws SQLException {
+       String id="";
+       ResultSet qid=DB.search("SELECT Question_Id as qid FROM question ORDER BY Question_Id DESC LIMIT 1; ");
+           
+        if (qid.next()) {
+            id=qid.getString("qid");
+            return id;
+
+        } else {
+            return null;
+        }
+       
+    }
+
+    @Override
+    public void addQuestionCategory() throws SQLException {
+        
+    }
+
   
     
     
