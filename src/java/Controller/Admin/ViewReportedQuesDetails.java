@@ -58,7 +58,7 @@ public class ViewReportedQuesDetails extends HttpServlet {
             String date = sdf.format(postedDate);
             c.add(question.gettitle());
             c.add(question.getquestion());
-            c.add(question.getcategory());
+            c.add(Integer.toString(question.getcategoryId()));
             c.add(photographer.getFname() + " " + photographer.getLname());
             c.add(client.getFname() + " " + client.getLname());
             c.add(rQuestion.getReason());

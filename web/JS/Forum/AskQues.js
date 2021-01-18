@@ -108,7 +108,7 @@ function autocomplete(inp, arr) {
        
         if (e.keyCode == 32 || e.keyCode == 13 ) {
             C_value = document.getElementById('myInput').value; 
-            document.getElementById("cat").value = document.getElementById('cat').value+" "+C_value;
+            document.getElementById("cat").value = document.getElementById('cat').value+","+C_value;
             document.getElementById('myInput').value = '';
         }
     }

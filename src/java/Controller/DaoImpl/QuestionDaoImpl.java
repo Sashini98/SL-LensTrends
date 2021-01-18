@@ -34,7 +34,7 @@ public class QuestionDaoImpl implements QuestionDao {
     
     @Override
     public void addQuestionifPhotographer(Question question) throws SQLException {
-        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getcategory()+"', '"+question.getquestion_date()+"', '"+question.getPhotographerId()+"');");
+        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getquestion_date()+"', '"+question.getPhotographerId()+"');");
     }
 
 
@@ -128,9 +128,32 @@ public class QuestionDaoImpl implements QuestionDao {
        
     }
 
+    
+
     @Override
-    public void addQuestionCategory() throws SQLException {
+    public void addQuestionCategory(Question question) throws SQLException {
+       DB.iud("INSERT INTO question_has_question_category(Question_Id, category_id) VALUES ('"+question.getquestionId()+"','"+question.getcategoryId()+"')");
+    }
+
+    @Override
+    public int getCategory(String category) throws SQLException {
+        int i=0;
+        ResultSet cat=DB.search("SELECT id FROM question_category WHERE category='"+category+"' ");
         
+        if(cat.next())
+        {
+            i=cat.getInt("id");
+            return i;
+        }
+        
+        else{
+            return 0;
+        }
+    }
+
+    @Override
+    public void addCategory(String category) throws SQLException {
+        DB.iud("INSERT INTO question_category(category) VALUES ('"+category+"')");
     }
 
   
