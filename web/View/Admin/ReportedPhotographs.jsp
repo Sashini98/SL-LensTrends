@@ -11,18 +11,28 @@
 <%
     ArrayList<ReportedPhotographs> p = (ArrayList<ReportedPhotographs>) request.getAttribute("photos");
     ArrayList<String> c = (ArrayList<String>) request.getAttribute("client");
+    if (p.size() > 0) {
     for (int i = 0; i < p.size(); i++) {
 %>
 
 <div class="photos">
     <div class="details">
-        <img src="../../Resources/Img/Gallery Sample Images/<%=c.get(i+1) %>">
-        <p>Uploaded By<input type="text" name="Submitted" value="<%=c.get(i+2) %>" disabled=""></p>
+        <img src="../../Resources/Img/Gallery Sample Images/<%=c.get((i) +1) %>">
+        <p>Uploaded By<input type="text" name="Submitted" value="<%=c.get((i) +2) %>" disabled=""></p>
         <p>Reported By <input type="text" name="Submitted" value="<%=c.get(i) %>" disabled=""></p>
-        <button id="<%=p.get(i).getReportId()%>" type="submit" class="btn" onclick="show('reportedPhoto')">View</button>
+        <button id="<%=p.get(i).getReportId()%>" type="submit" class="btn" onclick="show('reportedPhoto'); ViewDetails('<%=p.get(i).getReportId()%>');">View</button>
     </div>
 </div
 
 <script src="../../JS/Admin/ReportedPhotos.js" type="text/javascript" ></script>
 
-<%}%>
+<%}
+} else {
+
+%>
+<div style="text-align: center;"> 
+    <p>NO RESULTS FOUND</p>
+</div>
+
+<%}
+%>

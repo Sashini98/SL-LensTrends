@@ -48,7 +48,7 @@ public class forumH extends HttpServlet {
                 if (q.getclientId() == null) {
                     String pid = q.getPhotographerId();
                     PhotographerDao pDao = new PhotographerDaoImp();
-                    Photographer photographer = pDao.getPhotographerById(pid);;
+                    Photographer photographer = pDao.getPhotographerById(pid);
 
                     name = photographer.getFname() + " " + photographer.getLname();
                 } else {

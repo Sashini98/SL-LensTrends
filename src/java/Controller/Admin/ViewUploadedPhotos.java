@@ -41,7 +41,7 @@ public class ViewUploadedPhotos extends HttpServlet {
 
                 String name = "";
                 String pid = p.getPhotogrpherId();
-                Photographer photographer = pDao.getPhotographerById(pid);;
+                Photographer photographer = pDao.getPhotographerById(pid);
 
                 name = photographer.getFname() + " " + photographer.getLname();                
                 a.add(name);

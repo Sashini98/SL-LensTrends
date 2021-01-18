@@ -66,12 +66,12 @@ public class QuestionDaoImpl implements QuestionDao {
 
     @Override
     public List getCategory(int questionId) throws SQLException {
-        ResultSet category=DB.search("SELECT * FROM Question");
-        ArrayList<Question> a = new ArrayList();
+        ResultSet category=DB.search("SELECT category_id FROM question_has_question_category where Question_Id = '" + questionId + "'");
+        ArrayList a = new ArrayList();
         
         while(category.next())
         {
-            
+            a.add(category.getString("category_id"));
         }
         return a;
     }
@@ -95,7 +95,7 @@ public class QuestionDaoImpl implements QuestionDao {
     @Override
     public Question getQuestionbtId(int questionId) throws SQLException {
         
-         ResultSet ques=DB.search("SELECT * FROM Question where QuestionId = '" + questionId + "'");
+         ResultSet ques=DB.search("SELECT * FROM Question where Question_Id = '" + questionId + "'");
           Question q=new Question();
          if(ques.next())
          {
@@ -108,6 +108,28 @@ public class QuestionDaoImpl implements QuestionDao {
              
          }
          return q;
+        
+    }
+
+    
+
+    @Override
+    public String getlastQuestionId() throws SQLException {
+       String id="";
+       ResultSet qid=DB.search("SELECT Question_Id as qid FROM question ORDER BY Question_Id DESC LIMIT 1; ");
+           
+        if (qid.next()) {
+            id=qid.getString("qid");
+            return id;
+
+        } else {
+            return null;
+        }
+       
+    }
+
+    @Override
+    public void addQuestionCategory() throws SQLException {
         
     }
 

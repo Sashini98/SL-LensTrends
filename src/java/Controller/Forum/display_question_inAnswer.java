@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -30,11 +31,16 @@ public class display_question_inAnswer extends HttpServlet {
         String qid = request.getParameter("qid");
         int id = parseInt(qid);
         try {
+            ArrayList<String> a = new ArrayList();
+            
             QuestionDao question = new QuestionDaoImpl();
             Question q = question.getQuestionbtId(id);
 
             String ques = q.getquestion();
-            request.setAttribute("question", ques);
+            
+            a.add(ques);
+            a.add(qid);
+            request.setAttribute("question", a);
             
             request.getRequestDispatcher("/View/Fourm/AnswerQues.jsp").forward(request, response);
 

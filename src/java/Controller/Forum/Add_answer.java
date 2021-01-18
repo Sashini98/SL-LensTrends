@@ -16,6 +16,7 @@ import DB.DB;
 import Model.Answer;
 import Model.Dao.AnswerDao;
 import Model.Photographer;
+import static java.lang.Integer.parseInt;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -29,14 +30,20 @@ public class Add_answer extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String an = request.getParameter("answ");
-        String qid=request.getParameter("qid");
+        String qid=request.getParameter("quesid");
+        System.out.println("qid"+qid);
+        
+        int quesid=parseInt(qid);
+        
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
 
         Answer answer = new Answer();
+        
         answer.setanswer(an);
         answer.setanswerDate(date);
+        answer.setquestionId(quesid);
 
         Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
         String id = p.getPhotographerId();

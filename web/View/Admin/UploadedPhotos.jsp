@@ -24,8 +24,8 @@
     </div>
 </div
 
-<!--<script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>-->
-<!--<script src="../../JS/Admin/ViewUploadPhotos.js" type="text/javascript" ></script>-->
+<script src="../../JS/Admin/PhotoApproval.js" type="text/javascript" ></script>
+<script src="../../JS/Admin/ViewUploadPhotos.js" type="text/javascript" ></script>
 
 
 <%}

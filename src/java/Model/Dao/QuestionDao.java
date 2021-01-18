@@ -17,10 +17,12 @@ public interface QuestionDao {
     
     public void addQuestionifClient(Question question) throws SQLException;
     public void addQuestionifPhotographer(Question question) throws SQLException;
+    public void addQuestionCategory()throws SQLException;
     
     public List getAllQuestions() throws SQLException;
     public List getCategory(int questionId) throws SQLException;
     public Question getQuestionbtId(int questionId) throws SQLException;
+    public String getlastQuestionId() throws SQLException;
             
     
     public void deleteQuestion(int questionId) throws SQLException;

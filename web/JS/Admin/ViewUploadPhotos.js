@@ -22,7 +22,7 @@ function viewPhotoDetails(id)
                 document.getElementById("gen").value = details[9];
                 document.getElementById("img").src = details[10];               
                 document.getElementById("reso").value = details[11];
-                document.getElementById("fid").value = details[12];
+                document.getElementById("pid").value = details[12];
                 
 
 
@@ -36,3 +36,24 @@ function viewPhotoDetails(id)
     request.send("id="+id );
 }
 
+function PhotoApprove(){
+
+    var photo_id = document.getElementById("pid").value;
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                alert(responce);
+                
+            }
+        }
+
+    };
+
+    request.open("POST", "../../ApprovePhoto", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("id=" + photo_id);
+}

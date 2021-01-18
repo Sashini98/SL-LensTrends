@@ -35,9 +35,11 @@ public class AskQues extends HttpServlet {
             throws ServletException, IOException {
 
         String title = request.getParameter("title");
+        
         String body = request.getParameter("Questionbody");
+        
         String category = request.getParameter("cat");
-        System.out.println(category);
+        
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
@@ -52,8 +54,9 @@ public class AskQues extends HttpServlet {
         
 
         String id = "";
+        
         try {
-
+            QuestionDao questionDao = new QuestionDaoImpl();
             if (request.getSession().getAttribute("loggedPhotographer") == null) {
 
                 Client c = (Client) request.getSession().getAttribute("loggedClient");
@@ -62,9 +65,8 @@ public class AskQues extends HttpServlet {
                 
 
                 try {
-                    QuestionDao questionDao = new QuestionDaoImpl();
+                    
                     questionDao.addQuestionifClient(ques);
-//                DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Client_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -75,14 +77,17 @@ public class AskQues extends HttpServlet {
                 id = p.getPhotographerId();
                 ques.setPhotographerId(id);
                 try {
-                    QuestionDao questionDao = new QuestionDaoImpl();
+                   
                     questionDao.addQuestionifPhotographer(ques);
-//               DB.iud("INSERT INTO question ( title, Question, Category, Question_Date, Photographer_Id) VALUES ( '"+title+"', '"+body+"', '"+category+"', '"+d+"', '"+id+"');");
 
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
+            String qid = questionDao.getlastQuestionId();
+            
+            
+            
             response.sendRedirect("View/Fourm/BrowseQn.jsp");
         } catch (Exception e) {
             response.sendRedirect("View/Fourm/AskQues.jsp");

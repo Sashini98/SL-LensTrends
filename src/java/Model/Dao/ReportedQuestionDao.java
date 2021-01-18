@@ -5,6 +5,7 @@
  */
 package Model.Dao;
 
+import Model.ReportedQuestion;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -15,4 +16,5 @@ import java.util.List;
 public interface ReportedQuestionDao {
     
     public List getAllReportedQuestions() throws SQLException;
+    public ReportedQuestion getReportedQuestionById(int id) throws SQLException;
 }

@@ -40,5 +40,21 @@ public class ReportedQuestionDaoImpl implements ReportedQuestionDao{
         }
         return a;
     }
+
+    @Override
+    public ReportedQuestion getReportedQuestionById(int id) throws SQLException {
+       
+          ResultSet report = DB.search("SELECT * FROM reported_question WHERE Report_Id = '" + id + "'");
+          
+          if (report.next()) {
+            ReportedQuestion p = new ReportedQuestion(report.getInt("Report_Id"), report.getString("Reason"), 
+              report.getString("Description"), report.getInt("Question_Id"), report.getString("Photographer_Id"),
+              report.getString("Client_Id"));
+            
+            return p;
+        }else{
+        return null;
+    }
+    }
     
 }

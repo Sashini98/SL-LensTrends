@@ -39,5 +39,21 @@ public class ReportedPhotographDaoImpl implements ReportedPhotographDao{
         }
         return a;
     }
+
+    @Override
+    public ReportedPhotographs getReportedPhotographById(int id) throws SQLException {
+      
+         ResultSet report = DB.search("SELECT * FROM reported_photo WHERE Report_Id = '" + id + "'");
+         
+         if (report.next()) {
+            ReportedPhotographs p = new ReportedPhotographs(report.getInt("Report_Id"), report.getString("Reason"), 
+              report.getString("Description"), report.getInt("Photograph_Id"), report.getString("Photographer_Id"),
+              report.getString("Client_Id"));
+            
+            return p;
+        }else{
+        return null;
+    }
     
+}
 }
