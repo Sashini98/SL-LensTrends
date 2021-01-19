@@ -21,7 +21,7 @@
     }
 
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("questions");
-    for (int i = 0; i < s.size() / 6; i++) {
+    for (int i = 0; i < s.size() / 7; i++) {
 
 
 %>
@@ -31,11 +31,27 @@
 </div>
 
 <div class="questions">                
-    <h2><%= s.get(i * 6)%></h2>
-    <p><%= s.get((i * 6) + 1)%></p>
-    <input id="qid" name="qid" type="text" value="<%= s.get((i * 6) + 5)%>" style="display: none;">
-<!--    <label><a href="#" type="button"><%= s.get((i * 6) + 2)%></a></label> -->
-    <span>Posted by: <%= s.get((i * 6) + 2)%></span> <span id="time"><%= s.get((i * 6) + 3)%></span>   
+    <h2><%= s.get(i * 7)%></h2>
+    <p><%= s.get((i * 7) + 1)%></p>
+    <%
+    String categories= s.get((i * 7) + 6);
+    StringBuilder sb = new StringBuilder(categories); 
+    sb.deleteCharAt(categories.length() - 1); 
+    sb.deleteCharAt(0); 
+    
+    String cat=sb.toString(); 
+    String[] tokens = cat.split(",");
+    
+    
+for(int j=0;j<tokens.length;j++)
+{
+%>
+    <label><a href="#" type="button"><%=tokens[j]%></a></label>
+    <%}%>
+    
+    <input id="qid" name="qid" type="text" value="<%= s.get((i * 7) + 5)%>" style="display: none;">
+<!--    <label><a href="#" type="button"><%= s.get((i * 7) + 2)%></a></label> -->
+    <span>Posted by: <%= s.get((i * 6) + 2)%></span> <span id="time"><%= s.get((i * 7) + 3)%></span>   
     <div class="updown">
 
     </div>
@@ -43,11 +59,11 @@
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
-        <a href="../../display_question_inAnswer?qid=<%= s.get((i * 6) + 5)%>" type="button" id="myAns1">Answer Now</a>
+        <a href="../../display_question_inAnswer?qid=<%= s.get((i * 7) + 5)%>" type="button" id="myAns1">Answer Now</a>
         <%
             }
         %>
-        <a href="#" type="button" id="answer_view" onclick="popupanswer(<%= s.get((i * 6) + 5)%>);"><%= s.get((i * 6) + 4)%> answers</a>
+        <a href="#" type="button" id="answer_view" onclick="popupanswer(<%= s.get((i * 7) + 5)%>);"><%= s.get((i * 7) + 4)%> answers</a>
 
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->

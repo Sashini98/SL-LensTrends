@@ -22,6 +22,7 @@ public interface QuestionDao {
     
     public List getAllQuestions() throws SQLException;
     public List getCategory(int questionId) throws SQLException;
+    public String getCategoryName(int catId) throws SQLException;
     public int getCategory(String category)throws SQLException;
     public Question getQuestionbtId(int questionId) throws SQLException;
     public String getlastQuestionId() throws SQLException;

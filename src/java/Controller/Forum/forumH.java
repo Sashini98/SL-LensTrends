@@ -16,9 +16,11 @@ import Model.Dao.PhotographerDao;
 import Model.Dao.QuestionDao;
 import Model.Photographer;
 import Model.Question;
+import Model.QuestionCategory;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -36,6 +38,7 @@ public class forumH extends HttpServlet {
 
         try {
             ArrayList<String> a = new ArrayList();
+            ArrayList<String> b = new ArrayList();
 
             QuestionDao questionDao = new QuestionDaoImpl();
             ArrayList<Question> quest = (ArrayList<Question>) questionDao.getAllQuestions();
@@ -57,12 +60,11 @@ public class forumH extends HttpServlet {
                     Client client = clientDao.getClientbyId(cid);
 
                     name = client.getFname() + " " + client.getLname();
-                   
+
                 }
 
                 AnswerDao answ = new AnswerDaoImpl();
                 cnt = answ.answerCount(q.getquestionId());
-                
 
                 a.add(q.gettitle());
                 a.add(q.getquestion());
@@ -74,10 +76,21 @@ public class forumH extends HttpServlet {
                 a.add(date);
 
                 a.add(cnt + "");
-                a.add(q.getquestionId()+""); 
-            }
-//           
+                a.add(q.getquestionId() + "");
 
+                ArrayList<QuestionCategory> category = (ArrayList<QuestionCategory>) questionDao.getCategory(q.getquestionId());
+
+                for (QuestionCategory qu : category) {
+                    b.add(qu.getCategory());
+
+                }
+                System.out.println("cat" + b);
+                request.setAttribute("categories", b);
+                String cat=b.toString();
+                a.add(cat);
+                b.clear();
+            }
+            System.out.println("aa"+a);
             request.setAttribute("questions", a);
             request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
         } catch (Exception e) {

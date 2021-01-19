@@ -42,7 +42,7 @@ public class display_question_inAnswer extends HttpServlet {
             a.add(qid);
             request.setAttribute("question", a);
             
-            request.getRequestDispatcher("/View/Fourm/AnswerQues.jsp").forward(request, response);
+            request.getRequestDispatcher("/View/Fourm/AddAnswer.jsp").forward(request, response);
 
         } catch (Exception e) {
         }
