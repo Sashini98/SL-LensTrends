@@ -348,6 +348,31 @@
 
 }
 
+.questions .answer input[type=button]
+{
+     float: right;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    color: purple;
+    font-weight: bolder;
+    padding-right:5%;
+    border: none;
+    border-style: none;
+}
+.questions .answer input[type=button]:active
+{
+     float: right;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 17px;
+    color: blue;
+    font-weight: bolder;
+    padding-right:5%;
+    border: none;
+    border-style: none;
+}
+
 .questions .answer a{
     float: right;
     text-decoration: none;

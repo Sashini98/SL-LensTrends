@@ -84,13 +84,11 @@ public class forumH extends HttpServlet {
                     b.add(qu.getCategory());
 
                 }
-                System.out.println("cat" + b);
                 request.setAttribute("categories", b);
                 String cat=b.toString();
                 a.add(cat);
                 b.clear();
             }
-            System.out.println("aa"+a);
             request.setAttribute("questions", a);
             request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
         } catch (Exception e) {

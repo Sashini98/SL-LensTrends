@@ -63,7 +63,8 @@ for(int j=0;j<tokens.length;j++)
         <%
             }
         %>
-        <a href="#" type="button" id="answer_view" onclick="popupanswer(<%= s.get((i * 7) + 5)%>);"><%= s.get((i * 7) + 4)%> answers</a>
+<!--        <a href="#" type="button" id="answer_view" onclick="popupanswer();"><%= s.get((i * 7) + 4)%> answers</a>-->
+        <input type="button" id="answer_view" value="<%= s.get((i * 7) + 4)%> answers" onclick="popupanswer(); ">
 
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
@@ -77,9 +78,10 @@ for(int j=0;j<tokens.length;j++)
             <span class="close_anwe">&times;</span>
             
             <div name="ans" id="ans">
+                
                
                 
-                      <div class="answerqn">
+<!--                      <div class="answerqn">
                                 <p>You unfortunately have very little control over the iPhone camera. You can only lock or unlock the exposure, white balance, and focus modes.
                                     Camera+ actually does not have control over anything you described. It used to be able to as it hacked the hardware, which is naturally a great way to get your app rejected by the reviewers.
                                     I hope that iOS6 will give developers greater control as it is a PITA.</p> 
@@ -88,13 +90,13 @@ for(int j=0;j<tokens.length;j++)
                                     <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
                                     <span id="up">43</span> 
                                     <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-                                    <span id="down">456</span>
+                                    <span id="down"></span>
                                 </div>
                                 <div class="answer">
                                     <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">5 comments</a>
                                     <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
                                 </div>
-                            </div>
+                            </div>-->
             </div>
         </div>
 
@@ -159,7 +161,7 @@ for(int j=0;j<tokens.length;j++)
     </div>
 
 </div
+<script src="../../JS/Forum/BrowseQn.js" type="text/javascript"></script>
 
-<script src="../../JS/Forum/QuesDisplay.js" type="text/javascript"></script>
     
 <%}%>

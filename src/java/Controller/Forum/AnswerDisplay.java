@@ -16,6 +16,7 @@ import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -25,7 +26,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sashini Shihara
  */
-public class Answer_display extends HttpServlet {
+public class AnswerDisplay extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -58,7 +59,7 @@ public class Answer_display extends HttpServlet {
             }
 
             request.setAttribute("answers", a);
-            request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
+            request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
         } catch (Exception e) {
         }
 
