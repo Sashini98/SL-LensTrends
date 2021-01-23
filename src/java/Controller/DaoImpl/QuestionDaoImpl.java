@@ -34,7 +34,7 @@ public class QuestionDaoImpl implements QuestionDao {
     
     @Override
     public void addQuestionifPhotographer(Question question) throws SQLException {
-        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getcategory()+"', '"+question.getquestion_date()+"', '"+question.getPhotographerId()+"');");
+        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id) VALUES ( '"+question.gettitle()+"', '"+ question.getquestion()+"', '"+question.getquestion_date()+"', '"+question.getPhotographerId()+"');");
     }
 
 
@@ -66,12 +66,22 @@ public class QuestionDaoImpl implements QuestionDao {
 
     @Override
     public List getCategory(int questionId) throws SQLException {
-        ResultSet category=DB.search("SELECT category_id FROM question_has_question_category where Question_Id = '" + questionId + "'");
+        ResultSet category=DB.search("SELECT category_id  as cid FROM question_has_question_category where Question_Id = '" + questionId + "'");
         ArrayList a = new ArrayList();
         
         while(category.next())
         {
-            a.add(category.getString("category_id"));
+            ResultSet cat=DB.search("SELECT * FROM question_category WHERE id='"+category.getString("cid")+"' ");
+            
+            while(cat.next())
+            {
+             QuestionCategory qu=new QuestionCategory();
+             qu.setcategoryId(cat.getInt("id"));
+             qu.setCategory(cat.getString("category"));
+             
+             a.add(qu);
+            }
+            
         }
         return a;
     }
@@ -128,8 +138,49 @@ public class QuestionDaoImpl implements QuestionDao {
        
     }
 
+    
+
     @Override
-    public void addQuestionCategory() throws SQLException {
+    public void addQuestionCategory(Question question) throws SQLException {
+       DB.iud("INSERT INTO question_has_question_category(Question_Id, category_id) VALUES ('"+question.getquestionId()+"','"+question.getcategoryId()+"')");
+    }
+
+    @Override
+    public int getCategory(String category) throws SQLException {
+        int i=0;
+        ResultSet cat=DB.search("SELECT id FROM question_category WHERE category='"+category+"' ");
+        
+        if(cat.next())
+        {
+            i=cat.getInt("id");
+            return i;
+        }
+        
+        else{
+            return 0;
+        }
+    }
+
+    @Override
+    public void addCategory(String category) throws SQLException {
+        DB.iud("INSERT INTO question_category(category) VALUES ('"+category+"')");
+    }
+
+    @Override
+    public String getCategoryName(int catId) throws SQLException {
+        String name="";
+        ResultSet cat=DB.search("SELECT category FROM question_category WHERE id='"+catId+"' ");
+        
+        if (cat.next())
+        {
+            name=cat.getString("category");
+            return name;
+        }
+        
+        else
+        {
+            return null;
+        }
         
     }
 
