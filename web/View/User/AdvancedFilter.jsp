@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../CSS/User/AdvancedSearch.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   
+
 </head>
 <div style="font-family: 'Didact Gothic', sans-serif;">
     <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;display: flex;align-items: center;">
@@ -24,13 +24,14 @@
             <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
         </div>
         <div style="margin: 4% 10% 0">
-            <input type="radio" name="SortBy" id="relevant" onchange="advancedSearch();" checked="">
+            <input type="radio" name="SortBy" onchange="advancedSearch();" id="fresh" checked>
+            &nbsp;&nbsp;
+            <label for="fresh">Fresh content</label>
+            <br/>
+            <input type="radio" name="SortBy" id="relevant" onchange="advancedSearch();">
             &nbsp;&nbsp;
             <label for="relevant" >Most relevant</label>
             <br/>
-            <input type="radio" name="SortBy" onchange="advancedSearch();" id="fresh">
-            &nbsp;&nbsp;
-            <label for="fresh">Fresh content</label><br/>
         </div>
     </div>
     <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
@@ -40,7 +41,7 @@
             <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
         </div>
         <div style="margin: 4% 10% 0">
-            <input type="checkbox" name="AllOrientations" id="AllOrientations" checked="" onclick="checkSubCategory('2', 'AllOrientations'); advancedSearch();">&nbsp;&nbsp;<label for="AllOrientations">All Orientations</label><br/>
+            <!--<input type="checkbox" name="AllOrientations" id="AllOrientations" checked="" onclick="checkSubCategory('2', 'AllOrientations'); advancedSearch();">&nbsp;&nbsp;<label for="AllOrientations">All Orientations</label><br/>-->
             <input type="checkbox"  id="Horizontal" onclick="checkSubCategory('2', 'Horizontal'); advancedSearch();" >&nbsp;&nbsp;<label for="Horizontal">Horizontal</label><br/>
             <input type="checkbox"  id="Vertical" onclick="checkSubCategory('2', 'Vertical'); advancedSearch();">&nbsp;&nbsp;<label for="Vertical">Vertical</label><br/>
             <input type="checkbox"  id="Square"  onclick="checkSubCategory('2', 'Square'); advancedSearch();">&nbsp;&nbsp;<label for="Square">Square</label><br/>
@@ -116,4 +117,4 @@
     </div>
 </div>
 
- <script src="../../JS/User/AdvancedSearch.js" type="text/javascript"></script>
+<script src="../../JS/User/AdvancedSearch.js" type="text/javascript"></script>

@@ -45,11 +45,11 @@ public class PurchasePhotoDetails extends HttpServlet {
             PhotographCategoryDao pcd = new PhotographCategoryDaoImpl();
             String category = pcd.getCategory(photograph.getCategoryId());
 
-            request.setAttribute("photo", photograph);
-            request.setAttribute("photographer", photographer);
-            request.setAttribute("photographCategory", category);
+            request.getSession().setAttribute("photo", photograph);
+            request.getSession().setAttribute("photographer", photographer);
+            request.getSession().setAttribute("photographCategory", category);
             
-            request.getRequestDispatcher("View/User/PurchasePhoto.jsp").forward(request, response);
+            response.sendRedirect("View/User/PurchasePhoto.jsp");
             
         } catch (SQLException ex) {
             ex.printStackTrace();
