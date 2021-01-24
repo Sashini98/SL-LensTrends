@@ -5,9 +5,17 @@
  */
 package Controller.Clent;
 
+import Controller.DaoImpl.PhotographDaoImpl;
+import Model.Dao.PhotographDao;
 import Model.Photograph;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -36,15 +44,27 @@ public class PhotographAdvancedSearch extends HttpServlet {
 
         if (!request.getParameter("minWidth").equals("")) {
             minWidth = Double.parseDouble(request.getParameter("minWidth"));
+            if (sizeOfPixels.equals("MegaPixel")) {
+                minWidth *= 1000;
+            }
         }
         if (!request.getParameter("maxWidth").equals("")) {
             maxWidth = Double.parseDouble(request.getParameter("maxWidth"));
+            if (sizeOfPixels.equals("MegaPixel")) {
+                maxWidth *= 1000;
+            }
         }
         if (!request.getParameter("minHeight").equals("")) {
             minHeight = Double.parseDouble(request.getParameter("minHeight"));
+            if (sizeOfPixels.equals("MegaPixel")) {
+                minHeight *= 1000;
+            }
         }
         if (!request.getParameter("maxHeight").equals("")) {
             maxHeight = Double.parseDouble(request.getParameter("maxHeight"));
+            if (sizeOfPixels.equals("MegaPixel")) {
+                maxHeight *= 1000;
+            }
         }
 
         String people = request.getParameter("people");
@@ -52,71 +72,97 @@ public class PhotographAdvancedSearch extends HttpServlet {
 
         boolean undiscovered = Boolean.parseBoolean(request.getParameter("undiscovered"));
 
-        LinkedList<Photograph> photos = (LinkedList<Photograph>) request.getSession().getAttribute("searchedPics");
+        //simple keyword search
+        String keyword = request.getSession().getAttribute("searchedKeyword").toString();
+        PhotographDao pd = new PhotographDaoImpl();
 
-        for (Photograph photo : photos) {
+        ArrayList<Photograph> photographByKeyWord = (ArrayList<Photograph>) pd.getPhotographByKeyWord(keyword);
+
+        if (photographByKeyWord == null) {
+            photographByKeyWord = new ArrayList<>();
+        }
+
+        List<Photograph> photosContainer = photographByKeyWord;
+
+        LinkedList<Photograph> photos = new LinkedList<>();
+
+        for (Photograph e : photosContainer) {
+            photos.add(e);
+        }
+
+        Iterator<Photograph> photoIterator = photos.iterator();
+        HashSet<Photograph> removingPhotos = new HashSet<>();
+
+        while (photoIterator.hasNext()) {
+
+            Photograph photo = photoIterator.next();
+            boolean isNeeded = false;
 
             // orientation filter
-            if (orientation.equalsIgnoreCase("Horizontal")) {
+            if (orientation.contains("AllOrientations")) {
+                isNeeded = true;
 
-                if (photo.getOrientationId() != 2) {
-                    photos.remove(photo);
-                    continue;
+            } else {
+                if (orientation.contains("Horizontal")) {
+                    if (photo.getOrientationId() == 2) {
+                        isNeeded = true;
+                    }
+
+                }
+                if (orientation.contains("Vertical")) {
+                    if (photo.getOrientationId() == 3) {
+                        isNeeded = true;
+                    }
+
+                }
+                if (orientation.contains("Square")) {
+                    if (photo.getOrientationId() == 4) {
+                        isNeeded = true;
+                    }
+
+                }
+                if (orientation.contains("Panoramic")) {
+                    if (photo.getOrientationId() == 5) {
+                        isNeeded = true;
+                    }
+
                 }
 
-            } else if (orientation.equalsIgnoreCase("Vertical")) {
-
-                if (photo.getOrientationId() != 3) {
-                    photos.remove(photo);
-                    continue;
-                }
-
-            } else if (orientation.equalsIgnoreCase("Square")) {
-
-                if (photo.getOrientationId() != 4) {
-                    photos.remove(photo);
-                    continue;
-                }
-
-            } else if (orientation.equalsIgnoreCase("Panoramic")) {
-
-                if (photo.getOrientationId() != 5) {
-                    photos.remove(photo);
-                    continue;
-                }
-
+            }
+            if (!isNeeded) {
+                removingPhotos.add(photo);
             }
 
             // size filter
             if (minWidth != 0.0) {
 
-                if (!(photo.getWidth() > minWidth)) {
-                    photos.remove(photo);
-                    continue;
+                if (!(photo.getWidth() >= minWidth)) {
+                    System.out.println("min width");
+                    removingPhotos.add(photo);
                 }
 
             }
             if (minHeight != 0.0) {
 
-                if (!(photo.getHeight() > minHeight)) {
-                    photos.remove(photo);
-                    continue;
+                if (!(photo.getHeight() >= minHeight)) {
+                    System.out.println("min heig");
+                    removingPhotos.add(photo);
                 }
 
             }
             if (maxWidth != 0.0) {
 
-                if (!(photo.getWidth() < maxWidth)) {
-                    photos.remove(photo);
-                    continue;
+                if (!(photo.getWidth() <= maxWidth)) {
+                    System.out.println("max width");
+                    removingPhotos.add(photo);
                 }
 
             }
             if (maxHeight != 0.0) {
 
-                if (!(photo.getHeight() < maxHeight)) {
-                    photos.remove(photo);
-                    continue;
+                if (!(photo.getHeight() <= maxHeight)) {
+                    System.out.println("max hei");
+                    removingPhotos.add(photo);
                 }
 
             }
@@ -124,30 +170,33 @@ public class PhotographAdvancedSearch extends HttpServlet {
             // people filter
             if (people.equalsIgnoreCase("WithPeople")) {
                 if (!photo.isPeople()) {
-                    photos.remove(photo);
-                    continue;
+                    removingPhotos.add(photo);
+                }
+                if (!gender.equals("")) {
+                    boolean picNeeded = false;
+                    if (gender.contains("Both")) {
+                        if (photo.getGenderId() == 3) {
+                            picNeeded = true;
+                        }
+                    }
+                    if (gender.contains("Male")) {
+                        if (photo.getGenderId() == 1) {
+                            picNeeded = true;
+                        }
+                    }
+                    if (gender.contains("Female")) {
+                        if (photo.getGenderId() == 2) {
+                            picNeeded = true;
+                        }
+                    }
+                    if (!picNeeded) {
+                        removingPhotos.add(photo);
+                    }
                 }
 
-                if (gender.equalsIgnoreCase("Both")) {
-                    if (photo.getGenderId() != 3) {
-                        photos.remove(photo);
-                        continue;
-                    }
-                } else if (gender.equalsIgnoreCase("Male")) {
-                    if (photo.getGenderId() != 1) {
-                        photos.remove(photo);
-                        continue;
-                    }
-                } else if (gender.equalsIgnoreCase("Female")) {
-                    if (photo.getGenderId() != 2) {
-                        photos.remove(photo);
-                        continue;
-                    }
-                }
             } else if (people.equalsIgnoreCase("WithoutPeople")) {
                 if (photo.isPeople()) {
-                    photos.remove(photo);
-                    continue;
+                    removingPhotos.add(photo);
                 }
             }
 
@@ -155,15 +204,47 @@ public class PhotographAdvancedSearch extends HttpServlet {
             if (undiscovered) {
 
                 if (!photo.isUndiscovered()) {
-                    photos.remove(photo);
-                    continue;
+                    removingPhotos.add(photo);
                 }
 
             }
+
         }
 
+        photos.removeAll(removingPhotos);
+
+        //content filter
+        if (sortBy.equalsIgnoreCase("relevant")) {
+
+            LinkedList<Photograph> contains = new LinkedList<>();
+            LinkedList<Photograph> notContains = new LinkedList<>();
+
+            if (keyword != null) {
+                for (Photograph photo : photos) {
+
+                    if (photo.getTitle().toLowerCase().trim().contains(keyword.toLowerCase().trim())) {
+                        contains.add(photo);
+                    } else {
+                        notContains.add(photo);
+                    }
+                }
+                photos.clear();
+                photos.addAll(contains);
+                photos.addAll(notContains);
+            }
+
+        } else {
+
+            Collections.sort(photos, new Comparator<Photograph>() {
+                @Override
+                public int compare(Photograph o1, Photograph o2) {
+                    return o2.getUploadedDate().compareTo(o1.getUploadedDate());
+                }
+            });
+
+        }
         ArrayList<Photograph> sortedPhotos = new ArrayList(photos);
-        request.setAttribute("photos", sortedPhotos);
+        request.getSession().setAttribute("searchedPics", sortedPhotos);
         request.getRequestDispatcher("View/User/AdvancedSearchPhotographTemplate.jsp").forward(request, response);
 
     }

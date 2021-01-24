@@ -91,7 +91,7 @@ body {
     /*padding-top: 124.95%;  (img-height / img-width )* 100 
     /* (853 / 1280) * 100 */
     /*display: block;*/
-    background :  url("../../Resources/Img/A Mighty sunrise with a flight of birds..jpg") no-repeat center;
+/*    background :  url("../../Resources/Img/A Mighty sunrise with a flight of birds..jpg") no-repeat center;*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

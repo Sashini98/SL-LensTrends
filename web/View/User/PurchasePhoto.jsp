@@ -4,6 +4,7 @@
     Author     : kesh
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="Model.Photographer"%>
 <%@page import="Model.Photograph"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -11,8 +12,23 @@
 
 <%
     boolean logged = (Boolean) request.getAttribute("logged");
-    Photograph p = (Photograph)request.getAttribute("photo");
-    Photographer photographer = (Photographer)request.getAttribute("photographer");
+    Photograph p = (Photograph) session.getAttribute("photo");
+    String cat = (String) session.getAttribute("photographCategory");
+    Photographer photographer = (Photographer) session.getAttribute("photographer");
+
+    String keywords = p.getKeywords();
+    String[] keywordArray = keywords.split(",");
+    for (String keyword : keywordArray) {
+        keyword = keyword.trim();
+    }
+
+    ArrayList<Photograph> pics = (ArrayList<Photograph>) request.getSession().getAttribute("searchedPics");
+    int similarphotosArray = pics.size() - 1;
+
+    
+    session.removeAttribute("photo");
+    session.removeAttribute("photographCategory");
+    session.removeAttribute("photographer");
 %>
 
 
@@ -107,24 +123,24 @@
             <div class="photodetails">
                 <div class="PhotoOuter">
                     <div class="Photo">
-
+                        <img src="../../Resources/Img/Gallery Sample Images/<%= p.getPath()%>" style="width:100%; height: 100%;"/>
                     </div>
                 </div>
                 <div class="Details"> 
                     <div class="NameDetails">
                         <span class="PhotoName">
-                            <%= p.getTitle() %>
+                            <%= p.getTitle()%>
                         </span>
                         <br />
                         <span>
-                            By <a href=""> <%= photographer.getFname() %> <%= photographer.getLname() %></a>
+                            By <a href=""> <%= photographer.getFname()%> <%= photographer.getLname()%></a>
                         </span>
                     </div>
                     <hr />
                     <div class="ImageDetails">
                         <div class="Dimention">
                             <span>Dimensions</span>
-                            <span class="detail"><%= p.getWidth() %> x <%= p.getHeight() %></span>
+                            <span class="detail"><%= p.getWidth()%> x <%= p.getHeight()%></span>
                         </div>
                         <div>
                             <span>File Type</span>
@@ -132,7 +148,7 @@
                         </div>
                         <div>
                             <span>Category</span>
-                            <span class="detail"><%= p.getc %></span>
+                            <span class="detail"><%= cat%></span>
                         </div>
                     </div>
                     <hr />
@@ -148,11 +164,16 @@
                     Related Keywords
                 </span>
                 <div class="KeywordsDiv">
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
-                    <span class="Keyword">Keyword</span>
+                    <%
+                        for (int i = 0; i < keywordArray.length; i++) {
+                    %>
+
+                    <span class="Keyword"><%= keywordArray[i]%></span>
+
+                    <%
+                        }
+                    %>
+
                 </div>
             </div>
             <div class="SimilarImagesDiv">
@@ -161,23 +182,51 @@
                 </span>
                 <div class="row"> 
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 0; i <= similarphotosArray; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= pics.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= pics.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
+
                     </div>
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 1; i <= similarphotosArray; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= pics.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= pics.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
+                        
                     </div>
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 2; i <= similarphotosArray; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= pics.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= pics.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
 
                     </div>  
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 3; i <= similarphotosArray; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= pics.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= pics.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
                     </div>  
                 </div>
                 <div class="SimilarShowDiv">

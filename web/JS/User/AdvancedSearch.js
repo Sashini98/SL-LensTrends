@@ -5,56 +5,51 @@ function checkSubCategory(i, action) {
         var subCategory = document.getElementById("Both");
         var subCategory1 = document.getElementById("Male");
         var subCategory2 = document.getElementById("Female");
+    
 
-        if (action === 'Male' || action === 'Female') {
-            subCategory.checked = false;
+        if (action === 'Male' || action === 'Female' || action === 'Both') {
+
             document.getElementById("WithPeople").checked = true;
             document.getElementById("WithoutPeople").checked = false;
 
-        } else if (action === 'Both') {
-            subCategory1.checked = false;
-            subCategory2.checked = false;
-            document.getElementById("WithPeople").checked = true;
-            document.getElementById("WithoutPeople").checked = false;
+        } 
 
-        }
+//        if (subCategory1.checked && subCategory2.checked) {
+//            subCategory.checked = true;
+//            subCategory1.checked = false;
+//            subCategory2.checked = false;
+//        }
 
-        if (subCategory1.checked && subCategory2.checked) {
-            subCategory.checked = true;
-            subCategory1.checked = false;
-            subCategory2.checked = false;
-        }
-
-        if (!subCategory.checked && !subCategory1.checked && !subCategory2.checked) {
-            document.getElementById("WithPeople").checked = false;
-            document.getElementById("WithoutPeople").checked = true;
-        }
+//        if (!subCategory.checked && !subCategory1.checked && !subCategory2.checked) {
+//            document.getElementById("WithPeople").checked = false;
+//            document.getElementById("WithoutPeople").checked = true;
+//        }
 
     } else if (i === '2') {
 
-        var subCategory = document.getElementById("AllOrientations");
-        var subCategory1 = document.getElementById("Horizontal");
-        var subCategory2 = document.getElementById("Vertical");
-        var subCategory3 = document.getElementById("Square");
-        var subCategory4 = document.getElementById("Panoramic");
-
-        if (subCategory.checked) {
-            subCategory1.checked = false;
-            subCategory2.checked = false;
-            subCategory3.checked = false;
-            subCategory4.checked = false;
-        }
-
-        if ((subCategory1.checked) && (subCategory2.checked) && (subCategory3.checked) && (subCategory4.checked)) {
-            subCategory.checked = true;
-            subCategory1.checked = false;
-            subCategory2.checked = false;
-            subCategory3.checked = false;
-            subCategory4.checked = false;
-        } else {
-            subCategory.checked = false;
-            document.getElementById(action).checked = true;
-        }
+//        var subCategory = document.getElementById("AllOrientations");
+//        var subCategory1 = document.getElementById("Horizontal");
+//        var subCategory2 = document.getElementById("Vertical");
+//        var subCategory3 = document.getElementById("Square");
+//        var subCategory4 = document.getElementById("Panoramic");
+//
+//        if (subCategory.checked) {
+//            subCategory1.checked = false;
+//            subCategory2.checked = false;
+//            subCategory3.checked = false;
+//            subCategory4.checked = false;
+//        }
+//
+//        if ((subCategory1.checked) && (subCategory2.checked) && (subCategory3.checked) && (subCategory4.checked)) {
+//            subCategory.checked = true;
+//            subCategory1.checked = false;
+//            subCategory2.checked = false;
+//            subCategory3.checked = false;
+//            subCategory4.checked = false;
+//        } else {
+//            subCategory.checked = false;
+//            document.getElementById(action).checked = true;
+//        }
     } else if (i === '3') {
         var subCategory = document.getElementById("WithPeople");
         var subCategory1 = document.getElementById("WithoutPeople");
@@ -64,7 +59,7 @@ function checkSubCategory(i, action) {
                 subCategory.checked = true;
                 subCategory1.checked = false;
 
-                document.getElementById("Both").checked = true;
+                document.getElementById("Both").checked = false;
                 document.getElementById("Male").checked = false;
                 document.getElementById("Female").checked = false;
 
@@ -80,6 +75,8 @@ function checkSubCategory(i, action) {
     }
 }
 
+
+
 function  keywordSearch(event) {
 
     if (event.which == 13 || event.which == 1) {
@@ -92,6 +89,7 @@ function  keywordSearch(event) {
 
                     var responce = request.responseText;
                     document.getElementById("row").innerHTML = responce;
+                   
 
                 }
             }
@@ -105,6 +103,24 @@ function  keywordSearch(event) {
 function enteredPixcelSize(evt) {
 
     if (evt.which == 13) {
+        var minWidth = document.getElementById("minWidth").value;
+        var minHeight = document.getElementById("minHeight").value;
+        var maxWidth = document.getElementById("maxWidth").value;
+        var maxHeight = document.getElementById("maxHeight").value;
+
+        if (minWidth !== "" && maxWidth !== "") {
+            if (parseFloat(minWidth) > parseFloat(maxWidth)) {
+                alert("Invalid values for Width");
+                return false;
+            }
+        }
+        if (minHeight !== "" && maxHeight !== "") {
+            if (parseFloat(minHeight) > parseFloat(maxHeight)) {
+                alert("Invalid values for Height");
+                return false;
+            }
+        }
+
         advancedSearch();
         return true;
     } else {
@@ -127,14 +143,15 @@ function enteredPixcelSize(evt) {
 function  advancedSearch() {
 
     var sortBy;
-    var orientation;
+    var orientation = "";
     var sizePixel;
     var minWidth = document.getElementById('minWidth').value;
     var maxWidth = document.getElementById('maxWidth').value;
     var minHeight = document.getElementById('minHeight').value;
     var maxHeight = document.getElementById('maxHeight').value;
+
     var people;
-    var gender;
+    var gender = "";
     var undiscovered;
 
     if (document.getElementById('relevant').checked) {
@@ -143,45 +160,56 @@ function  advancedSearch() {
         sortBy = 'fresh';
     }
 
-    if (document.getElementById('AllOrientations').checked) {
-        orientation = 'AllOrientations';
 
-    } else if (document.getElementById('Horizontal').checked) {
-        orientation = 'Horizontal';
+    if (document.getElementById('Horizontal').checked) {
+        orientation += 'Horizontal ';
 
-    } else if (document.getElementById('Vertical').checked) {
-        orientation = 'Vertical';
+    }
+    if (document.getElementById('Vertical').checked) {
+        orientation += 'Vertical ';
 
-    } else if (document.getElementById('Square').checked) {
-        orientation = 'Square';
+    }
+    if (document.getElementById('Square').checked) {
+        orientation += 'Square ';
 
-    } else if (document.getElementById('Panoramic').checked) {
-        orientation = 'Panoramic';
+    }
+    if (document.getElementById('Panoramic').checked) {
+        orientation += 'Panoramic ';
 
-    } else {
+    }
+    if (document.getElementById('Panoramic').checked && document.getElementById('Square').checked
+            && document.getElementById('Vertical').checked && document.getElementById('Horizontal').checked) {
         orientation = 'AllOrientations';
     }
+    if (!document.getElementById('Panoramic').checked && !document.getElementById('Square').checked
+            && !document.getElementById('Vertical').checked && !document.getElementById('Horizontal').checked) {
+        orientation = 'AllOrientations';
+    }
+
+    orientation = orientation.trim();
 
     if (document.getElementById('Pixels').checked) {
         sizePixel = 'Pixels';
     } else {
-        sizePixel = 'sizePixel';
+        sizePixel = 'MegaPixel';
     }
 
     if (document.getElementById('WithPeople').checked) {
         people = 'WithPeople';
-    } else {
+    } else if (document.getElementById('WithoutPeople').checked) {
         people = 'WithoutPeople';
     }
 
     if (document.getElementById('Both').checked) {
-        gender = 'Both';
+        gender += 'Both ';
 
-    } else if (document.getElementById('Male').checked) {
-        gender = 'Male';
+    } 
+    if (document.getElementById('Male').checked) {
+        gender += 'Male ';
 
-    } else {
-        gender = 'Female';
+    } 
+    if (document.getElementById('Female').checked) {
+        gender += 'Female ';
     }
 
     if (document.getElementById('Undiscovered').checked) {
@@ -197,7 +225,7 @@ function  advancedSearch() {
             if (request.readyState === 4) {
 
                 var responce = request.responseText;
-                document.getElementById("row").innerHTML = responce;
+                parent.document.getElementById("row").innerHTML = responce;
 
             }
         }

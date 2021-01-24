@@ -5,8 +5,10 @@
  */
 package Controller.Clent;
 
+import Controller.DaoImpl.PhotographCategoryDaoImpl;
 import Controller.DaoImpl.PhotographDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
+import Model.Dao.PhotographCategoryDao;
 import Model.Dao.PhotographDao;
 import Model.Dao.PhotographerDao;
 import Model.Photograph;
@@ -39,14 +41,18 @@ public class PurchasePhotoDetails extends HttpServlet {
             
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
-
-            request.setAttribute("photo", photograph);
-            request.setAttribute("photographer", photographer);
             
-            request.getRequestDispatcher("View/User/PurchasePhoto.jsp").forward(request, response);
+            PhotographCategoryDao pcd = new PhotographCategoryDaoImpl();
+            String category = pcd.getCategory(photograph.getCategoryId());
+
+            request.getSession().setAttribute("photo", photograph);
+            request.getSession().setAttribute("photographer", photographer);
+            request.getSession().setAttribute("photographCategory", category);
+            
+            response.sendRedirect("View/User/PurchasePhoto.jsp");
             
         } catch (SQLException ex) {
-            Logger.getLogger(PurchasePhotoDetails.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
 
     }

@@ -9,9 +9,7 @@ import Controller.DaoImpl.PhotographDaoImpl;
 import Model.Dao.PhotographDao;
 import Model.Photograph;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,15 +29,15 @@ public class PhotographSearch extends HttpServlet {
         PhotographDao pd = new PhotographDaoImpl();
         
         ArrayList<Photograph> photographByKeyWord = (ArrayList<Photograph>) pd.getPhotographByKeyWord(keyword);
-        
+
         if (photographByKeyWord == null) {
             photographByKeyWord = new ArrayList<>();
         }
         
         request.getSession().setAttribute("searchedPics", photographByKeyWord);
+        request.getSession().setAttribute("searchedKeyword", keyword);
         
-        request.setAttribute("photos", photographByKeyWord);
-        request.getRequestDispatcher("View/User/AdvancedSearchPhotographTemplate.jsp").forward(request, response);
+//        request.getRequestDispatcher("View/User/AdvancedSearchPhotographTemplate.jsp").forward(request, response);
     }
 
 
