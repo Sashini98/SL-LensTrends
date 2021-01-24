@@ -29,6 +29,7 @@ public class Add_answer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("hiiiiiiiiiiii");
         String an = request.getParameter("answ");
         String qid=request.getParameter("quesid");
         System.out.println("qid"+qid);
