@@ -37,7 +37,7 @@ public class PhotographSearch extends HttpServlet {
         request.getSession().setAttribute("searchedPics", photographByKeyWord);
         request.getSession().setAttribute("searchedKeyword", keyword);
         
-        request.getRequestDispatcher("View/User/AdvancedSearchPhotographTemplate.jsp").forward(request, response);
+//        request.getRequestDispatcher("View/User/AdvancedSearchPhotographTemplate.jsp").forward(request, response);
     }
 
 

@@ -89,6 +89,7 @@ function  keywordSearch(event) {
 
                     var responce = request.responseText;
                     document.getElementById("row").innerHTML = responce;
+                   
 
                 }
             }
