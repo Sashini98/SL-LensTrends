@@ -12,19 +12,19 @@
     ArrayList<ReportedQuestion> q = (ArrayList<ReportedQuestion>) request.getAttribute("ques");
     ArrayList<String> n = (ArrayList<String>) request.getAttribute("names");
     if (q.size() > 0) {
-    for (int i = 0; i < q.size(); i++) {
+    for (int i = 0; i < n.size() / 3 ; i++) {
 %>
 
 <div class="questions">
     <div class="details">
-        <h2><%=n.get(i+2) %></h2><br>
+        <h2><%=n.get((i * 3) +2) %></h2><br>
     </div>
     <table class="table" border="0" width="100%" height="40px" >
         <tr>
             <td align="left">Uploaded By</td>
-            <td><input type="text" name="upload" value="<%=n.get(i) %>" disabled="">
+            <td><input type="text" name="upload" value="<%=n.get(i * 3) %>" disabled="">
             <td align="left">Reported By</td>
-            <td><input type="text" name="rep" value="<%=n.get(i+1) %>" disabled=""></td>
+            <td><input type="text" name="rep" value="<%=n.get((i * 3) +1) %>" disabled=""></td>
             <td><button class="btn" id="<%= q.get(i).getReportId() %>" onclick="show('reportedQuestion'); ViewQusetionDetails('<%= q.get(i).getReportId() %>')">View</button></td>
         </tr>
     </table>
