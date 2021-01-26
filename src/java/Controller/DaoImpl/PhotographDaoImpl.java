@@ -24,6 +24,8 @@ public class PhotographDaoImpl implements PhotographDao {
     public List<Photograph> getPhotographByKeyWord(String keyword) {
         List<Photograph> photos = new ArrayList<>();
         try {
+            keyword = keyword.toLowerCase();
+
             ResultSet photographs = DB.search("SELECT  * FROM photograph WHERE Keywords like '%" + keyword + "%'");
 
             while (photographs.next()) {

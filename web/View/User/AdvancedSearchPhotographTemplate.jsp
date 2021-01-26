@@ -10,7 +10,7 @@
 <%
 
     ArrayList<Photograph> photos = (ArrayList<Photograph>) session.getAttribute("searchedPics");
-  
+  System.out.println(photos.size());
     if (photos.size() > 0) {
 
 %>

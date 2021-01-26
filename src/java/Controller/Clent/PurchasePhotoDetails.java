@@ -14,10 +14,7 @@ import Model.Dao.PhotographerDao;
 import Model.Photograph;
 import Model.Photographer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,8 +31,9 @@ public class PurchasePhotoDetails extends HttpServlet {
             throws ServletException, IOException {
 
         try {
+            System.out.println("awaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             int photoId = Integer.parseInt(request.getParameter("id"));
-
+            System.out.println(photoId + " llllllllllllllllllllllll");
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoId);
             
