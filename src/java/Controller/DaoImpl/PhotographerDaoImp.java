@@ -7,11 +7,16 @@ package Controller.DaoImpl;
 
 import DB.DB;
 import Model.Dao.PhotographerDao;
+import Model.Photograph;
 import Model.Photographer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  *
@@ -21,15 +26,15 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public void addPhotographer(Photographer photographer) throws SQLException {
-         Date d=photographer.getJoined_date();
+        Date d = photographer.getJoined_date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-        
+
         DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Plan_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus) "
                 + "VALUES ('" + photographer.getPhotographerId() + "', '" + photographer.getEmail() + "', '" + photographer.getPassword() + "', '" + photographer.getFname() + "',"
-                + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','"+date+"',"
+                + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','" + date + "',"
                 + " '" + photographer.getGenderId() + "', '" + photographer.getPlanId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
-                + " '" + photographer.getFielsOfdInterest()+ "', '" + photographer.getPostalCode()+ "', '" + photographer.getActiveStatus() + "' ) ");
+                + " '" + photographer.getFielsOfdInterest() + "', '" + photographer.getPostalCode() + "', '" + photographer.getActiveStatus() + "' ) ");
     }
 
     @Override
@@ -203,24 +208,150 @@ public class PhotographerDaoImp implements PhotographerDao {
     }
 
     @Override
+    public List<Photographer> getPhotographByName(String name) {
+
+        ArrayList<Photographer> photographersTempList = new ArrayList<>();
+        try {
+
+            name = name.trim();
+            String[] names = name.split(" ");
+
+            ResultSet byFname;
+            ResultSet byLname;
+            ResultSet byFnameLname;
+
+            if (names.length == 2) {
+                byFnameLname = DB.search("SELECT  * FROM photographer WHERE Fname like '%" + names[0] + "%' AND Lname like '%" + names[1] + "%' ");
+
+                while (byFnameLname.next()) {
+                    Photographer p = new Photographer();
+                    p.setPhotographerId(byFnameLname.getString("Photographer_Id"));
+                    p.setEmail(byFnameLname.getString("Email"));
+                    p.setPassword(byFnameLname.getString("Password"));
+                    p.setFname(byFnameLname.getString("Fname"));
+                    p.setLname(byFnameLname.getString("Lname"));
+                    p.setAddress_no(byFnameLname.getString("Address_No"));
+                    p.setCity(byFnameLname.getString("City"));
+                    p.setProvince(byFnameLname.getString("Province"));
+                    p.setGenderId(byFnameLname.getInt("Gender_Id"));
+                    p.setPlanId(byFnameLname.getInt("Plan_Id"));
+                    p.setMobile(byFnameLname.getString("Mobile"));
+                    p.setWebsite(byFnameLname.getString("Website"));
+                    p.setBio(byFnameLname.getString("Bio"));
+                    p.setFielsOfdInterest(byFnameLname.getString("FieldofInterest"));
+                    p.setPostalCode(byFnameLname.getInt("PostalCode"));
+
+                    photographersTempList.add(p);
+                }
+            }
+            for (String name1 : names) {
+
+                byFname = DB.search("SELECT  * FROM photographer WHERE Fname like '%" + name1 + "%'");
+                byLname = DB.search("SELECT  * FROM photographer WHERE Lname like '%" + name1 + "%'");
+
+                while (byFname.next()) {
+                    boolean notContain = true;
+                    for (Photographer photographer : photographersTempList) {
+                        if (photographer.getPhotographerId().equals(byFname.getString("Photographer_Id"))) {
+                            notContain = false;
+                        }
+                    }
+                    if (notContain) {
+                        Photographer p = new Photographer();
+                        p.setPhotographerId(byFname.getString("Photographer_Id"));
+                        p.setEmail(byFname.getString("Email"));
+                        p.setPassword(byFname.getString("Password"));
+                        p.setFname(byFname.getString("Fname"));
+                        p.setLname(byFname.getString("Lname"));
+                        p.setAddress_no(byFname.getString("Address_No"));
+                        p.setCity(byFname.getString("City"));
+                        p.setProvince(byFname.getString("Province"));
+                        p.setGenderId(byFname.getInt("Gender_Id"));
+                        p.setPlanId(byFname.getInt("Plan_Id"));
+                        p.setMobile(byFname.getString("Mobile"));
+                        p.setWebsite(byFname.getString("Website"));
+                        p.setBio(byFname.getString("Bio"));
+                        p.setFielsOfdInterest(byFname.getString("FieldofInterest"));
+                        p.setPostalCode(byFname.getInt("PostalCode"));
+
+                        photographersTempList.add(p);
+                    }
+
+                }
+
+                while (byLname.next()) {
+                    boolean notContain = true;
+                    for (Photographer photographer : photographersTempList) {
+                        if (photographer.getPhotographerId().equals(byLname.getString("Photographer_Id"))) {
+                            notContain = false;
+                        }
+                    }
+                    if (notContain) {
+                        Photographer p = new Photographer();
+                        p.setPhotographerId(byLname.getString("Photographer_Id"));
+                        p.setEmail(byLname.getString("Email"));
+                        p.setPassword(byLname.getString("Password"));
+                        p.setFname(byLname.getString("Fname"));
+                        p.setLname(byLname.getString("Lname"));
+                        p.setAddress_no(byLname.getString("Address_No"));
+                        p.setCity(byLname.getString("City"));
+                        p.setProvince(byLname.getString("Province"));
+                        p.setGenderId(byLname.getInt("Gender_Id"));
+                        p.setPlanId(byLname.getInt("Plan_Id"));
+                        p.setMobile(byLname.getString("Mobile"));
+                        p.setWebsite(byLname.getString("Website"));
+                        p.setBio(byLname.getString("Bio"));
+                        p.setFielsOfdInterest(byLname.getString("FieldofInterest"));
+                        p.setPostalCode(byLname.getInt("PostalCode"));
+
+                        photographersTempList.add(p);
+                    }
+                }
+
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(PhotographDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return photographersTempList;
+
+    }
+
+    @Override
     public String getLastId() throws SQLException {
-       String id="";
-       ResultSet cid=DB.search("SELECT Photographer_Id as pid FROM photographer ORDER BY Photographer_Id DESC LIMIT 1; ");
-      
-       
+        String id = "";
+        ResultSet cid = DB.search("SELECT Photographer_Id as pid FROM photographer ORDER BY Photographer_Id DESC LIMIT 1; ");
+
         if (cid.next()) {
-            id=cid.getString("pid");
+            id = cid.getString("pid");
             return id;
 
         } else {
             return null;
         }
 
-}
+    }
+
+    @Override
+    public HashMap<Integer, String> getPhotogrpaherCategories() throws SQLException {
+        ResultSet categories = DB.search("SELECT * FROM category");
+        HashMap<Integer, String> categoriesList = new HashMap<>();
+
+        while (categories.next()) {
+
+            int categoryid = categories.getInt("Category_id");
+            String category = categories.getString("Category");
+
+            categoriesList.put(categoryid, category);
+
+        }
+        return categoriesList;
+    }
 
     @Override
     public Photographer getDeactivatedPhotographerByEmail(String email) throws SQLException {
-        
+
         ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "' AND ActiveStatus = 0");
         if (photographer.next()) {
             Photographer p = new Photographer();
@@ -246,4 +377,39 @@ public class PhotographerDaoImp implements PhotographerDao {
             return null;
         }
     }
+
+    @Override
+    public List<String> getPhotographerIDByCategory(int category) throws SQLException {
+        ResultSet search = DB.search("SELECT  * FROM photographer_has_category WHERE Category_id = '" + category + "'");
+        ArrayList<String> photograperIds = new ArrayList<>();
+
+        while (search.next()) {
+            photograperIds.add(search.getString("Photographer_Id"));
+
+        }
+
+        return photograperIds;
+    }
+
+    @Override
+    public ArrayList<String> getPhotographerCategories(String photographerId) throws SQLException {
+        ResultSet search = DB.search("SELECT  Category_id FROM photographer_has_category WHERE Photographer_Id = '" + photographerId + "'");
+        ArrayList<String> photogcategoryIds = new ArrayList<>();
+        ArrayList<String> categories = new ArrayList<>();
+
+        while (search.next()) {
+            photogcategoryIds.add(search.getString("Category_id"));
+
+        }
+
+        for (String photogcategoryId : photogcategoryIds) {
+            ResultSet search2 = DB.search("SELECT  Category FROM category WHERE Category_id = '" + photogcategoryId + "'");
+            if (search2.next()) {
+                categories.add(search2.getString("Category"));
+            }
+        }
+
+        return categories;
+    }
+
 }

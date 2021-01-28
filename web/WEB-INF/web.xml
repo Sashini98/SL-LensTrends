@@ -180,6 +180,10 @@
         <servlet-name>Add_category</servlet-name>
         <servlet-class>Controller.Forum.Add_category</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PhotographerSearch</servlet-name>
+        <servlet-class>Controller.Clent.PhotographerSearch</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -359,6 +363,10 @@
     <servlet-mapping>
         <servlet-name>Add_category</servlet-name>
         <url-pattern>/Add_category</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographerSearch</servlet-name>
+        <url-pattern>/PhotographerSearch</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
