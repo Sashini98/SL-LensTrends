@@ -66,7 +66,7 @@
                 </tr>
                 <tr>
                     <th colspan =2><button onclick="PhotoApprove()"  class="btn" id="approve">Approve</button></th>
-                    <th colspan =2><button onclick="show('photoapproval')"  class="btn" id="reject" style="background-color: #f44336">Reject</button></th>
+                    <th colspan =2><button onclick="PhotoReject()"  class="btn" id="reject" style="background-color: #f44336">Reject</button></th>
                 </tr>
             </table>
         </div>

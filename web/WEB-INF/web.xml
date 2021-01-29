@@ -184,6 +184,10 @@
         <servlet-name>PhotographerSearch</servlet-name>
         <servlet-class>Controller.Clent.PhotographerSearch</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RejectPhoto</servlet-name>
+        <servlet-class>Controller.Admin.RejectPhoto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -367,6 +371,10 @@
     <servlet-mapping>
         <servlet-name>PhotographerSearch</servlet-name>
         <url-pattern>/PhotographerSearch</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RejectPhoto</servlet-name>
+        <url-pattern>/RejectPhoto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="arrow"  onclick="viewEdit();">
-                    <a id="free"><img src="../../Resources/Img/arrow.png"></a>
+                    <a id="arrow"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
             </div>
             <div class="box" id="box-color1">
@@ -48,7 +48,7 @@
                 </div>
 
                 <div class="arrow" onclick="viewEdit();">
-                    <a type="button" id="standard"><img src="../../Resources/Img/arrow.png"></a>
+                    <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
 
             </div>
@@ -61,8 +61,8 @@
                     <p>85$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
 
-                <div class="arrow"  onclick="viewEdit();">
-                    <a type="button" id="premium"><img src="../../Resources/Img/arrow.png"></a>
+                <div class="arrow"  onclick="viewEdit();" >
+                    <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
             </div>            
         </div>
