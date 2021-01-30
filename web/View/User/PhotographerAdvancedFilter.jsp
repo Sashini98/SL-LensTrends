@@ -32,7 +32,7 @@
             <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
         </div>
         <div style="margin: 4% 10% 0">
-            <input type="text" style="width: 100%; outline: none;">&nbsp;&nbsp;<br/>
+            <input type="text" id="PhotographerCategory" onkeyup="PhotographerKeywordSearch(event,2);" style="width: 100%; outline: none;">&nbsp;&nbsp;<br/>
         </div>
     </div>
     <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
@@ -42,7 +42,7 @@
             <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
         </div>
         <div style="margin: 4% 10% 0">
-            <input type="text"  style="width: 100%; outline: none;">&nbsp;&nbsp;<br/>
+            <input id="photographerCity" type="text" onkeyup="PhotographerKeywordSearch(event,2);" style="width: 100%; outline: none;">&nbsp;&nbsp;<br/>
         </div>
     </div>
     <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">
@@ -52,7 +52,7 @@
             <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
         </div>
         <div style="margin: 4% 10% 0">
-            <select name="area" style="width: 100%; outline: none; height: 20px;">
+            <select id="photographerProvince" onchange="Search2();" name="area" style="width: 100%; outline: none; height: 20px;">
                 <option value=""></option>
                 <option value="Central Province">Central Province</option>
                 <option value="Western Province">Western Province</option>
@@ -73,10 +73,11 @@
             <i class="material-icons" style="margin-right: 0;margin-left: auto">expand_more</i>
         </div>
         <div style="margin: 4% 10% 0">
-            <input type="radio" name="gender" id="Male" onclick="checkSubCategory()">&nbsp;&nbsp;<label for="Male">Male</label><br/>
-            <input type="radio"name="gender" id="Female" onclick="checkSubCategory()">&nbsp;&nbsp;<label for="Female">Female</label><br/>
+            <input type="checkbox" name="gender" id="Both" onclick="checkSubCategory('Both'); PhotographerKeywordSearch(event,2);" checked>&nbsp;&nbsp;<label for="Both">Both</label><br/>
+            <input type="checkbox" name="gender" id="Male" onclick="checkSubCategory('Male'); PhotographerKeywordSearch(event,2);">&nbsp;&nbsp;<label for="Male">Male</label><br/>
+            <input type="checkbox"name="gender" id="Female" onclick="checkSubCategory('Female'); PhotographerKeywordSearch(event,2);">&nbsp;&nbsp;<label for="Female">Female</label><br/>
         </div>
     </div>
-
-
 </div>
+
+<script src="../../JS/User/PhotographerSearch.js" type="text/javascript"></script>

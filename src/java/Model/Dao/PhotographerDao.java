@@ -7,7 +7,10 @@ package Model.Dao;
 
 import Model.Photographer;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  *
@@ -40,6 +43,10 @@ public interface PhotographerDao {
     public Photographer getPhotographerByEmail(String email) throws SQLException;
     public Photographer getDeactivatedPhotographerByEmail(String email) throws SQLException;
     public Photographer getPhotographerByEmailAndPassword(String email,String password) throws SQLException;
+    public List<Photographer> getPhotographByName(String name) throws SQLException;
+    public List<String> getPhotographerIDByCategory(int category) throws SQLException;
+    public ArrayList<String> getPhotographerCategories(String photographerId) throws SQLException;
     
     public String getLastId() throws SQLException;
+    public HashMap<Integer, String> getPhotogrpaherCategories() throws SQLException;
 }

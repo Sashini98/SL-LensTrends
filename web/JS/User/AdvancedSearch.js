@@ -80,23 +80,24 @@ function checkSubCategory(i, action) {
 function  keywordSearch(event) {
 
     if (event.which == 13 || event.which == 1) {
-        var request = new XMLHttpRequest();
-        var keyword = document.getElementById("keywordInput").value;
-
-        request.onreadystatechange = function () {
-            if (request.status === 200) {
-                if (request.readyState === 4) {
-
-                    var responce = request.responseText;
-                    document.getElementById("row").innerHTML = responce;
-                   
-
-                }
-            }
-        };
-        request.open("POST", "../../PhotographSearch", false);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("keyword=" + keyword);
+        Search();
+//        var request = new XMLHttpRequest();
+//        var keyword = document.getElementById("keywordInput").value;
+//
+//        request.onreadystatechange = function () {
+//            if (request.status === 200) {
+//                if (request.readyState === 4) {
+//
+//                    var responce = request.responseText;
+//                    document.getElementById("row").innerHTML = responce;
+//                    
+//
+//                }
+//            }
+//        };
+//        request.open("POST", "../../PhotographSearch", false);
+//        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//        request.send("keyword=" + keyword);
     }
 }
 
@@ -140,8 +141,112 @@ function enteredPixcelSize(evt) {
 
 }
 
-function  advancedSearch() {
+function  Search() {
+    
+    var iframeObj = document.getElementById("selectors");
+    var serchedFor= parent.document.getElementById("keywordInput").value;
+    var sortBy;
+    var orientation = "";
+    var sizePixel;
+    var minWidth = iframeObj.contentWindow.document.getElementById('minWidth').value;
+    var maxWidth = iframeObj.contentWindow.document.getElementById('maxWidth').value;
+    var minHeight = iframeObj.contentWindow.document.getElementById('minHeight').value;
+    var maxHeight = iframeObj.contentWindow.document.getElementById('maxHeight').value;
 
+    var people;
+    var gender = "";
+    var undiscovered;
+
+    if (iframeObj.contentWindow.document.getElementById('relevant').checked) {
+        sortBy = 'relevant';
+    } else {
+        sortBy = 'fresh';
+    }
+
+
+    if (iframeObj.contentWindow.document.getElementById('Horizontal').checked) {
+        orientation += 'Horizontal ';
+
+    }
+    if (iframeObj.contentWindow.document.getElementById('Vertical').checked) {
+        orientation += 'Vertical ';
+
+    }
+    if (iframeObj.contentWindow.document.getElementById('Square').checked) {
+        orientation += 'Square ';
+
+    }
+    if (iframeObj.contentWindow.document.getElementById('Panoramic').checked) {
+        orientation += 'Panoramic ';
+
+    }
+    if (iframeObj.contentWindow.document.getElementById('Panoramic').checked && iframeObj.contentWindow.document.getElementById('Square').checked
+            && iframeObj.contentWindow.document.getElementById('Vertical').checked && iframeObj.contentWindow.document.getElementById('Horizontal').checked) {
+        orientation = 'AllOrientations';
+    }
+    if (!iframeObj.contentWindow.document.getElementById('Panoramic').checked && !iframeObj.contentWindow.document.getElementById('Square').checked
+            && !iframeObj.contentWindow.document.getElementById('Vertical').checked && !iframeObj.contentWindow.document.getElementById('Horizontal').checked) {
+        orientation = 'AllOrientations';
+    }
+
+    orientation = orientation.trim();
+
+    if (iframeObj.contentWindow.document.getElementById('Pixels').checked) {
+        sizePixel = 'Pixels';
+    } else {
+        sizePixel = 'MegaPixel';
+    }
+
+    if (iframeObj.contentWindow.document.getElementById('WithPeople').checked) {
+        people = 'WithPeople';
+    } else if (iframeObj.contentWindow.document.getElementById('WithoutPeople').checked) {
+        people = 'WithoutPeople';
+    }
+
+    if (iframeObj.contentWindow.document.getElementById('Both').checked) {
+        gender += 'Both ';
+
+    } 
+    if (iframeObj.contentWindow.document.getElementById('Male').checked) {
+        gender += 'Male ';
+
+    } 
+    if (iframeObj.contentWindow.document.getElementById('Female').checked) {
+        gender += 'Female ';
+    }
+
+    if (iframeObj.contentWindow.document.getElementById('Undiscovered').checked) {
+        undiscovered = true;
+    } else {
+        undiscovered = false;
+    }
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                parent.document.getElementById("row").innerHTML = responce;
+
+            }
+        }
+    };
+
+    var param = "keyword="+ serchedFor +"&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
+            "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
+
+    request.open("POST", "../../PhotographAdvancedSearch", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(param);
+
+}
+
+function  advancedSearch() {
+    
+    var iframeObj = document.getElementById("selectors");
+    var serchedFor= parent.document.getElementById("keywordInput").value;
     var sortBy;
     var orientation = "";
     var sizePixel;
@@ -231,7 +336,7 @@ function  advancedSearch() {
         }
     };
 
-    var param = "sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
+    var param = "keyword="+ serchedFor +"&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
             "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
 
     request.open("POST", "../../PhotographAdvancedSearch", false);

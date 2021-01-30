@@ -32,7 +32,8 @@ public class PhotographAdvancedSearch extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+  
+        String keyword = request.getParameter("keyword");
         String sortBy = request.getParameter("sortBy");
         String orientation = request.getParameter("orientation");
         String sizeOfPixels = request.getParameter("sizePixel");
@@ -73,7 +74,6 @@ public class PhotographAdvancedSearch extends HttpServlet {
         boolean undiscovered = Boolean.parseBoolean(request.getParameter("undiscovered"));
 
         //simple keyword search
-        String keyword = request.getSession().getAttribute("searchedKeyword").toString();
         PhotographDao pd = new PhotographDaoImpl();
 
         ArrayList<Photograph> photographByKeyWord = (ArrayList<Photograph>) pd.getPhotographByKeyWord(keyword);
@@ -137,7 +137,6 @@ public class PhotographAdvancedSearch extends HttpServlet {
             if (minWidth != 0.0) {
 
                 if (!(photo.getWidth() >= minWidth)) {
-                    System.out.println("min width");
                     removingPhotos.add(photo);
                 }
 
@@ -145,7 +144,6 @@ public class PhotographAdvancedSearch extends HttpServlet {
             if (minHeight != 0.0) {
 
                 if (!(photo.getHeight() >= minHeight)) {
-                    System.out.println("min heig");
                     removingPhotos.add(photo);
                 }
 
@@ -153,7 +151,6 @@ public class PhotographAdvancedSearch extends HttpServlet {
             if (maxWidth != 0.0) {
 
                 if (!(photo.getWidth() <= maxWidth)) {
-                    System.out.println("max width");
                     removingPhotos.add(photo);
                 }
 
@@ -161,7 +158,6 @@ public class PhotographAdvancedSearch extends HttpServlet {
             if (maxHeight != 0.0) {
 
                 if (!(photo.getHeight() <= maxHeight)) {
-                    System.out.println("max hei");
                     removingPhotos.add(photo);
                 }
 
@@ -238,6 +234,7 @@ public class PhotographAdvancedSearch extends HttpServlet {
             Collections.sort(photos, new Comparator<Photograph>() {
                 @Override
                 public int compare(Photograph o1, Photograph o2) {
+
                     return o2.getUploadedDate().compareTo(o1.getUploadedDate());
                 }
             });

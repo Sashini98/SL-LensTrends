@@ -92,4 +92,6 @@ public class PhotographDaoImpl implements PhotographDao {
         DB.iud("UPDATE photograph SET state_id='" + status + "' WHERE Photograph_Id = '" + PhotographId + "'");
     }
 
+
+    
 }

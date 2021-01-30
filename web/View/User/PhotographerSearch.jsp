@@ -103,10 +103,10 @@
                 </iframe>
                 <div style="background-color:  #FAFAFA;width: 100%;">
                     <div class="searchInput">
-                        <input type="text" placeholder="Search for Photographers" >      
-                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
+                        <input id="keywordSearch" type="text" placeholder="Search for Photographers" onkeyup="PhotographerKeywordSearch(event,1)">      
+                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="PhotographerKeywordSearch(event,1);"><i class="material-icons">search</i></button>
                     </div>
-                    <div class="row"> 
+                    <div class="row" id="row"> 
                         <div class="column">
                             <a href="../Photographer/UserViewPhotographerProfile.jsp" style="text-decoration: none;">
                                 <div class="profilebox">
@@ -302,6 +302,9 @@
                 $("#selectors").toggle("fold");
             });
         </script>
+        
+         <script src="../../JS/User/PhotographerSearch.js" type="text/javascript"></script>
+        
     </body>
 </html>
 
