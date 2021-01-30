@@ -25,10 +25,13 @@
     ArrayList<Photograph> pics = (ArrayList<Photograph>) request.getSession().getAttribute("searchedPics");
     int similarphotosArray = pics.size() - 1;
 
-    
+    ArrayList<Photograph> photographerPhotos = (ArrayList<Photograph>) request.getSession().getAttribute("photographerPhotos");
+    int photographerPhotosCount = photographerPhotos.size() - 1;
+
     session.removeAttribute("photo");
     session.removeAttribute("photographCategory");
     session.removeAttribute("photographer");
+    session.removeAttribute("photographerPhotos");
 %>
 
 
@@ -203,7 +206,7 @@
                         <%
                             }
                         %>
-                        
+
                     </div>
                     <div class="column">
                         <%
@@ -241,22 +244,48 @@
                 </span>
                 <div class="row"> 
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/dexman-ten-hwe-eM5z-GX10p8-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 0; i <= photographerPhotosCount; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= photographerPhotos.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= photographerPhotos.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
                     </div>
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/farhath-firows-n05yyHLZvsk-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/ishan-kahapola-arachchi-5wpeSsXZ93s-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 1; i <= photographerPhotosCount; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= photographerPhotos.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= photographerPhotos.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
                     </div>
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/julie-ricard-RmFX5bxHqCg-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/kon-karampelas-3JhoWMa7WG8-unsplash.jpg" style="width:100%">
-
+                        <%
+                            for (int i = 2; i <= photographerPhotosCount; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= photographerPhotos.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= photographerPhotos.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
                     </div>  
                     <div class="column">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/mike-swigunski-zDDQZgZjFtM-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/rowan-heuvel-qfiSDPQD9Ws-unsplash.jpg" style="width:100%">
-                        <img src="../../Resources/Img/Gallery Sample Images/Photographer/sasha-set-Y8wzb5b_st0-unsplash.jpg" style="width:100%">
+                        <%
+                            for (int i = 3; i <= photographerPhotosCount; i += 4) {
+                        %>
+                        <a href="../../PurchasePhotoDetails?id=<%= photographerPhotos.get(i).getId()%>">
+                            <img src="../../Resources/Img/Gallery Sample Images/<%= photographerPhotos.get(i).getPath()%>" style="width:100%">
+                        </a>
+                        <%
+                            }
+                        %>
                     </div>  
                 </div>
                 <div class="ArtistPhotoDiv">

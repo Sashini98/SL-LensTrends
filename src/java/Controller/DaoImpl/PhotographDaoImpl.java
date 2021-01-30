@@ -92,6 +92,31 @@ public class PhotographDaoImpl implements PhotographDao {
         DB.iud("UPDATE photograph SET state_id='" + status + "' WHERE Photograph_Id = '" + PhotographId + "'");
     }
 
+    @Override
+    public ArrayList<Photograph> getPhotographByPhotographer(String photographerId) throws SQLException {
+        ArrayList<Photograph> photos = new ArrayList<>();
+        try {
+            ResultSet photographs = DB.search("SELECT  * FROM photograph WHERE Photographer_Id = '" + photographerId + "'");
+
+            while (photographs.next()) {
+                Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                        photographs.getDouble("Width"), photographs.getDouble("Height"),
+                        photographs.getString("Quality"), photographs.getString("Keywords"),
+                        photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
+                        photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
+                        photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
+                        photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
+                        photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
+
+                photos.add(p);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return photos;
+    }
+
 
     
 }

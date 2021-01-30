@@ -15,6 +15,7 @@ import Model.Photograph;
 import Model.Photographer;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,24 +32,37 @@ public class PurchasePhotoDetails extends HttpServlet {
             throws ServletException, IOException {
 
         try {
-            System.out.println("awaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+
             int photoId = Integer.parseInt(request.getParameter("id"));
-            System.out.println(photoId + " llllllllllllllllllllllll");
+
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoId);
-            
+
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
+
+            ArrayList<Photograph> photographerPhotos = photographDao.getPhotographByPhotographer(photographer.getPhotographerId());
+            ArrayList<Photograph> removingPics = new ArrayList<>();
             
+            if (photographerPhotos.size() > 12) {
+                for (int i = 0; i < photographerPhotos.size(); i++) {
+                    if (i >= 12) {
+                        removingPics.add(photographerPhotos.get(i));
+                    }
+                }
+                photographerPhotos.removeAll(removingPics);
+            }
+
             PhotographCategoryDao pcd = new PhotographCategoryDaoImpl();
             String category = pcd.getCategory(photograph.getCategoryId());
 
             request.getSession().setAttribute("photo", photograph);
             request.getSession().setAttribute("photographer", photographer);
             request.getSession().setAttribute("photographCategory", category);
-            
+            request.getSession().setAttribute("photographerPhotos", photographerPhotos);
+
             response.sendRedirect("View/User/PurchasePhoto.jsp");
-            
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

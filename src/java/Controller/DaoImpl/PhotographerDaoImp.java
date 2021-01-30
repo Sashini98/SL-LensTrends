@@ -7,7 +7,6 @@ package Controller.DaoImpl;
 
 import DB.DB;
 import Model.Dao.PhotographerDao;
-import Model.Photograph;
 import Model.Photographer;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,7 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 
 /**
