@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 /**
@@ -12,11 +13,12 @@ import java.util.Date;
  * @author Sashini Shihara
  */
 public class Event {
-    
+
     String eventId;
     String eventName;
     String type;
     Date eventDate;
+    LocalTime eventTime;
     /*time eventTime;*/
     String area;
     String clientId;
@@ -25,28 +27,26 @@ public class Event {
     String street;
     String city;
     String province;
-   
-    
-    public Event()
-    {}
-    
-    public Event(String eventId,String eventName,String type,Date eventDate,/*time eventTime,*/String area,String clientId,String hallNo,String venue,String street,String city,String province)
-    {
-        this.eventId=eventId;
-        this.eventName=eventName;
-        this.type=type;
-        this.eventDate=eventDate;
-        /* this.eventTime=eventTime;*/
-        this.area=area;
-        this.clientId=clientId;
-        this.hallNo=hallNo;
-        this.venue=venue;
-        this.street=street;
-        this.city=city;
-        this.province=province;
-        
+
+    public Event() {
     }
-    
+
+    public Event(String eventId, String eventName, String type, Date eventDate, LocalTime eventTime, String area, String clientId, String hallNo, String venue, String street, String city, String province) {
+        this.eventId = eventId;
+        this.eventName = eventName;
+        this.type = type;
+        this.eventDate = eventDate;
+        this.eventTime = eventTime;
+        this.area = area;
+        this.clientId = clientId;
+        this.hallNo = hallNo;
+        this.venue = venue;
+        this.street = street;
+        this.city = city;
+        this.province = province;
+
+    }
+
     public String geteventId() {
         return eventId;
     }
@@ -54,98 +54,92 @@ public class Event {
     public void seteventId(String eventId) {
         this.eventId = eventId;
     }
-    
-     public String geteventName()
-    {
+
+    public String geteventName() {
         return eventName;
     }
-    
-    public void seteventName(String eventName)
-    {
-        this.eventName=eventName;
+
+    public void seteventName(String eventName) {
+        this.eventName = eventName;
     }
-    
-     public String gettype()
-    {
+
+    public String gettype() {
         return type;
     }
-    
-    public void settype(String type)
-    {
-        this.type=type;
+
+    public void settype(String type) {
+        this.type = type;
     }
-    
-     public Date geteventDate() {
+
+    public Date geteventDate() {
         return eventDate;
     }
 
     public void seteventDate(Date eventDate) {
         this.eventDate = eventDate;
     }
-    
-   public String getarea()
-    {
+
+    public LocalTime geteventTime() {
+        return eventTime;
+    }
+
+    public void seteventTate(LocalTime eventTime) {
+        this.eventTime = eventTime;
+    }
+
+    public String getarea() {
         return area;
     }
-    
-    public void setarea(String area)
-    {
-        this.area=area;
+
+    public void setarea(String area) {
+        this.area = area;
     }
-    
-      public String getclientId() {
+
+    public String getclientId() {
         return clientId;
     }
 
     public void setclientId(String clientId) {
         this.clientId = clientId;
     }
-    
-    public String gethallNo()
-    {
+
+    public String gethallNo() {
         return hallNo;
     }
-    
-    public void sethallNo(String hallNo)
-    {
-        this.hallNo=hallNo;
+
+    public void sethallNo(String hallNo) {
+        this.hallNo = hallNo;
     }
-    
-    public String getvenue()
-    {
+
+    public String getvenue() {
         return venue;
     }
-    
-    public void setvenue(String venue)
-    {
-        this.venue=venue;
+
+    public void setvenue(String venue) {
+        this.venue = venue;
     }
-    
-    public String getstreet()
-    {
+
+    public String getstreet() {
         return street;
     }
-    
-    public void setstreet(String street)
-    {
-        this.street=street;
+
+    public void setstreet(String street) {
+        this.street = street;
     }
-    public String getcity()
-    {
+
+    public String getcity() {
         return city;
     }
-    
-    public void setcity(String city)
-    {
-        this.city=city;
+
+    public void setcity(String city) {
+        this.city = city;
     }
-    public String getprovince()
-    {
+
+    public String getprovince() {
         return province;
     }
-    
-    public void setprovince(String province)
-    {
-        this.province=province;
+
+    public void setprovince(String province) {
+        this.province = province;
     }
 }

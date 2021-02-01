@@ -264,6 +264,23 @@ input[type=date]
     background-color: #fff;
 }
 
+input[type=time]
+{
+    /*width : 98%;*/
+    height: 30px;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid rgba(12, 18, 28, 0.12);
+    padding-left: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    width: 100%;
+    margin-bottom: 4%;
+    outline: none;
+    background-color: #fff;
+}
+
 
 
 .filter-radio .container-radio {
