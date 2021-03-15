@@ -87,7 +87,7 @@
 
                             <div class="clearfix">
                                 <button type="submit" class="updatebtn">Update</button>
-                                <button type="button" class="closebtn">Close</button>
+                                <button type="button" onclick="show('subscription')" class="closebtn">Back</button>
                             </div>
                         </div>
                     </form>
