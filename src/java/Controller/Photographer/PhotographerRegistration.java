@@ -23,16 +23,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class PhotographerRegistration extends HttpServlet {
 
-    
-
-   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
+
         String id = "";
         int gender = 0;
-        int planid=1;
+        int planid = 1;
         String email = request.getParameter("email");
         System.out.println(email);
         String fname = request.getParameter("fname");
@@ -48,31 +45,34 @@ public class PhotographerRegistration extends HttpServlet {
         System.out.println(pcode);
         String g = request.getParameter("gender");
         String pw = request.getParameter("pass");
-        
-        
-        int pc=Integer.parseInt(pcode);
-        
-        if (g == "male") {
+
+        System.out.println(pcode);
+        int pc = Integer.parseInt(pcode);
+
+        if (g.equalsIgnoreCase("male")) {
             gender = 1;
         } else {
             gender = 2;
         }
         System.out.println(gender);
         Date date = new Date();
-        
-        try {
-            PhotographerDao photo=new PhotographerDaoImp();
-            id = photo.getLastId();
 
-            String[] parts = id.split("p");
-            String row = parts[1];
-            int lastId = Integer.parseInt(row);
-            int newId = lastId + 1;
-            String pid = Integer.toString(newId);
-            pid = "p" + pid;
-            System.out.println(pid);
-            
-            Photographer p= new Photographer();
+        try {
+            PhotographerDao photo = new PhotographerDaoImp();
+            id = photo.getLastId();
+            String pid;
+            if (id != null) {
+                String[] parts = id.split("P");
+                String row = parts[1];
+                int lastId = Integer.parseInt(row);
+                int newId = lastId + 1;
+                pid = Integer.toString(newId);
+                pid = "P" + pid;
+                System.out.println(pid);
+            } else {
+                pid = "P1";
+            }
+            Photographer p = new Photographer();
             p.setPhotographerId(pid);
             p.setEmail(email);
             p.setPassword(pw);
@@ -90,16 +90,17 @@ public class PhotographerRegistration extends HttpServlet {
             p.setFielsOfdInterest(foa);
             p.setPostalCode(pc);
             p.setActiveStatus(1);
-            
+            p.setState(0);
+            p.setPoints(10);
+            System.out.println(p.getActiveStatus());
             photo.addPhotographer(p);
-            
+
             response.sendRedirect("View/login.jsp");
 
         } catch (Exception e) {
             System.out.println(e);
-             response.sendRedirect("View/home.jsp");
+            response.sendRedirect("View/home.jsp");
         }
     }
-
 
 }

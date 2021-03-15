@@ -82,6 +82,10 @@
                     %>
                     <span>
                         New User  <a href="<%= request.getContextPath()%>/View/User/UserRegistration.jsp">Create an account</a><br><br>
+                        <span class="users">
+                            <a href="">Photographer</a> <Br>
+                            <a href="">Client</a>
+                        </span>
                     </span>
                     <%
                         }
