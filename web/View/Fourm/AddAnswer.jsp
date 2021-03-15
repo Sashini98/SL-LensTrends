@@ -74,7 +74,7 @@
             </div>  
             <div name="s" id="s">
                 <div class="questions">                
-                    <form id="answer" action="../../Add_answer" method="POST" >
+                    <form id="answer" action="<%= request.getContextPath()%>/Add_answer" method="POST" >
                         <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
                         <h4 id="quesid" name="quesid" style="display: none"><%= q.get((i * 3) + 1)%></h4>
                        
