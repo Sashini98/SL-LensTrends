@@ -384,6 +384,10 @@
         <servlet-name>display_question</servlet-name>
         <url-pattern>/display_question</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographerUploadPhoto</servlet-name>
+        <url-pattern>/PhotographerUploadPhoto</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10

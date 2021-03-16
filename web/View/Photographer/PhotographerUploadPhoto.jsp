@@ -18,7 +18,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Upload</title>
     </head>
-    <body style="background-color: #f9f9f9;">
+    <body style="background-color: #f9f9f9;" onload="loadphotos()">
 
         <div class="fixedheader">  
             <div class="pageheader">

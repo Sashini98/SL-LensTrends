@@ -11,10 +11,10 @@
     String attribute = (String) request.getAttribute("account");
     String message = (String) request.getAttribute("msg");
     String para = request.getParameter("loc");
-    
+
     if (para == null) {
-            para = "ch";
-        }
+        para = "ch";
+    }
 %>
 <html>
     <head>
@@ -82,10 +82,6 @@
                     %>
                     <span>
                         New User  <a href="<%= request.getContextPath()%>/View/User/UserRegistration.jsp">Create an account</a><br><br>
-                        <span class="users">
-                            <a href="">Photographer</a> <Br>
-                            <a href="">Client</a>
-                        </span>
                     </span>
                     <%
                         }
