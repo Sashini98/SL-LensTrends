@@ -188,6 +188,10 @@
         <servlet-name>PostEvent</servlet-name>
         <servlet-class>Controller.Event.PostEvent</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PhotographerUploadPhoto</servlet-name>
+        <servlet-class>Controller.Photographer.PhotographerUploadPhoto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -375,6 +379,10 @@
     <servlet-mapping>
         <servlet-name>PostEvent</servlet-name>
         <url-pattern>/PostEvent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographerUploadPhoto</servlet-name>
+        <url-pattern>/PhotographerUploadPhoto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
