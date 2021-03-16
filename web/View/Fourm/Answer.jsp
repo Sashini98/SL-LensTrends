@@ -12,14 +12,14 @@
    
 
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
-    for (int i = 0; i < s.size() / 2; i++) {
+    for (int i = 0; i < s.size() / 3; i++) {
 
 
 %>
 
  <div class="answerqn">
-                <p><%= s.get(i * 2)%></p> 
-                <span>Posted by: <%= s.get((i * 6) + 1)%></span> <span id="time">1Hour 30min</span>
+                <p><%= s.get(i * 3)%></p> 
+                <span>Posted by: <%= s.get((i * 3) + 1)%></span> <span id="time"><%= s.get((i * 3) + 2)%></span>
                 <div class="updown">
                     <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
                     <span id="up">43</span> 
