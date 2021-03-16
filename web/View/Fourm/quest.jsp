@@ -64,7 +64,8 @@ for(int j=0;j<tokens.length;j++)
             }
         %>
 <!--        <a href="#" type="button" id="answer_view" onclick="popupanswer();"><%= s.get((i * 7) + 4)%> answers</a>-->
-        <input type="button" id="answer_view" value="<%= s.get((i * 7) + 4)%> answers" onclick="popupanswer(); ">
+        <a href="../../display_question?qid=<%= s.get((i * 7) + 5)%>" type="button" id="answer_view"><%= s.get((i * 7) + 4)%> answers</a>
+        <!--<input type="button" id="answer_view" value="<%= s.get((i * 7) + 4)%> answers" onclick="ViewAnswers.jsp">-->
 
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
