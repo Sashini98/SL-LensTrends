@@ -7,6 +7,7 @@ package Model.Dao;
 
 import Model.Photograph;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,6 +19,7 @@ public interface PhotographDao {
     public List<Photograph> getPhotographByKeyWord(String keyword);
     public List getAllInReviewPhotographs() throws SQLException;
     public Photograph getPhotographById(int id) throws SQLException;
+    public ArrayList<Photograph> getAllphotosofPhotographer(String photographer_id) throws SQLException;
     public void  updatePhotographState(int status, int PhotographId) throws SQLException;
     
 }

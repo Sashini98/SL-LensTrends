@@ -29,12 +29,12 @@ public class PhotographerDaoImp implements PhotographerDao {
         Date d = photographer.getJoined_date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-
-        DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Plan_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus) "
+        System.out.println(photographer.getActiveStatus());
+        DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Plan_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus, points, state) "
                 + "VALUES ('" + photographer.getPhotographerId() + "', '" + photographer.getEmail() + "', '" + photographer.getPassword() + "', '" + photographer.getFname() + "',"
                 + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','" + date + "',"
                 + " '" + photographer.getGenderId() + "', '" + photographer.getPlanId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
-                + " '" + photographer.getFielsOfdInterest() + "', '" + photographer.getPostalCode() + "', '" + photographer.getActiveStatus() + "' ) ");
+                + " '" + photographer.getFielsOfdInterest() + "', '" + photographer.getPostalCode() + "', '" + photographer.getActiveStatus() + "', '" + photographer.getPoints() + "', '" + photographer.getState() + "' ) ");
     }
 
     @Override

@@ -25,6 +25,8 @@ public class Photographer{
     Date joined_date;
     int genderId;
     int planId;
+    int points;
+    int state;
     String mobile;
     String website;
     String bio;
@@ -36,7 +38,7 @@ public class Photographer{
     public Photographer() {
     }
 
-    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, String mobile, String website, String bio, String fielsOfdInterest, int postalCode) {
+    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, int points, int state, String mobile, String website, String bio, String fielsOfdInterest, int postalCode, int activeStatus) {
         this.photographerId = photographerId;
         this.email = email;
         this.password = password;
@@ -48,12 +50,15 @@ public class Photographer{
         this.joined_date = joined_date;
         this.genderId = genderId;
         this.planId = planId;
+        this.points = points;
+        this.state = state;
         this.mobile = mobile;
         this.website = website;
         this.bio = bio;
         this.fielsOfdInterest = fielsOfdInterest;
         this.postalCode = postalCode;
-    }
+        this.activeStatus = activeStatus;
+    } 
 
     public String getPhotographerId() {
         return photographerId;
@@ -188,8 +193,26 @@ public class Photographer{
     }
     
     public void setActiveStatus(int aInt) {
-        this.activeStatus = activeStatus;
+        this.activeStatus = aInt;
     }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+    
+    
     
 
     

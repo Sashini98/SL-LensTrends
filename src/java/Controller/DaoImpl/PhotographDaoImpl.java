@@ -30,7 +30,7 @@ public class PhotographDaoImpl implements PhotographDao {
                 Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
                         photographs.getDouble("Width"), photographs.getDouble("Height"),
                         photographs.getString("Quality"), photographs.getString("Keywords"),
-                        photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
+                        photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                         photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                         photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
                         photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
@@ -55,7 +55,7 @@ public class PhotographDaoImpl implements PhotographDao {
             Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
                     photographs.getString("Quality"), photographs.getString("Keywords"),
-                    photographs.getDate("Uploaded_Date"), photographs.getBoolean("For_Sale"),
+                    photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                     photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                     photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
                     photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
@@ -75,14 +75,14 @@ public class PhotographDaoImpl implements PhotographDao {
             Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"),
                     photograph.getDouble("Width"), photograph.getDouble("Height"),
                     photograph.getString("Quality"), photograph.getString("Keywords"),
-                    photograph.getDate("Uploaded_Date"), photograph.getBoolean("For_Sale"),
+                    photograph.getDate("Uploaded_Date"), photograph.getDouble("Price"),
                     photograph.getBoolean("Undiscovered"), photograph.getString("Photographer_Id"),
                     photograph.getString("Title"), photograph.getInt("Photograph_category_id"),
                     photograph.getBoolean("People"), photograph.getInt("Orientation_Id"),
                     photograph.getInt("state_id"), photograph.getInt("Gender_Id"));
-            
+
             return p;
-        }else{
+        } else {
             return null;
         }
     }
@@ -92,6 +92,26 @@ public class PhotographDaoImpl implements PhotographDao {
         DB.iud("UPDATE photograph SET state_id='" + status + "' WHERE Photograph_Id = '" + PhotographId + "'");
     }
 
+    @Override
+    public ArrayList<Photograph> getAllphotosofPhotographer(String photographer_id) throws SQLException {
+        ResultSet photographs = DB.search("SELECT * FROM photograph WHERE Photographer_id = '" + photographer_id + "'");
+        ArrayList<Photograph> Loadphotos = new ArrayList();
 
-    
+        while (photographs.next()) {
+            Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                    photographs.getDouble("Width"), photographs.getDouble("Height"),
+                    photographs.getString("Quality"), photographs.getString("Keywords"),
+                    photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
+                    photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
+                    photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
+                    photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
+                    photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
+
+            Loadphotos.add(p);
+
+        }
+        
+        return Loadphotos;
+    }
+
 }
