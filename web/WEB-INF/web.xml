@@ -185,12 +185,20 @@
         <servlet-class>Controller.Clent.PhotographerSearch</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>PostEvent</servlet-name>
-        <servlet-class>Controller.Event.PostEvent</servlet-class>
+        <servlet-name>RejectPhoto</servlet-name>
+        <servlet-class>Controller.Admin.RejectPhoto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewSubPlan</servlet-name>
+        <servlet-class>Controller.Admin.ViewSubPlan</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>display_question</servlet-name>
         <servlet-class>Controller.Forum.display_question</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PhotographerUploadPhoto</servlet-name>
+        <servlet-class>Controller.Photographer.PhotographerUploadPhoto</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -377,8 +385,12 @@
         <url-pattern>/PhotographerSearch</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>PostEvent</servlet-name>
-        <url-pattern>/PostEvent</url-pattern>
+        <servlet-name>RejectPhoto</servlet-name>
+        <url-pattern>/RejectPhoto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewSubPlan</servlet-name>
+        <url-pattern>/ViewSubPlan</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>display_question</servlet-name>

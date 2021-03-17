@@ -31,14 +31,15 @@ public class PhotographerUploadPhoto extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
         try {
             ArrayList<String> a = new ArrayList();
             Photographer photographer = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             PhotographDao loadphotoDao = new PhotographDaoImpl();
             ArrayList<Photograph> photos = (ArrayList<Photograph>) loadphotoDao.getAllphotosofPhotographer(photographer.getPhotographerId());
-             
             request.setAttribute("loadphotographs", photos);
-            request.getRequestDispatcher("View/Photographer/PhotographerUploadPhotoTem.jsp");
+            request.getRequestDispatcher("View/Photographer/PhotographerUploadPhotoTem.jsp").forward(request, response);
+            
         } catch (SQLException ex) {
             Logger.getLogger(PhotographerUploadPhoto.class.getName()).log(Level.SEVERE, null, ex);
         }

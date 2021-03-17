@@ -68,8 +68,6 @@ width: auto;
 input:checked + label{
     border-top: 5px solid  #ff8622; 
     transform: scale(1.1);
-
-
 }
 
 .content .image-box label img {
@@ -79,9 +77,9 @@ input:checked + label{
 
 }
 
-.details {
+div .details {
     background-color: #fff;
-    margin-top: -31%;
+    margin-top: -15%;
     margin-left: 67%;
     margin-bottom: 3%;
     width: 30%;
@@ -97,7 +95,7 @@ input:checked + label{
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
-.details .images {
+div .details .images {
     display: flex;
     flex-wrap: wrap;
     height:30%;
@@ -107,7 +105,7 @@ input:checked + label{
     margin-bottom: 0;
 }
 
-.details .images img {
+div .details .images img {
     height: auto;
     width: 60%; 
 }
@@ -117,24 +115,24 @@ input:checked + label{
     margin-left: 50%;
 }
 
-.details p {
+div .details p {
     margin-top: 13%;
 }
 
-.details .category {
+div .details .category {
     margin-left: 10%;
     margin-top: 5%;
 
 }
 
-.details .category label {
+div .details .category label {
     padding-right: 5%;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
 
 }
 
-.details .category select{
+div .details .category select{
     outline: none;
     border:none;
     font-family: 'Source Sans Pro', sans-serif;
@@ -144,15 +142,15 @@ input:checked + label{
     position:absolute;
 }
 
-.details .category select:focus{
+div .details .category select:focus{
     box-shadow:0 0 8px 0 rgba(12, 18, 28, 0.12);
 }
 
-.details .category select:hover {
+div .details .category select:hover {
     color:#4b4b4b;
 }
 
-.details .releases {
+div .details .releases {
     margin-left: 10%;
     padding:5px;
     margin-top: 5%;
@@ -164,13 +162,13 @@ input:checked + label{
 }
 
 
-.details .releases p {
+div .details .releases p {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 100%;
     margin-top: 5%;
 }
 
-.details .releases p span a {
+div .details .releases p span a {
     text-decoration: none;
 }
 

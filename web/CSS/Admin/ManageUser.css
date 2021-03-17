@@ -30,13 +30,13 @@
     color: #120050;
 }
 
-.content .box .icon1 img:hover {
+/*.content .box .icon1 img:hover {
     transform:scale(1.5);
-/*    transition: transform .5s ease-in-out;  Animation */
+    transition: transform .5s ease-in-out;  Animation 
 }
 
 .content .box .icon1 img{
-    transition: transform .5s ease-in-out; /* Animation */
+    transition: transform .5s ease-in-out;  Animation 
 }
 
 .content .box .icon img:hover {
@@ -45,7 +45,7 @@
 
 .content .box .icon img {
     transition: transform .5s ease-in-out;
-}
+}*/
 
 .content .icon  {
     height: 90px;

@@ -307,6 +307,8 @@ function show(selectedTab) {
                     viewReportedPhotos();
                 }else if (selectedTab === 'forum'){
                     viewQuestion();
+                }else if (selectedTab === 'subscription') {
+                    viewPlan();
                 } 
             }
     }
