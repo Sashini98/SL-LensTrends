@@ -51,7 +51,7 @@
                     <td align="left">Posted By</td>
                     <td><input type="text" name="posted" id="posted" disabled=""></td>
                     <td align="left">Posted Date</td>
-                    <td><input type="date" name="date" id="sdate" disabled=""></td>
+                    <td><input type="text" name="date" id="sdate" disabled=""></td>
                 </tr>
                 <tr>
                     <td align="left">Category</td>

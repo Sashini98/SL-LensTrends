@@ -12,7 +12,7 @@ import java.util.Date;
  * @author Madusha
  */
 public class SubscriptionPlan {
-    
+
     int pid;
     String pname;
     double price;
@@ -59,6 +59,5 @@ public class SubscriptionPlan {
     public void setTime(Date time) {
         this.time = time;
     }
-    
-    
+
 }

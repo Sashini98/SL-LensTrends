@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                     <td align="left">Uploaded Date</td>
-                    <td><input type="date" name="date" id="udate" disabled=""></td>
+                    <td><input type="text" name="date" id="udate" disabled=""></td>
                     <td align="left">Height</td>
                     <td><input type="text" name="hei" id="height" disabled=""></td>
                 </tr>

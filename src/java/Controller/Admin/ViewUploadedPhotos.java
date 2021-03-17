@@ -35,12 +35,14 @@ public class ViewUploadedPhotos extends HttpServlet {
 
             PhotographDao photoDao = new PhotographDaoImpl();
             ArrayList<Photograph> photos = (ArrayList<Photograph>) photoDao.getAllInReviewPhotographs();
+            
             PhotographerDao pDao = new PhotographerDaoImp();
 
             for (Photograph p : photos) {
 
                 String name = "";
                 String pid = p.getPhotogrpherId();
+                
                 Photographer photographer = pDao.getPhotographerById(pid);
 
                 name = photographer.getFname() + " " + photographer.getLname();                

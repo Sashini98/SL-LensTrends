@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<div onload="viewPlan();">
+    <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
 <!--<html>
     <head>
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css"/>
@@ -17,15 +20,16 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;900&display=swap" rel="stylesheet">
         <title>Subscription</title>
     </head>-->
-    <div style="background-color: #f7f6f9; margin: auto;">
+<!--    <div style="background-color: #f7f6f9; margin: auto;">-->
 
         <div class="heading">
             <p id='p1'>Plans and Pricing</p> <br>
             <p id='p2'>UPDATE HERE</p>
         </div>
 
-        <div class="content">
-            <div class="box" id="box1">
+
+        <div class="content" id="s" name="s">
+<!--            <div class="box" id="box1">
                 <h2>Free</h2>
                 <div class="icon1">
                     <img src="../../Resources/Img/pot1.png">
@@ -35,7 +39,7 @@
                 </div>
 
                 <div class="arrow"  onclick="viewEdit();">
-                    <a id="free"><img src="../../Resources/Img/arrow.png"></a>
+                    <a id="arrow"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
             </div>
             <div class="box" id="box-color1">
@@ -48,7 +52,7 @@
                 </div>
 
                 <div class="arrow" onclick="viewEdit();">
-                    <a type="button" id="standard"><img src="../../Resources/Img/arrow.png"></a>
+                    <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
 
             </div>
@@ -61,10 +65,10 @@
                     <p>85$<span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
                 </div>
 
-                <div class="arrow"  onclick="viewEdit();">
-                    <a type="button" id="premium"><img src="../../Resources/Img/arrow.png"></a>
+                <div class="arrow"  onclick="viewEdit();" >
+                    <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a>
                 </div>
-            </div>            
+            </div>            -->
         </div>
 
         <div id="myModal" class="modal">
@@ -87,7 +91,7 @@
 
                             <div class="clearfix">
                                 <button type="submit" class="updatebtn">Update</button>
-                                <button type="button" class="closebtn">Close</button>
+                                <button type="button" onclick="show('subscription')" class="closebtn">Back</button>
                             </div>
                         </div>
                     </form>
@@ -96,6 +100,7 @@
             </div>
         </div>
 
-        <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
+        
     </div>
+</div>
 <!--</html>-->
