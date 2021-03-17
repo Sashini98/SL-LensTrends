@@ -4,50 +4,28 @@
     Author     : ASUS
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.Photograph"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    ArrayList<Photograph> m = (ArrayList<Photograph>) request.getAttribute("loadphotographs");
+    System.out.println(m.get(0).getTitle());
+
+%>
+
 <div class="content" style="display: block;" id="tosubmit-content">
 
     <div class="image-box">
-        <input type="radio" id="r1" name="radio" checked />
-        <label for="r1">
-            <img src="../../Resources/Img/profile/l1.jpg" class="selection-img" id="ls1">
+        <% for (int i = 0; i < m.size(); i++) {
+                if (m.get(i).getStateId() == 1) {
+        %>
+        <input type="radio" id="r<%= i+1 %>" name="radio" checked />
+        <label for="r<%= i+1 %>">
+            <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls1">
         </label>
-
-        <input type="radio" id="r2" name="radio" />
-        <label for="r2">
-            <img src="../../Resources/Img/profile/l2.jpg" id="ls2" class="selection-img">
-        </label>
-
-        <input type="radio" id="r3" name="radio" />
-        <label for="r3">
-            <img src="../../Resources/Img/profile/l3.jpg" id="ls3" class="selection-img">
-        </label>
-
-        <input type="radio" id="r4" name="radio" />
-        <label for="r4">
-            <img src="../../Resources/Img/profile/l4.jpg" id="ls4" class="selection-img"> 
-        </label>
-
-        <input type="radio" id="r5" name="radio" />
-        <label for="r5">
-            <img src="../../Resources/Img/profile/p1.jpg" id="p1" class="selection-img">
-        </label>
-
-        <input type="radio" id="r6" name="radio" />
-        <label for="r6">
-            <img src="../../Resources/Img/profile/p2.jpg" id="p2" class="selection-img">
-        </label>
-
-        <input type="radio" id="r7" name="radio" />
-        <label for="r7">
-            <img src="../../Resources/Img/profile/p3.jpg" id="p3" class="selection-img">
-        </label>
-
-        <input type="radio" id="r8" name="radio" />
-        <label for="r8">
-            <img src="../../Resources/Img/profile/p4.jpg" id="p4" class="selection-img">
-        </label>
+        <% }
+            }%>
     </div>
 
     <div class="details">
@@ -349,3 +327,5 @@
         </div>
     </div>
 </div>
+    
+    <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
