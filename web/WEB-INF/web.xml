@@ -200,6 +200,10 @@
         <servlet-name>PhotographerUploadPhoto</servlet-name>
         <servlet-class>Controller.Photographer.PhotographerUploadPhoto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewSubPlanDetails</servlet-name>
+        <servlet-class>Controller.Admin.ViewSubPlanDetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -399,6 +403,10 @@
     <servlet-mapping>
         <servlet-name>PhotographerUploadPhoto</servlet-name>
         <url-pattern>/PhotographerUploadPhoto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewSubPlanDetails</servlet-name>
+        <url-pattern>/ViewSubPlanDetails</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
