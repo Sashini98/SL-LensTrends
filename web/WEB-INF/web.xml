@@ -192,6 +192,10 @@
         <servlet-name>display_question</servlet-name>
         <servlet-class>Controller.Forum.display_question</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PhotographerUploadPhoto</servlet-name>
+        <servlet-class>Controller.Photographer.PhotographerUploadPhoto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
