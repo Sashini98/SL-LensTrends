@@ -16,6 +16,7 @@ import Model.Dao.QuestionDao;
 import Model.Dao.ReportedQuestionDao;
 import Model.Photographer;
 import Model.Question;
+import Model.QuestionCategory;
 import Model.ReportedQuestion;
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -69,6 +70,7 @@ public class ViewReportedQuesDetails extends HttpServlet {
             c.add(rQuestion.getDescription());
             c.add(date);
             c.add(rQuestion.getQuestionId() + "");
+            
 
             Gson g = new Gson();
             String toJson = g.toJson(c);

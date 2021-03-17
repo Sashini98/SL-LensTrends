@@ -51,7 +51,7 @@ public class SubPlanDaoImpl implements SubscriptionPlanDao {
 
     @Override
     public List getAllSubscriptionPlans() throws SQLException {
-        ResultSet plan = DB.search("SELECT * FROM subscription plan");
+        ResultSet plan = DB.search("SELECT * FROM `subscription plan`");
         ArrayList<SubscriptionPlan> s = new ArrayList();
 
         while(plan.next())
