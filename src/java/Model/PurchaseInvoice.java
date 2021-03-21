@@ -16,18 +16,18 @@ public class PurchaseInvoice {
     Date date;
     Date time;
     double total;
-    int photographId;
+    Photograph photograph;
     String clientId;
 
     public PurchaseInvoice() {
     }
 
-    public PurchaseInvoice(String invoice_id, Date date, Date time, double total, int photographId, String clientId) {
+    public PurchaseInvoice(String invoice_id, Date date, Date time, double total, Photograph photograph, String clientId) {
         this.invoice_id = invoice_id;
         this.date = date;
         this.time = time;
         this.total = total;
-        this.photographId = photographId;
+        this.photograph = photograph;
         this.clientId = clientId;
     }
 
@@ -63,12 +63,12 @@ public class PurchaseInvoice {
         this.total = total;
     }
 
-    public int getPhotographId() {
-        return photographId;
+    public Photograph getPhotograph() {
+        return photograph;
     }
 
-    public void setPhotographId(int photographId) {
-        this.photographId = photographId;
+    public void setPhotograph(Photograph photograph) {
+        this.photograph = photograph;
     }
 
     public String getClientId() {
@@ -78,5 +78,5 @@ public class PurchaseInvoice {
     public void setClientId(String clientId) {
         this.clientId = clientId;
     }
-    
+ 
 }
