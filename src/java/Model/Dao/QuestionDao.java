@@ -32,4 +32,7 @@ public interface QuestionDao {
     
     public List getQuestionCategory() throws SQLException;
     
+    
+    public List<Question> getQuestByKeyWord(String keyword) throws SQLException;
+    
 }
