@@ -115,7 +115,7 @@ public class Forum_filter extends HttpServlet {
           ArrayList<Question> sortedQues = new ArrayList(quest);
           
           ArrayList<String> a = new ArrayList();
-           ArrayList<String> b = new ArrayList();
+          ArrayList<String> b = new ArrayList();
 
            
 
