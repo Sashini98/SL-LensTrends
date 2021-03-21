@@ -5,8 +5,11 @@
  */
 package Controller.Forum;
 
+import Controller.DaoImpl.QuestionDaoImpl;
+import Model.Dao.QuestionDao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.LinkedList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,6 +22,15 @@ public class Forum_filter extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        String keyword = request.getParameter("keyword");
+        String sort=request.getParameter("sortBy");
+        String filter=request.getParameter("filterBy");
+        
+        
+        QuestionDao ques= new QuestionDaoImpl();
+        
+        
         
     }
 

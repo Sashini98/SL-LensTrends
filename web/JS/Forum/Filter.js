@@ -7,74 +7,32 @@
 function  filter() {
     
    
-    var sortBy;
-    
+    var sortBy;    
     var filterBy;
+    var keyword= document.getElementById("keyword").value;
     
 
-    if (document.getElementById('relevant').checked) {
-        sortBy = 'relevant';
-    } else {
-        sortBy = 'fresh';
+    if (document.getElementById('NoAnsw').checked) {
+        filterBy = 'NoAnswer';
     }
 
-
-    if (document.getElementById('Horizontal').checked) {
-        orientation += 'Horizontal ';
-
+     if (document.getElementById('100plus').checked) {
+        filterBy = '100plus';
     }
-    if (document.getElementById('Vertical').checked) {
-        orientation += 'Vertical ';
-
+    
+     if (document.getElementById('newest').checked) {
+        sortBy = 'newest';
     }
-    if (document.getElementById('Square').checked) {
-        orientation += 'Square ';
-
+    
+    if (document.getElementById('oldest').checked) {
+        sortBy = 'oldest';
     }
-    if (document.getElementById('Panoramic').checked) {
-        orientation += 'Panoramic ';
-
+    
+    if (document.getElementById('count').checked) {
+        sortBy = 'count';
     }
-    if (document.getElementById('Panoramic').checked && document.getElementById('Square').checked
-            && document.getElementById('Vertical').checked && document.getElementById('Horizontal').checked) {
-        orientation = 'AllOrientations';
-    }
-    if (!document.getElementById('Panoramic').checked && !document.getElementById('Square').checked
-            && !document.getElementById('Vertical').checked && !document.getElementById('Horizontal').checked) {
-        orientation = 'AllOrientations';
-    }
-
-    orientation = orientation.trim();
-
-    if (document.getElementById('Pixels').checked) {
-        sizePixel = 'Pixels';
-    } else {
-        sizePixel = 'MegaPixel';
-    }
-
-    if (document.getElementById('WithPeople').checked) {
-        people = 'WithPeople';
-    } else if (document.getElementById('WithoutPeople').checked) {
-        people = 'WithoutPeople';
-    }
-
-    if (document.getElementById('Both').checked) {
-        gender += 'Both ';
-
-    } 
-    if (document.getElementById('Male').checked) {
-        gender += 'Male ';
-
-    } 
-    if (document.getElementById('Female').checked) {
-        gender += 'Female ';
-    }
-
-    if (document.getElementById('Undiscovered').checked) {
-        undiscovered = true;
-    } else {
-        undiscovered = false;
-    }
+    
+   
 
     var request = new XMLHttpRequest();
 
@@ -89,10 +47,9 @@ function  filter() {
         }
     };
 
-    var param = "keyword="+ serchedFor +"&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
-            "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
+    var param = "keyword="+ keyword + "&sortBy=" + sortBy + "&filterBy=" + filterBy;
 
-    request.open("POST", "../../PhotographAdvancedSearch", false);
+    request.open("POST", "../../Forum_filter", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send(param);
 

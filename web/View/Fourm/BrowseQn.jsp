@@ -151,6 +151,11 @@
                 </div>
 
             </div> 
+            
+            <div class="searchInput">
+    <input type="text" placeholder="Search for Questions" id="keyword" onkeyup="filter()" >      
+    <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="filter()"><i class="material-icons">search</i></button>
+</div>
            
             <div name="s" id="s">
                 
