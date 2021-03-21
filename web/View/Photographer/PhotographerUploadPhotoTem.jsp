@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <%
     ArrayList<Photograph> m = (ArrayList<Photograph>) request.getAttribute("loadphotographs");
-    System.out.println(m.get(0).getTitle());
+//    System.out.println(m.get(0).getTitle());
 
 %>
 
@@ -20,18 +20,19 @@
         <% for (int i = 0; i < m.size(); i++) {
                 if (m.get(i).getStateId() == 1) {
         %>
-        <input type="radio" id="r<%= i+1 %>" name="radio" checked />
-        <label for="r<%= i+1 %>">
-            <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls1">
+        <input type="radio" id="r<%= i + 1%>" name="radio"/>
+        <label for="r<%= i + 1%>">
+            <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
             }%>
+
     </div>
 
     <div class="details">
         <img src="../../Resources/Img/delete.svg" id="delete" style="cursor: pointer">
         <div class="images">
-            <img src="" class="detailsimg" id="image">                   
+            <img src="../../Resources/Img/profile/<%=m.get(0).getPath()%>" class="detailsimg" id="image">                   
         </div>
         <div class="category">
             <label for="category">Category:</label>
@@ -69,8 +70,7 @@
             <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6); margin-bottom: 5%;" >For recognizable people or property.</span><br>
                 <span style="color:#415daa;" id="download">Download Releases</span> &nbsp; &nbsp; &nbsp;<span style="color:#f6862a;" id="upload">Add release</span></p>
 
-            <div id="myModal" class="modal">
-
+            <div id="myModal" class="myModal">
                 <!-- Modal content -->
                 <div class="modal-content">
                     <span class="close">&times;</span>
@@ -83,7 +83,6 @@
                         <p>Property Release</p><a href="../../Resources/Forms/property release.pdf" download>Download</a>
                     </div>
                 </div>
-
             </div>
 
         </div>
@@ -327,5 +326,6 @@
         </div>
     </div>
 </div>
-    
-    <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
+
+<script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
+<script type="text/javascript" src="../../JS/Photohrapher/check2.js"></script>

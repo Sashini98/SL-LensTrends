@@ -79,7 +79,7 @@ input:checked + label{
 
 div .details {
     background-color: #fff;
-    margin-top: -15%;
+    margin-top: -31%;
     margin-left: 67%;
     margin-bottom: 3%;
     width: 30%;
@@ -111,8 +111,11 @@ div .details .images img {
 }
 
 #delete {
-    margin-top: 10%;
-    margin-left: 50%;
+    margin-top: 8%;
+    margin-left: 70%;
+    height:6%;
+    width: 6%;
+    cursor: pointer;
 }
 
 div .details p {
@@ -223,7 +226,7 @@ div .details .releases p span a {
     font-size: 100%;
 }
 
-.modal {
+.myModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
