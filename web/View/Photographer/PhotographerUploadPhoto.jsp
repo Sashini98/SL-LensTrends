@@ -438,10 +438,10 @@
             
                     </div>-->
         </div>
-                    
+         
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
-        <script type="text/javascript" src="../../JS/Photohrapher/check2.js"></script>
 
-       
+
+
     </body>
 </html>
