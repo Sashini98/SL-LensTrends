@@ -9,17 +9,17 @@ function viewEdit(id) {
 
                 var responce = request.responseText;
                 var details = JSON.parse(responce);
+                alert("mid");
+                document.getElementById("name").value = details[0];
+                document.getElementById("price").value = details[1];
+                document.getElementById("time").value = details[2];
                 
-                document.getElementById("Pname").value = details[0];
-                document.getElementById("Price").value = details[1];
-                document.getElementById("Time").value = details[2];
-
             }
         }
 
     };
 
-    request.open("POST", "../../", false);
+    request.open("POST", "../../ViewSubPlanDetails", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("id=" + id);
 }

@@ -208,6 +208,10 @@
         <servlet-name>Forum_filter</servlet-name>
         <servlet-class>Controller.Forum.Forum_filter</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewSubPlanDetails</servlet-name>
+        <servlet-class>Controller.Admin.ViewSubPlanDetails</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>

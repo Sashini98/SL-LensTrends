@@ -81,13 +81,13 @@
                             <hr>
 
                             <label for="name"><b>Plan Name</b></label><br>
-                            <input type="text" name="name"><br>
+                            <input type="text" name="name" id="name"><br>
 
                             <label for="time"><b>Duration</b></label><br>
-                            <input type="text" name="time"><br>
+                            <input type="text" name="time" id="time"><br>
 
                             <label for="price"><b>Price</b></label><br>
-                            <input type="text" name="price"><br>
+                            <input type="text" name="price" id="price"><br>
 
                             <div class="clearfix">
                                 <button type="submit" class="updatebtn">Update</button>
