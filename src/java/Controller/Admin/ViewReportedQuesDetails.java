@@ -16,6 +16,7 @@ import Model.Dao.QuestionDao;
 import Model.Dao.ReportedQuestionDao;
 import Model.Photographer;
 import Model.Question;
+import Model.QuestionCategory;
 import Model.ReportedQuestion;
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -40,18 +41,22 @@ public class ViewReportedQuesDetails extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        try{
+
+        try {
             int quesid = Integer.parseInt(request.getParameter("qid"));
+
             ReportedQuestionDao rDao = new ReportedQuestionDaoImpl();
             ReportedQuestion rQuestion = rDao.getReportedQuestionById(quesid);
+
             QuestionDao qDao = new QuestionDaoImpl();
             Question question = qDao.getQuestionbtId(quesid);
+
             PhotographerDao photographerDao = new PhotographerDaoImp();
-            Photographer photographer = photographerDao.getPhotographerById(question.getPhotographerId()); 
+            Photographer photographer = photographerDao.getPhotographerById(question.getPhotographerId());
+
             ClientDao cDao = new ClientDaoImpl();
             Client client = cDao.getClientbyId(question.getclientId());
-            
+
             ArrayList<String> c = new ArrayList();
             Date postedDate = question.getquestion_date();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
@@ -64,12 +69,13 @@ public class ViewReportedQuesDetails extends HttpServlet {
             c.add(rQuestion.getReason());
             c.add(rQuestion.getDescription());
             c.add(date);
-            c.add(rQuestion.getQuestionId() +"");
+            c.add(rQuestion.getQuestionId() + "");
+            
 
             Gson g = new Gson();
             String toJson = g.toJson(c);
             response.getWriter().write(toJson);
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(ViewUploadedPhotoDetails.class.getName()).log(Level.SEVERE, null, ex);
         }

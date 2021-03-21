@@ -43,19 +43,25 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             System.out.println(request.getParameter("id"));
             int photoid = Integer.parseInt(request.getParameter("id"));
             System.out.println(photoid);
+            
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoid);
+            
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
+            
             PhotographCategoryDao cDao = new PhotographCategoryDaoImpl();
             String category = cDao.getCategory(photoid);
+            
             OrientationDao oDao = new OrientationdaoImpl();
             String orientation = oDao.getOrientation(photoid);
 
             ArrayList<String> c = new ArrayList();
+            
             Date uploadedDate = photograph.getUploadedDate();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
             String date = sdf.format(uploadedDate);
+            
             c.add(photograph.getTitle());
             c.add(photograph.getHeight() + "");
             c.add(photograph.getWidth() + "");

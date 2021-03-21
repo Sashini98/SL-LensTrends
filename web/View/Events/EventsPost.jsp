@@ -60,7 +60,7 @@
         <div class="main-content">
 
             <div class="events">                
-                <form>
+                <form id="e" action="../../PostEvent" method="POST">
                     <h2>Enter Your Event Details</h2>
                     <div class="formContent">                             
                         <span class="content_name"> Event Name </span><br>
@@ -83,27 +83,49 @@
                         </label>
                     </div><br>
 
-                    <div class="formContent">
+                   <div class="formContent">
+                        <span class="content_name"> Event Starting Time </span><br>
+                        <input type="time" name="time" required/>
+                        <label for="time" class="label_name">
+                        </label>
+                    </div><br>
+                    
+                     <div class="formContent">
                         <span class="content_name"> Event Venue </span><br>
                         <input type="text" name="venue" required/>
                         <label for="venue" class="label_name">
                         </label>
                     </div><br>
-
-                    <div class="formContent">
-                        <span class="content_name"> Event Starting Time </span><br>
-                        <input type="text" name="time" required/>
-                        <label for="time" class="label_name">
+                    
+                     <div class="formContent">
+                        <span class="content_name"> Hall Number </span><br>
+                        <input type="text" name="hall" required/>
+                        <label for="hall" class="label_name">
+                        </label>
+                    </div><br>
+                    
+                     <div class="formContent">
+                        <span class="content_name"> Venue Address(Street) </span><br>
+                        <input type="text" name="street" required/>
+                        <label for="street" class="label_name">
+                        </label>
+                    </div><br>
+                    
+                     <div class="formContent">
+                        <span class="content_name"> Venue Address(City) </span><br>
+                        <input type="text" name="city" required/>
+                        <label for="city" class="label_name">
+                        </label>
+                    </div><br>
+                    
+                     <div class="formContent">
+                        <span class="content_name"> Venue Address(Province) </span><br>
+                        <input type="text" name="province" required/>
+                        <label for="province" class="label_name">
                         </label>
                     </div><br>
 
-                    <div class="formContent">
-                        <span class="content_name"> Event Description </span><br>
-                        <textarea name="desc" required rows="10" cols="50"></textarea>
-                        <!--<input type="text" name="desc" required rows="10" cols="50"/>-->
-                        <label for="desc" class="label_name">
-                        </label>
-                    </div><br>
+                    
 
                     <div class="filter-radio">
                         <label class="container-radio"><h8>Specify Photographers</h8>

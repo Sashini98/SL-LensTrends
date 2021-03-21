@@ -41,7 +41,7 @@ public class PurchasePhotoDetails extends HttpServlet {
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
 
-            ArrayList<Photograph> photographerPhotos = photographDao.getPhotographByPhotographer(photographer.getPhotographerId());
+            ArrayList<Photograph> photographerPhotos = photographDao.getAllphotosofPhotographer(photographer.getPhotographerId());
             ArrayList<Photograph> removingPics = new ArrayList<>();
             
             if (photographerPhotos.size() > 12) {

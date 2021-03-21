@@ -106,37 +106,37 @@
 
             <div class="side-box"> 
                 <div class="filter">
-                    <p>Filer by:</p>
+                    <p>Filter by:</p>
                     <label class="container">No answer
-                        <input type="checkbox" checked="checked">
+                        <input type="checkbox" name="NoAnsw" id="NoAnsw" onclick="filter();">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container">With Images
-                        <input type="checkbox">
+                    <label class="container">100+ answers
+                        <input type="checkbox" name="100plus" id="100plus" onclick="filter();">
                         <span class="checkmark"></span>
                     </label>
-                    <label class="container">Most Likes
+<!--                    <label class="container">Most Likes
                         <input type="checkbox">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">Most answers
                         <input type="checkbox">
                         <span class="checkmark"></span>
-                    </label>
+                    </label>-->
                 </div>
 
                 <div class="filter-radio">
-                    <p>Short by:</p>
+                    <p>Sort by:</p>
                     <label class="container-radio">Newest
-                        <input type="radio" checked="checked" name="radio">
+                        <input type="radio" checked="checked" name="newest" id="newest" onclick="filter();">
                         <span class="checkmark-radio"></span>
                     </label>
-                    <label class="container-radio">Recent Questions
-                        <input type="radio" name="radio">
+                    <label class="container-radio">Oldest
+                        <input type="radio" name="oldest" id="oldest" onclick="filter();">
                         <span class="checkmark-radio"></span>
                     </label>
-                    <label class="container-radio">Date
-                        <input type="radio" name="radio">
+                    <label class="container-radio">Answer Count
+                        <input type="radio" name="count" id="count" onclick="filter();">
                         <span class="checkmark-radio"></span>
                     </label><!--
                     <label class="container-radio">Four
@@ -495,7 +495,8 @@
         </div>
 
 
-        <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>          
+        <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>  
+         <script src="../../JS/Forum/Filter.js" type="text/javascript" ></script>         
        
     </body>
 </html>

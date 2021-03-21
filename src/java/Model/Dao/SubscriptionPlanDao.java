@@ -5,8 +5,10 @@
  */
 package Model.Dao;
 
+import Model.SubscriptionPlan;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -17,4 +19,6 @@ public interface SubscriptionPlanDao {
      public void  updatePlanName(String name, int planId) throws SQLException;
      public void  updatePrice(double price, int planId) throws SQLException;
      public void  updateTime(Date time, int planId) throws SQLException;
+     public SubscriptionPlan getSubscriptionPlanById(int id) throws SQLException;
+     public List getAllSubscriptionPlans() throws SQLException;
 }

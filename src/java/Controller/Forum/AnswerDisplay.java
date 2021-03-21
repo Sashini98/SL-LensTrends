@@ -59,7 +59,8 @@ public class AnswerDisplay extends HttpServlet {
             }
 
             request.setAttribute("answers", a);
-            request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
+            request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
+            System.out.println("suucccsssssss");
         } catch (Exception e) {
         }
 

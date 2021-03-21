@@ -11,7 +11,10 @@ import Model.Event;
 import Model.PastEvent;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -22,7 +25,16 @@ public class EventDaoImpl implements EventDao {
 
     @Override
     public void addEvent(Event event) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Date d=event.geteventDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(d);
+        
+        LocalTime t=event.geteventTime();
+        SimpleDateFormat sdf1 = new SimpleDateFormat("hh.mm aa");
+        String time=sdf1.format(t);
+        
+         DB.iud("INSERT INTO event (Event_Name, Type, Date, Time ,Client_Id , hall_no , Venue, street , city , province  ) VALUES ('"+event.geteventName()+"', '"+event.gettype()+"', '"+date+"', '"+time+"', '"+event.getclientId()+"' '"+event.gethallNo()+"','"+event.getvenue()+"','"+event.getstreet()+"','"+event.getcity()+"','"+event.getprovince()+"');");
+    
     }
 
     @Override

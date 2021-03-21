@@ -20,7 +20,7 @@ public class Photograph {
     String quality;
     String keywords;
     Date uploadedDate;
-    boolean forSale;
+    double Price;
     boolean undiscovered;
     String photogrpherId;
     String title;
@@ -33,7 +33,7 @@ public class Photograph {
     public Photograph() {
     }
 
-    public Photograph(int id, String path, double width, double height, String quality, String keywords, Date uploadedDate, boolean forSale, boolean undiscovered, String photogrpherId, String title, int categoryId, boolean people, int orientationId, int stateId, int genderId) {
+    public Photograph(int id, String path, double width, double height, String quality, String keywords, Date uploadedDate, double Price, boolean undiscovered, String photogrpherId, String title, int categoryId, boolean people, int orientationId, int stateId, int genderId) {
         this.id = id;
         this.path = path;
         this.width = width;
@@ -41,7 +41,7 @@ public class Photograph {
         this.quality = quality;
         this.keywords = keywords;
         this.uploadedDate = uploadedDate;
-        this.forSale = forSale;
+        this.Price = Price;
         this.undiscovered = undiscovered;
         this.photogrpherId = photogrpherId;
         this.title = title;
@@ -108,12 +108,12 @@ public class Photograph {
         this.uploadedDate = uploadedDate;
     }
 
-    public boolean isForSale() {
-        return forSale;
+    public double Price() {
+        return Price;
     }
 
-    public void setForSale(boolean forSale) {
-        this.forSale = forSale;
+    public void setPrice(double Price) {
+        this.Price = Price;
     }
 
     public boolean isUndiscovered() {

@@ -47,6 +47,7 @@ function PhotoApprove(){
 
                 var responce = request.responseText;
                 alert(responce);
+                clearFieldsofPhotoDetails();
                 
             }
         }
@@ -56,4 +57,44 @@ function PhotoApprove(){
     request.open("POST", "../../ApprovePhoto", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("id=" + photo_id);
+}
+
+function PhotoReject() {
+
+    var id = document.getElementById("pid").value;
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                alert(responce);
+                clearFieldsofPhotoDetails();
+
+            }
+        }
+
+    };
+
+    request.open("POST", "../../RejectPhoto", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("id=" + id);
+}
+
+function clearFieldsofPhotoDetails() {
+
+    document.getElementById("title").value = "";
+    document.getElementById("height").value = "";
+    document.getElementById("width").value = "";
+    document.getElementById("key").value = "";
+    document.getElementById("udate").value = "";
+    document.getElementById("pname").value = "";
+    document.getElementById("cate").value = "";
+    document.getElementById("orientation").value = "";
+    document.getElementById("quality").value = "";
+    document.getElementById("gen").value = "";
+    document.getElementById("img").src = "";
+    document.getElementById("reso").value = "";
+    document.getElementById("pid").value = "";
 }
