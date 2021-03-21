@@ -68,7 +68,7 @@
         </div>
         <div class="releases">
             <p>Releases<br><span style="color: rgba(12, 18, 28, 0.6); margin-bottom: 5%;" >For recognizable people or property.</span><br>
-                <span style="color:#415daa;" id="download">Download Releases</span> &nbsp; &nbsp; &nbsp;<span style="color:#f6862a;" id="upload">Add release</span></p>
+                <span style="color:#415daa;" id="download">Download Releases</span> &nbsp; &nbsp; &nbsp;<span style="color:#f6862a; cursor: pointer;" id="uploadrelease">Add release</span></p>
 
             <div id="myModal" class="myModal">
                 <!-- Modal content -->
@@ -84,8 +84,41 @@
                     </div>
                 </div>
             </div>
+            
+              <div id="DownModal" class="DownModal">
+                <!-- Modal content -->
+                <div class="Downmodal-content">
+                    <span class="downclose">&times;</span>
+                    <div class="Downmodal-heading">
+                        <h1>Drop Here!</h1>
+                        
+                        <p>Property Release</p>
+                        <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
+                        <label for="up-modal">
+                            Browse
+                        </label>
+                        <label id="uploadfile">
+                            File Name:
+                        </label>
+                        
+                         <p>Modal Release</p>
+                        <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
+                        <label for="up-modal">
+                            Browse
+                        </label>
+                        <label id="uploadfile">
+                            File Name:
+                        </label>
+                    </div>
+                    
+                        
+                  
+                   
+                </div>
+            </div>
 
         </div>
+        
 
         <div class="keyword-area">
             <textarea id="keyword-area" name="title" rows="5" cols="45" placeholder="Add Keywords (Max: 50 keywords) &#10separate with commas"></textarea>

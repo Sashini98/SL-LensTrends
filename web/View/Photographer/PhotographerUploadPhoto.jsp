@@ -16,6 +16,7 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Photographer/PhotographerUploadPhoto.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
+     
         <title>Upload</title>
     </head>
     <body style="background-color: #f9f9f9;">
@@ -65,7 +66,7 @@
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressed();">
+                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressedupload();">
                         <label for="up-image">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>
@@ -438,10 +439,10 @@
             
                     </div>-->
         </div>
-         
+
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
 
-
+ 
 
     </body>
 </html>

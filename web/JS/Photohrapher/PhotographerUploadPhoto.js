@@ -1,4 +1,6 @@
 
+/* global uploadimage, uploadmodal, uploadfile */
+
 function navigation(button) {
     if (button == "tosubmit") {
         document.getElementById("tosubmit-content").style.display = "block";
@@ -216,7 +218,7 @@ function clickimage(click) {
     }
 }
 
-window.pressed = function () {
+window.pressedupload = function () {
 
     uploadimage.innerHTML = "Choose file";
     var a = document.getElementById('up-image');
@@ -233,14 +235,22 @@ window.pressed = function () {
     }
 };
 
-function upload(btn) {
+window.pressedrelease = function () {
 
-    if (btn == "final-upload") {
-        uploadmodal.style.display = "none";
-        uploadimage.innerHTML = "Choose file";
-        document.getElementById("up-image").value = '';
+    uploadfile.innerHTML = "Choose file";
+    var a = document.getElementById('up-modal');
+
+    if (a.value == "")
+    {
+        uploadfile.innerHTML = "Choose file";
+    } else
+    {
+        var theSplit = a.value.split('\\');
+        uploadfile.innerHTML = theSplit[theSplit.length - 1];
+//        uploadimage.innerHTML = "Choose file";
+
     }
-}
+};
 
 function loadphotos() {
 
@@ -262,38 +272,6 @@ function loadphotos() {
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 }
-
-
-
-var uploadmodal = document.getElementById("upload-modal");
-
-// Get the button that opens the modal
-var btnup = document.getElementById("upload-photo");
-
-// Get the <span> element that closes the modal
-var spanup = document.getElementsByClassName("upload-close")[0];
-
-// When the user clicks the button, open the modal 
-btnup.onclick = function () {
-    uploadmodal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-spanup.onclick = function () {
-    uploadmodal.style.display = "none";
-    uploadimage.innerHTML = "Choose file";
-    document.getElementById("up-image").value = '';
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-    if (event.target == uploadmodal) {
-        uploadmodal.style.display = "none";
-        uploadimage.innerHTML = "Choose file";
-        document.getElementById("up-image").value = '';
-    }
-};
-
 
 
 
@@ -330,15 +308,86 @@ window.onload = function () {
         //    uploadimage.innerHTML = "Choose file";
     };
 
+
+
+    var Downmodal = document.getElementById("DownModal");
+
+    // Get the button that opens the modal
+    var Downbtn = document.getElementById("uploadrelease");
+
+    // Get the <span> element that closes the modal
+    var Downspan = document.getElementsByClassName("downclose")[0];
+
+    // When the user clicks the button, open the modal 
+    Downbtn.onclick = function () {
+        Downmodal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    Downspan.onclick = function () {
+        Downmodal.style.display = "none";
+        //    uploadimage.innerHTML = "Choose file";
+    };
+
+//    // When the user clicks anywhere outside of the modal, close it
+//    window.onclick = function (event) {
+//        if (event.target == Downmodal) {
+//            Downmodal.style.display = "none";
+//            //        uploadimage.innerHTML = "Choose file";
+//        }
+//    };
+
+
+    var uploadmodal = document.getElementById("upload-modal");
+
+// Get the button that opens the modal
+    var btnup = document.getElementById("upload-photo");
+
+// Get the <span> element that closes the modal
+    var spanup = document.getElementsByClassName("upload-close")[0];
+
+// When the user clicks the button, open the modal 
+    btnup.onclick = function () {
+        uploadmodal.style.display = "block";
+    };
+
+// When the user clicks on <span> (x), close the modal
+    spanup.onclick = function () {
+        uploadmodal.style.display = "none";
+        uploadimage.innerHTML = "Choose file";
+        document.getElementById("up-image").value = '';
+    };
+
+
+
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
             //        uploadimage.innerHTML = "Choose file";
+        } else if (event.target == Downmodal) {
+            Downmodal.style.display = "none";
+        } else if (event.target == uploadmodal) {
+            uploadmodal.style.display = "none";
+            uploadimage.innerHTML = "Choose file";
+            document.getElementById("up-image").value = '';
         }
     };
 
-
-
-
 };
+
+function upload(btn) {
+
+    if (btn == "final-upload") {
+        var uploadmodal = document.getElementById("upload-modal");
+        uploadmodal.style.display = "none";
+        uploadimage.innerHTML = "Choose file";
+        document.getElementById("up-image").value = '';
+    }
+}
+
+
+
+
+
+
