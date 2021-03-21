@@ -188,7 +188,7 @@ public class QuestionDaoImpl implements QuestionDao {
     public List<Question> getQuestByKeyWord(String keyword) throws SQLException {
         List<Question> a = new ArrayList<>();
         try {
-            ResultSet ques=DB.search("SELECT * FROM Question WHERE Keywords like '%" + keyword + "%'");
+            ResultSet ques=DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%'");
            
             while(ques.next())
         {

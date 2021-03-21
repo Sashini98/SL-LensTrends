@@ -5,7 +5,9 @@
  */
 package Controller.Forum;
 
+import Controller.DaoImpl.AnswerDaoImpl;
 import Controller.DaoImpl.QuestionDaoImpl;
+import Model.Dao.AnswerDao;
 import Model.Dao.QuestionDao;
 import Model.Question;
 import java.io.IOException;
@@ -56,7 +58,49 @@ public class Forum_filter extends HttpServlet {
             Question qu = questIterator.next();
             boolean isNeeded = false;
             
+            AnswerDao answ=new AnswerDaoImpl();
+            int cnt=answ.answerCount(qu.getquestionId());
+         
+            if(filter.contains("NoAnswer"))
+            {
+                if(cnt==0)
+                {
+                    isNeeded=true;
+                }
+            }
+            
+            else if (filter.contains("100plus"))
+            {
+                if(cnt>100)
+                {
+                    isNeeded=true;
+                }
+            }
+            
+             if (!isNeeded) {
+                removeQuest.add(qu);
+            }
+             
+            
         }
+         quest.removeAll(removeQuest);
+         
+         if (sort.equalsIgnoreCase("newest")) {
+
+            LinkedList<Question> contains = new LinkedList<>();
+            LinkedList<Question> notContains = new LinkedList<>();
+
+            if (keyword != null) {
+                for (Question photo : quest) {
+
+                    
+                }
+                quest.clear();
+                quest.addAll(contains);
+                quest.addAll(notContains);
+            }
+
+        } 
             
             
             
