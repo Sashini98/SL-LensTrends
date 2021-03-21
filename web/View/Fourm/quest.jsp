@@ -25,10 +25,7 @@
 
 
 %>
-<br><div class="searchInput">
-    <input type="text" placeholder="Search for Questions" >      
-    <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
-</div>
+<br>
 
 <div class="questions">                
     <h2><%= s.get(i * 7)%></h2>

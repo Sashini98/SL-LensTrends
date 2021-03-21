@@ -9,6 +9,7 @@ function  filter() {
    
     var sortBy;    
     var filterBy;
+    var keyword= document.getElementById("keyword").value;
     
 
     if (document.getElementById('NoAnsw').checked) {
@@ -46,7 +47,7 @@ function  filter() {
         }
     };
 
-    var param = "sortBy=" + sortBy + "&filterBy=" + filterBy;
+    var param = "keyword="+ keyword + "&sortBy=" + sortBy + "&filterBy=" + filterBy;
 
     request.open("POST", "../../Forum_filter", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
