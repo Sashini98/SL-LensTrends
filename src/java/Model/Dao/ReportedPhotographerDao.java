@@ -16,4 +16,5 @@ import java.util.List;
 public interface ReportedPhotographerDao {
     
     public List getAllReportedUsers() throws SQLException;
+    public int reportedUserCount() throws SQLException;
 }
