@@ -4,8 +4,22 @@
     Author     : Sashini Shihara
 --%>
 
+<%@page import="Model.PurchaseInvoice"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Model.Photograph"%>
+<%@page import="Model.Client"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    Client client = (Client) session.getAttribute("loggedClient");
+    ArrayList<PurchaseInvoice> purchacedPhotos = (ArrayList<PurchaseInvoice>) request.getAttribute("PurchaceHistoryDetails");
+    if (purchacedPhotos == null) {
+        request.getRequestDispatcher("../../PurchaceHistoryDetails").forward(request, response);
+
+    }
+%>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -55,16 +69,33 @@
             <div class="heading">
                 <h1> Purchase History</h1>
             </div>
+
+            <%
+                for (PurchaseInvoice elem : purchacedPhotos) {
+                    Photograph p = elem.getPhotograph();
+            %>
+
             <div class="photos">
                 <div class="details">
-                    <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg">
-                    <p>Purchased Date<input type="text" name="Submitted" id="Submit" disabled=""></p>
-                    <p>Price <input type="text" name="Submitted" id="Submit" disabled=""></p>
+                    <img src="../../Resources/Img/Gallery Sample Images/<%= p.getPath() %>">
+                    <p>Purchased Date
+                        <input type="text" name="Submitted" id="Submit" value="<%= elem.getDate() %>" disabled="">
+                    </p>
+                    <p>Price 
+                        <input type="text" name="Submitted" id="Submit" value="<%= p.getTitle() %>" disabled="">
+                    </p>
                     <button id="remove" type="submit" class="btn" >View</button>
                 </div>
             </div>
 
-            <div class="photos">
+
+            <%
+                }
+            %>
+
+
+
+<!--            <div class="photos">
                 <div class="details">
                     <img src="../../Resources/Img/Gallery Sample Images/Photographer/julie-ricard-RmFX5bxHqCg-unsplash.jpg">
                     <p>Purchased Date<input type="text" name="Submitted" id="Submit" disabled=""></p>
@@ -89,7 +120,7 @@
                     <p>Price <input type="text" name="Submitted" id="Submit" disabled=""></p>
                     <button id="remove" type="submit" class="btn">View</button>
                 </div>
-            </div>
+            </div>-->
         </div>
 
     </body>

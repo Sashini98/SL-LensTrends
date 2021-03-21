@@ -185,6 +185,10 @@
         <servlet-class>Controller.Clent.PhotographerSearch</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>PurchaceHistoryDetails</servlet-name>
+        <servlet-class>Controller.Clent.PurchaceHistoryDetails</servlet-class>
+    </servlet>
+     <servlet>
         <servlet-name>RejectPhoto</servlet-name>
         <servlet-class>Controller.Admin.RejectPhoto</servlet-class>
     </servlet>
@@ -199,6 +203,10 @@
     <servlet>
         <servlet-name>PhotographerUploadPhoto</servlet-name>
         <servlet-class>Controller.Photographer.PhotographerUploadPhoto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Forum_filter</servlet-name>
+        <servlet-class>Controller.Forum.Forum_filter</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ViewSubPlanDetails</servlet-name>
@@ -389,6 +397,10 @@
         <url-pattern>/PhotographerSearch</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>PurchaceHistoryDetails</servlet-name>
+        <url-pattern>/PurchaceHistoryDetails</url-pattern>
+    </servlet-mapping>
+        <servlet-mapping>
         <servlet-name>RejectPhoto</servlet-name>
         <url-pattern>/RejectPhoto</url-pattern>
     </servlet-mapping>
@@ -405,8 +417,8 @@
         <url-pattern>/PhotographerUploadPhoto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ViewSubPlanDetails</servlet-name>
-        <url-pattern>/ViewSubPlanDetails</url-pattern>
+        <servlet-name>Forum_filter</servlet-name>
+        <url-pattern>/Forum_filter</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

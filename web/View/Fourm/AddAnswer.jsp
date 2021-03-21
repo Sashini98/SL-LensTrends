@@ -20,7 +20,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="../../CSS/forum/AskQues.css"/>
+        <link type="text/css" rel="stylesheet" href="CSS/forum/AskQues.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Answer</title>
@@ -76,7 +76,7 @@
                 <div class="questions">                
                     <form id="answer" action="<%= request.getContextPath()%>/Add_answer" method="POST" >
                         <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
-                        <h4 id="quesid" name="quesid" style="display: none"><%= q.get((i * 3) + 1)%></h4>
+                        <h4 id="quesid" name="quesid" style="display: none"><%= q.get((i * 2) + 1)%></h4>
                        
 
                     <h3><label for="Body"><b>Answer</b></label><br></h3>

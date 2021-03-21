@@ -25,10 +25,7 @@
 
 
 %>
-<br><div class="searchInput">
-    <input type="text" placeholder="Search for Questions" >      
-    <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;"><i class="material-icons">search</i></button>
-</div>
+<br>
 
 <div class="questions">                
     <h2><%= s.get(i * 7)%></h2>
@@ -65,7 +62,7 @@ for(int j=0;j<tokens.length;j++)
         %>
 <!--        <a href="#" type="button" id="answer_view" onclick="popupanswer();"><%= s.get((i * 7) + 4)%> answers</a>-->
         <a href="../../display_question?qid=<%= s.get((i * 7) + 5)%>" type="button" id="answer_view"><%= s.get((i * 7) + 4)%> answers</a>
-        <!--<input type="button" id="answer_view" value="<%= s.get((i * 7) + 4)%> answers" onclick="ViewAnswers.jsp">-->
+        <!--<input type="button" id="answer_view" value="<%= s.get((i * 7) + 4)%> answers" onclick="popupanswer('comm')">-->
 
 
         <!--<a href="#" type="button" id="report" onclick="popupanswer('myBtn4')">Report</a>-->
