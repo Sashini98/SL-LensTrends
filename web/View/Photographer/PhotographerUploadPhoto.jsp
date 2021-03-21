@@ -438,31 +438,10 @@
             
                     </div>-->
         </div>
+                    
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
         <script type="text/javascript" src="../../JS/Photohrapher/check2.js"></script>
-        <!--        <script>
-        //                                window.onload = function () {
-        //                                    loadphotos();
-        //                                    elm = document.querySelectorAll('.selection-img');
-        //                                    //	main = document.querySelectorAll('main')[0];
-        //                                    detailsimg = document.querySelector('.detailsimg');
-        //                                    detailsimg.src = "../../Resources/Img/profile/l1.jpg";
-        //
-        //
-        ////                                    var images = ['../../Resources/Img/profile/l1.jpg', '../../Resources/Img/profile/l2.jpg', '../../Resources/Img/profile/l3.jpg',
-        ////                                        '../../Resources/Img/profile/l4.jpg', '../../Resources/Img/profile/p1.jpg', '../../Resources/Img/profile/p2.jpg',
-        ////                                        '../../Resources/Img/profile/p3.jpg', '../../Resources/Img/profile/p4.jpg'];
-        //
-        //
-        //                                    elm.forEach(function (elm) {
-        //                                        elm.addEventListener('click', function (event) {
-        //                                            detailsimg.src = event.target.src;
-        //                                        })
-        //                                    })
-        //
-        //                                }
-        
-                </script>-->
 
+       
     </body>
 </html>
