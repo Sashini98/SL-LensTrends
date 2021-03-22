@@ -28,61 +28,61 @@
         <title>Questions</title>
     </head>
 
+    <body style="background-color: #f7f6f9;" onload="view(<%= q.get((i * 2) + 1)%>)">
+
+
+        <div class="fixedheader">  
+
+            <div class="pageheader">
+
+                <a href="../Home.jsp" type="button"> <img src="Resources/Img/7.png" height="55px" width="60px"> </a>
+                <h1>Sl Lens Trends </h1>
+
+                <div class="headerul">
+                    <ul>
+
+                        <li><a href="#" type="button"> Events </a></li>
+                        <li><a href="#" type="button"> Profile </a></li>
+                        <li><a href="#" type="button"> Settings </a></li>
+
+                    </ul>
+                </div>
+
+                <div class="notifyicn">
+                    <a href="#" type="button"> <img src="Resources/Img/notification.png"> </a>
+                </div>
+
+                <div class="logout">
+                    <a href="#" type="button"> Logout </a>
+                </div>
+
+            </div>
+
+        </div>
 
 
 
-    <div class="fixedheader">  
-
-        <div class="pageheader">
-
-            <a href="../Home.jsp" type="button"> <img src="Resources/Img/7.png" height="55px" width="60px"> </a>
-            <h1>Sl Lens Trends </h1>
-
-            <div class="headerul">
+        <div class="side-box"> 
+            <div class="home">
                 <ul>
 
-                    <li><a href="#" type="button"> Events </a></li>
-                    <li><a href="#" type="button"> Profile </a></li>
-                    <li><a href="#" type="button"> Settings </a></li>
-
+                    <li><a href="View/Fourm/MainForum.jsp"> Forum Home </a></li>
                 </ul>
             </div>
 
-            <div class="notifyicn">
-                <a href="#" type="button"> <img src="Resources/Img/notification.png"> </a>
+
+            <div class="ask-qn">
+                <a href="AskQues.jsp" type="button">Ask Questions <a/>
             </div>
 
-            <div class="logout">
-                <a href="#" type="button"> Logout </a>
-            </div>
-
-        </div>
-
-    </div>
+        </div> 
+        <br><br><br>
+        <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
+        <h4 id="quesid" name="quesid" <!--style="display: none"-->></h4>
 
 
 
-    <div class="side-box"> 
-        <div class="home">
-            <ul>
 
-                <li><a href="View/Fourm/MainForum.jsp"> Forum Home </a></li>
-            </ul>
-        </div>
-
-
-        <div class="ask-qn">
-            <a href="AskQues.jsp" type="button">Ask Questions <a/>
-        </div>
-
-    </div> 
-    <br><br><br>
-    <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
-    <h4 id="quesid" name="quesid" <!--style="display: none"-->></h4>
-   
-
-
-    <body style="background-color: #f7f6f9;" onload="view(<%= q.get((i * 2) + 1)%>)">
         <div class="main-content">
             <div name="s" id="s">
 
@@ -97,14 +97,14 @@
 
         </div>
 
-    </div>
 
 
- <%}%>
 
-    <script src="JS/Forum/QuesDisplay.js" type="text/javascript" ></script>
+        <%}%>
 
-</body>
+        <script src="JS/Forum/QuesDisplay.js" type="text/javascript" ></script>
+
+    </body>
 </html>
 
 

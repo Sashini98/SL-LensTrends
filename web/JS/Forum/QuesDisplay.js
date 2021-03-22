@@ -2,6 +2,11 @@
 
 function view(a)
 {
+    
+ var script = location.pathname;
+
+    alert(script);
+    
     var request = new XMLHttpRequest();
     var id = a;
 
@@ -21,11 +26,12 @@ function view(a)
     };
 
     var param = "qid=" + id;
-
     
-    request.open("POST", "../../DisplayAnswer", false);
+    
+    request.open("POST", "/GroupProject/AnswDisplay", false);    
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send(param);
+    request.send("param="+param);
+    
 
 
 }

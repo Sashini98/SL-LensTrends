@@ -216,6 +216,10 @@
         <servlet-name>DisplayAnswer</servlet-name>
         <servlet-class>Controller.Forum.DisplayAnswer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AnswDisplay</servlet-name>
+        <servlet-class>Controller.Forum.AnswDisplay</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -427,6 +431,10 @@
     <servlet-mapping>
         <servlet-name>DisplayAnswer</servlet-name>
         <url-pattern>/DisplayAnswer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnswDisplay</servlet-name>
+        <url-pattern>/AnswDisplay</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
