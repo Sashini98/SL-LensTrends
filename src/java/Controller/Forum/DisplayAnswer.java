@@ -16,7 +16,6 @@ import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,12 +25,14 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sashini Shihara
  */
-public class AnswerDisplay extends HttpServlet {
+public class DisplayAnswer extends HttpServlet {
 
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("hellooooooo");
+        System.out.println("hihello");
+        
         String quesid = request.getParameter("qid");
         int qid = parseInt(quesid);
         System.out.println("qid:" + qid);
@@ -59,11 +60,11 @@ public class AnswerDisplay extends HttpServlet {
             }
 
             request.setAttribute("answers", a);
+            System.out.println("3");
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
             System.out.println("suucccsssssss");
         } catch (Exception e) {
         }
-
     }
 
 }
