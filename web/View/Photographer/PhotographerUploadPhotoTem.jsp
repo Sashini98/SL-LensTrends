@@ -84,14 +84,14 @@
                     </div>
                 </div>
             </div>
-            
-              <div id="DownModal" class="DownModal">
+
+            <div id="DownModal" class="DownModal">
                 <!-- Modal content -->
                 <div class="Downmodal-content">
                     <span class="downclose">&times;</span>
                     <div class="Downmodal-heading">
                         <h1>Drop Here!</h1>
-                        
+
                         <p>Property Release</p>
                         <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
                         <label for="up-modal">
@@ -100,8 +100,8 @@
                         <label id="uploadfile">
                             File Name:
                         </label>
-                        
-                         <p>Modal Release</p>
+
+                        <p>Modal Release</p>
                         <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
                         <label for="up-modal">
                             Browse
@@ -110,15 +110,15 @@
                             File Name:
                         </label>
                     </div>
-                    
-                        
-                  
-                   
+
+
+
+
                 </div>
             </div>
 
         </div>
-        
+
 
         <div class="keyword-area">
             <textarea id="keyword-area" name="title" rows="5" cols="45" placeholder="Add Keywords (Max: 50 keywords) &#10separate with commas"></textarea>

@@ -288,7 +288,7 @@ window.onload = function () {
         });
     });
 
-
+// modal for download release
     var modal = document.getElementById("myModal");
 
     // Get the button that opens the modal
@@ -309,7 +309,7 @@ window.onload = function () {
     };
 
 
-
+// modal for upload release 
     var Downmodal = document.getElementById("DownModal");
 
     // Get the button that opens the modal
