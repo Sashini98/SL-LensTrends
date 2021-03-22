@@ -144,19 +144,26 @@
 <div class="inreview-content" style="display:none;" id="inreview-content">
 
     <div class="image-box">
-
-        <img src="../../Resources/Img/profile/n1.jpg" id="re1" onclick="clickimage('re1')">
-        <img src="../../Resources/Img/profile/n2.jpg" id="re2" onclick="clickimage('re2')" >
-        <img src="../../Resources/Img/profile/n3.jpg" id="re3" onclick="clickimage('re3')">
-        <img src="../../Resources/Img/profile/n4.jpg" id="re4" onclick="clickimage('re4')">
-
+        <% 
+            int inreview = 0;
+            int notaccepted = 0;
+            int accepted = 0;
+            
+            for (int i = 0; i < m.size(); i++) {
+            
+                if (m.get(i).getStateId() == 2) {
+                    inreview += 1;
+        %>
+        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="re<%= inreview %>" onclick="clickimage('re<%= inreview %>','image-box',<%= m.get(i).getId() %>)">
+        <% }
+            }%>
     </div>
 
     <div class="inreview-details">
         <div id="image1">
             <div class="details-inreview-title">
                 <h3>Happy Faces</h3> 
-                <p>Submitted 2 days ago </p>
+                <p>Submitted 2 days ago</p>
             </div>
             <div class="details-inreview">                    
                 <p>Title : <span style='color: #9D9D9D;'>Happy Faces</span> </p>
@@ -166,46 +173,45 @@
             </div>
         </div>
 
-        <div id="image2" style='display:none;'>
-            <div class="details-inreview-title">
-                <h3>Boat</h3> 
-                <p>Submitted 16hrs ago </p>
-            </div>
-            <div class="details-inreview">                    
-                <p>Title : <span style='color: #9D9D9D;'>Boat</span> </p>
-                <p>Category : <span style='color: #9D9D9D;'>Transport</span> </p>
-                <p>File ID(s): <span style='color: #9D9D9D;'>312447169</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_4256.jpg</span> </p>
-            </div>
-        </div>
-
-        <div id="image3" style='display:none;'>
-            <div class="details-inreview-title">
-                <h3>Children</h3> 
-                <p>Submitted 5 days ago</p>
-            </div>
-            <div class="details-inreview">                    
-                <p>Title : <span style='color: #9D9D9D;'>Children</span> </p>
-                <p>Category : <span style='color: #9D9D9D;'>People</span> </p>
-                <p>File ID(s): <span style='color: #9D9D9D;'>905892469</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_7847.jpg</span> </p>
-            </div>
-        </div>
-
-        <div id="image4" style='display:none;'>
-            <div class="details-inreview-title">
-                <h3>Cultural Dance</h3> 
-                <p>Submitted 7 days ago </p>
-            </div>
-            <div class="details-inreview">                    
-                <p>Title : <span style='color: #9D9D9D;'>Cultural Dance</span> </p>
-                <p>Category : <span style='color: #9D9D9D;'>Culture and Religion</span> </p>
-                <p>File ID(s): <span style='color: #9D9D9D;'>890257169</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_1725.jpg</span> </p>
-            </div>
-        </div>
+        <!--        <div id="image2" style='display:none;'>
+                    <div class="details-inreview-title">
+                        <h3>Boat</h3> 
+                        <p>Submitted 16hrs ago </p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Boat</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>Transport</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>312447169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_4256.jpg</span> </p>
+                    </div>
+                </div>
+        
+                <div id="image3" style='display:none;'>
+                    <div class="details-inreview-title">
+                        <h3>Children</h3> 
+                        <p>Submitted 5 days ago</p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Children</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>People</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>905892469</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_7847.jpg</span> </p>
+                    </div>
+                </div>
+        
+                <div id="image4" style='display:none;'>
+                    <div class="details-inreview-title">
+                        <h3>Cultural Dance</h3> 
+                        <p>Submitted 7 days ago </p>
+                    </div>
+                    <div class="details-inreview">                    
+                        <p>Title : <span style='color: #9D9D9D;'>Cultural Dance</span> </p>
+                        <p>Category : <span style='color: #9D9D9D;'>Culture and Religion</span> </p>
+                        <p>File ID(s): <span style='color: #9D9D9D;'>890257169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_1725.jpg</span> </p>
+                    </div>
+                </div>-->
     </div>
-
 
 
 </div>
@@ -213,12 +219,15 @@
 <div class="notaccepted-content" style="display:none;" id="notaccepted-content">
 
     <div class="image-box-rejected">
-
-        <img src="../../Resources/Img/profile/n5.jpg" id="re5" onclick="clickimage('re5')">
-        <img src="../../Resources/Img/profile/n6.jpg" id="re6" onclick="clickimage('re6')" >
-        <img src="../../Resources/Img/profile/n7.jpg" id="re7" onclick="clickimage('re7')">
-        <img src="../../Resources/Img/profile/n8.jpg" id="re8" onclick="clickimage('re8')">
-
+        <% for (int i = 0; i < m.size(); i++) {
+                if (m.get(i).getStateId() == 3) {
+        %>
+        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="re<%= i + 1%>" onclick="clickimage('re<%= i + 1%>')">
+                <img src="../../Resources/Img/profile/n6.jpg" id="re6" onclick="clickimage('re6')" >
+                <img src="../../Resources/Img/profile/n7.jpg" id="re7" onclick="clickimage('re7')">
+                <img src="../../Resources/Img/profile/n8.jpg" id="re8" onclick="clickimage('re8')">
+        <% }
+            }%>
     </div>
 
     <div class="notaccepted-details">
@@ -281,12 +290,15 @@
 <div class="accepted-content" style="display:none;" id="accepted-content">
 
     <div class="image-box-accepted">
-
-        <img src="../../Resources/Img/profile/a1.jpg" id="re9" onclick="clickimage('re9')">
-        <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
-        <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
-        <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">
-
+        <% for (int i = 0; i < m.size(); i++) {
+                if (m.get(i).getStateId() == 4) {
+        %>
+        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="re<%= i + 1%>" onclick="clickimage('re<%= i + 1%>')">
+                <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
+                <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
+                <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">
+        <% }
+            }%>
     </div>
 
     <div class="accepted-details">
