@@ -15,25 +15,11 @@
 
 %>
 
-<div class="answerqn">
-    <p><%= s.get(i * 3)%></p> 
-    <span>Posted by: <%= s.get((i * 3) + 1)%></span> <span id="time"><%= s.get((i * 3) + 2)%></span>
-    <div class="updown">
-        <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 
-        <span id="up">43</span> 
-        <a href="#" type="button"><img src="../../Resources/Img/down.png"></a>
-        <span id="down">456</span>
-    </div>
-    <div class="answer">
-        <a href="#" type="button" id="myBtn2" onclick="popupanswer('myBtn2')">5 comments</a>
-        <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
-    </div>
-</div>
 
 
 <div class="questions">
-    <p>hiiiii</p> 
-    <span>Posted by: </span> <span id="time">1234</span>
+    <p><%= s.get(i * 3)%></p> 
+    <span>Posted by: <%= s.get((i * 3) + 1)%> </span> <span id="time"><%= s.get((i * 3) + 2)%></span>
     <div class="updown">
         <a href="#" type="button"><img src="Resources/Img/up.png"></a> 
         <span id="up">43</span> 
