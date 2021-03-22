@@ -23,7 +23,7 @@ function view(a)
     var param = "qid=" + id;
 
     
-    request.open("POST", "../../AnswerDisplay", false);
+    request.open("POST", "../../DisplayAnswer", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send(param);
 
