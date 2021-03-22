@@ -78,8 +78,7 @@
         </div> 
         <br><br><br>
         <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
-        <h4 id="quesid" name="quesid" <!--style="display: none"-->></h4>
-
+        
 
 
 
