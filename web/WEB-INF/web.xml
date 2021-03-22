@@ -220,6 +220,10 @@
         <servlet-name>AnswDisplay</servlet-name>
         <servlet-class>Controller.Forum.AnswDisplay</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DetailsofPhotos</servlet-name>
+        <servlet-class>Controller.Photographer.DetailsofPhotos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -435,6 +439,10 @@
     <servlet-mapping>
         <servlet-name>AnswDisplay</servlet-name>
         <url-pattern>/AnswDisplay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailsofPhotos</servlet-name>
+        <url-pattern>/DetailsofPhotos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

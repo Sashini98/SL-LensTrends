@@ -58,7 +58,44 @@ function navigation(button) {
 }
 
 
-function clickimage(click) {
+function clickimage(click, section, photoid) {
+    if (section == "image-box") {
+        var numitems = document.querySelectorAll(".image-box").length;
+        var i;
+        for (i = 0; i <= numitems; i++) {
+            if (click == "re" + (i + 1)) {
+                alert("if-click");
+                document.getElementById(click).style.transform = "scale(1.1)";
+                document.getElementById(click).style.border = "5px solid  #415daa";
+
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function () {
+
+                    if (request.status === 200) {
+                        if (request.readyState === 4) {
+                            var responce = request.responseText;
+                            alert("dakbkdhb");
+                        }
+                    }
+                };
+
+                request.open("POST", "../../DetailsofPhotos", false);
+                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                alert(photoid);
+                request.send("photographid="+photoid);               
+
+//                document.getElementById("image1").style.display = "block";
+//                document.getElementById("image2").style.display = "none";
+//                document.getElementById("image3").style.display = "none";
+//                document.getElementById("image4").style.display = "none";
+            } else {
+                document.getElementById("re" + (i + 1)).style.transform = "";
+                document.getElementById("re" + (i + 1)).style.border = "none";
+            }
+//            alert(i);
+        }
+    }
     if (click == "re1") {
         document.getElementById("re1").style.transform = "scale(1.1)";
         document.getElementById("re1").style.border = "5px solid  #415daa";

@@ -443,6 +443,5 @@
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
 
  
-
     </body>
 </html>

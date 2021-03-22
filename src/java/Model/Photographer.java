@@ -58,7 +58,9 @@ public class Photographer{
         this.fielsOfdInterest = fielsOfdInterest;
         this.postalCode = postalCode;
         this.activeStatus = activeStatus;
-    } 
+    }
+
+
 
     public String getPhotographerId() {
         return photographerId;
@@ -210,10 +212,7 @@ public class Photographer{
 
     public void setState(int state) {
         this.state = state;
-    }
-    
-    
-    
+    }    
 
     
     
