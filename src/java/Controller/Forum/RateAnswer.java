@@ -5,12 +5,16 @@
  */
 package Controller.Forum;
 
+import Controller.DaoImpl.QuestinRatingDaoImpl;
+import Model.Dao.QuestionRatingDao;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.Integer.parseInt;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import jdk.nashorn.internal.runtime.regexp.joni.Option;
 
 /**
  *
@@ -18,16 +22,31 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class RateAnswer extends HttpServlet {
 
-    
-
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
-    }
 
-    
+        int aid = parseInt(request.getParameter("aid"));
+        String rate = request.getParameter("rate");
+
+        try {
+
+            QuestionRatingDao qrDao = new QuestinRatingDaoImpl();
+            System.out.println("id" + aid);
+            System.out.println("rate" + rate);
+            
+            if (rate.equals("like")) {
+                qrDao.addLike(aid);
+                System.out.println("liked");
+            } else {
+                System.out.println("else");
+                qrDao.addDisike(aid);
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }
