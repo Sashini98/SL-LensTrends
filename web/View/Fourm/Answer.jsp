@@ -8,7 +8,8 @@
 
 <!DOCTYPE html>
 <%
-
+    ArrayList<ArrayList<String>> c = (ArrayList<ArrayList<String>>) request.getAttribute("comments");
+    System.out.println(c);
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
     for (int i = 0; i < s.size() / 3; i++) {
 
@@ -30,10 +31,19 @@
         <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
     </div>
 
+
+    <%
+        for (int j = 0; j < c.size(); j++) {        
+            for (int k = 0; k <c.get(j).size(); k++) {
+
+
+    %>
     <div class="comments">
-        <p>hiiiii</p> 
-        <span>Posted by: </span> <span id="time">1234</span>
+        <p><%= c.get(k)%></p> 
+        <span>Posted by: <%= c.get(k+ 1) %></span> <span id="time">1234</span>
     </div>
 
 </div>
+<%}%>
+<%}%>
 <%}%>

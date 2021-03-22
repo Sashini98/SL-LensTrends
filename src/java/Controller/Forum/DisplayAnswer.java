@@ -6,9 +6,15 @@
 package Controller.Forum;
 
 import Controller.DaoImpl.AnswerDaoImpl;
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.CommentDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
 import Model.Answer;
+import Model.Client;
+import Model.Comment;
 import Model.Dao.AnswerDao;
+import Model.Dao.ClientDao;
+import Model.Dao.CommentDao;
 import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
@@ -31,15 +37,17 @@ public class DisplayAnswer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("hihello");
+        
         
         String quesid = request.getParameter("qid");
         int qid = parseInt(quesid);
-        System.out.println("qid:" + qid);
+   
 
         try {
             ArrayList<String> a = new ArrayList();
-
+            ArrayList<String> b = new ArrayList();
+            ArrayList<ArrayList<String>> c= new ArrayList();
+            
             AnswerDao answerDao = new AnswerDaoImpl();
             ArrayList<Answer> answ = (ArrayList<Answer>) answerDao.getAllAnswers(qid);
 
@@ -57,12 +65,49 @@ public class DisplayAnswer extends HttpServlet {
                 a.add(an.getanswer());
                 a.add(an.getPhotographerId());
                 a.add(date);
+                
+                int aid=an.getanswerId();
+                
+                CommentDao commentDao = new CommentDaoImpl();
+                ArrayList<Comment> comm = (ArrayList<Comment>) commentDao.getCommentbyId(aid);
+                 
+                for(Comment cm : comm) 
+                {
+                    
+                    
+                    String c_name = "";
+               
+
+                if (cm.getclientId() == null) {
+                    String phid = cm.getPhotographerId();
+                    Photographer photog = pDao.getPhotographerById(phid);
+
+                    c_name = photog.getFname() + " " + photog.getLname();
+                } else {
+                    String cid = cm.getclientId();
+                    ClientDao clientDao = new ClientDaoImpl();
+                    Client client = clientDao.getClientbyId(cid);
+
+                    c_name = client.getFname() + " " + client.getLname();
+
+                }
+                
+                b.add(cm.getcomment());
+                b.add(c_name);
+                   
+                }
+                
+                c.add(b);
+                   b.clear();
+                
             }
+           
 
             request.setAttribute("answers", a);
-            System.out.println("3");
+            request.setAttribute("comments", c);
+
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
-            System.out.println("suucccsssssss");
+      
         } catch (Exception e) {
         }
     }
