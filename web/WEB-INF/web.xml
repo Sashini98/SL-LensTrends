@@ -224,6 +224,10 @@
         <servlet-name>DetailsofPhotos</servlet-name>
         <servlet-class>Controller.Photographer.DetailsofPhotos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RateAnswer</servlet-name>
+        <servlet-class>Controller.Forum.RateAnswer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -443,6 +447,10 @@
     <servlet-mapping>
         <servlet-name>DetailsofPhotos</servlet-name>
         <url-pattern>/DetailsofPhotos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RateAnswer</servlet-name>
+        <url-pattern>/RateAnswer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

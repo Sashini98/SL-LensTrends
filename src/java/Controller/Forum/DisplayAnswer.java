@@ -33,21 +33,18 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class DisplayAnswer extends HttpServlet {
 
-   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        
+
         String quesid = request.getParameter("qid");
         int qid = parseInt(quesid);
-   
 
         try {
             ArrayList<String> a = new ArrayList();
             ArrayList<String> b = new ArrayList();
-            ArrayList<ArrayList<String>> c= new ArrayList();
-            
+            ArrayList<ArrayList<String>> c = new ArrayList();
+
             AnswerDao answerDao = new AnswerDaoImpl();
             ArrayList<Answer> answ = (ArrayList<Answer>) answerDao.getAllAnswers(qid);
 
@@ -64,50 +61,53 @@ public class DisplayAnswer extends HttpServlet {
 
                 a.add(an.getanswer());
                 a.add(an.getPhotographerId());
-                a.add(date);
-                
-                int aid=an.getanswerId();
-                
+                a.add(date);                
+
+                int aid = an.getanswerId();
+                a.add(String.valueOf(aid));
+
                 CommentDao commentDao = new CommentDaoImpl();
                 ArrayList<Comment> comm = (ArrayList<Comment>) commentDao.getCommentbyId(aid);
-                 
-                for(Comment cm : comm) 
-                {
-                    
-                    
+
+                for (Comment cm : comm) {
                     String c_name = "";
-               
 
-                if (cm.getclientId() == null) {
-                    String phid = cm.getPhotographerId();
-                    Photographer photog = pDao.getPhotographerById(phid);
+                    if (cm.getclientId() == null) {
+                        String phid = cm.getPhotographerId();
+                        Photographer photog = pDao.getPhotographerById(phid);
 
-                    c_name = photog.getFname() + " " + photog.getLname();
+                        c_name = photog.getFname() + " " + photog.getLname();
+                    } else {
+                        String cid = cm.getclientId();
+                        ClientDao clientDao = new ClientDaoImpl();
+                        Client client = clientDao.getClientbyId(cid);
+
+                        c_name = client.getFname() + " " + client.getLname();
+
+                    }
+
+                    b.add(cm.getcomment());
+                    b.add(c_name);
+
+                }
+                System.out.println("b   " + b);
+
+                if (b.isEmpty() == true) {
+                    break;
                 } else {
-                    String cid = cm.getclientId();
-                    ClientDao clientDao = new ClientDaoImpl();
-                    Client client = clientDao.getClientbyId(cid);
+                    c.add(b);
 
-                    c_name = client.getFname() + " " + client.getLname();
-
+                    b.clear();
                 }
-                
-                b.add(cm.getcomment());
-                b.add(c_name);
-                   
-                }
-                
-                c.add(b);
-                   b.clear();
-                
             }
-           
+
+            System.out.println(c);
 
             request.setAttribute("answers", a);
             request.setAttribute("comments", c);
 
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
-      
+
         } catch (Exception e) {
         }
     }

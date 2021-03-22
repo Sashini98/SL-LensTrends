@@ -11,7 +11,7 @@
     ArrayList<ArrayList<String>> c = (ArrayList<ArrayList<String>>) request.getAttribute("comments");
     System.out.println(c);
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
-    for (int i = 0; i < s.size() / 3; i++) {
+    for (int i = 0; i < s.size() / 4; i++) {
 
 
 %>
@@ -19,12 +19,13 @@
 
 
 <div class="questions">
-    <p><%= s.get(i * 3)%></p> 
-    <span>Posted by: <%= s.get((i * 3) + 1)%> </span> <span id="time"><%= s.get((i * 3) + 2)%></span>
+    <p><%= s.get(i * 4)%></p> 
+    <span>Posted by: <%= s.get((i * 4) + 1)%> </span> <span id="time"><%= s.get((i * 4) + 2)%></span>
+    
     <div class="updown">
-        <a href="#" type="button"><img src="Resources/Img/up.png"></a> 
+        <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=like" type="button"><img src="Resources/Img/up.png"></a> 
         <span id="up">43</span> 
-        <a href="#" type="button"><img src="Resources/Img/down.png"></a>
+        <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=dislike" type="button" type="button"><img src="Resources/Img/down.png"></a>
         <span id="down">456</span>
     </div>
     <div class="answer">
