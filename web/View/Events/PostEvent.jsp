@@ -55,12 +55,15 @@
         </div>
         <div class="heading">
             <h3>Post your Events </h3>
-            
+
         </div>
         <div class="main-content">
 
-            <div class="events">                
-                <form id="e" action="../../EventPost" method="POST">
+            <div class="events"> 
+                
+                
+                <form id="eve" action="../../EventPost" method="POST">
+                    
                     <h2>Enter Your Event Details</h2>
                     
                     <div class="formContent">                             
@@ -127,58 +130,14 @@
                     </div><br>
 
                     
+<!--
+                    -->
 
-                    <div class="filter-radio">
-                        <label class="container-radio"><h8>Specify Photographers</h8>
-                            <input type="radio" id="chkYes" name="photographers" value="Specify Photographers" onclick="ShowHideDiv()">
-                            <span class="checkmark-radio"></span>
-                        </label>
-                        <label class="container-radio"><h8>All Photographers</h8>
-                            <input type="radio" id="chkNo" name="photographers" value="All Photographers" onclick="ShowHideDiv()">
-                            <span class="checkmark-radio"></span>
-                        </label>
-                    </div><br><br>
-
-
-
-                    <div id="photo" style="display: none">
-                        <span class="content_name" style="margin-left: 5%;"> Name :  </span><br><br>
-                        <div class="formContent">
-                            <span class="content_name"> Photographer Name </span><br>
-                            <input  style="width: 80%;" type="text" name="pname" required/>
-                            <label for="pname" class="label_name">
-                            </label>
-                            <button type="button" id="add">Add</button> 
-                        </div>
-                    </div>
-
-                    <div id="area" style="display: none">
-                        <span class="content_name" style="margin-left: 10%;">Photographers from : </span><br>
-                        <div class="box">
-                            <select name="area">
-                                <option value="All Island">All Island</option>
-                                <option value="Central Province">Central Province</option>
-                                <option value="Western Province">Western Province</option>
-                                <option value="Southern Province">Southern Province</option>
-                                <option value="Uva Province">Uva Province</option>
-                                <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
-                                <option value="North Western Province">North Western Province</option>
-                                <option value="North Central Province">North Central Province</option>
-                                <option value="Northern Province">Northern Province</option>
-                                <option value="Eastern Province">Eastern Province</option>
-                            </select>
-                        </div>
-                    </div>
-
-
-                    <br><br><br>
+                    <input type="submit" value="submit">
                     
-                        <input type="submit" id="submit" value="Post Event">
-                   
-                    <br><br><br>
+                </form>
+                
 
-
-                </form> 
             </div>       
 
         </div>
