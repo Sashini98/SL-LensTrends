@@ -167,4 +167,26 @@ function viewReportedUser(){
     request.send();
 }
 
+function viewCount(){
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                document.getElementById("c").innerHTML = responce;
+
+
+            }
+        }
+
+    };
+
+    request.open("POST", "/GroupProject/GetUserCount", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
 

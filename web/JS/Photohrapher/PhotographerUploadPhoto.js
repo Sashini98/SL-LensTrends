@@ -1,5 +1,5 @@
 
-/* global uploadimage, uploadmodal, uploadfile */
+/* global uploadimage, uploadmodal, uploadfile, photographid */
 
 function navigation(button) {
     if (button == "tosubmit") {
@@ -58,13 +58,12 @@ function navigation(button) {
 }
 
 
-function clickimage(click, section, photoid) {
-    if (section == "image-box") {
-        var numitems = document.querySelectorAll(".image-box").length;
+function clickimage(click, section, photoid, itemcount) {
+    if (section == "image-box-inreview") {
+        var numitems = itemcount;
         var i;
         for (i = 0; i <= numitems; i++) {
-            if (click == "re" + (i + 1)) {
-                alert("if-click");
+            if (click == "review" + (i + 1)) {
                 document.getElementById(click).style.transform = "scale(1.1)";
                 document.getElementById(click).style.border = "5px solid  #415daa";
 
@@ -75,185 +74,96 @@ function clickimage(click, section, photoid) {
                     if (request.status === 200) {
                         if (request.readyState === 4) {
                             var responce = request.responseText;
-                            alert("dakbkdhb");
+                            var details = JSON.parse(responce);
+
+                            document.getElementById("heading").innerHTML = details[0];
+                            document.getElementById("uploaddate").innerHTML = details[1];
+                            document.getElementById("heading2").innerHTML = details[0];
+                            document.getElementById("category").innerHTML = details[2];
+                            document.getElementById("filedid").innerHTML = details[3];
                         }
                     }
                 };
 
                 request.open("POST", "../../DetailsofPhotos", false);
                 request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                alert(photoid);
-                request.send("photographid="+photoid);               
+                request.send("photographid=" + photoid);
 
-//                document.getElementById("image1").style.display = "block";
-//                document.getElementById("image2").style.display = "none";
-//                document.getElementById("image3").style.display = "none";
-//                document.getElementById("image4").style.display = "none";
             } else {
-                document.getElementById("re" + (i + 1)).style.transform = "";
-                document.getElementById("re" + (i + 1)).style.border = "none";
+                document.getElementById("review" + (i + 1)).style.transform = "scale(1)";
+                document.getElementById("review" + (i + 1)).style.border = "none";
             }
-//            alert(i);
+        }
+    } else if (section == "image-box-rejected") {
+        var numitems = itemcount;
+        var i;
+        for (i = 0; i <= numitems; i++) {
+            if (click == "rejected" + (i + 1)) {
+                document.getElementById(click).style.transform = "scale(1.1)";
+                document.getElementById(click).style.border = "5px solid  #ff6969";
+
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function () {
+
+                    if (request.status === 200) {
+                        if (request.readyState === 4) {
+                            var responce = request.responseText;
+                            var details = JSON.parse(responce);
+//
+                            document.getElementById("heading-notaccepted").innerHTML = details[0];
+                            document.getElementById("date-notaccepted").innerHTML = details[1];
+                            document.getElementById("fileid-notaccepted").innerHTML = details[3];
+                        }
+                    }
+                };
+
+                request.open("POST", "../../DetailsofPhotos", false);
+                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                request.send("photographid=" + photoid);
+
+            } else {
+                document.getElementById("rejected" + (i + 1)).style.transform = "scale(1)";
+                document.getElementById("rejected" + (i + 1)).style.border = "none";
+            }
+
+        }
+    } else if (section == "image-box-accepted") {
+        var numitems = itemcount;
+        var i;
+        for (i = 0; i <= numitems; i++) {
+            if (click == "accept" + (i + 1)) {
+                document.getElementById(click).style.transform = "scale(1.1)";
+                document.getElementById(click).style.border = "5px solid  #3eb80e";
+                var request = new XMLHttpRequest();
+
+                request.onreadystatechange = function () {
+
+                    if (request.status === 200) {
+                        if (request.readyState === 4) {
+                            var responce = request.responseText;
+                            var details = JSON.parse(responce);
+                            document.getElementById("headingaccepted").innerHTML = details[0];
+                            document.getElementById("dateaccepted").innerHTML = details[1];
+                            document.getElementById("fileidaccepted").innerHTML = details[3];
+                        }
+                    }
+                };
+
+                request.open("POST", "../../DetailsofPhotos", false);
+                request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                request.send("photographid=" + photoid);
+
+            } else {
+                document.getElementById("accept" + (i + 1)).style.transform = "";
+                document.getElementById("accept" + (i + 1)).style.border = "none";
+            }
+
         }
     }
-    if (click == "re1") {
-        document.getElementById("re1").style.transform = "scale(1.1)";
-        document.getElementById("re1").style.border = "5px solid  #415daa";
-        document.getElementById("re2").style.transform = "";
-        document.getElementById("re2").style.border = "none";
-        document.getElementById("re3").style.transform = "";
-        document.getElementById("re3").style.border = "none";
-        document.getElementById("re4").style.transform = "";
-        document.getElementById("re4").style.border = "none";
-        document.getElementById("image1").style.display = "block";
-        document.getElementById("image2").style.display = "none";
-        document.getElementById("image3").style.display = "none";
-        document.getElementById("image4").style.display = "none";
-    } else if (click == "re2") {
-        document.getElementById("re1").style.transform = "";
-        document.getElementById("re1").style.border = "none";
-        document.getElementById("re2").style.transform = "scale(1.1)";
-        document.getElementById("re2").style.border = "5px solid  #415daa";
-        document.getElementById("re3").style.transform = "";
-        document.getElementById("re3").style.border = "none";
-        document.getElementById("re4").style.transform = "";
-        document.getElementById("re4").style.border = "none";
-        document.getElementById("image2").style.display = "block";
-        document.getElementById("image1").style.display = "none";
-        document.getElementById("image3").style.display = "none";
-        document.getElementById("image4").style.display = "none";
-    } else if (click == "re3") {
-        document.getElementById("re1").style.transform = "";
-        document.getElementById("re1").style.border = "none";
-        document.getElementById("re3").style.transform = "scale(1.1)";
-        document.getElementById("re3").style.border = "5px solid  #415daa";
-        document.getElementById("re2").style.transform = "";
-        document.getElementById("re2").style.border = "none";
-        document.getElementById("re4").style.transform = "";
-        document.getElementById("re4").style.border = "none";
-        document.getElementById("image3").style.display = "block";
-        document.getElementById("image2").style.display = "none";
-        document.getElementById("image1").style.display = "none";
-        document.getElementById("image4").style.display = "none";
-    } else if (click == "re4") {
-        document.getElementById("re1").style.transform = "";
-        document.getElementById("re1").style.border = "none";
-        document.getElementById("re4").style.transform = "scale(1.1)";
-        document.getElementById("re4").style.border = "5px solid  #415daa";
-        document.getElementById("re3").style.transform = "";
-        document.getElementById("re3").style.border = "none";
-        document.getElementById("re2").style.transform = "";
-        document.getElementById("re2").style.border = "none";
-        document.getElementById("image4").style.display = "block";
-        document.getElementById("image2").style.display = "none";
-        document.getElementById("image3").style.display = "none";
-        document.getElementById("image1").style.display = "none";
-    } else if (click == "re5") {
-        document.getElementById("re6").style.transform = "";
-        document.getElementById("re6").style.border = "none";
-        document.getElementById("re5").style.transform = "scale(1.1)";
-        document.getElementById("re5").style.border = "5px solid  #ff6969";
-        document.getElementById("re7").style.transform = "";
-        document.getElementById("re7").style.border = "none";
-        document.getElementById("re8").style.transform = "";
-        document.getElementById("re8").style.border = "none";
-        document.getElementById("image5").style.display = "block";
-        document.getElementById("image6").style.display = "none";
-        document.getElementById("image7").style.display = "none";
-        document.getElementById("image8").style.display = "none";
-    } else if (click == "re6") {
-        document.getElementById("re5").style.transform = "";
-        document.getElementById("re5").style.border = "none";
-        document.getElementById("re6").style.transform = "scale(1.1)";
-        document.getElementById("re6").style.border = "5px solid  #ff6969";
-        document.getElementById("re7").style.transform = "";
-        document.getElementById("re7").style.border = "none";
-        document.getElementById("re8").style.transform = "";
-        document.getElementById("re8").style.border = "none";
-        document.getElementById("image6").style.display = "block";
-        document.getElementById("image7").style.display = "none";
-        document.getElementById("image8").style.display = "none";
-        document.getElementById("image5").style.display = "none";
-    } else if (click == "re7") {
-        document.getElementById("re6").style.transform = "";
-        document.getElementById("re6").style.border = "none";
-        document.getElementById("re7").style.transform = "scale(1.1)";
-        document.getElementById("re7").style.border = "5px solid  #ff6969";
-        document.getElementById("re8").style.transform = "";
-        document.getElementById("re8").style.border = "none";
-        document.getElementById("re5").style.transform = "";
-        document.getElementById("re5").style.border = "none";
-        document.getElementById("image7").style.display = "block";
-        document.getElementById("image8").style.display = "none";
-        document.getElementById("image5").style.display = "none";
-        document.getElementById("image6").style.display = "none";
-    } else if (click == "re8") {
-        document.getElementById("re7").style.transform = "";
-        document.getElementById("re7").style.border = "none";
-        document.getElementById("re8").style.transform = "scale(1.1)";
-        document.getElementById("re8").style.border = "5px solid  #ff6969";
-        document.getElementById("re6").style.transform = "";
-        document.getElementById("re6").style.border = "none";
-        document.getElementById("re5").style.transform = "";
-        document.getElementById("re5").style.border = "none";
-        document.getElementById("image8").style.display = "block";
-        document.getElementById("image7").style.display = "none";
-        document.getElementById("image6").style.display = "none";
-        document.getElementById("image5").style.display = "none";
-    } else if (click == "re9") {
-        document.getElementById("re10").style.transform = "";
-        document.getElementById("re10").style.border = "none";
-        document.getElementById("re9").style.transform = "scale(1.1)";
-        document.getElementById("re9").style.border = "5px solid  #3eb80e";
-        document.getElementById("re11").style.transform = "";
-        document.getElementById("re11").style.border = "none";
-        document.getElementById("re12").style.transform = "";
-        document.getElementById("re12").style.border = "none";
-        document.getElementById("image9").style.display = "block";
-        document.getElementById("image10").style.display = "none";
-        document.getElementById("image11").style.display = "none";
-        document.getElementById("image12").style.display = "none";
-    } else if (click == "re10") {
-        document.getElementById("re9").style.transform = "";
-        document.getElementById("re9").style.border = "none";
-        document.getElementById("re10").style.transform = "scale(1.1)";
-        document.getElementById("re10").style.border = "5px solid  #3eb80e";
-        document.getElementById("re11").style.transform = "";
-        document.getElementById("re11").style.border = "none";
-        document.getElementById("re12").style.transform = "";
-        document.getElementById("re12").style.border = "none";
-        document.getElementById("image10").style.display = "block";
-        document.getElementById("image9").style.display = "none";
-        document.getElementById("image11").style.display = "none";
-        document.getElementById("image12").style.display = "none";
-    } else if (click == "re11") {
-        document.getElementById("re10").style.transform = "";
-        document.getElementById("re10").style.border = "none";
-        document.getElementById("re11").style.transform = "scale(1.1)";
-        document.getElementById("re11").style.border = "5px solid  #3eb80e";
-        document.getElementById("re9").style.transform = "";
-        document.getElementById("re9").style.border = "none";
-        document.getElementById("re12").style.transform = "";
-        document.getElementById("re12").style.border = "none";
-        document.getElementById("image11").style.display = "block";
-        document.getElementById("image10").style.display = "none";
-        document.getElementById("image9").style.display = "none";
-        document.getElementById("image12").style.display = "none";
-    } else if (click == "re12") {
-        document.getElementById("re10").style.transform = "";
-        document.getElementById("re10").style.border = "none";
-        document.getElementById("re12").style.transform = "scale(1.1)";
-        document.getElementById("re12").style.border = "5px solid  #3eb80e";
-        document.getElementById("re9").style.transform = "";
-        document.getElementById("re9").style.border = "none";
-        document.getElementById("re11").style.transform = "";
-        document.getElementById("re11").style.border = "none";
-        document.getElementById("image12").style.display = "block";
-        document.getElementById("image10").style.display = "none";
-        document.getElementById("image11").style.display = "none";
-        document.getElementById("image9").style.display = "none";
-    }
 }
+
+
 
 window.pressedupload = function () {
 
@@ -325,91 +235,23 @@ window.onload = function () {
         });
     });
 
-// modal for download release
-    var modal = document.getElementById("myModal");
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("download");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function () {
-        modal.style.display = "block";
-    };
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-        //    uploadimage.innerHTML = "Choose file";
-    };
-
-
-// modal for upload release 
-    var Downmodal = document.getElementById("DownModal");
-
-    // Get the button that opens the modal
-    var Downbtn = document.getElementById("uploadrelease");
-
-    // Get the <span> element that closes the modal
-    var Downspan = document.getElementsByClassName("downclose")[0];
-
-    // When the user clicks the button, open the modal 
-    Downbtn.onclick = function () {
-        Downmodal.style.display = "block";
-    };
-
-    // When the user clicks on <span> (x), close the modal
-    Downspan.onclick = function () {
-        Downmodal.style.display = "none";
-        //    uploadimage.innerHTML = "Choose file";
-    };
-
-//    // When the user clicks anywhere outside of the modal, close it
-//    window.onclick = function (event) {
-//        if (event.target == Downmodal) {
-//            Downmodal.style.display = "none";
-//            //        uploadimage.innerHTML = "Choose file";
-//        }
-//    };
-
-
-    var uploadmodal = document.getElementById("upload-modal");
-
-// Get the button that opens the modal
-    var btnup = document.getElementById("upload-photo");
-
-// Get the <span> element that closes the modal
-    var spanup = document.getElementsByClassName("upload-close")[0];
-
-// When the user clicks the button, open the modal 
-    btnup.onclick = function () {
-        uploadmodal.style.display = "block";
-    };
-
-// When the user clicks on <span> (x), close the modal
-    spanup.onclick = function () {
-        uploadmodal.style.display = "none";
-        uploadimage.innerHTML = "Choose file";
-        document.getElementById("up-image").value = '';
-    };
-
-
-
-    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('myModal');
+    var Downmodal = document.getElementById('DownModal');
+    var closemodal = document.getElementById('upload-modal');
     window.onclick = function (event) {
-        if (event.target == modal) {
+        if (event.target == modal) { //modal close window onclick for download and add release
             modal.style.display = "none";
-            //        uploadimage.innerHTML = "Choose file";
         } else if (event.target == Downmodal) {
             Downmodal.style.display = "none";
-        } else if (event.target == uploadmodal) {
-            uploadmodal.style.display = "none";
-            uploadimage.innerHTML = "Choose file";
+        } else if (event.target == closemodal) { //modal close window onclick for upload button
+            closemodal.style.display = "none";
             document.getElementById("up-image").value = '';
+            document.getElementById("uploadimage").innerHTML = "Choose file";
+            document.getElementById("upload-modal").style.display = "none";
         }
-    };
+    }
+
 
 };
 
@@ -423,6 +265,24 @@ function upload(btn) {
     }
 }
 
+function cleardata() {
+    document.getElementById("up-image").value = '';
+    document.getElementById("uploadimage").innerHTML = "Choose file";
+    document.getElementById("upload-modal").style.display = "none";
+
+}
+
+function deletephoto(para) {
+    if (para == "delete-tosubmit") {
+
+        var request = new XMLHttpRequest();
+
+        request.open("POST", "../../DeletePhoto", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("photographid=" + para);
+        alert(photographid);
+    }
+}
 
 
 

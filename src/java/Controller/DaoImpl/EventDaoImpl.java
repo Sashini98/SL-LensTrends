@@ -25,15 +25,15 @@ public class EventDaoImpl implements EventDao {
 
     @Override
     public void addEvent(Event event) throws SQLException {
-        Date d=event.geteventDate();
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(d);
+//        Date d=event.geteventDate();
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        String date = sdf.format(d);
+//        
+//        LocalTime t=event.geteventTime();
+//        SimpleDateFormat sdf1 = new SimpleDateFormat("hh.mm aa");
+//        String time=sdf1.format(t);
         
-        LocalTime t=event.geteventTime();
-        SimpleDateFormat sdf1 = new SimpleDateFormat("hh.mm aa");
-        String time=sdf1.format(t);
-        
-         DB.iud("INSERT INTO event (Event_Name, Type, Date, Time ,Client_Id , hall_no , Venue, street , city , province  ) VALUES ('"+event.geteventName()+"', '"+event.gettype()+"', '"+date+"', '"+time+"', '"+event.getclientId()+"' '"+event.gethallNo()+"','"+event.getvenue()+"','"+event.getstreet()+"','"+event.getcity()+"','"+event.getprovince()+"');");
+         DB.iud("INSERT INTO event (Event_Name, Type, Date, Time ,Client_Id , hall_no , Venue, street , city , province  ) VALUES ('"+event.geteventName()+"', '"+event.gettype()+"', '"+event.geteventDate()+"', '"+event.geteventTime()+"', '"+event.getclientId()+"' '"+event.gethallNo()+"','"+event.getvenue()+"','"+event.getstreet()+"','"+event.getcity()+"','"+event.getprovince()+"');");
     
     }
 
@@ -65,7 +65,8 @@ public class EventDaoImpl implements EventDao {
         {
            Event e=new Event();
           e.seteventName(event.getString("Event_Name"));
-          e.seteventDate(event.getDate("Date"));
+          e.seteventDate(event.getString("Date"));
+          e.seteventTate(event.getString("Time"));
           e.setclientId(event.getString("Client_Id"));
           e.settype(event.getString("Type"));
           e.sethallNo(event.getString("hall_No"));

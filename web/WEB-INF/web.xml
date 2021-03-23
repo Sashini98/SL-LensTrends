@@ -233,6 +233,14 @@
         <servlet-class>Controller.Event.EventPost</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>GetUserCount</servlet-name>
+        <servlet-class>Controller.Admin.GetUserCount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeletePhoto</servlet-name>
+        <servlet-class>Controller.Photographer.DeletePhoto</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>CartDetails</servlet-name>
         <servlet-class>Controller.Clent.CartDetails</servlet-class>
     </servlet>
@@ -467,6 +475,14 @@
     <servlet-mapping>
         <servlet-name>ViewSubPlanDetails</servlet-name>
         <url-pattern>/ViewSubPlanDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetUserCount</servlet-name>
+        <url-pattern>/GetUserCount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletePhoto</servlet-name>
+        <url-pattern>/DeletePhoto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>CartDetails</servlet-name>

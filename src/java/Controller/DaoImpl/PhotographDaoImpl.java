@@ -114,4 +114,9 @@ public class PhotographDaoImpl implements PhotographDao {
         return Loadphotos;
     }
 
+    @Override
+    public void deletephoto(int PhotographId) throws SQLException {
+        DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId +"'");
+    }
+
 }

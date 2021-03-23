@@ -33,8 +33,9 @@ public class ViewSubPlanDetails extends HttpServlet {
             throws ServletException, IOException {
 
         try {
-
+ 
             int planid = Integer.parseInt(request.getParameter("id"));
+            
             
             SubscriptionPlanDao sDao = new SubPlanDaoImpl();
             SubscriptionPlan plan = sDao.getSubscriptionPlanById(planid);
@@ -42,7 +43,7 @@ public class ViewSubPlanDetails extends HttpServlet {
             ArrayList<String> c = new ArrayList();
 
             Date time = plan.getTime();
-            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             String t = sdf.format(time);
 
             c.add(plan.getPname());

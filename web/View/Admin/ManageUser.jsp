@@ -6,11 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<div onload="viewReportedUser();">
+<div onload="viewReportedUser(); viewCount();">
     <div style="background-color: #f7f6f9;">
-        <div class="content">
-            <div class="box" style="background-color: #EAEAEA">
-                <h2>Online Users</h2>
+        <div class="content" id="c">
+<!--            <div class="box" style="background-color: #EAEAEA">
+                <h2>Active Users</h2>
                 <div class="icon1">
                     <img src="../../Resources/Img/online.png">
                 </div><br> <br> <br> 
@@ -28,7 +28,7 @@
                 <div class="icon">                    
                     <img src="../../Resources/Img/reported.png">
                 </div> <br> <br> <br>
-            </div>            
+            </div>            -->
         </div>
         <br> <br> 
         <div class="b3">                
