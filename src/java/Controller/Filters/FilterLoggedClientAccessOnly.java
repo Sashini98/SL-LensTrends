@@ -32,12 +32,22 @@ public class FilterLoggedClientAccessOnly implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse resp = (HttpServletResponse) response;
         Client c = (Client) req.getSession().getAttribute("loggedClient");
-      
+
         if (c != null) {
-            chain.doFilter(request, response);   
-        }else{
+            chain.doFilter(request, response);
+        } else {
             // 404 
-            resp.sendRedirect("/GroupProject/View/Error404.jsp");
+            if (request instanceof HttpServletRequest) {
+                String url = ((HttpServletRequest) request).getRequestURL().toString();
+                String queryString = ((HttpServletRequest) request).getQueryString();
+                
+                String[] splitUrl = url.split("/");
+                
+                req.getSession().setAttribute("URL", "/"+splitUrl[3]+"/"+splitUrl[4]+"/"+splitUrl[5]+"/"+splitUrl[6]+"?"+queryString);
+            }
+            
+            resp.sendRedirect("/GroupProject/View/login.jsp?loc=LCaof");
+//            resp.sendRedirect("/GroupProject/View/Error404.jsp");
         }
 
     }

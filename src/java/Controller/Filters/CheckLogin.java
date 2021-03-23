@@ -61,7 +61,7 @@ public class CheckLogin implements Filter {
 
             } catch (Exception e) {
                 // ask contrtibutor or client if its  same email and pw
-                System.out.println("exception bnnn hadapn");
+
                 String attribute = (String) request.getAttribute("account");
                 if (attribute != (null)) {
                     req.setAttribute("account", "true");

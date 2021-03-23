@@ -105,6 +105,8 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
                             } else if (page.equals("nh")) {
                                 response.sendRedirect("View/Notifications/notificationsHome.jsp");
+                            } else if(page.equals("LCaof")){
+                                response.sendRedirect((String) request.getSession().getAttribute("URL"));
                             } else {
                                 response.sendRedirect("View/Home.jsp");
                             }
