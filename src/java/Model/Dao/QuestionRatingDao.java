@@ -5,16 +5,14 @@
  */
 package Model.Dao;
 
-import Model.ReportedPhotographer;
 import java.sql.SQLException;
-import java.util.List;
 
 /**
  *
- * @author Madusha
+ * @author Sashini Shihara
  */
-public interface ReportedPhotographerDao {
+public interface QuestionRatingDao {
     
-    public List getAllReportedUsers() throws SQLException;
-    public int reportedUserCount() throws SQLException;
+    public void addLike(int answerId) throws SQLException;
+    public void addDisike(int answerId) throws SQLException;
 }

@@ -188,7 +188,7 @@
         <servlet-name>PurchaceHistoryDetails</servlet-name>
         <servlet-class>Controller.Clent.PurchaceHistoryDetails</servlet-class>
     </servlet>
-     <servlet>
+    <servlet>
         <servlet-name>RejectPhoto</servlet-name>
         <servlet-class>Controller.Admin.RejectPhoto</servlet-class>
     </servlet>
@@ -207,6 +207,30 @@
     <servlet>
         <servlet-name>Forum_filter</servlet-name>
         <servlet-class>Controller.Forum.Forum_filter</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewSubPlanDetails</servlet-name>
+        <servlet-class>Controller.Admin.ViewSubPlanDetails</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DisplayAnswer</servlet-name>
+        <servlet-class>Controller.Forum.DisplayAnswer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AnswDisplay</servlet-name>
+        <servlet-class>Controller.Forum.AnswDisplay</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DetailsofPhotos</servlet-name>
+        <servlet-class>Controller.Photographer.DetailsofPhotos</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RateAnswer</servlet-name>
+        <servlet-class>Controller.Forum.RateAnswer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EventPost</servlet-name>
+        <servlet-class>Controller.Event.EventPost</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -396,7 +420,7 @@
         <servlet-name>PurchaceHistoryDetails</servlet-name>
         <url-pattern>/PurchaceHistoryDetails</url-pattern>
     </servlet-mapping>
-        <servlet-mapping>
+    <servlet-mapping>
         <servlet-name>RejectPhoto</servlet-name>
         <url-pattern>/RejectPhoto</url-pattern>
     </servlet-mapping>
@@ -415,6 +439,26 @@
     <servlet-mapping>
         <servlet-name>Forum_filter</servlet-name>
         <url-pattern>/Forum_filter</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplayAnswer</servlet-name>
+        <url-pattern>/DisplayAnswer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AnswDisplay</servlet-name>
+        <url-pattern>/AnswDisplay</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DetailsofPhotos</servlet-name>
+        <url-pattern>/DetailsofPhotos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RateAnswer</servlet-name>
+        <url-pattern>/RateAnswer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EventPost</servlet-name>
+        <url-pattern>/EventPost</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -39,5 +39,14 @@ public class ReportedPhotographerDaoImpl implements ReportedPhotographerDao{
         }
         return a;
     }
+
+    @Override
+    public int reportedUserCount() throws SQLException {
+        int cnt=0;
+        ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM reported_photographer");
+        num.next();
+        cnt = num.getInt("rowcount");
+        return cnt;
+    }
     
 }

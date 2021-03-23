@@ -60,7 +60,7 @@
         <div class="main-content">
 
             <div class="events">                
-                <form id="e" action="../../PostEvent" method="POST">
+                <form id="e" action="../../EventPost" method="POST">
                     <h2>Enter Your Event Details</h2>
                     <div class="formContent">                             
                         <span class="content_name"> Event Name </span><br>

@@ -1,18 +1,20 @@
 // Get the modal
 
-function view()
+function view(a)
 {
+
+
     var request = new XMLHttpRequest();
+    var id = a;
 
     request.onreadystatechange = function () {
-
         if (request.status === 200) {
+
             if (request.readyState === 4) {
-
-
 
                 var responce = request.responseText;
                 document.getElementById("s").innerHTML = responce;
+
 
 
             }
@@ -20,12 +22,14 @@ function view()
 
     };
 
+    var param = "qid=" + id;
 
 
-
-    request.open("POST", "../../AnswerDisplay", false);
+    request.open("POST", "/GroupProject/DisplayAnswer", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send();
+    request.send(param);
+
+
 
 }
 

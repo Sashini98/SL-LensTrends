@@ -24,8 +24,6 @@ function viewPhotoDetails(id)
                 document.getElementById("reso").value = details[11];
                 document.getElementById("pid").value = details[12];
                 
-
-
             }
         }
 

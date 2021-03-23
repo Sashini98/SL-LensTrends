@@ -184,6 +184,33 @@ public class QuestionDaoImpl implements QuestionDao {
         
     }
 
+    @Override
+    public List<Question> getQuestByKeyWord(String keyword) throws SQLException {
+        List<Question> a = new ArrayList<>();
+        try {
+            ResultSet ques=DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%'");
+           
+            while(ques.next())
+        {
+            Question q=new Question();
+            q.setquestionId(ques.getInt("Question_Id"));
+            q.settitle(ques.getString("title"));
+            q.setquestion(ques.getString("Question"));
+            q.setquestion_date(ques.getDate("Question_Date"));
+            q.setclientId(ques.getString("Client_Id"));
+            q.setPhotographerId(ques.getString("Photographer_Id"));
+            
+            a.add(q);
+
+        }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(PhotographDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return a;
+    }
+
   
     
     

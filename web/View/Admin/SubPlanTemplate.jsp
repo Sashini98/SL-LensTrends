@@ -23,8 +23,8 @@
         <p>$<%=m.get(i).getPrice()%><span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
     </div>
 
-    <div class="arrow"  onclick="viewEdit();">
-        <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a>
+    <div class="arrow" onclick="viewEdit();">
+        <a type="button" id=<%=m.get(i).getPid() %>><img src="../../Resources/Img/arrow.png"></a>
     </div>
 </div>
 
@@ -38,7 +38,7 @@
     </div>
 
     <div class="arrow" onclick="viewEdit();">
-        <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a> 
+        <a type="button" id=<%=m.get(i+1).getPid() %>><img src="../../Resources/Img/arrow.png"></a> 
     </div> <br> <br>  <br> 
 
 </div>
@@ -53,7 +53,7 @@
     </div>
 
     <div class="arrow"  onclick="viewEdit();" >
-        <a type="button" id="arrow"><img src="../../Resources/Img/arrow.png"></a>
+        <a type="button" id=<%=m.get(i+2).getPid() %>><img src="../../Resources/Img/arrow.png"></a>
     </div> <br> <br>  <br> 
 </div>      
 

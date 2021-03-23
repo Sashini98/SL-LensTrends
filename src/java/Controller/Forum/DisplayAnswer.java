@@ -6,9 +6,15 @@
 package Controller.Forum;
 
 import Controller.DaoImpl.AnswerDaoImpl;
+import Controller.DaoImpl.ClientDaoImpl;
+import Controller.DaoImpl.CommentDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
 import Model.Answer;
+import Model.Client;
+import Model.Comment;
 import Model.Dao.AnswerDao;
+import Model.Dao.ClientDao;
+import Model.Dao.CommentDao;
 import Model.Dao.PhotographerDao;
 import Model.Photographer;
 import java.io.IOException;
@@ -16,7 +22,6 @@ import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,18 +31,19 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sashini Shihara
  */
-public class AnswerDisplay extends HttpServlet {
+public class DisplayAnswer extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("hellooooooo");
+
         String quesid = request.getParameter("qid");
         int qid = parseInt(quesid);
-        System.out.println("qid:" + qid);
 
         try {
             ArrayList<String> a = new ArrayList();
+            ArrayList<String> b = new ArrayList();
+            ArrayList<ArrayList<String>> c = new ArrayList();
 
             AnswerDao answerDao = new AnswerDaoImpl();
             ArrayList<Answer> answ = (ArrayList<Answer>) answerDao.getAllAnswers(qid);
@@ -55,15 +61,55 @@ public class AnswerDisplay extends HttpServlet {
 
                 a.add(an.getanswer());
                 a.add(an.getPhotographerId());
-                a.add(date);
+                a.add(date);                
+
+                int aid = an.getanswerId();
+                a.add(String.valueOf(aid));
+
+                CommentDao commentDao = new CommentDaoImpl();
+                ArrayList<Comment> comm = (ArrayList<Comment>) commentDao.getCommentbyId(aid);
+
+                for (Comment cm : comm) {
+                    String c_name = "";
+
+                    if (cm.getclientId() == null) {
+                        String phid = cm.getPhotographerId();
+                        Photographer photog = pDao.getPhotographerById(phid);
+
+                        c_name = photog.getFname() + " " + photog.getLname();
+                    } else {
+                        String cid = cm.getclientId();
+                        ClientDao clientDao = new ClientDaoImpl();
+                        Client client = clientDao.getClientbyId(cid);
+
+                        c_name = client.getFname() + " " + client.getLname();
+
+                    }
+
+                    b.add(cm.getcomment());
+                    b.add(c_name);
+
+                }
+                System.out.println("b   " + b);
+
+                if (b.isEmpty() == true) {
+                    break;
+                } else {
+                    c.add(b);
+
+                    b.clear();
+                }
             }
 
+            System.out.println(c);
+
             request.setAttribute("answers", a);
+            request.setAttribute("comments", c);
+
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
-            System.out.println("suucccsssssss");
+
         } catch (Exception e) {
         }
-
     }
 
 }

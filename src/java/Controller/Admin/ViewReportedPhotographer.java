@@ -35,14 +35,17 @@ public class ViewReportedPhotographer extends HttpServlet {
         try {
             ArrayList<String> a = new ArrayList();
 
-            ReportedPhotographerDao messageDao = new ReportedPhotographerDaoImpl();
-            ClientDao cDao = new ClientDaoImpl();
+            ReportedPhotographerDao rDao = new ReportedPhotographerDaoImpl();
+            ClientDao cDao = new ClientDaoImpl();           
             PhotographerDao pDao = new PhotographerDaoImp();
-            ArrayList<ReportedPhotographer> rp = (ArrayList<ReportedPhotographer>) messageDao.getAllReportedUsers();
+            
+            ArrayList<ReportedPhotographer> rp = (ArrayList<ReportedPhotographer>) rDao.getAllReportedUsers();
+          
 
             for(ReportedPhotographer r : rp) {
                 
                 String cname = "";
+                
                 String cid = r.getClientId();
                 Client client = cDao.getClientbyId(cid);
                 cname = client.getFname() + " " + client.getLname(); 
@@ -57,6 +60,7 @@ public class ViewReportedPhotographer extends HttpServlet {
                 a.add(photographer.getEmail());
                 a.add(r.getReason());
                 a.add(r.getDescription());
+                
                 
             }
 
