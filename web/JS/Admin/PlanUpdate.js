@@ -9,7 +9,6 @@ function viewEdit(id) {
 
                 var responce = request.responseText;
                 var details = JSON.parse(responce);
-                alert(responce);
 
                 document.getElementById("name").value = details[0];
                 document.getElementById("price").value = details[1];
@@ -23,6 +22,7 @@ function viewEdit(id) {
     request.open("POST", "/GroupProject/ViewSubPlanDetails", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("id=" + id);
+
 }
 
 function removeEdit() {

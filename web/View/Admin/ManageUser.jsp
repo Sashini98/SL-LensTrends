@@ -10,7 +10,7 @@
     <div style="background-color: #f7f6f9;">
         <div class="content">
             <div class="box" style="background-color: #EAEAEA">
-                <h2>Online Users</h2>
+                <h2>Active Users</h2>
                 <div class="icon1">
                     <img src="../../Resources/Img/online.png">
                 </div><br> <br> <br> 
