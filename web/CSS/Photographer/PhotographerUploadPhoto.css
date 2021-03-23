@@ -399,7 +399,7 @@ div .details .releases p span a {
     /*flex:1;*/
 }
 
-.inreview-content .image-box {
+.inreview-content .image-box-inreview {
     /*background-color: red;*/
     width: 70%; 
     display: flex;
@@ -414,7 +414,7 @@ div .details .releases p span a {
     border: 5px solid  #415daa;
 }
 
-.inreview-content .image-box img {
+.inreview-content .image-box-inreview img {
     height: 200px;
     width:200px;
     margin-right: 5%;
@@ -443,6 +443,10 @@ div .details .releases p span a {
 .inreview-details .details-inreview-title p {
     font-family: 'Questrial', sans-serif;
 }
+/*.inreview-details .details-inreview-title span {
+    font-family: 'Questrial', sans-serif;
+}*/
+
 
 .inreview-details .details-inreview {
     display: flex;
