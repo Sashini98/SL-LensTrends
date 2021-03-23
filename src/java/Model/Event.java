@@ -17,8 +17,8 @@ public class Event {
     String eventId;
     String eventName;
     String type;
-    Date eventDate;
-    LocalTime eventTime;
+    String eventDate;
+    String eventTime;
     /*time eventTime;*/
     String area;
     String clientId;
@@ -31,7 +31,7 @@ public class Event {
     public Event() {
     }
 
-    public Event(String eventId, String eventName, String type, Date eventDate, LocalTime eventTime, String area, String clientId, String hallNo, String venue, String street, String city, String province) {
+    public Event(String eventId, String eventName, String type, String eventDate, String eventTime, String area, String clientId, String hallNo, String venue, String street, String city, String province) {
         this.eventId = eventId;
         this.eventName = eventName;
         this.type = type;
@@ -71,19 +71,19 @@ public class Event {
         this.type = type;
     }
 
-    public Date geteventDate() {
+    public String geteventDate() {
         return eventDate;
     }
 
-    public void seteventDate(Date eventDate) {
+    public void seteventDate(String eventDate) {
         this.eventDate = eventDate;
     }
 
-    public LocalTime geteventTime() {
+    public String geteventTime() {
         return eventTime;
     }
 
-    public void seteventTate(LocalTime eventTime) {
+    public void seteventTate(String eventTime) {
         this.eventTime = eventTime;
     }
 
