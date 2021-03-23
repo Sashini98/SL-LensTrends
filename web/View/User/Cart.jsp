@@ -4,8 +4,14 @@
     Author     : kesh
 --%>
 
+
+<%@page import="Model.Client"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    Client c = (Client) session.getAttribute("loggedClient");
+%>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
         <title>My Favourites</title>
     </head>
-    <body style="background-color: #f9f9f9;">
+    <body style="background-color: #f9f9f9;" onload="loadCartItems('<%= c.getClientId() %>')">
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -85,5 +91,6 @@
             </div>
 
         </div>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/JS/User/Cart.js"></script>
     </body>
 </html>

@@ -17,6 +17,7 @@
     Photographer photographer = (Photographer) session.getAttribute("photographer");
 
     String keywords = p.getKeywords();
+    System.out.println(keywords);
     String[] keywordArray = keywords.split(",");
     for (String keyword : keywordArray) {
         keyword = keyword.trim();
@@ -157,7 +158,7 @@
                     <hr />
                     <div class="ImageActions">
                         <button class="BuyBtn">Buy Photo</button>
-                        <button class="CartBtn" onclick="window.location.href = 'Cart.jsp?picid='">Add to Favourite</button>
+                        <button class="CartBtn" onclick="window.location.href = 'Cart.jsp?no=<%= p.getId() %>'">Add to Favourite</button>
                         <button class="ReportBtn" id="ReportBtn">Report Photo</button>
                     </div>
                 </div>

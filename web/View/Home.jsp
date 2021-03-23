@@ -70,7 +70,7 @@
                     <%
                     } else {
                     %>
-                    <a href="../LogOut?loc=ch" >Log Out</a> 
+                    <a href="/GroupProject/LogOut?loc=ch" >Log Out</a> 
                     <%
                         }
                     %>
