@@ -100,7 +100,7 @@
                 <a href="../../View/Fourm/BrowseQn.jsp" type="button">Browse</a>
             </div>
 
-            <div class="box2" style="cursor: pointer;" onclick="window.location.href = '../../View/Events/EventsPost.jsp';">
+            <div class="box2" style="cursor: pointer;" onclick="window.location.href = '../../View/Events/PostEvent.jsp';">
                 <img src="../../Resources/Img/add-calendar.svg" height="100px" width="100px">
                 <h2>Post Events</h2>
                 <p>Are You Ready to post your event?<br> We have the best photographers to conduct your event with a grand success. Make it a memorable one!</p>
