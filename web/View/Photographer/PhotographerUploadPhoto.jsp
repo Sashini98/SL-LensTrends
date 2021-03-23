@@ -16,7 +16,7 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Photographer/PhotographerUploadPhoto.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
-     
+
         <title>Upload</title>
     </head>
     <body style="background-color: #f9f9f9;">
@@ -63,7 +63,7 @@
 
                 <!-- Upload Modal content -->
                 <div class="upload-modal-content">
-                    <span class="upload-close" id='upload-close' onclick="document.getElementById('upload-modal').style.display ='none'; clear();">&times;</span>
+                    <span class="upload-close" id='upload-close' onclick="document.getElementById('upload-modal').style.display = 'none';cleardata()">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
                         <input type="file" value="select" id="up-image" style="display:none;" onchange="pressedupload();">
@@ -81,6 +81,7 @@
                                 <li>Minimum image resolution is 4MP</li>
                                 <li>Maximum image resolution is 100MP</li>
                                 <li>Maximum file size is 45MB</li>
+
                             </ul>
                         </div>
                     </div>
@@ -442,6 +443,6 @@
 
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
 
- 
     </body>
 </html>
+

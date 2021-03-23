@@ -101,7 +101,7 @@ div .details .images {
     height:30%;
     width: 50%; 
     margin-top: -10%;
-    margin-left: 38%;
+    margin-left: 35%;
     margin-bottom: 0;
 }
 
@@ -419,6 +419,7 @@ div .details .releases p span a {
     width:200px;
     margin-right: 5%;
     padding:0;
+    margin-bottom: 3%;
 }
 
 .inreview-content .inreview-details {
@@ -432,7 +433,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -13%;
+    margin-top: -30.5%;
 }
 
 .inreview-details .details-inreview-title h3 {
@@ -489,6 +490,7 @@ div .details .releases p span a {
     flex-direction: row;
     flex-wrap: wrap;
     /*flex:1;*/
+    
 }
 
 .notaccepted-content .image-box-rejected {
@@ -511,6 +513,7 @@ div .details .releases p span a {
     width:200px;
     margin-right: 5%;
     padding:0;
+    margin-bottom: 3%;
 }
 
 .notaccepted-content .notaccepted-details {
@@ -524,7 +527,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -13%;
+    margin-top: -30.5%;
 }
 
 .notaccepted-details .details-notaccepted-title h3 {
@@ -588,6 +591,7 @@ div .details .releases p span a {
     width:200px;
     margin-right: 5%;
     padding:0;
+    margin-bottom: 2%;
 }
 
 .sale-album {
@@ -632,7 +636,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -13%;
+    margin-top: -30.5%;
 }
 
 .accepted-details .details-accepted-title h3 {
