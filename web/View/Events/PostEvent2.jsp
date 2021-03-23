@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Event Post
-    Created on : Nov 8, 2020, 8:02:42 AM
+    Document   : PostEvent2
+    Created on : Mar 23, 2021, 10:29:02 AM
     Author     : Sashini Shihara
 --%>
 
@@ -55,79 +55,12 @@
         </div>
         <div class="heading">
             <h3>Post your Events </h3>
-            
+
         </div>
         <div class="main-content">
 
-            <div class="events">                
-                <form id="e" action="../../EventPost" method="POST">
-                    <h2>Enter Your Event Details</h2>
-                    
-                    <div class="formContent">                             
-                        <span class="content_name"> Event Name </span><br>
-                        <input type="text" name="name" required/>
-                        <label for="name" class="label_name">
-                        </label>
-                    </div><br>
-
-                    <div class="formContent">
-                        <span class="content_name"> Event Type </span><br>
-                        <input type="text" name="type" required/>
-                        <label for="type" class="label_name">
-                        </label>
-                    </div><br>
-
-                    <div class="formContent">
-                        <span class="content_name"> Date of Event </span><br>
-                        <input type="date" name="dob" required class="doe"/>
-                        <label for="doe" class="label_name">
-                        </label>
-                    </div><br>
-
-                   <div class="formContent">
-                        <span class="content_name"> Event Starting Time </span><br>
-                        <input type="time" name="time" required/>
-                        <label for="time" class="label_name">
-                        </label>
-                    </div><br>
-                    
-                     <div class="formContent">
-                        <span class="content_name"> Event Venue </span><br>
-                        <input type="text" name="venue" required/>
-                        <label for="venue" class="label_name">
-                        </label>
-                    </div><br>
-                    
-                     <div class="formContent">
-                        <span class="content_name"> Hall Number </span><br>
-                        <input type="text" name="hall" required/>
-                        <label for="hall" class="label_name">
-                        </label>
-                    </div><br>
-                    
-                     <div class="formContent">
-                        <span class="content_name"> Venue Address(Street) </span><br>
-                        <input type="text" name="street" required/>
-                        <label for="street" class="label_name">
-                        </label>
-                    </div><br>
-                    
-                     <div class="formContent">
-                        <span class="content_name"> Venue Address(City) </span><br>
-                        <input type="text" name="city" required/>
-                        <label for="city" class="label_name">
-                        </label>
-                    </div><br>
-                    
-                     <div class="formContent">
-                        <span class="content_name"> Venue Address(Province) </span><br>
-                        <input type="text" name="province" required/>
-                        <label for="province" class="label_name">
-                        </label>
-                    </div><br>
-
-                    
-
+            <div class="events"> 
+                <form>
                     <div class="filter-radio">
                         <label class="container-radio"><h8>Specify Photographers</h8>
                             <input type="radio" id="chkYes" name="photographers" value="Specify Photographers" onclick="ShowHideDiv()">
@@ -169,16 +102,7 @@
                             </select>
                         </div>
                     </div>
-
-
-                    <br><br><br>
-                    
-                        <input type="submit" id="submit" value="Post Event">
-                   
-                    <br><br><br>
-
-
-                </form> 
+                </form>
             </div>       
 
         </div>
@@ -230,4 +154,5 @@
 
     </body>
 </html>
+
 
