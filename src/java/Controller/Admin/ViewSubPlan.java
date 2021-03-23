@@ -9,7 +9,6 @@ import Controller.DaoImpl.SubPlanDaoImpl;
 import Model.Dao.SubscriptionPlanDao;
 import Model.SubscriptionPlan;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,7 +34,6 @@ public class ViewSubPlan extends HttpServlet {
             ArrayList<SubscriptionPlan> plan = (ArrayList<SubscriptionPlan>) subDao.getAllSubscriptionPlans();
 
             for (SubscriptionPlan s : plan) {
-
                 a.add(s.getPid() + "");
                 a.add(s.getPname());
                 a.add(s.getPrice() + "");

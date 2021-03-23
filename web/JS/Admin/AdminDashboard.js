@@ -298,20 +298,21 @@ function show(selectedTab) {
 //                alert(responce);
                 document.getElementById("DashboardBody").innerHTML = responce;
                 if (selectedTab === 'notification') {
-                     viewMessages();
-                }else if(selectedTab === 'photoapproval'){
+                    viewMessages();
+                } else if (selectedTab === 'photoapproval') {
                     viewPhotos();
-                }else if(selectedTab === 'user'){
+                } else if (selectedTab === 'user') {
                     viewReportedUser();
-                }else if(selectedTab === 'photomanage'){
+                    viewCount();
+                } else if (selectedTab === 'photomanage') {
                     viewReportedPhotos();
-                }else if (selectedTab === 'forum'){
+                } else if (selectedTab === 'forum') {
                     viewQuestion();
-                }else if (selectedTab === 'subscription') {
+                } else if (selectedTab === 'subscription') {
                     viewPlan();
-                } 
+                }
             }
-    }
+        }
 
     };
     request.open("POST", "../../AdminDasboardHandler", false);
