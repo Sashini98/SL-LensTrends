@@ -54,7 +54,7 @@ public class ViewSubPlanDetails extends HttpServlet {
             response.getWriter().write(toJson);
 
         } catch (SQLException ex) {
-            Logger.getLogger(ViewSubPlanDetails.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
 
     }
