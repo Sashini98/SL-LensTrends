@@ -21,5 +21,5 @@ public interface PhotographDao {
     public Photograph getPhotographById(int id) throws SQLException;
     public ArrayList<Photograph> getAllphotosofPhotographer(String photographer_id) throws SQLException;
     public void  updatePhotographState(int status, int PhotographId) throws SQLException;
-    
+    public void deletephoto(int PhotographId) throws SQLException;
 }

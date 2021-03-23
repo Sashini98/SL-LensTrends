@@ -56,10 +56,11 @@
     </div>
 
     <div class="details">
-        <img src="../../Resources/Img/delete.svg" id="delete" style="cursor: pointer">
+        <!--<img src="../../Resources/Img/delete.svg" id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">-->
+        <a id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">Delete</a>
         <div class="images">
             <img src="../../Resources/Img/profile/<%=path%>" class="detailsimg" id="image">                   
-        </div>
+        </div>   
         <div class="category">
             <label for="category">Category:</label>
             <select name="category" id="category" onfocus="this.size = 10;" onblur='this.size = 1;' 
@@ -159,9 +160,9 @@
         </div>
 
     </div>
-<!--    <script>
-    
-    </script>-->
+    <!--    <script>
+        
+        </script>-->
     <%
 
     } else {

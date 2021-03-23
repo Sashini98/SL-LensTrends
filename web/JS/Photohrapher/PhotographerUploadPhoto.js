@@ -1,5 +1,5 @@
 
-/* global uploadimage, uploadmodal, uploadfile */
+/* global uploadimage, uploadmodal, uploadfile, photographid */
 
 function navigation(button) {
     if (button == "tosubmit") {
@@ -272,7 +272,17 @@ function cleardata() {
 
 }
 
+function deletephoto(para) {
+    if (para == "delete-tosubmit") {
 
+        var request = new XMLHttpRequest();
+
+        request.open("POST", "../../DeletePhoto", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("photographid=" + para);
+        alert(photographid);
+    }
+}
 
 
 
