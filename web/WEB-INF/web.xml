@@ -460,6 +460,10 @@
         <servlet-name>EventPost</servlet-name>
         <url-pattern>/EventPost</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewSubPlanDetails</servlet-name>
+        <url-pattern>/ViewSubPlanDetails</url-pattern>
+    </servlet-mapping>   
     <session-config>
         <session-timeout>
             10
