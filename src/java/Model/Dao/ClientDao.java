@@ -37,6 +37,6 @@ public interface ClientDao {
     public Client getDeactivatedClientbyEmail (String email) throws SQLException;
     
     public String getLastId() throws SQLException;
-    
+    public int getClientCount(int Status) throws SQLException;
     
 }

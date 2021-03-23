@@ -410,4 +410,15 @@ public class PhotographerDaoImp implements PhotographerDao {
         return categories;
     }
 
+    @Override
+    public int getPhotographerCount(int Status) throws SQLException {
+        int cnt=0;
+        ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM photographer WHERE ActiveStatus=" + Status + "");
+        num.next();
+        cnt = num.getInt("rowcount");
+        return cnt;
+    }
+
+    
+
 }
