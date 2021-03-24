@@ -30,7 +30,7 @@
         <span id="down">456</span>
     </div>
     <div class="answer">
-        <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
+        <a href="/GroupProject/View/Fourm/AddComment.jsp?aid=<%= s.get((i * 4) + 3)%>" type="button" id="comm">Comment</a>
     </div>
 
 
