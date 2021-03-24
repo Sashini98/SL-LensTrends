@@ -16,8 +16,7 @@
 
 
 <div class="content" style="display: block;" id="tosubmit-content">
-    <%        
-        int countsubmit = 0;
+    <%        int countsubmit = 0;
         int countinreview = 0;
         int countnotaccepted = 0;
         int countaccepted = 0;
@@ -57,10 +56,11 @@
     </div>
 
     <div class="details">
-        <img src="../../Resources/Img/delete.svg" id="delete" style="cursor: pointer">
+        <!--<img src="../../Resources/Img/delete.svg" id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">-->
+        <a id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">Delete</a>
         <div class="images">
             <img src="../../Resources/Img/profile/<%=path%>" class="detailsimg" id="image">                   
-        </div>
+        </div>   
         <div class="category">
             <label for="category">Category:</label>
             <select name="category" id="category" onfocus="this.size = 10;" onblur='this.size = 1;' 
@@ -160,17 +160,9 @@
         </div>
 
     </div>
-    <script>
-        var modal = document.getElementById('myModal');
-        var Downmodal = document.getElementById('DownModal');
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            } else if (event.target == Downmodal) {
-                Downmodal.style.display = "none";
-            }
-        };
-    </script>
+    <!--    <script>
+        
+        </script>-->
     <%
 
     } else {
@@ -200,7 +192,7 @@
                 if (m.get(i).getStateId() == 2) {
                     inreview += 1;
         %>
-        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="review<%= inreview%>" onclick="clickimage('review<%= inreview%>', 'image-box-inreview',<%= m.get(i).getId()%>,<%= countinreview %>)">
+        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="review<%= inreview%>" onclick="clickimage('review<%= inreview%>', 'image-box-inreview',<%= m.get(i).getId()%>,<%= countinreview%>)">
         <% }
             }%>
     </div>
@@ -286,7 +278,7 @@
                     notaccepted += 1;
 
         %>
-        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="rejected<%= notaccepted%>" onclick="clickimage('rejected<%= notaccepted%>', 'image-box-rejected',<%= m.get(i).getId()%>,<%= countnotaccepted %>)">
+        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="rejected<%= notaccepted%>" onclick="clickimage('rejected<%= notaccepted%>', 'image-box-rejected',<%= m.get(i).getId()%>,<%= countnotaccepted%>)">
         <!--        <img src="../../Resources/Img/profile/n6.jpg" id="re6" onclick="clickimage('re6')" >
                 <img src="../../Resources/Img/profile/n7.jpg" id="re7" onclick="clickimage('re7')">
                 <img src="../../Resources/Img/profile/n8.jpg" id="re8" onclick="clickimage('re8')">-->
@@ -304,7 +296,7 @@
                 <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
                 <span>Image with Water Mark</span>
                 <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id="fileid-notaccepted"></span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_8756.jpg</span> </p>
+
 
             </div>
         </div>
@@ -367,10 +359,13 @@
         if (countaccepted > 0) {
     %>
     <div class="image-box-accepted">
-        <% for (int i = 0; i < m.size(); i++) {
+        <%
+            int accepted = 0;
+            for (int i = 0; i < m.size(); i++) {
                 if (m.get(i).getStateId() == 4) {
+                    accepted += 1;
         %>
-        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="re<%= i + 1%>" onclick="clickimage('re<%= i + 1%>','image-box-accepted',<%= countaccepted %>)">
+        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>)">
         <!--        <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
                 <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
                 <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">-->
@@ -381,8 +376,8 @@
     <div class="accepted-details">
         <div id="image9">
             <div class="details-accepted-title">
-                <h3>Sripada</h3> 
-                <p>Submitted on 12th Nov 2018 </p>
+                <h3 id='headingaccepted'></h3> 
+                <p>Submitted on: <span id='dateaccepted'></span></p>
             </div>
             <div class="details-accepted">                    
 
@@ -390,62 +385,62 @@
                 <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;5 Times</span> </p>
                 <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
                 <span style="font-weight: bold;">Total Earing:&emsp; $50</span>
-                <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716797169</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_8756.jpg</span> </p>
+                <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id='fileidaccepted'></span> </p>
+
 
             </div>
         </div>
 
-        <div id="image10" style='display:none;'>
-            <div class="details-accepted-title">
-                <h3>Beach Side</h3> 
-                <p>Submitted on Oct 20 2019</p>
-            </div>
-            <div class="details-accepted">                    
+        <!--        <div id="image10" style='display:none;'>
+                    <div class="details-accepted-title">
+                        <h3>Beach Side</h3> 
+                        <p>Submitted on Oct 20 2019</p>
+                    </div>
+                    <div class="details-accepted">                    
+        
+        
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;2 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$20</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $20</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>713456169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_2356.jpg</span> </p>
+        
+                    </div>
+                </div>-->
 
+        <!--        <div id="image11" style='display:none;'>
+                    <div class="details-accepted-title">
+                        <h3>Pelican</h3> 
+                        <p>Submitted 25 days ago</p>
+                    </div>
+                    <div class="details-accepted">                    
+        
+        
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;25 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $250</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>457897169</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_9056.jpg</span> </p>
+        
+                    </div>
+                </div>-->
 
-                <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;2 Times</span> </p>
-                <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$20</span> </p>
-                <span style="font-weight: bold;">Total Earing:&emsp; $20</span>
-                <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>713456169</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_2356.jpg</span> </p>
-
-            </div>
-        </div>
-
-        <div id="image11" style='display:none;'>
-            <div class="details-accepted-title">
-                <h3>Pelican</h3> 
-                <p>Submitted 25 days ago</p>
-            </div>
-            <div class="details-accepted">                    
-
-
-                <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;25 Times</span> </p>
-                <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
-                <span style="font-weight: bold;">Total Earing:&emsp; $250</span>
-                <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>457897169</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_9056.jpg</span> </p>
-
-            </div>
-        </div>
-
-        <div id="image12" style='display:none;'>
-            <div class="details-accepted-title">
-                <h3>Kovil</h3> 
-                <p>Submitted on April 23 2019 </p>
-            </div>
-            <div class="details-accepted">                    
-
-
-                <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;20 Times</span> </p>
-                <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$20</span> </p>
-                <span style="font-weight: bold;">Total Earing:&emsp; $400</span>
-                <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716426769</span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_3456.jpg</span> </p>
-
-            </div>
-        </div>
+        <!--        <div id="image12" style='display:none;'>
+                    <div class="details-accepted-title">
+                        <h3>Kovil</h3> 
+                        <p>Submitted on April 23 2019 </p>
+                    </div>
+                    <div class="details-accepted">                    
+        
+        
+                        <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;20 Times</span> </p>
+                        <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$20</span> </p>
+                        <span style="font-weight: bold;">Total Earing:&emsp; $400</span>
+                        <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>716426769</span> </p>
+                        <p>Original name(s) : <span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>IGP_3456.jpg</span> </p>
+        
+                    </div>
+                </div>-->
     </div>
     <%
 

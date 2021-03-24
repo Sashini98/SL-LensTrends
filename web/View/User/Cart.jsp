@@ -4,8 +4,14 @@
     Author     : kesh
 --%>
 
+
+<%@page import="Model.Client"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    Client c = (Client) session.getAttribute("loggedClient");
+%>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
         <title>My Favourites</title>
     </head>
-    <body style="background-color: #f9f9f9;">
+    <body style="background-color: #f9f9f9;" onload="loadCartItems('<%= c.getClientId() %>'); cartItemCount('<%= c.getClientId() %>');">
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -57,12 +63,12 @@
                         My Favourites
 
                     </h1>
-                    <span>
-                        Images (9)
+                    <span id="ItemCount">
+                        Images (0)
                     </span>
                 </div>
-                <div class="row"> 
-                    <div class="column">
+                <div class="row" id="cartPhotos"> 
+<!--                    <div class="column">
                         <img src="../../Resources/Img/Gallery Sample Images/Photographer/agnieszka-kowalczyk-44rwabC9jjI-unsplash.jpg" style="width:100%">
                         <img src="../../Resources/Img/Gallery Sample Images/Photographer/dexman-ten-hwe-eM5z-GX10p8-unsplash.jpg" style="width:100%">
                     </div>
@@ -79,11 +85,12 @@
                         <img src="../../Resources/Img/Gallery Sample Images/Photographer/mike-swigunski-zDDQZgZjFtM-unsplash.jpg" style="width:100%">
                         <img src="../../Resources/Img/Gallery Sample Images/Photographer/rowan-heuvel-qfiSDPQD9Ws-unsplash.jpg" style="width:100%">
                         <img src="../../Resources/Img/Gallery Sample Images/Photographer/sasha-set-Y8wzb5b_st0-unsplash.jpg" style="width:100%">
-                    </div>  
+                    </div>  -->
                 </div>
 
             </div>
 
         </div>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/JS/User/Cart.js"></script>
     </body>
 </html>

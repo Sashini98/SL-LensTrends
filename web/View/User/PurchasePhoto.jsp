@@ -157,7 +157,7 @@
                     <hr />
                     <div class="ImageActions">
                         <button class="BuyBtn">Buy Photo</button>
-                        <button class="CartBtn" onclick="window.location.href = 'Cart.jsp'">Add to Favourite</button>
+                        <button class="CartBtn" onclick="window.location.href = 'Cart.jsp?no=<%= p.getId() %>'">Add to Favourite</button>
                         <button class="ReportBtn" id="ReportBtn">Report Photo</button>
                     </div>
                 </div>

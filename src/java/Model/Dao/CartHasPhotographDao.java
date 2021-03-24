@@ -5,6 +5,7 @@
  */
 package Model.Dao;
 
+import Model.Photograph;
 import Model.cart_has_photograph;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
  */
 public interface CartHasPhotographDao {
     
-    public ArrayList<cart_has_photograph> getCartItems(String clientID) throws SQLException;
+    public ArrayList<Photograph> getCartItems(String clientID) throws SQLException;
+    public int getCartItemCount(String clientID) throws SQLException;
     
 }

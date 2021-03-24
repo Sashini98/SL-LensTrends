@@ -101,20 +101,38 @@ div .details .images {
     height:30%;
     width: 50%; 
     margin-top: -10%;
-    margin-left: 38%;
+    margin-left: 35%;
     margin-bottom: 0;
 }
 
 div .details .images img {
     height: auto;
     width: 60%; 
+    margin-top: 5%;
 }
 
-#delete {
+/*#delete-tosubmit {
     margin-top: 8%;
     margin-left: 70%;
-    height:6%;
-    width: 6%;
+    height:4%;
+    width: 4%;
+    cursor: pointer;
+}*/
+
+#delete-tosubmit {
+    margin-left: 20%;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 10%;
+    font-size: 110%;
+    background-color: orange;
+    color: white;
+    width: 13%;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#delete-tosubmit:hover {
+    background-color: red;
     cursor: pointer;
 }
 /*
@@ -419,6 +437,7 @@ div .details .releases p span a {
     width:200px;
     margin-right: 5%;
     padding:0;
+    margin-bottom: 3%;
 }
 
 .inreview-content .inreview-details {
@@ -432,7 +451,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -13%;
+    margin-top: -30.5%;
 }
 
 .inreview-details .details-inreview-title h3 {
@@ -489,6 +508,7 @@ div .details .releases p span a {
     flex-direction: row;
     flex-wrap: wrap;
     /*flex:1;*/
+    
 }
 
 .notaccepted-content .image-box-rejected {
@@ -511,6 +531,7 @@ div .details .releases p span a {
     width:200px;
     margin-right: 5%;
     padding:0;
+    margin-bottom: 3%;
 }
 
 .notaccepted-content .notaccepted-details {
@@ -524,7 +545,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -13%;
+    margin-top: -30.5%;
 }
 
 .notaccepted-details .details-notaccepted-title h3 {
@@ -588,6 +609,7 @@ div .details .releases p span a {
     width:200px;
     margin-right: 5%;
     padding:0;
+    margin-bottom: 2%;
 }
 
 .sale-album {
@@ -632,7 +654,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -13%;
+    margin-top: -30.5%;
 }
 
 .accepted-details .details-accepted-title h3 {
