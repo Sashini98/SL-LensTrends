@@ -7,8 +7,11 @@
 <%@page import="java.util.ArrayList"%>
 
 <!DOCTYPE html>
+
+
 <%
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
+    System.out.println("s  "+s);
 
     for (int i = 0; i < s.size() / 4; i++) {
 
@@ -23,12 +26,12 @@
 
     <div class="updown">
         <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=like" type="button"><img src="Resources/Img/up.png"></a> 
-        <span id="up">43</span> 
+        <span id="up">55</span> 
         <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=dislike" type="button" type="button"><img src="Resources/Img/down.png"></a>
-        <span id="down">456</span>
+        <span id="down">33</span>
     </div>
     <div class="answer">
-        <a href="#" type="button" id="comm" onclick="popupanswer('comm')">Comment</a>
+        <a href="/GroupProject/View/Fourm/AddComment.jsp?aid=<%= s.get((i * 4) + 3)%>" type="button" id="comm">Comment</a>
     </div>
 
 

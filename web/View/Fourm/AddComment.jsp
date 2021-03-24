@@ -1,37 +1,32 @@
 <%-- 
-    Document   : AddAnswer
-    Created on : Jan 19, 2021, 8:50:26 AM
+    Document   : AddComment
+    Created on : Mar 24, 2021, 6:47:17 PM
     Author     : Sashini Shihara
 --%>
 
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%
-
-    ArrayList<String> q = (ArrayList<String>) request.getAttribute("question");
-    for (int i = 0; i < q.size() / 2; i++) {
 
 
-%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="CSS/forum/AskQues.css"/>
+        <link type="text/css" rel="stylesheet" href="../../CSS/forum/AskQues.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <title>Answer</title>
     </head>
-    <body style="background-color: #f7f6f9;">
+  <body style="background-color: #f7f6f9;">
 
         <div class="fixedheader">  
 
             <div class="pageheader">
 
-                <a href="../Home.jsp" type="button"> <img src="Resources/Img/7.png" height="55px" width="60px"> </a>
+                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
@@ -45,7 +40,7 @@
                 </div>
                 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="Resources/Img/notification.png"> </a>
+                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
                 </div>
 
                 <div class="logout">
@@ -72,17 +67,21 @@
                 </div>-->
 
             </div>  
+      
+      <%
+          String aid = request.getParameter("aid");
+      %>
             <div name="s" id="s">
                 <div class="questions">                
-                    <form id="answer" action="/GroupProject/Add_answer" method="POST" >
-                        <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
-                        <!--<h4 id="quesid" name="quesid" style="display: none"><%= q.get((i * 2) + 1)%></h4>-->
-                        <input type="text" id="quesid" name="quesid" style="display: none" value="<%= q.get((i * 2) + 1)%>">
+                    <form id="comment" action="../../Add_comment" method="POST" >
+                        <h3 id="quest" name="quest"><label for="Question"><b></b></label><br></h3>
+                        <!--<h4 id="quesid" name="quesid" style="display: none"></h4>-->
+                        <input type="text" id="ansid" name="ansid" style="display: none" value=aid>
 
-                    <h3><label for="Body"><b>Answer</b></label><br></h3>
-                    <textarea id="answ" name="answ" rows="10" cols="50"></textarea><br><br><br>         
+                    <h3><label for="Body"><b>Comment</b></label><br></h3>
+                    <textarea id="comm" name="comm" rows="10" cols="50"></textarea><br><br><br>         
                   
-                    <input type="submit" id="submit" value="Post Answer"><br><br><br>
+                    <input type="submit" id="submit" value="Add Comment"><br><br><br>
                     </form>
                 </div>       
             </div>
@@ -98,6 +97,3 @@
 
 </body>
 </html>
-
-<%}%>
-

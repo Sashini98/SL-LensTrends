@@ -15,4 +15,9 @@ public interface QuestionRatingDao {
     
     public void addLike(int answerId) throws SQLException;
     public void addDisike(int answerId) throws SQLException;
+    public void addLikeatBegin(int answerId) throws SQLException;
+    public void addDisikeatBegin(int answerId) throws SQLException;
+    
+    public int getLikes(int answerId) throws SQLException;
+    public int getDislikes(int answerId) throws SQLException;
 }
