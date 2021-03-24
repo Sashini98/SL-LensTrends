@@ -61,15 +61,30 @@ public class CartHasPhotographDaoImpl implements CartHasPhotographDao {
 
     @Override
     public void addCartItem(String clientID, int photoId) throws SQLException {
-        
+
         ResultSet cartIdRes = DB.search("SELECT Cart_Id FROM cart WHERE Client_Id = '" + clientID + "';");
         if (cartIdRes.next()) {
-            
-        }else{
-            DB.iud("INSEERT INTO cart(Cart_Id,Client_Id) VALUES ()");
-            
+
+            int cartId = cartIdRes.getInt("Cart_Id");
+            DB.iud("INSERT INTO cart_has_photograph (Cart_Id,Photograph_Id) VALUES ('" + cartId + "', '" + photoId + "')");
+
+        } else {
+            ResultSet lastCartId = DB.search("SELECT Cart_Id FROM cart ORDER BY Cart_Id DESC LIMIT 1;");
+
+            int cid;
+            if (lastCartId.next()) {
+                cid = lastCartId.getInt("Cart_Id");
+                cid += 1;
+            } else {
+                cid = 1;
+            }
+
+            DB.iud("INSERT INTO cart(Cart_Id,Client_Id) VALUES ('" + cid + "','" + clientID + "')");
+
+            DB.iud("INSERT INTO cart_has_photograph (Cart_Id,Photograph_Id) VALUES ('" + cid + "', '" + photoId + "')");
+
         }
-        
+
     }
 
 }
