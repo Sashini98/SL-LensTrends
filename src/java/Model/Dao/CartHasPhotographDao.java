@@ -17,5 +17,6 @@ import java.util.ArrayList;
 public interface CartHasPhotographDao {
     
     public ArrayList<Photograph> getCartItems(String clientID) throws SQLException;
+    public int getCartItemCount(String clientID) throws SQLException;
     
 }

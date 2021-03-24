@@ -11,7 +11,7 @@
     String attribute = (String) request.getAttribute("account");
     String message = (String) request.getAttribute("msg");
     String para = request.getParameter("loc");
-    System.out.println(para);
+
     if (para == null) {
         para = "ch";
     }

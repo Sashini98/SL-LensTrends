@@ -17,7 +17,6 @@
     Photographer photographer = (Photographer) session.getAttribute("photographer");
 
     String keywords = p.getKeywords();
-    System.out.println(keywords);
     String[] keywordArray = keywords.split(",");
     for (String keyword : keywordArray) {
         keyword = keyword.trim();

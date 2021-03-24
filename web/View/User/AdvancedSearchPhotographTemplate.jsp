@@ -10,13 +10,13 @@
 <%
 
     ArrayList<Photograph> photos = (ArrayList<Photograph>) session.getAttribute("searchedPics");
-    System.out.println(photos.size());
+
     if (photos.size() > 0) {
 
 %>
 <div class="column">
     <%        for (int i = 0; i < photos.size(); i += 4) {
-            System.out.println(photos.get(i).getId() + " 0");
+
     %>
     <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId()%>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
@@ -28,7 +28,7 @@
 <div class="column">
     <%
         for (int i = 1; i < photos.size(); i += 4) {
-            System.out.println(photos.get(i).getId() + " 1");
+
     %>
     <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId()%>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
@@ -40,7 +40,7 @@
 <div class="column">
     <%
         for (int i = 2; i < photos.size(); i += 4) {
-            System.out.println(photos.get(i).getId() + " 2");
+
     %>
     <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId()%>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">
@@ -52,7 +52,7 @@
 <div class="column">
     <%
         for (int i = 3; i < photos.size(); i += 4) {
-            System.out.println(photos.get(i).getId() + " 3");
+
     %>
     <a href="../../PurchasePhotoDetails?id=<%= photos.get(i).getId()%>">
         <img src="../../Resources/Img/Gallery Sample Images/<%= photos.get(i).getPath()%>" style="width:100%">

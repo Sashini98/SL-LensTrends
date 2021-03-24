@@ -244,6 +244,10 @@
         <servlet-name>CartDetails</servlet-name>
         <servlet-class>Controller.Clent.CartDetails</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CartItemCount</servlet-name>
+        <servlet-class>Controller.Clent.CartItemCount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -487,6 +491,10 @@
     <servlet-mapping>
         <servlet-name>CartDetails</servlet-name>
         <url-pattern>/CartDetails</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartItemCount</servlet-name>
+        <url-pattern>/CartItemCount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

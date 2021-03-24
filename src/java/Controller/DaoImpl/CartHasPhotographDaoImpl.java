@@ -27,18 +27,36 @@ public class CartHasPhotographDaoImpl implements CartHasPhotographDao {
         ResultSet cartIdRes = DB.search("SELECT Cart_Id FROM cart WHERE Client_Id = '" + clientID + "';");
 
         if (cartIdRes.next()) {
-            ResultSet cartItems = DB.search("SELECT cart_has_photograph FROM cart WHERE Cart_Id = '" + cartIdRes.getInt("cartIdRes") + "'");
+            ResultSet cartItems = DB.search("SELECT Photograph_Id FROM cart_has_photograph WHERE Cart_Id = '" + cartIdRes.getInt("Cart_Id") + "'");
+            PhotographDao pd = new PhotographDaoImpl();
             while (cartItems.next()) {
-                
+
                 int photoid = cartItems.getInt("Photograph_Id");
-                PhotographDao pd = new PhotographDaoImpl();
-                Photograph photographById = pd.getPhotographById(photoid);
-                items.add(photographById);
-                
+                items.add(pd.getPhotographById(photoid));
+
             }
 
         }
         return items;
+    }
+
+    @Override
+    public int getCartItemCount(String clientID) throws SQLException {
+        int itemCount = 0;
+
+        ResultSet cartIdRes = DB.search("SELECT Cart_Id FROM cart WHERE Client_Id = '" + clientID + "';");
+
+        if (cartIdRes.next()) {
+
+            ResultSet cartItems = DB.search("SELECT COUNT(Photograph_Id) AS ItemCount FROM cart_has_photograph WHERE Cart_Id = '" + cartIdRes.getInt("Cart_Id") + "' GROUP BY Cart_Id;");
+            if (cartItems.next()) {
+
+                itemCount = cartItems.getInt("ItemCount");
+
+            }
+
+        }
+        return itemCount;
     }
 
 }

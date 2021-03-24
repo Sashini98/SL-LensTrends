@@ -8,15 +8,10 @@ package Controller.Clent;
 import Controller.DaoImpl.CartHasPhotographDaoImpl;
 import Model.Dao.CartHasPhotographDao;
 import Model.Photograph;
-import Model.cart_has_photograph;
-import com.google.gson.Gson;
-import com.sun.org.apache.bcel.internal.generic.AASTORE;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,25 +21,25 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kesh
  */
-public class CartDetails extends HttpServlet {
-
+public class CartItemCount extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         try {
-            String clentId = request.getParameter("clientId");
-
+            String clentId = request.getParameter("ClientId");
+            
             CartHasPhotographDao chpd = new CartHasPhotographDaoImpl();
-            ArrayList<Photograph> cartItems = chpd.getCartItems(clentId);
+            int cartItems = chpd.getCartItemCount(clentId);
 
-            request.setAttribute("cartItems", cartItems);
-            request.getRequestDispatcher("View/User/CartTemplate.jsp").forward(request, response);
+            response.getWriter().write(cartItems + "");
+            
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-      
+        
     }
+
 
 }
