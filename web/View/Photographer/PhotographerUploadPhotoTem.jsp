@@ -38,16 +38,18 @@
         <%
             int x = 0;
             String path = "";
+            int PhotoId = 0;
             for (int i = 0; i < m.size(); i++) {
                 if (m.get(i).getStateId() == 1) {
                     if (x == 0) {
                         path = m.get(i).getPath();
+                        PhotoId = m.get(i).getId();
                         x += 1;
                     }
         %>
         <input type="radio" id="r<%= i + 1%>" name="radio"/>
         <label for="r<%= i + 1%>">
-            <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
+            <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
 
@@ -59,7 +61,7 @@
         <!--<img src="../../Resources/Img/delete.svg" id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">-->
         <a id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">Delete</a>
         <div class="images">
-            <img src="../../Resources/Img/profile/<%=path%>" class="detailsimg" id="image">                   
+            <img photo_id="<%=PhotoId%>" src="../../Resources/Img/profile/<%=path%>" class="detailsimg" id="image">                   
         </div>   
         <div class="category">
             <label for="category">Category:</label>
@@ -360,12 +362,20 @@
     %>
     <div class="image-box-accepted">
         <%
+            String accpetedpath ="";
+            int x = 0;
             int accepted = 0;
+            int PhotoIdaccepted = 0;
             for (int i = 0; i < m.size(); i++) {
-                if (m.get(i).getStateId() == 4) {
+                if (m.get(i).getStateId() == 4) {                    
                     accepted += 1;
+                    if (x == 0) {
+                        accpetedpath = m.get(i).getPath();
+                        PhotoIdaccepted = m.get(i).getId();
+                        x += 1;
+                    }
         %>
-        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>)">
+        <img photo-id-accepted="<%=m.get(i).getId()%>" class="selection-accepted" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>)">
         <!--        <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
                 <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
                 <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">-->
@@ -389,6 +399,8 @@
 
 
             </div>
+            
+            <span id="deleteaccepted" class="deleteaccepted" photo-id-accepted="<%=PhotoIdaccepted%>" srcpath="<%=accpetedpath%>" onclick="deletephoto('deleteaccepted')">Delete</span>
         </div>
 
         <!--        <div id="image10" style='display:none;'>
