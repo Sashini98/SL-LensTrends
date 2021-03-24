@@ -77,10 +77,12 @@
 
         </div> 
         <br><br><br>
-        <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
-        
 
 
+        <div class="ques">
+            <p><%= q.get((i * 2))%></p> 
+
+        </div>
 
         <div class="main-content">
             <div name="s" id="s">

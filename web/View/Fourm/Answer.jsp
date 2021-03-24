@@ -9,7 +9,7 @@
 <!DOCTYPE html>
 <%
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
-    
+
     for (int i = 0; i < s.size() / 4; i++) {
 
 
@@ -17,7 +17,7 @@
 
 
 
-<div class="questions">
+<div class="answers">
     <p><%= s.get(i * 4)%></p> 
     <span>Posted by: <%= s.get((i * 4) + 1)%> </span> <span id="time"><%= s.get((i * 4) + 2)%></span>
 
@@ -35,28 +35,29 @@
     <%
 
         ArrayList<String> c = (ArrayList<String>) request.getAttribute("comments");
-        
-             
+        outerloop:
         for (int j = 0; j < c.size(); j++) {
-            int cnt=0;
-            
-            
-            
-            System.out.println("c first  " + c.get(j));
-            
+
             if (c.get(j).equals("end")) {
-                continue;
-                
-            } 
-            
-            
+                for (int k = 0; k < j / 2; k++) {
+                   
     %>
     <div class="comments">
-        <p><%= c.get(j * 2)%></p> 
-        <span>Posted by: <%= c.get((j * 2 ) + 1)%></span> <span id="time">1234</span>
+        <p><%= c.get(k * 2)%></p> 
+        <span>Posted by: <%= c.get((k * 2) + 1)%></span> <span id="time">1234</span>
     </div>
 
+
+    <%}
+                    for (int l = 0; l <= j; l++) {
+                        c.remove(l);
+                        j--;
+                        l--;
+                    }
+                    
+                    break outerloop;
+
+                } }%>
 </div>
-  <%}%>      
-<%}%>
-<%}%>
+           <%
+        }%>
