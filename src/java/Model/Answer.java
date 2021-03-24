@@ -5,6 +5,7 @@
  */
 package Model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -12,66 +13,73 @@ import java.util.Date;
  * @author Sashini Shihara
  */
 public class Answer {
-    
+
     int answerId;
     String answer;
     Date answerDate;
     int questionId;
     String photographerId;
-    
-    public Answer()
-    {}
-    
-    public Answer(int answerId,String answer,Date answerDate,int questionId,String photographerId)
-    {
-        this.answerId=answerId;
-        this.answer=answer;
-        this.answerDate=answerDate;
-        this.questionId=questionId;
-        this.photographerId=photographerId;
+    ArrayList<Comment> comments;
+
+    public Answer() {
     }
-    
-    public int getanswerId()
-    {
+
+    public Answer(int answerId, String answer, Date answerDate, int questionId, String photographerId, ArrayList<Comment> comments) {
+        this.answerId = answerId;
+        this.answer = answer;
+        this.answerDate = answerDate;
+        this.questionId = questionId;
+        this.photographerId = photographerId;
+        this.comments = comments;
+    }
+
+    public int getanswerId() {
         return answerId;
     }
-    
+
     public void setanswerId(int answerId) {
         this.answerId = answerId;
     }
-    
-    public String getanswer()
-    {
+
+    public String getanswer() {
         return answer;
     }
-    
-     public void setanswer(String answer) {
+
+    public void setanswer(String answer) {
         this.answer = answer;
     }
-     
-     public Date getanswerDate() {
+
+    public Date getanswerDate() {
         return answerDate;
     }
 
     public void setanswerDate(Date answerDate) {
         this.answerDate = answerDate;
     }
-    
-     public int getquestionId() {
+
+    public int getquestionId() {
         return questionId;
     }
 
     public void setquestionId(int questionId) {
         this.questionId = questionId;
     }
-    
-     public String getPhotographerId() {
+
+    public String getPhotographerId() {
         return photographerId;
     }
 
     public void setPhotographerId(String photographerId) {
         this.photographerId = photographerId;
     }
-    
-    
+
+    public ArrayList<Comment> getComments() {
+        return comments;
+
+    }
+
+    public void setComments(ArrayList<Comment> comments) {
+        this.comments = comments;
+    }
+
 }

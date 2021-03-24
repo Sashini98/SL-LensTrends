@@ -33,7 +33,7 @@ public class EventDaoImpl implements EventDao {
 //        SimpleDateFormat sdf1 = new SimpleDateFormat("hh.mm aa");
 //        String time=sdf1.format(t);
         
-         DB.iud("INSERT INTO event (Event_Name, Type, Date, Time ,Client_Id , hall_no , Venue, street , city , province  ) VALUES ('"+event.geteventName()+"', '"+event.gettype()+"', '"+event.geteventDate()+"', '"+event.geteventTime()+"', '"+event.getclientId()+"' '"+event.gethallNo()+"','"+event.getvenue()+"','"+event.getstreet()+"','"+event.getcity()+"','"+event.getprovince()+"');");
+         DB.iud("INSERT INTO event (Event_Id,Event_Name, Type, Date, Time ,Client_Id , hall_no , Venue, street , city , province  ) VALUES ('"+event.geteventId()+"','"+event.geteventName()+"', '"+event.gettype()+"', '"+event.geteventDate()+"', '"+event.geteventTime()+"', '"+event.getclientId()+"' '"+event.gethallNo()+"','"+event.getvenue()+"','"+event.getstreet()+"','"+event.getcity()+"','"+event.getprovince()+"');");
     
     }
 
@@ -94,6 +94,21 @@ public class EventDaoImpl implements EventDao {
 
         }
         return a;
+    }
+    
+     @Override
+    public String getLastId() throws SQLException {
+       String id="";
+       ResultSet eid=DB.search("SELECT Event_Id as eid FROM event ORDER BY Event_Id DESC LIMIT 1; ");
+           
+        if (eid.next()) {
+            id=eid.getString("eid");
+            return id;
+
+        } else {
+            return null;
+        }
+       
     }
     
 }
