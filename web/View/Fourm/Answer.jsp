@@ -8,9 +8,8 @@
 
 <!DOCTYPE html>
 <%
-    ArrayList<ArrayList<String>> c = (ArrayList<ArrayList<String>>) request.getAttribute("comments");
-    System.out.println(c);
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
+    
     for (int i = 0; i < s.size() / 4; i++) {
 
 
@@ -21,7 +20,7 @@
 <div class="questions">
     <p><%= s.get(i * 4)%></p> 
     <span>Posted by: <%= s.get((i * 4) + 1)%> </span> <span id="time"><%= s.get((i * 4) + 2)%></span>
-    
+
     <div class="updown">
         <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=like" type="button"><img src="Resources/Img/up.png"></a> 
         <span id="up">43</span> 
@@ -34,17 +33,30 @@
 
 
     <%
-        for (int j = 0; j < c.size(); j++) {        
-            for (int k = 0; k <c.get(j).size(); k++) {
 
-
+        ArrayList<String> c = (ArrayList<String>) request.getAttribute("comments");
+        
+             
+        for (int j = 0; j < c.size(); j++) {
+            int cnt=0;
+            
+            
+            
+            System.out.println("c first  " + c.get(j));
+            
+            if (c.get(j).equals("end")) {
+                continue;
+                
+            } 
+            
+            
     %>
     <div class="comments">
-        <p><%= c.get(k)%></p> 
-        <span>Posted by: <%= c.get(k+ 1) %></span> <span id="time">1234</span>
+        <p><%= c.get(j * 2)%></p> 
+        <span>Posted by: <%= c.get((j * 2 ) + 1)%></span> <span id="time">1234</span>
     </div>
 
 </div>
-<%}%>
+  <%}%>      
 <%}%>
 <%}%>
