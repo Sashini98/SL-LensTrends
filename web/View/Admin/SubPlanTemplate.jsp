@@ -10,6 +10,7 @@
 <!DOCTYPE html>
 <%
     ArrayList<SubscriptionPlan> m = (ArrayList<SubscriptionPlan>) request.getAttribute("plan");
+    ArrayList<String> a = (ArrayList<String>) request.getAttribute("details");
 
 %>
 
@@ -22,11 +23,11 @@
         <p>$<%=m.get(0).getPrice()%><span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
     </div>
 
-    <div class="arrow" onclick="viewEdit(<%=m.get(0).getPid() %>);">
+    <div class="arrow" onclick="viewEdit(<%=m.get(0).getPid()%>);">
         <a type="button"><img src="../../Resources/Img/arrow.png"></a>
     </div>
 </div>
-        
+
 <div class="box" id="box-color1">
     <h2><%=m.get(1).getPname()%></h2>
     <div class="icon">
@@ -36,12 +37,12 @@
         <p>$<%=m.get(1).getPrice()%><span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
     </div>
 
-    <div class="arrow" onclick="viewEdit(<%=m.get(1).getPid() %>);">
+    <div class="arrow" onclick="viewEdit(<%=m.get(1).getPid()%>);">
         <a type="button"><img src="../../Resources/Img/arrow.png"></a> 
     </div> <br> <br>  <br> 
 
 </div>
-    
+
 <div class="box" id="box-color2">
     <h2><%=m.get(2).getPname()%></h2>
     <div class="icon">                    
@@ -51,8 +52,10 @@
         <p>$<%=m.get(2).getPrice()%><span style="font-family:'Poppins', sans-serif; font-size:50%">/month</span></p>
     </div>
 
-    <div class="arrow"  onclick="viewEdit(<%=m.get(2).getPid() %>);" >
+    <div class="arrow"  onclick="viewEdit(<%=m.get(2).getPid()%>);" >
         <a type="button"><img src="../../Resources/Img/arrow.png"></a>
     </div> <br> <br>  <br> 
 </div>      
+
+
 <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>

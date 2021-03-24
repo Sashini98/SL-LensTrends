@@ -60,12 +60,12 @@ public class PastEvents extends HttpServlet {
                     System.out.println("name" + name);
 
                     ArrayList<Event> events = (ArrayList<Event>) eventdao.getEvents(p.geteventId());
+                    System.out.println("id"+p.geteventId());
+                            
 
                     for (Event e : events) {
-                        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-                        String date = sdf.format(e.geteventDate());
-                        a.add(date);
-                        System.out.println("date" + date);
+                        a.add(e.geteventDate());
+                        System.out.println("date111"+e.geteventDate());
 
                         a.add(e.getvenue());
 
@@ -74,11 +74,13 @@ public class PastEvents extends HttpServlet {
                     a.add(name);
 
                 }
+                System.out.println("aa"+a);
 
                 
             }
             
             request.setAttribute("event", a);
+            System.out.println("a"+a);
                 request.getRequestDispatcher("View/Events/PastEvent-single.jsp").forward(request, response);
         } catch (Exception e) {
         }

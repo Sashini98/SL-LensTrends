@@ -45,6 +45,7 @@ public class ViewSubPlan extends HttpServlet {
             }
 
             request.setAttribute("plan", plan);
+            request.setAttribute("details", a);
             request.getRequestDispatcher("View/Admin/SubPlanTemplate.jsp").forward(request, response);
         } catch (Exception e) {
             e.printStackTrace();

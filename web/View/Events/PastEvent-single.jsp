@@ -11,6 +11,7 @@
 <%
 
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("event");
+    System.out.println("s"+s);
     for (int i = 0; i < s.size() / 3; i++) {
 
 

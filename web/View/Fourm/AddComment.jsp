@@ -1,6 +1,6 @@
 <%-- 
-    Document   : AddAnswer
-    Created on : Jan 19, 2021, 8:50:26 AM
+    Document   : AddComment
+    Created on : Mar 24, 2021, 6:47:17 PM
     Author     : Sashini Shihara
 --%>
 
@@ -100,4 +100,3 @@
 </html>
 
 <%}%>
-

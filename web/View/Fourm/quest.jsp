@@ -47,8 +47,7 @@ for(int j=0;j<tokens.length;j++)
     <%}%>
     
     <input id="qid" name="qid" type="text" value="<%= s.get((i * 7) + 5)%>" style="display: none;">
-<!--    <label><a href="#" type="button"><%= s.get((i * 7) + 2)%></a></label> -->
-    <span>Posted by: <%= s.get((i * 6) + 2)%></span> <span id="time"><%= s.get((i * 7) + 3)%></span>   
+    <span>Posted by: <%= s.get((i * 7) + 2)%></span> <span id="time"><%= s.get((i * 7) + 3)%></span>   
     <div class="updown">
 
     </div>

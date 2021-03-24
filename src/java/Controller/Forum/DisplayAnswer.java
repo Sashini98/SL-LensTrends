@@ -61,50 +61,38 @@ public class DisplayAnswer extends HttpServlet {
 
                 a.add(an.getanswer());
                 a.add(an.getPhotographerId());
-                a.add(date);      
-                 int aid = an.getanswerId();
+                a.add(date);
+                int aid = an.getanswerId();
                 a.add(String.valueOf(aid));
-
-                
 
                 CommentDao commentDao = new CommentDaoImpl();
                 ArrayList<Comment> comm = (ArrayList<Comment>) an.getComments();
-                
-                for(Comment cm : comm)
-                { String name1="";
-                 
-                  if (cm.getclientId() == null) {
-                    String phid = cm.getPhotographerId();
-                    Photographer photog = pDao.getPhotographerById(phid);
 
-                    name1 = photog.getFname() + " " + photog.getLname();
-                } else {
-                    String cid = cm.getclientId();
-                    ClientDao clientDao = new ClientDaoImpl();
-                    Client client = clientDao.getClientbyId(cid);
+                for (Comment cm : comm) {
+                    String name1 = "";
 
-                    name1 = client.getFname() + " " + client.getLname();
-                   
-                }
-                    
+                    if (cm.getclientId() == null) {
+                        String phid = cm.getPhotographerId();
+                        Photographer photog = pDao.getPhotographerById(phid);
+
+                        name1 = photog.getFname() + " " + photog.getLname();
+                    } else {
+                        String cid = cm.getclientId();
+                        ClientDao clientDao = new ClientDaoImpl();
+                        Client client = clientDao.getClientbyId(cid);
+
+                        name1 = client.getFname() + " " + client.getLname();
+
+                    }
+
                     b.add(cm.getcomment());
                     b.add(name1);
-                    
-                    
+
                 }
-                
-                System.out.println("b  "+b); 
+
                 b.add("end");
-               
-                
 
             }
-
-            System.out.println("b last "+b);  
-            
-            
-                 
-
 
             request.setAttribute("answers", a);
             request.setAttribute("comments", b);
