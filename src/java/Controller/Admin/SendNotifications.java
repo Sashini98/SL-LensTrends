@@ -27,7 +27,7 @@ public class SendNotifications extends HttpServlet {
             throws ServletException, IOException {
 
         String title = request.getParameter("title");
-        String message = request.getParameter("msgbody");
+        String message = request.getParameter("msg");
         Date date = new Date();
         Date time = new Date();
 

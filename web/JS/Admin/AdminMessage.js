@@ -21,7 +21,10 @@ function viewMessages()
     request.send();
 }
 
-function SendNotification(){
+function SendNotification() {
+
+    var title = document.getElementById("title").value;
+    var msg = document.getElementById("msgbody").value;
     
     var request = new XMLHttpRequest();
 
@@ -31,7 +34,7 @@ function SendNotification(){
 
                 var responce = request.responseText;
                 alert(responce);
-                
+
             }
         }
 
@@ -39,7 +42,7 @@ function SendNotification(){
 
     request.open("POST", "../../SendNotifications", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send();
+    request.send("title="+ title +"&msg=" + msg);
 }
 
 

@@ -23,17 +23,17 @@ public class SubPlanDaoImpl implements SubscriptionPlanDao {
 
     @Override
     public void updatePlanName(String name, int planId) throws SQLException {
-        DB.iud("UPDATE subscription plan SET Pname='" + name + "' WHERE Plan_id = '" + planId + "'");
+        DB.iud("UPDATE `subscription plan` SET Pname='" + name + "' WHERE Plan_id = '" + planId + "'");
     }
 
     @Override
     public void updatePrice(double price, int planId) throws SQLException {
-        DB.iud("UPDATE subscription plan SET Price='" + price + "' WHERE Plan_id = '" + planId + "'");
+        DB.iud("UPDATE `subscription plan` SET Price='" + price + "' WHERE Plan_id = '" + planId + "'");
     }
 
     @Override
     public void updateTime(Date time, int planId) throws SQLException {
-        DB.iud("UPDATE subscription plan SET Time='" + time + "' WHERE Plan_id = '" + planId + "'");
+        DB.iud("UPDATE `subscription plan` SET Time='" + time + "' WHERE Plan_id = '" + planId + "'");
     }
 
     @Override
