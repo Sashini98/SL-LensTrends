@@ -73,5 +73,20 @@ public class AnswerDaoImpl implements AnswerDao {
         String date = sdf.format(d);
         DB.iud("INSERT INTO answer (Answer, Answe_Date, Question_Id, Photographer_Id) VALUES ('" + answer.getanswer() + "', '" + date + "', '" + answer.getquestionId() + "', '" + answer.getPhotographerId() + "');");
     }
+    
+    @Override
+    public int getLastId() throws SQLException {
+       int id;
+       ResultSet aid=DB.search("SELECT Answer_Id as aid FROM answer ORDER BY Answer_Id DESC LIMIT 1; ");
+           
+        if (aid.next()) {
+            id=aid.getInt("aid");
+            return id;
+
+        } else {
+            return 0;
+        }
+       
+    }
 
 }
