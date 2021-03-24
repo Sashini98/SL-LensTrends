@@ -44,7 +44,7 @@ public class CartDetails extends HttpServlet {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-      
+       
     }
 
 }
