@@ -531,6 +531,7 @@
         <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
         <url-pattern>/View/Events/EventsPost.jsp</url-pattern>
         <url-pattern>/View/Events/PastEvents.jsp</url-pattern>
+        <url-pattern>/AddToCart</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClient</filter-name>
