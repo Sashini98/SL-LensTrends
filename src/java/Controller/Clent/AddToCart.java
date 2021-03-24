@@ -6,11 +6,9 @@
 package Controller.Clent;
 
 import Controller.DaoImpl.CartHasPhotographDaoImpl;
+import Model.Client;
 import Model.Dao.CartHasPhotographDao;
 import Model.Photograph;
-import Model.cart_has_photograph;
-import com.google.gson.Gson;
-import com.sun.org.apache.bcel.internal.generic.AASTORE;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -26,25 +24,31 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author kesh
  */
-public class CartDetails extends HttpServlet {
-
+public class AddToCart extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            String clentId = request.getParameter("clientId");
-
+            int photoId = Integer.parseInt(req.getParameter("no"));
+            
+            Client client = (Client) req.getSession().getAttribute("loggedClient");
+            
             CartHasPhotographDao chpd = new CartHasPhotographDaoImpl();
-            ArrayList<Photograph> cartItems = chpd.getCartItems(clentId);
+            ArrayList<Photograph> cartItems = chpd.getCartItems(client.getClientId());
+            
+            for (Photograph cartItem : cartItems) {
+                if (cartItem.getId() == photoId) {
+                    req.setAttribute("error", "Image is already added!");
+                } else {
+                    CartHasPhotographDao dao = new CartHasPhotographDaoImpl();
+                    dao.addCartItem(client.getClientId(), photoId);
+                }
 
-            request.setAttribute("cartItems", cartItems);
-            request.getRequestDispatcher("View/User/CartTemplate.jsp").forward(request, response);
+            }
+            
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-       
-    }
 
+    }
 }
