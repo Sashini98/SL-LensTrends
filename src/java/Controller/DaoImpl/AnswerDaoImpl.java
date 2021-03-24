@@ -7,6 +7,7 @@ package Controller.DaoImpl;
 
 import DB.DB;
 import Model.Answer;
+import Model.Comment;
 import Model.Dao.AnswerDao;
 import Model.Question;
 import java.sql.ResultSet;
@@ -20,11 +21,11 @@ import java.util.List;
  *
  * @author Sashini Shihara
  */
-public class AnswerDaoImpl implements AnswerDao{
+public class AnswerDaoImpl implements AnswerDao {
 
     @Override
     public int answerCount(int questionId) throws SQLException {
-        int cnt=0;
+        int cnt = 0;
         ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM Answer WHERE Question_Id=" + questionId + "");
         num.next();
         cnt = num.getInt("rowcount");
@@ -33,17 +34,32 @@ public class AnswerDaoImpl implements AnswerDao{
 
     @Override
     public List getAllAnswers(int questionId) throws SQLException {
-        ResultSet answ=DB.search("SELECT * FROM answer where  Question_Id=" + questionId + "");
+        ResultSet answ = DB.search("SELECT * FROM answer where  Question_Id=" + questionId + "");
         ArrayList<Answer> a = new ArrayList();
-        
-        while(answ.next())
+
+        while (answ.next()) {
+            ResultSet comm = DB.search("SELECT * FROM comment where  Answer_Id=" + answ.getInt("Answer_Id") + "");
+            ArrayList<Comment> b = new ArrayList();
+            
+            while(comm.next())
         {
-            Answer an=new Answer();
+            Comment c=new Comment();
+            c.setcommentId(comm.getInt("Comment_Id"));
+            c.setcomment(comm.getString("Comment"));
+            c.setclientId(comm.getString("Client_Id"));
+            c.setPhotographerId(comm.getString("Photographer_Id"));
+            
+            b.add(c);
+
+        }
+            
+            Answer an = new Answer();
             an.setanswerId(answ.getInt("Answer_Id"));
             an.setanswer(answ.getString("Answer"));
             an.setanswerDate(answ.getDate("Answe_Date"));
             an.setPhotographerId(answ.getString("Photographer_Id"));
-            
+            an.setComments(b);
+
             a.add(an);
 
         }
@@ -52,10 +68,10 @@ public class AnswerDaoImpl implements AnswerDao{
 
     @Override
     public void addAnswer(Answer answer) throws SQLException {
-         Date d=answer.getanswerDate();
+        Date d = answer.getanswerDate();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-         DB.iud("INSERT INTO answer (Answer, Answe_Date, Question_Id, Photographer_Id) VALUES ('"+answer.getanswer()+"', '"+date+"', '"+answer.getquestionId()+"', '"+answer.getPhotographerId()+"');");
+        DB.iud("INSERT INTO answer (Answer, Answe_Date, Question_Id, Photographer_Id) VALUES ('" + answer.getanswer() + "', '" + date + "', '" + answer.getquestionId() + "', '" + answer.getPhotographerId() + "');");
     }
-    
+
 }

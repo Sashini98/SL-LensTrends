@@ -9,17 +9,17 @@ package Model;
  *
  * @author kesh
  */
-public class cart_has_photograph {
+public class Cart {
     
     int cartId;
-    Photograph photograph;
+    int clientId;
 
-    public cart_has_photograph() {
+    public Cart() {
     }
 
-    public cart_has_photograph(int cartId, Photograph photograph) {
+    public Cart(int cartId, int clientId) {
         this.cartId = cartId;
-        this.photograph = photograph;
+        this.clientId = clientId;
     }
 
     public int getCartId() {
@@ -30,11 +30,14 @@ public class cart_has_photograph {
         this.cartId = cartId;
     }
 
-    public Photograph getPhotograph() {
-        return photograph;
+    public int getClientId() {
+        return clientId;
     }
 
-    public void setPhotograph(Photograph photograph) {
-        this.photograph = photograph;
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
     }
+    
+    
+    
 }

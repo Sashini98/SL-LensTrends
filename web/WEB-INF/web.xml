@@ -249,8 +249,8 @@
         <servlet-class>Controller.Clent.CartItemCount</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SubPlanUpdate</servlet-name>
-        <servlet-class>Controller.Admin.SubPlanUpdate</servlet-class>
+        <servlet-name>AddToCart</servlet-name>
+        <servlet-class>Controller.Clent.AddToCart</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -501,8 +501,8 @@
         <url-pattern>/CartItemCount</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>SubPlanUpdate</servlet-name>
-        <url-pattern>/SubPlanUpdate</url-pattern>
+        <servlet-name>AddToCart</servlet-name>
+        <url-pattern>/AddToCart</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -531,6 +531,7 @@
         <url-pattern>/View/User/purchasehistory.jsp</url-pattern>
         <url-pattern>/View/Events/EventsPost.jsp</url-pattern>
         <url-pattern>/View/Events/PastEvents.jsp</url-pattern>
+        <url-pattern>/AddToCart</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClient</filter-name>
