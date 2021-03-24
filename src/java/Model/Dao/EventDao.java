@@ -18,6 +18,7 @@ public interface EventDao {
     public List getPastEvents(String eventId)throws SQLException;
     public List getEvents(String eventId)throws SQLException;
     public List getPastEventList(String clientId)throws SQLException;
+    public String getLastId() throws SQLException;
     
     
 }

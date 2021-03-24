@@ -70,7 +70,7 @@ public class View_comment extends HttpServlet {
              }
              
              request.setAttribute("answers", a);
-            request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
+            
         } catch (Exception e) {
         }
        

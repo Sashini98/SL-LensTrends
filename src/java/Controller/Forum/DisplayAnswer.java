@@ -61,50 +61,53 @@ public class DisplayAnswer extends HttpServlet {
 
                 a.add(an.getanswer());
                 a.add(an.getPhotographerId());
-                a.add(date);                
-
-                int aid = an.getanswerId();
+                a.add(date);      
+                 int aid = an.getanswerId();
                 a.add(String.valueOf(aid));
 
+                
+
                 CommentDao commentDao = new CommentDaoImpl();
-                ArrayList<Comment> comm = (ArrayList<Comment>) commentDao.getCommentbyId(aid);
+                ArrayList<Comment> comm = (ArrayList<Comment>) an.getComments();
+                
+                for(Comment cm : comm)
+                { String name1="";
+                 
+                  if (cm.getclientId() == null) {
+                    String phid = cm.getPhotographerId();
+                    Photographer photog = pDao.getPhotographerById(phid);
 
-                for (Comment cm : comm) {
-                    String c_name = "";
-
-                    if (cm.getclientId() == null) {
-                        String phid = cm.getPhotographerId();
-                        Photographer photog = pDao.getPhotographerById(phid);
-
-                        c_name = photog.getFname() + " " + photog.getLname();
-                    } else {
-                        String cid = cm.getclientId();
-                        ClientDao clientDao = new ClientDaoImpl();
-                        Client client = clientDao.getClientbyId(cid);
-
-                        c_name = client.getFname() + " " + client.getLname();
-
-                    }
-
-                    b.add(cm.getcomment());
-                    b.add(c_name);
-
-                }
-                System.out.println("b   " + b);
-
-                if (b.isEmpty() == true) {
-                    break;
+                    name1 = photog.getFname() + " " + photog.getLname();
                 } else {
-                    c.add(b);
+                    String cid = cm.getclientId();
+                    ClientDao clientDao = new ClientDaoImpl();
+                    Client client = clientDao.getClientbyId(cid);
 
-                    b.clear();
+                    name1 = client.getFname() + " " + client.getLname();
+                   
                 }
+                    
+                    b.add(cm.getcomment());
+                    b.add(name1);
+                    
+                    
+                }
+                
+                System.out.println("b  "+b); 
+                b.add("end");
+               
+                
+
             }
 
-            System.out.println(c);
+            System.out.println("b last "+b);  
+            
+            
+                 
+
 
             request.setAttribute("answers", a);
-            request.setAttribute("comments", c);
+            request.setAttribute("comments", b);
 
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
 

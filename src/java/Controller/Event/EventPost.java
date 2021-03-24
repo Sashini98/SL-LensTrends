@@ -38,7 +38,7 @@ public class EventPost extends HttpServlet {
         String name=request.getParameter("name");
         String type=request.getParameter("type");
         String date=request.getParameter("dob");
-        String time=request.getParameter("time");
+        String time=request.getParameter("time")+":00";
         String hall=request.getParameter("hall");
         String venue=request.getParameter("venue");
         String street=request.getParameter("street");
@@ -55,22 +55,45 @@ public class EventPost extends HttpServlet {
         eve.setvenue(venue);
         eve.setstreet(street);
         eve.setcity(city);
-        eve.setprovince(province);      
+        eve.setprovince(province);  
         
+        System.out.println("time  "+date);
+        
+         try {
         
         EventDao eventdao=new EventDaoImpl();
+        
+        String id = eventdao.getLastId();
+            String new_id ;
+            if (id != null) {
+                String[] parts = id.split("e");
+                String row = parts[1];
+                int lastId = Integer.parseInt(row);
+                int newId = lastId + 1;
+                new_id = Integer.toString(newId);
+                new_id = "e" + new_id;
+
+            } else {
+                new_id = "C1";
+            }
+            
+            eve.seteventId(new_id);
+        
+        
         
          Client c = (Client) request.getSession().getAttribute("loggedClient");
          String cid = c.getClientId();
          eve.setclientId(cid);
          
-        try {
+       
             eventdao.addEvent(eve);
+            System.out.println("done");
         } catch (SQLException ex) {
             
         }
         
-        response.sendRedirect("View/Events/postEvents2.jsp");
+        
+        response.sendRedirect("View/Events/PostEvent2.jsp");
         
         
         
