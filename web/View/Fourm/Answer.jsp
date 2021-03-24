@@ -7,6 +7,8 @@
 <%@page import="java.util.ArrayList"%>
 
 <!DOCTYPE html>
+
+
 <%
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
 

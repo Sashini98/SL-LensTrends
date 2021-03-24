@@ -31,7 +31,7 @@
 
             <div class="pageheader">
 
-                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <a href="../Home.jsp" type="button"> <img src="Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
@@ -45,7 +45,7 @@
                 </div>
                 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="#" type="button"> <img src="Resources/Img/notification.png"> </a>
                 </div>
 
                 <div class="logout">
@@ -58,26 +58,26 @@
 
         <div class="main-content">
             
-             <div class="side-box"> 
+<!--             <div class="side-box"> 
                 <div class="home">
                     <ul>
                      
-                        <li><a href="../../View/Fourm/MainForum.jsp"> Forum Home </a></li>
+                        <li><a href="View/Fourm/MainForum.jsp"> Forum Home </a></li>
                     </ul>
                 </div>
 
 
                 <div class="ask-qn">
-                    <a href="AskQues.jsp" type="button">Ask Questions <a/>
-                </div>
+                    <a href="View/Fourm/AskQues.jsp" type="button">Ask Questions <a/>
+                </div>-->
 
             </div>  
             <div name="s" id="s">
                 <div class="questions">                
-                    <form id="answer" action="<%= request.getContextPath()%>/Add_answer" method="POST" >
+                    <form id="answer" action="GroupProject/Add_answer" method="POST" >
                         <h3 id="quest" name="quest"><label for="Question"><b><%= q.get((i * 2))%></b></label><br></h3>
                         <h4 id="quesid" name="quesid" style="display: none"><%= q.get((i * 2) + 1)%></h4>
-                       
+                        <input type="text" id="quesid" name="quesid" value="<%= q.get((i * 2) + 1)%>">
 
                     <h3><label for="Body"><b>Answer</b></label><br></h3>
                     <textarea id="answ" name="answ" rows="10" cols="50"></textarea><br><br><br>         
