@@ -8,6 +8,7 @@ package Controller.DaoImpl;
 import DB.DB;
 import Model.Dao.PhotographDao;
 import Model.Photograph;
+import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -98,25 +99,44 @@ public class PhotographDaoImpl implements PhotographDao {
         ArrayList<Photograph> Loadphotos = new ArrayList();
 
         while (photographs.next()) {
-            Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+            Photograph p = new Photograph(
+                    photographs.getInt("Photograph_Id"), photographs.getString("path"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
                     photographs.getString("Quality"), photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                     photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                     photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
                     photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
-                    photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
+                    photographs.getInt("state_id"), photographs.getInt("Gender_Id")
+            );
 
             Loadphotos.add(p);
 
         }
-        
+
         return Loadphotos;
     }
 
     @Override
-    public void deletephoto(int PhotographId) throws SQLException {
-        DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId +"'");
+    public void deletephoto(int PhotographId, int status, String path) throws SQLException {
+        if (status == 1) {
+            File myObj = new File(path);
+            myObj.delete();
+            DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
+        } else if (status == 3) {
+            File myObj = new File(path);
+            myObj.delete();
+            DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
+            DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
+            DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
+        } else if (status == 4) {
+            File myObj = new File(path);
+            myObj.delete();
+            DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
+            DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
+            DB.iud("DELETE FROM cart_has_photograph WHERE Photograph_Id = '" + PhotographId + "'");
+            DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
+        }
     }
 
 }
