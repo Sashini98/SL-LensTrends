@@ -67,12 +67,12 @@ public class DisplayAnswer extends HttpServlet {
                 int aid = an.getanswerId();
                 a.add(String.valueOf(aid));
 
-//                QuestionRatingDao qrDao = new QuestinRatingDaoImpl();
-//                String likes = String.valueOf(qrDao.getLikes(aid));
-//                String dis = String.valueOf(qrDao.getDislikes(aid));
-//
-//                a.add(likes);
-//                a.add(dis);
+                QuestionRatingDao qrDao = new QuestinRatingDaoImpl();
+                String likes = String.valueOf(qrDao.getLikes(aid));
+                String dis = String.valueOf(qrDao.getDislikes(aid));
+
+                a.add(likes);
+                a.add(dis);
 
                 CommentDao commentDao = new CommentDaoImpl();
                 ArrayList<Comment> comm = (ArrayList<Comment>) an.getComments();
@@ -104,10 +104,9 @@ public class DisplayAnswer extends HttpServlet {
             }
             request.setAttribute("answers", a);
             request.setAttribute("comments", b);
-            System.out.println("1 suc");
-
+           
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
-            System.out.println("2 suc");
+           
 
         } catch (Exception e) {
         }
