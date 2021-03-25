@@ -37,6 +37,50 @@ function  keywordSearch(event) {
     }
 }
 
+function checkSubCategory(i, action) {
+     if (i === '1') {
+        var subCategory = document.getElementById("NoAnsw");
+        var subCategory1 = document.getElementById("100plus");
+
+        if (subCategory.checked) {
+            if (action === 'NoAnswer') {
+                subCategory.checked = true;
+                document.getElementById("100plus").checked = false;
+
+
+            } else {
+                subCategory1.checked = true;
+                document.getElementById("NoAnsw").checked = false;
+            }
+        }
+    }
+    
+    if (i === '2') {
+        var subCategory = document.getElementById("newest");
+        var subCategory1 = document.getElementById("oldest");
+         var subCategory2 = document.getElementById("count");
+
+        if (action=='newest') {
+                subCategory.checked = true;
+                document.getElementById("oldest").checked = false;
+                document.getElementById("count").checked = false;
+
+
+            } else if (action=='oldest') {
+                subCategory1.checked = true;
+                document.getElementById("newest").checked = false;
+                document.getElementById("count").checked = false;
+            }
+            
+            else if (action=='count') {
+                subCategory2.checked = true;
+                document.getElementById("newest").checked = false;
+                document.getElementById("oldest").checked = false;
+            }
+            
+               }
+}
+
 function  filter() {
 
     var sortBy;
@@ -48,8 +92,12 @@ function  filter() {
         filterBy = 'NoAnswer';
     }
 
-    if (document.getElementById('100plus').checked) {
+    else if (document.getElementById('100plus').checked) {
         filterBy = '100plus';
+    }
+    
+   else{
+        filterBy = 'none';
     }
 
     if (document.getElementById('newest').checked) {

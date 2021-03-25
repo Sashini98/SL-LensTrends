@@ -7,6 +7,7 @@ package Controller.Forum;
 
 import Controller.DaoImpl.AnswerDaoImpl;
 import Controller.DaoImpl.QuestinRatingDaoImpl;
+import Controller.DaoImpl.QuestionDaoImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import DB.DB;
 import Model.Answer;
 import Model.Dao.AnswerDao;
+import Model.Dao.QuestionDao;
 import Model.Dao.QuestionRatingDao;
 import Model.Photographer;
 import static java.lang.Integer.parseInt;
@@ -55,14 +57,15 @@ public class Add_answer extends HttpServlet {
         try {
             AnswerDao answ=new AnswerDaoImpl();
             answ.addAnswer(answer);
+            QuestionDao qDao= new QuestionDaoImpl();
+            qDao.updateAnswCount(quesid);
             
             int aid=answ.getLastId();
             aid=aid++;
             System.out.println("aid"+aid);
             
             QuestionRatingDao qrDao= new QuestinRatingDaoImpl();
-            qrDao.addLikeatBegin(aid);
-            qrDao.addDisikeatBegin(aid);
+            qrDao.addRateatBegin(aid);
             response.sendRedirect("View/Fourm/BrowseQn.jsp");
                     
         } catch (Exception e) {

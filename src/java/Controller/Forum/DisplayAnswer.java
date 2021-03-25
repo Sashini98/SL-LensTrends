@@ -38,7 +38,6 @@ public class DisplayAnswer extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         String quesid = request.getParameter("qid");
         int qid = parseInt(quesid);
 
@@ -106,6 +105,7 @@ public class DisplayAnswer extends HttpServlet {
             request.setAttribute("comments", b);
            
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
+            System.out.println("done");
            
 
         } catch (Exception e) {

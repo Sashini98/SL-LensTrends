@@ -108,35 +108,28 @@
                 <div class="filter">
                     <p>Filter by:</p>
                     <label class="container">No answer
-                        <input type="checkbox" name="NoAnsw" id="NoAnsw" onclick="filter();">
+                        <input type="checkbox" name="NoAnsw" id="NoAnsw" onclick="checkSubCategory('1', 'NoAnswer'); filter();">
                         <span class="checkmark"></span>
                     </label>
                     <label class="container">100+ answers
-                        <input type="checkbox" name="100plus" id="100plus" onclick="filter();">
+                        <input type="checkbox" name="100plus" id="100plus" onclick="checkSubCategory('1', '100plus');filter();">
                         <span class="checkmark"></span>
                     </label>
-<!--                    <label class="container">Most Likes
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">Most answers
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                    </label>-->
-                </div>
+                    
+                    </div>
 
                 <div class="filter-radio">
                     <p>Sort by:</p>
                     <label class="container-radio">Newest
-                        <input type="radio" checked="checked" name="newest" id="newest" onclick="filter();">
+                        <input type="radio" checked="checked" name="newest" id="newest" onclick="checkSubCategory('2', 'newest');filter();">
                         <span class="checkmark-radio"></span>
                     </label>
                     <label class="container-radio">Oldest
-                        <input type="radio" name="oldest" id="oldest" onclick="filter();">
+                        <input type="radio" name="oldest" id="oldest" onclick="checkSubCategory('2', 'oldest');filter();">
                         <span class="checkmark-radio"></span>
                     </label>
                     <label class="container-radio">Answer Count
-                        <input type="radio" name="count" id="count" onclick="filter();">
+                        <input type="radio" name="count" id="count" onclick="checkSubCategory('2', 'count');filter();">
                         <span class="checkmark-radio"></span>
                     </label>
                     

@@ -20,6 +20,7 @@ import Model.QuestionCategory;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -41,14 +42,15 @@ public class Forum_filter extends HttpServlet {
             ArrayList<String> b = new ArrayList();
         
         QuestionDao qDao=new QuestionDaoImpl();
-        ArrayList<Question> questByKeyword = (ArrayList<Question>) qDao.getQuestByKeyWord(keyword);
+        ArrayList<Question> questByKeyword = (ArrayList<Question>) qDao.getQuestfilter(keyword, filter, sort);
         
         if(questByKeyword==null)
         {
             questByKeyword=new ArrayList<>();
         }
-        
+             
         for (Question q : questByKeyword) {
+            
                 String name = "";
                 int cnt = 0;
 
@@ -67,8 +69,8 @@ public class Forum_filter extends HttpServlet {
 
                 }
 
-                AnswerDao answ = new AnswerDaoImpl();
-                cnt = answ.answerCount(q.getquestionId());
+                
+                cnt = q.getanswerCount();
 
                 a.add(q.gettitle());
                 a.add(q.getquestion());
@@ -93,6 +95,8 @@ public class Forum_filter extends HttpServlet {
                 a.add(cat);
                 b.clear();
             }
+        
+        
             
             request.setAttribute("questions", a);
             System.out.println("a "+a);

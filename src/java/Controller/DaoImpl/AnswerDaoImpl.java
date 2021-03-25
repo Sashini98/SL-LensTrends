@@ -23,14 +23,7 @@ import java.util.List;
  */
 public class AnswerDaoImpl implements AnswerDao {
 
-    @Override
-    public int answerCount(int questionId) throws SQLException {
-        int cnt = 0;
-        ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM Answer WHERE Question_Id=" + questionId + "");
-        num.next();
-        cnt = num.getInt("rowcount");
-        return cnt;
-    }
+    
 
     @Override
     public List getAllAnswers(int questionId) throws SQLException {
