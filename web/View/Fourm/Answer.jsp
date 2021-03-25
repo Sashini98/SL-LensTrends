@@ -11,9 +11,9 @@
 
 <%
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("answers");
-    System.out.println("s  "+s);
+  
 
-    for (int i = 0; i < s.size() / 4; i++) {
+    for (int i = 0; i < s.size() / 6; i++) {
 
 
 %>
@@ -21,17 +21,17 @@
 
 
 <div class="answers">
-    <p><%= s.get(i * 4)%></p> 
-    <span>Posted by: <%= s.get((i * 4) + 1)%> </span> <span id="time"><%= s.get((i * 4) + 2)%></span>
+    <p><%= s.get(i * 6)%></p> 
+    <span>Posted by: <%= s.get((i * 6) + 1)%> </span> <span id="time"><%= s.get((i * 6) + 2)%></span>
 
     <div class="updown">
-        <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=like" type="button"><img src="Resources/Img/up.png"></a> 
-        <span id="up">55</span> 
-        <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 4) + 3)%>&rate=dislike" type="button" type="button"><img src="Resources/Img/down.png"></a>
-        <span id="down">33</span>
+        <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 6) + 3)%>&rate=like" type="button"><img src="Resources/Img/up.png"></a> 
+        <span id="up"><%= s.get((i * 6) + 4)%></span> 
+        <a href="/GroupProject/RateAnswer?aid=<%= s.get((i * 6) + 3)%>&rate=dislike" type="button" type="button"><img src="Resources/Img/down.png"></a>
+        <span id="down"><%= s.get((i * 6) + 5)%></span>
     </div>
     <div class="answer">
-        <a href="/GroupProject/View/Fourm/AddComment.jsp?aid=<%= s.get((i * 4) + 3)%>" type="button" id="comm">Comment</a>
+        <a href="/GroupProject/View/Fourm/AddComment.jsp?aid=<%= s.get((i * 6) + 3)%>" type="button" id="comm">Comment</a>
     </div>
 
 

@@ -94,7 +94,7 @@
 
         </div>
         <%
-            if (!message.equals(null)) {
+            if (message != (null)) {
         %>
 
         <script>alert("<%= message%>")</script>

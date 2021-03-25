@@ -34,7 +34,7 @@ public class EventPost extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("hi");
+        
         String name=request.getParameter("name");
         String type=request.getParameter("type");
         String date=request.getParameter("dob");
@@ -57,7 +57,7 @@ public class EventPost extends HttpServlet {
         eve.setcity(city);
         eve.setprovince(province);  
         
-        System.out.println("time  "+date);
+        
         
          try {
         
@@ -84,10 +84,9 @@ public class EventPost extends HttpServlet {
          Client c = (Client) request.getSession().getAttribute("loggedClient");
          String cid = c.getClientId();
          eve.setclientId(cid);
-         
-       
+             
             eventdao.addEvent(eve);
-            System.out.println("done");
+            
         } catch (SQLException ex) {
             
         }

@@ -142,7 +142,6 @@ function enteredPixcelSize(evt) {
 }
 
 function  Search() {
-    
     var iframeObj = document.getElementById("selectors");
     var serchedFor= parent.document.getElementById("keywordInput").value;
     var sortBy;

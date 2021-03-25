@@ -32,12 +32,11 @@ public class RateAnswer extends HttpServlet {
         try {
 
             QuestionRatingDao qrDao = new QuestinRatingDaoImpl();
-            System.out.println("id" + aid);
-            System.out.println("rate" + rate);
+            
             
             if (rate.equals("like")) {
                 qrDao.addLike(aid);
-                System.out.println("liked");
+                
             } else {
                 System.out.println("else");
                 qrDao.addDisike(aid);
