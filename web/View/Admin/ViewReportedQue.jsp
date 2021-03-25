@@ -26,7 +26,7 @@
     <div class="reportedQueBody">
         <div class="box">
             <div class="details">
-                <h1 id="title" disabled=""></h1><br>
+                <h1 id="title"></h1><br>
             </div>
             <p class="p" id="question"></p>
 
