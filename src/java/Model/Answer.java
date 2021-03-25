@@ -20,17 +20,21 @@ public class Answer {
     int questionId;
     String photographerId;
     ArrayList<Comment> comments;
+    int likes;
+    int dislikes;
 
     public Answer() {
     }
 
-    public Answer(int answerId, String answer, Date answerDate, int questionId, String photographerId, ArrayList<Comment> comments) {
+    public Answer(int answerId, String answer, Date answerDate, int questionId, String photographerId, ArrayList<Comment> comments,int likes,int dislikes) {
         this.answerId = answerId;
         this.answer = answer;
         this.answerDate = answerDate;
         this.questionId = questionId;
         this.photographerId = photographerId;
         this.comments = comments;
+        this.likes=likes;
+        this.dislikes=dislikes;
     }
 
     public int getanswerId() {
@@ -80,6 +84,22 @@ public class Answer {
 
     public void setComments(ArrayList<Comment> comments) {
         this.comments = comments;
+    }
+    
+    public int getlikes() {
+        return likes;
+    }
+
+    public void setlikes(int likes) {
+        this.likes = likes;
+    }
+    
+     public int getdislikes() {
+        return dislikes;
+    }
+
+    public void setdislikes(int dislikes) {
+        this.dislikes = dislikes;
     }
 
 }

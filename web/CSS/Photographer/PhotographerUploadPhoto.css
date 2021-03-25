@@ -654,7 +654,7 @@ div .details .releases p span a {
     margin-right: 1%;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
     padding: 1% 2%;
-    margin-top: -30.5%;
+    margin-top: -29%;
 }
 
 .accepted-details .details-accepted-title h3 {
@@ -747,5 +747,23 @@ div .details .releases p span a {
 .downclose:focus {
     color: #000;
     text-decoration: none;
+    cursor: pointer;
+}
+
+#deleteaccepted {
+    margin-left: 85%;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 10%;
+    font-size: 130%;
+    background-color: #1d67b1;
+    color: white;
+    width: 13%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+#deleteaccepted:hover {
+    background-color: red;
     cursor: pointer;
 }

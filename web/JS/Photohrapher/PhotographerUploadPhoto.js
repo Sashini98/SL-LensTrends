@@ -1,5 +1,5 @@
 
-/* global uploadimage, uploadmodal, uploadfile, photographid */
+/* global uploadimage, uploadmodal, uploadfile, photographid, deleteaccepted */
 
 function navigation(button) {
     if (button == "tosubmit") {
@@ -62,7 +62,7 @@ function clickimage(click, section, photoid, itemcount) {
     if (section == "image-box-inreview") {
         var numitems = itemcount;
         var i;
-        for (i = 0; i <= numitems; i++) {
+        for (i = 0; i < numitems; i++) {
             if (click == "review" + (i + 1)) {
                 document.getElementById(click).style.transform = "scale(1.1)";
                 document.getElementById(click).style.border = "5px solid  #415daa";
@@ -75,7 +75,6 @@ function clickimage(click, section, photoid, itemcount) {
                         if (request.readyState === 4) {
                             var responce = request.responseText;
                             var details = JSON.parse(responce);
-
                             document.getElementById("heading").innerHTML = details[0];
                             document.getElementById("uploaddate").innerHTML = details[1];
                             document.getElementById("heading2").innerHTML = details[0];
@@ -97,7 +96,7 @@ function clickimage(click, section, photoid, itemcount) {
     } else if (section == "image-box-rejected") {
         var numitems = itemcount;
         var i;
-        for (i = 0; i <= numitems; i++) {
+        for (i = 0; i < numitems; i++) {
             if (click == "rejected" + (i + 1)) {
                 document.getElementById(click).style.transform = "scale(1.1)";
                 document.getElementById(click).style.border = "5px solid  #ff6969";
@@ -131,10 +130,11 @@ function clickimage(click, section, photoid, itemcount) {
     } else if (section == "image-box-accepted") {
         var numitems = itemcount;
         var i;
-        for (i = 0; i <= numitems; i++) {
+        for (i = 0; i < numitems; i++) {
             if (click == "accept" + (i + 1)) {
                 document.getElementById(click).style.transform = "scale(1.1)";
                 document.getElementById(click).style.border = "5px solid  #3eb80e";
+
                 var request = new XMLHttpRequest();
 
                 request.onreadystatechange = function () {
@@ -225,6 +225,7 @@ function loadphotos() {
 window.onload = function () {
     loadphotos();
     elm = document.querySelectorAll('.selection-img');
+    accepted = document.querySelectorAll('.selection-accepted');
     //	main = document.querySelectorAll('main')[0];
     detailsimg = document.querySelector('.detailsimg');
 //                                    detailsimg.src = "../../Resources/Img/profile/l1.jpg";
@@ -232,6 +233,15 @@ window.onload = function () {
     elm.forEach(function (elm) {
         elm.addEventListener('click', function (event) {
             detailsimg.src = event.target.src;
+            detailsimg.setAttribute("photo_id", event.target.getAttribute("photo_id"));
+        });
+    });
+
+    accepted.forEach(function (accepted) {
+        accepted.addEventListener('click', function (event) {
+//            detailsimg.src = event.target.src;
+            deleteaccepted.setAttribute("srcpath", event.target.src);
+            deleteaccepted.setAttribute("photo-id-accepted", event.target.getAttribute("photo-id-accepted"));
         });
     });
 
@@ -273,14 +283,53 @@ function cleardata() {
 }
 
 function deletephoto(para) {
-    if (para == "delete-tosubmit") {
 
-        var request = new XMLHttpRequest();
+    var txt;
+    var r = confirm("Do you want to Delete it!");
+    if (r == true) {
+//        txt = "You pressed OK!";
 
-        request.open("POST", "../../DeletePhoto", false);
-        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        request.send("photographid=" + para);
-        alert(photographid);
+
+        if (para == "delete-tosubmit") {
+            var path = document.getElementById("image").src;
+            var idd = document.getElementById("image").getAttribute("photo_id");
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+
+                if (request.status === 200) {
+                    if (request.readyState === 4) {
+                        var responce = request.responseText;
+                        alert(responce);
+                    }
+                }
+            };
+            request.open("POST", "../../DeletePhoto", false);
+            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            request.send("pathtobedeleted=" + path + "&idd=" + idd);
+            location.reload();
+
+        } else if (para == "deleteaccepted") {
+            var path = document.getElementById("deleteaccepted").getAttribute("srcpath");
+            var idd = document.getElementById("deleteaccepted").getAttribute("photo-id-accepted");
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+
+                if (request.status === 200) {
+                    if (request.readyState === 4) {
+                        var responce = request.responseText;
+                        alert(responce);
+                    }
+                }
+            };
+            request.open("POST", "../../DeletePhoto", false);
+            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            request.send("pathtobedeleted=" + path + "&idd=" + idd);
+            location.reload();
+        }
+
+    } else {
+        txt = "Deletion Cancelled";
+        alert(txt);
     }
 }
 

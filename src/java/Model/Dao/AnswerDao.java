@@ -19,5 +19,6 @@ public interface AnswerDao {
     public int answerCount(int questionId) throws SQLException;
     
      public List getAllAnswers(int questionId) throws SQLException;
+      public int getLastId() throws SQLException ;
     
 }

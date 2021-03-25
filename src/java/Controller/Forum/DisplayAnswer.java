@@ -9,6 +9,7 @@ import Controller.DaoImpl.AnswerDaoImpl;
 import Controller.DaoImpl.ClientDaoImpl;
 import Controller.DaoImpl.CommentDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
+import Controller.DaoImpl.QuestinRatingDaoImpl;
 import Model.Answer;
 import Model.Client;
 import Model.Comment;
@@ -16,6 +17,7 @@ import Model.Dao.AnswerDao;
 import Model.Dao.ClientDao;
 import Model.Dao.CommentDao;
 import Model.Dao.PhotographerDao;
+import Model.Dao.QuestionRatingDao;
 import Model.Photographer;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -65,6 +67,13 @@ public class DisplayAnswer extends HttpServlet {
                 int aid = an.getanswerId();
                 a.add(String.valueOf(aid));
 
+//                QuestionRatingDao qrDao = new QuestinRatingDaoImpl();
+//                String likes = String.valueOf(qrDao.getLikes(aid));
+//                String dis = String.valueOf(qrDao.getDislikes(aid));
+//
+//                a.add(likes);
+//                a.add(dis);
+
                 CommentDao commentDao = new CommentDaoImpl();
                 ArrayList<Comment> comm = (ArrayList<Comment>) an.getComments();
 
@@ -93,11 +102,12 @@ public class DisplayAnswer extends HttpServlet {
                 b.add("end");
 
             }
-
             request.setAttribute("answers", a);
             request.setAttribute("comments", b);
+            System.out.println("1 suc");
 
             request.getRequestDispatcher("View/Fourm/Answer.jsp").forward(request, response);
+            System.out.println("2 suc");
 
         } catch (Exception e) {
         }
