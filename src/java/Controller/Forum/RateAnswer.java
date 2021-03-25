@@ -38,9 +38,9 @@ public class RateAnswer extends HttpServlet {
                 qrDao.addLike(aid);
                 
             } else {
-                System.out.println("else");
                 qrDao.addDisike(aid);
             }
+            response.getWriter().write(rate);
 
         } catch (Exception e) {
             e.printStackTrace();
