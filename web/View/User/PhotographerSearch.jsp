@@ -103,11 +103,11 @@
                 </iframe>
                 <div style="background-color:  #FAFAFA;width: 100%;">
                     <div class="searchInput">
-                        <input id="keywordSearch" type="text" placeholder="Search for Photographers" onkeyup="PhotographerKeywordSearch(event,1)">      
-                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="PhotographerKeywordSearch(event,1);"><i class="material-icons">search</i></button>
+                        <input id="keywordSearch" type="text" placeholder="Search for Photographers" onkeyup="PhotographerKeywordSearch(event, 1)">      
+                        <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="PhotographerKeywordSearch(event, 1);"><i class="material-icons">search</i></button>
                     </div>
                     <div class="row" id="row"> 
-                        <div class="column">
+<!--                        <div class="column">
                             <a href="../Photographer/UserViewPhotographerProfile.jsp" style="text-decoration: none;">
                                 <div class="profilebox">
                                     <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
@@ -135,7 +135,7 @@
                                     </div> 
                                 </div>
                             </a>
-                           
+
                             <div class="profilebox">
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -173,9 +173,9 @@
 
 
                         </div>  
-                        
 
-                        
+
+
                         <div class="column">
                             <div class="profilebox">
                                 <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
@@ -239,7 +239,7 @@
 
                                     <div class="username">
 
-                                    <p>Mr.INDIKA A  </p>
+                                        <p>Mr.INDIKA A  </p>
 
                                     </div>
                                     <div class="location">
@@ -252,7 +252,7 @@
                                 </div>
                                 <div class="bio"> 
                                     <div>
-                                         <p>Wedding</p>
+                                        <p>Wedding</p>
                                         <p>Celebrity Shooting</p>
                                         <p>Storybooks</p>
                                     </div>
@@ -285,12 +285,12 @@
                                         <p>Event</p>
                                         <p>Sports</p>
                                         <p>Product</p>
-                                        
+
                                     </div>
                                 </div> 
                             </div>
 
-                        </div>  
+                        </div>  -->
                     </div>
                 </div>
             </div>
@@ -298,13 +298,28 @@
         <script src="//code.jquery.com/jquery-1.12.4.js"></script>
         <!--<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
         <script>
-            $('#filterIcn').click(function () {
-                $("#selectors").toggle("fold");
-            });
+                            $('#filterIcn').click(function () {
+                                $("#selectors").toggle("fold");
+                            });
         </script>
-        
-         <script src="../../JS/User/PhotographerSearch.js" type="text/javascript"></script>
-        
+
+        <script src="../../JS/User/PhotographerSearch.js" type="text/javascript"></script>
+        <script>
+
+                            document.addEventListener('readystatechange', event => {
+
+                                // When HTML/DOM elements are ready:
+//                                if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
+//                                    
+//                                }
+
+                                // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+                                if (event.target.readyState === "complete") {
+                                    Search();
+                                }
+                            });
+
+        </script>
     </body>
 </html>
 

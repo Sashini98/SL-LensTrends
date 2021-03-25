@@ -87,25 +87,25 @@
                         <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="keywordSearch(event)"><i class="material-icons">search</i></button>
                     </div>
                     <div class="row" id="row"> 
-                        <div class="column">
-                            <a href="PurchasePhoto.jsp"><img src="../../Resources/Img/A Mighty sunrise with a flight of birds..jpg" style="width:100%"></a>
-                            <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%">
-                        </div>
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%">
-
-                        </div>  
-                        <div class="column">
-                            <img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%">
-                            <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%">
-                        </div>  
+                        <!--                        <div class="column">
+                                                    <a href="PurchasePhoto.jsp"><img src="../../Resources/Img/A Mighty sunrise with a flight of birds..jpg" style="width:100%"></a>
+                                                    <img src="../../Resources/Img/Gallery Sample Images/artem-sapegin-8c6eS43iq1o-unsplash.jpg" style="width:100%">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/chris-barbalis-vazZtmYFgFY-unsplash.jpg" style="width:100%">
+                                                </div>
+                                                <div class="column">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/jonathan-zerger-yzzJbqQ1O-Y-unsplash.jpg" style="width:100%">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/cristina-gottardi-iEGXkSXRXN4-unsplash.jpg" style="width:100%">
+                                                </div>
+                                                <div class="column">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/lefty-kasdaglis-DLwF8G6GuyY-unsplash.jpg" style="width:100%">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/james-peacock-AxYOB1v9TsU-unsplash.jpg" style="width:100%">
+                        
+                                                </div>  
+                                                <div class="column">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/marco-secchi-JcisCWrKUOA-unsplash.jpg" style="width:100%">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/othmar-ortner-qy8l3MUSl4Y-unsplash.jpg" style="width:100%">
+                                                    <img src="../../Resources/Img/Gallery Sample Images/raphael-stager-MPAFS1K7oYE-unsplash.jpg" style="width:100%">
+                                                </div>  -->
                     </div>
                 </div>
             </div>
@@ -115,9 +115,23 @@
         <script src="//code.jquery.com/jquery-1.12.4.js"></script>
         <!--<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
         <script>
-            $('#filterIcn').click(function () {
-                $("#selectors").toggle("fold");
-            });
+                            $('#filterIcn').click(function () {
+                                $("#selectors").toggle("fold");
+                            });
+
+                            document.addEventListener('readystatechange', event => {
+
+                                // When HTML/DOM elements are ready:
+//                                if (event.target.readyState === "interactive") {   //does same as:  ..addEventListener("DOMContentLoaded"..
+//                                    
+//                                }
+
+                                // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
+                                if (event.target.readyState === "complete") {
+                                    Search();
+                                }
+                            });
+
         </script>
     </body>
 </html>
