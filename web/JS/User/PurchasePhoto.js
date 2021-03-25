@@ -36,3 +36,20 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+function reportPhoto(){
+    
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function (){
+        if (request.status == 200) {
+            if (request.readyState ==4) {
+                
+            }
+        }
+    }
+    
+    request.open("GET","../../ReportPhoto", true);
+    request.send();
+    
+}

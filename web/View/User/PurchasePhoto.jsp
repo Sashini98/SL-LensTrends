@@ -14,7 +14,7 @@
 <%
     boolean logged = (Boolean) request.getAttribute("logged");
     Photograph p = (Photograph) session.getAttribute("photo");
-    Client c = (Client) session.getAttribute("loggedClient");
+
     String cat = (String) session.getAttribute("photographCategory");
     Photographer photographer = (Photographer) session.getAttribute("photographer");
 
@@ -119,7 +119,7 @@
                         <textarea class="reportReason" id="reason" type="text" placeholder="Enter Your Reasons"></textarea>
                     </div>
                     <div style="padding-top: 20px;">
-                        <button class="Report" id="Report">Report</button>
+                        <button class="Report" id="Report" onclick="reportPhoto();">Report</button>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,17 @@
                     <hr />
                     <div class="ImageActions">
                         <!--<button class="BuyBtn">Buy Photo</button>-->
-                        <button type="submit" class="BuyBtn" id="payhere-payment" >Buy Photo</button>
+                        <%
+                            if (logged) {
+                        %>
+                        <button type="submit" class="BuyBtn" id="payhere-payment" onclick="buyPhoto();">Buy Photo</button>
+                        <%
+                        } else {
+                        %>
+                        <button type="submit" class="BuyBtn" id="payhere-payment" onclick="window.location.href = '/GroupProject/View/login.jsp?loc=prep'">Buy Photo</button>
+                        <%
+                            }
+                        %>
                         <button class="CartBtn" onclick="window.location.href = '../../AddToCart?no=<%= p.getId()%>'">Add to Favourites</button>
                         <button class="ReportBtn" id="ReportBtn">Report Photo</button>
                     </div>
@@ -301,57 +311,43 @@
         <script type="text/javascript" src="../../JS/User/PurchasePhoto.js"></script>
         <script type="text/javascript" src="https://www.payhere.lk/lib/payhere.js"></script>
         <script>
-                            // Called when user completed the payment. It can be a successful payment or failure
+
                             payhere.onCompleted = function onCompleted(orderId) {
-                                console.log("Payment completed. OrderID:" + orderId);
                                 alert("Payment completed. OrderID:" + orderId);
-                                var request = new XMLHttpRequest();
-                                
-                                request.open("GET", "../../palceOrder", true);
-                                request.send();
+                                console.log("Payment completed. OrderID:" + orderId);
                                 //Note: validate the payment and show success or failure page to the customer
                             };
 
                             // Called when user closes the payment without completing
                             payhere.onDismissed = function onDismissed() {
                                 //Note: Prompt user to pay again or show an error page
-                                console.log("Payment dismissed");
                                 alert("Payment dismissed");
+                                console.log("Payment dismissed");
                             };
 
                             // Called when error happens when initializing payment such as invalid parameters
                             payhere.onError = function onError(error) {
                                 // Note: show an error page
-                                console.log("Error:" + error);
                                 alert("Error:" + error);
+                                console.log("Error:" + error);
                             };
 
-                            // Put the payment variables here
-                            var payment = {
-                                "sandbox": true,
-                                "merchant_id": "1214228", // Replace your Merchant ID
-                                "return_url": undefined, // Important
-                                "cancel_url": undefined, // Important
-                                "notify_url": "http://sample.com/notify",
-                                "order_id": "ItemNo12345",
-                                "items": "<%= p.getTitle()%>",
-                                "amount": "<%= p.Price()%>",
-                                "currency": "LKR",
-                                "first_name": "<%= c.getFname()%>",
-                                "last_name": "<%= c.getLname()%>",
-                                "email": "<%= c.getEmail()%>",
-                                "phone": "",
-                                "address": "<%= c.getAddress_no()%>",
-                                "city": "<%= c.getCity()%>/<%= c.getProvince()%> ",
-                                "country": "Sri Lanka"
+                            function buyPhoto() {
 
-                            };
+                                var request = new XMLHttpRequest();
+                                request.onreadystatechange = function () {
+                                    if (request.status == 200) {
+                                        if (request.readyState == 4) {
+                                            var responce = request.responseText;
+                                            var x = JSON.parse(responce);
+                                            payhere.startPayment(x);
+                                        }
+                                    }
+                                };
 
-                            // Show the payhere.js popup, when "PayHere Pay" is clicked
-                            document.getElementById('payhere-payment').onclick = function (e) {
-                                payhere.startPayment(payment);
-                                
-                            };
+                                request.open("GET", "/GroupProject/PrePurchase", true);
+                                request.send();
+                            }
         </script>
     </body>
 </html>
