@@ -224,7 +224,7 @@ function loadphotos() {
 
 window.onload = function () {
     loadphotos();
-    elm = document.querySelectorAll('.selection-img');
+    tosubmit = document.querySelectorAll('.selection-img');
     accepted = document.querySelectorAll('.selection-accepted');
     notaccepted = document.querySelectorAll('.selection-rejected');
     detailsimg = document.querySelector('.detailsimg');
@@ -237,8 +237,8 @@ window.onload = function () {
     document.getElementById("accept1").style.transform = "scale(1.1)";
     document.getElementById("accept1").style.border = "5px solid  #3eb80e";
 
-    elm.forEach(function (elm) {
-        elm.addEventListener('click', function (event) {
+    tosubmit.forEach(function (tosubmit) {
+        tosubmit.addEventListener('click', function (event) {
             detailsimg.src = event.target.src;
             detailsimg.setAttribute("photo_id", event.target.getAttribute("photo_id"));
         });
