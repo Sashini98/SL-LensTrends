@@ -47,13 +47,15 @@
                         x += 1;
                     }
         %>
-        <input type="radio" id="r<%= i + 1%>" name="radio"/>
+
+        <input type="radio" id="r<%= i + 1%>" name="radio"/>  
         <label for="r<%= i + 1%>">
             <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
-
-            }%>
+                System.out.println(PhotoId);
+            }
+        %>
 
     </div>
 
@@ -362,12 +364,12 @@
     %>
     <div class="image-box-accepted">
         <%
-            String accpetedpath ="";
+            String accpetedpath = "";
             int x = 0;
             int accepted = 0;
             int PhotoIdaccepted = 0;
             for (int i = 0; i < m.size(); i++) {
-                if (m.get(i).getStateId() == 4) {                    
+                if (m.get(i).getStateId() == 4) {
                     accepted += 1;
                     if (x == 0) {
                         accpetedpath = m.get(i).getPath();
@@ -399,7 +401,7 @@
 
 
             </div>
-            
+
             <span id="deleteaccepted" class="deleteaccepted" photo-id-accepted="<%=PhotoIdaccepted%>" srcpath="<%=accpetedpath%>" onclick="deletephoto('deleteaccepted')">Delete</span>
         </div>
 
