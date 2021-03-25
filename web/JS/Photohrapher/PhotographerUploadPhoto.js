@@ -229,8 +229,14 @@ window.onload = function () {
     //	main = document.querySelectorAll('main')[0];
     detailsimg = document.querySelector('.detailsimg');
 //                                    detailsimg.src = "../../Resources/Img/profile/l1.jpg";
-    document.getElementById("r1").checked=true;
-
+    document.getElementById("r1").checked = true;
+    document.getElementById("review1").style.transform = "scale(1.1)";
+    document.getElementById("review1").style.border = "5px solid  #415daa";
+    document.getElementById("rejected1").style.transform = "scale(1.1)";
+    document.getElementById("rejected1").style.border = "5px solid  #ff6969";
+    document.getElementById("accept1").style.transform = "scale(1.1)";
+    document.getElementById("accept1").style.border = "5px solid  #3eb80e";
+    
     elm.forEach(function (elm) {
         elm.addEventListener('click', function (event) {
             detailsimg.src = event.target.src;
