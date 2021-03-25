@@ -9,7 +9,7 @@ function ViewQusetionDetails(id){
                 var responce = request.responseText;
                 var details = JSON.parse(responce);
                 
-                document.getElementById("title").value = details[0];
+                document.getElementById("title").innerHTML = details[0];
                 document.getElementById("question").value = details[1];
                 document.getElementById("cate").value = details[2];
                 document.getElementById("reported").value = details[3];

@@ -75,7 +75,6 @@
             <div class="modal-content">
                 <span class="close" onclick="removeEdit();">&times;</span>
                 <div class="outterdiv">
-                    <form>
                         <div class="container">
                             <h1>Subscription Plan</h1>
                             <hr>
@@ -94,7 +93,7 @@
                                 <button type="button" onclick="show('subscription')" class="closebtn">Back</button>
                             </div>
                         </div>
-                    </form>
+                    
 
                 </div>
             </div>

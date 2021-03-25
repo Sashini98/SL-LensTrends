@@ -51,20 +51,20 @@
         <form>
             <div class="formContent">                             
                 <span class="content_name">Title </span><br>
-                <input type="text" name="title" required/>
+                <input type="text" name="title" id="ptitle" required/>
                 <label for="title" class="label_name">
                 </label>
             </div><br>
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
-                <textarea class="textarea" id="msgbody"></textarea>
+                <textarea class="textarea" id="pmsgbody"></textarea>
                 <label for="msg" class="label_name">
                 </label>
             </div><br>
 
         </form>
-        <button id="psend" type="submit">Send</button>
+        <button id="psend" type="submit" onclick="SendPhotographerNotification()">Send</button>
     </div>
 </div>
 
@@ -75,20 +75,20 @@
         <form>
             <div class="formContent">                             
                 <span class="content_name">Title </span><br>
-                <input type="text" name="title" required/>
+                <input type="text" name="title" id="stitle" required/>
                 <label for="title" class="label_name">
                 </label>
             </div><br>
 
             <div class="formContent">
                 <span class="content_name"> Message </span><br>
-                <textarea class="textarea" id="msgbody"></textarea>
+                <textarea class="textarea" id="smsgbody"></textarea>
                 <label for="msg" class="label_name">
                 </label>
             </div><br>
 
         </form>
-        <button id="ssend" type="submit">Send</button>
+        <button id="ssend" type="submit" onclick="SendSystemNotification()">Send</button>
     </div>
 
     <div class="box2">
