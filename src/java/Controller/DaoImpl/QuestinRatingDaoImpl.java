@@ -45,16 +45,11 @@ public class QuestinRatingDaoImpl implements QuestionRatingDao{
     }
 
     @Override
-    public void addLikeatBegin(int answerId) throws SQLException {
-          DB.iud("INSERT INTO answerrating(Likes, Answer_Id) VALUES ('"+0+"','"+answerId+"')"); 
+    public void addRateatBegin(int answerId) throws SQLException {
+          DB.iud("INSERT INTO answerrating(Likes, Dislikes,  Answer_Id) VALUES ('"+0+"', '"+0+"' ,'"+answerId+"')"); 
     }
 
-    @Override
-    public void addDisikeatBegin(int answerId) throws SQLException {
-         DB.iud("INSERT INTO answerrating(Dislikes, Answer_Id) VALUES ('"+0+"','"+answerId+"')"); 
-    }
-
-    @Override
+       @Override
     public int getLikes(int answerId) throws SQLException {
        ResultSet likes=DB.search("SELECT Likes FROM answerrating where Answer_Id = '" + answerId + "'");
        likes.next();

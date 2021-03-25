@@ -47,13 +47,15 @@
                         x += 1;
                     }
         %>
-        <input type="radio" id="r<%= i + 1%>" name="radio"/>
+
+        <input type="radio" id="r<%= i + 1%>" name="radio"/>  
         <label for="r<%= i + 1%>">
             <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
-
-            }%>
+                System.out.println(PhotoId);
+            }
+        %>
 
     </div>
 
@@ -274,13 +276,21 @@
     %>
     <div class="image-box-rejected">
         <%
+            String notaccpetedpath = "";
+            int x = 0;
+            int PhotoIdrejected = 0;
             int notaccepted = 0;
             for (int i = 0; i < m.size(); i++) {
                 if (m.get(i).getStateId() == 3) {
                     notaccepted += 1;
+                    if (x == 0) {
+                        notaccpetedpath = m.get(i).getPath();
+                        PhotoIdrejected = m.get(i).getId();
+                        x += 1;
+                    }
 
         %>
-        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="rejected<%= notaccepted%>" onclick="clickimage('rejected<%= notaccepted%>', 'image-box-rejected',<%= m.get(i).getId()%>,<%= countnotaccepted%>)">
+        <img photo-id-notaccepted="<%= m.get(i).getId()%>" class="selection-rejected" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="rejected<%= notaccepted%>" onclick="clickimage('rejected<%= notaccepted%>', 'image-box-rejected',<%= m.get(i).getId()%>,<%= countnotaccepted%>)">
         <!--        <img src="../../Resources/Img/profile/n6.jpg" id="re6" onclick="clickimage('re6')" >
                 <img src="../../Resources/Img/profile/n7.jpg" id="re7" onclick="clickimage('re7')">
                 <img src="../../Resources/Img/profile/n8.jpg" id="re8" onclick="clickimage('re8')">-->
@@ -299,6 +309,7 @@
                 <span>Image with Water Mark</span>
                 <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id="fileid-notaccepted"></span> </p>
 
+                <span id="deleterejected" class="deleterejected" photo-id-notaccepted="<%=PhotoIdrejected%>" srcpathrejected="<%=notaccpetedpath%>" onclick="deletephoto('deleterejected')">Delete</span>
 
             </div>
         </div>
@@ -362,12 +373,12 @@
     %>
     <div class="image-box-accepted">
         <%
-            String accpetedpath ="";
+            String accpetedpath = "";
             int x = 0;
             int accepted = 0;
             int PhotoIdaccepted = 0;
             for (int i = 0; i < m.size(); i++) {
-                if (m.get(i).getStateId() == 4) {                    
+                if (m.get(i).getStateId() == 4) {
                     accepted += 1;
                     if (x == 0) {
                         accpetedpath = m.get(i).getPath();
@@ -399,7 +410,7 @@
 
 
             </div>
-            
+
             <span id="deleteaccepted" class="deleteaccepted" photo-id-accepted="<%=PhotoIdaccepted%>" srcpath="<%=accpetedpath%>" onclick="deletephoto('deleteaccepted')">Delete</span>
         </div>
 

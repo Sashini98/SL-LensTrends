@@ -20,12 +20,13 @@ public class Question{
     Date question_date;
     String clientId;
     String photographerId;
+    int answerCount;    
 
     public Question() {
     }
     
     
-    public Question(int questionId, String title, String question,int categoryId,Date question_date, String clientId,String photographerId)
+    public Question(int questionId, String title, String question,int categoryId,Date question_date, String clientId,String photographerId,int answerCount)
      {
     this.questionId=questionId;
     this.question=question;
@@ -33,6 +34,7 @@ public class Question{
     this.question_date=question_date;
     this.clientId=clientId;
     this.photographerId=photographerId;
+    this.answerCount=answerCount;
     }
 
 
@@ -99,4 +101,15 @@ public class Question{
     public void setquestion_date(String d) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    public int getanswerCount() {
+        return answerCount;
+    }
+
+    public void setanswerCount(int answerCount) {
+        this.answerCount = answerCount;
+    }
+    
+    
+    
 }    

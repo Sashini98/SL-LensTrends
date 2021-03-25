@@ -26,6 +26,7 @@ public interface QuestionDao {
     public int getCategory(String category)throws SQLException;
     public Question getQuestionbtId(int questionId) throws SQLException;
     public String getlastQuestionId() throws SQLException;
+    public void updateAnswCount(int questionId) throws SQLException;
             
     
     public void deleteQuestion(int questionId) throws SQLException;
@@ -33,6 +34,6 @@ public interface QuestionDao {
     public List getQuestionCategory() throws SQLException;
     
     
-    public List<Question> getQuestByKeyWord(String keyword) throws SQLException;
+    public List<Question> getQuestfilter(String keyword,String filter,String sort) throws SQLException;
     
 }

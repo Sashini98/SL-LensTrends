@@ -16,7 +16,6 @@ import java.util.List;
 public interface AnswerDao {
     
     public void addAnswer(Answer answer) throws SQLException;
-    public int answerCount(int questionId) throws SQLException;
     
      public List getAllAnswers(int questionId) throws SQLException;
       public int getLastId() throws SQLException ;

@@ -767,3 +767,21 @@ div .details .releases p span a {
     background-color: red;
     cursor: pointer;
 }
+
+#deleterejected {
+    margin-left: 85%;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 10%;
+    font-size: 130%;
+    background-color: #ff6969;
+    color: white;
+    width: 13%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1%;
+}
+
+#deleterejected:hover {
+    background-color: #1d67b1;
+    cursor: pointer;
+}

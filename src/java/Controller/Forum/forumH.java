@@ -63,8 +63,8 @@ public class forumH extends HttpServlet {
 
                 }
 
-                AnswerDao answ = new AnswerDaoImpl();
-                cnt = answ.answerCount(q.getquestionId());
+                
+                cnt = q.getanswerCount();
 
                 a.add(q.gettitle());
                 a.add(q.getquestion());
