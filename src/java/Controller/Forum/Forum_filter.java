@@ -18,16 +18,9 @@ import Model.Photographer;
 import Model.Question;
 import Model.QuestionCategory;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,88 +31,24 @@ public class Forum_filter extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       
 
         String keyword = request.getParameter("keyword");
         String sort = request.getParameter("sortBy");
         String filter = request.getParameter("filterBy");
-
+        
         try{
-            QuestionDao ques = new QuestionDaoImpl();
-
-            ArrayList<Question> questionByKeyWord = (ArrayList<Question>) ques.getQuestByKeyWord(keyword);
-
-            if (questionByKeyWord == null) {
-                questionByKeyWord = new ArrayList<>();
-            }
-            List<Question> questContainer = questionByKeyWord;
-            LinkedList<Question> quest = new LinkedList<>();
-
-            for (Question q : questContainer) {
-                quest.add(q);
-            }
-            
-             Iterator<Question> questIterator = quest.iterator();
-        HashSet<Question> removeQuest = new HashSet<>();
-
-        while (questIterator.hasNext()) {
-
-            Question qu = questIterator.next();
-            boolean isNeeded = false;
-            
-            AnswerDao answ=new AnswerDaoImpl();
-            int cnt=answ.answerCount(qu.getquestionId());
-         
-            if(filter.contains("NoAnswer"))
-            {
-                if(cnt==0)
-                {
-                    isNeeded=true;
-                }
-            }
-            
-            else if (filter.contains("100plus"))
-            {
-                if(cnt>100)
-                {
-                    isNeeded=true;
-                }
-            }
-            
-             if (!isNeeded) {
-                removeQuest.add(qu);
-            }
-             
-            
+             ArrayList<String> a = new ArrayList();
+            ArrayList<String> b = new ArrayList();
+        
+        QuestionDao qDao=new QuestionDaoImpl();
+        ArrayList<Question> questByKeyword = (ArrayList<Question>) qDao.getQuestByKeyWord(keyword);
+        
+        if(questByKeyword==null)
+        {
+            questByKeyword=new ArrayList<>();
         }
-         quest.removeAll(removeQuest);
-         
-         if (sort.equalsIgnoreCase("newest")) {
-
-            LinkedList<Question> contains = new LinkedList<>();
-            LinkedList<Question> notContains = new LinkedList<>();
-
-            if (keyword != null) {
-                for (Question photo : quest) {
-
-                    
-                }
-                quest.clear();
-                quest.addAll(contains);
-                quest.addAll(notContains);
-            }
-
-        } 
-            
-            
-          ArrayList<Question> sortedQues = new ArrayList(quest);
-          
-          ArrayList<String> a = new ArrayList();
-          ArrayList<String> b = new ArrayList();
-
-           
-
-            for (Question q : sortedQues) {
+        
+        for (Question q : questByKeyword) {
                 String name = "";
                 int cnt = 0;
 
@@ -153,7 +82,7 @@ public class Forum_filter extends HttpServlet {
                 a.add(cnt + "");
                 a.add(q.getquestionId() + "");
 
-                ArrayList<QuestionCategory> category = (ArrayList<QuestionCategory>) ques.getCategory(q.getquestionId());
+                ArrayList<QuestionCategory> category = (ArrayList<QuestionCategory>) qDao.getCategory(q.getquestionId());
 
                 for (QuestionCategory qu : category) {
                     b.add(qu.getCategory());
@@ -164,18 +93,19 @@ public class Forum_filter extends HttpServlet {
                 a.add(cat);
                 b.clear();
             }
-          
-          
-          
-        request.getSession().setAttribute("searchedQues", a);
-        request.getRequestDispatcher("View/Fourm/SearchQuest.jsp").forward(request, response);   
             
-            
-            
-
-        } catch (Exception e) {
+            request.setAttribute("questions", a);
+            System.out.println("a "+a);
+            request.getRequestDispatcher("View/Fourm/quest.jsp").forward(request, response);
+            System.out.println("done");
+        
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
 
 }
+
+
