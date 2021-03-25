@@ -1,5 +1,5 @@
 
-/* global uploadimage, uploadmodal, uploadfile, photographid, deleteaccepted */
+/* global uploadimage, uploadmodal, uploadfile, photographid, deleteaccepted, checked */
 
 function navigation(button) {
     if (button == "tosubmit") {
@@ -229,6 +229,7 @@ window.onload = function () {
     //	main = document.querySelectorAll('main')[0];
     detailsimg = document.querySelector('.detailsimg');
 //                                    detailsimg.src = "../../Resources/Img/profile/l1.jpg";
+    document.getElementById("r1").checked=true;
 
     elm.forEach(function (elm) {
         elm.addEventListener('click', function (event) {
