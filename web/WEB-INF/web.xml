@@ -252,6 +252,10 @@
         <servlet-name>AddToCart</servlet-name>
         <servlet-class>Controller.Clent.AddToCart</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>palceOrder</servlet-name>
+        <servlet-class>Controller.Clent.palceOrder</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -503,6 +507,10 @@
     <servlet-mapping>
         <servlet-name>AddToCart</servlet-name>
         <url-pattern>/AddToCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>palceOrder</servlet-name>
+        <url-pattern>/palceOrder</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
