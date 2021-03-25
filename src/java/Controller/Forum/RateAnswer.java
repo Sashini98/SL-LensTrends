@@ -41,11 +41,12 @@ public class RateAnswer extends HttpServlet {
         try {
             
             QuestionRatingDao qrDao = new QuestinRatingDaoImpl();
-            if (request.getSession().getAttribute("loggedPhotographer") == null && request.getSession().getAttribute("loggedClient") == null) {
-                response.sendRedirect("/GroupProject/View/login.jsp");
-                
-                
-            } else if (request.getSession().getAttribute("loggedPhotographer") == null) {
+//            if (request.getSession().getAttribute("loggedPhotographer") == null && request.getSession().getAttribute("loggedClient") == null) {
+//                response.sendRedirect("/GroupProject/View/login.jsp");
+//                
+//                
+//            } 
+            if (request.getSession().getAttribute("loggedPhotographer") == null) {
                 Client c = (Client) request.getSession().getAttribute("loggedClient");
                 id = c.getClientId();
                 

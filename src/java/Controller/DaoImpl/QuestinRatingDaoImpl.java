@@ -132,7 +132,14 @@ public class QuestinRatingDaoImpl implements QuestionRatingDao {
     @Override
     public void deleteLike(int answerId, String loggedId) throws SQLException {
         int cnt=getLikeCount(answerId);
-        int cnt2 = cnt-1;
+        int cnt2;
+        if(cnt==0){
+            cnt2=0;
+        }
+        else
+        {
+        cnt2 = cnt-1;
+        }
 
         DB.iud("UPDATE answerrating SET Likes='" + cnt2 + "'  where Answer_Id = '" + answerId + "'");
 
@@ -148,7 +155,14 @@ public class QuestinRatingDaoImpl implements QuestionRatingDao {
     @Override
     public void deleteDisike(int answerId, String loggedId) throws SQLException {
        int cnt=getDislikeCount(answerId);
-        int cnt2 = cnt-1;
+       int cnt2;
+       if(cnt==0){
+            cnt2=0;
+        }
+        else
+        {
+       cnt2 = cnt-1;
+        };
 
         DB.iud("UPDATE answerrating SET Dislikes='" + cnt2 + "'  where Answer_Id = '" + answerId + "'");
 
