@@ -62,4 +62,15 @@ public class ReportedPhotographDaoImpl implements ReportedPhotographDao{
         DB.iud("INSERT INTO reported_photo(Reason,Description,Photograph_Id,Client_Id,Photographer_Id) VALUES "
                 + "('"+ photograph.getReason() +"', '"+ photograph.getDescription() +"', '"+ photograph.getPhotographId() +"', '"+ photograph.getClientId() +"', '"+ photograph.getPhotographerId() +"')");
     }
+
+    @Override
+    public boolean hasPerviousReports(int photographId, String clientId) throws SQLException {
+        ResultSet search = DB.search("SELECT * FROM reported_photo WHERE Photograph_Id = '"+ photographId +"' AND Client_Id = '"+ clientId +"'");
+        boolean b = false;
+        if (search.next()) {
+            b = true;
+        }
+        
+        return b;
+    }
 }
