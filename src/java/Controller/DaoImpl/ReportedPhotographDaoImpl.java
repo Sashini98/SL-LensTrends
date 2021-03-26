@@ -56,4 +56,10 @@ public class ReportedPhotographDaoImpl implements ReportedPhotographDao{
     }
     
 }
+
+    @Override
+    public void addReportedPhotograph(ReportedPhotographs photograph) throws SQLException {
+        DB.iud("INSERT INTO reported_photo(Reason,Description,Photograph_Id,Client_Id,Photographer_Id) VALUES "
+                + "('"+ photograph.getReason() +"', '"+ photograph.getDescription() +"', '"+ photograph.getPhotographId() +"', '"+ photograph.getClientId() +"', '"+ photograph.getPhotographerId() +"')");
+    }
 }

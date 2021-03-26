@@ -171,7 +171,18 @@
                             }
                         %>
                         <button class="CartBtn" onclick="window.location.href = '../../AddToCart?no=<%= p.getId()%>'">Add to Favourites</button>
+                        <%
+                            if (logged) {
+                        %>
                         <button class="ReportBtn" id="ReportBtn">Report Photo</button>
+                        <%
+                        } else {
+                        %>
+                        <button class="ReportBtn" onclick="window.location.href = '/GroupProject/View/login.jsp?loc=prep'">Report Photo</button>
+
+                        <%
+                            }
+                        %>
                     </div>
                 </div>
             </div>
