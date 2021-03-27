@@ -284,6 +284,7 @@
         <servlet-name>GoogleLogin</servlet-name>
         <servlet-class>Controller.GoogleLogin</servlet-class>
     </servlet>
+    
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
