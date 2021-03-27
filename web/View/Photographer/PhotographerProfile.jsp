@@ -85,10 +85,6 @@
                         <th id="color">68%</th>
                     </tr>
                     <tr>
-                        <th>Uploads</th>
-                        <th id="color">68</th>
-                    </tr>
-                    <tr>
                         <th>Completed Events</th>
                         <th id="color">20</th>
                     </tr>
@@ -114,7 +110,7 @@
                 <div class="upload-modal-content">
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
-                        <img src="../../Resources/Img/upload.svg">
+                        <img style="margin-left: 13%;" src="../../Resources/Img/upload.svg">
                         <input type="file" id="up-image" style="display:none;" onchange="pressed();showPreviewOne(event);">
                         <label for="up-image">
                             <a type="file" id="upload-image"> Browse</a>
@@ -127,7 +123,9 @@
                     <div class="list">
                         <ul>
                             <li>JPEG format only</li>
-                            <li>Maximum file size is 10MB</li>
+                            <li>Maximum file size is 25MB</li>
+                            <li>Give a Short Title</li>
+                            <li>Submit your best work for portfolio</li>
                         </ul>
                     </div> 
                     <div  class="sample-image">
@@ -153,22 +151,114 @@
 
 
         <div class="image-content">
-            <div class="image">
+            <table id="image-table">
+                <tr>
+                    <td style="padding-right: 5%;">
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/p1.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/p2.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/p3.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                </tr>
 
-                <img src="../../Resources/Img/profile/p1.jpg">
-                <img src="../../Resources/Img/profile/p2.jpg">
-                <img src="../../Resources/Img/profile/p3.jpg">
-                <img src="../../Resources/Img/profile/p4.jpg">
-                <img src="../../Resources/Img/profile/p5.jpg">
-                <img src="../../Resources/Img/profile/p6.jpg">
-                <img src="../../Resources/Img/profile/l1.jpg">
-                <img src="../../Resources/Img/profile/l2.jpg">
-                <img src="../../Resources/Img/profile/l3.jpg">
-                <img src="../../Resources/Img/profile/l4.jpg">
-                <img src="../../Resources/Img/profile/l5.jpg">
-                <img src="../../Resources/Img/profile/l6.jpg">
-
-            </div>
+                <tr>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/p4.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/p5.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/p6.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/l1.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/l2.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="../../Resources/Img/profile/l3.jpg">
+                            <div class="middle">
+                                <div class="text"><span>Delete</span></div>
+                            </div> 
+                            <div class="middle2">
+                                <div class="text2"><span>Glass</span></div>
+                            </div> 
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
 
         <script  type="text/javascript" src="../../JS/Photohrapher/PhotographerProfile.js"></script>
