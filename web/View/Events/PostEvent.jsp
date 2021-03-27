@@ -133,7 +133,7 @@
 <!--
                     -->
 
-                    <input type="submit" value="submit">
+                    <input type="submit" value="submit" value="Post Event">
                     
                 </form>
                 

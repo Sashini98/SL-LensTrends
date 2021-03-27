@@ -6,13 +6,19 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
+<%
+    String eid = (String) request.getAttribute("eid");
+%>
+
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300;700&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Righteous&family=Sora:wght@600&family=Syne&family=Barlow:wght@400;500;700;800&display=swap" rel="stylesheet">  
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="../../CSS/Events/EventsPost.css"/>
+        <link type="text/css" rel="stylesheet" href="CSS/Events/EventsPost.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,7 +31,7 @@
 
             <div class="pageheader">
 
-                <a href="../Home.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
+                <a href="../Home.jsp" type="button"> <img src="Resources/Img/7.png" height="55px" width="60px"> </a>
                 <h1>Sl Lens Trends </h1>
 
                 <div class="headerul">
@@ -43,7 +49,7 @@
                 </div>
 
                 <div class="notifyicn">
-                    <a href="#" type="button"> <img src="../../Resources/Img/notification.png"> </a>
+                    <a href="#" type="button"> <img src="Resources/Img/notification.png"> </a>
                 </div>
 
                 <div class="logout">
@@ -61,6 +67,7 @@
 
             <div class="events"> 
                 <form>
+                    <input type="text" id="eid" name="eid" style="display: none" value="<%= eid %>">
                     <div class="filter-radio">
                         <label class="container-radio"><h8>Specify Photographers</h8>
                             <input type="radio" id="chkYes" name="photographers" value="Specify Photographers" onclick="ShowHideDiv()">
@@ -102,6 +109,9 @@
                             </select>
                         </div>
                     </div>
+                    
+                     <input type="submit" value="submit" value="Post Event">
+                     
                 </form>
             </div>       
 
@@ -109,7 +119,7 @@
 
         <div class="sidenav">
             <div class="dropdown">
-                <button onclick="myFunction()" class="dropbtn">Step 1: Draft your event<img src="../../Resources/Img/down.png"></button>
+                <button onclick="myFunction()" class="dropbtn">Step 1: Draft your event<img src="Resources/Img/down.png"></button>
             </div>        
             <div id="myDropdown" class="dropdown-content">
 
@@ -123,7 +133,7 @@
             </div>
 
             <div class="dropdown">
-                <button onclick="myFunction1()" class="dropbtn">Step 2: Post your event <img src="../../Resources/Img/down.png"></button>
+                <button onclick="myFunction1()" class="dropbtn">Step 2: Post your event <img src="Resources/Img/down.png"></button>
             </div>        
             <div id="myDropdown1" class="dropdown-content">
 
@@ -146,11 +156,11 @@
                 </ul>
 
             </div>
-            <img src="../../Resources/Img/add-event.svg" style="width: 100%; height: 30%; margin-top: 6%">
+            <img src="Resources/Img/add-event.svg" style="width: 100%; height: 30%; margin-top: 6%">
         </div>
 
 
-        <script src="../../JS/Events/PostEvents.js" type="text/javascript" ></script>
+        <script src="JS/Events/PostEvents.js" type="text/javascript" ></script>
 
     </body>
 </html>
