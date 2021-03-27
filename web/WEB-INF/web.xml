@@ -280,6 +280,11 @@
         <servlet-name>DeletePortfolioPhotos</servlet-name>
         <servlet-class>Controller.Photographer.DeletePortfolioPhotos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GoogleLogin</servlet-name>
+        <servlet-class>Controller.GoogleLogin</servlet-class>
+    </servlet>
+    
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -555,12 +560,19 @@
     <servlet-mapping>
         <servlet-name>PhotographerProfile</servlet-name>
         <url-pattern>/PhotographerProfile</url-pattern>
-    </servlet-mapping>    
-     <servlet-mapping>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>DeletePortfolioPhotos</servlet-name>
         <url-pattern>/DeletePortfolioPhotos</url-pattern>
-     </servlet-mapping> 
-
+    </servlet-mapping> 
+    <servlet-mapping>  
+        <servlet-name>forumH_personal</servlet-name>
+        <url-pattern>/forumH_personal</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>  
+        <servlet-name>GoogleLogin</servlet-name>
+        <url-pattern>/GoogleLogin</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10

@@ -63,22 +63,18 @@ function reportPhoto() {
         title += "/Something Else";
     }
 
+    var request = new XMLHttpRequest();
     if (title !== "" && description !== "") {
         request.onreadystatechange = function () {
             var request = new XMLHttpRequest();
             if (request.status == 200) {
                 if (request.readyState == 4) {
                     var responce = request.responseText;
-                    if (responce === "Success") {
-                        alert("Reported Successfully");
+                    
+                        alert(responce);
                         document.getElementById('content').style.opacity = "1";
                         modal.style.display = "none";
-                    } else {
-                        alert("Error");
-                        document.getElementById('content').style.opacity = "1";
-                        modal.style.display = "none";
-
-                    }
+                    
                 }
             }
         };

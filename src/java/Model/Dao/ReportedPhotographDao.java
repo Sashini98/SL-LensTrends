@@ -5,6 +5,7 @@
  */
 package Model.Dao;
 
+import Model.Photograph;
 import Model.ReportedPhotographs;
 import java.sql.SQLException;
 import java.util.List;
@@ -18,4 +19,5 @@ public interface ReportedPhotographDao {
     public List getAllReportedPhotos() throws SQLException;
     public ReportedPhotographs getReportedPhotographById(int id) throws SQLException;
     public void addReportedPhotograph(ReportedPhotographs photograph) throws SQLException;
+    public boolean hasPerviousReports(int photographId, String clientId) throws SQLException;
 }

@@ -23,6 +23,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet"> 
+        <meta name="google-signin-client_id" content="462042771138-hi5lv6qm2445d79nsdt0m66kqm4pqefb.apps.googleusercontent.com">
     </head>
     <body  style="background-size:100%; background-image:url(<%= request.getContextPath()%>/Resources/Img/bg-login2.jpg);">
 
@@ -118,6 +119,10 @@
                             </p>
                         </div>
                     </form>
+                    <div class="change">
+                        <div class="g-signin2"  id="my-signin2" data-onsuccess="onSignIn"></div>
+
+                    </div>
                     <hr />
                     <span style="font-size: 18px; font-family: 'Tenali Ramakrishna', sans-serif;">
                         Protected by reCAPTCHA and subject to the Google Privacy &nbsp;&nbsp;&nbsp; Policy and Terms of Services.
@@ -137,5 +142,43 @@
                 </div>
             </div>
         </div>
+
+        <script>
+
+
+            function onSuccess(googleUser) {
+                console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '<%= request.getContextPath()%>/GoogleLogin');
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                xhr.send('idtoken=' + id_token);
+            }
+            function onFailure(error) {
+                console.log(error);
+            }
+            function renderButton() {
+                gapi.signin2.render('my-signin2', {
+                    'scope': 'profile email',
+                    'width': 240,
+                    'height': 50,
+                    'longtitle': true,
+                    'theme': 'dark',
+                    'onsuccess': onSuccess,
+                    'onfailure': onFailure
+                });
+            }
+
+            function onSignIn(googleUser) {
+                var profile = googleUser.getBasicProfile();
+                console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                console.log('Name: ' + profile.getName());
+                console.log('Image URL: ' + profile.getImageUrl());
+                console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            }
+        </script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
     </body>
+
+</body>
 </html> 
