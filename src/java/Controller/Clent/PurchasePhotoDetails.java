@@ -8,6 +8,7 @@ package Controller.Clent;
 import Controller.DaoImpl.PhotographCategoryDaoImpl;
 import Controller.DaoImpl.PhotographDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
+import Controller.DaoImpl.PurchaseInvoiceDaoImpl;
 import Model.Dao.PhotographCategoryDao;
 import Model.Dao.PhotographDao;
 import Model.Dao.PhotographerDao;
@@ -40,6 +41,8 @@ public class PurchasePhotoDetails extends HttpServlet {
 
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
+            
+           
 
             ArrayList<Photograph> photographerPhotos = photographDao.getAllphotosofPhotographer(photographer.getPhotographerId());
             ArrayList<Photograph> removingPics = new ArrayList<>();

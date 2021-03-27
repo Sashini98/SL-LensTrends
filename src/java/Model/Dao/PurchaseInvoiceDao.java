@@ -16,5 +16,6 @@ import java.util.ArrayList;
 public interface PurchaseInvoiceDao {
     
     public ArrayList<PurchaseInvoice> getPurchacedPhotos(String clientId) throws SQLException;
+    public void setPurchasedImage(PurchaseInvoice purchaseInvoice)throws SQLException; 
     
 }

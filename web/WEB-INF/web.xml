@@ -256,6 +256,14 @@
         <servlet-name>palceOrder</servlet-name>
         <servlet-class>Controller.Clent.palceOrder</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PrePurchase</servlet-name>
+        <servlet-class>Controller.Clent.PrePurchase</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReportPhoto</servlet-name>
+        <servlet-class>Controller.Clent.ReportPhoto</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -511,6 +519,14 @@
     <servlet-mapping>
         <servlet-name>palceOrder</servlet-name>
         <url-pattern>/palceOrder</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PrePurchase</servlet-name>
+        <url-pattern>/PrePurchase</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReportPhoto</servlet-name>
+        <url-pattern>/ReportPhoto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
