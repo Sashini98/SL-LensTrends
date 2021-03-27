@@ -264,6 +264,14 @@
         <servlet-name>ReportPhoto</servlet-name>
         <servlet-class>Controller.Clent.ReportPhoto</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>photographer_suggest</servlet-name>
+        <servlet-class>Controller.Event.photographer_suggest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostEvent2</servlet-name>
+        <servlet-class>Controller.Event.PostEvent2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -527,6 +535,14 @@
     <servlet-mapping>
         <servlet-name>ReportPhoto</servlet-name>
         <url-pattern>/ReportPhoto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>photographer_suggest</servlet-name>
+        <url-pattern>/photographer_suggest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostEvent2</servlet-name>
+        <url-pattern>/PostEvent2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

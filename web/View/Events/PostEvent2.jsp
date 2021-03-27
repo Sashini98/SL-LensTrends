@@ -66,7 +66,7 @@
         <div class="main-content">
 
             <div class="events"> 
-                <form>
+                <form id="eve2" action="/GroupProject/PostEvent2" method="POST">
                     <input type="text" id="eid" name="eid" style="display: none" value="<%= eid %>">
                     <div class="filter-radio">
                         <label class="container-radio"><h8>Specify Photographers</h8>
@@ -82,15 +82,21 @@
 
 
                     <div id="photo" style="display: none">
-                        <span class="content_name" style="margin-left: 5%;"> Name :  </span><br><br>
+                       
+                        <span class="content_name" style="margin-left: 5%;"> Names :  </span> 
+                        <input id="cat" name="cat" type="text" style="border: none;font-size: 20px;font-family: 'Tenali Ramakrishna', sans-serif;font-weight: bold;margin-left: 10%;"><br><br>
                         <div class="formContent">
                             <span class="content_name"> Photographer Name </span><br>
-                            <input  style="width: 80%;" type="text" name="pname" required/>
+                            <input  style="width: 80%;" type="text" name="pname" id="pname"/>
                             <label for="pname" class="label_name">
                             </label>
+                            </div>
+                         <div class="formContent">
                             <button type="button" id="add">Add</button> 
-                        </div>
+                         </div>
+                        
                     </div>
+                        
 
                     <div id="area" style="display: none">
                         <span class="content_name" style="margin-left: 10%;">Photographers from : </span><br>
@@ -110,9 +116,10 @@
                         </div>
                     </div>
                     
-                     <input type="submit" value="submit" value="Post Event">
+                    <br><br> <input type="submit" value="submit" value="Post Event">
                      
                 </form>
+                    
             </div>       
 
         </div>
@@ -160,7 +167,7 @@
         </div>
 
 
-        <script src="JS/Events/PostEvents.js" type="text/javascript" ></script>
+        <script src="JS/Events/PostEvent2.js" type="text/javascript" ></script>
 
     </body>
 </html>

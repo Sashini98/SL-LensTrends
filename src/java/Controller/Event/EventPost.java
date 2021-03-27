@@ -101,8 +101,7 @@ public class EventPost extends HttpServlet {
         request.setAttribute("eid",eid);
             
             request.getRequestDispatcher("View/Events/PostEvent2.jsp").forward(request, response);   
-            System.out.println("done");
-//        response.sendRedirect("View/Events/PostEvent2.jsp");
+          
         
         
         
