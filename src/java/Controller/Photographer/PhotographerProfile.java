@@ -5,12 +5,11 @@
  */
 package Controller.Photographer;
 
-import Controller.DaoImpl.PhotographDaoImpl;
-import Controller.DaoImpl.PhotographerDaoImp;
-import Model.Dao.PhotographDao;
-import Model.Dao.PhotographerDao;
-import Model.Photograph;
+import Controller.DaoImpl.PortfolioPhotographerDaoImpl;
+import Controller.DaoImpl.PortfolioPhotographerDaoImpl;
+import Model.Dao.PortfolioPhotographerDao;
 import Model.Photographer;
+import Model.portfolio_photograph;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -26,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ASUS
  */
-public class PhotographerUploadPhoto extends HttpServlet {
+public class PhotographerProfile extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -34,14 +33,14 @@ public class PhotographerUploadPhoto extends HttpServlet {
 
         try {
             Photographer photographer = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-            PhotographDao loadphotoDao = new PhotographDaoImpl();
-
-            request.setAttribute("loadphotographs", (ArrayList<Photograph>) loadphotoDao.getAllphotosofPhotographer(photographer.getPhotographerId()));
-            request.getRequestDispatcher("View/Photographer/PhotographerUploadPhotoTem.jsp").forward(request, response);
-
+            PortfolioPhotographerDao loadphotosDao = new PortfolioPhotographerDaoImpl();
+            //photos arraylist contains all photos 
+            request.setAttribute("photos", (ArrayList<portfolio_photograph>) loadphotosDao.getAllphotosofPhotographer(photographer.getPhotographerId()));
+            request.getRequestDispatcher("View/Photographer/PhotographerProfileTem.jsp").forward(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(PhotographerUploadPhoto.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PhotographerProfile.class.getName()).log(Level.SEVERE, null, ex);
         }
+
     }
 
 }

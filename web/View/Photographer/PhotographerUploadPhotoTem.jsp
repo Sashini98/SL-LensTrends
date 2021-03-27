@@ -53,7 +53,7 @@
             <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
-                System.out.println(PhotoId);
+            
             }
         %>
 

@@ -152,7 +152,7 @@
 
         <div class="image-content">
             <table id="image-table">
-                <tr>
+<!--                <tr>
                     <td style="padding-right: 5%;">
                         <div class="image">
                             <img src="../../Resources/Img/profile/p1.jpg">
@@ -257,7 +257,7 @@
                             </div> 
                         </div>
                     </td>
-                </tr>
+                </tr>-->
             </table>
         </div>
 

@@ -36,18 +36,14 @@ public class DeletePhoto extends HttpServlet {
 
             String[] photoidArray = photopath.split("/"); //spliting path within /
             String photoname = photoidArray[photoidArray.length - 1]; //getting name of file last elememt of array
-//            System.out.println(photoidArray.length);
-//            int photoid = deletephotoDao.getphotoidbypath(photoname);
-//            System.out.println(photoid);
-//            Photograph photograph = deletephotoDao.getPhotographById(photoid);
+
             Photograph photograph = deletephotoDao.getPhotographById(idd);
             String filepath = getServletContext().getRealPath("Resources/Img/profile/").replace('\\', '/'); //getting absolute path of image folder
-//            String photopath = "/GroupProject/Resources/Img/Gallery Sample Images/" + photograph.getPath();
+
             int photostateid = photograph.getStateId();
-//            deletephotoDao.deletephoto(photoid, photostateid, photopath);
+
             deletephotoDao.deletephoto(idd, photostateid, filepath + "/" + photoname);
-//            System.out.println(filepath + "/" + photoname);
-//            
+
             response.getWriter().write("Successfully Deleted");
 
         } catch (SQLException ex) {

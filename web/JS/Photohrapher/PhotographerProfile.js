@@ -81,3 +81,46 @@ function myImgRemoveFunctionOne(btn2) {
         document.getElementById("title-input").style.display = "none";
     }
 }
+
+function loadProfilephotos() {
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+                var responce = request.responseText;
+                document.getElementById("image-table").innerHTML = responce;
+
+            }
+        }
+    }
+    ;
+
+    request.open("POST", "../../PhotographerProfile", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
+
+window.onload = function () {
+    loadProfilephotos();
+};
+
+function deleteportfoliophoto(photoid, path) {
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+                var responce = request.responseText;
+                alert(responce);
+            }
+        }
+    };
+    request.open("POST", "../../DeletePortfolioPhotos", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("pathtobedeleted=" + path + "&id=" + photoid);
+    location.reload();
+}
