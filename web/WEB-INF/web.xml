@@ -265,6 +265,22 @@
         <servlet-class>Controller.Clent.ReportPhoto</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>photographer_suggest</servlet-name>
+        <servlet-class>Controller.Event.photographer_suggest</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PostEvent2</servlet-name>
+        <servlet-class>Controller.Event.PostEvent2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PhotographerProfile</servlet-name>
+        <servlet-class>Controller.Photographer.PhotographerProfile</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeletePortfolioPhotos</servlet-name>
+        <servlet-class>Controller.Photographer.DeletePortfolioPhotos</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>GoogleLogin</servlet-name>
         <servlet-class>Controller.GoogleLogin</servlet-class>
     </servlet>
@@ -533,6 +549,26 @@
         <url-pattern>/ReportPhoto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>photographer_suggest</servlet-name>
+        <url-pattern>/photographer_suggest</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PostEvent2</servlet-name>
+        <url-pattern>/PostEvent2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PhotographerProfile</servlet-name>
+        <url-pattern>/PhotographerProfile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletePortfolioPhotos</servlet-name>
+        <url-pattern>/DeletePortfolioPhotos</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>  
+        <servlet-name>forumH_personal</servlet-name>
+        <url-pattern>/forumH_personal</url-pattern>
+    </servlet-mapping> 
+    <servlet-mapping>  
         <servlet-name>GoogleLogin</servlet-name>
         <url-pattern>/GoogleLogin</url-pattern>
     </servlet-mapping>
@@ -606,6 +642,7 @@
         <url-pattern>/View/Notifications/notificationsHome.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
+        <url-pattern>/forumH_personal</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>

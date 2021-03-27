@@ -58,10 +58,10 @@ public class EventPost extends HttpServlet {
         eve.setprovince(province);  
         
         
-        
+        EventDao eventdao=new EventDaoImpl();
          try {
         
-        EventDao eventdao=new EventDaoImpl();
+        
         
         String id = eventdao.getLastId();
             String new_id ;
@@ -90,9 +90,18 @@ public class EventPost extends HttpServlet {
         } catch (SQLException ex) {
             
         }
+         String eid="";
+        try {
+            eid=eventdao.getLastId();
+            
+        } catch (SQLException ex) {
+           
+        }
         
-        
-        response.sendRedirect("View/Events/PostEvent2.jsp");
+        request.setAttribute("eid",eid);
+            
+            request.getRequestDispatcher("View/Events/PostEvent2.jsp").forward(request, response);   
+          
         
         
         

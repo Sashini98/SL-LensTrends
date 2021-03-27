@@ -289,6 +289,39 @@ public class QuestionDaoImpl implements QuestionDao {
         DB.iud("UPDATE question SET Answer_Count='"+cnt2+"'  where Question_Id = '" + questionId + "'");
     }
 
+    @Override
+    public List getQuestionsByPerson(String log,String id) throws SQLException {
+        ResultSet ques=null;
+        
+        if(log.equalsIgnoreCase("client")){
+        ques=DB.search("SELECT * FROM Question Client_Id = '" + id + "'");
+        }
+        
+        if(log.equalsIgnoreCase("photog")){
+        ques=DB.search("SELECT * FROM Question Photographer_Id = '" + id + "'");
+        }
+        
+        
+        ArrayList<Question> a = new ArrayList();
+        
+        while(ques.next())
+        {
+            Question q=new Question();
+            q.setquestionId(ques.getInt("Question_Id"));
+            q.settitle(ques.getString("title"));
+            q.setquestion(ques.getString("Question"));
+            q.setquestion_date(ques.getDate("Question_Date"));
+            q.setclientId(ques.getString("Client_Id"));
+            q.setPhotographerId(ques.getString("Photographer_Id"));
+            q.setanswerCount(ques.getInt("Answer_Count"));
+            
+            
+            a.add(q);
+
+        }
+        return a;
+    }
+
   
     
     

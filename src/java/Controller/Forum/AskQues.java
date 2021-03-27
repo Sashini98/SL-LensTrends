@@ -98,7 +98,7 @@ public class AskQues extends HttpServlet {
             for (String token : tokens) {
                 categ[i++] = token;
             }
-            System.out.println("array " + Arrays.toString(categ));
+            
 
             for (int j = 1; j < categ.length;j++) {
                 int categoryy = questionDao.getCategory(categ[j]);

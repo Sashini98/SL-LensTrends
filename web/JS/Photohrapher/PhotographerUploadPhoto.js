@@ -304,7 +304,6 @@ function deletephoto(para) {
     if (r == true) {
 //        txt = "You pressed OK!";
 
-
         if (para == "delete-tosubmit") {
             var path = document.getElementById("image").src;
             var idd = document.getElementById("image").getAttribute("photo_id");

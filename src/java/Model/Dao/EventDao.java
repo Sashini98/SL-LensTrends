@@ -19,6 +19,6 @@ public interface EventDao {
     public List getEvents(String eventId)throws SQLException;
     public List getPastEventList(String clientId)throws SQLException;
     public String getLastId() throws SQLException;
-    
+    public void addEventPhotographers(String eventId,String photographerId)throws SQLException;
     
 }

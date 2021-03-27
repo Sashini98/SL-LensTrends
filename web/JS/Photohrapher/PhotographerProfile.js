@@ -1,4 +1,6 @@
 
+/* global uploadimage */
+
 var uploadmodal = document.getElementById("upload-modal");
 
 // Get the button that opens the modal
@@ -15,18 +17,22 @@ btnup.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 spanup.onclick = function () {
     uploadmodal.style.display = "none";
-    document.getElementById('up-image').value= "";
+    document.getElementById("up-image").value = "";
+    document.getElementById("sample").style.display = "none";
     uploadimage.innerHTML = "Choose file";
+    document.getElementById("title-input").style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == uploadmodal) {
         uploadmodal.style.display = "none";
-        document.getElementById("up-image").value = "null";
+        document.getElementById("up-image").value = "";
+        document.getElementById("sample").style.display = "none";
         uploadimage.innerHTML = "Choose file";
+        document.getElementById("title-input").style.display = "none";
     }
-    
+
 }
 
 
@@ -74,4 +80,47 @@ function myImgRemoveFunctionOne(btn2) {
         uploadimage.innerHTML = "Choose file";
         document.getElementById("title-input").style.display = "none";
     }
+}
+
+function loadProfilephotos() {
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+                var responce = request.responseText;
+                document.getElementById("image-table").innerHTML = responce;
+
+            }
+        }
+    }
+    ;
+
+    request.open("POST", "../../PhotographerProfile", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
+
+window.onload = function () {
+    loadProfilephotos();
+};
+
+function deleteportfoliophoto(photoid, path) {
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+                var responce = request.responseText;
+                alert(responce);
+            }
+        }
+    };
+    request.open("POST", "../../DeletePortfolioPhotos", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("pathtobedeleted=" + path + "&id=" + photoid);
+    location.reload();
 }

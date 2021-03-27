@@ -1,8 +1,10 @@
 <%-- 
-    Document   : BrowseQn
-    Created on : Nov 5, 2020, 8:10:00 PM
-    Author     : ASUS
+    Document   : BrowsQn-personal
+    Created on : Mar 27, 2021, 7:54:14 PM
+    Author     : Sashini Shihara
 --%>
+
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -139,10 +141,6 @@
                 <div class="ask-qn">
                     <a href="AskQues.jsp" type="button">Ask Questions </a>
                 </div>
-                
-                <div class="ask-qn">
-                    <a href="BrowsQnPersonal.jsp" type="button">My Questions </a>
-                </div>
 
             </div> 
             
@@ -159,7 +157,8 @@
         </div>
 
 
-        <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>        
+        <script src="../../JS/Forum/BrowseQnPersonal.js" type="text/javascript" ></script>        
        
     </body>
 </html>
+
