@@ -109,5 +109,10 @@ public class EventDaoImpl implements EventDao {
         }
        
     }
+
+    @Override
+    public void addEventPhotographers(String eventId, String photographerId) throws SQLException {
+       DB.iud("INSERT INTO event_photographer(Event_Id, Photographer_Id) VALUES ('"+eventId+"','"+photographerId+"')");
+    }
     
 }
