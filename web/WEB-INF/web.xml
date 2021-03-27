@@ -272,6 +272,10 @@
         <servlet-name>PostEvent2</servlet-name>
         <servlet-class>Controller.Event.PostEvent2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>forumH_personal</servlet-name>
+        <servlet-class>Controller.Forum.forumH_personal</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -544,6 +548,10 @@
         <servlet-name>PostEvent2</servlet-name>
         <url-pattern>/PostEvent2</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>forumH_personal</servlet-name>
+        <url-pattern>/forumH_personal</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10
@@ -614,6 +622,7 @@
         <url-pattern>/View/Notifications/notificationsHome.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
+        <url-pattern>/forumH_personal</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
