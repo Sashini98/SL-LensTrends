@@ -74,7 +74,7 @@ public class EventPost extends HttpServlet {
                 new_id = "e" + new_id;
 
             } else {
-                new_id = "C1";
+                new_id = "e1";
             }
             
             eve.seteventId(new_id);
