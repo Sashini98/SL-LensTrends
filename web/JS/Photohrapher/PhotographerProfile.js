@@ -1,4 +1,6 @@
 
+/* global uploadimage */
+
 var uploadmodal = document.getElementById("upload-modal");
 
 // Get the button that opens the modal
@@ -15,18 +17,22 @@ btnup.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 spanup.onclick = function () {
     uploadmodal.style.display = "none";
-    document.getElementById('up-image').value= "";
+    document.getElementById("up-image").value = "";
+    document.getElementById("sample").style.display = "none";
     uploadimage.innerHTML = "Choose file";
+    document.getElementById("title-input").style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == uploadmodal) {
         uploadmodal.style.display = "none";
-        document.getElementById("up-image").value = "null";
+        document.getElementById("up-image").value = "";
+        document.getElementById("sample").style.display = "none";
         uploadimage.innerHTML = "Choose file";
+        document.getElementById("title-input").style.display = "none";
     }
-    
+
 }
 
 
