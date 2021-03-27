@@ -555,16 +555,12 @@
     <servlet-mapping>
         <servlet-name>PhotographerProfile</servlet-name>
         <url-pattern>/PhotographerProfile</url-pattern>
-    </servlet-mapping>
-    
-        <servlet-mapping>
+    </servlet-mapping>    
+     <servlet-mapping>
         <servlet-name>DeletePortfolioPhotos</servlet-name>
         <url-pattern>/DeletePortfolioPhotos</url-pattern>
      </servlet-mapping> 
-     <servlet-mapping>  
-        <servlet-name>forumH_personal</servlet-name>
-        <url-pattern>/forumH_personal</url-pattern>
-    </servlet-mapping>
+
     <session-config>
         <session-timeout>
             10
