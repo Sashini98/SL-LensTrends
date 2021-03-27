@@ -435,4 +435,14 @@ public class PhotographerDaoImp implements PhotographerDao {
         return a;
 
     }
+
+    @Override
+    public List getPhotographByProvine(String province) throws SQLException {
+        ArrayList a=new ArrayList();
+         ResultSet prov = DB.search("SELECT  Photographer_Id FROM photographer WHERE Province = '" + province + "'");
+         while(prov.next()){
+             a.add(prov.getString("Photographer_Id"));
+         }
+         return a;
+    }
 }

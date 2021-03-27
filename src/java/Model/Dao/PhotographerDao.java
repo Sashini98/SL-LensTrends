@@ -47,6 +47,7 @@ public interface PhotographerDao {
     public List<String> getPhotographerIDByCategory(int category) throws SQLException;
     public ArrayList<String> getPhotographerCategories(String photographerId) throws SQLException;
     public List getPhotographerNames()throws SQLException;
+    public List<Photographer> getPhotographByProvine(String province) throws SQLException;
     
     public String getLastId() throws SQLException;
     public HashMap<Integer, String> getPhotogrpaherCategories() throws SQLException;

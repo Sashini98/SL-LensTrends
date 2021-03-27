@@ -102,16 +102,16 @@
                         <span class="content_name" style="margin-left: 10%;">Photographers from : </span><br>
                         <div class="box">
                             <select name="area">
-                                <option value="All Island">All Island</option>
-                                <option value="Central Province">Central Province</option>
-                                <option value="Western Province">Western Province</option>
-                                <option value="Southern Province">Southern Province</option>
-                                <option value="Uva Province">Uva Province</option>
-                                <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
-                                <option value="North Western Province">North Western Province</option>
-                                <option value="North Central Province">North Central Province</option>
-                                <option value="Northern Province">Northern Province</option>
-                                <option value="Eastern Province">Eastern Province</option>
+                                <option value="None">Select Province</option>
+                                <option value="Central">Central Province</option>
+                                <option value="Western">Western Province</option>
+                                <option value="Southern">Southern Province</option>
+                                <option value="Uva">Uva Province</option>
+                                <option value="Sabaragamuwa">Sabaragamuwa Province</option>
+                                <option value="North-Western">North Western Province</option>
+                                <option value="North-Central">North Central Province</option>
+                                <option value="Northern">Northern Province</option>
+                                <option value="Eastern">Eastern Province</option>
                             </select>
                         </div>
                     </div>
