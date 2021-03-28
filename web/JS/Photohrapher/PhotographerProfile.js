@@ -168,6 +168,11 @@ function filevalidation() {
 }
 
 function uploadimage() {
+     var file = document.getElementById('up-image').files[0];
+     
+     var formdata = new Formdata();
+     formdata.append("file1",file);
+     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === 4) {
@@ -178,6 +183,5 @@ function uploadimage() {
 
     };
     request.open("POST", "../../UploadforPortfolio", false);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send();
+    request.send(formdata);
 }
