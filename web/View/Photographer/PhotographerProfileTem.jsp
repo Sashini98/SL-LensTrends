@@ -19,7 +19,7 @@
 
 <tr>
 
-    <td style="padding-right: 5%;">
+    <td>
         <div class="image">
             <img src="../../Resources/Img/Gallery Sample Images/<%= m.get(i).getPath()%>">
             <div class="middle">

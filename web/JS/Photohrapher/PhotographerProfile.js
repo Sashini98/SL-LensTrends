@@ -1,5 +1,5 @@
 
-/* global uploadimage */
+/* global chooseimage, src, URL */
 
 var uploadmodal = document.getElementById("upload-modal");
 
@@ -12,24 +12,30 @@ var spanup = document.getElementsByClassName("upload-close")[0];
 // When the user clicks the button, open the modal 
 btnup.onclick = function () {
     uploadmodal.style.display = "block";
+//    document.getElementById("upimage").value = "";
+
+//    document.getElementById("chooseimage").innerHTML = "Choose File"
 }
 
 // When the user clicks on <span> (x), close the modal
 spanup.onclick = function () {
     uploadmodal.style.display = "none";
-    document.getElementById("up-image").value = "";
+    uploadmodal.style.display = "none";
+    document.getElementById("upimage").value = "";
     document.getElementById("sample").style.display = "none";
-    uploadimage.innerHTML = "Choose file";
+    document.getElementById("chooseimage").innerHTML = "Choose file";
     document.getElementById("title-input").style.display = "none";
+    document.getElementById("title-input").value = "";
+
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == uploadmodal) {
         uploadmodal.style.display = "none";
-        document.getElementById("up-image").value = "";
+        document.getElementById("upimage").value = "";
         document.getElementById("sample").style.display = "none";
-        uploadimage.innerHTML = "Choose file";
+        document.getElementById("chooseimage").innerHTML = "Choose file";
         document.getElementById("title-input").style.display = "none";
     }
 
@@ -39,17 +45,18 @@ window.onclick = function (event) {
 
 window.pressed = function () {
     document.getElementById("sample").style.display = "block";
-    uploadimage.innerHTML = "Choose file";
-    var a = document.getElementById('up-image');
+//    document.getElementById("chooseimage").innerHTML = "Choose file";
+    var a = document.getElementById("upimage");
 
     if (a.value == "")
     {
-        uploadimage.innerHTML = "Choose file";
+        document.getElementById("chooseimage").innerHTML = "Choose file";
     } else
     {
         var theSplit = a.value.split('\\');
-        uploadimage.innerHTML = theSplit[theSplit.length - 1];
-//        document.getElementById('up-image').value = '';
+//        var name = theSplit[theSplit.length - 1];
+        document.getElementById("chooseimage").innerHTML = theSplit[theSplit.length - 1];
+//        document.getElementById('upimage').value = '';
     }
 };
 
@@ -57,8 +64,9 @@ function upload(btn) {
 
     if (btn == "final-upload") {
         uploadmodal.style.display = "none";
-        uploadimage.innerHTML = "Choose file";
-        document.getElementById("up-image").value = "";
+
+//        document.getElementById("chooseimage").innerHTML = "Choose file";
+//        document.getElementById("upimage").value = "";        
     }
 }
 
@@ -70,15 +78,16 @@ function showPreviewOne(event) {
         preview.src = src;
         preview.style.display = "block";
         document.getElementById("title-input").style.display = "block";
+
     }
 }
 
 function myImgRemoveFunctionOne(btn2) {
     if (btn2 == "remove-upload") {
         document.getElementById("sample").style.display = "none";
-        document.getElementById("up-image").value = "";
-        uploadimage.innerHTML = "Choose file";
+        document.getElementById("upimage").value = "";
         document.getElementById("title-input").style.display = "none";
+        document.getElementById("chooseimage").innerHTML = "Choose file";
     }
 }
 
@@ -108,25 +117,31 @@ window.onload = function () {
 };
 
 function deleteportfoliophoto(photoid, path) {
+    var txt;
+    var r = confirm("Do you want to Delete it!");
+    if (r == true) {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
 
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-
-        if (request.status === 200) {
-            if (request.readyState === 4) {
-                var responce = request.responseText;
-                alert(responce);
+            if (request.status === 200) {
+                if (request.readyState === 4) {
+                    var responce = request.responseText;
+                    alert(responce);
+                }
             }
-        }
-    };
-    request.open("POST", "../../DeletePortfolioPhotos", false);
-    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("pathtobedeleted=" + path + "&id=" + photoid);
-    location.reload();
+        };
+        request.open("POST", "../../DeletePortfolioPhotos", false);
+        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.send("pathtobedeleted=" + path + "&id=" + photoid);
+        location.reload();
+    } else {
+        txt = "Deletion Cancelled";
+        alert(txt);
+    }
 }
 
 function filevalidation() {
-    var fileInput = document.getElementById('up-image');
+    var fileInput = document.getElementById('upimage');
 
     var filePath = fileInput.value;
     var filesize = fileInput.files[0].size;
@@ -140,16 +155,16 @@ function filevalidation() {
         fileInput.value = '';
         document.getElementById('uploadimage').innerHTML = "Choose file";
         document.getElementById('uploadimage').innerHTML = "Choose file";
-        document.getElementById("up-image").value = "";
+        document.getElementById("upimage").value = "";
         document.getElementById("sample").style.display = "none";
         document.getElementById("title-input").style.display = "none";
         return false;
     }
-    
+
     if (filesize <= lowersizelimit) {
         alert('Image is less then 1MP, Upload Images between 1MP and 25MP');
         document.getElementById('uploadimage').innerHTML = "Choose file";
-        document.getElementById("up-image").value = "";
+        document.getElementById("upimage").value = "";
         document.getElementById("sample").style.display = "none";
         document.getElementById("title-input").style.display = "none";
         return false;
@@ -168,20 +183,27 @@ function filevalidation() {
 }
 
 function uploadimage() {
-     var file = document.getElementById('up-image').files[0];
-     
-     var formdata = new Formdata();
-     formdata.append("file1",file);
-     
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === 4) {
-            if (request.status === 200) {
-                document.getElementById('upload-modal').style.display = 'none';
-            }
-        }
+//    alert(document.getElementById("upload-image").files[0]);
 
-    };
-    request.open("POST", "../../UploadforPortfolio", false);
-    request.send(formdata);
+    if (document.getElementById("upimage").value == "") {
+        alert("Select Images to Upload");
+    } else {
+        var file = document.getElementById("upimage").files[0];        
+        var formdata = new FormData();
+        formdata.append("file1", file);
+
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    document.getElementById('upload-modal').style.display = 'none';
+                }
+            }
+
+        };
+        request.open("POST", "../../UploadforPortfolio", false);
+//        request.send(formdata);
+        request.send(formdata);
+        location.reload();
+    }
 }
