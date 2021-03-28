@@ -646,6 +646,7 @@
         <url-pattern>/View/Notifications/notificationsHome.jsp</url-pattern>
         <url-pattern>/View/Fourm/MainForum.jsp</url-pattern>
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
+        <url-pattern>/View/Fourm/PersonalQuestions.jsp</url-pattern>
         <url-pattern>/forumH_personal</url-pattern>
     </filter-mapping>
     <filter>

@@ -35,7 +35,7 @@ public class forumH_personal extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("person");
+        
         String id = "";
         String log="";
         try {
@@ -50,8 +50,7 @@ public class forumH_personal extends HttpServlet {
                 log="photog";
             }
             
-            System.out.println("id ; "+id);
-            System.out.println("log "+log);
+           
             ArrayList<String> a = new ArrayList();
             ArrayList<String> b = new ArrayList();
 
