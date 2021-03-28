@@ -111,7 +111,7 @@
                     <span class="upload-close">&times;</span>
                     <div class="upload-modal-image">
                         <img style="margin-left: 13%;" src="../../Resources/Img/upload.svg">
-                        <input type="file" id="up-image" style="display:none;" onchange="pressed();showPreviewOne(event);">
+                        <input type="file" id="up-image" style="display:none;" accept="image/jpeg" onchange="pressed();showPreviewOne(event);filevalidation();" required="true">
                         <label for="up-image">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>
@@ -137,7 +137,7 @@
                     </div>
                     <div class="upload"> 
                         <label>
-                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = ''">Upload</a>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = '';uploadImage();">Upload</a>
                         </label>
                         <label id="reset">
                             <a href="#" type="button" id="remove-upload" onclick="myImgRemoveFunctionOne('remove-upload')">Reset</a>
