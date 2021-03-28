@@ -72,9 +72,11 @@ public class PostEvent2 extends HttpServlet {
                  for(int j=0;j<a.size();j++)
                  {
                      eDao.addEventPhotographers(eid, a.get(j));
+                     response.sendRedirect("View/Events/MainEventHome.jsp");
                  }
                 
             } catch (SQLException ex) {
+                response.sendRedirect("View/Events/MainEventHome.jsp");
                 
             }
             
