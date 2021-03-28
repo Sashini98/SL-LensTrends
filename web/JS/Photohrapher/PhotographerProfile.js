@@ -108,7 +108,7 @@ window.onload = function () {
 };
 
 function deleteportfoliophoto(photoid, path) {
-    
+
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
 
@@ -124,3 +124,39 @@ function deleteportfoliophoto(photoid, path) {
     request.send("pathtobedeleted=" + path + "&id=" + photoid);
     location.reload();
 }
+
+function filevalidation() {
+    var fileInput = document.getElementById('up-image');
+
+    var filePath = fileInput.value;
+    var filesize = fileInput.files[0].size;
+    var sizelimit = 25000000; // file sixe limit of 25MB
+    var lowersizelimit = 1000000; 
+
+    // Allowing file type 
+    var allowedExtensions = /(\.jpg|\.jpeg)$/i;
+
+    if (!allowedExtensions.exec(filePath)) {
+        alert('Upload only JPEG or JPG image');
+        fileInput.value = '';
+        document.getElementById('uploadimage').innerHTML = "Choose file";
+        return false;
+    } else if (filesize => sizelimit) {
+        alert('Upload Images between 1MP and 25MP');
+        return false;
+    } else if (filesize <= lowersizelimit) {
+        alert('Upload Images between 1MP and 25MP');
+        return false;
+    }
+//
+//
+//        if (fileInput.files && fileInput.files[0]) {
+//
+//            var reader = new FileReader();
+//            reader.onload = function (e) {
+//
+//            };
+//
+//            reader.readAsDataURL(fileInput.files[0]);
+//        }
+    }
