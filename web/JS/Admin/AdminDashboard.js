@@ -311,7 +311,7 @@ function show(selectedTab) {
                 } else if (selectedTab === 'subscription') {
                     viewPlan();
                 } else if (selectedTab === 'summary') {
-                    location.replace("/GroupProject/View/Admin/AdminDashboard.jsp");
+                    location.replace("/GroupProject/LoadDashBoardData");
                 }
             }
         }
@@ -326,10 +326,10 @@ function show(selectedTab) {
 
 function loadDashBoardData() {
     var request = new XMLHttpRequest();
-
     request.onreadystatechange = function () {
         if (request.status === 200) {
             if (request.readyState === 4) {
+      
 
             }
         }
