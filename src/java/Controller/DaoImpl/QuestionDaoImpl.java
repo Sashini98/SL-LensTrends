@@ -281,10 +281,9 @@ public class QuestionDaoImpl implements QuestionDao {
     public void updateAnswCount(int questionId) throws SQLException {
          ResultSet answ=DB.search("SELECT Answer_Count FROM question where Question_Id = '" + questionId + "'");
         answ.next();
-        int cnt=answ.getInt("Answer_Count");    
-        System.out.println("c1;"+cnt);
+        int cnt=answ.getInt("Answer_Count");            
         int cnt2=cnt+1;
-        System.out.println("c2 :"+cnt2);
+        
         
         DB.iud("UPDATE question SET Answer_Count='"+cnt2+"'  where Question_Id = '" + questionId + "'");
     }
@@ -294,11 +293,11 @@ public class QuestionDaoImpl implements QuestionDao {
         ResultSet ques=null;
         
         if(log.equalsIgnoreCase("client")){
-        ques=DB.search("SELECT * FROM Question Client_Id = '" + id + "'");
+        ques=DB.search("SELECT * FROM Question WHERE Client_Id = '" + id + "'");
         }
         
         if(log.equalsIgnoreCase("photog")){
-        ques=DB.search("SELECT * FROM Question Photographer_Id = '" + id + "'");
+        ques=DB.search("SELECT * FROM Question WHERE Photographer_Id = '" + id + "'");
         }
         
         

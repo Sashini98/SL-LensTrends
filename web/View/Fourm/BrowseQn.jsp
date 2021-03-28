@@ -24,7 +24,7 @@
         <title>Questions</title>
     </head>
     <body style="background-color: #f7f6f9;" onload="view();">
-   
+
 
         <div class="fixedheader">  
 
@@ -100,9 +100,9 @@
             </div>
 
         </div>
- 
+
         <div class="main-content">
-            
+
 
             <div class="side-box"> 
                 <div class="filter">
@@ -115,8 +115,8 @@
                         <input type="checkbox" name="100plus" id="100plus" onclick="checkSubCategory('1', '100plus');filter();">
                         <span class="checkmark"></span>
                     </label>
-                    
-                    </div>
+
+                </div>
 
                 <div class="filter-radio">
                     <p>Sort by:</p>
@@ -132,34 +132,37 @@
                         <input type="radio" name="count" id="count" onclick="checkSubCategory('2', 'count');filter();">
                         <span class="checkmark-radio"></span>
                     </label>
-                    
+
 
                 </div>
 
                 <div class="ask-qn">
                     <a href="AskQues.jsp" type="button">Ask Questions </a>
                 </div>
-                
+                <%
+            if (loggedAs.equalsIgnoreCase("photographer") || loggedAs.equalsIgnoreCase("client")) {
+                %>
                 <div class="ask-qn">
-                    <a href="BrowsQnPersonal.jsp" type="button">My Questions </a>
+                    <a href="PersonalQuestions.jsp" type="button">My Questions </a>
                 </div>
+                <% } %>
 
             </div> 
-            
+
             <div class="searchInput">
-    <input type="text" placeholder="Search for Questions" id="keyword" onkeyup=" keywordSearch(event)" >      
-    <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick=" keywordSearch(event)"><i class="material-icons">search</i></button>
-</div>
-           
+                <input type="text" placeholder="Search for Questions" id="keyword" onkeyup=" keywordSearch(event)" >      
+                <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick=" keywordSearch(event)"><i class="material-icons">search</i></button>
+            </div>
+
             <div name="s" id="s">
-                
-      
+
+
             </div>
 
         </div>
 
 
         <script src="../../JS/Forum/BrowseQn.js" type="text/javascript" ></script>        
-       
+
     </body>
 </html>
