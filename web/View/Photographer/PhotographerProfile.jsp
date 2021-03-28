@@ -137,7 +137,7 @@
                     </div>
                     <div class="upload"> 
                         <label>
-                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = '';uploadImage();">Upload</a>
+                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload');document.getElementById('up-image').value = '';uploadimage();">Upload</a>
                         </label>
                         <label id="reset">
                             <a href="#" type="button" id="remove-upload" onclick="myImgRemoveFunctionOne('remove-upload')">Reset</a>

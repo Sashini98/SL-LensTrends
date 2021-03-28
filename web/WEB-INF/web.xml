@@ -292,6 +292,10 @@
         <servlet-name>LoadDashBoardData</servlet-name>
         <servlet-class>Controller.Admin.LoadDashBoardData</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UploadforPortfolio</servlet-name>
+        <servlet-class>Controller.Photographer.UploadforPortfolio</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -583,6 +587,10 @@
     <servlet-mapping>
         <servlet-name>LoadDashBoardData</servlet-name>
         <url-pattern>/LoadDashBoardData</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadforPortfolio</servlet-name>
+        <url-pattern>/UploadforPortfolio</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
