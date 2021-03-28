@@ -139,4 +139,28 @@ public class PhotographDaoImpl implements PhotographDao {
         }
     }
 
+    @Override
+    public ArrayList<Photograph> getPhotographsByDate(String date) throws SQLException {
+        ResultSet photographs = DB.search("SELECT * FROM photograph WHERE Uploaded_Date = '" + date + "'");
+        ArrayList<Photograph> Loadphotos = new ArrayList();
+
+        while (photographs.next()) {
+            Photograph p = new Photograph(
+                    photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                    photographs.getDouble("Width"), photographs.getDouble("Height"),
+                    photographs.getString("Quality"), photographs.getString("Keywords"),
+                    photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
+                    photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
+                    photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
+                    photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
+                    photographs.getInt("state_id"), photographs.getInt("Gender_Id")
+            );
+
+            Loadphotos.add(p);
+
+        }
+
+        return Loadphotos;
+    }
+
 }

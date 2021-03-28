@@ -25,7 +25,7 @@ public class AdminDasboardHandler extends HttpServlet {
         String tab = request.getParameter("selectedTab");
         System.out.println(tab);
         if (tab.equals("summary")) {
-            request.getRequestDispatcher("/View/Admin/AdminSummery.jsp").forward(request, response);
+//            request.getRequestDispatcher("/View/Admin/AdminSummery.jsp").forward(request, response);
         }else if (tab.equals("notification")) {
             request.getRequestDispatcher("/View/Admin/AdminNotification.jsp").forward(request, response);
 

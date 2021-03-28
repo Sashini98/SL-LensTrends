@@ -310,6 +310,8 @@ function show(selectedTab) {
                     viewQuestion();
                 } else if (selectedTab === 'subscription') {
                     viewPlan();
+                } else if (selectedTab === 'summary') {
+                    location.replace("/GroupProject/View/Admin/AdminDashboard.jsp");
                 }
             }
         }
@@ -318,6 +320,24 @@ function show(selectedTab) {
     request.open("POST", "../../AdminDasboardHandler", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("selectedTab=" + selectedTab);
+
+}
+
+
+function loadDashBoardData() {
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+            }
+        }
+    };
+
+    request.open("POST", "../../LoadDashBoardData", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
 
 }
 
