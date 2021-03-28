@@ -4,6 +4,8 @@
     Author     : ASUS
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -118,17 +120,24 @@
 
                         <div class="upload-for-review" >
                             <canvas id="myChart1" height="300px"  width="550px" ></canvas>
+                            <%
+                                HashMap<String, ArrayList<Integer>> p = (HashMap<String, ArrayList<Integer>>) session.getAttribute("data");
+                                System.out.println(p);
+                                Object[] dates = p.keySet().toArray();
+                                System.out.println(p.get(dates[0]).get(0));
+                              
+                            %>
                             <script>
                                 Chart.defaults.global.animation.duration = 5000;
                                 var ctx = document.getElementById('myChart1').getContext('2d');
                                 var myChart = new Chart(ctx, {
                                     type: 'line',
                                     data: {
-                                        labels: ['11/1', '11/2', '11/3', '11/4', '11/5', '11/6', '11/7'],
+                                        labels: ['<%= dates[6].toString() %>', '<%= dates[5].toString() %>', '<%= dates[4].toString() %>', '<%= dates[3].toString() %>', '<%= dates[2].toString() %>', '<%= dates[1].toString() %>', '<%= dates[0].toString() %>'],
                                         datasets: [{
                                                 label: 'Uploads for Review',
                                                 fill: false,
-                                                data: [12, 9, 20, 5, 16, 7, 34],
+                                                data: [<%= p.get(dates[6]).get(0) %>, <%= p.get(dates[5]).get(0) %>, <%= p.get(dates[4]).get(0) %>, <%= p.get(dates[3]).get(0) %>, <%= p.get(dates[2]).get(0) %>, <%= p.get(dates[1]).get(0) %>, <%= p.get(dates[0]).get(0) %>],
                                                 borderColor: "#415daa",
                                                 pointBackgroundColor: "#ee8322",
                                                 pointBorderColor: "#ee8322",
