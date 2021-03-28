@@ -36,7 +36,7 @@
         <div class="image">
             <img src="../../Resources/Img/Gallery Sample Images/<%= m.get(i+1).getPath()%>">
             <div class="middle">
-                <div class="text"><span onclick="deleteportfoliophoto('<%= m.get(i+1).getId() %>','GroupProject/Resources/Img/Gallery Sample Images/<%= m.get(i+1).getPath()%>')">>Delete</span></div>
+                <div class="text"><span onclick="deleteportfoliophoto('<%= m.get(i+1).getId() %>','GroupProject/Resources/Img/Gallery Sample Images/<%= m.get(i+1).getPath()%>')">Delete</span></div>
             </div> 
             <div class="middle2">
                 <div class="text2"><span>Glass</span></div>
@@ -51,7 +51,7 @@
         <div class="image">
             <img src="../../Resources/Img/Gallery Sample Images/<%= m.get(i+2).getPath()%>">
             <div class="middle">
-                <div class="text"><span onclick="deleteportfoliophoto('<%= m.get(i+2).getId() %>','GroupProject/Resources/Img/Gallery Sample Images/<%= m.get(i+2).getPath()%>')">>Delete</span></div>
+                <div class="text"><span onclick="deleteportfoliophoto('<%= m.get(i+2).getId() %>','GroupProject/Resources/Img/Gallery Sample Images/<%= m.get(i+2).getPath()%>')">Delete</span></div>
             </div> 
             <div class="middle2">
                 <div class="text2"><span>Glass</span></div>
