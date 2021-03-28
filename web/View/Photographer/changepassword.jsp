@@ -4,11 +4,13 @@
     Author     : ASUS
 --%>
 
+<%@page import="Model.Photographer"%>
+<%@page import="Model.Client"%>
+<%@page import="Model.Admin"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
     String actor = (String) request.getAttribute("actor");
-    System.out.println(actor);
 %>
 <html>
     <head>
@@ -48,12 +50,12 @@
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/uploadPhotos.jsp" type="button"> Upload </a></li>
                         <li><a href="<%= request.getContextPath()%>/View/Photographer/PhotographerProfile.jsp" type="button"> Profile </a></li>
                             <%
-                                }else if (actor.equals("admin")) {
+                            } else if (actor.equals("admin")) {
                             %>
-                           <li><a href="<%= request.getContextPath()%>/View/Admin/AdminDashboard.jsp" type="button"> Dashboard </a></li>
-                           <%
-                           }
-                           %>
+                        <li><a href="<%= request.getContextPath()%>/View/Admin/AdminDashboard.jsp" type="button"> Dashboard </a></li>
+                            <%
+                                }
+                            %>
                     </ul>
                 </div>
 
@@ -79,32 +81,90 @@
 
             <div class="caption">
                 <p>
-                    You will change the password for: &nbsp <strong id="email">th******ya@g***l.com</strong>
+                    You will change the password for: &nbsp 
+                    <%
+                        if (actor.equals("client")) {
+                            Client a = (Client) session.getAttribute("loggedClient");
+                            String email = a.getEmail();
+                            String[] sep = email.split("@");
+                            String str = "";
+                            if (sep[0].length() > 5) {
+                                System.out.println(sep[0].substring(2, sep[0].length() - 2).replaceAll(".", "*"));
+                                str = sep[0].substring(0, 2) + sep[0].substring(2, sep[0].length() - 2).replaceAll(".", "*") + sep[0].substring(sep[0].length() - 2, sep[0].length()) + "@" + sep[1];
+                            } else if (sep[0].length() >= 3) {
+                                str = sep[0].substring(0, 2) + sep[0].substring(1, sep[0].length()).replaceAll(".", "*") + "@" + sep[1];
+                            } else {
+                                str = sep[0].substring(0, 1) + sep[0].substring(1, sep[0].length()).replaceAll(".", "*") + "@" + sep[1];
+
+                            }
+                    %>
+                    <strong id="email"><%= str%></strong>
+                    <%
+                    } else if (actor.equals("photographer")) {
+                        Photographer a = (Photographer) session.getAttribute("loggedPhotographer");
+                        String email = a.getEmail();
+                        String[] sep = email.split("@");
+                        String str = "";
+                        if (sep[0].length() > 5) {
+                            System.out.println(sep[0].substring(2, sep[0].length() - 2).replaceAll(".", "*"));
+                            str = sep[0].substring(0, 2) + sep[0].substring(2, sep[0].length() - 2).replaceAll(".", "*") + sep[0].substring(sep[0].length() - 2, sep[0].length()) + "@" + sep[1];
+                        } else if (sep[0].length() >= 3) {
+                            str = sep[0].substring(0, 2) + sep[0].substring(1, sep[0].length()).replaceAll(".", "*") + "@" + sep[1];
+                        } else {
+                            str = sep[0].substring(0, 1) + sep[0].substring(1, sep[0].length()).replaceAll(".", "*") + "@" + sep[1];
+
+                        }
+                    %>
+                    <strong id="email"><%= str%></strong>
+                    <%
+                    } else if (actor.equals("admin")) {
+                        Admin a = (Admin) session.getAttribute("loggedAdmin");
+                        String email = a.getEmail();
+                        String[] sep = email.split("@");
+                        String str = "";
+                        if (sep[0].length() > 5) {
+                            System.out.println(sep[0].substring(2, sep[0].length() - 2).replaceAll(".", "*"));
+                            str = sep[0].substring(0, 2) + sep[0].substring(2, sep[0].length() - 2).replaceAll(".", "*") + sep[0].substring(sep[0].length() - 2, sep[0].length()) + "@" + sep[1];
+                        } else if (sep[0].length() >= 3) {
+                            str = sep[0].substring(0, 2) + sep[0].substring(1, sep[0].length()).replaceAll(".", "*") + "@" + sep[1];
+                        } else {
+                            str = sep[0].substring(0, 1) + sep[0].substring(1, sep[0].length()).replaceAll(".", "*") + "@" + sep[1];
+
+                        }
+                    %>
+                    <strong id="email"><%= str%></strong>
+                    <%
+                        }
+                    %>
+                <div class="errorMessage">
+                    <span id="msg"></span>
+                </div>
                 </p>
             </div>
 
             <div class="passinfo">
-                <form>
-                    <fieldset class="cpass">
-                        <legend> Confirm your current password </legend>
-                        <input type="text" id="cpass" name="cpass" placeholder="Current Password">
-                    </fieldset>
 
-                    <fieldset class="rpass">
-                        <legend> Enter you New Password </legend>
-                        <input type="text" id="npass" name="npass" placeholder="New Password">
-                        <input type="text" id="rpass" name="rpass" placeholder="Retype Password">
-                    </fieldset>
-                </form>
+                <fieldset class="cpass">
+                    <legend> Confirm your current password </legend>
+                    <input type="password" id="cpass" name="cpass" placeholder="Current Password" onkeyup="nospaces(this)"/>
+                </fieldset>
 
-                <div class="change">
-                    <a href="#" type="button">Change</a>
+                <fieldset class="rpass">
+                    <legend> Enter your New Password </legend>
+                    <input type="password" id="npass" name="npass" placeholder="New Password" onkeyup="nospaces(this)"/>
+                    <input type="password" id="rpass" name="rpass" placeholder="Retype Password" onkeyup="nospaces(this)"/>
+                </fieldset>
+
+
+                <div class="change" onclick="changePassword();">
+                    <a  type="button">Change</a>
                 </div>
 
-                <div class="cancel">
-                    <a href="PhotographerUpdate.jsp" type="button">Cancel</a>
+                <div class="cancel" onclick="Previous()">
+                    <a type="button">Cancel</a>
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="../../JS/Photohrapher/ChangePassword.js"></script>
     </body>
 </html>

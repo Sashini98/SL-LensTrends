@@ -11,19 +11,23 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-//import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken;
-//import com.google.api.client.googleapis.auth.oauth2.GoogleIdToken.Payload;
-//import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 
 /**
  *
  * @author kesh
  */
-public class GoogleLogin extends HttpServlet {
+public class ChangePassword extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String cpass = request.getParameter("cpass");
+        String npass = request.getParameter("npass");
+        String rpass = request.getParameter("rpass");
         
+        System.out.println(cpass);
+        System.out.println(rpass);
+        System.out.println(npass);
     }
+
 }

@@ -281,10 +281,13 @@
         <servlet-class>Controller.Photographer.DeletePortfolioPhotos</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>GoogleLogin</servlet-name>
-        <servlet-class>Controller.GoogleLogin</servlet-class>
+        <servlet-name>forumH_personal</servlet-name>
+        <servlet-class>Controller.Forum.forumH_personal</servlet-class>
     </servlet>
-    
+    <servlet>
+        <servlet-name>ChangePassword</servlet-name>
+        <servlet-class>Controller.ChangePassword</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -564,14 +567,14 @@
     <servlet-mapping>
         <servlet-name>DeletePortfolioPhotos</servlet-name>
         <url-pattern>/DeletePortfolioPhotos</url-pattern>
-    </servlet-mapping> 
-    <servlet-mapping>  
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>forumH_personal</servlet-name>
         <url-pattern>/forumH_personal</url-pattern>
-    </servlet-mapping> 
-    <servlet-mapping>  
-        <servlet-name>GoogleLogin</servlet-name>
-        <url-pattern>/GoogleLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangePassword</servlet-name>
+        <url-pattern>/ChangePassword</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
