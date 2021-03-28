@@ -14,10 +14,14 @@
 <%
 
     Photographer loggedPhotographer = (Photographer) session.getAttribute("loggedPhotographer");
+    Client loggedClient= (Client) session.getAttribute("loggedClient");
     String loggedAs = "nl";
     if (loggedPhotographer != null) {
         loggedAs = "p";
-
+    }
+    
+    if (loggedClient != null) {
+        loggedAs = "c";
     }
 
     ArrayList<String> s = (ArrayList<String>) request.getAttribute("questions");
@@ -31,27 +35,32 @@
     <h2><%= s.get(i * 7)%></h2>
     <p><%= s.get((i * 7) + 1)%></p>
     <%
-    String categories= s.get((i * 7) + 6);
-    StringBuilder sb = new StringBuilder(categories); 
-    sb.deleteCharAt(categories.length() - 1); 
-    sb.deleteCharAt(0); 
-    
-    String cat=sb.toString(); 
-    String[] tokens = cat.split(",");
-    
-    
-for(int j=0;j<tokens.length;j++)
-{
-%>
+        String categories = s.get((i * 7) + 6);
+        StringBuilder sb = new StringBuilder(categories);
+        sb.deleteCharAt(categories.length() - 1);
+        sb.deleteCharAt(0);
+
+        String cat = sb.toString();
+        String[] tokens = cat.split(",");
+
+        for (int j = 0; j < tokens.length; j++) {
+    %>
     <label><a href="#" type="button"><%=tokens[j]%></a></label>
-    <%}%>
-    
+        <%}%>
+
     <input id="qid" name="qid" type="text" value="<%= s.get((i * 7) + 5)%>" style="display: none;">
     <span>Posted by: <%= s.get((i * 7) + 2)%></span> <span id="time"><%= s.get((i * 7) + 3)%></span>   
     <div class="updown">
 
     </div>
+     <%
+            if (loggedAs.equalsIgnoreCase("p") || loggedAs.equalsIgnoreCase("c")) {
+        %>
+
+        <button class="open-button" onclick="openForm(<%= s.get((i * 7) + 5)%>)">Report</button>
+        <% } %>
     <div class="answer">
+        
         <%
             if (loggedAs.equalsIgnoreCase("p")) {
         %>
@@ -60,28 +69,26 @@ for(int j=0;j<tokens.length;j++)
             }
         %>
         <a href="../../display_question?qid=<%= s.get((i * 7) + 5)%>" type="button" id="answer_view"><%= s.get((i * 7) + 4)%> answers</a>
-        
 
-        <a href="#" type="button" id="ReportBtn" onclick="report()">Report</a>
-        <button class="open-button" onclick="openForm(<%= s.get((i * 7) + 5)%>)">Open Form</button>
-        
+       
+
     </div>
 </div>
-        
-  <div class="form-popup" id="myForm">
-      <form action="../../reportQuestion" method="POST" class="form-container">
-    <h1>Login</h1>
 
-    <input type="text" id="id" name="id" style="display: none;">
-     
-    <label for="reason"><b>Report Question </b></label>
-    <input type="text" placeholder="Enter Reason" name="reason" id="reason" required>
+<div class="form-popup" id="myForm">
+    <form action="../../reportQuestion" method="POST" class="form-container">
+        <h1>Login</h1>
 
-   <textarea placeholder="Please Describe" name="desc" id="desc" rows="4"  required></textarea>
+        <input type="text" id="id" name="id" style="display: none;">
 
-    <button type="submit" class="btn">Report</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-  </form>
+        <label for="reason"><b>Report Question </b></label>
+        <input type="text" placeholder="Enter Reason" name="reason" id="reason" required>
+
+        <textarea placeholder="Please Describe" name="desc" id="desc" rows="4" cols="40" required></textarea>
+
+        <button type="submit" class="btn">Report</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+    </form>
 </div>
 
 <!--   
@@ -117,5 +124,5 @@ for(int j=0;j<tokens.length;j++)
         </div>-->
 <script src="../../JS/Forum/BrowseQn.js" type="text/javascript"></script>
 
-    
+
 <%}%>

@@ -672,6 +672,7 @@
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
         <url-pattern>/View/Fourm/PersonalQuestions.jsp</url-pattern>
         <url-pattern>/forumH_personal</url-pattern>
+        <url-pattern>/reportQuestion</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>
