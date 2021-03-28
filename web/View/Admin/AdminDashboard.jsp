@@ -37,7 +37,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>            
         <title>Administrator</title>
     </head>
-    <body style="background-color: #f8f9fb;">
+    <body style="background-color: #f8f9fb;" onload="loadDashBoardData();">
 
 
         <div class="side-nav">

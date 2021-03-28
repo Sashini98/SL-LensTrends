@@ -288,6 +288,10 @@
         <servlet-name>ChangePassword</servlet-name>
         <servlet-class>Controller.ChangePassword</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoadDashBoardData</servlet-name>
+        <servlet-class>Controller.Admin.LoadDashBoardData</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -575,6 +579,10 @@
     <servlet-mapping>
         <servlet-name>ChangePassword</servlet-name>
         <url-pattern>/ChangePassword</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadDashBoardData</servlet-name>
+        <url-pattern>/LoadDashBoardData</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

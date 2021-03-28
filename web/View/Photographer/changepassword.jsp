@@ -156,7 +156,7 @@
                 </fieldset>
 
 
-                <div class="change" onclick="changePassword();">
+                <div class="change" onclick="changePassword('<%= actor %>');">
                     <a  type="button">Change</a>
                 </div>
 

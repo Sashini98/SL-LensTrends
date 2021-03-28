@@ -19,6 +19,7 @@ public interface PhotographDao {
     public List<Photograph> getPhotographByKeyWord(String keyword);
     public List getAllInReviewPhotographs() throws SQLException;
     public Photograph getPhotographById(int id) throws SQLException;
+    public ArrayList<Photograph> getPhotographsByDate(String date) throws SQLException;
     public ArrayList<Photograph> getAllphotosofPhotographer(String photographer_id) throws SQLException;
     public void  updatePhotographState(int status, int PhotographId) throws SQLException;
     public void deletephoto(int PhotographId, int status, String path) throws SQLException;
