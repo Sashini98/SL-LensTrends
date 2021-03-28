@@ -6,6 +6,7 @@
 package Model.Dao;
 
 import Model.Photograph;
+import Model.portfolio_photograph;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,4 +24,5 @@ public interface PhotographDao {
     public ArrayList<Photograph> getAllphotosofPhotographer(String photographer_id) throws SQLException;
     public void  updatePhotographState(int status, int PhotographId) throws SQLException;
     public void deletephoto(int PhotographId, int status, String path) throws SQLException;
+    public void uploadphotoforportfolio(portfolio_photograph uploadPhotograph ) throws SQLException;
 }

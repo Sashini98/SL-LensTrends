@@ -130,8 +130,7 @@ function filevalidation() {
 
     var filePath = fileInput.value;
     var filesize = fileInput.files[0].size;
-    var sizelimit = 25000000; // file sixe limit of 25MB
-    var lowersizelimit = 1000000; 
+    var lowersizelimit = 1000000; // lowest size to upload
 
     // Allowing file type 
     var allowedExtensions = /(\.jpg|\.jpeg)$/i;
@@ -140,12 +139,19 @@ function filevalidation() {
         alert('Upload only JPEG or JPG image');
         fileInput.value = '';
         document.getElementById('uploadimage').innerHTML = "Choose file";
+        document.getElementById('uploadimage').innerHTML = "Choose file";
+        document.getElementById("up-image").value = "";
+        document.getElementById("sample").style.display = "none";
+        document.getElementById("title-input").style.display = "none";
         return false;
-    } else if (filesize => sizelimit) {
-        alert('Upload Images between 1MP and 25MP');
-        return false;
-    } else if (filesize <= lowersizelimit) {
-        alert('Upload Images between 1MP and 25MP');
+    }
+    
+    if (filesize <= lowersizelimit) {
+        alert('Image is less then 1MP, Upload Images between 1MP and 25MP');
+        document.getElementById('uploadimage').innerHTML = "Choose file";
+        document.getElementById("up-image").value = "";
+        document.getElementById("sample").style.display = "none";
+        document.getElementById("title-input").style.display = "none";
         return false;
     }
 //
@@ -159,4 +165,19 @@ function filevalidation() {
 //
 //            reader.readAsDataURL(fileInput.files[0]);
 //        }
-    }
+}
+
+function uploadimage() {
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                document.getElementById('upload-modal').style.display = 'none';
+            }
+        }
+
+    };
+    request.open("POST", "../../UploadforPortfolio", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
