@@ -128,6 +128,13 @@
                         <label for="province" class="label_name">
                         </label>
                     </div><br>
+                    
+                    <div class="formContent">
+                        <span class="content_name"> Event Description </span><br>
+                        <textarea name="desc" rows="4" cols="10" required></textarea>
+                        <label for="desc" class="label_name">
+                        </label>
+                    </div><br>
 
                     
 <!--

@@ -311,7 +311,7 @@ function show(selectedTab) {
                 } else if (selectedTab === 'subscription') {
                     viewPlan();
                 } else if (selectedTab === 'summary') {
-                    location.replace("/GroupProject/LoadDashBoardData");
+                    location.replace("/GroupProject/View/Admin/AdminDashboard.jsp");
                 }
             }
         }

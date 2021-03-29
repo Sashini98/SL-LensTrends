@@ -292,6 +292,14 @@
         <servlet-name>LoadDashBoardData</servlet-name>
         <servlet-class>Controller.Admin.LoadDashBoardData</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UploadforPortfolio</servlet-name>
+        <servlet-class>Controller.Photographer.UploadforPortfolio</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>reportQuestion</servlet-name>
+        <servlet-class>Controller.Forum.reportQuestion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -584,6 +592,14 @@
         <servlet-name>LoadDashBoardData</servlet-name>
         <url-pattern>/LoadDashBoardData</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadforPortfolio</servlet-name>
+        <url-pattern>/UploadforPortfolio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>reportQuestion</servlet-name>
+        <url-pattern>/reportQuestion</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10
@@ -656,6 +672,7 @@
         <url-pattern>/View/Fourm/BrowseQn.jsp</url-pattern>
         <url-pattern>/View/Fourm/PersonalQuestions.jsp</url-pattern>
         <url-pattern>/forumH_personal</url-pattern>
+        <url-pattern>/reportQuestion</url-pattern>
     </filter-mapping>
     <filter>
         <filter-name>FilterLoggedClientOrPhotographerAccessOnly</filter-name>

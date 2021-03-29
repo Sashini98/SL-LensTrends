@@ -52,8 +52,8 @@ public class Login extends HttpServlet {
                     if (adminByEmailAndPassword != null) {
 
                         request.getSession().setAttribute("loggedAdmin", adminByEmailAndPassword);
-                        response.sendRedirect("/GroupProject/LoadDashBoardData");
-//                        response.sendRedirect("View/Admin/AdminDashboard.jsp");
+//                        response.sendRedirect("/GroupProject/LoadDashBoardData");
+                        response.sendRedirect("View/Admin/AdminDashboard.jsp");
 
                     } else {
                         request.setAttribute("account", "false");

@@ -8,6 +8,7 @@ package Controller.DaoImpl;
 import DB.DB;
 import Model.Dao.PhotographDao;
 import Model.Photograph;
+import Model.portfolio_photograph;
 import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -161,6 +162,11 @@ public class PhotographDaoImpl implements PhotographDao {
         }
 
         return Loadphotos;
+    }
+
+    @Override
+    public void uploadphotoforportfolio(portfolio_photograph uploadPhotograph) throws SQLException {
+        DB.iud("INSERT INTO portfolio_photograph (path, title, Photographer_Id) VALUES('"+ uploadPhotograph.getPath() +"','"+ uploadPhotograph.getTitle() +"','"+ uploadPhotograph.getPhotogrpherId() +"')");
     }
 
 }
