@@ -47,48 +47,58 @@ public class UploadforPortfolio extends HttpServlet {
         try {
             DiskFileItemFactory dfif = new DiskFileItemFactory();
             ServletFileUpload sfu = new ServletFileUpload(dfif);
+//ServletFileUpload will scan through all the uploaded files 
+//(using an Iterator which parses the MIME stuff and knows how to deal 
+//with content length etc.).
 
             List<FileItem> fil = sfu.parseRequest(request);
+//For each uploaded file, the parse method asks the FileItemFactory to create a 
+//local representation for the uploaded file and then copies the contents from memory
+//(e.g. from the HTTP POST request, which is held in memory) to the actual file on disk.
+
             FileItem fi = fil.get(0);
-            System.out.println(fi);
+//            System.out.println();
 
             String realpath = getServletContext().getRealPath("");
             String imagename = String.valueOf(System.currentTimeMillis());
-//            String compressedimagename = String.valueOf(System.currentTimeMillis() + 5);
+            String compressedimagename = String.valueOf(System.currentTimeMillis() + 5);
 //
-            String filepath = "";
-            filepath = realpath + "\\Resources\\Img\\Gallery Sample Images\\" + imagename + ".jpeg";
+            String filepathorg = "";
+            String filepathcom = "";
+            filepathorg = realpath + "\\Resources\\Img\\Gallery Sample Images\\CompressedImage\\" + imagename + ".jpeg";
+            filepathcom = realpath + "\\Resources\\Img\\Gallery Sample Images\\" + compressedimagename + ".jpeg";
 ////             System.out.println(filepath);
-//
-//            File input = new File(imagename + ".jpeg");
-//            BufferedImage image = ImageIO.read(input);
-//
-//            File compressedImageFile = new File(compressedimagename + ".jpeg");
-//            OutputStream os = new FileOutputStream(compressedImageFile);
-//
-//            Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpeg");
-//            ImageWriter writer = (ImageWriter) writers.next();
-//
-//            ImageOutputStream ios = ImageIO.createImageOutputStream(os);
-//            writer.setOutput(ios);
-//            
-//            ImageWriteParam param = writer.getDefaultWriteParam();
-//
-//            param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
-//            param.setCompressionQuality(0.05f);
-//            writer.write(null, new IIOImage(image, null, null), param);
-//
-//            os.close();
-//            ios.close();
-//            writer.dispose();
-            
-            File file = new File(filepath);
-            fi.write(file);
+            File fileorg = new File(filepathorg);
+            fi.write(fileorg);
+
+//            File input = new File(filepathorg);
+            BufferedImage image = ImageIO.read(fileorg);
+
+            File compressedImageFile = new File(filepathcom);
+            OutputStream os = new FileOutputStream(compressedImageFile);
+
+            Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpeg");
+            ImageWriter writer = (ImageWriter) writers.next();
+
+            ImageOutputStream ios = ImageIO.createImageOutputStream(os);
+            writer.setOutput(ios);
+
+            ImageWriteParam param = writer.getDefaultWriteParam();
+
+            param.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
+            param.setCompressionQuality(0.2f);
+            writer.write(null, new IIOImage(image, null, null), param);
+
+//            File filecom = new File(filepathcom);
+//            fi.write(filecom);
+            os.close();
+            ios.close();
+            writer.dispose();
 
 //            String title = request.getParameter("title");
             int id = 0;
-            String path = imagename + ".jpeg";
-            String title = request.getParameter("title");
+            String path = compressedimagename + ".jpeg";
+            String title = fil.get(1).getString();
             System.out.println(title);
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             String Photographer_Id = p.getPhotographerId();

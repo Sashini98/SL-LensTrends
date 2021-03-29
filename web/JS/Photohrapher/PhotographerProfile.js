@@ -184,14 +184,14 @@ function filevalidation() {
 
 function uploadimage() {
 //    alert(document.getElementById("upload-image").files[0]);
-
+    var title = document.getElementById("title").value;
     if (document.getElementById("upimage").value == "") {
         alert("Select Images to Upload");
     } else {
-        var file = document.getElementById("upimage").files[0];        
+        var file = document.getElementById("upimage").files[0];
         var formdata = new FormData();
         formdata.append("file1", file);
-
+        formdata.append("title",title);
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState === 4) {
