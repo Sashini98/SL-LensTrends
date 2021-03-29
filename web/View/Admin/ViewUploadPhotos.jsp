@@ -24,8 +24,8 @@
 
         <div class="box"><br>
             <div class="details">
-<!--                <a href="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" target="_blank"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>-->
-<img id="img">
+                <!--                <a href="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" target="_blank"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>-->
+                <img id="img">
             </div>
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
