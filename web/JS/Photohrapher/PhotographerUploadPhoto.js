@@ -292,6 +292,7 @@ function submitphoto() {
                     uploadmodal.style.display = "none";
                     document.getElementById("uploadimage").innerHTML = "Choose file";
                     var responce = request.responseText;
+                    location.reload();
                     alert(responce);
                 }
             }
@@ -299,7 +300,7 @@ function submitphoto() {
         };
         request.open("POST", "../../UploadforSales", false);
         request.send(formdata);
-        location.reload();
+        
     }
 
 }

@@ -177,7 +177,7 @@ public class PhotographDaoImpl implements PhotographDao {
 
     @Override
     public void uploadphotoforsales(Photograph uploadforSales) throws SQLException {
-        DB.iud("INSERT INTO photograph (Photograph_Id, path, ununcompresedpath,Width, Height, Quality, Keywords, Uploaded_Date, Price, Undiscovered, Photographer_Id, Title, Photograph_category_Id, People, Orientation_Id, state_id, Gender_Id)"
+        DB.iud("INSERT INTO photograph (Photograph_Id, path, uncompresedpath,Width, Height, Quality, Keywords, Uploaded_Date, Price, Undiscovered, Photographer_Id, Title, Photograph_category_Id, People, Orientation_Id, state_id, Gender_Id)"
                 + "VALUES('" + uploadforSales.getId() + "','" + uploadforSales.getPath() + "','" + uploadforSales.getUncompresedpath()+ "','" + uploadforSales.getWidth() + "','" + uploadforSales.getHeight() + "','" + uploadforSales.getQuality() + "','" + uploadforSales.getKeywords() + "','" + uploadforSales.getUploadedDate() + "',"
                 + " '" + uploadforSales.Price() + "','" + uploadforSales.isUndiscovered() + "','" + uploadforSales.getPhotogrpherId() + "','" + uploadforSales.getTitle() + "','" + uploadforSales.getCategoryId() + "','" + uploadforSales.isPeople() + "','" + uploadforSales.getOrientationId() + "',"
                 + " '" + uploadforSales.getStateId() + "','" + uploadforSales.getGenderId() + "')");

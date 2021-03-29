@@ -5,6 +5,10 @@
  */
 package Controller.Photographer;
 
+import Controller.DaoImpl.PhotographDaoImpl;
+import Model.Dao.PhotographDao;
+import Model.Photograph;
+import Model.Photographer;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -84,8 +88,24 @@ public class UploadforSales extends HttpServlet {
             os.close();
             ios.close();
             writer.dispose();
+
+            String compath = Comimagename;
+            int stateid = 1;
+
+            Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+            String Photographer_Id = p.getPhotographerId();
             
+            Photograph m = new Photograph();
             
+            m.setStateId(stateid);
+            m.setPath(compath);
+            m.setUncompresedpath(Orgimagename);
+            m.setPhotogrpherId(Photographer_Id);
+            
+            PhotographDao photoDao = new PhotographDaoImpl();
+            photoDao.uploadphotoforsales(m);
+
+            response.getWriter().write("Successfully Uploaded");
 
         } catch (Exception ex) {
             Logger.getLogger(UploadforSales.class.getName()).log(Level.SEVERE, null, ex);
