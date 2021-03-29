@@ -300,7 +300,7 @@ function submitphoto() {
         };
         request.open("POST", "../../UploadforSales", false);
         request.send(formdata);
-        
+
     }
 
 }
@@ -421,6 +421,20 @@ function validation(para) {
             return false;
         }
     }
+
+    var fileuplaod = document.getElementById('upimage');
+    var filePath = fileuplaod.value;
+    var filesize = fileuplaod.files[0].size;
+    var lowersizelimit = 5000000; // lowest size to upload
+
+    if (filesize < lowersizelimit) {
+        alert('Image is less then 5MP, Upload a Quality one');
+        document.getElementById("uploadimage").innerHTML = "FileName";
+        document.getElementById("upimage").value = "";
+        return false;
+    }
+
+
 }
 
 function resetrelease() {
