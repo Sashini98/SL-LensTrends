@@ -18,10 +18,29 @@
         <link type="text/css" rel="stylesheet" href="../../CSS/Photographer/UserViewPhotographerProfile.css" />
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300&family=Didact+Gothic&family=Dr+Sugiyama&family=Poiret+One&family=Poppins:wght@300&family=Questrial&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
         <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Righteous&family=Sora:wght@600&family=Syne&display=swap" rel="stylesheet">  
+        <script src="https://kit.fontawesome.com/9dd75719fe.js" crossorigin="anonymous"></script>
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="content">
+        <div style="display: flex; justify-content: center;">
+            <div class="delAcc" id="delAcc" style="display: none;">
+                <div class="delHeader">
+                    <h3>Delete Account</h3>
+                    <i class="fas fa-times close" id="delAccClose" style="color: black; margin: auto; cursor: pointer;"></i>
+                </div>
+
+                <div>
+                    <h4>Are you sure you want to delete?</h4>
+
+                    <div style="padding-top: 20px;">
+                        <button class="Report" id="Delete" onclick="deleteAccount();">Yes</button>
+                        <button class="Report" id="noBtn">No</button>
+                    </div>
+                </div>
+            </div>
+        </div>            
+
+        <div class="content" id="content">
 
             <div class="fixedheader">
 
@@ -52,6 +71,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="skill-box">
 
@@ -162,7 +182,7 @@
                 </div> 
                 <div class="edit">
                     <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
-                    <a href="#" type="button">Delete Account</a>
+                    <a href="#" type="button" id="delBtn">Delete Account</a>
                 </div>
 
             </div> 
@@ -170,5 +190,7 @@
         </div>
 
         <script type="text/javascript" src="../../JS/User/ClientProfileUpdate.js" ></script>    
+
+  
     </body>
 </html>

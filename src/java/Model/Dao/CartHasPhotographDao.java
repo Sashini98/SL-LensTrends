@@ -15,10 +15,13 @@ import java.util.ArrayList;
  * @author kesh
  */
 public interface CartHasPhotographDao {
-    
+
     public ArrayList<Photograph> getCartItems(String clientID) throws SQLException;
+
     public int getCartItemCount(String clientID) throws SQLException;
-    
+
     public void addCartItem(String clientID, int photoId) throws SQLException;
-    
+
+    public void deleteClientCart(String clientId) throws SQLException;
+
 }

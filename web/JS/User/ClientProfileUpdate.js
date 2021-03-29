@@ -304,3 +304,50 @@ function updatedata(field) {
 
     }
 }
+
+var btn = document.getElementById("delBtn");
+var span = document.getElementById("delAccClose");
+var span = document.getElementById("delAccClose");
+var noBtn = document.getElementById("noBtn");
+
+btn.onclick = function () {
+    var modal = document.getElementById("delAcc");
+    document.getElementById('content').style.opacity = "0.5";
+    modal.style.display = "block";
+}
+
+span.onclick = function () {
+    var modal = document.getElementById("delAcc");
+    document.getElementById('content').style.opacity = "1";
+    modal.style.display = "none";
+}
+
+noBtn.onclick = function () {
+    var modal = document.getElementById("delAcc");
+    document.getElementById('content').style.opacity = "1";
+    modal.style.display = "none";
+}
+
+
+function deleteAccount() {
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                if (responce == "success") {
+                    window.location.href = "/GroupProject/LogOut?loc=ch";
+
+                }
+
+            }
+        }
+    }
+    request.open("POST", "../../DeleteClientAccount", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+
+}
