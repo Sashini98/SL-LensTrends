@@ -27,11 +27,12 @@ public class Event {
     String street;
     String city;
     String province;
+    String description;
 
     public Event() {
     }
 
-    public Event(String eventId, String eventName, String type, String eventDate, String eventTime, String area, String clientId, String hallNo, String venue, String street, String city, String province) {
+    public Event(String eventId, String eventName, String type, String eventDate, String eventTime, String area, String clientId, String hallNo, String venue, String street, String city, String province, String description) {
         this.eventId = eventId;
         this.eventName = eventName;
         this.type = type;
@@ -44,6 +45,7 @@ public class Event {
         this.street = street;
         this.city = city;
         this.province = province;
+        this.description=description;
 
     }
 
@@ -141,5 +143,13 @@ public class Event {
 
     public void setprovince(String province) {
         this.province = province;
+    }
+    
+     public String getdescription() {
+        return description;
+    }
+
+    public void setdescription(String description) {
+        this.description = description;
     }
 }
