@@ -301,6 +301,10 @@
         <servlet-class>Controller.Forum.reportQuestion</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>UploadforSales</servlet-name>
+        <servlet-class>Controller.Photographer.UploadforSales</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>DeleteClientAccount</servlet-name>
         <servlet-class>Controller.Clent.DeleteClientAccount</servlet-class>
     </servlet>
@@ -603,6 +607,10 @@
     <servlet-mapping>
         <servlet-name>reportQuestion</servlet-name>
         <url-pattern>/reportQuestion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadforSales</servlet-name>
+        <url-pattern>/UploadforSales</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DeleteClientAccount</servlet-name>

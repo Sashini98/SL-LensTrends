@@ -38,9 +38,9 @@ public class DeletePortfolioPhotos extends HttpServlet {
             String photoname = photoarray[photoarray.length - 1];
 
             portfolio_photograph photograph = deletephotoDao.getPhotographById(photoid);
-            String filepath = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/").replace('\\', '/');
+            String filepathcom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/").replace('\\', '/');
 
-            deletephotoDao.deletephoto(photoid, filepath + "/" + photoname);
+            deletephotoDao.deletephoto(photoid, filepathcom + "/" + photoname);
             response.getWriter().write("Successfully Deleted");
 
         } catch (SQLException ex) {

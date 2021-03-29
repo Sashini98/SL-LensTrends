@@ -57,7 +57,6 @@ function navigation(button) {
     }
 }
 
-
 function clickimage(click, section, photoid, itemcount) {
     if (section == "image-box-inreview") {
         var numitems = itemcount;
@@ -163,41 +162,33 @@ function clickimage(click, section, photoid, itemcount) {
     }
 }
 
-
-
 window.pressedupload = function () {
-
-    uploadimage.innerHTML = "Choose file";
-    var a = document.getElementById('up-image');
-
-    if (a.value == "")
-    {
-        uploadimage.innerHTML = "Choose file";
-    } else
-    {
-        var theSplit = a.value.split('\\');
-        uploadimage.innerHTML = theSplit[theSplit.length - 1];
-//        uploadimage.innerHTML = "Choose file";
-
-    }
+    var a = document.getElementById('upimage');
+    var theSplit = a.value.split('\\');
+    document.getElementById("uploadimage").innerHTML = theSplit[theSplit.length - 1];
 };
 
-window.pressedrelease = function () {
-
-    uploadfile.innerHTML = "Choose file";
-    var a = document.getElementById('up-modal');
-
-    if (a.value == "")
-    {
-        uploadfile.innerHTML = "Choose file";
-    } else
-    {
-        var theSplit = a.value.split('\\');
-        uploadfile.innerHTML = theSplit[theSplit.length - 1];
-//        uploadimage.innerHTML = "Choose file";
-
-    }
+window.pressedmodalrelease = function () {
+    var b = document.getElementById('upmodalmodal');
+    var theSplit = b.value.split('\\');
+    document.getElementById("fileNamemodal").innerHTML = theSplit[theSplit.length - 1];
 };
+
+window.pressedpropertyrelease = function () {
+
+    var c = document.getElementById('upmodalproperty');
+    var theSplit = c.value.split('\\');
+    document.getElementById("fileNameproperty").innerHTML = theSplit[theSplit.length - 1];
+
+};
+
+function submitrelease() {
+
+    document.getElementById("fileNamemodal").innerHTML = "FileName";
+    document.getElementById("fileNameproperty").innerHTML = "FileName";
+    document.getElementById("DownModal").style.display = "none";
+    location.reload();
+}
 
 function loadphotos() {
 
@@ -219,8 +210,6 @@ function loadphotos() {
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 }
-
-
 
 window.onload = function () {
     loadphotos();
@@ -269,32 +258,56 @@ window.onload = function () {
             modal.style.display = "none";
         } else if (event.target == Downmodal) {
             Downmodal.style.display = "none";
+            document.getElementById("fileNamemodal").innerHTML = "FileName"
+            document.getElementById("fileNameproperty").innerHTML = "FileName"
+            document.getElementById("upmodalproperty").value = "";
+            document.getElementById("upmodalmodal").value = "";
         } else if (event.target == closemodal) { //modal close window onclick for upload button
             closemodal.style.display = "none";
-            document.getElementById("up-image").value = '';
             document.getElementById("uploadimage").innerHTML = "Choose file";
-            document.getElementById("upload-modal").style.display = "none";
+            document.getElementById("upimage").value = '';
         }
     }
 
 
 };
 
-function upload(btn) {
+function submitphoto() {
 
-    if (btn == "final-upload") {
-        var uploadmodal = document.getElementById("upload-modal");
-        uploadmodal.style.display = "none";
-        uploadimage.innerHTML = "Choose file";
-        document.getElementById("up-image").value = '';
+    var check = document.getElementById("upimage").value;
+    if (check == "") {
+        alert("Select an Image to upload");
+        document.getElementById("upload-modal").style.display = "block";
+        document.getElementById('uploadimage').innerHTML = "FileName";
+        document.getElementById('upimage').value = "";
+    } else {
+        var file = document.getElementById("upimage").files[0];
+        var formdata = new FormData();
+        formdata.append("file1", file);
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    var uploadmodal = document.getElementById("upload-modal");
+                    uploadmodal.style.display = "none";
+                    document.getElementById("uploadimage").innerHTML = "Choose file";
+                    var responce = request.responseText;
+                    alert(responce);
+                }
+            }
+
+        };
+        request.open("POST", "../../UploadforSales", false);
+        request.send(formdata);
+        location.reload();
     }
+
 }
 
 function cleardata() {
-    document.getElementById("up-image").value = '';
+    document.getElementById("upimage").value = '';
     document.getElementById("uploadimage").innerHTML = "Choose file";
     document.getElementById("upload-modal").style.display = "none";
-
 }
 
 function deletephoto(para) {
@@ -364,7 +377,56 @@ function deletephoto(para) {
     }
 }
 
+function closebtn() {
+    document.getElementById('DownModal').style.display = 'none';
+    document.getElementById('fileNameproperty').innerHTML = "FileName";
+    document.getElementById('upmodalproperty').value = "";
+    document.getElementById('fileNamemodal').innerHTML = "FileName";
+    document.getElementById('upmodalmodal').value = "";
+}
 
+function validation(para) {
 
+    if (para == "upmodalproperty") {
+        var fileInput = document.getElementById('upmodalproperty');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i;
+        if (!allowedExtensions.exec(filePath)) {
+            alert("Upload Release in PDF format");
+            document.getElementById("fileNameproperty").innerHTML = "FileName";
+            document.getElementById("upmodalproperty").value = "";
+            return false;
+        }
+    } else if (para == "upmodalmodal") {
+        var fileInput = document.getElementById('upmodalmodal');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.pdf)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+            alert("Upload Release in PDF format");
+            document.getElementById("fileNamemodal").innerHTML = "FileName";
+            document.getElementById("upmodalmodal").value = "";
+            return false;
+        }
+    } else if (para == "upimage") {
+        var fileInput = document.getElementById('upimage');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.jpg|\.jpeg)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+            alert("Upload JPEG / JPG format only");
+            document.getElementById("uploadimage").innerHTML = "FileName";
+            document.getElementById("upimage").value = "";
+            return false;
+        }
+    }
+}
+
+function resetrelease() {
+    document.getElementById('fileNameproperty').innerHTML = "FileName";
+    document.getElementById('upmodalproperty').value = "";
+    document.getElementById('fileNamemodal').innerHTML = "FileName";
+    document.getElementById('upmodalmodal').value = "";
+}
 
 
