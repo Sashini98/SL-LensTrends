@@ -7,7 +7,42 @@ and open the template in the editor.
     Created on : Oct 13, 2020, 12:35:41 PM
     Author     : Athavan
 */
+.delAcc{
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 2px 2px 4px #000000;
+    border-radius: 15px;
+    background-color: white;
+    display: none;
+    z-index: 1; 
+    position: fixed;
+    margin-top: 150px;
+}
 
+.delHeader{
+    display: grid; 
+    grid-template-columns: 90% 10%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    /*align-items:*/ 
+}
+
+.Delete{
+    margin-bottom: 3%;
+    background-color: rgb(222, 58, 42);
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+    float: right;
+}
 
 body{
     font-family: calibri;
