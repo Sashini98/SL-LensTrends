@@ -12,7 +12,9 @@ import Model.portfolio_photograph;
 import java.io.File;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -31,7 +33,7 @@ public class PhotographDaoImpl implements PhotographDao {
             while (photographs.next()) {
                 Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                         photographs.getDouble("Width"), photographs.getDouble("Height"),
-                        photographs.getString("Quality"), photographs.getString("Keywords"),
+                        photographs.getString("Keywords"),
                         photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                         photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                         photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
@@ -56,7 +58,7 @@ public class PhotographDaoImpl implements PhotographDao {
         while (photographs.next()) {
             Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
-                    photographs.getString("Quality"), photographs.getString("Keywords"),
+                    photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                     photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                     photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
@@ -76,7 +78,7 @@ public class PhotographDaoImpl implements PhotographDao {
         if (photograph.next()) {
             Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"), photograph.getString("uncompresedpath"),
                     photograph.getDouble("Width"), photograph.getDouble("Height"),
-                    photograph.getString("Quality"), photograph.getString("Keywords"),
+                    photograph.getString("Keywords"),
                     photograph.getDate("Uploaded_Date"), photograph.getDouble("Price"),
                     photograph.getBoolean("Undiscovered"), photograph.getString("Photographer_Id"),
                     photograph.getString("Title"), photograph.getInt("Photograph_category_id"),
@@ -103,7 +105,7 @@ public class PhotographDaoImpl implements PhotographDao {
             Photograph p = new Photograph(
                     photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
-                    photographs.getString("Quality"), photographs.getString("Keywords"),
+                    photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                     photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                     photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
@@ -155,7 +157,7 @@ public class PhotographDaoImpl implements PhotographDao {
             Photograph p = new Photograph(
                     photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
-                    photographs.getString("Quality"), photographs.getString("Keywords"),
+                    photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
                     photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
                     photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
@@ -177,10 +179,15 @@ public class PhotographDaoImpl implements PhotographDao {
 
     @Override
     public void uploadphotoforsales(Photograph uploadforSales) throws SQLException {
-        DB.iud("INSERT INTO photograph (Photograph_Id, path, uncompresedpath,Width, Height, Quality, Keywords, Uploaded_Date, Price, Undiscovered, Photographer_Id, Title, Photograph_category_Id, People, Orientation_Id, state_id, Gender_Id)"
-                + "VALUES('" + uploadforSales.getId() + "','" + uploadforSales.getPath() + "','" + uploadforSales.getUncompresedpath()+ "','" + uploadforSales.getWidth() + "','" + uploadforSales.getHeight() + "','" + uploadforSales.getQuality() + "','" + uploadforSales.getKeywords() + "','" + uploadforSales.getUploadedDate() + "',"
-                + " '" + uploadforSales.Price() + "','" + uploadforSales.isUndiscovered() + "','" + uploadforSales.getPhotogrpherId() + "','" + uploadforSales.getTitle() + "','" + uploadforSales.getCategoryId() + "','" + uploadforSales.isPeople() + "','" + uploadforSales.getOrientationId() + "',"
-                + " '" + uploadforSales.getStateId() + "','" + uploadforSales.getGenderId() + "')");
+        Date d = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(d);
+        System.out.println("ffff");
+        DB.iud("INSERT INTO photograph (path, uncompresedpath,Width, Height, Uploaded_Date, Undiscovered, Photographer_Id,state_id)"
+                + "VALUES('" + uploadforSales.getPath() + "','" + uploadforSales.getUncompresedpath()+ "','" + uploadforSales.getWidth() + "','" + uploadforSales.getHeight() + "','" + date + "',"
+                + " '" + 1 + "','" + uploadforSales.getPhotogrpherId() + "',"
+                + " '" + uploadforSales.getStateId() + "')");
+        System.out.println("bbbbb");
     }
 
     @Override
@@ -190,7 +197,7 @@ public class PhotographDaoImpl implements PhotographDao {
         if (photograph.next()) {
             Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"), photograph.getString("uncompresedpath"),
                     photograph.getDouble("Width"), photograph.getDouble("Height"),
-                    photograph.getString("Quality"), photograph.getString("Keywords"),
+                    photograph.getString("Keywords"),
                     photograph.getDate("Uploaded_Date"), photograph.getDouble("Price"),
                     photograph.getBoolean("Undiscovered"), photograph.getString("Photographer_Id"),
                     photograph.getString("Title"), photograph.getInt("Photograph_category_id"),

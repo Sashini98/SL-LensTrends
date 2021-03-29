@@ -15,6 +15,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
@@ -88,7 +89,10 @@ public class UploadforSales extends HttpServlet {
             os.close();
             ios.close();
             writer.dispose();
-
+            
+            int height = image.getHeight();
+            int width = image.getWidth();
+            
             String compath = Comimagename;
             int stateid = 1;
 
@@ -100,10 +104,16 @@ public class UploadforSales extends HttpServlet {
             m.setStateId(stateid);
             m.setPath(compath);
             m.setUncompresedpath(Orgimagename);
+            m.setWidth(width);
+            m.setHeight(height);
+            m.setUploadedDate(new Date());
             m.setPhotogrpherId(Photographer_Id);
-            
+            m.setUndiscovered(true);
+            m.setPeople(false);
             PhotographDao photoDao = new PhotographDaoImpl();
+            
             photoDao.uploadphotoforsales(m);
+            
 
             response.getWriter().write("Successfully Uploaded");
 
