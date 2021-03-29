@@ -41,7 +41,7 @@ public class DeletePhoto extends HttpServlet {
             
             Photograph photograph = deletephotoDao.getPhotographById(idd);
             String filepathcom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/").replace('\\', '/'); //getting absolute path of image folder
-            String filepathuncom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/Uncom Sales Images").replace('\\', '/');
+            String filepathuncom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/OriginalImageForSales").replace('\\', '/');
             
             Photograph photographOrg = deletephotoDao.getoriginalpath(photoname);
             
