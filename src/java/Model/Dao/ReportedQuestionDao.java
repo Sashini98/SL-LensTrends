@@ -14,8 +14,12 @@ import java.util.List;
  * @author Madusha
  */
 public interface ReportedQuestionDao {
-    public void addReportedQuestion(String log,ReportedQuestion rep)throws SQLException;
-    
+
+    public void addReportedQuestion(String log, ReportedQuestion rep) throws SQLException;
+
     public List getAllReportedQuestions() throws SQLException;
+
     public ReportedQuestion getReportedQuestionById(int id) throws SQLException;
+
+    public void deleteReportedQuestionsByClient(String clientId) throws SQLException;
 }

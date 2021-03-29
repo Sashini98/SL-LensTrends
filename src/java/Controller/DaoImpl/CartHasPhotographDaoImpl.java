@@ -87,4 +87,9 @@ public class CartHasPhotographDaoImpl implements CartHasPhotographDao {
 
     }
 
+    @Override
+    public void deleteClientCart(String clientId) throws SQLException {
+        
+    }
+
 }

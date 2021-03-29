@@ -48,5 +48,10 @@ public class ReportedPhotographerDaoImpl implements ReportedPhotographerDao{
         cnt = num.getInt("rowcount");
         return cnt;
     }
+
+    @Override
+    public void deleteReportedPhotographerByClient(String clientId) throws SQLException {
+        DB.iud("DELETE FROM reported_photographer where Client_Id = '" + clientId + "'");
+    }
     
 }

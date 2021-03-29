@@ -19,5 +19,6 @@ public interface ReportedPhotographDao {
     public List getAllReportedPhotos() throws SQLException;
     public ReportedPhotographs getReportedPhotographById(int id) throws SQLException;
     public void addReportedPhotograph(ReportedPhotographs photograph) throws SQLException;
+    public void deleteReportedPhotographByClient(String clientId) throws SQLException;
     public boolean hasPerviousReports(int photographId, String clientId) throws SQLException;
 }

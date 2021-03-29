@@ -73,4 +73,9 @@ public class ReportedPhotographDaoImpl implements ReportedPhotographDao{
         
         return b;
     }
+
+    @Override
+    public void deleteReportedPhotographByClient(String clientId) throws SQLException {
+        DB.iud("DELETE FROM reported_photo where Client_Id = '" + clientId + "'");
+    }
 }

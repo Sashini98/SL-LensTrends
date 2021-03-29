@@ -338,12 +338,16 @@ function deleteAccount() {
             if (request.readyState === 4) {
 
                 var responce = request.responseText;
-              
+                if (responce == "success") {
+                    window.location.href = "/GroupProject/LogOut?loc=ch";
+
+                }
+
             }
         }
     }
-    request.open("POST", "../../ClientDetailsUpdate", false);
+    request.open("POST", "../../DeleteClientAccount", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("userprovince=" + province);
+    request.send();
 
 }
