@@ -70,7 +70,6 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             c.add(photographer.getFname() + " " + photographer.getLname());
             c.add(category);
             c.add(orientation);
-            c.add(photograph.getQuality());
             c.add(photograph.getGenderId() +"");
             c.add("../../Resources/Img/Gallery Sample Images/"+ photograph.getPath());
             c.add(photograph.getHeight() * photograph.getWidth() / 1000000 + "");

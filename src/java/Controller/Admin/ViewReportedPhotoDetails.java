@@ -73,7 +73,6 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             c.add(date);
             c.add(photographer.getFname() + " " + photographer.getLname());
             c.add(category);
-            c.add(photograph.getQuality());
             c.add(photograph.getHeight() * photograph.getWidth() / 1000000 + "");
             c.add(photograph.getId() +"");
             

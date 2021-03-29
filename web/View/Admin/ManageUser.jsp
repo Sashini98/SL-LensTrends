@@ -9,26 +9,26 @@
 <div onload="viewReportedUser(); viewCount();">
     <div style="background-color: #f7f6f9;">
         <div class="content" id="c">
-<!--            <div class="box" style="background-color: #EAEAEA">
-                <h2>Active Users</h2>
-                <div class="icon1">
-                    <img src="../../Resources/Img/online.png">
-                </div><br> <br> <br> 
-            </div>
-
-            <div class="box" id="box-color1">
-                <h2>Inactive Users</h2>
-                <div class="icon">
-                    <img src="../../Resources/Img/inactive.png">
-                </div> <br> <br> <br> 
-            </div>
-
-            <div class="box" id="box-color2">
-                <h2>Reported Users</h2>
-                <div class="icon">                    
-                    <img src="../../Resources/Img/reported.png">
-                </div> <br> <br> <br>
-            </div>            -->
+            <!--            <div class="box" style="background-color: #EAEAEA">
+                            <h2>Active Users</h2>
+                            <div class="icon1">
+                                <img src="../../Resources/Img/online.png">
+                            </div><br> <br> <br> 
+                        </div>
+            
+                        <div class="box" id="box-color1">
+                            <h2>Inactive Users</h2>
+                            <div class="icon">
+                                <img src="../../Resources/Img/inactive.png">
+                            </div> <br> <br> <br> 
+                        </div>
+            
+                        <div class="box" id="box-color2">
+                            <h2>Reported Users</h2>
+                            <div class="icon">                    
+                                <img src="../../Resources/Img/reported.png">
+                            </div> <br> <br> <br>
+                        </div>            -->
         </div>
         <br> <br> 
         <div class="b3">                

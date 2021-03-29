@@ -1,7 +1,7 @@
 <%-- 
     Document   : adminRegistration
     Created on : Nov 4, 2020, 9:46:56 AM
-    Author     : Sashini Shihara
+    Author     : Madusha
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-                <title>Admin Registration</title>
+        <title>Admin Registration</title>
         <link rel="stylesheet" href ="../../CSS/Admin/AdminRegistration.css">
         <link type="text/css" rel="stylesheet" href="../../CSS/header.css" />
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Tenali+Ramakrishna&display=swap" rel="stylesheet"> 
@@ -60,30 +60,30 @@
                         <input type="text" id="province" name="province" >
                         <legend> Gender </legend>
                         <div class="filter-radio">
-                        <label class="container-radio"><h4>Male</h4>
-                            <input type="radio" id="male" name="gender" value="Male">
-                            <span class="checkmark-radio"></span>
-                        </label>
-                        <label class="container-radio"><h4>Female</h4>
-                            <input type="radio" id="female" name="gender" value="Female">
-                            <span class="checkmark-radio"></span>
-                        </label>
-                    </div>
+                            <label class="container-radio"><h4>Male</h4>
+                                <input type="radio" id="male" name="gender" value="Male">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                            <label class="container-radio"><h4>Female</h4>
+                                <input type="radio" id="female" name="gender" value="Female">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                        </div>
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pass" >
                         <legend> Confirm Password </legend>
                         <input type="password" id="repPw" name="passR" onfocusout="passValid()" >
                         <legend> Type </legend>
                         <div class="filter-radio">
-                        <label class="container-radio"><h4>Main Admin</h4>
-                            <input type="radio" id="main" name="type" value="Main Admin">
-                            <span class="checkmark-radio"></span>
-                        </label>
-                        <label class="container-radio"><h4>Co-Admin</h4>
-                            <input type="radio" id="co" name="type" value="Co-Admin">
-                            <span class="checkmark-radio"></span>
-                        </label>
-                    </div>
+                            <label class="container-radio"><h4>Main Admin</h4>
+                                <input type="radio" id="main" name="type" value="Main Admin">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                            <label class="container-radio"><h4>Co-Admin</h4>
+                                <input type="radio" id="co" name="type" value="Co-Admin">
+                                <span class="checkmark-radio"></span>
+                            </label>
+                        </div>
                     </fieldset>                        
 
                     <div class="change">
@@ -97,6 +97,6 @@
         </div>
 
         <script src="../../JS/Admin/AdminRegistration.js" type="text/javascript" ></script>
-        
+
     </body>
 </html>

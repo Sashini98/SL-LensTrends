@@ -17,7 +17,7 @@
     <div class="icon1">
         <img src="../../Resources/Img/online.png">
     </div> 
-    <h2><%= c.get(1) + c.get(2) %></h2>
+    <h2><%= c.get(1) + c.get(2)%></h2>
 </div>
 
 <div class="box" id="box-color1">
