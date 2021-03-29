@@ -382,7 +382,7 @@
                                             request.open("POST", "../../LoadDashBoardData", false);
                                             request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
                                             request.send();
-                                            
+
                                         }).catch(function (error) {
                                             console.log(error)
                                         });
