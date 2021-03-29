@@ -272,14 +272,36 @@ window.onload = function () {
 
 };
 
-function submitphoto(btn) {
+function submitphoto() {
 
-    if (btn == "final-upload") {
-        var uploadmodal = document.getElementById("upload-modal");
-        uploadmodal.style.display = "none";
-        document.getElementById("uploadimage").innerHTML = "Choose file";
+    var check = document.getElementById("upimage").value;
+    if (check == "") {
+        alert("Select an Image to upload");
+        document.getElementById("upload-modal").style.display = "block";
+        document.getElementById('uploadimage').innerHTML = "FileName";
+        document.getElementById('upimage').value = "";
+    } else {
+        var file = document.getElementById("upimage").files[0];
+        var formdata = new FormData();
+        formdata.append("file1", file);
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    var uploadmodal = document.getElementById("upload-modal");
+                    uploadmodal.style.display = "none";
+                    document.getElementById("uploadimage").innerHTML = "Choose file";
+                    var responce = request.responseText;
+                    alert(responce);
+                }
+            }
+
+        };
+        request.open("POST", "../../UploadforSales", false);
+        request.send(formdata);
         location.reload();
     }
+
 }
 
 function cleardata() {
@@ -363,7 +385,7 @@ function closebtn() {
     document.getElementById('upmodalmodal').value = "";
 }
 
-function releasevalidation(para) {
+function validation(para) {
 
     if (para == "upmodalproperty") {
         var fileInput = document.getElementById('upmodalproperty');
@@ -386,6 +408,17 @@ function releasevalidation(para) {
             document.getElementById("upmodalmodal").value = "";
             return false;
         }
+    } else if (para == "upimage") {
+        var fileInput = document.getElementById('upimage');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(\.jpg|\.jpeg)$/i;
+
+        if (!allowedExtensions.exec(filePath)) {
+            alert("Upload JPEG / JPG format only");
+            document.getElementById("uploadimage").innerHTML = "FileName";
+            document.getElementById("upimage").value = "";
+            return false;
+        }
     }
 }
 
@@ -395,6 +428,5 @@ function resetrelease() {
     document.getElementById('fileNamemodal').innerHTML = "FileName";
     document.getElementById('upmodalmodal').value = "";
 }
-
 
 

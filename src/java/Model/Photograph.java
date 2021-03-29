@@ -15,6 +15,7 @@ public class Photograph {
 
     int id;
     String path;
+    String uncompresedpath;
     double width;
     double height;
     String quality;
@@ -33,9 +34,10 @@ public class Photograph {
     public Photograph() {
     }
 
-    public Photograph(int id, String path, double width, double height, String quality, String keywords, Date uploadedDate, double Price, boolean undiscovered, String photogrpherId, String title, int categoryId, boolean people, int orientationId, int stateId, int genderId) {
+    public Photograph(int id, String path, String uncompresedpath, double width, double height, String quality, String keywords, Date uploadedDate, double Price, boolean undiscovered, String photogrpherId, String title, int categoryId, boolean people, int orientationId, int stateId, int genderId) {
         this.id = id;
         this.path = path;
+        this.uncompresedpath = uncompresedpath;
         this.width = width;
         this.height = height;
         this.quality = quality;
@@ -51,6 +53,16 @@ public class Photograph {
         this.stateId = stateId;
         this.genderId = genderId;
     }
+
+    public String getUncompresedpath() {
+        return uncompresedpath;
+    }
+
+    public void setUncompresedpath(String uncompresedpath) {
+        this.uncompresedpath = uncompresedpath;
+    }
+
+
 
     public int getId() {
         return id;

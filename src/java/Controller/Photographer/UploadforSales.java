@@ -5,17 +5,12 @@
  */
 package Controller.Photographer;
 
-import Controller.DaoImpl.PhotographDaoImpl;
-import Model.Dao.PhotographDao;
-import Model.Photographer;
-import Model.portfolio_photograph;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
@@ -38,7 +33,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
  *
  * @author ASUS
  */
-public class UploadforPortfolio extends HttpServlet {
+public class UploadforSales extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -47,8 +42,8 @@ public class UploadforPortfolio extends HttpServlet {
         try {
             DiskFileItemFactory dfif = new DiskFileItemFactory();
             ServletFileUpload sfu = new ServletFileUpload(dfif);
-//ServletFileUpload will scan through all the uploaded files 
-//(using an Iterator which parses the MIME stuff and knows how to deal 
+//ServletFileUpload will scan through all the uploaded files
+//(using an Iterator which parses the MIME stuff and knows how to deal
 //with content length etc.).
 
             List<FileItem> fil = sfu.parseRequest(request);
@@ -57,24 +52,19 @@ public class UploadforPortfolio extends HttpServlet {
 //(e.g. from the HTTP POST request, which is held in memory) to the actual file on disk.
 
             FileItem fi = fil.get(0);
-//            System.out.println();
-
             String realpath = getServletContext().getRealPath("");
-            String imagename = String.valueOf(System.currentTimeMillis());
-            String compressedimagename = String.valueOf(System.currentTimeMillis() + 5);
-//
-            String filepathorg = "";
-            String filepathcom = "";
-            filepathorg = realpath + "\\Resources\\Img\\Gallery Sample Images\\OriginalImagePortfolio\\" + imagename + ".jpeg";
-            filepathcom = realpath + "\\Resources\\Img\\Gallery Sample Images\\" + compressedimagename + ".jpeg";
-////             System.out.println(filepath);
-            File fileorg = new File(filepathorg);
-            fi.write(fileorg);
+            String Comimagename = String.valueOf("Com" + System.currentTimeMillis());
+            String Orgimagename = String.valueOf("Org" + System.currentTimeMillis());
 
-//            File input = new File(filepathorg);
-            BufferedImage image = ImageIO.read(fileorg);
+            String Orgfilepath = realpath + "\\Resources\\Img\\Gallery Sample Images\\OriginalImageForSales\\" + Orgimagename + ".jpeg";
+            String Comfilepath = realpath + "\\Resources\\Img\\Gallery Sample Images\\" + Comimagename + ".jpeg";
 
-            File compressedImageFile = new File(filepathcom);
+            File Orgfile = new File(Orgfilepath);
+            fi.write(Orgfile);
+
+            BufferedImage image = ImageIO.read(Orgfile);
+
+            File compressedImageFile = new File(Comfilepath);
             OutputStream os = new FileOutputStream(compressedImageFile);
 
             Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpeg");
@@ -94,32 +84,11 @@ public class UploadforPortfolio extends HttpServlet {
             os.close();
             ios.close();
             writer.dispose();
-
-//            String title = request.getParameter("title");
-            int id = 0;
-            String path = compressedimagename + ".jpeg";
-            String title = fil.get(1).getString();
-//            System.out.println(title);
-            Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
-            String Photographer_Id = p.getPhotographerId();
-
-            portfolio_photograph m = new portfolio_photograph();
-
-            m.setId(id);
-            m.setPath(path);
-            m.setTitle(title);
-            m.setPhotogrpherId(Photographer_Id);
-
-            PhotographDao photoDao = new PhotographDaoImpl();
-            photoDao.uploadphotoforportfolio(m);
-
-            response.getWriter().write("Successfully Uploaded");
-
-            File myObj = new File(filepathorg);
-            myObj.delete();
+            
+            
 
         } catch (Exception ex) {
-            ex.printStackTrace();
+            Logger.getLogger(UploadforSales.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

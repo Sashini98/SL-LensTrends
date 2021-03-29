@@ -185,7 +185,6 @@ function uploadimage() {
 
         };
         request.open("POST", "../../UploadforPortfolio", false);
-//        request.send(formdata);
         request.send(formdata);
         location.reload();
     }
