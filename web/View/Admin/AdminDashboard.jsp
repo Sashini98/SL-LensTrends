@@ -120,24 +120,21 @@
 
                         <div class="upload-for-review" >
                             <canvas id="myChart1" height="300px"  width="550px" ></canvas>
-                            <%
-                                HashMap<String, ArrayList<Integer>> p = (HashMap<String, ArrayList<Integer>>) session.getAttribute("data");
-                                System.out.println(p);
-                                Object[] dates = p.keySet().toArray();
-                                System.out.println(p.get(dates[0]).get(0));
-                              
-                            %>
                             <script>
+                                var dates = [];
+                                var inreview = [];
+                                var rejeced = [];
+                                var acceptedpics = [];
                                 Chart.defaults.global.animation.duration = 5000;
                                 var ctx = document.getElementById('myChart1').getContext('2d');
                                 var myChart = new Chart(ctx, {
                                     type: 'line',
                                     data: {
-                                        labels: ['<%= dates[6].toString() %>', '<%= dates[5].toString() %>', '<%= dates[4].toString() %>', '<%= dates[3].toString() %>', '<%= dates[2].toString() %>', '<%= dates[1].toString() %>', '<%= dates[0].toString() %>'],
+                                        labels: dates,
                                         datasets: [{
                                                 label: 'Uploads for Review',
                                                 fill: false,
-                                                data: [<%= p.get(dates[6]).get(0) %>, <%= p.get(dates[5]).get(0) %>, <%= p.get(dates[4]).get(0) %>, <%= p.get(dates[3]).get(0) %>, <%= p.get(dates[2]).get(0) %>, <%= p.get(dates[1]).get(0) %>, <%= p.get(dates[0]).get(0) %>],
+                                                data: inreview,
                                                 borderColor: "#415daa",
                                                 pointBackgroundColor: "#ee8322",
                                                 pointBorderColor: "#ee8322",
@@ -364,7 +361,40 @@
         <script src="../../JS/Admin/ReportedQuestion.js" type="text/javascript" ></script>
         <script src="../../JS/Admin/ViewUploadPhotos.js" type="text/javascript" ></script>
         <script src="../../JS/Admin/ViewReportedQuestionDetails.js" type="text/javascript" ></script>
-        
-        
+        <script>
+                                function dataUpdate() {
+
+                                    setInterval(function () {
+                                        fetch('java').then(function (responce) {
+                                            var request = new XMLHttpRequest();
+                                            request.onreadystatechange = function () {
+                                                if (request.status === 200) {
+                                                    if (request.readyState === 4) {
+                                                        var responce = request.responseText;
+                                                        var array = JSON.parse(responce);
+                                                        dates = array[0];
+                                                        inreview = array[1];
+                                                        rejeced = array[2];
+                                                        acceptedpics = array[3];
+                                                    }
+                                                }
+                                            };
+                                            request.open("POST", "../../LoadDashBoardData", false);
+                                            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                                            request.send();
+                                            
+                                        }).catch(function (error) {
+                                            console.log(error)
+                                        });
+                                    }, 2000);
+                                }
+
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    dataUpdate();
+                                });
+
+        </script>
+
+
     </body>
 </html>

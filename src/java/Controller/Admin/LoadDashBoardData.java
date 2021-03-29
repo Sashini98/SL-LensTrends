@@ -8,6 +8,7 @@ package Controller.Admin;
 import Controller.DaoImpl.PhotographDaoImpl;
 import Model.Dao.PhotographDao;
 import Model.Photograph;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -33,27 +34,30 @@ public class LoadDashBoardData extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doPost(req, resp);
     }
-    
-    
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        Calendar cal = Calendar.getInstance();
-
         HashMap<String, ArrayList<Integer>> photosAccording = new HashMap<>();
+
+        ArrayList<String> dates = new ArrayList<>();
+        ArrayList<Integer> inreview = new ArrayList<>();
+        ArrayList<Integer> rejected = new ArrayList<>();
+        ArrayList<Integer> approved = new ArrayList<>();
 
         PhotographDao dao = new PhotographDaoImpl();
 
-        System.out.println("awaaa");
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         SimpleDateFormat sdf2 = new SimpleDateFormat("MM/dd");
 
         try {
-            for (int i = Calendar.SUNDAY; i <= Calendar.SATURDAY; i++) {
-                cal.set(Calendar.DAY_OF_WEEK, i);
+            for (int i = 7; i >= 0; i--) {
+
+                Calendar cal = Calendar.getInstance();
+                cal.add(Calendar.DATE, -i);
                 ArrayList<Photograph> photographsByDate = dao.getPhotographsByDate(sdf.format(cal.getTime()));
+
                 int inReviewCount = 0;
                 int rejectedCount = 0;
                 int approvedCount = 0;
@@ -72,12 +76,25 @@ public class LoadDashBoardData extends HttpServlet {
                 a.add(inReviewCount);
                 a.add(rejectedCount);
                 a.add(approvedCount);
-                photosAccording.put(sdf2.format(cal.getTime()),  a);
-                System.out.println(sdf2.format(cal.getTime()) +"  " + a.get(0));
+                photosAccording.put(sdf2.format(cal.getTime()), a);
+
+                dates.add(sdf2.format(cal.getTime()));
+                inreview.add(inReviewCount);
+                rejected.add(rejectedCount);
+                approved.add(approvedCount);
+
             }
-            
-            request.getSession().setAttribute("data", photosAccording);
-            response.sendRedirect("View/Admin/AdminDashboard.jsp");
+
+            ArrayList<ArrayList> data = new ArrayList<>();
+            data.add(dates);
+            data.add(inreview);
+            data.add(rejected);
+            data.add(approved);
+
+            Gson g = new Gson();
+            String toJson = g.toJson(data);
+            response.getWriter().write(toJson);
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
