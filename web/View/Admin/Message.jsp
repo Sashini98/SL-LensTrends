@@ -9,8 +9,8 @@
 <!DOCTYPE html>
 <%
     ArrayList<Messages> m = (ArrayList<Messages>) request.getAttribute("message");
-    for(int i = 0; i < m.size(); i++){
-    
+    for (int i = 0; i < m.size(); i++) {
+
 %>
 
 <tr>
@@ -19,9 +19,9 @@
     <td><%= m.get(i).getMobile()%></td>
     <td><%= m.get(i).getMessage()%></td>
     <td><%= m.get(i).getMessage_date()%></td>
-    <td><center><button class="btn1" id="<%= m.get(i).getMessageId() %>" onclick="window.open('https://mail.google.com/')">Reply</button></center></td>
+    <td><center><button class="btn1" id="<%= m.get(i).getMessageId()%>" onclick="window.open('https://mail.google.com/')">Reply</button></center></td>
 </tr
 
 
 <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" >
-<%}%>
+    <%}%>
