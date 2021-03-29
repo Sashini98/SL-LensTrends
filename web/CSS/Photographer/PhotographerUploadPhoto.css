@@ -730,6 +730,7 @@ div .details .releases p span a {
 
 .Downmodal-content .Downmodal-heading {
     font-family: 'Didact Gothic', sans-serif;
+    margin-bottom: 10%;
 }
 
 .Downmodal-content .Downmodal-heading p{
@@ -783,5 +784,62 @@ div .details .releases p span a {
 
 #deleterejected:hover {
     background-color: #1d67b1;
+    cursor: pointer;
+}
+
+#uplabelproperty {
+    margin-left: 2%;
+    background-color: #1d67b1;
+    color: white;
+    font-size: 120%;
+    padding: 0.7%;
+    padding-left: 2%;
+    border-radius: 5px;
+    text-justify: auto;
+}
+
+#fileNameproperty {
+    margin-left: 15%;
+    color:orange;
+}
+
+#uplabelmodal {
+    margin-left: 2%;
+    background-color: #1d67b1;
+    color: white;
+    font-size: 120%;
+    padding: 0.7%;
+    padding-left: 2%;
+    border-radius: 5px;
+    text-justify: auto;
+}
+
+#fileNamemodal {
+    margin-left: 15%;
+    color:orange;
+}
+
+#submit {
+    margin-top: 50%;
+    margin-left: 60%;
+    background-color:#ff6969;
+    color:white;
+    font-size: 110%;
+    padding: 1% 2%;   
+    font-family: 'Didact Gothic', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+#reset {
+
+    margin-left: 62%;
+    background-color:#1d67b1;
+    color:white;
+    font-size: 110%;
+    padding: 1% 2%;   
+    font-family: 'Didact Gothic', sans-serif;
+    border-radius: 10px;
     cursor: pointer;
 }

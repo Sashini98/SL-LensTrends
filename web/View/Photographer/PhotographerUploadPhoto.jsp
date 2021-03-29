@@ -63,11 +63,11 @@
 
                 <!-- Upload Modal content -->
                 <div class="upload-modal-content">
-                    <span class="upload-close" id='upload-close' onclick="document.getElementById('upload-modal').style.display = 'none';cleardata()">&times;</span>
+                    <span class="upload-close" id='upload-close' onclick="cleardata()">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <input type="file" value="select" id="up-image" style="display:none;" onchange="pressedupload();">
-                        <label for="up-image">
+                        <input type="file" value="select" id="upimage" style="display:none;" accept="image/jpeg" onchange="pressedupload();validation('upimage');">
+                        <label for="upimage">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>
                         <label id="uploadimage">
@@ -87,7 +87,7 @@
                     </div>
                     <div class="upload-review"> 
                         <label>
-                            <a href="#" type="button" id="final-upload" onclick="upload('final-upload')">Submit</a>
+                            <a href="#" type="button" id="final-upload" onclick="submitphoto()">Submit</a>
                         </label>
                     </div>
                 </div>

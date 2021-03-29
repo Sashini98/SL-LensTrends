@@ -50,10 +50,10 @@
 
         <input type="radio" id="r<%= i + 1%>" name="radio"/>  
         <label for="r<%= i + 1%>">
-            <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
+            <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/Gallery Sample Images/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
-            
+
             }
         %>
 
@@ -63,7 +63,7 @@
         <!--<img src="../../Resources/Img/delete.svg" id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">-->
         <a id="delete-tosubmit" onclick="deletephoto('delete-tosubmit')">Delete</a>
         <div class="images">
-            <img photo_id="<%=PhotoId%>" src="../../Resources/Img/profile/<%=path%>" class="detailsimg" id="image">                   
+            <img photo_id="<%=PhotoId%>" src="../../Resources/Img/Gallery Sample Images/<%=path%>" class="detailsimg" id="image">                   
         </div>   
         <div class="category">
             <label for="category">Category:</label>
@@ -119,28 +119,31 @@
             <div id="DownModal" class="DownModal">
                 <!-- Modal content -->
                 <div class="Downmodal-content">
-                    <span class="downclose" onclick="document.getElementById('DownModal').style.display = 'none'">&times;</span>
+                    <span class="downclose" onclick="closebtn()">&times;</span>
                     <div class="Downmodal-heading">
                         <h1>Drop Here!</h1>
 
                         <p>Property Release</p>
-                        <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
-                        <label for="up-modal">
+                        <input type="file" id="upmodalproperty" style="display: none;" accept="application/pdf" onchange="pressedpropertyrelease();validation('upmodalproperty');">
+                        <label for="upmodalproperty" id="uplabelproperty">
                             Browse
                         </label>
-                        <label id="uploadfile">
-                            File Name:
+                        <label id="fileNameproperty">
+                            FileName
                         </label>
 
                         <p>Modal Release</p>
-                        <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
-                        <label for="up-modal">
+                        <input type="file" id="upmodalmodal" style="display: none;" accept="application/pdf" onchange="pressedmodalrelease();validation('upmodalmodal');">
+                        <label for="upmodalmodal" id="uplabelmodal">
                             Browse
                         </label>
-                        <label id="uploadfile">
-                            File Name:
-                        </label>
+                        <label id="fileNamemodal">
+                            FileName
+                        </label>                      
+
                     </div>
+                    <span id="submit" onclick="submitrelease();">Submit</span> <br> <br>
+                    <span id="reset" onclick="resetrelease();">Reset</span>
                 </div>
             </div>
 
@@ -196,7 +199,7 @@
                 if (m.get(i).getStateId() == 2) {
                     inreview += 1;
         %>
-        <img src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="review<%= inreview%>" onclick="clickimage('review<%= inreview%>', 'image-box-inreview',<%= m.get(i).getId()%>,<%= countinreview%>)">
+        <img src="../../Resources/Img/Gallery Sample Images/<%=m.get(i).getPath()%>" id="review<%= inreview%>" onclick="clickimage('review<%= inreview%>', 'image-box-inreview',<%= m.get(i).getId()%>,<%= countinreview%>)">
         <% }
             }%>
     </div>
@@ -290,7 +293,7 @@
                     }
 
         %>
-        <img photo-id-notaccepted="<%= m.get(i).getId()%>" class="selection-rejected" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="rejected<%= notaccepted%>" onclick="clickimage('rejected<%= notaccepted%>', 'image-box-rejected',<%= m.get(i).getId()%>,<%= countnotaccepted%>)">
+        <img photo-id-notaccepted="<%= m.get(i).getId()%>" class="selection-rejected" src="../../Resources/Img/Gallery Sample Images/<%=m.get(i).getPath()%>" id="rejected<%= notaccepted%>" onclick="clickimage('rejected<%= notaccepted%>', 'image-box-rejected',<%= m.get(i).getId()%>,<%= countnotaccepted%>)">
         <!--        <img src="../../Resources/Img/profile/n6.jpg" id="re6" onclick="clickimage('re6')" >
                 <img src="../../Resources/Img/profile/n7.jpg" id="re7" onclick="clickimage('re7')">
                 <img src="../../Resources/Img/profile/n8.jpg" id="re8" onclick="clickimage('re8')">-->
@@ -386,7 +389,7 @@
                         x += 1;
                     }
         %>
-        <img photo-id-accepted="<%=m.get(i).getId()%>" class="selection-accepted" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>)">
+        <img photo-id-accepted="<%=m.get(i).getId()%>" class="selection-accepted" src="../../Resources/Img/Gallery Sample Images/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>)">
         <!--        <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
                 <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
                 <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">-->

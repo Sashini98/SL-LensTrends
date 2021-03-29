@@ -76,4 +76,9 @@ public class PurchaseInvoiceDaoImpl implements PurchaseInvoiceDao {
                 + "VALUES ('" + pi.getInvoice_id() + "', '" + pi.getDate() + "', '" + pi.getTime() + "', '" + pi.getTotal() + "', '" + pi.getPhotograph().getId() + "', '" + pi.getClientId() + "')");
     }
 
+    @Override
+    public void deleteClientInvoices(String clientId) throws SQLException {
+         DB.iud("DELETE FROM purchaseinvoice where Client_Id = '" + clientId + "'");
+    }
+
 }

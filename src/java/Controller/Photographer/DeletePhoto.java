@@ -33,16 +33,22 @@ public class DeletePhoto extends HttpServlet {
             int idd = Integer.parseInt(request.getParameter("idd")); //getting request from js
 
             PhotographDao deletephotoDao = new PhotographDaoImpl();
-
+            
             String[] photoidArray = photopath.split("/"); //spliting path within /
             String photoname = photoidArray[photoidArray.length - 1]; //getting name of file last elememt of array
-
+            
+            
+            
             Photograph photograph = deletephotoDao.getPhotographById(idd);
-            String filepath = getServletContext().getRealPath("Resources/Img/profile/").replace('\\', '/'); //getting absolute path of image folder
-
+            String filepathcom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/").replace('\\', '/'); //getting absolute path of image folder
+            String filepathuncom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/Uncom Sales Images").replace('\\', '/');
+            
+            Photograph photographOrg = deletephotoDao.getoriginalpath(photoname);
+            
             int photostateid = photograph.getStateId();
-
-            deletephotoDao.deletephoto(idd, photostateid, filepath + "/" + photoname);
+            String photonameOrg = photographOrg.getUncompresedpath();
+            
+            deletephotoDao.deletephoto(idd, photostateid, filepathcom + "/" + photoname, filepathuncom + "/" + photonameOrg);
 
             response.getWriter().write("Successfully Deleted");
 

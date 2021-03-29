@@ -23,6 +23,8 @@ public interface PhotographDao {
     public ArrayList<Photograph> getPhotographsByDate(String date) throws SQLException;
     public ArrayList<Photograph> getAllphotosofPhotographer(String photographer_id) throws SQLException;
     public void  updatePhotographState(int status, int PhotographId) throws SQLException;
-    public void deletephoto(int PhotographId, int status, String path) throws SQLException;
-    public void uploadphotoforportfolio(portfolio_photograph uploadPhotograph ) throws SQLException;
+    public void deletephoto(int PhotographId, int status, String path, String uncompath) throws SQLException;
+    public void uploadphotoforportfolio(portfolio_photograph uploadPhotograph ) throws SQLException; // concrete methods
+    public void uploadphotoforsales(Photograph uploadforSales) throws SQLException;
+    public Photograph getoriginalpath(String compath) throws SQLException;
 }

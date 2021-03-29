@@ -29,7 +29,7 @@ public class PhotographDaoImpl implements PhotographDao {
             ResultSet photographs = DB.search("SELECT  * FROM photograph WHERE Keywords like '%" + keyword + "%'");
 
             while (photographs.next()) {
-                Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                         photographs.getDouble("Width"), photographs.getDouble("Height"),
                         photographs.getString("Quality"), photographs.getString("Keywords"),
                         photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
@@ -54,7 +54,7 @@ public class PhotographDaoImpl implements PhotographDao {
         ArrayList<Photograph> photos = new ArrayList();
 
         while (photographs.next()) {
-            Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"),
+            Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
                     photographs.getString("Quality"), photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
@@ -74,7 +74,7 @@ public class PhotographDaoImpl implements PhotographDao {
         ResultSet photograph = DB.search("SELECT * FROM photograph WHERE Photograph_Id = '" + id + "'");
 
         if (photograph.next()) {
-            Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"),
+            Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"), photograph.getString("uncompresedpath"),
                     photograph.getDouble("Width"), photograph.getDouble("Height"),
                     photograph.getString("Quality"), photograph.getString("Keywords"),
                     photograph.getDate("Uploaded_Date"), photograph.getDouble("Price"),
@@ -101,7 +101,7 @@ public class PhotographDaoImpl implements PhotographDao {
 
         while (photographs.next()) {
             Photograph p = new Photograph(
-                    photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                    photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
                     photographs.getString("Quality"), photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
@@ -119,19 +119,25 @@ public class PhotographDaoImpl implements PhotographDao {
     }
 
     @Override
-    public void deletephoto(int PhotographId, int status, String path) throws SQLException {
+    public void deletephoto(int PhotographId, int status, String path, String uncompath) throws SQLException {
         if (status == 1) {
             File myObj = new File(path);
+            myObj.delete();
+            File myObjcom = new File(uncompath);
             myObj.delete();
             DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
         } else if (status == 3) {
             File myObj = new File(path);
+            myObj.delete();
+            File myObjcom = new File(uncompath);
             myObj.delete();
             DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
         } else if (status == 4) {
             File myObj = new File(path);
+            myObj.delete();
+            File myObjcom = new File(uncompath);
             myObj.delete();
             DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
@@ -147,7 +153,7 @@ public class PhotographDaoImpl implements PhotographDao {
 
         while (photographs.next()) {
             Photograph p = new Photograph(
-                    photographs.getInt("Photograph_Id"), photographs.getString("path"),
+                    photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
                     photographs.getDouble("Width"), photographs.getDouble("Height"),
                     photographs.getString("Quality"), photographs.getString("Keywords"),
                     photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
@@ -166,7 +172,35 @@ public class PhotographDaoImpl implements PhotographDao {
 
     @Override
     public void uploadphotoforportfolio(portfolio_photograph uploadPhotograph) throws SQLException {
-        DB.iud("INSERT INTO portfolio_photograph (path, title, Photographer_Id) VALUES('"+ uploadPhotograph.getPath() +"','"+ uploadPhotograph.getTitle() +"','"+ uploadPhotograph.getPhotogrpherId() +"')");
+        DB.iud("INSERT INTO portfolio_photograph (path, title, Photographer_Id) VALUES('" + uploadPhotograph.getPath() + "','" + uploadPhotograph.getTitle() + "','" + uploadPhotograph.getPhotogrpherId() + "')");
+    }
+
+    @Override
+    public void uploadphotoforsales(Photograph uploadforSales) throws SQLException {
+        DB.iud("INSERT INTO photograph (Photograph_Id, path, uncompresedpath,Width, Height, Quality, Keywords, Uploaded_Date, Price, Undiscovered, Photographer_Id, Title, Photograph_category_Id, People, Orientation_Id, state_id, Gender_Id)"
+                + "VALUES('" + uploadforSales.getId() + "','" + uploadforSales.getPath() + "','" + uploadforSales.getUncompresedpath()+ "','" + uploadforSales.getWidth() + "','" + uploadforSales.getHeight() + "','" + uploadforSales.getQuality() + "','" + uploadforSales.getKeywords() + "','" + uploadforSales.getUploadedDate() + "',"
+                + " '" + uploadforSales.Price() + "','" + uploadforSales.isUndiscovered() + "','" + uploadforSales.getPhotogrpherId() + "','" + uploadforSales.getTitle() + "','" + uploadforSales.getCategoryId() + "','" + uploadforSales.isPeople() + "','" + uploadforSales.getOrientationId() + "',"
+                + " '" + uploadforSales.getStateId() + "','" + uploadforSales.getGenderId() + "')");
+    }
+
+    @Override
+    public Photograph getoriginalpath(String compath) throws SQLException {
+        ResultSet photograph = DB.search("SELECT * FROM photograph WHERE path = '" + compath + "'");
+
+        if (photograph.next()) {
+            Photograph p = new Photograph(photograph.getInt("Photograph_Id"), photograph.getString("path"), photograph.getString("uncompresedpath"),
+                    photograph.getDouble("Width"), photograph.getDouble("Height"),
+                    photograph.getString("Quality"), photograph.getString("Keywords"),
+                    photograph.getDate("Uploaded_Date"), photograph.getDouble("Price"),
+                    photograph.getBoolean("Undiscovered"), photograph.getString("Photographer_Id"),
+                    photograph.getString("Title"), photograph.getInt("Photograph_category_id"),
+                    photograph.getBoolean("People"), photograph.getInt("Orientation_Id"),
+                    photograph.getInt("state_id"), photograph.getInt("Gender_Id"));
+
+            return p;
+        } else {
+            return null;
+        }
     }
 
 }
