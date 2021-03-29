@@ -115,7 +115,6 @@
                         <!--<input type="file" name="upimage" id="upimage" style="display:none;"  required="true">-->
                         <label for="upimage" accept="image/*" type="button">
                             <span type="file" id="upload-image"> Browse</span>
-
                         </label> <br> <br>
                         <label id="chooseimage">
                             Choose file                            

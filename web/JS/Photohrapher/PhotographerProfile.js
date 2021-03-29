@@ -60,15 +60,6 @@ window.pressed = function () {
     }
 };
 
-function upload(btn) {
-
-    if (btn == "final-upload") {
-        uploadmodal.style.display = "none";
-
-//        document.getElementById("chooseimage").innerHTML = "Choose file";
-//        document.getElementById("upimage").value = "";        
-    }
-}
 
 
 function showPreviewOne(event) {
@@ -169,17 +160,7 @@ function filevalidation() {
         document.getElementById("title-input").style.display = "none";
         return false;
     }
-//
-//
-//        if (fileInput.files && fileInput.files[0]) {
-//
-//            var reader = new FileReader();
-//            reader.onload = function (e) {
-//
-//            };
-//
-//            reader.readAsDataURL(fileInput.files[0]);
-//        }
+
 }
 
 function uploadimage() {
@@ -191,12 +172,14 @@ function uploadimage() {
         var file = document.getElementById("upimage").files[0];
         var formdata = new FormData();
         formdata.append("file1", file);
-        formdata.append("title",title);
+        formdata.append("title", title);
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
             if (request.readyState === 4) {
                 if (request.status === 200) {
                     document.getElementById('upload-modal').style.display = 'none';
+                    var responce = request.responseText;
+                    alert(responce);
                 }
             }
 

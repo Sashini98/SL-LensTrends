@@ -53,7 +53,7 @@
             <img photo_id="<%=m.get(i).getId()%>" src="../../Resources/Img/profile/<%=m.get(i).getPath()%>" class="selection-img" id="ls<%= i + 1%>">
         </label>
         <% }
-            
+
             }
         %>
 
@@ -119,28 +119,31 @@
             <div id="DownModal" class="DownModal">
                 <!-- Modal content -->
                 <div class="Downmodal-content">
-                    <span class="downclose" onclick="document.getElementById('DownModal').style.display = 'none'">&times;</span>
+                    <span class="downclose" onclick="closebtn()">&times;</span>
                     <div class="Downmodal-heading">
                         <h1>Drop Here!</h1>
 
                         <p>Property Release</p>
-                        <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
-                        <label for="up-modal">
+                        <input type="file" id="upmodalproperty" style="display: none;" accept="application/pdf" onchange="pressedpropertyrelease();releasevalidation('upmodalproperty');">
+                        <label for="upmodalproperty" id="uplabelproperty">
                             Browse
                         </label>
-                        <label id="uploadfile">
-                            File Name:
+                        <label id="fileNameproperty">
+                            FileName
                         </label>
 
                         <p>Modal Release</p>
-                        <input type="file" id="up-modal" style="display: none;" onchange="pressedrelease();">
-                        <label for="up-modal">
+                        <input type="file" id="upmodalmodal" style="display: none;" accept="application/pdf" onchange="pressedmodalrelease();releasevalidation('upmodalmodal');">
+                        <label for="upmodalmodal" id="uplabelmodal">
                             Browse
                         </label>
-                        <label id="uploadfile">
-                            File Name:
-                        </label>
+                        <label id="fileNamemodal">
+                            FileName
+                        </label>                      
+
                     </div>
+                    <span id="submit" onclick="submitrelease();">Submit</span> <br> <br>
+                    <span id="reset" onclick="resetrelease();">Reset</span>
                 </div>
             </div>
 

@@ -65,7 +65,7 @@ public class UploadforPortfolio extends HttpServlet {
 //
             String filepathorg = "";
             String filepathcom = "";
-            filepathorg = realpath + "\\Resources\\Img\\Gallery Sample Images\\CompressedImage\\" + imagename + ".jpeg";
+            filepathorg = realpath + "\\Resources\\Img\\Gallery Sample Images\\OriginalImage\\" + imagename + ".jpeg";
             filepathcom = realpath + "\\Resources\\Img\\Gallery Sample Images\\" + compressedimagename + ".jpeg";
 ////             System.out.println(filepath);
             File fileorg = new File(filepathorg);
@@ -99,7 +99,7 @@ public class UploadforPortfolio extends HttpServlet {
             int id = 0;
             String path = compressedimagename + ".jpeg";
             String title = fil.get(1).getString();
-            System.out.println(title);
+//            System.out.println(title);
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             String Photographer_Id = p.getPhotographerId();
 
