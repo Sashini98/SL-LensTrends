@@ -69,7 +69,8 @@
             <label for="category">Category:</label>
             <select name="category" id="category" onfocus="this.size = 10;" onblur='this.size = 1;' 
                     onchange='this.size = 1;this.blur();'>
-
+                   
+                <option value="">Select category</option>
                 <option value="Animals">Animals</option>
                 <option value="Buildings and Architecture">Buildings and Architecture</option>
                 <option value="Business">Business</option>
@@ -154,16 +155,16 @@
         </div>
 
         <div class="sale-album">
-            <p>Price <span style="color:#9D9D9D; "> ($) </span><input type="text" id='price'> </p>                     
+            <p>Price <span style="color:#9D9D9D; "> ($) </span><input type="number" accept="" id='price'> </p>                     
         </div>
 
         <div class="file-name">
-            <p>File ID(s): 365447169 </p>
-            <p>Original name(s): IGP_4237_1.jpg </p>
+            <p>File ID : 365447169 </p>
+            <p>Original name : IGP_4237_1.jpg </p>
         </div>
 
-        <div class="submit">
-            <a href="#" type="button" id="submit">Submit</a>
+        <div class="finalsubmit">
+            <span type="button" id="submitfinal" onclick="submitforreview()">Submit</span>
         </div>
 
     </div>

@@ -310,7 +310,7 @@ div .details .releases p span a {
     color:#514f4f ;
 }
 
-.submit {
+.finalsubmit {
     text-align: center;
     height: 10%;
     background-color: #00478a;
@@ -320,11 +320,11 @@ div .details .releases p span a {
 
 }
 
-.submit a {
-    text-decoration: none;
+.finalsubmit span {
+    cursor: pointer;
     color: white;
     font-size: 110%;
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Didact Gothic', sans-serif;    
 }
 
 #upload-photo {
