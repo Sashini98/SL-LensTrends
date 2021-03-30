@@ -13,26 +13,36 @@ import java.util.Date;
  * @author Madusha
  */
 public class Notifications {
-    
+
     int notifyId;
     String title;
     String notification;
     Date notify_date;
     Date time;
     String admin_id;
+    int Notification_type_id;
 
     public Notifications() {
     }
 
-    public Notifications(int notifyId, String title, String notification, Date notify_date, Date time, String admin_id) {
+    public Notifications(int notifyId, String title, String notification, Date notify_date, Date time, String admin_id, int Notification_type_id) {
         this.notifyId = notifyId;
         this.title = title;
         this.notification = notification;
         this.notify_date = notify_date;
         this.time = time;
         this.admin_id = admin_id;
+        this.Notification_type_id = Notification_type_id;
     }
-    
+
+    public int getNotification_type_id() {
+        return Notification_type_id;
+    }
+
+    public void setNotification_type_id(int Notification_type_id) {
+        this.Notification_type_id = Notification_type_id;
+    }
+
     public String getAdmin_id() {
         return admin_id;
     }
@@ -80,6 +90,5 @@ public class Notifications {
     public void setTime(Date time) {
         this.time = time;
     }
-    
-    
+
 }

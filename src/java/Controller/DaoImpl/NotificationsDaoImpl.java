@@ -8,6 +8,7 @@ package Controller.DaoImpl;
 import DB.DB;
 import Model.Dao.NotificationDao;
 import Model.Notifications;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,18 +36,59 @@ public class NotificationsDaoImpl implements NotificationDao {
 
     @Override
     public ArrayList<Notifications> getNotificationofBoth() throws SQLException {
-        DB.iud("SELECT * FROM notification WHERE ");
-        return  
+        ResultSet search = DB.search("SELECT * FROM notification WHERE Notification_type_id = 3");
+        ArrayList<Notifications> noti = new ArrayList<>();
+        while (search.next()) {
+            Notifications n = new Notifications();
+            n.setNotifyId(search.getInt("id"));
+            n.setTitle(search.getString("title"));
+            n.setNotification(search.getString("message"));
+            n.setNotify_date(search.getDate("date"));
+            n.setTime(search.getDate("time"));
+            n.setAdmin_id(search.getString("Admin_id"));
+            n.setNotification_type_id(search.getInt("Notification_type_id"));
+            
+        }
+        
+        return  noti;
     }
 
     @Override
     public ArrayList<Notifications> getNotificationofClient() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ResultSet search = DB.search("SELECT * FROM notification WHERE Notification_type_id = 1");
+        ArrayList<Notifications> noti = new ArrayList<>();
+        while (search.next()) {
+            Notifications n = new Notifications();
+            n.setNotifyId(search.getInt("id"));
+            n.setTitle(search.getString("title"));
+            n.setNotification(search.getString("message"));
+            n.setNotify_date(search.getDate("date"));
+            n.setTime(search.getDate("time"));
+            n.setAdmin_id(search.getString("Admin_id"));
+            n.setNotification_type_id(search.getInt("Notification_type_id"));
+            
+        }
+        
+        return  noti;
     }
 
     @Override
     public ArrayList<Notifications> getNotificationofPhotographer() throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ResultSet search = DB.search("SELECT * FROM notification WHERE Notification_type_id = 2");
+        ArrayList<Notifications> noti = new ArrayList<>();
+        while (search.next()) {
+            Notifications n = new Notifications();
+            n.setNotifyId(search.getInt("id"));
+            n.setTitle(search.getString("title"));
+            n.setNotification(search.getString("message"));
+            n.setNotify_date(search.getDate("date"));
+            n.setTime(search.getDate("time"));
+            n.setAdmin_id(search.getString("Admin_id"));
+            n.setNotification_type_id(search.getInt("Notification_type_id"));
+            
+        }
+        
+        return  noti;
     }
 
 }
