@@ -126,13 +126,13 @@ public class PhotographDaoImpl implements PhotographDao {
             File myObj = new File(path);
             myObj.delete();
             File myObjcom = new File(uncompath);
-            myObj.delete();
+            myObjcom.delete();
             DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
         } else if (status == 3) {
             File myObj = new File(path);
             myObj.delete();
             File myObjcom = new File(uncompath);
-            myObj.delete();
+            myObjcom.delete();
             DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
@@ -140,7 +140,7 @@ public class PhotographDaoImpl implements PhotographDao {
             File myObj = new File(path);
             myObj.delete();
             File myObjcom = new File(uncompath);
-            myObj.delete();
+            myObjcom.delete();
             DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM cart_has_photograph WHERE Photograph_Id = '" + PhotographId + "'");

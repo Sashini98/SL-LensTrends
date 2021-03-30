@@ -308,6 +308,14 @@
         <servlet-name>DeleteClientAccount</servlet-name>
         <servlet-class>Controller.Clent.DeleteClientAccount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SubmitforReview</servlet-name>
+        <servlet-class>Controller.Photographer.SubmitforReview</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SubmitRelease</servlet-name>
+        <servlet-class>Controller.Photographer.SubmitRelease</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -615,6 +623,14 @@
     <servlet-mapping>
         <servlet-name>DeleteClientAccount</servlet-name>
         <url-pattern>/DeleteClientAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubmitforReview</servlet-name>
+        <url-pattern>/SubmitforReview</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SubmitRelease</servlet-name>
+        <url-pattern>/SubmitRelease</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

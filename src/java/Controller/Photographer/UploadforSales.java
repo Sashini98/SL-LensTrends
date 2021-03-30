@@ -93,7 +93,8 @@ public class UploadforSales extends HttpServlet {
             int height = image.getHeight();
             int width = image.getWidth();
             
-            String compath = Comimagename;
+            String compath = Comimagename + ".jpeg";
+            String orgpath = Orgimagename + ".jpeg";
             int stateid = 1;
 
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
@@ -103,7 +104,7 @@ public class UploadforSales extends HttpServlet {
             
             m.setStateId(stateid);
             m.setPath(compath);
-            m.setUncompresedpath(Orgimagename);
+            m.setUncompresedpath(orgpath);
             m.setWidth(width);
             m.setHeight(height);
             m.setUploadedDate(new Date());

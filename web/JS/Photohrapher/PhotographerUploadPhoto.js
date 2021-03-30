@@ -184,10 +184,42 @@ window.pressedpropertyrelease = function () {
 
 function submitrelease() {
 
-    document.getElementById("fileNamemodal").innerHTML = "FileName";
-    document.getElementById("fileNameproperty").innerHTML = "FileName";
-    document.getElementById("DownModal").style.display = "none";
-    location.reload();
+    var property = document.getElementById("upmodalproperty").value;
+    var modal = document.getElementById("upmodalmodal").value;
+
+    if (property == "" && modal == "") {
+        alert("No files Choosen");
+        return false;
+    } else {
+        var propertpdf = document.getElementById("upmodalproperty").files[0];
+        var modalpdf = document.getElementById("upmodalmodal").files[0];
+
+        var formdata = new FormData();
+        formdata.append("propertyfile", propertpdf);
+        formdata.append("modalfile", modalpdf);
+//        alert(formdata);
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    document.getElementById("fileNamemodal").innerHTML = "FileName";
+                    document.getElementById("fileNameproperty").innerHTML = "FileName";
+                    document.getElementById("DownModal").style.display = "none";
+                    var responce = request.responseText;
+                    alert(responce);
+                }
+            }
+
+        };
+        request.open("POST", "../../SubmitRelease", false);
+        request.send(formdata);
+        location.reload();
+
+    }
+
+
+
+
 }
 
 function loadphotos() {
@@ -300,7 +332,7 @@ function submitphoto() {
         };
         request.open("POST", "../../UploadforSales", false);
         request.send(formdata);
-        
+
     }
 
 }
@@ -421,6 +453,20 @@ function validation(para) {
             return false;
         }
     }
+
+    var fileuplaod = document.getElementById('upimage');
+    var filePath = fileuplaod.value;
+    var filesize = fileuplaod.files[0].size;
+    var lowersizelimit = 5000000; // lowest size to upload
+
+    if (filesize < lowersizelimit) {
+        alert('Image is less then 5MP, Upload a Quality one');
+        document.getElementById("uploadimage").innerHTML = "FileName";
+        document.getElementById("upimage").value = "";
+        return false;
+    }
+
+
 }
 
 function resetrelease() {
@@ -430,4 +476,57 @@ function resetrelease() {
     document.getElementById('upmodalmodal').value = "";
 }
 
+function submitforreview() {
 
+    var title = document.getElementById("title-area").value;
+    var category = document.getElementById("category").value;
+    var keyword = document.getElementById("keyword-area").value;
+    var Splitkey = keyword.split(',');
+    var price = document.getElementById("price").value;
+    var flag = 0;
+    var alertmsg = "";
+    var formdata = new FormData();
+
+    if (title.length > 101) {
+        flag = 1;
+        alertmsg += "Title Should be less than 100 Characters\n\n";
+        document.getElementById("title-area").value = "";
+    }
+    if (document.getElementById("category").value == "") {
+        flag = 1;
+        alertmsg += "Select a Category\n\n";
+    }
+    if (Splitkey.length > 51) {
+        flag = 1;
+        alertmsg += "You can add Maximum 50 Keywords only\n\n";
+        document.getElementById("keyword-area").value = "";
+    }
+    if (price == "") {
+        flag = 1;
+        alertmsg += "Add Price for your Image !\n\n";
+    }
+    if (flag == 1) {
+        alert(alertmsg);
+        return false;
+    } else {
+        formdata.append("detail1", title);
+        formdata.append("detail2", category);
+        formdata.append("detail3", keyword);
+        formdata.append("detail4", price);
+    }
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+//                document.getElementById('upload-modal').style.display = 'none';
+                var responce = request.responseText;
+                alert(responce);
+            }
+        }
+
+    };
+    request.open("POST", "../../SubmitforReview", false);
+    request.send(formdata);
+    location.reload();
+}

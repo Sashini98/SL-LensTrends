@@ -81,6 +81,7 @@
                                 <li>Minimum image resolution is 4MP</li>
                                 <li>Maximum image resolution is 100MP</li>
                                 <li>Maximum file size is 45MB</li>
+                                <li>Minimum file size is 5MB</li>
 
                             </ul>
                         </div>
