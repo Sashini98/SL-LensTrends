@@ -327,6 +327,7 @@ function submitphoto() {
                     var responce = request.responseText;
                     location.reload();
                     alert(responce);
+                    alert("vasfv");
                 }
             }
 
@@ -479,6 +480,7 @@ function resetrelease() {
 
 function submitforreview() {
 
+    var idd = document.getElementById("image").getAttribute("photo_id");
     var title = document.getElementById("title-area").value;
     var category = document.getElementById("category").value;
     var keyword = document.getElementById("keyword-area").value;
@@ -492,19 +494,23 @@ function submitforreview() {
         flag = 1;
         alertmsg += "Title Should be less than 100 Characters\n\n";
         document.getElementById("title-area").value = "";
+        return false;
     }
     if (document.getElementById("category").value == "") {
         flag = 1;
         alertmsg += "Select a Category\n\n";
+        return false;
     }
     if (Splitkey.length > 51) {
         flag = 1;
         alertmsg += "You can add Maximum 50 Keywords only\n\n";
         document.getElementById("keyword-area").value = "";
+        return false;
     }
     if (price == "") {
         flag = 1;
         alertmsg += "Add Price for your Image !\n\n";
+        return false;
     }
     if (flag == 1) {
         alert(alertmsg);
@@ -514,6 +520,7 @@ function submitforreview() {
         formdata.append("detail2", category);
         formdata.append("detail3", keyword);
         formdata.append("detail4", price);
+        formdata.append("id", idd);
     }
 
     var request = new XMLHttpRequest();
