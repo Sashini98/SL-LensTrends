@@ -40,9 +40,8 @@ function ViewDetails(id){
                 document.getElementById("udate").value = details[7];
                 document.getElementById("pname").value = details[8];
                 document.getElementById("cate").value = details[9];              
-                document.getElementById("quality").value = details[10];
-                document.getElementById("reso").value = details[11];
-                document.getElementById("pid").value = details[12];
+                document.getElementById("reso").value = details[10];
+                document.getElementById("pid").value = details[11];
                 
                 
         }

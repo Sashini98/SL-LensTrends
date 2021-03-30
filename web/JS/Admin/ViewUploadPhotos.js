@@ -18,11 +18,10 @@ function viewPhotoDetails(id)
                 document.getElementById("pname").value = details[5];
                 document.getElementById("cate").value = details[6];
                 document.getElementById("orientation").value = details[7];               
-                document.getElementById("quality").value = details[8];
-                document.getElementById("gen").value = details[9];
-                document.getElementById("img").src = details[10];               
-                document.getElementById("reso").value = details[11];
-                document.getElementById("pid").value = details[12];
+                document.getElementById("gen").value = details[8];
+                document.getElementById("img").src = details[9];               
+                document.getElementById("reso").value = details[10];
+                document.getElementById("pid").value = details[11];
                 
             }
         }

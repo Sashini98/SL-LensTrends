@@ -40,9 +40,8 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             throws ServletException, IOException {
 
         try {
-            System.out.println(request.getParameter("id"));
+            
             int photoid = Integer.parseInt(request.getParameter("id"));
-            System.out.println(photoid);
             
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoid);
