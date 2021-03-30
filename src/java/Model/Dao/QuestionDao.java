@@ -46,5 +46,7 @@ public interface QuestionDao {
     public List getQuestionCategory() throws SQLException;
 
     public List<Question> getQuestfilter(String keyword, String filter, String sort) throws SQLException;
+    
+    public void  updateQuestionState(int status, int QuestionId) throws SQLException;
 
 }
