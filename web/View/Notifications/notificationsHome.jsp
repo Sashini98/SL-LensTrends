@@ -20,7 +20,7 @@
         <title>Notifications</title>
 
     </head>
-    <body style="background-color: #f7f6f9;" onload="view()">
+    <body style="background-color: #f7f6f9;" onload="view('<%= logged %>')">
 
         <div class="fixedheader">  
 
@@ -160,5 +160,6 @@
                             <input type="button" value="View"><br>
         
         </div>-->
+        <script type="text/javascript" src="<%= request.getContextPath()%>/JS/Notification/NotificationsHome.js"></script>
     </body>
 </html>
