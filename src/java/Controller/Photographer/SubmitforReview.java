@@ -44,6 +44,9 @@ public class SubmitforReview extends HttpServlet {
             int category = Integer.parseInt(cat);
             System.out.println(category);
             String keyword = fil.get(2).getString();
+            
+            String id = fil.get(4).getString();
+            int photoid = Integer.parseInt(id);
 
             String prc = fil.get(3).getString();
             double price = Double.parseDouble(prc);
@@ -52,6 +55,7 @@ public class SubmitforReview extends HttpServlet {
 
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             String Photographer_Id = p.getPhotographerId();
+            int genderID = p.getGenderId();
 
             Photograph m = new Photograph();
 
@@ -60,6 +64,8 @@ public class SubmitforReview extends HttpServlet {
             m.setKeywords(keyword);
             m.setPrice(price);
             m.setStateId(stateid);
+            m.setId(photoid);
+            m.setGenderId(genderID);
 
             PhotographDao photoSubmitDao = new PhotographDaoImpl();
             try {

@@ -91,28 +91,28 @@ public class UploadforSales extends HttpServlet {
             os.close();
             ios.close();
             writer.dispose();
-            
+
             int height = image.getHeight();
             int width = image.getWidth();
-            
-            
-//            if (width > height){
-//                
-//            } else if (height > width){
-//                
-//            } else if (height == width){
-//               
-//            }
-            
+
+            int orientation = 0;
+            if (width > height) {
+                orientation += 1;
+            } else if (height > width) {
+                orientation += 2;
+            } else if (height == width) {
+                orientation += 3;
+            }
+
             String compath = Comimagename + ".jpeg";
             String orgpath = Orgimagename + ".jpeg";
             int stateid = 1;
 
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             String Photographer_Id = p.getPhotographerId();
-            
+
             Photograph m = new Photograph();
-            
+
             m.setStateId(stateid);
             m.setPath(compath);
             m.setUncompresedpath(orgpath);
@@ -120,13 +120,13 @@ public class UploadforSales extends HttpServlet {
             m.setHeight(height);
             m.setUploadedDate(new Date());
             m.setPhotogrpherId(Photographer_Id);
-//            m.setOrientationId(orientation);
+            m.setOrientationId(orientation);
             m.setUndiscovered(true);
             m.setPeople(false);
             PhotographDao photoDao = new PhotographDaoImpl();
-            
+
             photoDao.uploadphotoforsales(m);
-            System.out.println("hdjvbfh");
+//            System.out.println("hdjvbfh");
 
             response.getWriter().write("Successfully Uploaded");
 

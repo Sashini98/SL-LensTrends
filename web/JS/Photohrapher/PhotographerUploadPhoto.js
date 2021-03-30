@@ -480,6 +480,7 @@ function resetrelease() {
 
 function submitforreview() {
 
+    var idd = document.getElementById("image").getAttribute("photo_id");
     var title = document.getElementById("title-area").value;
     var category = document.getElementById("category").value;
     var keyword = document.getElementById("keyword-area").value;
@@ -519,6 +520,7 @@ function submitforreview() {
         formdata.append("detail2", category);
         formdata.append("detail3", keyword);
         formdata.append("detail4", price);
+        formdata.append("id", idd);
     }
 
     var request = new XMLHttpRequest();
