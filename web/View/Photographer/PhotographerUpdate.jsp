@@ -21,7 +21,23 @@
     </head>
 
     <body>
+        <div style="display: flex; justify-content: center;">
+            <div class="delAcc" id="delAcc" style="display: none;">
+                <div class="delHeader">
+                    <h3>Delete Account</h3>
+                    <i class="fas fa-times close" id="delAccClose" style="color: black; margin: auto; cursor: pointer;"></i>
+                </div>
 
+                <div>
+                    <h4>Are you sure you want to delete?</h4>
+
+                    <div style="padding-top: 20px;" class="confirm">
+                        <span class="Report" id="Delete" onclick="deleteAccount();">Yes</span>
+                        <span class="Report" id="noBtn">No</span>
+                    </div>
+                </div>
+            </div>
+        </div>  
 
         <div class="fixedheader">   
             <div class="pageheader">
@@ -82,7 +98,7 @@
                 <li><a href="#taxsec">Subscription</a></li> <br> <br>
                 <li><a href="#passsec">Password</a></li> <br> <br>
                 <li><a href="#delsec">Delete Account</a></li> <br> <br>
-                <li><a href="#connsec">Connected Account</a></li> <br> <br>
+
             </ul>	
 
         </div>
@@ -171,7 +187,7 @@
                     <label for="address" >Address </label> 
                     <br>
                     <div class="icon"> 
-                        <input type="text" id="address" name="address" placeholder="<%= p.getAddress_no() %>" disabled> 
+                        <input type="text" id="address" name="address" placeholder="<%= p.getAddress_no()%>" disabled> 
                         <img id="pencil8" onclick="pencileditenable('address')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic15" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic15')" style="visibility:hidden;" >
                         <img class="icon2" id="ic16" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic16')" style="visibility:hidden;">
@@ -180,7 +196,7 @@
                     <label for="city">City </label>                     
                     <br>
                     <div>
-                        <input type="text" id="city" name="city" placeholder="<%= p.getCity() %> " disabled>
+                        <input type="text" id="city" name="city" placeholder="<%= p.getCity()%> " disabled>
                         <img id="pencil9" onclick="pencileditenable('city')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic17" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic17')" style="visibility:hidden;" >
                         <img class="icon2" id="ic18" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic18')" style="visibility:hidden;">
@@ -189,7 +205,7 @@
                     <label for="province">Province </label>  
                     <br>
                     <div>
-                        <input type="text" id="province" name="province" placeholder="<%= p.getProvince() %>" disabled> 
+                        <input type="text" id="province" name="province" placeholder="<%= p.getProvince()%>" disabled> 
                         <img id="pencil10" onclick="pencileditenable('province')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic19" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic19')" style="visibility:hidden;" >
                         <img class="icon2" id="ic20" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic20')" style="visibility:hidden;">
@@ -198,7 +214,7 @@
                     <label for="zip">Zip/Postal </label>  
                     <br>
                     <div>
-                        <input type="text" id="zip" name="zip" placeholder="<%= p.getPostalCode() %> " disabled>
+                        <input type="text" id="zip" name="zip" placeholder="<%= p.getPostalCode()%> " disabled>
                         <img id="pencil11" onclick="pencileditenable('zip')" src="../../Resources/Img/edit.png">
                         <img class="icon1" id="ic21" src ="../../Resources/Img/checkmark.png" onclick="updatedata('ic21')" style="visibility:hidden;" >
                         <img class="icon2" id="ic22" src ="../../Resources/Img/cancel.png" onclick="cancelupdate('ic22')" style="visibility:hidden;">
@@ -235,26 +251,28 @@
             </div> 
             <div class="edit">
                 <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
-                <a href="#" type="button">Delete Account</a>
+                <a type="button" onclick="Deleteaccount()">Delete Account</a>
             </div>
 
         </div> 
 
-        <div class="connaccount" id="connsec">
-            <div class="heading">
-                <p>Connected Accounts</p>
-            </div> 
-            <div class="edit">
-                <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
 
-            </div>  
 
-            <div class="icons">
-                <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
-                <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connected</a>
-            </div>
-
-        </div> 
+        <!--        <div class="connaccount" id="connsec">
+                    <div class="heading">
+                        <p>Connected Accounts</p>
+                    </div> 
+                    <div class="edit">
+                        <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
+        
+                    </div>  
+        
+                    <div class="icons">
+                        <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
+                        <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connected</a>
+                    </div>
+        
+                </div> -->
 
 
 

@@ -27,4 +27,5 @@ public interface PhotographDao {
     public void uploadphotoforportfolio(portfolio_photograph uploadPhotograph ) throws SQLException; // concrete methods
     public void uploadphotoforsales(Photograph uploadforSales) throws SQLException;
     public Photograph getoriginalpath(String compath) throws SQLException;
+    public void submitforreview(Photograph submittoreview) throws SQLException;
 }

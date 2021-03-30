@@ -30,10 +30,23 @@ public class ModalReleaseDaoImpl implements ModalReleaseDao {
 
     @Override
     public void addModalrelease(int photoid, String Modpath) throws SQLException {
-        DB.iud("INSERT INTO model_release (Form_Path,Photograph_Id) VALUES('"+ Modpath +"','"+ photoid +"')");
+        DB.iud("INSERT INTO model_release (Form_Path,Photograph_Id) VALUES('" + Modpath + "','" + photoid + "')");
     }
 
-    
-    
+    @Override
+    public ModalRelease getModalrelease(int PhotographId) throws SQLException {
+        ResultSet release = DB.search("SELECT * FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
+        if (release.next()) {
+            ModalRelease m = new ModalRelease();
+            m.setId(release.getInt("Release_Id"));
+            m.setPath(release.getString("Form_Path"));
+            m.setPhotographId(release.getInt("Photograph_Id"));
 
+            return m;
+
+        } else {
+            return null;
+        }
+
+    }
 }

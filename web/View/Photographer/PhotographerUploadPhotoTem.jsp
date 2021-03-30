@@ -71,27 +71,27 @@
                     onchange='this.size = 1;this.blur();'>
                    
                 <option value="">Select category</option>
-                <option value="Animals">Animals</option>
-                <option value="Buildings and Architecture">Buildings and Architecture</option>
-                <option value="Business">Business</option>
-                <option value="Drinks">Drinks</option>
-                <option value="The Environment">The Environment</option>
-                <option value="States of Mind">States of Mind</option>
-                <option value="Food">Food</option>
-                <option value="Hobbies and Leisure">Hobbies and Leisure</option>
-                <option value="Industry">Industry</option>
-                <option value="Landscapes">Landscapes</option>
-                <option value="Lifestyle">Lifestyle</option>
-                <option value="People">People</option>
-                <option value="Plants and Flowers">Plants and Flowers</option>
-                <option value="Culture and Religion">Culture and Religion</option>
-                <option value="Science">Science</option>
-                <option value="Social Issues">Social Issues</option>
-                <option value="Sports">Sports</option>
-                <option value="Technology">Technology</option>
-                <option value="Transport">Transport</option>
-                <option value="Travel">Travel</option>
-                <option value="volvo">Portraits</option>
+                <option value="1">Animals</option>
+                <option value="2">Buildings and Architecture</option>
+                <option value="3">Business</option>
+                <option value="4">Drinks</option>
+                <option value="5">The Environment</option>
+                <option value="6">States of Mind</option>
+                <option value="7">Food</option>
+                <option value="8">Hobbies and Leisure</option>
+                <option value="9">Industry</option>
+                <option value="10">Landscapes</option>
+                <option value="11">Lifestyle</option>
+                <option value="12">People</option>
+                <option value="13">Plants and Flowers</option>
+                <option value="14">Culture and Religion</option>
+                <option value="15">Science</option>
+                <option value="16">Social Issues</option>
+                <option value="17">Sports</option>
+                <option value="18">Technology</option>
+                <option value="19">Transport</option>
+                <option value="20">Travel</option>
+                <option value="21">Portraits</option>
 
             </select>
         </div>

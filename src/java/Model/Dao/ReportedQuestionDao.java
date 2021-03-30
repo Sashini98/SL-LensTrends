@@ -22,4 +22,6 @@ public interface ReportedQuestionDao {
     public ReportedQuestion getReportedQuestionById(int id) throws SQLException;
 
     public void deleteReportedQuestionsByClient(String clientId) throws SQLException;
+    
+    public void deleteReportedQuestion(int QuestionId) throws SQLException;
 }
