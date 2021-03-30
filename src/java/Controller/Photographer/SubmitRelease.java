@@ -5,8 +5,10 @@
  */
 package Controller.Photographer;
 
+import Model.ModalRelease;
 import Model.Photograph;
 import Model.Photographer;
+import Model.PropertyRelease;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -59,6 +61,8 @@ public class SubmitRelease extends HttpServlet {
             File filemod = new File(modalpath);
             modal.write(filemod);
             
+            ModalRelease m = new ModalRelease();
+            PropertyRelease p = new PropertyRelease(0, pName, 0)
             
 
         } catch (Exception ex) {
