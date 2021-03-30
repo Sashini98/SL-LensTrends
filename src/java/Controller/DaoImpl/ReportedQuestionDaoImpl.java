@@ -73,4 +73,9 @@ public class ReportedQuestionDaoImpl implements ReportedQuestionDao {
         DB.iud("DELETE FROM reported_question where Client_Id = '" + clientId + "'");
     }
 
+    @Override
+    public void deleteReportedQuestion(int QuestionId) throws SQLException {
+        DB.iud("DELETE FROM reported_question WHERE Question_Id = '" + QuestionId + "'");
+    }
+
 }

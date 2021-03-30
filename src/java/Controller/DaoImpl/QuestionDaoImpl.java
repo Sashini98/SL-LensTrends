@@ -297,4 +297,9 @@ public class QuestionDaoImpl implements QuestionDao {
         DB.iud("DELETE FROM Question where Client_Id = '" + clientID + "'");
     }
 
+    @Override
+    public void updateQuestionState(int status, int QuestionId) throws SQLException {
+        DB.iud("UPDATE Question SET state_id='" + status + "' WHERE Question_Id = '" + QuestionId + "'");
+    }
+
 }

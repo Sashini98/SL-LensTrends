@@ -157,12 +157,7 @@
         <div class="sale-album">
             <p>Price <span style="color:#9D9D9D; "> ($) </span><input type="number" accept="" id='price'> </p>                     
         </div>
-
-        <div class="file-name">
-            <p>File ID : 365447169 </p>
-            <p>Original name : IGP_4237_1.jpg </p>
-        </div>
-
+        <br>
         <div class="finalsubmit">
             <span type="button" id="submitfinal" onclick="submitforreview()">Submit</span>
         </div>
