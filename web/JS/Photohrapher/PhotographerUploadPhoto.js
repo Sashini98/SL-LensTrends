@@ -187,16 +187,16 @@ function submitrelease() {
     var property = document.getElementById("upmodalproperty").value;
     var modal = document.getElementById("upmodalmodal").value;
     var idd = document.getElementById("image").getAttribute("photo_id");
-
+alert(property);
+alert(modal);
     if (property == "" && modal == "") {
         alert("No files Choosen");
         return false;
-    } else {
-        
+    } else {      
         
         var propertpdf = document.getElementById("upmodalproperty").files[0];
         var modalpdf = document.getElementById("upmodalmodal").files[0];
-
+       
         var formdata = new FormData();
         formdata.append("propertyfile", propertpdf);
         formdata.append("modalfile", modalpdf);
@@ -216,9 +216,10 @@ function submitrelease() {
 
         };
         request.open("POST", "../../SubmitRelease", false);
-        request.send(formdata);
+//        request.send(formdata + "&property=" + property + "&modal="+ modal);
+        request.send("property=" + property + "&modal="+ modal);
+//        request.send();
         location.reload();
-
     }
 
 
