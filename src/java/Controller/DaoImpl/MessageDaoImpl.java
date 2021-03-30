@@ -10,8 +10,13 @@ import Model.Dao.MessageDao;
 import Model.Messages;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import javax.mail.Message;
 
 /**
  *
@@ -44,4 +49,17 @@ public class MessageDaoImpl implements MessageDao{
     
     
 }
+
+    @Override
+    public void addMessage(Messages m) throws SQLException {
+        Date d = m.getMessage_date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String date = sdf.format(d);
+        
+        Time t = m.getTime();
+        SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
+        String time = sdf.format(t);
+        
+        DB.iud("INSERT INTO message(Message, name, email, phone, date, time) VALUES ('"+m.getMessage()+"','"+m.getName()+"','"+m.getEmail()+"','"+m.getMobile()+"','"+date+"','"+time+"')");
+    }
 }

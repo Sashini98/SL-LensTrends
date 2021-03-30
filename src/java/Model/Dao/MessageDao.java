@@ -5,8 +5,10 @@
  */
 package Model.Dao;
 
+import Model.Messages;
 import java.sql.SQLException;
 import java.util.List;
+
 
 /**
  *
@@ -15,4 +17,5 @@ import java.util.List;
 public interface MessageDao {
     
     public List getAllMessages() throws SQLException;
+    public void addMessage(Messages m) throws SQLException;
 }
