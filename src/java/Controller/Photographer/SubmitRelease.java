@@ -16,6 +16,7 @@ import Model.PropertyRelease;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -40,11 +41,11 @@ public class SubmitRelease extends HttpServlet {
 
         try {
 
-            String modalcheck = request.getParameter("modal");
-            String propertycheck = request.getParameter("property");
+//            String modalcheck = request.getParameter("modal");
+//            String propertycheck = request.getParameter("property");
             
-            System.out.println(modalcheck);
-            System.out.println(propertycheck);
+//            System.out.println(modalcheck);
+//            System.out.println(propertycheck);
             
             DiskFileItemFactory dfif = new DiskFileItemFactory();
             ServletFileUpload sfu = new ServletFileUpload(dfif);
@@ -52,7 +53,9 @@ public class SubmitRelease extends HttpServlet {
             List<FileItem> fil = sfu.parseRequest(request);
 
             FileItem property = fil.get(0);
+
             FileItem modal = fil.get(1);
+            
             String id = fil.get(2).getString();
             int photoid = Integer.parseInt(id);
 
@@ -68,22 +71,34 @@ public class SubmitRelease extends HttpServlet {
             String modalpath = realpath + "\\Resources\\Img\\Gallery Sample Images\\ModalRelease\\" + mName + ".pdf";
 //            String imagename = String.valueOf(System.currentTimeMillis());
 
-//            if (modalcheck == "null" && propertycheck != "null") {
-//                System.out.println("property");
-//                File filepro = new File(propertypath);
-//                property.write(filepro);
-//                PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
-//                proDao.addPropertyrelease(photoid, pName);
-//                response.getWriter().write("Property Release is Submitted");
-//            } else if (modalcheck != "null" && propertycheck == "null") {
-//                System.out.println("modal");
-//                File filemod = new File(modalpath);
-//                modal.write(filemod);
-//                ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
-//                modalDao.addModalrelease(photoid, mName);
-//                response.getWriter().write("Modal Release is Submitted");
-//            }
-
+            if (property.getName() != null && modal.getName() == null) {
+               
+                File filepro = new File(propertypath);
+                property.write(filepro);
+                PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
+                proDao.addPropertyrelease(photoid, pName);
+                response.getWriter().write("Property Release is Submitted");
+            } else if (modal.getName() != null && property.getName() == null) {
+                
+                File filemod = new File(modalpath);
+                modal.write(filemod);
+                ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
+                modalDao.addModalrelease(photoid, mName);
+                response.getWriter().write("Modal Release is Submitted");
+            } else if (modal.getName() != null && property.getName() != null){
+                File filepro = new File(propertypath);
+                property.write(filepro);
+                PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
+                proDao.addPropertyrelease(photoid, pName);
+                
+                File filemod = new File(modalpath);
+                modal.write(filemod);
+                ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
+                modalDao.addModalrelease(photoid, mName);
+                
+                response.getWriter().write("Both Releases are Submitted");
+            }
+                
         } catch (Exception ex) {
             Logger.getLogger(SubmitRelease.class.getName()).log(Level.SEVERE, null, ex);
         }

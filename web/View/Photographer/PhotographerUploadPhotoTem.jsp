@@ -132,7 +132,7 @@
                         <label id="fileNameproperty">
                             FileName
                         </label>
-
+                        
                         <p>Modal Release</p>
                         <input type="file" id="upmodalmodal" style="display: none;" accept="application/pdf" onchange="pressedmodalrelease();validation('upmodalmodal');">
                         <label for="upmodalmodal" id="uplabelmodal">

@@ -187,8 +187,7 @@ function submitrelease() {
     var property = document.getElementById("upmodalproperty").value;
     var modal = document.getElementById("upmodalmodal").value;
     var idd = document.getElementById("image").getAttribute("photo_id");
-alert(property);
-alert(modal);
+
     if (property == "" && modal == "") {
         alert("No files Choosen");
         return false;
@@ -216,16 +215,13 @@ alert(modal);
 
         };
         request.open("POST", "../../SubmitRelease", false);
-//        request.send(formdata + "&property=" + property + "&modal="+ modal);
-        request.send("property=" + property + "&modal="+ modal);
+        request.send(formdata);
+//        request.send("property=" + property + "&modal="+ modal);
 //        request.send();
         location.reload();
     }
-
-
-
-
 }
+
 
 function loadphotos() {
 
