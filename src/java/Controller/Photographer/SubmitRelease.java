@@ -64,7 +64,8 @@ public class SubmitRelease extends HttpServlet {
             String propertypath = realpath + "\\Resources\\Img\\Gallery Sample Images\\PropertyRelease\\" + pName + ".pdf";
             String modalpath = realpath + "\\Resources\\Img\\Gallery Sample Images\\ModalRelease\\" + mName + ".pdf";
 //            String imagename = String.valueOf(System.currentTimeMillis());
-
+            
+            
             File filepro = new File(propertypath);
             property.write(filepro);
             

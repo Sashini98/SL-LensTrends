@@ -143,7 +143,7 @@
                         </label>                      
 
                     </div>
-                    <span id="submit" onclick="submitrelease(<%=PhotoId%>);">Submit</span> <br> <br>
+                    <span id="submit" onclick="submitrelease();">Submit</span> <br> <br>
                     <span id="reset" onclick="resetrelease();">Reset</span>
                 </div>
             </div>

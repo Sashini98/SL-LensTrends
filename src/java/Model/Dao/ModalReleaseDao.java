@@ -5,9 +5,11 @@
  */
 package Model.Dao;
 
+import Model.ModalRelease;
 import Model.Photograph;
 import java.sql.SQLDataException;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  *

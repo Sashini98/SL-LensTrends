@@ -324,6 +324,10 @@
         <servlet-name>PropertyReleaseDaoImpl</servlet-name>
         <servlet-class>Controller.DaoImpl.PropertyReleaseDaoImpl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RemoveReportedPhotos</servlet-name>
+        <servlet-class>Controller.Admin.RemoveReportedPhotos</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -647,6 +651,10 @@
     <servlet-mapping>
         <servlet-name>PropertyReleaseDaoImpl</servlet-name>
         <url-pattern>/PropertyReleaseDaoImpl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RemoveReportedPhotos</servlet-name>
+        <url-pattern>/RemoveReportedPhotos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
