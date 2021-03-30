@@ -13,15 +13,15 @@ public class ModalRelease {
 
     int id;
     String path;
-    int photographerId;
+    int photographId;
 
     public ModalRelease() {
     }
 
-public ModalRelease(int id, String path, int photographerId) {
+    public ModalRelease(int id, String path, int photographId) {
         this.id = id;
         this.path = path;
-        this.photographerId = photographerId;
+        this.photographId = photographId;
     }
 
     public int getId() {
@@ -40,12 +40,14 @@ public ModalRelease(int id, String path, int photographerId) {
         this.path = path;
     }
 
-    public int getPhotographerId() {
-        return photographerId;
+    public int getPhotographId() {
+        return photographId;
     }
 
-    public void setPhotographerId(int photographerId) {
-        this.photographerId = photographerId;
+    public void setPhotographId(int photographId) {
+        this.photographId = photographId;
     }
-    
+
+
+
 }

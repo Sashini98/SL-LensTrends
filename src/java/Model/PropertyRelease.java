@@ -13,15 +13,15 @@ public class PropertyRelease {
 
     int id;
     String path;
-    int photographerId;
+    int photographeId;
 
     public PropertyRelease() {
     }
 
-    public PropertyRelease(int id, String path, int photographerId) {
+    public PropertyRelease(int id, String path, int photographeId) {
         this.id = id;
         this.path = path;
-        this.photographerId = photographerId;
+        this.photographeId = photographeId;
     }
 
     public int getId() {
@@ -40,12 +40,15 @@ public class PropertyRelease {
         this.path = path;
     }
 
-    public int getPhotographerId() {
-        return photographerId;
+    public int getPhotographeId() {
+        return photographeId;
     }
 
-    public void setPhotographerId(int photographerId) {
-        this.photographerId = photographerId;
+    public void setPhotographeId(int photographeId) {
+        this.photographeId = photographeId;
     }
+
+ 
+
 
 }

@@ -64,6 +64,9 @@ public class SubmitRelease extends HttpServlet {
             ModalRelease modalRel = new ModalRelease();
             PropertyRelease propertyRel = new PropertyRelease();
             
+            modalRel.setPath(mName);
+            modalRel.setPhotographId(0);
+            
 
         } catch (Exception ex) {
             Logger.getLogger(SubmitRelease.class.getName()).log(Level.SEVERE, null, ex);
