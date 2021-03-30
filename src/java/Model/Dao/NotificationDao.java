@@ -7,6 +7,7 @@ package Model.Dao;
 
 import Model.Notifications;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,5 +16,7 @@ import java.sql.SQLException;
 public interface NotificationDao {
     
     public void addNotification(Notifications notifications) throws SQLException;
-    
+    public ArrayList<Notifications> getNotificationofBoth() throws SQLException;
+    public ArrayList<Notifications> getNotificationofClient() throws SQLException;
+    public ArrayList<Notifications> getNotificationofPhotographer() throws SQLException;
 }
