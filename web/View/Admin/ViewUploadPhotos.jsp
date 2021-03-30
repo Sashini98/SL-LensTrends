@@ -60,7 +60,7 @@
                 </tr>
                 <tr>
                     <td align="left">Release Form</td>
-                    <td><a id="form"></a></td>
+                    <td><input type="file" id="form"></a></td>
                     <td align="left">Orientation</td>
                     <td><input type="text" name="size" id="orientation" disabled=""></td>
                 </tr>
