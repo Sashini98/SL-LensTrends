@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 public class PropertyReleaseDaoImpl implements PropertyReleaseDao{
     
     @Override
-    public void addPropertyrelease(Photograph photoid, String Propath) throws SQLException {
-       DB.iud("INSERT INTO property_release (Form_Path,Photograph_Id) VALUES('"+ Propath +"','"+ photoid.getId() +"')");
+    public void addPropertyrelease(int photoid, String Propath) throws SQLException {
+       DB.iud("INSERT INTO property_release (Form_Path,Photograph_Id) VALUES('"+ Propath +"','"+ photoid +"')");
     } 
 }

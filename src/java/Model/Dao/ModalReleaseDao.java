@@ -15,6 +15,6 @@ import java.sql.SQLException;
  */
 public interface ModalReleaseDao {
     
-    public void addModalrelease(Photograph photoid,String Modpath) throws SQLException;
+    public void addModalrelease(int photoid,String Modpath) throws SQLException;
     
 }

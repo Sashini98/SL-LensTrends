@@ -182,10 +182,11 @@ window.pressedpropertyrelease = function () {
 
 };
 
-function submitrelease() {
+function submitrelease(photoid) {
 
     var property = document.getElementById("upmodalproperty").value;
     var modal = document.getElementById("upmodalmodal").value;
+    
 
     if (property == "" && modal == "") {
         alert("No files Choosen");
@@ -197,6 +198,8 @@ function submitrelease() {
         var formdata = new FormData();
         formdata.append("propertyfile", propertpdf);
         formdata.append("modalfile", modalpdf);
+        formdata.append("id",photoid);
+//        formdata.append(propertpdf,modalpdf,photoid);
 //        alert(formdata);
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {

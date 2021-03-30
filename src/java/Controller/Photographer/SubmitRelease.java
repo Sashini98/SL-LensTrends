@@ -5,6 +5,10 @@
  */
 package Controller.Photographer;
 
+import Controller.DaoImpl.ModalReleaseDaoImpl;
+import Controller.DaoImpl.PropertyReleaseDaoImpl;
+import Model.Dao.ModalReleaseDao;
+import Model.Dao.PropertyReleaseDao;
 import Model.ModalRelease;
 import Model.Photograph;
 import Model.Photographer;
@@ -35,6 +39,8 @@ public class SubmitRelease extends HttpServlet {
             throws ServletException, IOException {
 
         try {
+            
+                        
             DiskFileItemFactory dfif = new DiskFileItemFactory();
             ServletFileUpload sfu = new ServletFileUpload(dfif);
 
@@ -42,6 +48,10 @@ public class SubmitRelease extends HttpServlet {
 
             FileItem property = fil.get(0);
             FileItem modal = fil.get(1);
+            String id = fil.get(2).getString();
+            int photoid = Integer.parseInt(id); 
+            
+            
 
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             String Photographer_Id = p.getPhotographerId();
@@ -61,12 +71,13 @@ public class SubmitRelease extends HttpServlet {
             File filemod = new File(modalpath);
             modal.write(filemod);
             
-            ModalRelease modalRel = new ModalRelease();
-            PropertyRelease propertyRel = new PropertyRelease();
+            ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
+            modalDao.addModalrelease(photoid, mName);
             
-            modalRel.setPath(mName);
-            modalRel.setPhotographId(0);
+            PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
+            proDao.addPropertyrelease(photoid, pName);
             
+            response.getWriter().write("Release Submitted");
 
         } catch (Exception ex) {
             Logger.getLogger(SubmitRelease.class.getName()).log(Level.SEVERE, null, ex);
