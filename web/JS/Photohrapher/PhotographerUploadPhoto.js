@@ -191,15 +191,15 @@ function submitrelease() {
     if (property == "" && modal == "") {
         alert("No files Choosen");
         return false;
-    } else {      
-        
+    } else {
+
         var propertpdf = document.getElementById("upmodalproperty").files[0];
         var modalpdf = document.getElementById("upmodalmodal").files[0];
-       
+
         var formdata = new FormData();
         formdata.append("propertyfile", propertpdf);
         formdata.append("modalfile", modalpdf);
-        formdata.append("id",idd);
+        formdata.append("id", idd);
 //        alert(formdata);
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {
@@ -521,6 +521,10 @@ function submitforreview() {
         if (request.readyState === 4) {
             if (request.status === 200) {
 //                document.getElementById('upload-modal').style.display = 'none';
+                document.getElementById("title-area").value = "";
+                document.getElementById("keyword-area").value = "";
+                document.getElementById("price").value = "";
+                document.getElementById("category").value = "";
                 var responce = request.responseText;
                 alert(responce);
             }

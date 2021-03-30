@@ -20,6 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.geometry.Orientation;
 import javax.imageio.IIOImage;
 import javax.imageio.ImageIO;
 import javax.imageio.ImageWriteParam;
@@ -93,6 +94,15 @@ public class UploadforSales extends HttpServlet {
             int height = image.getHeight();
             int width = image.getWidth();
             
+            int orientation = 0;
+            if (width > height){
+                orientation+= 1;
+            } else if (height > width){
+                orientation+=2;
+            } else if (height == width){
+                orientation+=3;
+            }
+            
             String compath = Comimagename + ".jpeg";
             String orgpath = Orgimagename + ".jpeg";
             int stateid = 1;
@@ -109,6 +119,7 @@ public class UploadforSales extends HttpServlet {
             m.setHeight(height);
             m.setUploadedDate(new Date());
             m.setPhotogrpherId(Photographer_Id);
+            m.setOrientationId(orientation);
             m.setUndiscovered(true);
             m.setPeople(false);
             PhotographDao photoDao = new PhotographDaoImpl();
