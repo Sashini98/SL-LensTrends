@@ -133,7 +133,7 @@ function deleteportfoliophoto(photoid, path) {
 
 function filevalidation() {
     var fileInput = document.getElementById('upimage');
-
+//    alert(fileInput);
     var filePath = fileInput.value;
     var filesize = fileInput.files[0].size;
     var lowersizelimit = 1000000; // lowest size to upload
@@ -143,21 +143,20 @@ function filevalidation() {
 
     if (!allowedExtensions.exec(filePath)) {
         alert('Upload only JPEG or JPG image');
-        fileInput.value = '';
-        document.getElementById('uploadimage').innerHTML = "Choose file";
-        document.getElementById('uploadimage').innerHTML = "Choose file";
-        document.getElementById("upimage").value = "";
-        document.getElementById("sample").style.display = "none";
+        document.getElementById('upimage').value = '';
+        document.getElementById('chooseimage').innerHTML = "Choose file";
+//        document.getElementById('uploadimage').innerHTML = "Choose file";
+//        document.getElementById('upimage').value = "";
+        document.getElementById('sample').style.display = "none";
         document.getElementById("title-input").style.display = "none";
         return false;
     }
-
     if (filesize <= lowersizelimit) {
         alert('Image is less then 1MP, Upload Images between 1MP and 25MP');
-        document.getElementById('uploadimage').innerHTML = "Choose file";
-        document.getElementById("upimage").value = "";
         document.getElementById("sample").style.display = "none";
+        document.getElementById("upimage").value = "";
         document.getElementById("title-input").style.display = "none";
+        document.getElementById("chooseimage").innerHTML = "Choose file";
         return false;
     }
 

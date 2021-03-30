@@ -16,6 +16,7 @@ import Model.PropertyRelease;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,47 +40,63 @@ public class SubmitRelease extends HttpServlet {
             throws ServletException, IOException {
 
         try {
+
+//            String modalcheck = request.getParameter("modal");
+//            String propertycheck = request.getParameter("property");
             
-                        
+//            System.out.println(modalcheck);
+//            System.out.println(propertycheck);
+            
             DiskFileItemFactory dfif = new DiskFileItemFactory();
             ServletFileUpload sfu = new ServletFileUpload(dfif);
 
             List<FileItem> fil = sfu.parseRequest(request);
 
             FileItem property = fil.get(0);
+
             FileItem modal = fil.get(1);
+            
             String id = fil.get(2).getString();
-            int photoid = Integer.parseInt(id); 
-            
-            
+            int photoid = Integer.parseInt(id);
 
             Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
             String Photographer_Id = p.getPhotographerId();
 
             String realpath = getServletContext().getRealPath("");
-            String pName = String.valueOf("PropertyRelease" +" - "+ Photographer_Id +" - "+ System.currentTimeMillis());
-           
-            String mName = String.valueOf("ModalRelease" +" - "+ Photographer_Id +" - "+ System.currentTimeMillis());
+            String pName = String.valueOf("PropertyRelease" + " - " + Photographer_Id + " - " + System.currentTimeMillis());
+
+            String mName = String.valueOf("ModalRelease" + " - " + Photographer_Id + " - " + System.currentTimeMillis());
 
             String propertypath = realpath + "\\Resources\\Img\\Gallery Sample Images\\PropertyRelease\\" + pName + ".pdf";
             String modalpath = realpath + "\\Resources\\Img\\Gallery Sample Images\\ModalRelease\\" + mName + ".pdf";
 //            String imagename = String.valueOf(System.currentTimeMillis());
-            
-            
-            File filepro = new File(propertypath);
-            property.write(filepro);
-            
-            File filemod = new File(modalpath);
-            modal.write(filemod);
-            
-            ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
-            modalDao.addModalrelease(photoid, mName);
-            
-            PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
-            proDao.addPropertyrelease(photoid, pName);
-            
-            response.getWriter().write("Release Submitted");
 
+            if (property.getName() != null && modal.getName() == null) {               
+                File filepro = new File(propertypath);
+                property.write(filepro);
+                PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
+                proDao.addPropertyrelease(photoid, pName);
+                response.getWriter().write("Property Release is Submitted");
+            } else if (modal.getName() != null && property.getName() == null) {                
+                File filemod = new File(modalpath);
+                modal.write(filemod);
+                ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
+                modalDao.addModalrelease(photoid, mName);
+                response.getWriter().write("Modal Release is Submitted");
+            } else if (modal.getName() != null && property.getName() != null){
+                File filepro = new File(propertypath);
+                property.write(filepro);
+                PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
+                proDao.addPropertyrelease(photoid, pName);
+                
+                File filemod = new File(modalpath);
+                modal.write(filemod);
+                ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
+                modalDao.addModalrelease(photoid, mName);
+                
+                response.getWriter().write("Both Releases are Submitted");
+            }
+                
         } catch (Exception ex) {
             Logger.getLogger(SubmitRelease.class.getName()).log(Level.SEVERE, null, ex);
         }
