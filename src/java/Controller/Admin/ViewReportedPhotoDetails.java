@@ -42,28 +42,28 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             throws ServletException, IOException {
         try {
             int photoid = Integer.parseInt(request.getParameter("pid"));
-            
+
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoid);
-            
+
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
-            
+
             PhotographCategoryDao cDao = new PhotographCategoryDaoImpl();
             String category = cDao.getCategory(photoid);
-            
+
             OrientationDao oDao = new OrientationdaoImpl();
             String orientation = oDao.getOrientation(photoid);
-            
-            ReportedPhotographDao rDao = new ReportedPhotographDaoImpl(); 
+
+            ReportedPhotographDao rDao = new ReportedPhotographDaoImpl();
             ReportedPhotographs rphotograph = rDao.getReportedPhotographById(photoid);
-           
 
             ArrayList<String> c = new ArrayList();
             Date uploadedDate = photograph.getUploadedDate();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
             String date = sdf.format(uploadedDate);
-            c.add("../../Resources/Img/Gallery Sample Images/"+ photograph.getPath());
+            
+            c.add("../../Resources/Img/Gallery Sample Images/" + photograph.getPath());
             c.add(rphotograph.getReason());
             c.add(rphotograph.getDescription());
             c.add(photograph.getTitle());
@@ -74,8 +74,7 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             c.add(photographer.getFname() + " " + photographer.getLname());
             c.add(category);
             c.add(photograph.getHeight() * photograph.getWidth() / 1000000 + "");
-            c.add(photograph.getId() +"");
-            
+            c.add(photograph.getId() + "");
 
             Gson g = new Gson();
             String toJson = g.toJson(c);
@@ -85,5 +84,4 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             Logger.getLogger(ViewUploadedPhotoDetails.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    }
-
+}

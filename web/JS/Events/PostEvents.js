@@ -1,3 +1,17 @@
+function checkDate() {
+            var date = 
+                document.getElementById('eveDate').value;
+              
+            var inpDate = new Date(date);
+            var currDate = new Date();
+              
+            if(currDate.toDateString() > 
+                        inpDate.toDateString()){
+               alert("The date you entered is already past! Please input a valid date");
+               document.getElementById('eveDate').value="";
+            }
+            
+        }
 
 function ShowHideDiv() {
         var chkYes = document.getElementById("chkYes");

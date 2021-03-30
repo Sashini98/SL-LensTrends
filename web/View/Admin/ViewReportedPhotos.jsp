@@ -24,7 +24,7 @@
 
         <div class="box">
             <div class="details">
-                <img id="img">
+                <img id="img" onclick="openimage();">
             </div>
 
             <table class="table" border="0" width="100%" height="40px" >
@@ -69,7 +69,7 @@
                 </tr>
                 <tr>
                     <th colspan =2><button  onclick="show('photomanage')" class="btn" id="approve">Back</button></th>
-                    <th colspan =2><button class="btn" id="reject" style="background-color: #f44336">Remove</button></th>
+                    <th colspan =2><button class="btn" id="reject" onclick="PhotoRemove()" style="background-color: #f44336">Remove</button></th>
                 </tr>
             </table>
         </div>
