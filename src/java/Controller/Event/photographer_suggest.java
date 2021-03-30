@@ -26,6 +26,7 @@ public class photographer_suggest extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        System.out.println("phottogsu");
         
         try {
             ArrayList<String> a = new ArrayList();
