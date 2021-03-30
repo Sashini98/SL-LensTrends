@@ -66,8 +66,6 @@
                 <tr>
                     <td align="left">Keywords</td>
                     <td><input type="text" name="key" id="key" disabled=""></td>
-                    <td align="left">Quality</td>
-                    <td><input type="text" name="rform" id="quality" disabled=""></td>
                 </tr>
                 <tr>
                     <th colspan =2><button  onclick="show('photomanage')" class="btn" id="approve">Back</button></th>

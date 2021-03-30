@@ -35,12 +35,6 @@
                     <td><input type="text" name="res" id="reso" disabled=""></td>
                 </tr>
                 <tr>
-                    <td align="left">Quality</td>
-                    <td><input type="text" name="qua" id="quality" disabled=""></td>
-                    <td align="left">Orientation</td>
-                    <td><input type="text" name="size" id="orientation" disabled=""></td>
-                </tr>
-                <tr>
                     <td align="left">Uploaded Date</td>
                     <td><input type="text" name="date" id="udate" disabled=""></td>
                     <td align="left">Height</td>
@@ -63,6 +57,12 @@
                     <td><input type="text" name="key" id="key" disabled=""></td>
                     <td align="left">Gender</td>
                     <td><input type="text" name="gen" id="gen" disabled=""></td>
+                </tr>
+                <tr>
+                    <td align="left">Release Form</td>
+                    <td><input type="text" name="qua" id="quality" disabled=""></td>
+                    <td align="left">Orientation</td>
+                    <td><input type="text" name="size" id="orientation" disabled=""></td>
                 </tr>
                 <tr>
                     <th colspan =2><button onclick="PhotoApprove()"  class="btn" id="approve">Approve</button></th>
