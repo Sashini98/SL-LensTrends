@@ -21,7 +21,23 @@
     </head>
 
     <body>
+        <div style="display: flex; justify-content: center;">
+            <div class="delAcc" id="delAcc" style="display: none;">
+                <div class="delHeader">
+                    <h3>Delete Account</h3>
+                    <i class="fas fa-times close" id="delAccClose" style="color: black; margin: auto; cursor: pointer;"></i>
+                </div>
 
+                <div>
+                    <h4>Are you sure you want to delete?</h4>
+
+                    <div style="padding-top: 20px;" class="confirm">
+                        <span class="Report" id="Delete" onclick="deleteAccount();">Yes</span>
+                        <span class="Report" id="noBtn">No</span>
+                    </div>
+                </div>
+            </div>
+        </div>  
 
         <div class="fixedheader">   
             <div class="pageheader">
@@ -272,16 +288,8 @@
                     <li> <a href="#" type="button"> Contact Us </a> </li>
                 </ul>
             </div>        
-        </div>  
-        
-        <div class="deleteConfirm" id="delcon">
-            <div class="headingconfirm">
-                <p>Are you sure want to delete your Account ?</p>
-            </div> 
-            <span>Yes</span>
-            <span>No</span>
-        </div>
-        
+        </div>                                            
+
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUpdate.js"></script>
 
     </body>

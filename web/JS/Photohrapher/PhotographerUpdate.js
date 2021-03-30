@@ -52,7 +52,7 @@ function pencileditenable(edit) {
 
 }
 
-function cancelupdate(cancel) {    
+function cancelupdate(cancel) {
     if (cancel == "ic2") {
 
         var request = new XMLHttpRequest();
@@ -61,7 +61,7 @@ function cancelupdate(cancel) {
             if (request.status === 200) {
                 if (request.readyState === 4) {
 
-                    var responce = request.responseText;               
+                    var responce = request.responseText;
                     document.getElementById("fname").placeholder = responce;
                     document.getElementById("fname").value = responce;
                     document.getElementById("fname").disabled = true;
@@ -320,7 +320,7 @@ function updatedata(field) {
         request.onreadystatechange = function () {
             if (request.status === 200) {
                 if (request.readyState === 4) {
-                    var responce = request.responseText;                    
+                    var responce = request.responseText;
                     document.getElementById("fname").disabled = true;
                     document.getElementById("pencil1").style.visibility = "visible";
                     document.getElementById("ic1").style.visibility = "hidden";
@@ -529,7 +529,7 @@ function updatedata(field) {
         request.open("POST", "../../PhotographerUpdate", false);
         request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         request.send("province=" + province);
-      
+
     } else if (field == "ic21") {
         var zip = document.getElementById("zip").value;
         var request = new XMLHttpRequest();
@@ -553,6 +553,9 @@ function updatedata(field) {
     }
 }
 
-function Deleteaccount(){
-    document.getElementById("delcon").style.display="block";
+function Deleteaccount() {
+    var modal = document.getElementById("delAcc");
+//    document.getElementById('content').style.opacity = "0.5";
+    modal.style.display = "block";
+
 }
