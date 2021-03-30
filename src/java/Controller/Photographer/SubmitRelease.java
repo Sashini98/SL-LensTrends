@@ -71,15 +71,13 @@ public class SubmitRelease extends HttpServlet {
             String modalpath = realpath + "\\Resources\\Img\\Gallery Sample Images\\ModalRelease\\" + mName + ".pdf";
 //            String imagename = String.valueOf(System.currentTimeMillis());
 
-            if (property.getName() != null && modal.getName() == null) {
-               
+            if (property.getName() != null && modal.getName() == null) {               
                 File filepro = new File(propertypath);
                 property.write(filepro);
                 PropertyReleaseDao proDao = new PropertyReleaseDaoImpl();
                 proDao.addPropertyrelease(photoid, pName);
                 response.getWriter().write("Property Release is Submitted");
-            } else if (modal.getName() != null && property.getName() == null) {
-                
+            } else if (modal.getName() != null && property.getName() == null) {                
                 File filemod = new File(modalpath);
                 modal.write(filemod);
                 ModalReleaseDao modalDao = new ModalReleaseDaoImpl();
