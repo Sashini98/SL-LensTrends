@@ -10,6 +10,7 @@ import Model.Dao.NotificationDao;
 import Model.Notifications;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -30,6 +31,22 @@ public class NotificationsDaoImpl implements NotificationDao {
         String t = sdf2.format(time);
         
         DB.iud("INSERT INTO notification ( title, message, date,time, Admin_id) VALUES ( '" + notifications.getTitle() + "', '" + notifications.getNotification() + "', '" + d + "','" + t + "', '" + notifications.getAdmin_id() + "');");
+    }
+
+    @Override
+    public ArrayList<Notifications> getNotificationofBoth() throws SQLException {
+        DB.iud("SELECT * FROM notification WHERE ");
+        return  
+    }
+
+    @Override
+    public ArrayList<Notifications> getNotificationofClient() throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<Notifications> getNotificationofPhotographer() throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
