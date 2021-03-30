@@ -336,6 +336,10 @@
         <servlet-name>RemoveReportedQuestion</servlet-name>
         <servlet-class>Controller.Admin.RemoveReportedQuestion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DownloadImage</servlet-name>
+        <servlet-class>Controller.Clent.DownloadImage</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -671,6 +675,10 @@
     <servlet-mapping>
         <servlet-name>RemoveReportedQuestion</servlet-name>
         <url-pattern>/RemoveReportedQuestion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DownloadImage</servlet-name>
+        <url-pattern>/DownloadImage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
