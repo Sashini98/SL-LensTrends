@@ -24,8 +24,8 @@
 
         <div class="box"><br>
             <div class="details">
-                <!--                <a href="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg" target="_blank"><img src="../../Resources/Img/Gallery Sample Images/a-stark-n40XRU-eSSI-unsplash.jpg"></a>-->
-                <img id="img">
+              
+                <img id="img" onclick="viewimage();">
             </div>
             <table class="table" border="0" width="100%" height="40px" >
                 <tr>
@@ -60,7 +60,7 @@
                 </tr>
                 <tr>
                     <td align="left">Release Form</td>
-                    <td><input type="text" name="qua" id="quality" disabled=""></td>
+                    <td><a id="form"></a></td>
                     <td align="left">Orientation</td>
                     <td><input type="text" name="size" id="orientation" disabled=""></td>
                 </tr>

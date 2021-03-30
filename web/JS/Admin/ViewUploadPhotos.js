@@ -95,3 +95,12 @@ function clearFieldsofPhotoDetails() {
     document.getElementById("reso").value = "";
     document.getElementById("pid").value = "";
 }
+
+function viewimage(){
+    var largeImage = document.getElementById('img');
+   img.style.display = 'block';
+   img.style.width=200+"px";
+   img.style.height=200+"px";
+   var url=img.getAttribute('src');
+   window.open(url,'Image','width=largeImage.stylewidth,height=largeImage.style.height,resizable=1');
+}

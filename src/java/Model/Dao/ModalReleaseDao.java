@@ -5,9 +5,11 @@
  */
 package Model.Dao;
 
+import Model.ModalRelease;
 import Model.Photograph;
 import java.sql.SQLDataException;
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  *
@@ -16,5 +18,6 @@ import java.sql.SQLException;
 public interface ModalReleaseDao {
     
     public void addModalrelease(Photograph photoid,String Modpath) throws SQLException;
+    public ModalRelease getModalrelease(int photoid) throws SQLException;
     
 }

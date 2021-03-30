@@ -5,14 +5,17 @@
  */
 package Controller.Admin;
 
+import Controller.DaoImpl.ModalReleaseDaoImpl;
 import Controller.DaoImpl.OrientationdaoImpl;
 import Controller.DaoImpl.PhotographCategoryDaoImpl;
 import Controller.DaoImpl.PhotographDaoImpl;
 import Controller.DaoImpl.PhotographerDaoImp;
+import Model.Dao.ModalReleaseDao;
 import Model.Dao.OrientationDao;
 import Model.Dao.PhotographCategoryDao;
 import Model.Dao.PhotographDao;
 import Model.Dao.PhotographerDao;
+import Model.ModalRelease;
 import Model.Photograph;
 import Model.Photographer;
 import com.google.gson.Gson;
