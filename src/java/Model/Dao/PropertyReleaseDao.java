@@ -6,15 +6,12 @@
 package Model.Dao;
 
 import Model.Photograph;
-import java.sql.SQLDataException;
 import java.sql.SQLException;
 
 /**
  *
  * @author ASUS
  */
-public interface ModalReleaseDao {
-    
-    public void addModalrelease(Photograph photoid,String Modpath) throws SQLException;
-    
+public interface PropertyReleaseDao {
+    public void addPropertyrelease(Photograph photoid, String Propath) throws SQLException;
 }

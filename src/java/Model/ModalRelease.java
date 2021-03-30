@@ -10,12 +10,15 @@ package Model;
  * @author ASUS
  */
 public class ModalRelease {
-    
+
     int id;
     String path;
     int photographerId;
 
-    public ModalRelease(int id, String path, int photographerId) {
+    public ModalRelease() {
+    }
+
+public ModalRelease(int id, String path, int photographerId) {
         this.id = id;
         this.path = path;
         this.photographerId = photographerId;

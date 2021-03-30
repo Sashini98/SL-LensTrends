@@ -316,6 +316,14 @@
         <servlet-name>SubmitRelease</servlet-name>
         <servlet-class>Controller.Photographer.SubmitRelease</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ModalReleaseDaoImpl</servlet-name>
+        <servlet-class>Controller.DaoImpl.ModalReleaseDaoImpl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PropertyReleaseDaoImpl</servlet-name>
+        <servlet-class>Controller.DaoImpl.PropertyReleaseDaoImpl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -631,6 +639,14 @@
     <servlet-mapping>
         <servlet-name>SubmitRelease</servlet-name>
         <url-pattern>/SubmitRelease</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModalReleaseDaoImpl</servlet-name>
+        <url-pattern>/ModalReleaseDaoImpl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PropertyReleaseDaoImpl</servlet-name>
+        <url-pattern>/PropertyReleaseDaoImpl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -187,7 +187,7 @@ public class PhotographDaoImpl implements PhotographDao {
                 + "VALUES('" + uploadforSales.getPath() + "','" + uploadforSales.getUncompresedpath()+ "','" + uploadforSales.getWidth() + "','" + uploadforSales.getHeight() + "','" + date + "',"
                 + " '" + 1 + "','" + uploadforSales.getPhotogrpherId() + "',"
                 + " '" + uploadforSales.getStateId() + "')");
-        System.out.println("bbbbb");
+//        System.out.println("bbbbb");
     }
 
     @Override
