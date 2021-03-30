@@ -328,6 +328,10 @@
         <servlet-name>RemoveReportedPhotos</servlet-name>
         <servlet-class>Controller.Admin.RemoveReportedPhotos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoadNotifications</servlet-name>
+        <servlet-class>Controller.Notification.LoadNotifications</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -655,6 +659,10 @@
     <servlet-mapping>
         <servlet-name>RemoveReportedPhotos</servlet-name>
         <url-pattern>/RemoveReportedPhotos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadNotifications</servlet-name>
+        <url-pattern>/LoadNotifications</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -39,8 +39,47 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>            
         <title>Administrator</title>
     </head>
-    <body style="background-color: #f8f9fb;" onload="loadDashBoardData();">
+    <body style="background-color: #f8f9fb;">
+        <script>
+            var dates = [];
+            var inreview = [];
+            var rejeced = [];
+            var acceptedpics = [];
 
+            function dataUpdate() {
+
+                setInterval(function () {
+                    fetch('/GroupProject/LoadDashBoardData').then(function (responce) {
+
+                        var request = new XMLHttpRequest();
+                        request.onreadystatechange = function () {
+                            if (request.status === 200) {
+                                if (request.readyState === 4) {
+                                    var responce = request.responseText;
+                                    var array = JSON.parse(responce);
+                                    dates = array[0];
+                                    inreview = array[1];
+                                    rejeced = array[2];
+                                    acceptedpics = array[3];
+
+                                }
+                            }
+                        };
+                        request.open("POST", "../../LoadDashBoardData", false);
+                        request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        request.send();
+
+                    }).catch(function (error) {
+                        console.log(error)
+                    });
+                }, 2000);
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                dataUpdate();
+            });
+
+        </script>
 
         <div class="side-nav">
 
@@ -121,219 +160,224 @@
                         <div class="upload-for-review" >
                             <canvas id="myChart1" height="300px"  width="550px" ></canvas>
                             <script>
-                                var dates = [];
-                                var inreview = [];
-                                var rejeced = [];
-                                var acceptedpics = [];
-                                Chart.defaults.global.animation.duration = 5000;
-                                var ctx = document.getElementById('myChart1').getContext('2d');
-                                var myChart = new Chart(ctx, {
-                                    type: 'line',
-                                    data: {
-                                        labels: dates,
-                                        datasets: [{
-                                                label: 'Uploads for Review',
-                                                fill: false,
-                                                data: inreview,
-                                                borderColor: "#415daa",
-                                                pointBackgroundColor: "#ee8322",
-                                                pointBorderColor: "#ee8322",
-                                                borderWidth: 3
-                                            }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            xAxes: [{
-                                                    barPercentage: 20,
-                                                    categoryPercentage: 2,
-                                                    gridLines: {
-                                                        display: false,
-                                                    },
-                                                    ticks: {
-                                                        fontFamily: "arial",
-                                                        fontSize: "13"
-                                                    }
-
-                                                }],
-                                            yAxes: [{
-                                                    gridLines: {
-                                                        //                                display:false                                        
-                                                    },
-                                                    ticks: {
-                                                        beginAtZero: true,
-                                                        fontFamily: "arial",
-                                                        fontSize: "12",
-                                                        stepSize: 10,
-                                                        fixedStepSize: 5
-                                                    }
+                                setInterval(function () {
+                                    Chart.defaults.global.animation.duration = 0;
+                                    var ctx = document.getElementById('myChart1').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: [dates[0], dates[1], dates[2], dates[3], dates[4], dates[5], dates[6]],
+                                            datasets: [{
+                                                    label: 'Uploads for Review',
+                                                    fill: false,
+                                                    data: inreview,
+                                                    borderColor: "#415daa",
+                                                    pointBackgroundColor: "#ee8322",
+                                                    pointBorderColor: "#ee8322",
+                                                    borderWidth: 3
                                                 }]
-
                                         },
-                                        legend: {
-                                            display: true,
-                                            labels: {
-                                                fontColor: '#415daa',
-                                                fontFamily: "calibri",
-                                                boxWidth: 0
+                                        options: {
+                                            scales: {
+                                                xAxes: [{
+                                                        barPercentage: 20,
+                                                        categoryPercentage: 2,
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                        ticks: {
+                                                            fontFamily: "arial",
+                                                            fontSize: "13"
+                                                        }
+
+                                                    }],
+                                                yAxes: [{
+                                                        gridLines: {
+                                                            //                                display:false                                        
+                                                        },
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                            fontFamily: "arial",
+                                                            fontSize: "12",
+                                                            stepSize: 10,
+                                                            fixedStepSize: 5
+                                                        }
+                                                    }]
+
+                                            },
+                                            legend: {
+                                                display: true,
+                                                labels: {
+                                                    fontColor: '#415daa',
+                                                    fontFamily: "calibri",
+                                                    boxWidth: 0
+                                                }
                                             }
                                         }
-                                    }
-                                });
+                                    });
+
+                                }, 2000);
                             </script>
                         </div> 
 
                         <div class="approved-photos">
                             <canvas id="myChart2" width="550" height="300"></canvas>
                             <script>
-                                Chart.defaults.global.animation.duration = 5000;
-                                var ctx = document.getElementById('myChart2').getContext('2d');
-                                var myChart = new Chart(ctx, {
-                                    type: 'line',
-                                    data: {
-                                        labels: ['11/10', '11/11', '11/12', '11/13', '11/14', '11/15', '11/16'],
-                                        datasets: [{
-                                                label: 'Approved Photos',
-                                                fill: false,
-                                                data: [16, 8, 12, 12, 9, 7, 14],
-                                                borderColor: "#415daa",
-                                                pointBackgroundColor: "#ee8322",
-                                                pointBorderColor: "#ee8322",
-                                                borderWidth: 3
-                                            }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            xAxes: [{
-                                                    barPercentage: 20,
-                                                    categoryPercentage: 2,
-                                                    gridLines: {
-                                                        display: false,
-                                                    },
-                                                    ticks: {
-                                                        fontFamily: "arial",
-                                                        fontSize: "13"
-                                                    }
-
-                                                }],
-                                            yAxes: [{
-                                                    gridLines: {
-                                                        //                                display:false                                        
-                                                    },
-                                                    ticks: {
-                                                        beginAtZero: true,
-                                                        fontFamily: "arial",
-                                                        fontSize: "12",
-                                                        stepSize: 10,
-                                                        fixedStepSize: 5
-                                                    }
+                                setInterval(function () {
+                                    Chart.defaults.global.animation.duration = 0;
+                                    var ctx = document.getElementById('myChart2').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: [dates[0], dates[1], dates[2], dates[3], dates[4], dates[5], dates[6]],
+                                            datasets: [{
+                                                    label: 'Approved Photos',
+                                                    fill: false,
+                                                    data: acceptedpics,
+                                                    borderColor: "#415daa",
+                                                    pointBackgroundColor: "#ee8322",
+                                                    pointBorderColor: "#ee8322",
+                                                    borderWidth: 3
                                                 }]
-
                                         },
-                                        legend: {
-                                            display: true,
-                                            labels: {
-                                                fontColor: '#415daa',
-                                                fontFamily: "calibri",
-                                                boxWidth: 0
+                                        options: {
+                                            scales: {
+                                                xAxes: [{
+                                                        barPercentage: 20,
+                                                        categoryPercentage: 2,
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                        ticks: {
+                                                            fontFamily: "arial",
+                                                            fontSize: "13"
+                                                        }
+
+                                                    }],
+                                                yAxes: [{
+                                                        gridLines: {
+                                                            //                                display:false                                        
+                                                        },
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                            fontFamily: "arial",
+                                                            fontSize: "12",
+                                                            stepSize: 10,
+                                                            fixedStepSize: 5
+                                                        }
+                                                    }]
+
+                                            },
+                                            legend: {
+                                                display: true,
+                                                labels: {
+                                                    fontColor: '#415daa',
+                                                    fontFamily: "calibri",
+                                                    boxWidth: 0
+                                                }
                                             }
                                         }
-                                    }
-                                });
+                                    });
+                                }, 2000);
                             </script>
                         </div>
 
                         <div class="rejected-photos">
                             <canvas id="myChart3" width="550" height="300"></canvas>
                             <script>
-                                Chart.defaults.global.animation.duration = 5000;
-                                var ctx = document.getElementById('myChart3').getContext('2d');
-                                var myChart = new Chart(ctx, {
-                                    type: 'line',
-                                    data: {
-                                        labels: ['11/10', '11/11', '11/12', '11/13', '11/14', '11/15', '11/16'],
-                                        datasets: [{
-                                                label: 'Rejected Photos',
-                                                fill: false,
-                                                data: [8, 8, 6, 12, 1, 10, 1],
-                                                borderColor: "#415daa",
-                                                pointBackgroundColor: "#ee8322",
-                                                pointBorderColor: "#ee8322",
-                                                borderWidth: 3
-                                            }]
-                                    },
-                                    options: {
-                                        scales: {
-                                            xAxes: [{
-                                                    barPercentage: 20,
-                                                    categoryPercentage: 2,
-                                                    gridLines: {
-                                                        display: false,
-                                                    },
-                                                    ticks: {
-                                                        fontFamily: "arial",
-                                                        fontSize: "13"
-                                                    }
-
-                                                }],
-                                            yAxes: [{
-                                                    gridLines: {
-                                                        //                                display:false                                        
-                                                    },
-                                                    ticks: {
-                                                        beginAtZero: true,
-                                                        fontFamily: "arial",
-                                                        fontSize: "12",
-                                                        stepSize: 10,
-                                                        fixedStepSize: 5
-                                                    }
+                                setInterval(function () {
+                                    Chart.defaults.global.animation.duration = 0;
+                                    var ctx = document.getElementById('myChart3').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: [dates[0], dates[1], dates[2], dates[3], dates[4], dates[5], dates[6]],
+                                            datasets: [{
+                                                    label: 'Rejected Photos',
+                                                    fill: false,
+                                                    data: rejeced,
+                                                    borderColor: "#415daa",
+                                                    pointBackgroundColor: "#ee8322",
+                                                    pointBorderColor: "#ee8322",
+                                                    borderWidth: 3
                                                 }]
-
                                         },
-                                        legend: {
-                                            display: true,
-                                            labels: {
-                                                fontColor: '#415daa',
-                                                fontFamily: "calibri",
-                                                boxWidth: 0
+                                        options: {
+                                            scales: {
+                                                xAxes: [{
+                                                        barPercentage: 20,
+                                                        categoryPercentage: 2,
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                        ticks: {
+                                                            fontFamily: "arial",
+                                                            fontSize: "13"
+                                                        }
+
+                                                    }],
+                                                yAxes: [{
+                                                        gridLines: {
+                                                            //                                display:false                                        
+                                                        },
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                            fontFamily: "arial",
+                                                            fontSize: "12",
+                                                            stepSize: 10,
+                                                            fixedStepSize: 5
+                                                        }
+                                                    }]
+
+                                            },
+                                            legend: {
+                                                display: true,
+                                                labels: {
+                                                    fontColor: '#415daa',
+                                                    fontFamily: "calibri",
+                                                    boxWidth: 0
+                                                }
                                             }
                                         }
-                                    }
-                                });
+                                    });
+                                }, 2000);
                             </script>
                         </div>
 
                         <div class="photos-summary">
                             <canvas id="myChart4" width="550" height="300"></canvas>
                             <script>
-                                Chart.defaults.global.animation.duration = 5000;
-                                var ctx = document.getElementById('myChart4').getContext('2d');
-                                var myChart = new Chart(ctx, {
-                                    type: 'doughnut',
-                                    data: {
-                                        labels: ['Rejected', 'Approved'],
-                                        datasets: [{
-                                                data: [8, 20],
-                                                fill: true,
-                                                border: 0,
-                                                backgroundColor: ['#366eea', '#ee8322']
+                                setInterval(function () {
+                                    Chart.defaults.global.animation.duration = 0;
+                                    var ctx = document.getElementById('myChart4').getContext('2d');
+                                    var myChart = new Chart(ctx, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: ['Rejected', 'Approved'],
+                                            datasets: [{
+                                                    data: [8, 20],
+                                                    fill: true,
+                                                    border: 0,
+                                                    backgroundColor: ['#366eea', '#ee8322']
 
-                                            }]
-                                    },
-                                    options: {
-                                        responsive: true,
-                                        legend: {
-                                            position: 'top',
+                                                }]
                                         },
-                                        title: {
-                                            display: true,
-                                            text: 'Photos Summary'
-                                        },
-                                        animation: {
-                                            animateScale: true,
-                                            animateRotate: true
+                                        options: {
+                                            responsive: true,
+                                            legend: {
+                                                position: 'top',
+                                            },
+                                            title: {
+                                                display: true,
+                                                text: 'Photos Summary'
+                                            },
+                                            animation: {
+                                                animateScale: true,
+                                                animateRotate: true
+                                            }
                                         }
-                                    }
-                                });
+                                    });
+                                }, 2000);
                             </script>
                         </div>     
 
@@ -361,40 +405,5 @@
         <script src="../../JS/Admin/ReportedQuestion.js" type="text/javascript" ></script>
         <script src="../../JS/Admin/ViewUploadPhotos.js" type="text/javascript" ></script>
         <script src="../../JS/Admin/ViewReportedQuestionDetails.js" type="text/javascript" ></script>
-        <script>
-                                function dataUpdate() {
-
-                                    setInterval(function () {
-                                        fetch('java').then(function (responce) {
-                                            var request = new XMLHttpRequest();
-                                            request.onreadystatechange = function () {
-                                                if (request.status === 200) {
-                                                    if (request.readyState === 4) {
-                                                        var responce = request.responseText;
-                                                        var array = JSON.parse(responce);
-                                                        dates = array[0];
-                                                        inreview = array[1];
-                                                        rejeced = array[2];
-                                                        acceptedpics = array[3];
-                                                    }
-                                                }
-                                            };
-                                            request.open("POST", "../../LoadDashBoardData", false);
-                                            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                                            request.send();
-
-                                        }).catch(function (error) {
-                                            console.log(error)
-                                        });
-                                    }, 2000);
-                                }
-
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    dataUpdate();
-                                });
-
-        </script>
-
-
     </body>
 </html>
