@@ -15,6 +15,9 @@ public class PropertyRelease {
     String path;
     int photographerId;
 
+    public PropertyRelease() {
+    }
+
     public PropertyRelease(int id, String path, int photographerId) {
         this.id = id;
         this.path = path;
