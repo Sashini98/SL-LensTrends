@@ -186,17 +186,21 @@ function submitrelease() {
 
     var property = document.getElementById("upmodalproperty").value;
     var modal = document.getElementById("upmodalmodal").value;
+    var idd = document.getElementById("image").getAttribute("photo_id");
 
     if (property == "" && modal == "") {
         alert("No files Choosen");
         return false;
     } else {
+        
+        
         var propertpdf = document.getElementById("upmodalproperty").files[0];
         var modalpdf = document.getElementById("upmodalmodal").files[0];
 
         var formdata = new FormData();
         formdata.append("propertyfile", propertpdf);
         formdata.append("modalfile", modalpdf);
+        formdata.append("id",idd);
 //        alert(formdata);
         var request = new XMLHttpRequest();
         request.onreadystatechange = function () {

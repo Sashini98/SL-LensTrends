@@ -17,7 +17,6 @@ import java.util.List;
  */
 public interface ModalReleaseDao {
     
-    public void addModalrelease(Photograph photoid,String Modpath) throws SQLException;
-    public ModalRelease getModalrelease(int photoid) throws SQLException;
+    public void addModalrelease(int photoid,String Modpath) throws SQLException;
     
 }

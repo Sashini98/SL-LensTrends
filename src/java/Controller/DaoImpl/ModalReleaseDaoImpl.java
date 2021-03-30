@@ -29,16 +29,11 @@ import javax.servlet.http.HttpServletResponse;
 public class ModalReleaseDaoImpl implements ModalReleaseDao {
 
     @Override
-    public void addModalrelease(Photograph photoid, String Modpath) throws SQLException {
-        DB.iud("INSERT INTO model_release (Form_Path,Photograph_Id) VALUES('"+ Modpath +"','"+ photoid.getId() +"')");
+    public void addModalrelease(int photoid, String Modpath) throws SQLException {
+        DB.iud("INSERT INTO model_release (Form_Path,Photograph_Id) VALUES('"+ Modpath +"','"+ photoid +"')");
     }
 
-    @Override
-    public ModalRelease getModalrelease(int photoid) throws SQLException {
-        return null;
-         
-    }
-
+    
     
 
 }

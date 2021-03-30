@@ -13,5 +13,5 @@ import java.sql.SQLException;
  * @author ASUS
  */
 public interface PropertyReleaseDao {
-    public void addPropertyrelease(Photograph photoid, String Propath) throws SQLException;
+    public void addPropertyrelease(int photoid, String Propath) throws SQLException;
 }
