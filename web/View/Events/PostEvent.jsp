@@ -82,7 +82,7 @@
 
                     <div class="formContent">
                         <span class="content_name"> Date of Event </span><br>
-                        <input type="date" name="dob" required class="doe"/>
+                        <input type="date" name="dob" id="eveDate" onchange="checkDate()" required class="doe"/>
                         <label for="doe" class="label_name">
                         </label>
                     </div><br>
