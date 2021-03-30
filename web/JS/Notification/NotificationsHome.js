@@ -10,7 +10,7 @@ function view(logged) {
         }
     };
 
-    request.open("POST", "../../CartDetails", false);
+    request.open("POST", "../../LoadNotifications", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send("logged=" + logged);
 
