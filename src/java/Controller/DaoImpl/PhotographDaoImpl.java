@@ -183,9 +183,9 @@ public class PhotographDaoImpl implements PhotographDao {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
         System.out.println("ffff");
-        DB.iud("INSERT INTO photograph (path, uncompresedpath,Width, Height, Uploaded_Date, Undiscovered, Photographer_Id,state_id)"
+        DB.iud("INSERT INTO photograph (path, uncompresedpath,Width, Height, Uploaded_Date, Undiscovered, Photographer_Id,Orientation_Id,state_id)"
                 + "VALUES('" + uploadforSales.getPath() + "','" + uploadforSales.getUncompresedpath()+ "','" + uploadforSales.getWidth() + "','" + uploadforSales.getHeight() + "','" + date + "',"
-                + " '" + 1 + "','" + uploadforSales.getPhotogrpherId() + "',"
+                + " '" + 1 + "','" + uploadforSales.getPhotogrpherId() + "','"+ uploadforSales.getOrientationId() +"'"
                 + " '" + uploadforSales.getStateId() + "')");
 //        System.out.println("bbbbb");
     }
