@@ -39,7 +39,7 @@ public class MessageDaoImpl implements MessageDao{
             m.setMessage_date(msg.getDate("date"));
             m.setEmail(msg.getString("email"));
             m.setMobile(msg.getString("phone"));
-            m.setTime(msg.getTime("time"));
+            
             
             a.add(m);
 
@@ -56,10 +56,7 @@ public class MessageDaoImpl implements MessageDao{
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
         
-        Time t = m.getTime();
-        SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
-        String time = sdf.format(t);
         
-        DB.iud("INSERT INTO message(Message, name, email, phone, date, time) VALUES ('"+m.getMessage()+"','"+m.getName()+"','"+m.getEmail()+"','"+m.getMobile()+"','"+date+"','"+time+"')");
+        DB.iud("INSERT INTO message(Message, name, email, phone, date) VALUES ('"+m.getMessage()+"','"+m.getName()+"','"+m.getEmail()+"','"+m.getMobile()+"','"+date+"')");
     }
 }
