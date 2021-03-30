@@ -324,38 +324,42 @@
             </div>
 
             <div class="ContactUs" >
+                <form>
 
-                <h2 style="text-align: center; color: white;" class="ServicesTopic">Contact Us</h2>
 
-                <div class="ContactfFrom" style="display: flex;padding: 0px 15%;">
-                    <div style="display: flex; flex-direction: column; width: 50%;">
-                        <div class="form-group">
-                            <input class="inputField" type="text" placeholder="Your Name *" >
+                    <h2 style="text-align: center; color: white;" class="ServicesTopic">Contact Us</h2>
+                    <div class="ContactfFrom" style="display: flex;padding: 0px 15%;">
+                        <div style="display: flex; flex-direction: column; width: 50%;">
+                            <div class="form-group">
+                                <input class="inputField" type="text" name="name" placeholder="Your Name *" >
 
+                            </div>
+                            <div class="form-group">
+                                <input class="inputField" type="email" name="mail"  placeholder="Your Email *">
+
+                            </div>
+                            <div class="form-group">
+                                <input class="inputField" type="tel" name="phone" placeholder="Your Phone *" >
+
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input class="inputField" type="email" placeholder="Your Email *">
+                        <div style="width: 50%; display: flex; flex-direction: column;" >
+                            <div class="form-group" style="height: 100%;">
+                                <textarea class="inputField" style="height: 100%; padding-top: 3%;" name="message" placeholder="Your Message *"></textarea>
 
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input class="inputField" type="tel" placeholder="Your Phone *" >
 
-                        </div>
                     </div>
-                    <div style="width: 50%; display: flex; flex-direction: column;" >
-                        <div class="form-group" style="height: 100%;">
-                            <textarea class="inputField" style="height: 100%; padding-top: 3%;" placeholder="Your Message *"></textarea>
-
-                        </div>
+                    <div style="width: 100%; text-align: center;">
+                        <input type="submit" class="sendMessageBtn" name="submit" value="Send Message">
+                        <!--<button class="sendMessageBtn">Send Message</button>-->
                     </div>
+                </form>
 
-                </div>
-                <div style="width: 100%; text-align: center;">
-                    <button class="sendMessageBtn">Send Message</button>
-                </div>
             </div>
-
-            <script type="text/javascript" src="<%= request.getContextPath()%>/JS/Home.js" />
+        </div>
+        <script type="text/javascript" src="<%= request.getContextPath()%>/JS/Home.js" />
 
     </body>
 </html>
