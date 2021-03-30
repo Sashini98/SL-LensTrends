@@ -69,8 +69,9 @@ public class UploadforSales extends HttpServlet {
             fi.write(Orgfile);
 
             BufferedImage image = ImageIO.read(Orgfile);
-
+            System.out.println("com1");
             File compressedImageFile = new File(Comfilepath);
+            System.out.println("com2");
             OutputStream os = new FileOutputStream(compressedImageFile);
 
             Iterator<ImageWriter> writers = ImageIO.getImageWritersByFormatName("jpeg");
@@ -94,14 +95,14 @@ public class UploadforSales extends HttpServlet {
             int height = image.getHeight();
             int width = image.getWidth();
             
-            int orientation = 0;
-            if (width > height){
-                orientation+= 1;
-            } else if (height > width){
-                orientation+=2;
-            } else if (height == width){
-                orientation+=3;
-            }
+            
+//            if (width > height){
+//                
+//            } else if (height > width){
+//                
+//            } else if (height == width){
+//               
+//            }
             
             String compath = Comimagename + ".jpeg";
             String orgpath = Orgimagename + ".jpeg";
@@ -119,13 +120,13 @@ public class UploadforSales extends HttpServlet {
             m.setHeight(height);
             m.setUploadedDate(new Date());
             m.setPhotogrpherId(Photographer_Id);
-            m.setOrientationId(orientation);
+//            m.setOrientationId(orientation);
             m.setUndiscovered(true);
             m.setPeople(false);
             PhotographDao photoDao = new PhotographDaoImpl();
             
             photoDao.uploadphotoforsales(m);
-            
+            System.out.println("hdjvbfh");
 
             response.getWriter().write("Successfully Uploaded");
 

@@ -327,6 +327,7 @@ function submitphoto() {
                     var responce = request.responseText;
                     location.reload();
                     alert(responce);
+                    alert("vasfv");
                 }
             }
 
@@ -492,19 +493,23 @@ function submitforreview() {
         flag = 1;
         alertmsg += "Title Should be less than 100 Characters\n\n";
         document.getElementById("title-area").value = "";
+        return false;
     }
     if (document.getElementById("category").value == "") {
         flag = 1;
         alertmsg += "Select a Category\n\n";
+        return false;
     }
     if (Splitkey.length > 51) {
         flag = 1;
         alertmsg += "You can add Maximum 50 Keywords only\n\n";
         document.getElementById("keyword-area").value = "";
+        return false;
     }
     if (price == "") {
         flag = 1;
         alertmsg += "Add Price for your Image !\n\n";
+        return false;
     }
     if (flag == 1) {
         alert(alertmsg);
