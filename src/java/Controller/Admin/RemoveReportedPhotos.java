@@ -6,7 +6,9 @@
 package Controller.Admin;
 
 import Controller.DaoImpl.PhotographDaoImpl;
+import Controller.DaoImpl.ReportedPhotographDaoImpl;
 import Model.Dao.PhotographDao;
+import Model.Dao.ReportedPhotographDao;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -30,6 +32,9 @@ public class RemoveReportedPhotos extends HttpServlet {
         try {
             PhotographDao pDao = new PhotographDaoImpl();
             pDao.updatePhotographState(status, pid);
+            
+            ReportedPhotographDao rDao = new ReportedPhotographDaoImpl();
+            rDao.deleteReportedPhotograph(pid);
 
             response.getWriter().write("Photograph Removed.");
         } 
