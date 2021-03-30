@@ -62,7 +62,7 @@ public class SubmitRelease extends HttpServlet {
             modal.write(filemod);
             
             ModalRelease m = new ModalRelease();
-            PropertyRelease p = new PropertyRelease(0, pName, 0)
+            PropertyRelease propertyRel = new PropertyRelease(0, pName, 0);
             
 
         } catch (Exception ex) {
