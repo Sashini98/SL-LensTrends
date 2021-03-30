@@ -42,8 +42,8 @@ public class DownloadImage extends HttpServlet {
         response.setHeader("Content-Disposition", "attachment; filename=" + title);
 
         OutputStream outStream = response.getOutputStream();
-
-        byte[] buffer = new byte[100000];
+        System.out.println(downloadFile.length());
+        byte[] buffer = new byte[(int)downloadFile.length()];
         int bytesRead = -1;
 
         while ((bytesRead = inStream.read(buffer)) != -1) {
