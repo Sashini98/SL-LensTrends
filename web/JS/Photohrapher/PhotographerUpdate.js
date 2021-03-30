@@ -552,3 +552,7 @@ function updatedata(field) {
         request.send("userzip=" + zip);
     }
 }
+
+function Deleteaccount(){
+    document.getElementById("delcon").style.display="block";
+}
