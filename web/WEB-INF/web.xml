@@ -360,6 +360,14 @@
         <servlet-name>DeletePhotographerAccount</servlet-name>
         <servlet-class>DeletePhotographerAccount</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserViewPhotographer</servlet-name>
+        <servlet-class>Controller.Photographer.UserViewPhotographer</servlet-class>
+    </servlet>
+    <servlet>
+         <servlet-name>UploadPropic</servlet-name>
+        <servlet-class>Controller.Photographer.UploadPropic</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -719,6 +727,14 @@
     <servlet-mapping>
         <servlet-name>DeletePhotographerAccount</servlet-name>
         <url-pattern>/DeletePhotographerAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserViewPhotographer</servlet-name>
+        <url-pattern>/UserViewPhotographer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadPropic</servlet-name>
+        <url-pattern>/UploadPropic</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

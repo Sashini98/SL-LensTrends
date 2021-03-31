@@ -61,6 +61,7 @@ public class ViewReportedQuesDetails extends HttpServlet {
             Date postedDate = question.getquestion_date();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
             String date = sdf.format(postedDate);
+            
             c.add(question.gettitle());
             c.add(question.getquestion());
             c.add(Integer.toString(question.getcategoryId()));
