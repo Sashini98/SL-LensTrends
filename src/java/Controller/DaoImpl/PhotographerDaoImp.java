@@ -465,6 +465,12 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public double getPhotographerTotalEarning(String photographerId) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ResultSet search = DB.search("SELECT p.Total FROM purchaseinvoice p JOIN photograph r ON p.Photograph_Id=r.Photograph_Id JOIN photographer d ON r.Photographer_Id=d.Photographer_Id WHERE d.Photographer_Id = '"+ photographerId +"';");
+        double e = 0.0; 
+        while (search.next()) {
+            e += search.getDouble("Total");
+            
+        }
+        return e;
     }
 }

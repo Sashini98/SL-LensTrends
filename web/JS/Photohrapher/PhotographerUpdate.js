@@ -597,49 +597,45 @@ function openmodal() {
     modal.style.display = "block";
 }
 
-function propicvalidation() {
-    var fileInput = document.getElementById('portimage');
-    var filePath = fileInput.value;
-    
-    var filesize = fileInput.files[0].size;
-    alert(filesize);
-    var lowersizelimit = 2000000; // lowest size to upload
-    var higherlimit = 10000000;
-    var flag = 0;
-    var alertmsg = "";
-
-    // Allowing file type 
-    var allowedExtensions = /(\.jpg|\.jpeg)$/i;
-
-    if (!allowedExtensions.exec(filePath)) {
-        alertmsg += "Upload only JPEG or JPG image";
-        flag = 1;
-        document.getElementById('portimage').value = '';
-        return false;
-    }
-    if (filesize <= lowersizelimit) {
-        alertmsg += "Image is less then 1MP, Upload Images between 1MP and 25MP";
-        flag = 1;
-        document.getElementById("portimage").value = "";
-        return false;
-    }
-    if (filesize => higherlimit) {
-        alertmsg += "Image is greater then 5MP, Upload Images between 1MP and 25MP";
-        flag = 1;
-        document.getElementById("portimage").value = "";
-        return false;
-    }
-
-    if (flag == 1) {
-        alert(alertmsg);
-        return false;
-    }
-}
+//function propicvalidation() {
+//    var fileInput = document.getElementById('portimage');
+//    var filePath = fileInput.value;
+//    alert(filePath);
+//    var filesize = fileInput.files[0].size;
+//    alert(filesize);
+//    var lowersizelimit = 2000000; // lowest size to upload
+//    var higherlimit = 10000000;
+//    var flag = 0;
+//    var alertmsg = "";
+//
+//    // Allowing file type 
+//    var allowedExtensions = /(\.jpg|\.jpeg)$/i;
+//
+//    if (!allowedExtensions.exec(filePath)) {
+//        alertmsg += "Upload only JPEG or JPG image";
+//        flag = 1;
+//        document.getElementById('portimage').value = '';
+//    }
+//    if (filesize <= lowersizelimit) {
+//        alertmsg += "Image is less then 1MP, Upload Images between 1MP and 25MP";
+//        flag = 1;
+//        document.getElementById("portimage").value = "";
+//    }
+//    if (filesize => higherlimit) {
+//        alertmsg += "Image is greater then 5MP, Upload Images between 1MP and 25MP";
+//        flag = 1;
+//        document.getElementById("portimage").value = "";
+//    }
+//    if (flag === 1) {
+//        alert(alertmsg);
+//        return false;
+//    }
+//}
 
 function propicupload() {
 
     var check = document.getElementById('portimage').value;
-    if (check == null) {
+    if (check === "" || check == null) {
         alert("Select an Image")
     } else {
         var file = document.getElementById('portimage').files[0];
