@@ -130,10 +130,10 @@
                 <label>2</label>
             </div>
 
-            <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">
+<!--            <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">
                 <img id="subscriptionIcon" src="../../Resources/Img/subscription.svg" />
                 <p><a href="#" type="button"  id="subscriptiontext">Subscription Plans</a></p>
-            </div>
+            </div>-->
 
             <div id="settingDiv"  onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" onclick="show('setting')"  class="setting">
                 <img id="settingIcon" src="../../Resources/Img/settings.svg" />
@@ -396,7 +396,7 @@
         </div>
         <script type="text/javascript" src="../../JS/Admin/AdminDashboard.js"></script>
         <script src="../../JS/Admin/UserManagement.js" type="text/javascript"></script>
-        <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>
+<!--        <script src="../../JS/Admin/PlanUpdate.js" type="text/javascript"></script>-->
         <script src="../../JS/Admin/ActivateUser.js" type="text/javascript"></script>
         <script src="../../JS/Admin/AdminProfileUpdate.js" type="text/javascript"></script>
         <script src="../../JS/Admin/AdminMessage.js" type="text/javascript" ></script>
