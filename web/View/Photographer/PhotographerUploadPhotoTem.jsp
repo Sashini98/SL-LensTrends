@@ -69,7 +69,7 @@
             <label for="category">Category:</label>
             <select name="category" id="category" onfocus="this.size = 10;" onblur='this.size = 1;' 
                     onchange='this.size = 1;this.blur();'>
-                   
+
                 <option value="">Select category</option>
                 <option value="1">Animals</option>
                 <option value="2">Buildings and Architecture</option>
@@ -132,7 +132,7 @@
                         <label id="fileNameproperty">
                             FileName
                         </label>
-                        
+
                         <p>Modal Release</p>
                         <input type="file" id="upmodalmodal" style="display: none;" accept="application/pdf" onchange="pressedmodalrelease();validation('upmodalmodal');">
                         <label for="upmodalmodal" id="uplabelmodal">
@@ -385,7 +385,7 @@
                         x += 1;
                     }
         %>
-        <img photo-id-accepted="<%=m.get(i).getId()%>" class="selection-accepted" src="../../Resources/Img/Gallery Sample Images/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>)">
+        <img photo-id-accepted="<%=m.get(i).getId()%>" class="selection-accepted" src="../../Resources/Img/Gallery Sample Images/<%=m.get(i).getPath()%>" id="accept<%= accepted%>" onclick="clickimage('accept<%= accepted%>', 'image-box-accepted',<%= m.get(i).getId()%>,<%= countaccepted%>);totalearningdetail('<%= m.get(i).getId()%>')">
         <!--        <img src="../../Resources/Img/profile/a2.jpg" id="re10" onclick="clickimage('re10')" >
                 <img src="../../Resources/Img/profile/a3.jpg" id="re11" onclick="clickimage('re11')">
                 <img src="../../Resources/Img/profile/a4.jpg" id="re12" onclick="clickimage('re12')">-->
@@ -402,9 +402,9 @@
             <div class="details-accepted">                    
 
 
-                <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;5 Times</span> </p>
-                <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
-                <span style="font-weight: bold;">Total Earing:&emsp; </span>
+                <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id="count">&emsp;</span> </p>
+                <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;' id="pricetotal">&emsp; </span> </p>
+                <span style="font-weight: bold;">Total Earing:&emsp;<span id="totalearning"></span></span>
                 <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id='fileidaccepted'></span> </p>
 
 

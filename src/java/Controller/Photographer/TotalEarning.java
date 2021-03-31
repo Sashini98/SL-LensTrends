@@ -5,8 +5,15 @@
  */
 package Controller.Photographer;
 
+import Controller.DaoImpl.PurchaseInvoiceDaoImpl;
+import Model.Dao.PurchaseInvoiceDao;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -22,7 +29,22 @@ public class TotalEarning extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println(request.getParameter("pid"));
+        try {
+            //        System.out.println(request.getParameter("pid"));
+            String para = request.getParameter("pid");
+            PurchaseInvoiceDao d = new PurchaseInvoiceDaoImpl();
+            
+            d.gettotalPurchacedimage(para);
+//            ArrayList details = new ArrayList();
+            
+            Gson g = new Gson();
+            String toJson = g.toJson(d.gettotalPurchacedimage(para));
+            response.getWriter().write(toJson);
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(TotalEarning.class.getName()).log(Level.SEVERE, null, ex);
+        }
+            
         
     }
 

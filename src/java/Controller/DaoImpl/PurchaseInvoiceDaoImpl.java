@@ -63,7 +63,7 @@ public class PurchaseInvoiceDaoImpl implements PurchaseInvoiceDao {
         if (ids.next()) {
             int id = Integer.parseInt(ids.getString("Invoice_Id").split("INV")[1]);
             id += 1;
-            newID = "INV"+id;
+            newID = "INV" + id;
 
         } else {
             newID = "INV1";
@@ -86,7 +86,7 @@ public class PurchaseInvoiceDaoImpl implements PurchaseInvoiceDao {
 
     @Override
     public void deleteClientInvoices(String clientId) throws SQLException {
-         DB.iud("DELETE FROM purchaseinvoice where Client_Id = '" + clientId + "'");
+        DB.iud("DELETE FROM purchaseinvoice where Client_Id = '" + clientId + "'");
     }
 
 //    @Override
@@ -94,5 +94,30 @@ public class PurchaseInvoiceDaoImpl implements PurchaseInvoiceDao {
 //        DB.iud("SELECT Total FROM purchaseinvoice ");
 //        return 0;        
 //    }
+    @Override
+    public ArrayList gettotalPurchacedimage(String photographid) throws SQLException {
+        
+//        ArrayList<PurchaseInvoice> photos = new ArrayList<>();
+        ResultSet downcount = DB.search("SELECT COUNT(Photograph_Id) FROM purchaseinvoice WHERE Photograph_Id='"+ photographid +"'");
+        ResultSet photoprice = DB.search("SELECT Total FROM purchaseinvoice WHERE Photograph_Id='"+ photographid +"'");
+        
+        int count = 0;
+        double price = 0;
+        if(downcount.next()){
+            count = downcount.getInt("COUNT(Photograph_Id)");
+//            System.out.println(count);
+        }
+        if(photoprice.next()){
+            price = photoprice.getDouble("Total");
+//            System.out.println(price);
+        }
+        
+        ArrayList details = new ArrayList();
+        details.add(count);
+        details.add(price);
+//        System.out.println(details);
+        return details;
+
+    }
 
 }

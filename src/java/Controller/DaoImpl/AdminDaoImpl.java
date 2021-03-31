@@ -41,20 +41,29 @@ public class AdminDaoImpl implements AdminDao {
         ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' AND Password = '" + password + "' ");
 
         if (AdminEmail.next()) {
-            Admin a = new Admin();
+            String passHash = AdminEmail.getString("Password");
 
-            a.setAdminId(AdminEmail.getString("Admin_id"));
-            a.setType(AdminEmail.getString("Type"));
-            a.setEmail(AdminEmail.getString("Email"));
-            a.setPassword(AdminEmail.getString("Password"));
-            a.setFname(AdminEmail.getString("Fname"));
-            a.setLname(AdminEmail.getString("Lname"));
-            a.setMobile(AdminEmail.getString("Mobile"));
-            a.setAddress_no(AdminEmail.getString("Address_No"));
-            a.setCity(AdminEmail.getString("City"));
-            a.setProvince(AdminEmail.getString("Province"));
+            Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
+            boolean authenticate = auth.authenticate(password.toCharArray(), passHash);
+            if (authenticate) {
+                Admin a = new Admin();
 
-            return a;
+                a.setAdminId(AdminEmail.getString("Admin_id"));
+                a.setType(AdminEmail.getString("Type"));
+                a.setEmail(AdminEmail.getString("Email"));
+                a.setPassword(AdminEmail.getString("Password"));
+                a.setFname(AdminEmail.getString("Fname"));
+                a.setLname(AdminEmail.getString("Lname"));
+                a.setMobile(AdminEmail.getString("Mobile"));
+                a.setAddress_no(AdminEmail.getString("Address_No"));
+                a.setCity(AdminEmail.getString("City"));
+                a.setProvince(AdminEmail.getString("Province"));
+
+                return a;
+            } else {
+                return null;
+            }
+
         } else {
             return null;
         }
@@ -64,9 +73,8 @@ public class AdminDaoImpl implements AdminDao {
     public void addAdmin(Admin admin) throws SQLException {
         DB.iud("INSERT INTO admin (Admin_Id, Email, Fname, Lname, Mobile, Address_NO, City, Province, Password, Type, Gender_id) "
                 + "VALUES ('" + admin.getAdminId() + "', '" + admin.getEmail() + "', '" + admin.getFname() + "',"
-                + " '" + admin.getLname() + "', '" + admin.getMobile()+ "' , '" + admin.getAddress_no() + "', '" + admin.getCity() + "', '" + admin.getProvince() + "',"
+                + " '" + admin.getLname() + "', '" + admin.getMobile() + "' , '" + admin.getAddress_no() + "', '" + admin.getCity() + "', '" + admin.getProvince() + "',"
                 + " '" + admin.getPassword() + "', '" + admin.getType() + "','" + admin.getGenderId() + "' ) ");
-                
 
     }
 
@@ -117,23 +125,22 @@ public class AdminDaoImpl implements AdminDao {
 
     @Override
     public String getLastId() throws SQLException {
-       String id="";
-       ResultSet aid=DB.search("SELECT Admin_Id as aid FROM admin ORDER BY Admin_Id DESC LIMIT 1; ");
-      
-       
+        String id = "";
+        ResultSet aid = DB.search("SELECT Admin_Id as aid FROM admin ORDER BY Admin_Id DESC LIMIT 1; ");
+
         if (aid.next()) {
-            id=aid.getString("aid");
+            id = aid.getString("aid");
             return id;
 
         } else {
             return null;
         }
-       
+
     }
 
     @Override
     public Admin getAdminById(String adminId) throws SQLException {
-       ResultSet admin = DB.search("SELECT * FROM admin WHERE Admin_id = '" + adminId + "'");
+        ResultSet admin = DB.search("SELECT * FROM admin WHERE Admin_id = '" + adminId + "'");
         if (admin.next()) {
             Admin a = new Admin();
             a.setAdminId(admin.getString("Admin_Id"));
@@ -146,13 +153,12 @@ public class AdminDaoImpl implements AdminDao {
             a.setProvince(admin.getString("Province"));
             a.setMobile(admin.getString("Mobile"));
             a.setGenderId(admin.getInt("Gender_Id"));
-            
 
             return a;
 
         } else {
             return null;
-        } 
+        }
     }
 
 }

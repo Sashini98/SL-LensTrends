@@ -269,3 +269,25 @@ body{
     }
 }
 
+.profilebox .updown {
+    margin-top: 3%;
+    display: flex;
+}
+
+.profilebox .updown img{
+    padding-left: 10px;
+}
+
+#up {
+    padding-right: 3%;
+    padding-left: 1%;
+    color: green;
+    font-weight: bold;
+}
+
+#down {
+    padding-right: 3%;
+    padding-left: 1%;
+    color: red;
+    font-weight: bold;
+}
