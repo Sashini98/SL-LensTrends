@@ -5,6 +5,7 @@
 --%>
 <%
     String logged = (String) request.getAttribute("loggedAs");
+    String id=request.getParameter("pid");
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -98,6 +99,7 @@
 
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
+                <input id="pid" name="pid" type="text" value="<%= id%>" style="display: none;">
 
                 <div class="user-image">
                     <img src="../../Resources/Img/athavan.jpg">
