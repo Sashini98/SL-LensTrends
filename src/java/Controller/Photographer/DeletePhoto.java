@@ -5,8 +5,13 @@
  */
 package Controller.Photographer;
 
+import Controller.DaoImpl.ModalReleaseDaoImpl;
 import Controller.DaoImpl.PhotographDaoImpl;
+import Controller.DaoImpl.PropertyReleaseDaoImpl;
+import Model.Dao.ModalReleaseDao;
 import Model.Dao.PhotographDao;
+import Model.Dao.PropertyReleaseDao;
+import Model.ModalRelease;
 import Model.Photograph;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -32,24 +37,32 @@ public class DeletePhoto extends HttpServlet {
             String photopath = request.getParameter("pathtobedeleted"); //getting request from js
             int idd = Integer.parseInt(request.getParameter("idd")); //getting request from js
 
+            ModalReleaseDao m = new ModalReleaseDaoImpl();
+            int releaseid = m.getModalrelease(idd).getId();
+            String realpath = getServletContext().getRealPath("");
+            String releasepath = realpath + "\\Resources\\Img\\Gallery Sample Images\\ModalRelease\\" + m.getModalrelease(idd).getPath() + ".pdf";
+
+            PropertyReleaseDao p = new PropertyReleaseDaoImpl();
+            int releasepropid = p.getpropertylease(idd).getId();
+            String realpathprop = getServletContext().getRealPath("");
+            String releasepathprop = realpathprop + "\\Resources\\Img\\Gallery Sample Images\\ModalRelease\\" + p.getpropertylease(idd).getPath() + ".pdf";
+
             PhotographDao deletephotoDao = new PhotographDaoImpl();
-            
+
             String[] photoidArray = photopath.split("/"); //spliting path within /
             String photoname = photoidArray[photoidArray.length - 1]; //getting name of file last elememt of array
-            
-            
-            
+
             Photograph photograph = deletephotoDao.getPhotographById(idd);
             String filepathcom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/").replace('\\', '/'); //getting absolute path of image folder
             String filepathuncom = getServletContext().getRealPath("Resources/Img/Gallery Sample Images/OriginalImageForSales").replace('\\', '/');
-            
+
             Photograph photographOrg = deletephotoDao.getoriginalpath(photoname);
-            
+
             int photostateid = photograph.getStateId();
             String photonameOrg = photographOrg.getUncompresedpath();
-            
-            deletephotoDao.deletephoto(idd, photostateid, filepathcom + "/" + photoname, filepathuncom + "/" + photonameOrg);
 
+            deletephotoDao.deletephoto(idd, photostateid, filepathcom + "/" + photoname, filepathuncom + "/" + photonameOrg);
+            m.deleteModal(idd, releasepath);
             response.getWriter().write("Successfully Deleted");
 
         } catch (SQLException ex) {

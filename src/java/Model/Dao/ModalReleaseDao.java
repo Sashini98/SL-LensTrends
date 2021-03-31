@@ -19,4 +19,5 @@ public interface ModalReleaseDao {
     
     public void addModalrelease(int photoid,String Modpath) throws SQLException;
     public ModalRelease getModalrelease(int PhotographId) throws SQLException;
+    public void deleteModal (int photoid,String path) throws SQLDataException;
 }
