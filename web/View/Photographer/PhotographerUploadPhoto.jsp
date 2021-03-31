@@ -109,7 +109,7 @@
         </div>
 
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
-        <script type="text/javascript" src="../../JS/Photohrapher/totalearning.js"></script>
+        <!--<script type="text/javascript" src="../../JS/Photohrapher/totalearning.js"></script>-->
 
     </body>
 </html>

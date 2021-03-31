@@ -144,12 +144,13 @@
         </div>
         <div>
             <div class="account" id="accsec">
-                <div class="heading" >
+<!--                <div class="heading" >
                     <p>Account                                                            
                         <label> <a href="#" type="button">Client View </a></label>
                     </p>
 
-                </div> <br>
+                </div> -->
+<br>
                 <div class="edit">
                     <form>                                                        
                         <label for="fname">First Name </label> 
