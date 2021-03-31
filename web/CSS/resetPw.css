@@ -1,3 +1,53 @@
+.logAccount{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    /*width: 33%;*/
+    margin: auto;   
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 2px 2px 4px #000000;
+    border-radius: 15px;
+    background-color: white;
+    /*display: none;*/
+    z-index: 2; 
+    /*position: fixed;*/
+    margin-top: 150px;
+
+}
+
+.loginErrorMessage{
+    color: red;
+    text-align: center;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    font-size: 18px;
+}
+
+.logAccountHeader{
+    display: grid; 
+    grid-template-columns: 90% 10%;
+    text-align: center;
+    border-bottom: 1px solid black;
+    /*align-items:*/ 
+}
+
+.selections > button{
+    margin-bottom: 3%;
+    background-color: rgb(216, 218, 223);
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    color: black;
+    font-weight: bold;
+    outline: none;
+}
+
+#user:hover, #contributor:hover {
+    background-color: #008CBA;
+    cursor: pointer;
+    color: white;
+}
+
 .container {
     /*margin: 4% 5% 0 55%;*/ 
     /*border-radius: 17px;*/
@@ -11,7 +61,7 @@
     /*float: right;*/
     margin-left: 60%;
     margin-top: 5%;
-    
+
 }
 
 .container h1{
