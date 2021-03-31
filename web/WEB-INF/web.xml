@@ -358,15 +358,19 @@
     </servlet>
     <servlet>
         <servlet-name>DeletePhotographerAccount</servlet-name>
-        <servlet-class>DeletePhotographerAccount</servlet-class>
+        <servlet-class>Controller.Photographer.DeletePhotographerAccount</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UserViewPhotographer</servlet-name>
         <servlet-class>Controller.Photographer.UserViewPhotographer</servlet-class>
     </servlet>
     <servlet>
-         <servlet-name>UploadPropic</servlet-name>
+        <servlet-name>UploadPropic</servlet-name>
         <servlet-class>Controller.Photographer.UploadPropic</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TotalEarning</servlet-name>
+        <servlet-class>Controller.Photographer.TotalEarning</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
@@ -735,6 +739,10 @@
     <servlet-mapping>
         <servlet-name>UploadPropic</servlet-name>
         <url-pattern>/UploadPropic</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TotalEarning</servlet-name>
+        <url-pattern>/TotalEarning</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

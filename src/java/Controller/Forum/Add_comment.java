@@ -29,7 +29,9 @@ public class Add_comment extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int aid=parseInt(request.getParameter("ansid"));
+        String ansid=request.getParameter("ansid");
+        System.out.println("id"+ansid);
+        int aid=Integer.parseInt(ansid);
         String comment=request.getParameter("comm");
          String id = "";
         
