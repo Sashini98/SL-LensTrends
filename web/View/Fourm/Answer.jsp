@@ -43,6 +43,7 @@
 
     %>
     <div class="comments">
+        Comments
         <p><%= c.get(k * 2)%></p> 
         <span>Posted by: <%= c.get((k * 2) + 1)%></span> <span id="time">1234</span>
     </div>
