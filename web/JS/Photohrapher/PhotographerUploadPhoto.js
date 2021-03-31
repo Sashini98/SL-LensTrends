@@ -222,7 +222,6 @@ function submitrelease() {
     }
 }
 
-
 function loadphotos() {
 
     var request = new XMLHttpRequest();
@@ -541,4 +540,23 @@ function submitforreview() {
     request.open("POST", "../../SubmitforReview", false);
     request.send(formdata);
     location.reload();
+}
+
+function totalearning(id) {
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+
+                var responce = request.responseText;
+                alert(responce);
+            }
+        }
+
+    };
+    request.open("POST", "../../TotalEarning", false);
+    request.send("pid="+id);
+    location.reload();
+    
 }
