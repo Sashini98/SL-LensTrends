@@ -639,7 +639,7 @@ function propicupload() {
         alert("Select an Image")
     } else {
         var file = document.getElementById('portimage').files[0];
-        alert(file);
+//        alert(file);
         alert(document.getElementById("portimage"));
         var formdata = new FormData();
         formdata.append("file1", file);

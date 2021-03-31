@@ -9,7 +9,10 @@
 <!DOCTYPE html>
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+
+    String pic = p.getProfilpic();
 %>
+
 <html>
 
     <head>
@@ -63,6 +66,7 @@
             <div class="upload-modal-content">
                 <span class="upload-close" id='upload-close' onclick="cleardata()">&times;</span>
                 <div class="upload-modal-image">
+                    
                     <img src="../../Resources/Img/upload.svg">
                     <input type="file" id="portimage" style="display:none;" accept="image/jpeg" onchange="propicvalidation();">
                     <label for="portimage">
@@ -111,7 +115,7 @@
             <div class="profile-header">
                 <div class="user-detail">
                     <div class="user-image">
-                        <img src="../../Resources/Img/athavan.jpg">
+                        <img src="../../Resources/Img/Gallery Sample Images/ProfilePicture/<%= pic%>">
                         <div class="labelpro">                            
                             <label onclick="openPropicmodal()">
                                 Change
