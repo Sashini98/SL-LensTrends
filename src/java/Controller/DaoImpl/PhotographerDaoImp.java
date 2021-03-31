@@ -462,4 +462,9 @@ public class PhotographerDaoImp implements PhotographerDao {
     public void uploadprofilepic(Photographer profilpic) throws SQLException {
         DB.iud("UPDATE photographer SET profile_pic_path='" + profilpic.getProfilpic() + "' WHERE Photographer_Id='" + profilpic.getPhotographerId() + "'");
     }
+
+    @Override
+    public double getPhotographerTotalEarning(String photographerId) throws SQLException {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

@@ -98,19 +98,19 @@
             <div id="photomanageDiv" onmouseover="photomanageButtonChange('photomanageDiv')" onmouseout="photomanageButtonBack('photomanageDiv')" onclick="show('photomanage')" class="photomanage">
                 <img id="photomanageIcon" src="../../Resources/Img/photomanagement.svg" />
                 <p><a href="#" type="button"  id="photomanagement">Reported Photos</a></p>
-                <label>4</label>
+<!--                <label>4</label>-->
             </div>
 
             <div id="photoapprovalDiv" onmouseover="photoapprovalButtonChange('photoapprovalDiv')" onmouseout="photoapprovalButtonBack('photoapprovalDiv')" onclick="show('photoapproval')" class="photoapproval">
                 <img id="photoapprovalIcon" src="../../Resources/Img/photoreview.svg" />
                 <p><a href="#" type="button"  id="photo-approval">Photo Approval</a></p>
-                <label>4</label>
+<!--                <label>4</label>-->
             </div>
 
             <div id="forumDiv" onmouseover="forumButtonChange('forumDiv')" onmouseout="forumButtonBack('forumDiv')" onclick="show('forum')" class="forum">
                 <img id="forumIcon" src="../../Resources/Img/forummangement.svg" />
                 <p><a href="#" type="button"  id="forummanage">Reported Forum</a></p>
-                <label>3</label>
+<!--                <label>3</label>-->
             </div>
 
             <%
@@ -119,7 +119,7 @@
             <div id="userDiv" onmouseover="userButtonChange('userDiv')" onmouseout="userButtonBack('userDiv')" onclick="show('user')"  class="user">
                 <img id="userIcon" src="../../Resources/Img/user.svg" />
                 <p><a href="#" type="button"  id="usermanage">Manage User</a></p>
-                <label>2</label>
+<!--                <label>2</label>-->
             </div>
             <%
                 }
@@ -128,7 +128,7 @@
             <div id="notifyDiv"  onmouseover="notifyButtonChange('notifyDiv')" onmouseout="notifyButtonBack('notifyDiv')" onclick="show('notification')" class="notification">
                 <img id="notificationIcon" src="../../Resources/Img/notify.svg" />
                 <p><a href="#" type="button"  id="notify">Notification</a></p>
-                <label>2</label>
+<!--                <label>2</label>-->
             </div>
 
 <!--            <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">

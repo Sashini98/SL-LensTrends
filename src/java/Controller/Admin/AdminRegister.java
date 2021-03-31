@@ -51,12 +51,17 @@ public class AdminRegister extends HttpServlet {
             AdminDao admin = new AdminDaoImpl();
             id = admin.getLastId();
 
+            String aid ;
+            if (id != null){
             String[] parts = id.split("A");
             String row = parts[1];
             int lastId = Integer.parseInt(row);
             int newId = lastId + 1;
-            String aid = Integer.toString(newId);
+            aid = Integer.toString(newId);
             aid = "A" + aid;
+            }else{
+                aid = "A1";
+            }
             
             Admin a = new Admin();
             a.setAdminId(aid);

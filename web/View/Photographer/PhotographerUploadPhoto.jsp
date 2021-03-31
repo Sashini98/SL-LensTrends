@@ -11,8 +11,7 @@
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
     String pid = p.getPhotographerId();
-    
-    
+
 
 %>
 <html>
@@ -58,6 +57,11 @@
             </div>
         </div>
 
+        <script>
+            setInterval(function () {
+
+            }, 2000);
+        </script>
         <div class="inside-header">
             <ul>
                 <li><a href="#" type="button" id="tosubmit" onclick="navigation('tosubmit')">To Submit</a></li>
@@ -75,7 +79,8 @@
                     <span class="upload-close" id='upload-close' onclick="cleardata()">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <input type="file" value="select" id="upimage" style="display:none;" accept="image/jpeg" onchange="pressedupload();validation('upimage');">
+                        <input type="file" value="select" id="upimage" style="display:none;" accept="image/jpeg" onchange="pressedupload();
+                                validation('upimage');">
                         <label for="upimage">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>

@@ -377,6 +377,10 @@
         <servlet-class>Controller.Photographer.totalearningdetail</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>LoadPhotographerTotalEarning</servlet-name>
+        <servlet-class>Controller.Photographer.LoadPhotographerTotalEarning</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>RatePhotographer</servlet-name>
         <servlet-class>Controller.Photographer.RatePhotographer</servlet-class>
     </servlet>
@@ -755,6 +759,10 @@
     <servlet-mapping>
         <servlet-name>totalearningdetail</servlet-name>
         <url-pattern>/totalearningdetail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadPhotographerTotalEarning</servlet-name>
+        <url-pattern>/LoadPhotographerTotalEarning</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>RatePhotographer</servlet-name>
