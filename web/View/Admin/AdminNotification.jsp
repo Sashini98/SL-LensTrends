@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <div class="box">
+<!--    <div class="box">
         <div class="box1">               
             <h2>System Notifications</h2>
 
@@ -121,4 +121,4 @@
         </div>
     </div>
 
-</div>
+</div>-->
