@@ -384,6 +384,10 @@
         <servlet-name>RatePhotographer</servlet-name>
         <servlet-class>Controller.Photographer.RatePhotographer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SuggestKwords</servlet-name>
+        <servlet-class>Controller.Clent.SuggestKwords</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -767,6 +771,10 @@
     <servlet-mapping>
         <servlet-name>RatePhotographer</servlet-name>
         <url-pattern>/RatePhotographer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SuggestKwords</servlet-name>
+        <url-pattern>/SuggestKwords</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
