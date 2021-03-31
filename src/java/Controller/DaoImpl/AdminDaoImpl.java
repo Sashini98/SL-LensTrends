@@ -38,7 +38,7 @@ public class AdminDaoImpl implements AdminDao {
 
     @Override
     public Admin getAdminByEmailAndPassword(String email, String password) throws SQLException {
-        ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' AND Password = '" + password + "' ");
+        ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' ");
 
         if (AdminEmail.next()) {
             String passHash = AdminEmail.getString("Password");
