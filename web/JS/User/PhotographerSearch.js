@@ -4,7 +4,7 @@ function  PhotographerKeywordSearch(event, x) {
         if (x === 1) {
             Search();
 
-        }else if(x === 2){
+        } else if (x === 2) {
             Search2();
         }
     }
@@ -21,7 +21,7 @@ function Search() {
     var photographerProvince = photographerProvinceObj.options[photographerProvinceObj.selectedIndex].text;
     var gender;
 
-    
+
     if (iframeObj.contentWindow.document.getElementById('Male').checked) {
         gender = 'Male';
     } else if (iframeObj.contentWindow.document.getElementById('Female').checked) {
@@ -52,14 +52,14 @@ function Search() {
 }
 
 
-function Search2(){
+function Search2() {
 
     var serchedFor = parent.document.getElementById("keywordSearch").value;
 
 
     var photographerCategory = document.getElementById('PhotographerCategory').value;
     var photographerCity = document.getElementById('photographerCity').value;
-   var photographerProvinceObj = document.getElementById('photographerProvince');
+    var photographerProvinceObj = document.getElementById('photographerProvince');
     var photographerProvince = photographerProvinceObj.options[photographerProvinceObj.selectedIndex].text;
 
     var gender;
@@ -268,7 +268,7 @@ function autocomplete(inp, arr) {
                     /*close the list of autocompleted values,
                      (or any other open lists of autocompleted values:*/
                     closeAllLists();
-                    searchDoctorResults();
+                    
 
                 });
 
@@ -367,37 +367,35 @@ function  getkWords() {
     };
 
 
-    request.open("POST", "../../photographer_suggest", true);
+    request.open("POST", "../../photographerNameSuggest", true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 
 }
 
 
-document.getElementById("add").onclick
-var pname;
+
+function  getkWords() {
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                pname = JSON.parse(responce);
 
 
-var request = new XMLHttpRequest();
-
-request.onreadystatechange = function () {
-
-    if (request.status === 200) {
-        if (request.readyState === 4) {
-
-            var responce = request.responseText;
-            pname = JSON.parse(responce);
-            
-
+            }
         }
-    }
 
-};
+    };
 
-request.open("POST", "../../photographerNameSuggest", false);
-request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-request.send();
+    request.open("POST", "../../photographerNameSuggest", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
 
-autocomplete(document.getElementById("keywordSearch"), pname);
 
 
