@@ -13,6 +13,26 @@ import java.sql.SQLException;
  */
 public interface PhotographerRatingDao {
     
-    public void deleteClientPhotographerRating(String clientId) throws SQLException;
+     public void addLike(String photographerId, String loggedId) throws SQLException;
+
+    public void addDisike(String photographerId, String loggedId) throws SQLException;
+
+    public void addRateatBegin(String photographerId) throws SQLException;
+
+    public int getLikes(String photographerId) throws SQLException;
+
+    public int getDislikes(String photographerId) throws SQLException;
+
+    public boolean checkLikes(String photographerId, String loggedId) throws SQLException;
+
+    public boolean checkDislikes(String photographerId, String loggedId) throws SQLException;
+
+    public void deleteLike(String photographerId, String loggedId) throws SQLException;
+
+    public void deleteDisike(String photographerId, String loggedId) throws SQLException;
+
+    public int getLikeCount(String photographerId) throws SQLException;
+
+    public int getDislikeCount(String photographerId) throws SQLException;
     
 }

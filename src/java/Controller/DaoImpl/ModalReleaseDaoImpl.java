@@ -9,6 +9,7 @@ import DB.DB;
 import Model.Dao.ModalReleaseDao;
 import Model.ModalRelease;
 import Model.Photograph;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.ResultSet;
@@ -46,6 +47,19 @@ public class ModalReleaseDaoImpl implements ModalReleaseDao {
 
         } else {
             return null;
+        }
+
+    }
+
+    @Override
+    public void deleteModal(int photoid, String path) throws SQLDataException {
+
+        try {
+            File myObj = new File(path);
+            myObj.delete();
+            DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + photoid + "'");
+        } catch (SQLException ex) {
+            Logger.getLogger(ModalReleaseDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

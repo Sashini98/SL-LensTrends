@@ -87,7 +87,7 @@
                 <li><a href="#" type="button" id="notaccepted" onclick="navigation('notaccepted')">Not Accepted</a></li>
                 <li><a href="#" type="button" id="reviewed" onclick="navigation('reviewed')">Reviewed</a></li>
                 <li><a href="#" type="button" id="upload-photo" onclick="document.getElementById('upload-modal').style.display = 'block'">Upload</a> </li>
-                <li id="earnings">Total Earning: Rs.<p id="earning"></p></li>
+                <li id="earnings">Total Earning: Rs.<span id="earning"></span></li>
             </ul>     
 
             <div id="upload-modal" class="upload-modal">

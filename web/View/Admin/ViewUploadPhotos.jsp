@@ -59,8 +59,8 @@
                     <td><input type="text" name="gen" id="gen" disabled=""></td>
                 </tr>
                 <tr>
-<!--                    <td align="left">Release Form</td>
-                    <td></td>-->
+                    <td align="left">Release Form</td>
+                    <td></td>
                     <td align="left">Orientation</td>
                     <td><input type="text" name="size" id="orientation" disabled=""></td>
                 </tr>

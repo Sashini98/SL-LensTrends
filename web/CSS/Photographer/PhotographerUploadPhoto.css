@@ -698,9 +698,11 @@ div .details .releases p span a {
     background-color: #ff2e40;
     padding: 0.5% 1%;
     float: right;
-    margin-right: 4%;
+    margin-right: 8%;
     font-weight: bold;
     font-size: 110%;
+    /*height: 10%;*/
+    width: 20%;
     /*margin-top: auto;*/
 }
 
