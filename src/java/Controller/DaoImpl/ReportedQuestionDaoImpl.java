@@ -58,7 +58,9 @@ public class ReportedQuestionDaoImpl implements ReportedQuestionDao {
 
     @Override
     public void addReportedQuestion(String log, ReportedQuestion rep) throws SQLException {
+        System.out.println("hi");
         if (log.equalsIgnoreCase("client")) {
+            System.out.println(""+rep.getReason()+"    "+rep.getDescription()+"   "+rep.getQuestionId()+ "   "+rep.getClientId());
             DB.iud("INSERT INTO reported_question(Reason, Description, Question_Id, Client_Id) VALUES ('"+rep.getReason()+"','"+rep.getDescription()+"','"+rep.getQuestionId()+"','"+rep.getClientId()+"')");
 
         } else {

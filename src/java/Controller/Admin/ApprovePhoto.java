@@ -25,7 +25,7 @@ public class ApprovePhoto extends HttpServlet {
             throws ServletException, IOException {
 
         int pid = Integer.parseInt(request.getParameter("id"));
-        int status = 3;
+        int status = 4;
 
         try {
             PhotographDao pDao = new PhotographDaoImpl();

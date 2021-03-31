@@ -157,14 +157,14 @@ function show(selectedTab) {
         document.getElementById("uplodedPhotosCss").disabled = true;
         document.getElementById("reportedQuetionsCss").disabled = true;
         document.getElementById("notificationCss").disabled = false;
-        notifyButtonChange();
-        subscriptionButtonBack();
-        photomanageButtonBack();
-        photoapprovalButtonBack();
-        forumButtonBack();
-        userButtonBack();
-        summaryButtonBack();
-        settingButtonBack();
+//        notifyButtonChange();
+//        subscriptionButtonBack();
+//        photomanageButtonBack();
+//        photoapprovalButtonBack();
+//        forumButtonBack();
+//        userButtonBack();
+//        summaryButtonBack();
+//        settingButtonBack();
     } else if (selectedTab === 'photomanage') {
         document.getElementById("notificationCss").disabled = true;
         document.getElementById("photoapprovalCss").disabled = true;
@@ -176,14 +176,14 @@ function show(selectedTab) {
         document.getElementById("uplodedPhotosCss").disabled = true;
         document.getElementById("reportedQuetionsCss").disabled = true;
         document.getElementById("managePhotoCss").disabled = false;
-        notifyButtonBack();
-        subscriptionButtonBack();
-        photomanageButtonChange();
-        photoapprovalButtonBack();
-        forumButtonBack();
-        userButtonBack();
-        summaryButtonBack();
-        settingButtonBack();
+//        notifyButtonBack();
+//        subscriptionButtonBack();
+//        photomanageButtonChange();
+//        photoapprovalButtonBack();
+//        forumButtonBack();
+//        userButtonBack();
+//        summaryButtonBack();
+//        settingButtonBack();
     } else if (selectedTab === 'photoapproval') {
         document.getElementById("notificationCss").disabled = true;
         document.getElementById("managePhotoCss").disabled = true;

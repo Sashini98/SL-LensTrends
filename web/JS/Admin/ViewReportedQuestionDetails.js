@@ -10,7 +10,7 @@ function ViewQusetionDetails(id) {
                 var details = JSON.parse(responce);
 
                 document.getElementById("title").innerHTML = details[0];
-                document.getElementById("question").value = details[1];
+                document.getElementById("question").innerHTML = details[1];
                 document.getElementById("cate").value = details[2];
                 document.getElementById("reported").value = details[3];
                 document.getElementById("posted").value = details[4];
@@ -56,7 +56,7 @@ function RemoveQue() {
 function clearFieldsofQuestion() {
 
     document.getElementById("title").innerHTML = "";
-    document.getElementById("question").value = "";
+    document.getElementById("question").innerHTML = "";
     document.getElementById("cate").value = "";
     document.getElementById("reported").value = "";
     document.getElementById("posted").value = "";
