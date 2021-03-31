@@ -217,6 +217,32 @@ public class PhotographDaoImpl implements PhotographDao {
                 + "Keywords='" + submittoreview.getKeywords() + "',price='" + submittoreview.Price() + "',Gender_Id='"+ submittoreview.getGenderId() +"' WHERE Photograph_Id = '" + submittoreview.getId() + "'");
     }
 
+    @Override
+    public ArrayList<Photograph> getPhotographsByState(int stateid) throws SQLException {
+       ArrayList<Photograph> photos = new ArrayList<>();
+        try {
+            ResultSet photographs = DB.search("SELECT  * FROM photograph WHERE state_id = '"+ stateid +"'");
+
+            while (photographs.next()) {
+                Photograph p = new Photograph(photographs.getInt("Photograph_Id"), photographs.getString("path"), photographs.getString("uncompresedpath"),
+                        photographs.getDouble("Width"), photographs.getDouble("Height"),
+                        photographs.getString("Keywords"),
+                        photographs.getDate("Uploaded_Date"), photographs.getDouble("Price"),
+                        photographs.getBoolean("Undiscovered"), photographs.getString("Photographer_Id"),
+                        photographs.getString("Title"), photographs.getInt("Photograph_category_id"),
+                        photographs.getBoolean("People"), photographs.getInt("Orientation_Id"),
+                        photographs.getInt("state_id"), photographs.getInt("Gender_Id"));
+
+                photos.add(p);
+            }
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+//            Logger.getLogger(PhotographDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return photos;
+    }
+
 }
 
 

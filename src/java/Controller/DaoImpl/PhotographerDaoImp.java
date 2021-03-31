@@ -424,7 +424,7 @@ public class PhotographerDaoImp implements PhotographerDao {
     @Override
     public List getPhotographerNames() throws SQLException {
         ArrayList<Photographer> a = new ArrayList();
-        ResultSet photographer = DB.search("SELECT Fname,Lname FROM photographer");
+        ResultSet photographer = DB.search("SELECT Fname,Lname FROM photographer WHERE ActiveStatus=1");
 
         while (photographer.next()) {
             Photographer p = new Photographer();

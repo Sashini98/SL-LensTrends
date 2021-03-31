@@ -316,6 +316,9 @@
                                 // When window loaded ( external resources are loaded too- `css`,`src`, etc...) 
                                 if (event.target.readyState === "complete") {
                                     Search();
+                                    getkWords();
+
+                                    autocomplete(document.getElementById("keywordSearch"), kWords);
                                 }
                             });
 

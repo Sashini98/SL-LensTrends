@@ -453,16 +453,15 @@ function autocomplete(inp, arr) {
 
 
 var kWords = []
-getkWords();
 
 function loadWord() {
+
     autocomplete(document.getElementById("keywordInput"), kWords);
 }
 
-autocomplete(document.getElementById("keywordInput"), kWords);
 
 
-function  getkWords(){
+function  getkWords() {
     var request = new XMLHttpRequest();
 
     request.onreadystatechange = function () {
@@ -472,11 +471,8 @@ function  getkWords(){
                 var response = request.responseText;
                 var jsonString = JSON.parse(response);
 
-                doctors = jsonString[0];
-                specializations = jsonString[1];
-                if (x === 2) {
-                    addSpecializations();
-                }
+                kWords = jsonString;
+
             }
         }
 
@@ -484,7 +480,7 @@ function  getkWords(){
     };
 
 
-    request.open("POST", "SuggestKwords", true);
+    request.open("POST", "../../SuggestKwords", true);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send();
 
