@@ -130,8 +130,13 @@
 
                 </table>
             </div>
-            <div class="editprofile">
-                <a type="button" href=""> Rate Photographer </a>
+            
+                <div class="updown" style="margin-left: 30px">
+        <a href="#" type="button" onclick="rate('<%=id%>', 'like');"><img src="../../Resources/Img/up.png"></a> 
+        <span id="up">45</span> 
+        <a href="#" type="button" type="button"style="margin-left: 30px"  onclick="rate('<%=id%>', 'dislike');"><img src="../../Resources/Img/down.png"></a>
+        <span id="down">56</span>
+    </div>
             </div>
 
 <!--            <div class="member">

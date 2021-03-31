@@ -43,23 +43,19 @@ public class reportQuestion extends HttpServlet {
                 id = c.getClientId();
                 log="client";
                 rep.setClientId(id);
-                System.out.println("cl"+id);
             } else if (loggedAs.equals("photographer")) {
                 Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
                 id = p.getPhotographerId();
                 log="photog";
                 rep.setPhotographerId(id);
-                System.out.println("ph"+id);
                 
             }
              
             rep.setReason(reason);
             rep.setDescription(desc);
             rep.setQuestionId(qid);
-            
             ReportedQuestionDao repQues=new ReportedQuestionDaoImpl();
             repQues.addReportedQuestion(log,rep);
-            
             response.sendRedirect("View/Fourm/BrowseQn.jsp");
             
     }

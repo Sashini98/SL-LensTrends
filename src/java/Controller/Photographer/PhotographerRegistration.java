@@ -46,6 +46,9 @@ public class PhotographerRegistration extends HttpServlet {
         String g = request.getParameter("gender");
         String pw = request.getParameter("pass");
 
+        Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
+        String hashPW = auth.hash(pw.toCharArray());
+        
         System.out.println(pcode);
         int pc = Integer.parseInt(pcode);
 
@@ -75,7 +78,7 @@ public class PhotographerRegistration extends HttpServlet {
             Photographer p = new Photographer();
             p.setPhotographerId(pid);
             p.setEmail(email);
-            p.setPassword(pw);
+            p.setPassword(hashPW);
             p.setFname(fname);
             p.setLname(lname);
             p.setAddress_no(address);

@@ -79,21 +79,29 @@ public class ClientDaoImpl implements ClientDao {
 
     @Override
     public Client getClientbyEmailAndPassword(String email, String password) throws SQLException {
-            ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND Password = '" + password + "' AND ActiveStatus = 1 ");
-        if (client.next()) {
-            Client c = new Client();
-            c.setClientId(client.getString("Client_Id"));
-            c.setEmail(client.getString("Email"));
-            c.setPassword(client.getString("Password"));
-            c.setFname(client.getString("Fname"));
-            c.setLname(client.getString("Lname"));
-            c.setAddress_no(client.getString("Address_No"));
-            c.setCity(client.getString("City"));
-            c.setProvince(client.getString("Province"));
-            c.setGenderId(client.getInt("Gender_Id"));
-            c.setActiveStatus(client.getInt("ActiveStatus"));
 
-            return c;
+        ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND ActiveStatus = 1 ");
+        if (client.next()) {
+            String passHash = client.getString("Password");
+
+            Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
+            boolean authenticate = auth.authenticate(password.toCharArray(), passHash);
+            Client c = new Client();
+            if (authenticate) {
+                c.setClientId(client.getString("Client_Id"));
+                c.setEmail(client.getString("Email"));
+                c.setPassword(passHash);
+                c.setFname(client.getString("Fname"));
+                c.setLname(client.getString("Lname"));
+                c.setAddress_no(client.getString("Address_No"));
+                c.setCity(client.getString("City"));
+                c.setProvince(client.getString("Province"));
+                c.setGenderId(client.getInt("Gender_Id"));
+                c.setActiveStatus(client.getInt("ActiveStatus"));
+                return c;
+            } else {
+                return null;
+            }
 
         } else {
             return null;
@@ -147,22 +155,22 @@ public class ClientDaoImpl implements ClientDao {
 
     @Override
     public String getLastId() throws SQLException {
-       String id="";
-       ResultSet cid=DB.search("SELECT Client_Id as cid FROM client ORDER BY Client_Id DESC LIMIT 1; ");
-           
+        String id = "";
+        ResultSet cid = DB.search("SELECT Client_Id as cid FROM client ORDER BY Client_Id DESC LIMIT 1; ");
+
         if (cid.next()) {
-            id=cid.getString("cid");
+            id = cid.getString("cid");
             return id;
 
         } else {
             return null;
         }
-       
+
     }
 
     @Override
     public Client getDeactivatedClientbyEmail(String email) throws SQLException {
-     
+
         ResultSet client = DB.search("SELECT * FROM client WHERE Email = '" + email + "' AND ActiveStatus = 0");
         if (client.next()) {
             Client c = new Client();
@@ -181,17 +189,15 @@ public class ClientDaoImpl implements ClientDao {
 
         } else {
             return null;
-    }
+        }
     }
 
     @Override
     public int getClientCount(int Status) throws SQLException {
-        int cnt=0;
+        int cnt = 0;
         ResultSet num = DB.search("SELECT COUNT(*)AS rowcount FROM client WHERE ActiveStatus=" + Status + "");
         num.next();
         cnt = num.getInt("rowcount");
         return cnt;
     }
 }
-    
-
