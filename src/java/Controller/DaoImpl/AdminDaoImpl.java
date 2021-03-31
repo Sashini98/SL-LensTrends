@@ -8,6 +8,7 @@ package Controller.DaoImpl;
 import DB.DB;
 import Model.Admin;
 import Model.Dao.AdminDao;
+import Model.PasswordAuthentication;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -38,12 +39,13 @@ public class AdminDaoImpl implements AdminDao {
 
     @Override
     public Admin getAdminByEmailAndPassword(String email, String password) throws SQLException {
-        ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' AND Password = '" + password + "' ");
+        ResultSet AdminEmail = DB.search("SELECT * FROM Admin Where Email = '" + email + "' ");
 
         if (AdminEmail.next()) {
             String passHash = AdminEmail.getString("Password");
-
-
+            PasswordAuthentication p = new  PasswordAuthentication();
+            String hash = p.hash(password.toCharArray());
+            System.out.println(hash);
             Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
             boolean authenticate = auth.authenticate(password.toCharArray(), passHash);
             if (authenticate) {

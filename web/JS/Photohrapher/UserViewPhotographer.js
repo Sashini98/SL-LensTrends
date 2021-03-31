@@ -27,13 +27,15 @@ function getPhotographer(id) {
 }
 
 
-function rate(a,b)
+function rate()
 {
-var id = a;
-var rate=b;
-
-alert(id);
-alert(rate);S
+    alert();
+    
+//var id = a;
+//var rate=b;
+//
+//alert(id);
+//alert(rate);
 //
 //    var request = new XMLHttpRequest();
 //    

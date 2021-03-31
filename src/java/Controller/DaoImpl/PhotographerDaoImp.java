@@ -177,7 +177,8 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public Photographer getPhotographerByEmailAndPassword(String email, String password) throws SQLException {
-        ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "'  AND Password = '" + password + "' AND ActiveStatus = 1");
+        ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "' AND ActiveStatus = 1");
+       
         if (photographer.next()) {
             String passHash = photographer.getString("Password");
 
