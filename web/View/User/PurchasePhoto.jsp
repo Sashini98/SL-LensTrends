@@ -326,43 +326,43 @@
                             payhere.onCompleted = function onCompleted(orderId) {
                                 alert("Payment completed. OrderID:" + orderId);
                                 console.log("Payment completed. OrderID:" + orderId);
-
-                                var request = new XMLHttpRequest();
-                                request.onreadystatechange = function () {
-                                    if (request.readyState === 4) {
-                                        if (request.status === 200) {
-                                            var response = request.responseText;
-                                            var contentType = request.getResponseHeader("Content-Type");
-                                            var contentDisposition = request.getResponseHeader("Content-Disposition");
-
-                                            var type = contentType.split(";")[0];
-                                            var fileName = contentDisposition.split("=")[1];
-
-                                            alert(response);
-                                            alert(type);
-                                            alert(fileName);
-
-                                            var file = new Blob([response], {type: type});
-                                            var a = document.createElement("a");
-//                a.href = "index.jsp";
-                                            a.href = URL.createObjectURL(file);
-//                a.innerHTML = "Download";
-                                            a.download = fileName;
-
-//                var div1 = document.getElementById("d1");
-//                div1.appendChild(a);
-                                            document.body.appendChild(a);
-
-                                            a.click();
-//                div1.removeChild(a);
-                                            document.body.removeChild(a);
-
-                                        }
-                                    }
-                                };
-
-                                request.open("GET", "/GroupProject/DownloadImage", true);
-                                request.send();
+                                window.location.href = "/GroupProject/DownloadImage";
+//                                var request = new XMLHttpRequest();
+//                                request.onreadystatechange = function () {
+//                                    if (request.readyState === 4) {
+//                                        if (request.status === 200) {
+//                                            var response = request.responseText;
+//                                            var contentType = request.getResponseHeader("Content-Type");
+//                                            var contentDisposition = request.getResponseHeader("Content-Disposition");
+//
+//                                            var type = contentType.split(";")[0];
+//                                            var fileName = contentDisposition.split("=")[1];
+//
+////                                            alert(response);
+////                                            alert(type);
+////                                            alert(fileName);
+//
+//                                            var file = new Blob([response], {type: type});
+//                                            var a = document.createElement("a");
+////                a.href = "index.jsp";
+//                                            a.href = URL.createObjectURL(file);
+////                a.innerHTML = "Download";
+//                                            a.download = fileName;
+//
+////                var div1 = document.getElementById("d1");
+////                div1.appendChild(a);
+//                                            document.body.appendChild(a);
+//
+//                                            a.click();
+////                div1.removeChild(a);
+//                                            document.body.removeChild(a);
+//
+//                                        }
+//                                    }
+//                                };
+//
+//                                request.open("GET", "/GroupProject/DownloadImage", true);
+//                                request.send();
 
                                 //Note: validate the payment and show success or failure page to the customer
                             };

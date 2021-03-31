@@ -6,6 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+ String message = (String) request.getAttribute("msg");
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -33,6 +36,15 @@
 
             <div class="passinfo">
                 <form action="<%= request.getContextPath()%>/ResetPwEnter" method="POST">
+                     <%
+                        if (message != null) {
+                    %>
+                    <div class="loginErrorMessage">
+                        <span><%= message%></span>
+                    </div>
+                    <%
+                        }
+                    %>
                     <fieldset class="rpass">
                         <legend> Password </legend>
                         <input type="password" id="pw" name="pw" placeholder="Password">
