@@ -6,7 +6,9 @@
 package Controller.Photographer;
 
 import Controller.DaoImpl.PhotographerDaoImp;
+import Controller.DaoImpl.PhotographerRatingDaoImpl;
 import Model.Dao.PhotographerDao;
+import Model.Dao.PhotographerRatingDao;
 import Model.Photographer;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -97,6 +99,9 @@ public class PhotographerRegistration extends HttpServlet {
             System.out.println(p.getActiveStatus());
             photo.addPhotographer(p);
 
+            PhotographerRatingDao pdao = new PhotographerRatingDaoImpl();
+            pdao.addRateatBegin(pid);
+            
             response.sendRedirect("View/login.jsp");
 
         } catch (Exception e) {
