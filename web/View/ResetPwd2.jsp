@@ -39,7 +39,7 @@
                     </fieldset>
                     <fieldset class="cpass">
                         <legend> Confirm Password </legend>
-                        <input type="text" id="cpw" name="cpw" placeholder="Confirm Password">
+                        <input type="password" id="cpw" name="cpw" placeholder="Confirm Password">
                     </fieldset>
                     <div class="change">
                         <button type="submit" id="login">Login</button>
