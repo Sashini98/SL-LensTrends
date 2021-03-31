@@ -217,7 +217,7 @@ function submitrelease() {
         request.send(formdata);
 //        request.send("property=" + property + "&modal="+ modal);
 //        request.send();
-        location.reload();
+//        location.reload();
     }
 }
 
@@ -326,7 +326,7 @@ function submitphoto() {
                     var responce = request.responseText;
                     location.reload();
                     alert(responce);
-                    alert("vasfv");
+//                    alert("vasfv");
                 }
             }
 

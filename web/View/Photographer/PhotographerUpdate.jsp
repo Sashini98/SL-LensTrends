@@ -9,7 +9,10 @@
 <!DOCTYPE html>
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+
+    String pic = p.getProfilpic();
 %>
+
 <html>
 
     <head>
@@ -63,6 +66,7 @@
             <div class="upload-modal-content">
                 <span class="upload-close" id='upload-close' onclick="cleardata()">&times;</span>
                 <div class="upload-modal-image">
+                    
                     <img src="../../Resources/Img/upload.svg">
                     <input type="file" id="portimage" style="display:none;" accept="image/jpeg" onchange="propicvalidation();">
                     <label for="portimage">
@@ -111,7 +115,7 @@
             <div class="profile-header">
                 <div class="user-detail">
                     <div class="user-image">
-                        <img src="../../Resources/Img/athavan.jpg">
+                        <img src="../../Resources/Img/Gallery Sample Images/ProfilePicture/<%= pic%>">
                         <div class="labelpro">                            
                             <label onclick="openPropicmodal()">
                                 Change
@@ -265,16 +269,6 @@
             </div>
         </div> 
 
-        <!--        <div class="tax-info" id="taxsec">
-                    <div class="heading">
-                        <p>Subscription</p>
-                    </div> 
-                    <div class="edit">
-                        <p>Starts on Nov 12th 2020 End on Dec 12 2020</p>
-                        <a href="#" type="button">Change Subscription</a>
-                    </div>
-                </div>-->
-
         <div class="password" id="passsec">
             <div class="heading">
                 <p>Password</p>
@@ -296,27 +290,6 @@
             </div>
 
         </div> 
-
-
-
-        <!--        <div class="connaccount" id="connsec">
-                    <div class="heading">
-                        <p>Connected Accounts</p>
-                    </div> 
-                    <div class="edit">
-                        <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
-        
-                    </div>  
-        
-                    <div class="icons">
-                        <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
-                        <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connected</a>
-                    </div>
-        
-                </div> -->
-
-
-
 
         <div class="pagefooter">
             <div class="contact">

@@ -10,6 +10,7 @@
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
     String pid = p.getPhotographerId();  
+    String pic = p.getProfilpic();
 %>
 <html>
     <head>
@@ -61,7 +62,7 @@
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
                 <div class="user-image">
-                    <img src="../../Resources/Img/athavan.jpg">
+                    <img src="../../Resources/Img/Gallery Sample Images/ProfilePicture/<%= pic%>">
                 </div>
 
                 <div class="username">

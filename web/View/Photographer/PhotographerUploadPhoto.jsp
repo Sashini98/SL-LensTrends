@@ -58,9 +58,27 @@
         </div>
 
         <script>
-            setInterval(function () {
+            var earning = 0.0;
+                    setInterval(function () {
+                        fetch('/GroupProject/LoadPhotographerTotalEarning').then(function (responce) {
 
-            }, 2000);
+                            var request = new XMLHttpRequest();
+                            request.onreadystatechange = function () {
+                                if (request.status === 200) {
+                                    if (request.readyState === 4) {
+                                        var responce = request.responseText;
+                                        earning = JSON.parse(responce);
+                                        document.getElementById('earning').innerHTML = earning;
+
+                                    }
+                                }
+                            };
+                            request.open("GET", "../../LoadPhotographerTotalEarning", false);
+                            request.send();
+                        }).catch(function (error) {
+                            console.log(error)
+                        });
+                    }, 2000);
         </script>
         <div class="inside-header">
             <ul>
@@ -69,7 +87,7 @@
                 <li><a href="#" type="button" id="notaccepted" onclick="navigation('notaccepted')">Not Accepted</a></li>
                 <li><a href="#" type="button" id="reviewed" onclick="navigation('reviewed')">Reviewed</a></li>
                 <li><a href="#" type="button" id="upload-photo" onclick="document.getElementById('upload-modal').style.display = 'block'">Upload</a> </li>
-                <li id="earnings">Total Earning: $720</li>
+                <li id="earnings">Total Earning: Rs.<p id="earning"></p></li>
             </ul>     
 
             <div id="upload-modal" class="upload-modal">
