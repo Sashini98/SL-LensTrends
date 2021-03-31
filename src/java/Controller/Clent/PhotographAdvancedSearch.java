@@ -77,7 +77,7 @@ public class PhotographAdvancedSearch extends HttpServlet {
         PhotographDao pd = new PhotographDaoImpl();
 
         ArrayList<Photograph> photographByKeyWord = (ArrayList<Photograph>) pd.getPhotographByKeyWord(keyword);
-
+       
         if (photographByKeyWord == null) {
             photographByKeyWord = new ArrayList<>();
         }
@@ -103,30 +103,25 @@ public class PhotographAdvancedSearch extends HttpServlet {
                 isNeeded = true;
 
             } else {
-                if (orientation.contains("Horizontal")) {
+                if (orientation.contains("Landscape")) {
+                    if (photo.getOrientationId() == 1) {
+                        isNeeded = true;
+                    }
+
+                }
+                if (orientation.contains("Portrait")) {
                     if (photo.getOrientationId() == 2) {
                         isNeeded = true;
                     }
 
                 }
-                if (orientation.contains("Vertical")) {
+                if (orientation.contains("Square")) {
                     if (photo.getOrientationId() == 3) {
                         isNeeded = true;
                     }
 
                 }
-                if (orientation.contains("Square")) {
-                    if (photo.getOrientationId() == 4) {
-                        isNeeded = true;
-                    }
-
-                }
-                if (orientation.contains("Panoramic")) {
-                    if (photo.getOrientationId() == 5) {
-                        isNeeded = true;
-                    }
-
-                }
+                
 
             }
             if (!isNeeded) {

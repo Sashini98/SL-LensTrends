@@ -42,10 +42,10 @@
         </div>
         <div style="margin: 4% 10% 0">
             <!--<input type="checkbox" name="AllOrientations" id="AllOrientations" checked="" onclick="checkSubCategory('2', 'AllOrientations'); advancedSearch();">&nbsp;&nbsp;<label for="AllOrientations">All Orientations</label><br/>-->
-            <input type="checkbox"  id="Horizontal" onclick="checkSubCategory('2', 'Horizontal'); advancedSearch();" >&nbsp;&nbsp;<label for="Horizontal">Horizontal</label><br/>
-            <input type="checkbox"  id="Vertical" onclick="checkSubCategory('2', 'Vertical'); advancedSearch();">&nbsp;&nbsp;<label for="Vertical">Vertical</label><br/>
+            <input type="checkbox"  id="Landscape" onclick="checkSubCategory('2', 'Landscape'); advancedSearch();" >&nbsp;&nbsp;<label for="Landscape">Landscape</label><br/>
+            <input type="checkbox"  id="Portrait" onclick="checkSubCategory('2', 'Portrait'); advancedSearch();">&nbsp;&nbsp;<label for="Portrait">Portrait</label><br/>
             <input type="checkbox"  id="Square"  onclick="checkSubCategory('2', 'Square'); advancedSearch();">&nbsp;&nbsp;<label for="Square">Square</label><br/>
-            <input type="checkbox"   id="Panoramic"  onclick="checkSubCategory('2', 'Panoramic'); advancedSearch();">&nbsp;&nbsp;<label for="Panoramic">Panoramic</label><br/>
+            <!--<input type="checkbox"   id="Panoramic"  onclick="checkSubCategory('2', 'Panoramic'); advancedSearch();">&nbsp;&nbsp;<label for="Panoramic">Panoramic</label><br/>-->
         </div>
     </div>
     <div style="padding: 4% 6%;border-bottom: solid 2px #EAEAEA;">

@@ -5,14 +5,14 @@ function checkSubCategory(i, action) {
         var subCategory = document.getElementById("Both");
         var subCategory1 = document.getElementById("Male");
         var subCategory2 = document.getElementById("Female");
-    
+
 
         if (action === 'Male' || action === 'Female' || action === 'Both') {
 
             document.getElementById("WithPeople").checked = true;
             document.getElementById("WithoutPeople").checked = false;
 
-        } 
+        }
 
 //        if (subCategory1.checked && subCategory2.checked) {
 //            subCategory.checked = true;
@@ -143,7 +143,7 @@ function enteredPixcelSize(evt) {
 
 function  Search() {
     var iframeObj = document.getElementById("selectors");
-    var serchedFor= parent.document.getElementById("keywordInput").value;
+    var serchedFor = parent.document.getElementById("keywordInput").value;
     var sortBy;
     var orientation = "";
     var sizePixel;
@@ -163,28 +163,24 @@ function  Search() {
     }
 
 
-    if (iframeObj.contentWindow.document.getElementById('Horizontal').checked) {
-        orientation += 'Horizontal ';
+    if (iframeObj.contentWindow.document.getElementById('Landscape').checked) {
+        orientation += 'Landscape ';
 
     }
-    if (iframeObj.contentWindow.document.getElementById('Vertical').checked) {
-        orientation += 'Vertical ';
+    if (iframeObj.contentWindow.document.getElementById('Portrait').checked) {
+        orientation += 'Portrait ';
 
     }
     if (iframeObj.contentWindow.document.getElementById('Square').checked) {
         orientation += 'Square ';
 
     }
-    if (iframeObj.contentWindow.document.getElementById('Panoramic').checked) {
-        orientation += 'Panoramic ';
-
-    }
-    if (iframeObj.contentWindow.document.getElementById('Panoramic').checked && iframeObj.contentWindow.document.getElementById('Square').checked
-            && iframeObj.contentWindow.document.getElementById('Vertical').checked && iframeObj.contentWindow.document.getElementById('Horizontal').checked) {
+    if (iframeObj.contentWindow.document.getElementById('Square').checked && iframeObj.contentWindow.document.getElementById('Portrait').checked &&
+            iframeObj.contentWindow.document.getElementById('Landscape').checked) {
         orientation = 'AllOrientations';
     }
-    if (!iframeObj.contentWindow.document.getElementById('Panoramic').checked && !iframeObj.contentWindow.document.getElementById('Square').checked
-            && !iframeObj.contentWindow.document.getElementById('Vertical').checked && !iframeObj.contentWindow.document.getElementById('Horizontal').checked) {
+    if (!iframeObj.contentWindow.document.getElementById('Square').checked
+            && !iframeObj.contentWindow.document.getElementById('Portrait').checked && !iframeObj.contentWindow.document.getElementById('Landscape').checked) {
         orientation = 'AllOrientations';
     }
 
@@ -205,11 +201,11 @@ function  Search() {
     if (iframeObj.contentWindow.document.getElementById('Both').checked) {
         gender += 'Both ';
 
-    } 
+    }
     if (iframeObj.contentWindow.document.getElementById('Male').checked) {
         gender += 'Male ';
 
-    } 
+    }
     if (iframeObj.contentWindow.document.getElementById('Female').checked) {
         gender += 'Female ';
     }
@@ -233,7 +229,7 @@ function  Search() {
         }
     };
 
-    var param = "keyword="+ serchedFor +"&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
+    var param = "keyword=" + serchedFor + "&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
             "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
 
     request.open("POST", "../../PhotographAdvancedSearch", false);
@@ -243,9 +239,9 @@ function  Search() {
 }
 
 function  advancedSearch() {
-    
+
     var iframeObj = document.getElementById("selectors");
-    var serchedFor= parent.document.getElementById("keywordInput").value;
+    var serchedFor = parent.document.getElementById("keywordInput").value;
     var sortBy;
     var orientation = "";
     var sizePixel;
@@ -265,28 +261,27 @@ function  advancedSearch() {
     }
 
 
-    if (document.getElementById('Horizontal').checked) {
-        orientation += 'Horizontal ';
+    if (document.getElementById('Landscape').checked) {
+        orientation += 'Landscape ';
 
     }
-    if (document.getElementById('Vertical').checked) {
-        orientation += 'Vertical ';
+    if (document.getElementById('Portrait').checked) {
+        orientation += 'Portrait ';
 
     }
     if (document.getElementById('Square').checked) {
         orientation += 'Square ';
 
     }
-    if (document.getElementById('Panoramic').checked) {
-        orientation += 'Panoramic ';
-
-    }
-    if (document.getElementById('Panoramic').checked && document.getElementById('Square').checked
-            && document.getElementById('Vertical').checked && document.getElementById('Horizontal').checked) {
+//    if (document.getElementById('Panoramic').checked) {
+//        orientation += 'Panoramic ';
+//
+//    }
+    if (document.getElementById('Square').checked && document.getElementById('Portrait').checked
+            && document.getElementById('Landscape').checked) {
         orientation = 'AllOrientations';
     }
-    if (!document.getElementById('Panoramic').checked && !document.getElementById('Square').checked
-            && !document.getElementById('Vertical').checked && !document.getElementById('Horizontal').checked) {
+    if (!document.getElementById('Square').checked && !document.getElementById('Portrait').checked && !document.getElementById('Landscape').checked) {
         orientation = 'AllOrientations';
     }
 
@@ -307,11 +302,11 @@ function  advancedSearch() {
     if (document.getElementById('Both').checked) {
         gender += 'Both ';
 
-    } 
+    }
     if (document.getElementById('Male').checked) {
         gender += 'Male ';
 
-    } 
+    }
     if (document.getElementById('Female').checked) {
         gender += 'Female ';
     }
@@ -334,12 +329,163 @@ function  advancedSearch() {
             }
         }
     };
-
-    var param = "keyword="+ serchedFor +"&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
+    alert(orientation);
+    var param = "keyword=" + serchedFor + "&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
             "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
 
     request.open("POST", "../../PhotographAdvancedSearch", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     request.send(param);
+
+}
+
+
+function autocomplete(inp, arr) {
+
+    /*the autocomplete function takes two arguments,
+     the text field element and an array of possible autocompleted values:*/
+    var currentFocus;
+    /*execute a function when someone writes in the text field:*/
+    inp.addEventListener("input", function (e) {
+        var a, b, i, val = this.value;
+
+        /*close any already open lists of autocompleted values*/
+        closeAllLists();
+        if (!val) {
+            return false;
+        }
+        currentFocus = -1;
+        /*create a DIV element that will contain the items (values):*/
+        a = document.createElement("DIV");
+        a.setAttribute("id", this.id + "autocomplete-list");
+        a.setAttribute("class", "autocomplete-items");
+        /*append the DIV element as a child of the autocomplete container:*/
+        this.parentNode.appendChild(a);
+        /*for each item in the array...*/
+        for (i = 0; i < arr.length; i++) {
+            /*check if the item starts with the same letters as the text field value:*/
+
+            if (arr[i].toUpperCase().includes(val.toUpperCase())) {
+
+                /*create a DIV element for each matching element:*/
+                b = document.createElement("DIV");
+                /*make the matching letters bold:*/
+
+                b.innerHTML += arr[i];
+                /*insert a input field that will hold the current array item's value:*/
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                /*execute a function when someone clicks on the item value (DIV element):*/
+                b.addEventListener("click", function (e) {
+                    /*insert the value for the autocomplete text field:*/
+                    inp.value = this.getElementsByTagName("input")[0].value;
+                    /*close the list of autocompleted values,
+                     (or any other open lists of autocompleted values:*/
+                    closeAllLists();
+                    searchDoctorResults();
+
+                });
+
+                a.appendChild(b);
+            }
+        }
+    });
+    /*execute a function presses a key on the keyboard:*/
+    inp.addEventListener("keydown", function (e) {
+        var x = document.getElementById(this.id + "autocomplete-list");
+        if (x)
+            x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+            /*If the arrow DOWN key is pressed,
+             increase the currentFocus variable:*/
+            currentFocus++;
+            /*and and make the current item more visible:*/
+            addActive(x);
+        } else if (e.keyCode == 38) { //up
+            /*If the arrow UP key is pressed,
+             decrease the currentFocus variable:*/
+            currentFocus--;
+            /*and and make the current item more visible:*/
+            addActive(x);
+        } else if (e.keyCode == 13) {
+            /*If the ENTER key is pressed, prevent the form from being submitted,*/
+            e.preventDefault();
+            if (currentFocus > -1) {
+                /*and simulate a click on the "active" item:*/
+                if (x)
+                    x[currentFocus].click();
+            }
+        }
+    });
+    function addActive(x) {
+        /*a function to classify an item as "active":*/
+        if (!x)
+            return false;
+        /*start by removing the "active" class on all items:*/
+        removeActive(x);
+        if (currentFocus >= x.length)
+            currentFocus = 0;
+        if (currentFocus < 0)
+            currentFocus = (x.length - 1);
+        /*add class "autocomplete-active":*/
+        x[currentFocus].classList.add("autocomplete-active");
+    }
+    function removeActive(x) {
+        /*a function to remove the "active" class from all autocomplete items:*/
+        for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+        }
+    }
+    function closeAllLists(elmnt) {
+        /*close all autocomplete lists in the document,
+         except the one passed as an argument:*/
+        var x = document.getElementsByClassName("autocomplete-items");
+        for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+                x[i].parentNode.removeChild(x[i]);
+            }
+        }
+    }
+
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+}
+
+
+var kWords = []
+getkWords();
+
+function loadWord() {
+    autocomplete(document.getElementById("keywordInput"), kWords);
+}
+
+autocomplete(document.getElementById("keywordInput"), kWords);
+
+
+function  getkWords(){
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                var response = request.responseText;
+                var jsonString = JSON.parse(response);
+
+                doctors = jsonString[0];
+                specializations = jsonString[1];
+                if (x === 2) {
+                    addSpecializations();
+                }
+            }
+        }
+
+
+    };
+
+
+    request.open("POST", "SuggestKwords", true);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
 
 }

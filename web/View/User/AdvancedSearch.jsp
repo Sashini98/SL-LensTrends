@@ -83,7 +83,7 @@
                 </iframe>
                 <div style="background-color:  #FAFAFA; width: 100%; ">
                     <div class="searchInput">
-                        <input type="text" id="keywordInput" placeholder="Search for Photographs" onkeyup="keywordSearch(event)">      
+                        <input type="text" id="keywordInput" placeholder="Search for Photographs" onkeyup="keywordSearch(event); loadWord()">      
                         <button style="border: none; outline: none; border-radius: 40%; cursor: pointer;" onclick="keywordSearch(event)"><i class="material-icons">search</i></button>
                     </div>
                     <div class="row" id="row"> 
