@@ -44,7 +44,7 @@ public class Message extends HttpServlet {
         
         m.setName(name);
         m.setEmail(mail);
-        m.setMobile(mail);
+        m.setMobile(phone);
         m.setMessage(message);
         m.setMessage_date(date);
         

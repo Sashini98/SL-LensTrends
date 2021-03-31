@@ -55,7 +55,7 @@ public class MessageDaoImpl implements MessageDao{
         Date d = m.getMessage_date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-        
+        System.out.println(m.getMobile());
         
         DB.iud("INSERT INTO message(Message, name, email, phone, date) VALUES ('"+m.getMessage()+"','"+m.getName()+"','"+m.getEmail()+"','"+m.getMobile()+"','"+date+"')");
     }
