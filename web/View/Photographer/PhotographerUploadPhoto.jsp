@@ -11,8 +11,7 @@
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
     String pid = p.getPhotographerId();
-    
-    
+
 
 %>
 <html>
@@ -58,6 +57,29 @@
             </div>
         </div>
 
+        <script>
+            var earning = 0.0;
+                    setInterval(function () {
+                        fetch('/GroupProject/LoadPhotographerTotalEarning').then(function (responce) {
+
+                            var request = new XMLHttpRequest();
+                            request.onreadystatechange = function () {
+                                if (request.status === 200) {
+                                    if (request.readyState === 4) {
+                                        var responce = request.responseText;
+                                        earning = JSON.parse(responce);
+                                        document.getElementById('earning').innerHTML = earning;
+
+                                    }
+                                }
+                            };
+                            request.open("GET", "../../LoadPhotographerTotalEarning", false);
+                            request.send();
+                        }).catch(function (error) {
+                            console.log(error)
+                        });
+                    }, 2000);
+        </script>
         <div class="inside-header">
             <ul>
                 <li><a href="#" type="button" id="tosubmit" onclick="navigation('tosubmit')">To Submit</a></li>
@@ -65,7 +87,7 @@
                 <li><a href="#" type="button" id="notaccepted" onclick="navigation('notaccepted')">Not Accepted</a></li>
                 <li><a href="#" type="button" id="reviewed" onclick="navigation('reviewed')">Reviewed</a></li>
                 <li><a href="#" type="button" id="upload-photo" onclick="document.getElementById('upload-modal').style.display = 'block'">Upload</a> </li>
-                <li id="earnings">Total Earning: $720</li>
+                <li id="earnings">Total Earning: Rs.<p id="earning"></p></li>
             </ul>     
 
             <div id="upload-modal" class="upload-modal">
@@ -75,7 +97,8 @@
                     <span class="upload-close" id='upload-close' onclick="cleardata()">&times;</span>
                     <div class="upload-modal-image">
                         <img src="../../Resources/Img/upload.svg">
-                        <input type="file" value="select" id="upimage" style="display:none;" accept="image/jpeg" onchange="pressedupload();validation('upimage');">
+                        <input type="file" value="select" id="upimage" style="display:none;" accept="image/jpeg" onchange="pressedupload();
+                                validation('upimage');">
                         <label for="upimage">
                             <a type="file" id="upload-image"> Browse</a>
                         </label> <br> <br>
