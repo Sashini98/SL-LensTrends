@@ -49,6 +49,7 @@ public interface PhotographerDao {
     public List getPhotographerNames()throws SQLException;
     public List<Photographer> getPhotographByProvine(String province) throws SQLException;
     public int getUploadCount(String photographerId) throws SQLException;
+    public double getPhotographerTotalEarning(String photographerId) throws SQLException;
     
     public String getLastId() throws SQLException;
     public HashMap<Integer, String> getPhotogrpaherCategories() throws SQLException;
