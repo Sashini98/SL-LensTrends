@@ -179,23 +179,31 @@ public class PhotographerDaoImp implements PhotographerDao {
     public Photographer getPhotographerByEmailAndPassword(String email, String password) throws SQLException {
         ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "'  AND Password = '" + password + "' AND ActiveStatus = 1");
         if (photographer.next()) {
-            Photographer p = new Photographer();
-            p.setPhotographerId(photographer.getString("Photographer_Id"));
-            p.setEmail(photographer.getString("Email"));
-            p.setPassword(photographer.getString("Password"));
-            p.setFname(photographer.getString("Fname"));
-            p.setLname(photographer.getString("Lname"));
-            p.setAddress_no(photographer.getString("Address_No"));
-            p.setCity(photographer.getString("City"));
-            p.setProvince(photographer.getString("Province"));
-            p.setGenderId(photographer.getInt("Gender_Id"));
-            p.setMobile(photographer.getString("Mobile"));
-            p.setWebsite(photographer.getString("Website"));
-            p.setBio(photographer.getString("Bio"));
-            p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
-            p.setPostalCode(photographer.getInt("PostalCode"));
+            String passHash = photographer.getString("Password");
 
-            return p;
+            Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
+            boolean authenticate = auth.authenticate(password.toCharArray(), passHash);
+            if (authenticate) {
+                Photographer p = new Photographer();
+                p.setPhotographerId(photographer.getString("Photographer_Id"));
+                p.setEmail(photographer.getString("Email"));
+                p.setPassword(passHash);
+                p.setFname(photographer.getString("Fname"));
+                p.setLname(photographer.getString("Lname"));
+                p.setAddress_no(photographer.getString("Address_No"));
+                p.setCity(photographer.getString("City"));
+                p.setProvince(photographer.getString("Province"));
+                p.setGenderId(photographer.getInt("Gender_Id"));
+                p.setMobile(photographer.getString("Mobile"));
+                p.setWebsite(photographer.getString("Website"));
+                p.setBio(photographer.getString("Bio"));
+                p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
+                p.setPostalCode(photographer.getInt("PostalCode"));
+
+                return p;
+            } else {
+                return null;
+            }
 
         } else {
             return null;

@@ -47,7 +47,9 @@ public class ClientRegister extends HttpServlet {
         } else {
             gender = 2;
         }
-
+        
+        Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
+        String hashPW = auth.hash(pw.toCharArray());
         
         try {
             ClientDao client = new ClientDaoImpl();
@@ -74,7 +76,7 @@ public class ClientRegister extends HttpServlet {
             c.setCity(city);
             c.setProvince(province);
             c.setGenderId(gender);
-            c.setPassword(pw);
+            c.setPassword(hashPW);
             c.setActiveStatus(1);
 
             client.addClient(c);
