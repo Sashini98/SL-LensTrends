@@ -376,6 +376,10 @@
         <servlet-name>totalearningdetail</servlet-name>
         <servlet-class>Controller.Photographer.totalearningdetail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>LoadPhotographerTotalEarning</servlet-name>
+        <servlet-class>Controller.Photographer.LoadPhotographerTotalEarning</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -751,6 +755,10 @@
     <servlet-mapping>
         <servlet-name>totalearningdetail</servlet-name>
         <url-pattern>/totalearningdetail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadPhotographerTotalEarning</servlet-name>
+        <url-pattern>/LoadPhotographerTotalEarning</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
