@@ -83,7 +83,6 @@ public class PhotographerRegistration extends HttpServlet {
             p.setProvince(province);
             p.setJoined_date(date);
             p.setGenderId(gender);
-            p.setPlanId(planid);
             p.setMobile(mobile);
             p.setWebsite(web);
             p.setBio(bio);

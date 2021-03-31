@@ -77,7 +77,7 @@
 
 <div class="form-popup" id="myForm">
     <form action="../../reportQuestion" method="POST" class="form-container">
-        <h1>Login</h1>
+        <h1>Report</h1>
 
         <input type="text" id="id" name="id" style="display: none;">
 

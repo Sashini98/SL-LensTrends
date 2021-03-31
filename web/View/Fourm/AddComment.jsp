@@ -76,7 +76,7 @@
                     <form id="comment" action="../../Add_comment" method="POST" >
                         <h3 id="quest" name="quest"><label for="Question"><b></b></label><br></h3>
                         <!--<h4 id="quesid" name="quesid" style="display: none"></h4>-->
-                        <input type="text" id="ansid" name="ansid" style="display: none" value=aid>
+                        <input type="text" id="ansid" name="ansid" style="display: none" value="<%=aid%>">
 
                     <h3><label for="Body"><b>Comment</b></label><br></h3>
                     <textarea id="comm" name="comm" rows="10" cols="50"></textarea><br><br><br>         
