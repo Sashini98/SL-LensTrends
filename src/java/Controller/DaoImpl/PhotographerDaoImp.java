@@ -28,10 +28,10 @@ public class PhotographerDaoImp implements PhotographerDao {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
         System.out.println(photographer.getActiveStatus());
-        DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Plan_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus, points, state) "
+        DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus, points, state) "
                 + "VALUES ('" + photographer.getPhotographerId() + "', '" + photographer.getEmail() + "', '" + photographer.getPassword() + "', '" + photographer.getFname() + "',"
                 + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','" + date + "',"
-                + " '" + photographer.getGenderId() + "', '" + photographer.getPlanId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
+                + " '" + photographer.getGenderId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
                 + " '" + photographer.getFielsOfdInterest() + "', '" + photographer.getPostalCode() + "', '" + photographer.getActiveStatus() + "', '" + photographer.getPoints() + "', '" + photographer.getState() + "' ) ");
     }
 
@@ -134,7 +134,6 @@ public class PhotographerDaoImp implements PhotographerDao {
             p.setCity(photographer.getString("City"));
             p.setProvince(photographer.getString("Province"));
             p.setGenderId(photographer.getInt("Gender_Id"));
-            p.setPlanId(photographer.getInt("Plan_id"));
             p.setMobile(photographer.getString("Mobile"));
             p.setWebsite(photographer.getString("Website"));
             p.setBio(photographer.getString("bio"));
@@ -163,7 +162,6 @@ public class PhotographerDaoImp implements PhotographerDao {
             p.setCity(photographer.getString("City"));
             p.setProvince(photographer.getString("Province"));
             p.setGenderId(photographer.getInt("Gender_Id"));
-            p.setPlanId(photographer.getInt("Plan_Id"));
             p.setMobile(photographer.getString("Mobile"));
             p.setWebsite(photographer.getString("Website"));
             p.setBio(photographer.getString("Bio"));
@@ -191,7 +189,6 @@ public class PhotographerDaoImp implements PhotographerDao {
             p.setCity(photographer.getString("City"));
             p.setProvince(photographer.getString("Province"));
             p.setGenderId(photographer.getInt("Gender_Id"));
-            p.setPlanId(photographer.getInt("Plan_Id"));
             p.setMobile(photographer.getString("Mobile"));
             p.setWebsite(photographer.getString("Website"));
             p.setBio(photographer.getString("Bio"));
@@ -232,7 +229,6 @@ public class PhotographerDaoImp implements PhotographerDao {
                     p.setCity(byFnameLname.getString("City"));
                     p.setProvince(byFnameLname.getString("Province"));
                     p.setGenderId(byFnameLname.getInt("Gender_Id"));
-                    p.setPlanId(byFnameLname.getInt("Plan_Id"));
                     p.setMobile(byFnameLname.getString("Mobile"));
                     p.setWebsite(byFnameLname.getString("Website"));
                     p.setBio(byFnameLname.getString("Bio"));
@@ -265,7 +261,6 @@ public class PhotographerDaoImp implements PhotographerDao {
                         p.setCity(byFname.getString("City"));
                         p.setProvince(byFname.getString("Province"));
                         p.setGenderId(byFname.getInt("Gender_Id"));
-                        p.setPlanId(byFname.getInt("Plan_Id"));
                         p.setMobile(byFname.getString("Mobile"));
                         p.setWebsite(byFname.getString("Website"));
                         p.setBio(byFname.getString("Bio"));
@@ -295,7 +290,6 @@ public class PhotographerDaoImp implements PhotographerDao {
                         p.setCity(byLname.getString("City"));
                         p.setProvince(byLname.getString("Province"));
                         p.setGenderId(byLname.getInt("Gender_Id"));
-                        p.setPlanId(byLname.getInt("Plan_Id"));
                         p.setMobile(byLname.getString("Mobile"));
                         p.setWebsite(byLname.getString("Website"));
                         p.setBio(byLname.getString("Bio"));
@@ -362,7 +356,6 @@ public class PhotographerDaoImp implements PhotographerDao {
             p.setCity(photographer.getString("City"));
             p.setProvince(photographer.getString("Province"));
             p.setGenderId(photographer.getInt("Gender_Id"));
-            p.setPlanId(photographer.getInt("Plan_Id"));
             p.setMobile(photographer.getString("Mobile"));
             p.setWebsite(photographer.getString("Website"));
             p.setBio(photographer.getString("Bio"));
@@ -438,11 +431,26 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public List getPhotographByProvine(String province) throws SQLException {
-        ArrayList a=new ArrayList();
-         ResultSet prov = DB.search("SELECT  Photographer_Id FROM photographer WHERE Province = '" + province + "'");
-         while(prov.next()){
-             a.add(prov.getString("Photographer_Id"));
-         }
-         return a;
+        ArrayList a = new ArrayList();
+        ResultSet prov = DB.search("SELECT  Photographer_Id FROM photographer WHERE Province = '" + province + "'");
+        while (prov.next()) {
+            a.add(prov.getString("Photographer_Id"));
+        }
+        return a;
+    }
+
+    @Override
+    public int getUploadCount(String photographerId) throws SQLException {
+        int count = 0;
+
+        ResultSet Cnt = DB.search("SELECT COUNT(Photograph_Id)AS rowcount from photograph WHERE Photographer_Id='" + photographerId + "'");
+        Cnt.next();
+        count = Cnt.getInt("rowcount");
+        return count;
+    }
+
+    @Override
+    public void uploadprofilepic(Photographer profilpic) throws SQLException {
+        DB.iud("UPDATE photographer SET profile_pic_path='" + profilpic.getProfilpic() + "' WHERE Photographer_Id='" + profilpic.getPhotographerId() + "'");
     }
 }

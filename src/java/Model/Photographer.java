@@ -24,7 +24,6 @@ public class Photographer{
     String province;
     Date joined_date;
     int genderId;
-    int planId;
     int points;
     int state;
     String mobile;
@@ -33,12 +32,13 @@ public class Photographer{
     String fielsOfdInterest;
     int postalCode;
     private int activeStatus;
+    String profilpic;
     
 
     public Photographer() {
     }
 
-    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, int points, int state, String mobile, String website, String bio, String fielsOfdInterest, int postalCode, int activeStatus) {
+    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId,  int points, int state, String mobile, String website, String bio, String fielsOfdInterest, int postalCode, int activeStatus, String profilpic) {
         this.photographerId = photographerId;
         this.email = email;
         this.password = password;
@@ -49,7 +49,6 @@ public class Photographer{
         this.province = province;
         this.joined_date = joined_date;
         this.genderId = genderId;
-        this.planId = planId;
         this.points = points;
         this.state = state;
         this.mobile = mobile;
@@ -58,7 +57,18 @@ public class Photographer{
         this.fielsOfdInterest = fielsOfdInterest;
         this.postalCode = postalCode;
         this.activeStatus = activeStatus;
+        this.profilpic = profilpic;
     }
+
+    public String getProfilpic() {
+        return profilpic;
+    }
+
+    public void setProfilpic(String profilpic) {
+        this.profilpic = profilpic;
+    }
+
+ 
 
 
 
@@ -142,13 +152,7 @@ public class Photographer{
         this.genderId = genderId;
     }
 
-    public int getPlanId() {
-        return planId;
-    }
-
-    public void setPlanId(int planId) {
-        this.planId = planId;
-    }
+    
 
     public String getMobile() {
         return mobile;

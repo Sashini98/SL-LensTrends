@@ -308,11 +308,6 @@ function cancelupdate(cancel) {
     }
 }
 
-
-
-
-
-
 function updatedata(field) {
 
     if (field == "ic1") {
@@ -582,14 +577,94 @@ function Deleteaccount() {
 function closemodal() {
     document.getElementById("delAcc").style.display = "none";
 }
-var span = document.getElementById("delAccClose");
-span.onclick = function () {
+
+var spand = document.getElementById("delAccClose");
+spand.onclick = function () {
     var modal = document.getElementById("delAcc");
+//    document.getElementById('content').style.opacity = "1";
+    modal.style.display = "none";
+}
+
+var btn = document.getElementById("upload-close");
+btn.onclick = function () {
+    var modal = document.getElementById("portup");
 //    document.getElementById('content').style.opacity = "1";
     modal.style.display = "none";
 }
 
 function openmodal() {
     var modal = document.getElementById("delAcc");
+    modal.style.display = "block";
+}
+
+function propicvalidation() {
+    var fileInput = document.getElementById('portimage');
+    var filePath = fileInput.value;
+    
+    var filesize = fileInput.files[0].size;
+    alert(filesize);
+    var lowersizelimit = 2000000; // lowest size to upload
+    var higherlimit = 10000000;
+    var flag = 0;
+    var alertmsg = "";
+
+    // Allowing file type 
+    var allowedExtensions = /(\.jpg|\.jpeg)$/i;
+
+    if (!allowedExtensions.exec(filePath)) {
+        alertmsg += "Upload only JPEG or JPG image";
+        flag = 1;
+        document.getElementById('portimage').value = '';
+        return false;
+    }
+    if (filesize <= lowersizelimit) {
+        alertmsg += "Image is less then 1MP, Upload Images between 1MP and 25MP";
+        flag = 1;
+        document.getElementById("portimage").value = "";
+        return false;
+    }
+    if (filesize => higherlimit) {
+        alertmsg += "Image is greater then 5MP, Upload Images between 1MP and 25MP";
+        flag = 1;
+        document.getElementById("portimage").value = "";
+        return false;
+    }
+
+    if (flag == 1) {
+        alert(alertmsg);
+        return false;
+    }
+}
+
+function propicupload() {
+
+    var check = document.getElementById('portimage').value;
+    if (check == null) {
+        alert("Select an Image")
+    } else {
+        var file = document.getElementById('portimage').files[0];
+        alert(file);
+        alert(document.getElementById("portimage"));
+        var formdata = new FormData();
+        formdata.append("file1", file);
+
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+            if (request.readyState === 4) {
+                if (request.status === 200) {
+                    var responce = request.responseText;
+                    alert(responce);
+                }
+            }
+
+        };
+        request.open("POST", "../../UploadPropic", false);
+        request.send(formdata);
+        location.reload();
+    }
+}
+
+function openPropicmodal() {
+    var modal = document.getElementById("portup");
     modal.style.display = "block";
 }

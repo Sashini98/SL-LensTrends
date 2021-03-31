@@ -38,6 +38,45 @@
                 </div>
             </div>
         </div>  
+        <!--        <div style="display: flex; justify-content: center;">
+                    <div class="portfolioupload" id="portup" style="display: none;">
+                        <div class="portupheading">
+                            <h2>Drop Here</h2>
+                            <span  id="portfolioclose" style="color: black; margin: auto; cursor: pointer; height: 50%; font-size:30px;">&times;</span>
+                        </div>
+                        <div>
+                            <img src="../../Resources/Img/upload.svg" height="20%" width="20%" style="margin-left: 35%;">
+                        </div>
+                        <input type="file" name="upimage" id="upimage" style="display:none;" accept="image/jpeg" onchange="propicvalidation()">
+                        <label for="upimage" style="margin-left: 38%; background-color:#00478a; color:wheat; font-size: 110%; padding: 0.5% 1%; border-radius: 10px;">
+                            Browse
+                        </label>
+                        <div style="padding-top: 20px;" class="confirm">
+                            <a href="#" class="Report" id="Delete" onclick="propicupload();"style="margin-left: 38%; background-color:#f48024; color:wheat; font-size: 110%; padding: 0.5% 1%; border-radius: 10px; cursor: pointer;">Upload</a>                        
+                        </div>
+                    </div>
+                </div>-->
+
+
+        <div id="portup" class="portfolioupload">
+            <!-- Upload Modal content -->
+            <div class="upload-modal-content">
+                <span class="upload-close" id='upload-close' onclick="cleardata()">&times;</span>
+                <div class="upload-modal-image">
+                    <img src="../../Resources/Img/upload.svg">
+                    <input type="file" id="portimage" style="display:none;" accept="image/jpeg" onchange="propicvalidation();">
+                    <label for="portimage">
+                        <a type="file" id="upload-image"> Browse</a>
+                    </label> <br> <br>               
+                </div>
+                <div class="upload-review"> 
+                    <label>
+                        <a href="#" type="button" id="final-upload" onclick="propicupload()">Submit</a>
+                    </label>
+                </div>
+            </div>
+        </div>
+
 
         <div class="fixedheader">   
             <div class="pageheader">
@@ -73,17 +112,18 @@
                 <div class="user-detail">
                     <div class="user-image">
                         <img src="../../Resources/Img/athavan.jpg">
-                        <div class="label">Change</div>
+                        <div class="labelpro">                            
+                            <label onclick="openPropicmodal()">
+                                Change
+                            </label>
+                        </div>
                     </div>
                     <div class="user-data">
-                        <h2>Theivendram Athavan</h2>
-                        <span class="post-label">Wildlife</span>
-                        <span class="post-label">Portraits</span>
-                        <span class="post-label">Fashion</span>
-                        <span class="post-label">Landscape</span>
-                        <p>www.ikongraphy.lk <br>
-                            Founder <strong>IkonGraphy</strong><br>                                        
-                            <i>Jaffna, Srilanka</i> </p>
+                        <h2><%= p.getFname()%>&nbsp;<%= p.getLname()%></h2>
+                    
+                        <p><%= p.getWebsite() %><br>
+                            <strong><%= p.getEmail() %></strong><br>                                        
+                            <i><%= p.getAddress_no()%></i> </p>
 
                     </div>
 
@@ -95,7 +135,7 @@
             <ul>
                 <li><a href="#accsec">Account</a></li> <br> <br>
                 <li><a href="#addsec">Address</a></li> <br> <br>
-                <li><a href="#taxsec">Subscription</a></li> <br> <br>
+                <!--<li><a href="#taxsec">Subscription</a></li> <br> <br>-->
                 <li><a href="#passsec">Password</a></li> <br> <br>
                 <li><a href="#delsec">Delete Account</a></li> <br> <br>
 
@@ -104,12 +144,13 @@
         </div>
         <div>
             <div class="account" id="accsec">
-                <div class="heading" >
+<!--                <div class="heading" >
                     <p>Account                                                            
                         <label> <a href="#" type="button">Client View </a></label>
                     </p>
 
-                </div> <br>
+                </div> -->
+<br>
                 <div class="edit">
                     <form>                                                        
                         <label for="fname">First Name </label> 
@@ -224,15 +265,15 @@
             </div>
         </div> 
 
-<!--        <div class="tax-info" id="taxsec">
-            <div class="heading">
-                <p>Subscription</p>
-            </div> 
-            <div class="edit">
-                <p>Starts on Nov 12th 2020 End on Dec 12 2020</p>
-                <a href="#" type="button">Change Subscription</a>
-            </div>
-        </div>-->
+        <!--        <div class="tax-info" id="taxsec">
+                    <div class="heading">
+                        <p>Subscription</p>
+                    </div> 
+                    <div class="edit">
+                        <p>Starts on Nov 12th 2020 End on Dec 12 2020</p>
+                        <a href="#" type="button">Change Subscription</a>
+                    </div>
+                </div>-->
 
         <div class="password" id="passsec">
             <div class="heading">
@@ -250,7 +291,7 @@
                 <p>Delete Account</p>
             </div> 
             <div class="edit">
-                <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
+                <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong><%= p.getEmail() %></strong></span> </p>
                 <a type="button" onclick="openmodal()">Delete Account</a>
             </div>
 

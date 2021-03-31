@@ -222,7 +222,6 @@ function submitrelease() {
     }
 }
 
-
 function loadphotos() {
 
     var request = new XMLHttpRequest();
@@ -245,6 +244,7 @@ function loadphotos() {
 }
 
 window.onload = function () {
+
     loadphotos();
     tosubmit = document.querySelectorAll('.selection-img');
     accepted = document.querySelectorAll('.selection-accepted');
@@ -542,3 +542,22 @@ function submitforreview() {
     request.send(formdata);
     location.reload();
 }
+
+function totalearning(id) {
+    alert("vsvsf");
+    var pid = id;
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === 4) {
+            if (request.status === 200) {
+                var responce = request.responseText;
+                alert(responce);
+            }
+        }
+    }
+    ;
+    request.open("POST", "../../TotalEarning", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send("pid=" + pid);
+}
+

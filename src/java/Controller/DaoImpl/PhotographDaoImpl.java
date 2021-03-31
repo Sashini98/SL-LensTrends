@@ -144,7 +144,7 @@ public class PhotographDaoImpl implements PhotographDao {
             DB.iud("DELETE FROM model_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM property_release WHERE Photograph_Id = '" + PhotographId + "'");
             DB.iud("DELETE FROM cart_has_photograph WHERE Photograph_Id = '" + PhotographId + "'");
-            DB.iud("DELETE FROM photograph WHERE Photograph_Id = '" + PhotographId + "'");
+            DB.iud("UPDATE photograph SET state_id='"+ 5 +"' WHERE Photograph_Id = '" + PhotographId + "'");
         }
     }
 
