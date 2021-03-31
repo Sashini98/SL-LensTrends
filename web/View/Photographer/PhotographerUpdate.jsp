@@ -119,14 +119,11 @@
                         </div>
                     </div>
                     <div class="user-data">
-                        <h2>Theivendram Athavan</h2>
-                        <span class="post-label">Wildlife</span>
-                        <span class="post-label">Portraits</span>
-                        <span class="post-label">Fashion</span>
-                        <span class="post-label">Landscape</span>
-                        <p>www.ikongraphy.lk <br>
-                            Founder <strong>IkonGraphy</strong><br>                                        
-                            <i>Jaffna, Srilanka</i> </p>
+                        <h2><%= p.getFname()%>&nbsp;<%= p.getLname()%></h2>
+                    
+                        <p><%= p.getWebsite() %><br>
+                            <strong><%= p.getEmail() %></strong><br>                                        
+                            <i><%= p.getAddress_no()%></i> </p>
 
                     </div>
 
@@ -138,7 +135,7 @@
             <ul>
                 <li><a href="#accsec">Account</a></li> <br> <br>
                 <li><a href="#addsec">Address</a></li> <br> <br>
-                <li><a href="#taxsec">Subscription</a></li> <br> <br>
+                <!--<li><a href="#taxsec">Subscription</a></li> <br> <br>-->
                 <li><a href="#passsec">Password</a></li> <br> <br>
                 <li><a href="#delsec">Delete Account</a></li> <br> <br>
 
@@ -293,7 +290,7 @@
                 <p>Delete Account</p>
             </div> 
             <div class="edit">
-                <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
+                <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong><%= p.getEmail() %></strong></span> </p>
                 <a type="button" onclick="openmodal()">Delete Account</a>
             </div>
 

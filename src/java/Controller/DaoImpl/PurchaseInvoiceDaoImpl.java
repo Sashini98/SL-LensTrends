@@ -81,4 +81,10 @@ public class PurchaseInvoiceDaoImpl implements PurchaseInvoiceDao {
          DB.iud("DELETE FROM purchaseinvoice where Client_Id = '" + clientId + "'");
     }
 
+//    @Override
+//    public double gettotalearning(String pid) throws SQLException {
+//        DB.iud("SELECT Total FROM purchaseinvoice ");
+//        return 0;        
+//    }
+
 }
