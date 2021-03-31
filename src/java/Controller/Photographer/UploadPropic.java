@@ -30,7 +30,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 public class UploadPropic extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost (HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         try {
@@ -46,14 +46,15 @@ public class UploadPropic extends HttpServlet {
 
             String realpath = getServletContext().getRealPath("");
             String imagename = String.valueOf(" ProPic " + Photographer_Id + System.currentTimeMillis());
-
+            String propathname = imagename +".jpeg";
+            
             String filepath = "";
             filepath = realpath + "\\Resources\\Img\\Gallery Sample Images\\ProfilePicture\\" + imagename + ".jpeg";
 
             File fileorg = new File(filepath);
             fi.write(fileorg);
             
-            p.setProfilpic(filepath);
+            p.setProfilpic(propathname);
             p.setPhotographerId(Photographer_Id);
             
             PhotographerDao photographerDao = new PhotographerDaoImp();

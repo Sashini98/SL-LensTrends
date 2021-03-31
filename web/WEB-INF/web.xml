@@ -358,14 +358,14 @@
     </servlet>
     <servlet>
         <servlet-name>DeletePhotographerAccount</servlet-name>
-        <servlet-class>DeletePhotographerAccount</servlet-class>
+        <servlet-class>Controller.Photographer.DeletePhotographerAccount</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>UserViewPhotographer</servlet-name>
         <servlet-class>Controller.Photographer.UserViewPhotographer</servlet-class>
     </servlet>
     <servlet>
-         <servlet-name>UploadPropic</servlet-name>
+        <servlet-name>UploadPropic</servlet-name>
         <servlet-class>Controller.Photographer.UploadPropic</servlet-class>
     </servlet>
     <servlet-mapping>
