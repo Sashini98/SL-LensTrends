@@ -380,6 +380,10 @@
         <servlet-name>LoadPhotographerTotalEarning</servlet-name>
         <servlet-class>Controller.Photographer.LoadPhotographerTotalEarning</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RatePhotographer</servlet-name>
+        <servlet-class>Controller.Photographer.RatePhotographer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -759,6 +763,10 @@
     <servlet-mapping>
         <servlet-name>LoadPhotographerTotalEarning</servlet-name>
         <url-pattern>/LoadPhotographerTotalEarning</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RatePhotographer</servlet-name>
+        <url-pattern>/RatePhotographer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
