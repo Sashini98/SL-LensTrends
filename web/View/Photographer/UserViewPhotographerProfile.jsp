@@ -25,7 +25,7 @@
 
         <title>Profile</title>
     </head>
-    <body style="background-color: #f9f9f9;" onload="getPhotographer('<%=id%>')">
+    <body style="background-color: #f9f9f9;" onload="getPhotographer('<%=id%>'); getPhotographerImages('<%=id%>');">
         <div class="fixedheader">  
             <div class="pageheader">
                 <%

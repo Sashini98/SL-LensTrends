@@ -27,15 +27,15 @@ function getPhotographer(id) {
 }
 
 
-function rate(a,b)
+function rate(a, b)
 {
-      
+
     var id = a;
-    var rate=b;
+    var rate = b;
 
 
     var request = new XMLHttpRequest();
-    
+
 
     request.onreadystatechange = function () {
         if (request.status === 200) {
@@ -43,23 +43,19 @@ function rate(a,b)
             if (request.readyState === 4) {
 
                 var responce = request.responseText;
-                var array=JSON.parse(responce);
-                
-                var message=array[2];
-                if(message=="Liked")
+                var array = JSON.parse(responce);
+
+                var message = array[2];
+                if (message == "Liked")
                 {
                     window.alert("You have already liked this photographer!");
-                }
-                
-                else if(message=="Disliked")
+                } else if (message == "Disliked")
                 {
-                     window.alert("You have already disliked this photographer!");
-                }
-                
-                else
+                    window.alert("You have already disliked this photographer!");
+                } else
                 {
-                    document.getElementById("up").innerHTML=array[0];
-                    document.getElementById("down").innerHTML=array[1];
+                    document.getElementById("up").innerHTML = array[0];
+                    document.getElementById("down").innerHTML = array[1];
                 }
 
 
@@ -69,7 +65,7 @@ function rate(a,b)
 
     };
 
-    var param = "pid=" + id +"&rate=" +rate;
+    var param = "pid=" + id + "&rate=" + rate;
 
 
     request.open("POST", "../../RatePhotographer", false);
@@ -78,4 +74,33 @@ function rate(a,b)
 
 
 
+}
+
+
+function getPhotographerImages(id) {
+
+    var request = new XMLHttpRequest();
+
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+
+
+
+
+            }
+        }
+
+    };
+
+    var param = "pid=" + id ;
+
+
+    request.open("POST", "../../getPhotographerImages", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send(param);
 }
