@@ -33,12 +33,13 @@ public class Photographer{
     String fielsOfdInterest;
     int postalCode;
     private int activeStatus;
+    String profilpic;
     
 
     public Photographer() {
     }
 
-    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, int points, int state, String mobile, String website, String bio, String fielsOfdInterest, int postalCode, int activeStatus) {
+    public Photographer(String photographerId, String email, String password, String fname, String lname, String address_no, String city, String province, Date joined_date, int genderId, int planId, int points, int state, String mobile, String website, String bio, String fielsOfdInterest, int postalCode, int activeStatus, String profilpic) {
         this.photographerId = photographerId;
         this.email = email;
         this.password = password;
@@ -58,7 +59,18 @@ public class Photographer{
         this.fielsOfdInterest = fielsOfdInterest;
         this.postalCode = postalCode;
         this.activeStatus = activeStatus;
+        this.profilpic = profilpic;
     }
+
+    public String getProfilpic() {
+        return profilpic;
+    }
+
+    public void setProfilpic(String profilpic) {
+        this.profilpic = profilpic;
+    }
+
+ 
 
 
 

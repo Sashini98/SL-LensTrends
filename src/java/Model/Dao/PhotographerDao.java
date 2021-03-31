@@ -53,4 +53,5 @@ public interface PhotographerDao {
     public String getLastId() throws SQLException;
     public HashMap<Integer, String> getPhotogrpaherCategories() throws SQLException;
     public int getPhotographerCount(int Status) throws SQLException;
+    public void uploadprofilepic(Photographer profilpic) throws SQLException;
 }
