@@ -65,12 +65,13 @@ public class Add_comment extends HttpServlet {
                 try {
 
                     comDao.addCommentifPhotographer(comm);
+                     response.sendRedirect("View/Fourm/BrowseQn.jsp");
 
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
 
-        response.sendRedirect("View/Fourm/BrowseQn.jsp");
+       
         
     }
         
