@@ -142,12 +142,13 @@ public class QuestinRatingDaoImpl implements QuestionRatingDao {
         }
 
         DB.iud("UPDATE answerrating SET Likes='" + cnt2 + "'  where Answer_Id = '" + answerId + "'");
-
+        System.out.println("ok");
         int index = loggedId.indexOf('C');
         if (index == -1) {
-            DB.iud("DELETE FROM answer_rate_likes WHERE where Answer_Id = '" + answerId + "' AND Photographer_Id ='" + loggedId + "' ");
+            System.out.println(""+answerId+"   "+loggedId);
+            DB.iud("DELETE FROM answer_rate_likes WHERE  Answer_Id = '" + answerId + "' AND Photographer_Id ='" + loggedId + "' ");
         } else {
-            DB.iud("DELETE FROM answer_rate_likes WHERE where Answer_Id = '" + answerId + "' AND Client_Id ='" + loggedId + "' ");
+            DB.iud("DELETE FROM answer_rate_likes WHERE  Answer_Id = '" + answerId + "' AND Client_Id ='" + loggedId + "' ");
         }
         
     }
@@ -168,9 +169,9 @@ public class QuestinRatingDaoImpl implements QuestionRatingDao {
 
         int index = loggedId.indexOf('C');
         if (index == -1) {
-            DB.iud("DELETE FROM answer_rate_dislikes WHERE where Answer_Id = '" + answerId + "' AND Photographer_Id ='" + loggedId + "' ");
+            DB.iud("DELETE FROM answer_rate_dislikes WHERE  Answer_Id = '" + answerId + "' AND Photographer_Id ='" + loggedId + "' ");
         } else {
-            DB.iud("DELETE FROM answer_rate_dislikes WHERE where Answer_Id = '" + answerId + "' AND Client_Id ='" + loggedId + "' ");
+            DB.iud("DELETE FROM answer_rate_dislikes WHERE  Answer_Id = '" + answerId + "' AND Client_Id ='" + loggedId + "' ");
         }
     }
 

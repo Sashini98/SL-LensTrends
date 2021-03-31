@@ -462,4 +462,15 @@ public class PhotographerDaoImp implements PhotographerDao {
     public void uploadprofilepic(Photographer profilpic) throws SQLException {
         DB.iud("UPDATE photographer SET profile_pic_path='" + profilpic.getProfilpic() + "' WHERE Photographer_Id='" + profilpic.getPhotographerId() + "'");
     }
+
+    @Override
+    public double getPhotographerTotalEarning(String photographerId) throws SQLException {
+        ResultSet search = DB.search("SELECT p.Total FROM purchaseinvoice p JOIN photograph r ON p.Photograph_Id=r.Photograph_Id JOIN photographer d ON r.Photographer_Id=d.Photographer_Id WHERE d.Photographer_Id = '"+ photographerId +"';");
+        double e = 0.0; 
+        while (search.next()) {
+            e += search.getDouble("Total");
+            
+        }
+        return e;
+    }
 }
