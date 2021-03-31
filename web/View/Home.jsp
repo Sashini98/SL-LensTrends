@@ -324,7 +324,7 @@
             </div>
 
             <div class="ContactUs" >
-                <form action="Message" method="POST">
+                <form action="<%= request.getContextPath()%>/Message" method="POST">
 
 
                     <h2 style="text-align: center; color: white;" class="ServicesTopic">Contact Us</h2>
