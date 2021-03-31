@@ -22,7 +22,6 @@
 <div class="notifications">                
     <h2><%= elem.getTitle()%></h2>
     <p><%= elem.getNotification()%></p>
-    \
     <span id="time"><%= date%></span>   
     <div class="updown">
         <a href="#" type="button"><img src="../../Resources/Img/up.png"></a> 

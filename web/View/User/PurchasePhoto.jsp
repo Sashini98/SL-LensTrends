@@ -327,6 +327,7 @@
                                 alert("Payment completed. OrderID:" + orderId);
                                 console.log("Payment completed. OrderID:" + orderId);
                                 window.location.href = "/GroupProject/DownloadImage";
+                                
 //                                var request = new XMLHttpRequest();
 //                                request.onreadystatechange = function () {
 //                                    if (request.readyState === 4) {
