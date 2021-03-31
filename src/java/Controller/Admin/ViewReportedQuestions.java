@@ -58,7 +58,7 @@ public class ViewReportedQuestions extends HttpServlet {
                 pname = photographer.getFname() + " " + photographer.getLname();                
                 a.add(pname);
                 
-                String title = " ";
+                String title = "";
                 int qid = q.getQuestionId();
                 Question question = qDao.getQuestionbtId(qid);
                 

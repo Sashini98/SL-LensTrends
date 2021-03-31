@@ -45,6 +45,7 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
         try {
             
             int photoid = Integer.parseInt(request.getParameter("id"));
+            System.out.println(photoid);
             
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoid);
@@ -57,11 +58,8 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             
             OrientationDao oDao = new OrientationdaoImpl();
             String orientation = oDao.getOrientation(photoid);
-            
-            ModalReleaseDao mDao = new ModalReleaseDaoImpl();
-            ModalRelease modal = mDao.getModalrelease(photoid);
 
-            ArrayList<String> c = new ArrayList();
+            ArrayList<String> c = new ArrayList(); 
             
             Date uploadedDate = photograph.getUploadedDate();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
@@ -79,7 +77,7 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             c.add("../../Resources/Img/Gallery Sample Images/"+ photograph.getPath());
             c.add(photograph.getHeight() * photograph.getWidth() / 1000000 + "");
             c.add(photograph.getId() +"");
-            c.add(modal.getPath()+"");
+            System.out.println(c);
 
             Gson g = new Gson();
             String toJson = g.toJson(c);

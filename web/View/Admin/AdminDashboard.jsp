@@ -131,10 +131,10 @@
                 <label>2</label>
             </div>
 
-            <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">
+<!--            <div id="subscriptionDiv" onmouseover="subscriptionButtonChange('subscription')" onmouseout="subscriptionButtonBack('subscription')" onclick="show('subscription')"  class="subscription">
                 <img id="subscriptionIcon" src="../../Resources/Img/subscription.svg" />
                 <p><a href="#" type="button"  id="subscriptiontext">Subscription Plans</a></p>
-            </div>
+            </div>-->
 
             <div id="settingDiv"  onmouseover="settingButtonChange('settingDiv')" onmouseout="settingButtonBack('settingDiv')" onclick="show('setting')"  class="setting">
                 <img id="settingIcon" src="../../Resources/Img/settings.svg" />
@@ -144,7 +144,7 @@
 
             <div id="logoutDiv" onclick="logout()" onmouseover="logoutButtonChange('logoutDiv')" onmouseout="logoutButtonBack('logoutDiv')" class="logout">
                 <img id="logoutIcon" src="../../Resources/Img/logout.svg" />
-                <p><a href="../../LogOut?loc=ch" type="button"  id="logouttext">logout</a></p>
+                <p><a href="../../LogOut?loc=ch" type="button"  id="logouttext">Logout</a></p>
             </div>
 
         </div>
