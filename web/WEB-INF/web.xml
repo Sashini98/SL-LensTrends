@@ -356,6 +356,10 @@
         <servlet-name>ContributorOrClintEmail</servlet-name>
         <servlet-class>Controller.ContributorOrClintEmail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeletePhotographerAccount</servlet-name>
+        <servlet-class>DeletePhotographerAccount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -711,6 +715,10 @@
     <servlet-mapping>
         <servlet-name>ContributorOrClintEmail</servlet-name>
         <url-pattern>/ContributorOrClintEmail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeletePhotographerAccount</servlet-name>
+        <url-pattern>/DeletePhotographerAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

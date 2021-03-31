@@ -514,6 +514,10 @@ body{
     box-shadow:0 0 8px 0 rgba(12, 18, 28, 0.12);
 }
 
+#delAcc {
+    display:none;
+}
+
 .delHeader{
     font-family: 'Be Vietnam', sans-serif;
     display: grid; 

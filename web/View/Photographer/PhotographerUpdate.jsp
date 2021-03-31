@@ -25,15 +25,15 @@
             <div class="delAcc" id="delAcc" style="display: none;">
                 <div class="delHeader">
                     <h3>Delete Account</h3>
-                    <i class="fas fa-times close" id="delAccClose" style="color: black; margin: auto; cursor: pointer;"></i>
+                    <span  id="delAccClose" style="color: black; margin: auto; cursor: pointer; height: 50%; font-size:30px;">&times;</span>
                 </div>
 
                 <div>
                     <h4>Are you sure you want to delete?</h4>
 
                     <div style="padding-top: 20px;" class="confirm">
-                        <span class="Report" id="Delete" onclick="deleteAccount();">Yes</span>
-                        <span class="Report" id="noBtn">No</span>
+                        <span class="Report" id="Delete" onclick="Deleteaccount();">Yes</span>
+                        <span class="Report" id="noBtn" onclick="closemodal()">No</span>
                     </div>
                 </div>
             </div>
@@ -251,7 +251,7 @@
             </div> 
             <div class="edit">
                 <p> You may request permanent deletion of your account at any time, provided you do not have active subscriptions.<br> Account you are requesting to be deleted: <span> <strong>ikongraphy18@gmail.com </strong></span> </p>
-                <a type="button" onclick="Deleteaccount()">Delete Account</a>
+                <a type="button" onclick="openmodal()">Delete Account</a>
             </div>
 
         </div> 

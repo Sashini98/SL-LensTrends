@@ -1,4 +1,6 @@
 
+/* global delAcc */
+
 function pencileditenable(edit) {
     document.getElementById(edit).disabled = false;
 
@@ -554,8 +556,40 @@ function updatedata(field) {
 }
 
 function Deleteaccount() {
-    var modal = document.getElementById("delAcc");
-//    document.getElementById('content').style.opacity = "0.5";
-    modal.style.display = "block";
 
+
+
+    var request = new XMLHttpRequest();
+
+    request.onreadystatechange = function () {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
+
+                var responce = request.responseText;
+                if (responce == "successfully Deleted") {
+                    window.location.href = "/GroupProject/LogOut?loc=ch";
+
+                }
+
+            }
+        }
+    }
+    request.open("POST", "../../DeletePhotographerAccount", false);
+    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    request.send();
+}
+
+function closemodal() {
+    document.getElementById("delAcc").style.display = "none";
+}
+var span = document.getElementById("delAccClose");
+span.onclick = function () {
+    var modal = document.getElementById("delAcc");
+//    document.getElementById('content').style.opacity = "1";
+    modal.style.display = "none";
+}
+
+function openmodal() {
+    var modal = document.getElementById("delAcc");
+    modal.style.display = "block";
 }
