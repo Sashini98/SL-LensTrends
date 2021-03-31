@@ -33,7 +33,8 @@ public class Login extends HttpServlet {
 
         String email = request.getParameter("email");
         String pw = request.getParameter("pw");
-
+        System.out.println(email);
+        System.out.println(pw);
         try {
 
             ClientDao clientDao = new ClientDaoImpl();
@@ -106,9 +107,9 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/Photographer/UserViewPhotographerProfile.jsp");
                             } else if (page.equals("nh")) {
                                 response.sendRedirect("View/Notifications/notificationsHome.jsp");
-                            } else if(page.equals("LCaof")){
+                            } else if (page.equals("LCaof")) {
                                 response.sendRedirect((String) request.getSession().getAttribute("URL"));
-                            } else if(page.equals("prep")){
+                            } else if (page.equals("prep")) {
                                 response.sendRedirect("View/User/PurchasePhoto.jsp");
                             } else {
                                 response.sendRedirect("View/Home.jsp");
@@ -133,6 +134,7 @@ public class Login extends HttpServlet {
 
             } else if (photographerByEmail != null) {
 
+                System.out.println("photog");
                 try {
                     Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
 
@@ -174,13 +176,14 @@ public class Login extends HttpServlet {
             } else {
                 request.setAttribute("account", "false");
                 request.setAttribute("msg", "Invalid Email");
+                System.out.println("2222222222222222222222");
                 request.getRequestDispatcher("/View/login.jsp").forward(request, response);
             }
 
         } catch (SQLException ex) {
             ex.printStackTrace();
         } catch (NullPointerException e) {
-
+            System.out.println("email valid ne");
             e.printStackTrace();
             //invalid username 
             request.setAttribute("msg", "Invalid Email");
