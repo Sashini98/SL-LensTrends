@@ -58,6 +58,9 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             
             OrientationDao oDao = new OrientationdaoImpl();
             String orientation = oDao.getOrientation(photoid);
+            
+            ModalReleaseDao mDao = new ModalReleaseDaoImpl();
+            ModalRelease modal = mDao.getModalrelease(photoid);
 
             ArrayList<String> c = new ArrayList(); 
             
@@ -77,7 +80,8 @@ public class ViewUploadedPhotoDetails extends HttpServlet {
             c.add("../../Resources/Img/Gallery Sample Images/"+ photograph.getPath());
             c.add(photograph.getHeight() * photograph.getWidth() / 1000000 + "");
             c.add(photograph.getId() +"");
-            System.out.println(c);
+//            c.add("../../Resources/Img/Gallery Sample Images/ModalRelease"+ modal.getPath());
+            
 
             Gson g = new Gson();
             String toJson = g.toJson(c);
