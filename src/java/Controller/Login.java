@@ -33,6 +33,7 @@ public class Login extends HttpServlet {
 
         String email = request.getParameter("email");
         String pw = request.getParameter("pw");
+        System.out.println("pw"+pw);
 
         try {
 
@@ -132,16 +133,18 @@ public class Login extends HttpServlet {
                 }
 
             } else if (photographerByEmail != null) {
-
+                System.out.println("ok");
                 try {
                     Photographer photographerByEmailAndPassword = photographerDao.getPhotographerByEmailAndPassword(email, pw);
 
                     if (photographerByEmailAndPassword != null) {
+                        System.out.println("1");
 
                         request.getSession().setAttribute("loggedPhotographer", photographerByEmailAndPassword);
                         String page = (String) request.getSession().getAttribute("PageLocation");
 
                         if (page != null) {
+                            
                             if (page.equals("fh")) {
                                 response.sendRedirect("View/Fourm/MainForum.jsp");
                             } else if (page.equals("fhbq")) {
@@ -154,9 +157,11 @@ public class Login extends HttpServlet {
                                 response.sendRedirect("View/Notifications/notificationsHome.jsp");
                             } else {
                                 response.sendRedirect("View/PhotographerHome.jsp");
+                                System.out.println("2");
                             }
                         } else {
                             response.sendRedirect("View/PhotographerHome.jsp");
+                            System.out.println("3");
                         }
 
                     } else {
