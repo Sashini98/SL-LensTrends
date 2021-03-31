@@ -118,10 +118,7 @@
                 <h3>ABOUT ME</h3>
                 <p id="bio"> <br> </p>
                 <ul>
-                    <li>Wild life</li>
-                    <li>Portraits</li>
-                    <li>Landscape</li>
-                    <li>Astro</li>
+                    <li id="cat">Wild life</li>
                 </ul>
             </div> 
             <div class="count">
@@ -137,9 +134,9 @@
                 <a type="button" href=""> Rate Photographer </a>
             </div>
 
-            <div class="member">
+<!--            <div class="member">
                 <p id="jdate"></p>
-            </div>
+            </div>-->
         </div>
 
         <div class="welcome-note">

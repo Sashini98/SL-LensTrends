@@ -28,42 +28,35 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class UserViewPhotographer extends HttpServlet {
 
-    
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id=request.getParameter("id");
-        
-        
+        String id = request.getParameter("id");
+
         try {
-            PhotographerDao pDao=new PhotographerDaoImp();
+            PhotographerDao pDao = new PhotographerDaoImp();
             Photographer p = pDao.getPhotographerById(id);
-            
-            ArrayList a=new ArrayList();
-            
-            a.add(p.getFname()+ " "+p.getLname());
+
+            ArrayList a = new ArrayList();
+
+            a.add(p.getFname() + " " + p.getLname());
             a.add(p.getCity());
             a.add(p.getEmail());
             a.add(p.getBio());
-            a.add(pDao.getUploadCount(id)); 
-             
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String date = sdf.format(p.getJoined_date());
-            
-            a.add(date);
-            
+            a.add(pDao.getUploadCount(id));
+
+            ArrayList<String> photographerCategories = pDao.getPhotographerCategories(id);
+            a.add(photographerCategories);
+            System.out.println("a " + a);
+
             Gson g = new Gson();
             String toJson = g.toJson(a);
             response.getWriter().write(toJson);
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(UserViewPhotographer.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-            
-    }
 
-    
+    }
 
 }
