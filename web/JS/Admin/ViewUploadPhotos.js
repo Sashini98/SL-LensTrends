@@ -21,16 +21,7 @@ var request = new XMLHttpRequest();
                 document.getElementById("reso").value = details[10];
                 document.getElementById("pid").value = details[11];
                 document.getElementById("form").value = details[12];
-                
-                if (details[12] == null){
-                "There is no model release."
-                } else if {
-                var button = document.createElement("button");
-                button.innerHTML = "View";
-                button.style.backgroundColor = "blueviolet";
-                button.className = "btn1";  
-        }
-
+             
 
         }
 
