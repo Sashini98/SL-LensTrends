@@ -38,7 +38,24 @@
                 </div>
             </div>
         </div>  
-
+        <div style="display: flex; justify-content: center;">
+            <div class="portfolioupload" id="portup" style="display: none;">
+                <div class="portupheading">
+                    <h2>Drop Here</h2>
+                    <span  id="portfolioclose" style="color: black; margin: auto; cursor: pointer; height: 50%; font-size:30px;">&times;</span>
+                </div>
+                <div>
+                    <img src="../../Resources/Img/upload.svg" height="20%" width="20%" style="margin-left: 35%;">
+                </div>
+                <input type="file" name="upimage" id="upimage" style="display:none;" accept="image/jpeg" onchange="propicvalidation()">
+                <label for="upimage" onclick="openPropicmodal()" style="margin-left: 38%; background-color:#00478a; color:wheat; font-size: 110%; padding: 0.5% 1%; border-radius: 10px;">
+                    Browse
+                </label>
+                <div style="padding-top: 20px;" class="confirm">
+                    <span class="Report" id="Delete" onclick="propicupload();"style="margin-left: 38%; background-color:#f48024; color:wheat; font-size: 110%; padding: 0.5% 1%; border-radius: 10px; cursor: pointer;">Upload</span>                        
+                </div>
+            </div>
+        </div>
         <div class="fixedheader">   
             <div class="pageheader">
                 <a href="../PhotographerHome.jsp" type="button"> <img src="../../Resources/Img/7.png" height="55px" width="60px"> </a>
@@ -73,7 +90,11 @@
                 <div class="user-detail">
                     <div class="user-image">
                         <img src="../../Resources/Img/athavan.jpg">
-                        <div class="label">Change</div>
+                        <div class="labelpro">                            
+                            <label onclick="openPropicmodal()">
+                                Change
+                            </label>
+                        </div>
                     </div>
                     <div class="user-data">
                         <h2>Theivendram Athavan</h2>

@@ -445,4 +445,9 @@ public class PhotographerDaoImp implements PhotographerDao {
          }
          return a;
     }
+
+    @Override
+    public void uploadprofilepic(Photographer profilpic) throws SQLException {
+        DB.iud("INSERT INTO photographer (profile_pic_path) VALUES('" + profilpic.getProfilpic() + "') WHERE Photographer_Id='"+ profilpic.getPhotographerId() +"'");
+    }
 }
