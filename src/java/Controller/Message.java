@@ -40,10 +40,6 @@ public class Message extends HttpServlet {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String d = sdf.format(date);
         
-        LocalTime t = java.time.LocalTime.now();
-        SimpleDateFormat sdf1 = new SimpleDateFormat("HH:mm:ss");
-        String time = sdf.format(t);
-        
         Messages m=new Messages();
         
         m.setName(name);
