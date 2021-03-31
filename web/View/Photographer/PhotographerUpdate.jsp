@@ -265,16 +265,6 @@
             </div>
         </div> 
 
-        <!--        <div class="tax-info" id="taxsec">
-                    <div class="heading">
-                        <p>Subscription</p>
-                    </div> 
-                    <div class="edit">
-                        <p>Starts on Nov 12th 2020 End on Dec 12 2020</p>
-                        <a href="#" type="button">Change Subscription</a>
-                    </div>
-                </div>-->
-
         <div class="password" id="passsec">
             <div class="heading">
                 <p>Password</p>
@@ -296,27 +286,6 @@
             </div>
 
         </div> 
-
-
-
-        <!--        <div class="connaccount" id="connsec">
-                    <div class="heading">
-                        <p>Connected Accounts</p>
-                    </div> 
-                    <div class="edit">
-                        <p> Use your social media logins to quickly, easily, and securely access your Sl Lens Trends<br> Account you are requesting to be deleted: </p> <br> <br>
-        
-                    </div>  
-        
-                    <div class="icons">
-                        <img src="../../Resources/Img/facebook.png"> <label> <i> Not Connected </i> </label> <a href="#" type="button">Connect</a> <br> <br> <br> <br>
-                        <img src="../../Resources/Img/google.png"> <label> <i>Connected </i> </label> <a href="#" type="button">Connected</a>
-                    </div>
-        
-                </div> -->
-
-
-
 
         <div class="pagefooter">
             <div class="contact">
