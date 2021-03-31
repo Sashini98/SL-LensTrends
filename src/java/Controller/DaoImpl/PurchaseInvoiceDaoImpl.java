@@ -13,8 +13,10 @@ import Model.PurchaseInvoice;
 import java.lang.reflect.Array;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  *
@@ -72,8 +74,14 @@ public class PurchaseInvoiceDaoImpl implements PurchaseInvoiceDao {
 
     @Override
     public void setPurchasedImage(PurchaseInvoice pi) throws SQLException {
+        Date date = pi.getDate();
+        Date time = pi.getTime();
+        SimpleDateFormat sdff = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat sdff2 = new SimpleDateFormat("HH:mm:ss");
+        String timefor = sdff2.format(time);
+        String format = sdff.format(date);
         DB.iud("INSERT INTO purchaseinvoice (Invoice_Id,Date,Time,Total,Photograph_Id,Client_Id) "
-                + "VALUES ('" + pi.getInvoice_id() + "', '" + pi.getDate() + "', '" + pi.getTime() + "', '" + pi.getTotal() + "', '" + pi.getPhotograph().getId() + "', '" + pi.getClientId() + "')");
+                + "VALUES ('" + pi.getInvoice_id() + "', '" + format + "', '" + timefor + "', '" + pi.getTotal() + "', '" + pi.getPhotograph().getId() + "', '" + pi.getClientId() + "')");
     }
 
     @Override
