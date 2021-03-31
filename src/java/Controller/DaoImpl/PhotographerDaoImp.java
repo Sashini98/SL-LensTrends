@@ -445,4 +445,14 @@ public class PhotographerDaoImp implements PhotographerDao {
          }
          return a;
     }
+
+    @Override
+    public int getUploadCount(String photographerId) throws SQLException {
+       int count=0;
+       
+       ResultSet Cnt=DB.search("SELECT COUNT(Photograph_Id)AS rowcount from photograph WHERE Photographer_Id='"+photographerId+"'");
+       Cnt.next();
+       count=Cnt.getInt("rowcount");
+       return count;
+    }
 }
