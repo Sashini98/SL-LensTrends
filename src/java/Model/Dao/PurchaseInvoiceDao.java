@@ -18,5 +18,5 @@ public interface PurchaseInvoiceDao {
     public ArrayList<PurchaseInvoice> getPurchacedPhotos(String clientId) throws SQLException;
     public void setPurchasedImage(PurchaseInvoice purchaseInvoice)throws SQLException; 
     public void deleteClientInvoices(String clientId) throws SQLException;
-    
+//    public double gettotalearning(String pid) throws SQLException;
 }

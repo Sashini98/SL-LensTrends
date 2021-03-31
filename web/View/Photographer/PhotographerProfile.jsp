@@ -4,8 +4,13 @@
     Author     : ASUS
 --%>
 
+<%@page import="Model.Photographer"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%
+    Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
+    String pid = p.getPhotographerId();  
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">        
@@ -60,22 +65,20 @@
                 </div>
 
                 <div class="username">
-                    <p>Mr.ATHAVAN T </p>
+                    <p><%= p.getFname() %>&nbsp;<%= p.getLname()%></p>
                 </div>
                 <div class="location">
-                    <p>Jaffna,Srilanka</p>
-                    <p>www.Ikongraphy.lk</p>
+                    <p><%= p.getAddress_no() %></p>
+                    <p><%= p.getWebsite() %></p>
                 </div>
 
             </div>
             <div class="bio">
                 <h3>ABOUT ME</h3>
-                <p>My name is Athavan, I come from Jaffna (now based in Colombo). I feel passionate about Wild life and Astro Photography. Obsessed with PHOTOGRAPHY.  <br> </p>
+                <p>  <%= p.getBio() %><br> </p>
                 <ul>
-                    <li>Wild life</li>
-                    <li>Portraits</li>
-                    <li>Landscape</li>
-                    <li>Astro</li>
+                    <li><%= p.getFielsOfdInterest() %></li>
+                  
                 </ul>
             </div> 
             <div class="count">
@@ -95,7 +98,7 @@
             </div>
 
             <div class="member">
-                <p>MEMBER SINCE: OCTOBER 31,2020</p>
+                <p>MEMBER SINCE: <%= p.getJoined_date() %></p>
             </div>
         </div>
 

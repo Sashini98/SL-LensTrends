@@ -208,9 +208,9 @@
             </div>
             <div class="details-inreview">                    
                 <p>Title : <span style='color: #9D9D9D;' id="heading2"></span> </p>
-                <p>Category : <span style='color: #9D9D9D;' id="category"></span> </p>
+                <!--<p>Category : <span style='color: #9D9D9D;' id="category"></span> </p>-->
                 <p>File ID(s): <span style='color: #9D9D9D;' id="filedid"></span> </p>
-                <p>Original name(s) : <span style='color: #9D9D9D;'>IGP_4237_1.jpg</span> </p>
+                <!--<p>Original name(s) : <span style='color: #9D9D9D;'>IGP_4237_1.jpg</span> </p>-->
             </div>
         </div>
 
@@ -305,7 +305,7 @@
             </div>
             <div class="details-notaccepted">                    
                 <p>Thanks for giving us the chance to consider your image. Unfortunately, we found that it doesn't meet our needs so we can't accept it into our collection.</p>
-                <span>Image with Water Mark</span>
+                <span>Add your Best Collection again to make it into sale</span>
                 <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id="fileid-notaccepted"></span> </p>
 
                 <span id="deleterejected" class="deleterejected" photo-id-notaccepted="<%=PhotoIdrejected%>" srcpathrejected="<%=notaccpetedpath%>" onclick="deletephoto('deleterejected')">Delete</span>
@@ -404,7 +404,7 @@
 
                 <p>Downloads: <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;'>&emsp;5 Times</span> </p>
                 <p>Pricing per Download:<span style='color: #9D9D9D; background-color: transparent;  padding:0; margin: 0;'>&emsp;$10</span> </p>
-                <span style="font-weight: bold;">Total Earing:&emsp; $50</span>
+                <span style="font-weight: bold;">Total Earing:&emsp; </span>
                 <p>File ID(s): <span style='color: #9D9D9D; background-color: transparent; padding: 0; margin: 0;' id='fileidaccepted'></span> </p>
 
 

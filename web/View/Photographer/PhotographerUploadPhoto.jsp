@@ -11,6 +11,9 @@
 <%
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
     String pid = p.getPhotographerId();
+    
+    
+
 %>
 <html>
     <head>
@@ -25,7 +28,7 @@
 
         <title>Upload</title>
     </head>
-    <body style="background-color: #f9f9f9;" onload="totalearning('<%= pid%>')">
+    <body style="background-color: #f3f4f6;" onload="totalearning('<%= pid%>')">
 
         <div class="fixedheader">  
             <div class="pageheader">
@@ -102,10 +105,11 @@
             </div>
         </div>
         <div id="load">
-            
+
         </div>
 
         <script type="text/javascript" src="../../JS/Photohrapher/PhotographerUploadPhoto.js"></script>
+        <!--<script type="text/javascript" src="../../JS/Photohrapher/totalearning.js"></script>-->
 
     </body>
 </html>
