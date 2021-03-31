@@ -42,7 +42,7 @@ public class AdminDaoImpl implements AdminDao {
 
         if (AdminEmail.next()) {
             String passHash = AdminEmail.getString("Password");
-
+            System.out.println(passHash);
             Model.PasswordAuthentication auth = new Model.PasswordAuthentication();
             boolean authenticate = auth.authenticate(password.toCharArray(), passHash);
             if (authenticate) {
