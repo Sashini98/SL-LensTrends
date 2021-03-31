@@ -25,7 +25,7 @@
 <div class="column">
     <%        for (int i = 0; i < photographers.size(); i += 4) {
     %>
-    <a href="../Photographer/UserViewPhotographerProfile.jsp?<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
+    <a href="../Photographer/UserViewPhotographerProfile.jsp?pid=<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -72,7 +72,7 @@
 <div class="column">
     <%        for (int i = 1; i < photographers.size(); i += 4) {
     %>
-    <a href="../Photographer/UserViewPhotographerProfile.jsp?<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
+    <a href="../Photographer/UserViewPhotographerProfile.jsp?pid=<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -119,7 +119,7 @@
 <div class="column">
     <%        for (int i = 2; i < photographers.size(); i += 4) {
     %>
-    <a href="../Photographer/UserViewPhotographerProfile.jsp?<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
+    <a href="../Photographer/UserViewPhotographerProfile.jsp?pid=<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
@@ -166,7 +166,7 @@
 <div class="column">
     <%        for (int i = 3; i < photographers.size(); i += 4) {
     %>
-    <a href="../Photographer/UserViewPhotographerProfile.jsp?<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
+    <a href="../Photographer/UserViewPhotographerProfile.jsp?pid=<%= photographers.get(i).getPhotographerId()%>" style="text-decoration: none;">
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 

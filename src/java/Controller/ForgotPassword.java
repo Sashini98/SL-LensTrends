@@ -56,6 +56,7 @@ public class ForgotPassword extends HttpServlet {
 
             if (adminByEmail != null) {
                 try {
+                     request.getSession().setAttribute("loggingAS", "admin");
                     request.getSession().setAttribute("emailForward", email);
                     String fname = adminByEmail.getFname();
                     String password = adminByEmail.getPassword();
@@ -125,6 +126,7 @@ public class ForgotPassword extends HttpServlet {
 //               
             } else if (clientbyEmail != null) {
                 try {
+                     request.getSession().setAttribute("loggingAS", "user");
                     request.getSession().setAttribute("emailForward", email);
                     String fname = clientbyEmail.getFname();
                     String password = clientbyEmail.getPassword();
@@ -188,6 +190,7 @@ public class ForgotPassword extends HttpServlet {
 
             } else if (photographerByEmail != null) {
                 try {
+                     request.getSession().setAttribute("loggingAS", "photographer");
                     request.getSession().setAttribute("emailForward", email);
                     String fname = photographerByEmail.getFname();
                     String password = photographerByEmail.getPassword();

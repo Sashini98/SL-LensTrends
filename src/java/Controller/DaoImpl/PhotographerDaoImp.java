@@ -438,16 +438,25 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public List getPhotographByProvine(String province) throws SQLException {
-        ArrayList a=new ArrayList();
-         ResultSet prov = DB.search("SELECT  Photographer_Id FROM photographer WHERE Province = '" + province + "'");
-         while(prov.next()){
-             a.add(prov.getString("Photographer_Id"));
-         }
-         return a;
+        ArrayList a = new ArrayList();
+        ResultSet prov = DB.search("SELECT  Photographer_Id FROM photographer WHERE Province = '" + province + "'");
+        while (prov.next()) {
+            a.add(prov.getString("Photographer_Id"));
+        }
+        return a;
     }
 
     @Override
+    public int getUploadCount(String photographerId) throws SQLException {
+        int count = 0;
+
+        ResultSet Cnt = DB.search("SELECT COUNT(Photograph_Id)AS rowcount from photograph WHERE Photographer_Id='" + photographerId + "'");
+        Cnt.next();
+        count = Cnt.getInt("rowcount");
+        return count;
+    }
+
     public void uploadprofilepic(Photographer profilpic) throws SQLException {
-        DB.iud("INSERT INTO photographer (profile_pic_path) VALUES('" + profilpic.getProfilpic() + "') WHERE Photographer_Id='"+ profilpic.getPhotographerId() +"'");
+        DB.iud("INSERT INTO photographer (profile_pic_path) VALUES('" + profilpic.getProfilpic() + "') WHERE Photographer_Id='" + profilpic.getPhotographerId() + "'");
     }
 }

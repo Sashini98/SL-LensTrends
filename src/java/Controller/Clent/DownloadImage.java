@@ -39,7 +39,7 @@ public class DownloadImage extends HttpServlet {
 
         response.setContentType("image/jpeg");
         response.setContentLength((int) downloadFile.length());
-        response.setHeader("Content-Disposition", "attachment; filename=" + title);
+        response.setHeader("Content-Disposition", "attachment; filename=" + title+".jpeg");
 
         OutputStream outStream = response.getOutputStream();
         System.out.println(downloadFile.length());
@@ -52,7 +52,7 @@ public class DownloadImage extends HttpServlet {
 
         inStream.close();
         outStream.close();
-
+//        response.getWriter().write(outStream);
     }
 
 }

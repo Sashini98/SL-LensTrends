@@ -245,7 +245,7 @@
             </div>
         </div> 
 
-        <div class="tax-info" id="taxsec">
+<!--        <div class="tax-info" id="taxsec">
             <div class="heading">
                 <p>Subscription</p>
             </div> 
@@ -253,7 +253,7 @@
                 <p>Starts on Nov 12th 2020 End on Dec 12 2020</p>
                 <a href="#" type="button">Change Subscription</a>
             </div>
-        </div>
+        </div>-->
 
         <div class="password" id="passsec">
             <div class="heading">

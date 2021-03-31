@@ -5,6 +5,7 @@
 --%>
 <%
     String logged = (String) request.getAttribute("loggedAs");
+    String id = request.getParameter("pid");
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -24,7 +25,7 @@
 
         <title>Profile</title>
     </head>
-    <body style="background-color: #f9f9f9;">
+    <body style="background-color: #f9f9f9;" onload="getPhotographer('<%=id%>')">
         <div class="fixedheader">  
             <div class="pageheader">
                 <%
@@ -79,7 +80,7 @@
                 </div>
 
                 <div class="logout">
-                   <%
+                    <%
                         if (!logged.equals("nl")) {
                     %>
                     <a href="../../LogOut?loc=cspp" type="button"> Logout </a>
@@ -99,22 +100,23 @@
         <div class="profilebox">
             <div style="background-color: #00478a; padding-bottom: 2%; padding-top: 1%;">
 
+
                 <div class="user-image">
                     <img src="../../Resources/Img/athavan.jpg">
                 </div>
 
-                <div class="username">
-                    <p>Mr.ATHAVAN T </p>
+                <div class="username" >
+                    <p id="username"></p>
                 </div>
                 <div class="location">
-                    <p>Jaffna,Srilanka</p>
-                    <p>www.Ikongraphy.lk</p>
+                    <p id="address"></p>
+                    <p id="web"></p>
                 </div>
 
             </div>
             <div class="bio">
                 <h3>ABOUT ME</h3>
-                <p>My name is Athavan, I come from Jaffna (now based in Colombo). I feel passionate about Wild life and Astro Photography. Obsessed with PHOTOGRAPHY. <br> </p>
+                <p id="bio"> <br> </p>
                 <ul>
                     <li>Wild life</li>
                     <li>Portraits</li>
@@ -125,17 +127,10 @@
             <div class="count">
                 <table>
                     <tr>
-                        <th>Rating</th>
-                        <th id="color">68%</th>
-                    </tr>
-                    <tr>
                         <th>Uploads</th>
                         <th id="color">68</th>
                     </tr>
-                    <tr>
-                        <th>Completed Events</th>
-                        <th id="color">20</th>
-                    </tr>
+
                 </table>
             </div>
             <div class="editprofile">
@@ -143,7 +138,7 @@
             </div>
 
             <div class="member">
-                <p>MEMBER SINCE: OCTOBER 31,2020</p>
+                <p id="jdate"></p>
             </div>
         </div>
 
@@ -213,7 +208,6 @@
 
             </div>
         </div>
-
-        <script  type="text/javascript" src="../../JS/Photohrapher/PhotographerProfile.js"></script>
+        <script  type="text/javascript" src="../../JS/Photohrapher/UserViewPhotographer.js"></script>
     </body>
 </html>
