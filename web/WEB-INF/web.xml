@@ -341,6 +341,10 @@
         <servlet-class>Controller.Clent.DownloadImage</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>Message</servlet-name>
+        <servlet-class>Controller.Message</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>ForgotPassword</servlet-name>
         <servlet-class>Controller.ForgotPassword</servlet-class>
     </servlet>
@@ -691,6 +695,10 @@
     <servlet-mapping>
         <servlet-name>DownloadImage</servlet-name>
         <url-pattern>/DownloadImage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Message</servlet-name>
+        <url-pattern>/Message</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ForgotPassword</servlet-name>

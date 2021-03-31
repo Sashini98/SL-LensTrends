@@ -28,7 +28,7 @@ public class QuestionDaoImpl implements QuestionDao {
         Date d = question.getquestion_date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-        DB.iud("INSERT INTO question ( title, Question, Question_Date, Client_Id, Answer_Count) VALUES ( '" + question.gettitle() + "', '" + question.getquestion() + "', '" + date + "', '" + question.getclientId() + "', '0');");
+        DB.iud("INSERT INTO question ( title, Question, Question_Date, Client_Id, Answer_Count, State_id) VALUES ( '" + question.gettitle() + "', '" + question.getquestion() + "', '" + date + "', '" + question.getclientId() + "', '0', '1');");
     }
 
     @Override
@@ -36,12 +36,12 @@ public class QuestionDaoImpl implements QuestionDao {
         Date d = question.getquestion_date();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
-        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id, Answer_Count) VALUES ( '" + question.gettitle() + "', '" + question.getquestion() + "', '" + date + "', '" + question.getPhotographerId() + "', '0');");
+        DB.iud("INSERT INTO question ( title, Question, Question_Date, Photographer_Id, Answer_Count, State_id) VALUES ( '" + question.gettitle() + "', '" + question.getquestion() + "', '" + date + "', '" + question.getPhotographerId() + "', '0', '1');");
     }
 
     @Override
     public List getAllQuestions() throws SQLException {
-        ResultSet ques = DB.search("SELECT * FROM Question");
+        ResultSet ques = DB.search("SELECT * FROM Question WHERE State_id=1");
         ArrayList<Question> a = new ArrayList();
 
         while (ques.next()) {
@@ -103,7 +103,7 @@ public class QuestionDaoImpl implements QuestionDao {
     @Override
     public Question getQuestionbtId(int questionId) throws SQLException {
 
-        ResultSet ques = DB.search("SELECT * FROM Question where Question_Id = '" + questionId + "'");
+        ResultSet ques = DB.search("SELECT * FROM Question where Question_Id = '" + questionId + "' AND State_id=1");
         Question q = new Question();
         if (ques.next()) {
 
@@ -121,7 +121,7 @@ public class QuestionDaoImpl implements QuestionDao {
     @Override
     public String getlastQuestionId() throws SQLException {
         String id = "";
-        ResultSet qid = DB.search("SELECT Question_Id as qid FROM question ORDER BY Question_Id DESC LIMIT 1; ");
+        ResultSet qid = DB.search("SELECT Question_Id as qid FROM question WHERE State_id=1 ORDER BY Question_Id DESC LIMIT 1; ");
 
         if (qid.next()) {
             id = qid.getString("qid");
@@ -179,17 +179,17 @@ public class QuestionDaoImpl implements QuestionDao {
 
             if (filter.equalsIgnoreCase("NoAnswer")) {
                 if (sort.equalsIgnoreCase("newest")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count=0 ORDER BY Question_Date ASC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count=0 AND State_id=1 ORDER BY Question_Date ASC; ");
 
                 }
 
                 if (sort.equalsIgnoreCase("oldest")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count=0 ORDER BY Question_Date DESC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count=0 AND State_id=1 ORDER BY Question_Date DESC; ");
 
                 }
 
                 if (sort.equalsIgnoreCase("count")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count=0 ORDER BY Answer_Count ASC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count=0 AND State_id=1 ORDER BY Answer_Count ASC; ");
 
                 }
 
@@ -197,17 +197,17 @@ public class QuestionDaoImpl implements QuestionDao {
 
             if (filter.equalsIgnoreCase("100plus")) {
                 if (sort.equalsIgnoreCase("newest")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count>100 ORDER BY Question_Date ASC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count>100 AND State_id=1 ORDER BY Question_Date ASC; ");
 
                 }
 
                 if (sort.equalsIgnoreCase("oldest")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count>100 ORDER BY Question_Date DESC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count>100 AND State_id=1 ORDER BY Question_Date DESC; ");
 
                 }
 
                 if (sort.equalsIgnoreCase("count")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count>100 ORDER BY Answer_Count ASC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND Answer_Count>100 AND State_id=1 ORDER BY Answer_Count ASC; ");
 
                 }
 
@@ -215,17 +215,17 @@ public class QuestionDaoImpl implements QuestionDao {
 
             if (filter.equalsIgnoreCase("none")) {
                 if (sort.equalsIgnoreCase("newest")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' ORDER BY Question_Date ASC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND State_id=1 ORDER BY Question_Date ASC; ");
 
                 }
 
                 if (sort.equalsIgnoreCase("oldest")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' ORDER BY Question_Date DESC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND State_id=1 ORDER BY Question_Date DESC; ");
 
                 }
 
                 if (sort.equalsIgnoreCase("count")) {
-                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' ORDER BY Answer_Count ASC; ");
+                    ques = DB.search("SELECT * FROM Question WHERE title like '%" + keyword + "%' AND State_id=1 ORDER BY Answer_Count ASC; ");
 
                 }
 
@@ -267,11 +267,11 @@ public class QuestionDaoImpl implements QuestionDao {
         ResultSet ques = null;
 
         if (log.equalsIgnoreCase("client")) {
-            ques = DB.search("SELECT * FROM Question WHERE Client_Id = '" + id + "'");
+            ques = DB.search("SELECT * FROM Question WHERE Client_Id = '" + id + "' WHERE State_id=1 ");
         }
 
         if (log.equalsIgnoreCase("photog")) {
-            ques = DB.search("SELECT * FROM Question WHERE Photographer_Id = '" + id + "'");
+            ques = DB.search("SELECT * FROM Question WHERE Photographer_Id = '" + id + "' WHERE State_id=1");
         }
 
         ArrayList<Question> a = new ArrayList();

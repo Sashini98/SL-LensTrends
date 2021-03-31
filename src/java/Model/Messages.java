@@ -20,19 +20,17 @@ public class Messages {
     String email;
     Date message_date;
     String mobile;
-    Time time;
 
     public Messages() {
     }
 
-    public Messages(int messageId, String message, String name, String email, Date message_date, String mobile, Time time) {
+    public Messages(int messageId, String message, String name, String email, Date message_date, String mobile) {
         this.messageId = messageId;
         this.message = message;
         this.name = name;
         this.email = email;
         this.message_date = message_date;
         this.mobile = mobile;
-        this.time = time;
     }
 
     public int getMessageId() {
@@ -83,13 +81,7 @@ public class Messages {
         this.mobile = mobile;
     }
 
-    public Time getTime() {
-        return time;
-    }
-
-    public void setTime(Time time) {
-        this.time = time;
-    }
+    
     
     
     
