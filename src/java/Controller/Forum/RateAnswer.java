@@ -31,7 +31,6 @@ public class RateAnswer extends HttpServlet {
             throws ServletException, IOException {
         
        
-        System.out.println("rateanswer");
         
         int aid = parseInt(request.getParameter("aid"));
         String rate = request.getParameter("rate");
@@ -72,7 +71,7 @@ public class RateAnswer extends HttpServlet {
                 
             }
             
-            else if (rate.equals("dislike")) {
+            if (rate.equals("dislike")) {
                 if (checkDislike == true) {
                     message="Disliked";
                     
