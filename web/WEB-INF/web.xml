@@ -388,6 +388,10 @@
         <servlet-name>SuggestKwords</servlet-name>
         <servlet-class>Controller.Clent.SuggestKwords</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>photographerNameSuggest</servlet-name>
+        <servlet-class>Controller.Clent.photographerNameSuggest</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -775,6 +779,10 @@
     <servlet-mapping>
         <servlet-name>SuggestKwords</servlet-name>
         <url-pattern>/SuggestKwords</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>photographerNameSuggest</servlet-name>
+        <url-pattern>/photographerNameSuggest</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
