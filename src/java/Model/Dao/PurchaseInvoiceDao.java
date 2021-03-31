@@ -19,4 +19,5 @@ public interface PurchaseInvoiceDao {
     public void setPurchasedImage(PurchaseInvoice purchaseInvoice)throws SQLException; 
     public void deleteClientInvoices(String clientId) throws SQLException;
 //    public double gettotalearning(String pid) throws SQLException;
+    public ArrayList gettotalPurchacedimage(String photographid) throws SQLException;
 }

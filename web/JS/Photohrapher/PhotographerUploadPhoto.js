@@ -137,7 +137,6 @@ function clickimage(click, section, photoid, itemcount) {
                 var request = new XMLHttpRequest();
 
                 request.onreadystatechange = function () {
-
                     if (request.status === 200) {
                         if (request.readyState === 4) {
                             var responce = request.responseText;
@@ -543,21 +542,41 @@ function submitforreview() {
     location.reload();
 }
 
-function totalearning(id) {
-    alert("vsvsf");
-    var pid = id;
+//function totalearning(id) {
+////    alert("vsvsf");
+//    var pid = id;
+//    var request = new XMLHttpRequest();
+//    request.onreadystatechange = function () {
+//        if (request.readyState === 4) {
+//            if (request.status === 200) {
+//                var responce = request.responseText;
+//                alert(responce);
+//            }
+//        }
+//    }
+//    ;
+//    request.open("POST", "../../TotalEarning", false);
+//    request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//    request.send("pid=" + pid);
+//}
+
+function totalearningdetail(id) {
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
-        if (request.readyState === 4) {
-            if (request.status === 200) {
+        if (request.status === 200) {
+            if (request.readyState === 4) {
                 var responce = request.responseText;
-                alert(responce);
+                var arr = JSON.parse(responce);
+//                var a = arr[1];
+//                alert(arr);
+                document.getElementById("count").innerHTML = arr[0];
+                document.getElementById("pricetotal").innerHTML = arr[1];
+                var total = arr[0] * arr[1];
+                document.getElementById("totalearning").innerHTML = total;
             }
         }
-    }
-    ;
+    };
     request.open("POST", "../../TotalEarning", false);
     request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    request.send("pid=" + pid);
+    request.send("pid=" + id);
 }
-
