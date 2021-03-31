@@ -117,9 +117,9 @@
             <div class="bio">
                 <h3>ABOUT ME</h3>
                 <p id="bio"> <br> </p>
-                <ul>
+<!--                <ul>
                     <li id="cat">Wild life</li>
-                </ul>
+                </ul>-->
             </div> 
             <div class="count">
                 <table>
@@ -133,9 +133,9 @@
             
                 <div class="updown" style="margin-left: 30px">
         <a href="#" type="button" onclick="rate('<%=id%>', 'like');"><img src="../../Resources/Img/up.png"></a> 
-        <span id="up">45</span> 
+        <span id="up"></span> 
         <a href="#" type="button" type="button"style="margin-left: 30px"  onclick="rate();"><img src="../../Resources/Img/down.png"></a>
-        <span id="down">56</span>
+        <span id="down"></span>
     </div>
             </div>
 
