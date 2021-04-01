@@ -82,7 +82,7 @@
                         <input type="text" name="Submitted" id="Submit" value="<%= elem.getDate() %>" disabled="">
                     </p>
                     <p>Price 
-                        <input type="text" name="Submitted" id="Submit" value="<%= p.getTitle() %>" disabled="">
+                        <input type="text" name="Submitted" id="Submit" value="<%= p.Price() %>" disabled="">
                     </p>
                     <button id="remove" type="submit" class="btn" >View</button>
                 </div>

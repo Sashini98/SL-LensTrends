@@ -329,7 +329,7 @@ function  advancedSearch() {
             }
         }
     };
-    alert(orientation);
+
     var param = "keyword=" + serchedFor + "&sortBy=" + sortBy + "&orientation=" + orientation + "&sizePixel=" + sizePixel + "&minWidth=" + minWidth + "&maxWidth=" + maxWidth +
             "&minHeight=" + minHeight + "&maxHeight=" + maxHeight + "&people=" + people + "&gender=" + gender + "&undiscovered=" + undiscovered;
 
