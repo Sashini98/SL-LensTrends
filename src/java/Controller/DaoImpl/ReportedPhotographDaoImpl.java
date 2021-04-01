@@ -43,7 +43,7 @@ public class ReportedPhotographDaoImpl implements ReportedPhotographDao{
     @Override
     public ReportedPhotographs getReportedPhotographById(int id) throws SQLException {
       
-         ResultSet report = DB.search("SELECT * FROM reported_photo WHERE Report_Id = '" + id + "'");
+         ResultSet report = DB.search("SELECT * FROM reported_photo WHERE Photograph_Id = '" + id + "'");
          
          if (report.next()) {
             ReportedPhotographs p = new ReportedPhotographs(report.getInt("Report_Id"), report.getString("Reason"), 

@@ -20,7 +20,7 @@
         <img src="../../Resources/Img/Gallery Sample Images/<%=c.get((i * 3) + 1)%>">
         <p>Uploaded By<input type="text" name="Submitted" value="<%=c.get((i * 3) + 2)%>" disabled=""></p>
         <p>Reported By <input type="text" name="Reported" value="<%=c.get(i * 3)%>" disabled=""></p>
-        <button id="<%=p.get(i).getReportId()%>" type="submit" class="btn" onclick="show('reportedPhoto'); ViewDetails('<%=p.get(i).getReportId()%>');">View</button>
+        <button id="<%=p.get(i).getReportId()%>" type="submit" class="btn" onclick="show('reportedPhoto'); ViewDetails('<%=p.get(i).getPhotographId() %>');">View</button>
     </div>
 </div
 
