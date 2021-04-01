@@ -22,7 +22,7 @@ function viewPhotoDetails(id)
                 document.getElementById("img").src = details[9];
                 document.getElementById("reso").value = details[10];
                 document.getElementById("pid").value = details[11];
-//                document.getElementById("form").value = details[12];
+
 
                 }
             }

@@ -42,10 +42,10 @@ public class ViewReportedPhotoDetails extends HttpServlet {
             throws ServletException, IOException {
         try {
             int photoid = Integer.parseInt(request.getParameter("pid"));
+            System.out.println(photoid);
 
             PhotographDao photographDao = new PhotographDaoImpl();
             Photograph photograph = photographDao.getPhotographById(photoid);
-
             PhotographerDao photographerDao = new PhotographerDaoImp();
             Photographer photographer = photographerDao.getPhotographerById(photograph.getPhotogrpherId());
 

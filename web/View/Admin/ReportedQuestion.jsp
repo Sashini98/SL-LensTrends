@@ -25,7 +25,7 @@
             <td><input type="text" name="upload" value="<%=n.get(i * 3)%>" disabled="">
             <td align="left">Reported By</td>
             <td><input type="text" name="rep" value="<%=n.get((i * 3) + 1)%>" disabled=""></td>
-            <td><button class="btn" id="<%= q.get(i).getReportId()%>" onclick="show('reportedQuestion'); ViewQusetionDetails('<%= q.get(i).getReportId()%>')">View</button></td>
+            <td><button class="btn" id="<%= q.get(i).getReportId()%>" onclick="show('reportedQuestion'); ViewQusetionDetails('<%= q.get(i).getQuestionId() %>')">View</button></td>
         </tr>
     </table>
 </div
