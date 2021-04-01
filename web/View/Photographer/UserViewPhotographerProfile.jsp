@@ -193,9 +193,9 @@
 
 
         <div class="image-content">
-            <div class="image">
+            <div class="image" id="images">
 
-                <img src="../../Resources/Img/profile/p1.jpg">
+<!--                <img src="../../Resources/Img/profile/p1.jpg">
                 <img src="../../Resources/Img/profile/p2.jpg">
                 <img src="../../Resources/Img/profile/p3.jpg">
                 <img src="../../Resources/Img/profile/p4.jpg">
@@ -206,7 +206,7 @@
                 <img src="../../Resources/Img/profile/l3.jpg">
                 <img src="../../Resources/Img/profile/l4.jpg">
                 <img src="../../Resources/Img/profile/l5.jpg">
-                <img src="../../Resources/Img/profile/l6.jpg">
+                <img src="../../Resources/Img/profile/l6.jpg">-->
 
             </div>
         </div>

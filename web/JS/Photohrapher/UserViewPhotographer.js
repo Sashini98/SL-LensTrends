@@ -88,7 +88,7 @@ function getPhotographerImages(id) {
             if (request.readyState === 4) {
 
                 var responce = request.responseText;
-
+                document.getElementById("images").innerHTML = responce;
 
 
 

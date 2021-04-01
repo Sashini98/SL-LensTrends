@@ -5,7 +5,9 @@
  */
 package Model.Dao;
 
+import Model.Photograph;
 import Model.Photographer;
+import Model.portfolio_photograph;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;

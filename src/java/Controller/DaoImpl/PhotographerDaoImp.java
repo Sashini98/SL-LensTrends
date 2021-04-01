@@ -7,7 +7,9 @@ package Controller.DaoImpl;
 
 import DB.DB;
 import Model.Dao.PhotographerDao;
+import Model.Photograph;
 import Model.Photographer;
+import Model.portfolio_photograph;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -178,7 +180,7 @@ public class PhotographerDaoImp implements PhotographerDao {
     @Override
     public Photographer getPhotographerByEmailAndPassword(String email, String password) throws SQLException {
         ResultSet photographer = DB.search("SELECT * FROM photographer WHERE Email = '" + email + "' AND ActiveStatus = 1");
-       
+
         if (photographer.next()) {
             String passHash = photographer.getString("Password");
 
@@ -465,12 +467,13 @@ public class PhotographerDaoImp implements PhotographerDao {
 
     @Override
     public double getPhotographerTotalEarning(String photographerId) throws SQLException {
-        ResultSet search = DB.search("SELECT p.Total FROM purchaseinvoice p JOIN photograph r ON p.Photograph_Id=r.Photograph_Id JOIN photographer d ON r.Photographer_Id=d.Photographer_Id WHERE d.Photographer_Id = '"+ photographerId +"';");
-        double e = 0.0; 
+        ResultSet search = DB.search("SELECT p.Total FROM purchaseinvoice p JOIN photograph r ON p.Photograph_Id=r.Photograph_Id JOIN photographer d ON r.Photographer_Id=d.Photographer_Id WHERE d.Photographer_Id = '" + photographerId + "';");
+        double e = 0.0;
         while (search.next()) {
             e += search.getDouble("Total");
-            
+
         }
         return e;
     }
+
 }
