@@ -30,11 +30,11 @@ public class PhotographerDaoImp implements PhotographerDao {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String date = sdf.format(d);
         System.out.println(photographer.getActiveStatus());
-        DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus, points, state) "
+        DB.iud("INSERT INTO photographer (Photographer_Id, Email, Password, Fname, Lname, Address_NO, City, Province, Joined_Date, Gender_id, Mobile, Website, bio, FieldofInterest, PostalCode, ActiveStatus, points, state,	profile_pic_path) "
                 + "VALUES ('" + photographer.getPhotographerId() + "', '" + photographer.getEmail() + "', '" + photographer.getPassword() + "', '" + photographer.getFname() + "',"
                 + " '" + photographer.getLname() + "', '" + photographer.getAddress_no() + "', '" + photographer.getCity() + "', '" + photographer.getProvince() + "','" + date + "',"
                 + " '" + photographer.getGenderId() + "', '" + photographer.getMobile() + "','" + photographer.getWebsite() + "', '" + photographer.getBio() + "', "
-                + " '" + photographer.getFielsOfdInterest() + "', '" + photographer.getPostalCode() + "', '" + photographer.getActiveStatus() + "', '" + photographer.getPoints() + "', '" + photographer.getState() + "' ) ");
+                + " '" + photographer.getFielsOfdInterest() + "', '" + photographer.getPostalCode() + "', '" + photographer.getActiveStatus() + "', '" + photographer.getPoints() + "', '" + photographer.getState() + "','sample.jpg' ) ");
     }
 
     @Override
@@ -202,6 +202,7 @@ public class PhotographerDaoImp implements PhotographerDao {
                 p.setBio(photographer.getString("Bio"));
                 p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
                 p.setPostalCode(photographer.getInt("PostalCode"));
+                p.setProfilpic(photographer.getString("profile_pic_path"));
 
                 return p;
             } else {
