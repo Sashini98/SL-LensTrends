@@ -203,6 +203,7 @@ public class PhotographerDaoImp implements PhotographerDao {
                 p.setFielsOfdInterest(photographer.getString("FieldofInterest"));
                 p.setPostalCode(photographer.getInt("PostalCode"));
                 p.setProfilpic(photographer.getString("profile_pic_path"));
+                p.setJoined_date(photographer.getDate("Joined_Date"));
 
                 return p;
             } else {

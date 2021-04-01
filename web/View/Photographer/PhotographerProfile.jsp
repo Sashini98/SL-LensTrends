@@ -11,6 +11,7 @@
     Photographer p = (Photographer) request.getSession().getAttribute("loggedPhotographer");
     String pid = p.getPhotographerId();  
     String pic = p.getProfilpic();
+    int points = p.getPoints();
 %>
 <html>
     <head>
@@ -85,13 +86,13 @@
             <div class="count">
                 <table>
                     <tr>
-                        <th>Rating</th>
-                        <th id="color">68%</th>
+                        <th>Points</th>
+                        <th id="color"><%= points%></th>
                     </tr>
-                    <tr>
+<!--                    <tr>
                         <th>Completed Events</th>
                         <th id="color">20</th>
-                    </tr>
+                    </tr>-->
                 </table>
             </div>
             <div class="editprofile">
@@ -99,7 +100,7 @@
             </div>
 
             <div class="member">
-                <p>MEMBER SINCE: <%= p.getJoined_date() %></p>
+                <p>MEMBER SINCE: <%= p.getJoined_date()%></p>
             </div>
         </div>
 
