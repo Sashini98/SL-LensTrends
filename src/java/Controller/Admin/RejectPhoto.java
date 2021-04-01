@@ -25,7 +25,7 @@ public class RejectPhoto extends HttpServlet {
             throws ServletException, IOException {
         
         int pid = Integer.parseInt(request.getParameter("id"));
-        int status = 4;
+        int status = 3;
 
         try {
             PhotographDao pDao = new PhotographDaoImpl();
